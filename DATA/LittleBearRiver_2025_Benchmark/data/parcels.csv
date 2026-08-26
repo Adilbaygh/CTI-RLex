@@ -1,0 +1,603 @@
+claimant_id,wrlu_objectid,landuse,crop_group,description,irrigation_method,acres,survey_year,county,basin,subarea,centroid_x_epsg26912,centroid_y_epsg26912,assignment_method,assignment_candidate_count
+company_088,130,Agricultural,Hay/Turf,Alfalfa,Flood,2.712921,2025,Cache,Bear River,Cache Valley,427542.303,4610596.376,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,547,Agricultural,Hay/Turf,Grass Hay,Flood,3.995197,2025,Cache,Bear River,Cache Valley,430007.189,4607197.825,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,632,Agricultural,Hay/Turf,Alfalfa,Flood,7.470961,2025,Cache,Bear River,Cache Valley,430371.817,4607139.994,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,871,Agricultural,Hay/Turf,Grass Hay,Flood,6.351519,2025,Cache,Bear River,Cache Valley,430111.097,4606851.306,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,1070,Agricultural,Hay/Turf,Alfalfa,Flood,6.77972,2025,Cache,Bear River,Cache Valley,430326.501,4606443.521,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,1486,Agricultural,Hay/Turf,Alfalfa,Flood,13.154356,2025,Cache,Bear River,Cache Valley,430115.122,4606630.688,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,4121,Agricultural,Hay/Turf,Grass Hay,Flood,9.924243,2025,Cache,Bear River,Cache Valley,429433.715,4609877.292,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,4335,Agricultural,Hay/Turf,Alfalfa,Flood,6.703697,2025,Cache,Bear River,Cache Valley,430125.772,4607002.398,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,4695,Agricultural,Hay/Turf,Alfalfa,Flood,6.440019,2025,Cache,Bear River,Cache Valley,425867.371,4610033.889,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,4934,Agricultural,Hay/Turf,Grass Hay,Flood,7.424928,2025,Cache,Bear River,Cache Valley,430329.854,4606330.077,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,5186,Agricultural,Hay/Turf,Grass Hay,Flood,6.721626,2025,Cache,Bear River,Cache Valley,430353.352,4610880.1,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,5608,Agricultural,Hay/Turf,Alfalfa,Flood,11.905042,2025,Cache,Bear River,Cache Valley,425963.558,4610217.478,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,5859,Agricultural,Hay/Turf,Alfalfa,Flood,9.096137,2025,Cache,Bear River,Cache Valley,431123.009,4607162.818,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,6393,Agricultural,Hay/Turf,Grass Hay,Flood,2.888481,2025,Cache,Bear River,Cache Valley,429861.703,4610132.834,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,6584,Agricultural,Hay/Turf,Alfalfa,Flood,10.934006,2025,Cache,Bear River,Cache Valley,430902.104,4607185.234,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,7213,Agricultural,Hay/Turf,Grass Hay,Flood,4.639543,2025,Cache,Bear River,Cache Valley,430084.132,4606565.936,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,7469,Agricultural,Hay/Turf,Alfalfa,Flood,2.078876,2025,Cache,Bear River,Cache Valley,431120.064,4607264.772,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,7590,Agricultural,Hay/Turf,Alfalfa,Flood,8.934691,2025,Cache,Bear River,Cache Valley,427490.035,4609854.929,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,7592,Agricultural,Hay/Turf,Alfalfa,Flood,13.942113,2025,Cache,Bear River,Cache Valley,426011.967,4610408.971,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,7797,Agricultural,Hay/Turf,Alfalfa,Flood,2.10906,2025,Cache,Bear River,Cache Valley,429192.267,4609991.578,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,8173,Agricultural,Hay/Turf,Grass Hay,Flood,3.238332,2025,Cache,Bear River,Cache Valley,429939.618,4610243.17,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,8271,Agricultural,Hay/Turf,Grass Hay,Flood,10.032711,2025,Cache,Bear River,Cache Valley,430413.211,4607240.742,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,8388,Agricultural,Hay/Turf,Grass Hay,Flood,2.601204,2025,Cache,Bear River,Cache Valley,430051.195,4610375.34,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,8589,Agricultural,Hay/Turf,Alfalfa,Flood,1.985039,2025,Cache,Bear River,Cache Valley,430071.792,4606298.135,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,8927,Agricultural,Hay/Turf,Alfalfa,Flood,10.256022,2025,Cache,Bear River,Cache Valley,426669.026,4610581.613,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,9288,Agricultural,Hay/Turf,Grass Hay,Flood,2.834959,2025,Cache,Bear River,Cache Valley,430047.271,4610012.724,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,9319,Agricultural,Hay/Turf,Alfalfa,Flood,6.39884,2025,Cache,Bear River,Cache Valley,426038.274,4610528.831,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,9742,Agricultural,Hay/Turf,Alfalfa,Flood,2.079544,2025,Cache,Bear River,Cache Valley,429681.84,4608428.598,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,10124,Agricultural,Hay/Turf,Grass Hay,Flood,3.463292,2025,Cache,Bear River,Cache Valley,430050.452,4610487.534,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,10319,Agricultural,Hay/Turf,Alfalfa,Flood,1.810446,2025,Cache,Bear River,Cache Valley,430005.587,4609886.007,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,10839,Agricultural,Hay/Turf,Alfalfa,Flood,5.95953,2025,Cache,Bear River,Cache Valley,429723.961,4610055.486,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,10887,Agricultural,Hay/Turf,Grass Hay,Flood,2.938471,2025,Cache,Bear River,Cache Valley,430049.185,4610265.741,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,11875,Agricultural,Hay/Turf,Alfalfa,Flood,6.984809,2025,Cache,Bear River,Cache Valley,430073.424,4606415.2,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,12596,Agricultural,Hay/Turf,Alfalfa,Flood,5.729505,2025,Cache,Bear River,Cache Valley,429598.859,4609850.281,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,14164,Agricultural,Hay/Turf,Alfalfa,Flood,2.174658,2025,Cache,Bear River,Cache Valley,429955.966,4606639.62,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,14344,Agricultural,Hay/Turf,Grass Hay,Flood,2.77316,2025,Cache,Bear River,Cache Valley,430017.776,4609950.086,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,14686,Agricultural,Hay/Turf,Grass Hay,Flood,0.672974,2025,Cache,Bear River,Cache Valley,429973.378,4610372.394,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,14726,Agricultural,Hay/Turf,Alfalfa,Flood,3.995337,2025,Cache,Bear River,Cache Valley,431386.894,4599503.769,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,14782,Agricultural,Hay/Turf,Grass Hay,Flood,4.304374,2025,Cache,Bear River,Cache Valley,429860.56,4610045.676,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,15100,Agricultural,Hay/Turf,Alfalfa,Flood,2.011432,2025,Cache,Bear River,Cache Valley,429104.923,4610159.419,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,15481,Agricultural,Hay/Turf,Alfalfa,Flood,4.400898,2025,Cache,Bear River,Cache Valley,432201.653,4598768.702,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,15969,Agricultural,Hay/Turf,Alfalfa,Flood,18.057013,2025,Cache,Bear River,Cache Valley,429439.207,4608278.163,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,16873,Agricultural,Hay/Turf,Alfalfa,Flood,0.7632,2025,Cache,Bear River,Cache Valley,430860.639,4601426.883,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,17087,Agricultural,Hay/Turf,Alfalfa,Flood,14.317713,2025,Cache,Bear River,Cache Valley,430466.091,4608014.233,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,17717,Agricultural,Hay/Turf,Alfalfa,Flood,0.945251,2025,Cache,Bear River,Cache Valley,429825.835,4609812.471,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,18033,Agricultural,Hay/Turf,Grass Hay,Flood,1.80237,2025,Cache,Bear River,Cache Valley,431373.35,4600713.686,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,18665,Agricultural,Hay/Turf,Alfalfa,Flood,1.67914,2025,Cache,Bear River,Cache Valley,430291.418,4604330.251,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,18826,Agricultural,Hay/Turf,Alfalfa,Flood,1.024075,2025,Cache,Bear River,Cache Valley,430974.219,4601613.006,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,18982,Agricultural,Hay/Turf,Alfalfa,Flood,3.300418,2025,Cache,Bear River,Cache Valley,428912.676,4610165.206,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,19345,Agricultural,Hay/Turf,Alfalfa,Flood,11.277521,2025,Cache,Bear River,Cache Valley,432338.893,4603894.867,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,19893,Agricultural,Hay/Turf,Alfalfa,Flood,1.829928,2025,Cache,Bear River,Cache Valley,432775.231,4606707.094,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,19953,Agricultural,Hay/Turf,Alfalfa,Flood,1.979023,2025,Cache,Bear River,Cache Valley,429080.273,4610074.889,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,21432,Agricultural,Hay/Turf,Alfalfa,Flood,1.054357,2025,Cache,Bear River,Cache Valley,425728.103,4610180.617,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,21886,Agricultural,Hay/Turf,Alfalfa,Flood,7.080646,2025,Cache,Bear River,Cache Valley,432838.882,4608512.914,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,24085,Agricultural,Hay/Turf,Alfalfa,Flood,4.928794,2025,Cache,Bear River,Cache Valley,426936.243,4609910.878,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,24955,Agricultural,Hay/Turf,Alfalfa,Wheel,13.050556,2025,Cache,Bear River,Cache Valley,429497.758,4605014.284,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,24976,Agricultural,Hay/Turf,Alfalfa,Wheel,7.487163,2025,Cache,Bear River,Cache Valley,430078.535,4599289.917,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25078,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.469778,2025,Cache,Bear River,Cache Valley,432082.704,4600416.383,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25220,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.487434,2025,Cache,Bear River,Cache Valley,432052.611,4600239.419,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25316,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.504929,2025,Cache,Bear River,Cache Valley,431782.073,4600642.668,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,25460,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.340921,2025,Cache,Bear River,Cache Valley,429698.895,4605482.732,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25505,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.844637,2025,Cache,Bear River,Cache Valley,432941.675,4608260.832,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,25568,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.560614,2025,Cache,Bear River,Cache Valley,431200.948,4598729.395,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,25637,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.314826,2025,Cache,Bear River,Cache Valley,429490.732,4606548.507,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,25731,Agricultural,Hay/Turf,Alfalfa,Wheel,25.453366,2025,Cache,Bear River,Cache Valley,431223.113,4599668.217,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25772,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.105845,2025,Cache,Bear River,Cache Valley,431956.88,4598580.049,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25817,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.99137,2025,Cache,Bear River,Cache Valley,432155.101,4602397.318,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,25854,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.014543,2025,Cache,Bear River,Cache Valley,430681.163,4607591.56,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,25898,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.339116,2025,Cache,Bear River,Cache Valley,430883.654,4607586.942,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,25943,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.929712,2025,Cache,Bear River,Cache Valley,431447.761,4599575.277,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,25960,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.200385,2025,Cache,Bear River,Cache Valley,430388.349,4601598.623,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26190,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.158614,2025,Cache,Bear River,Cache Valley,430646.417,4602828.541,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,26209,Agricultural,Hay/Turf,Alfalfa,Sprinkler,15.891154,2025,Cache,Bear River,Cache Valley,431855.709,4609735.901,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26301,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.320468,2025,Cache,Bear River,Cache Valley,429901.432,4602338.975,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,26426,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.30244,2025,Cache,Bear River,Cache Valley,432490.493,4602663.609,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26443,Agricultural,Hay/Turf,Alfalfa,Wheel,6.581845,2025,Cache,Bear River,Cache Valley,429737.304,4603702.143,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,26456,Agricultural,Hay/Turf,Alfalfa,Sprinkler,11.912138,2025,Cache,Bear River,Cache Valley,429880.751,4600126.274,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26518,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.345872,2025,Cache,Bear River,Cache Valley,429267.321,4604560.918,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,26617,Agricultural,Hay/Turf,Alfalfa,Wheel,13.602885,2025,Cache,Bear River,Cache Valley,431109.903,4607685.569,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,26689,Agricultural,Hay/Turf,Alfalfa,Sprinkler,15.892565,2025,Cache,Bear River,Cache Valley,432509.919,4606168.571,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26759,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.201054,2025,Cache,Bear River,Cache Valley,429573.91,4604175.571,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,26913,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.83636,2025,Cache,Bear River,Cache Valley,429487.691,4602246.154,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,26958,Agricultural,Hay/Turf,Alfalfa,Pivot,18.258895,2025,Cache,Bear River,Cache Valley,431951.433,4599990.567,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27055,Agricultural,Hay/Turf,Grass Hay,Sprinkler,6.406506,2025,Cache,Bear River,Cache Valley,432542.084,4597791.164,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,27119,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.800086,2025,Cache,Bear River,Cache Valley,430665.364,4607168.808,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27188,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.542755,2025,Cache,Bear River,Cache Valley,430853.961,4601886.466,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,27266,Agricultural,Hay/Turf,Alfalfa,Wheel,7.541919,2025,Cache,Bear River,Cache Valley,432176.586,4606928.259,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27337,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.421678,2025,Cache,Bear River,Cache Valley,429253.646,4603743.468,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27485,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.873598,2025,Cache,Bear River,Cache Valley,429601.569,4603889.998,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27582,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.775046,2025,Cache,Bear River,Cache Valley,429295.555,4604755.422,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27603,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.928491,2025,Cache,Bear River,Cache Valley,430623.638,4600868.844,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,27775,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.566195,2025,Cache,Bear River,Cache Valley,429977.352,4603434.674,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,27910,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.460126,2025,Cache,Bear River,Cache Valley,432095.085,4598865.412,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,27965,Agricultural,Hay/Turf,Alfalfa,Sprinkler,21.725582,2025,Cache,Bear River,Cache Valley,432090.427,4604778.21,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,27966,Agricultural,Hay/Turf,Alfalfa,Wheel,10.356559,2025,Cache,Bear River,Cache Valley,431671.135,4606837.906,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28041,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.097141,2025,Cache,Bear River,Cache Valley,429565.417,4602867.766,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28161,Agricultural,Hay/Turf,Alfalfa,Pivot,22.931342,2025,Cache,Bear River,Cache Valley,431951.749,4605206.148,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,28208,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.495395,2025,Cache,Bear River,Cache Valley,427351.303,4610314.853,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28268,Agricultural,Hay/Turf,Alfalfa,Pivot,38.483179,2025,Cache,Bear River,Cache Valley,432541.986,4608320.418,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28493,Agricultural,Hay/Turf,Alfalfa,Wheel,31.210604,2025,Cache,Bear River,Cache Valley,431545.054,4600738.052,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28511,Agricultural,Hay/Turf,Alfalfa,Wheel,4.705275,2025,Cache,Bear River,Cache Valley,431753.997,4602894.098,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28558,Agricultural,Hay/Turf,Alfalfa,Sprinkler,11.480528,2025,Cache,Bear River,Cache Valley,432170.043,4606074.931,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28624,Agricultural,Hay/Turf,Grass Hay,Sprinkler,6.827558,2025,Cache,Bear River,Cache Valley,429809.875,4601294.433,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28646,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.835564,2025,Cache,Bear River,Cache Valley,430275.818,4602385.788,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28725,Agricultural,Hay/Turf,Alfalfa,Wheel,21.731405,2025,Cache,Bear River,Cache Valley,431551.741,4599954.596,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28729,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.40301,2025,Cache,Bear River,Cache Valley,430513.05,4602849.037,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28836,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.892236,2025,Cache,Bear River,Cache Valley,429722.657,4601443.033,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,28842,Agricultural,Hay/Turf,Alfalfa,Wheel,14.950809,2025,Cache,Bear River,Cache Valley,431331.607,4600082.807,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28889,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.023657,2025,Cache,Bear River,Cache Valley,432499.302,4602801.734,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,28893,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.913091,2025,Cache,Bear River,Cache Valley,432045.987,4604396.23,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,28994,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.952151,2025,Cache,Bear River,Cache Valley,428004.539,4610161.361,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,29122,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.646081,2025,Cache,Bear River,Cache Valley,430018.769,4599919.129,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29302,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.208535,2025,Cache,Bear River,Cache Valley,429453.237,4603898.66,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,29364,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.417531,2025,Cache,Bear River,Cache Valley,430057.297,4599584.936,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29400,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.819459,2025,Cache,Bear River,Cache Valley,429975.823,4601446.147,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29426,Agricultural,Hay/Turf,Alfalfa,Wheel,21.991887,2025,Cache,Bear River,Cache Valley,429573.802,4604818.637,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29459,Agricultural,Hay/Turf,Alfalfa,Sprinkler,11.211292,2025,Cache,Bear River,Cache Valley,430627.912,4600102.786,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,29687,Agricultural,Hay/Turf,Alfalfa,Sprinkler,25.181422,2025,Cache,Bear River,Cache Valley,431303.352,4603559.288,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,29695,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.300316,2025,Cache,Bear River,Cache Valley,430984.31,4607583.802,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,29811,Agricultural,Hay/Turf,Alfalfa,Wheel,6.362435,2025,Cache,Bear River,Cache Valley,432046.658,4606901.044,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29860,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.58599,2025,Cache,Bear River,Cache Valley,429957.394,4602295.838,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,29999,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.343931,2025,Cache,Bear River,Cache Valley,430675.726,4602029.218,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30029,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.46407,2025,Cache,Bear River,Cache Valley,430408.704,4602605.571,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30099,Agricultural,Hay/Turf,Alfalfa,Wheel,23.537696,2025,Cache,Bear River,Cache Valley,430252.331,4599395.401,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30134,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.987849,2025,Cache,Bear River,Cache Valley,432030.188,4598163.963,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30143,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.754782,2025,Cache,Bear River,Cache Valley,429711.622,4602635.56,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30169,Agricultural,Hay/Turf,Alfalfa,Sprinkler,18.756153,2025,Cache,Bear River,Cache Valley,432665.414,4603067.618,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30191,Agricultural,Hay/Turf,Alfalfa,Sprinkler,24.911223,2025,Cache,Bear River,Cache Valley,429984.561,4606025.61,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30312,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.579522,2025,Cache,Bear River,Cache Valley,432055.608,4597903.7,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30349,Agricultural,Hay/Turf,Alfalfa,Sprinkler,15.416016,2025,Cache,Bear River,Cache Valley,431507.853,4603462.231,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30374,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.767339,2025,Cache,Bear River,Cache Valley,432672.79,4607844.555,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30417,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.643969,2025,Cache,Bear River,Cache Valley,430697.741,4601265.817,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30510,Agricultural,Hay/Turf,Alfalfa,Pivot,23.561012,2025,Cache,Bear River,Cache Valley,431760.71,4599985.427,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30535,Agricultural,Hay/Turf,Alfalfa,Sprinkler,18.518301,2025,Cache,Bear River,Cache Valley,429965.369,4601124.565,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30563,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.678287,2025,Cache,Bear River,Cache Valley,430295.767,4599074.419,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30612,Agricultural,Hay/Turf,Alfalfa,Wheel,19.514151,2025,Cache,Bear River,Cache Valley,431231.787,4600533.914,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30648,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.249602,2025,Cache,Bear River,Cache Valley,432310.471,4598069.453,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30672,Agricultural,Hay/Turf,Alfalfa,Wheel,9.780497,2025,Cache,Bear River,Cache Valley,429105.961,4603948.43,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,30746,Agricultural,Hay/Turf,Alfalfa,Sprinkler,13.338202,2025,Cache,Bear River,Cache Valley,429512.974,4606135.985,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,30803,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.967408,2025,Cache,Bear River,Cache Valley,431481.898,4605357.889,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,31075,Agricultural,Hay/Turf,Alfalfa,Pivot,46.965821,2025,Cache,Bear River,Cache Valley,431728.738,4600377.54,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,31258,Agricultural,Hay/Turf,Alfalfa,Wheel,8.981737,2025,Cache,Bear River,Cache Valley,431683.689,4601731.778,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,31415,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.277569,2025,Cache,Bear River,Cache Valley,430715.138,4603752.514,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,31474,Agricultural,Hay/Turf,Alfalfa,Pivot,19.345532,2025,Cache,Bear River,Cache Valley,429749.247,4606130.663,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,31702,Agricultural,Hay/Turf,Alfalfa,Wheel,7.003031,2025,Cache,Bear River,Cache Valley,430000.828,4605443.502,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,31906,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.706984,2025,Cache,Bear River,Cache Valley,430039.566,4604011.174,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,32367,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.747793,2025,Cache,Bear River,Cache Valley,430771.981,4606875.6,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,32465,Agricultural,Hay/Turf,Alfalfa,Wheel,13.768977,2025,Cache,Bear River,Cache Valley,431667.068,4606983.741,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,32534,Agricultural,Hay/Turf,Alfalfa,Sprinkler,14.475855,2025,Cache,Bear River,Cache Valley,430937.876,4602824.911,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,32558,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.530909,2025,Cache,Bear River,Cache Valley,430957.678,4601830.091,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,32651,Agricultural,Hay/Turf,Alfalfa,Sprinkler,15.929145,2025,Cache,Bear River,Cache Valley,429961.309,4604213.655,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,32840,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.547014,2025,Cache,Bear River,Cache Valley,429736.728,4602308.476,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,32877,Agricultural,Hay/Turf,Alfalfa,Sprinkler,14.756038,2025,Cache,Bear River,Cache Valley,432014.199,4601903.893,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,32880,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.407676,2025,Cache,Bear River,Cache Valley,430442.134,4606155.389,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,32996,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.899649,2025,Cache,Bear River,Cache Valley,430043.117,4602295.037,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33015,Agricultural,Hay/Turf,Alfalfa,Sprinkler,11.736576,2025,Cache,Bear River,Cache Valley,432439.075,4607822.713,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33075,Agricultural,Hay/Turf,Alfalfa,Wheel,8.196469,2025,Cache,Bear River,Cache Valley,432103.175,4601731.901,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33093,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.497612,2025,Cache,Bear River,Cache Valley,430510.074,4602619.864,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33114,Agricultural,Hay/Turf,Alfalfa,Wheel,10.393902,2025,Cache,Bear River,Cache Valley,429422.272,4604599.718,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33122,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.328768,2025,Cache,Bear River,Cache Valley,432079.219,4604552.154,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33218,Agricultural,Hay/Turf,Alfalfa,Wheel,16.524848,2025,Cache,Bear River,Cache Valley,431760.521,4602307.354,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33366,Agricultural,Hay/Turf,Grass Hay,Wheel,2.825613,2025,Cache,Bear River,Cache Valley,429543.142,4603925.395,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33435,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.344605,2025,Cache,Bear River,Cache Valley,429324.097,4603545.879,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33465,Agricultural,Hay/Turf,Alfalfa,Wheel,20.408193,2025,Cache,Bear River,Cache Valley,431606.91,4603713.998,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33482,Agricultural,Hay/Turf,Alfalfa,Pivot,12.971238,2025,Cache,Bear River,Cache Valley,431958.879,4600722.483,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,33655,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.922287,2025,Cache,Bear River,Cache Valley,432094.899,4605392.17,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33747,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.045053,2025,Cache,Bear River,Cache Valley,429443.597,4603739.34,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33748,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.136133,2025,Cache,Bear River,Cache Valley,430386.069,4605616.541,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,33762,Agricultural,Hay/Turf,Alfalfa,Sprinkler,13.068682,2025,Cache,Bear River,Cache Valley,429976.713,4604570.74,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,34059,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.495431,2025,Cache,Bear River,Cache Valley,429576.949,4608629.523,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34151,Agricultural,Hay/Turf,Alfalfa,Sprinkler,28.205113,2025,Cache,Bear River,Cache Valley,431615.795,4609688.001,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34155,Agricultural,Hay/Turf,Alfalfa,Wheel,8.390094,2025,Cache,Bear River,Cache Valley,431491.286,4601903.099,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,34177,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.139404,2025,Cache,Bear River,Cache Valley,430695.563,4601399.066,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34181,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.59334,2025,Cache,Bear River,Cache Valley,431380.186,4599026.737,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,34238,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.827507,2025,Cache,Bear River,Cache Valley,427741.956,4610418.71,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,34285,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.231465,2025,Cache,Bear River,Cache Valley,430006.889,4604415.36,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,34290,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.356281,2025,Cache,Bear River,Cache Valley,430035.545,4603888.496,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34299,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.494719,2025,Cache,Bear River,Cache Valley,431496.543,4602896.5,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34316,Agricultural,Hay/Turf,Alfalfa,Wheel,27.630821,2025,Cache,Bear River,Cache Valley,430536.505,4604337.267,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,34364,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.281616,2025,Cache,Bear River,Cache Valley,431110.045,4600267.381,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34405,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.94602,2025,Cache,Bear River,Cache Valley,432960.353,4608375.437,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,34497,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.477061,2025,Cache,Bear River,Cache Valley,430259.031,4606225.026,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,34735,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.026888,2025,Cache,Bear River,Cache Valley,430149.831,4599708.466,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,34933,Agricultural,Hay/Turf,Alfalfa,Wheel,16.460016,2025,Cache,Bear River,Cache Valley,430383.215,4606581.577,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,34991,Agricultural,Hay/Turf,Alfalfa,Wheel,1.980789,2025,Cache,Bear River,Cache Valley,429897.286,4603850.124,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,35035,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.132751,2025,Cache,Bear River,Cache Valley,430263.893,4605650.159,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,35113,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.506148,2025,Cache,Bear River,Cache Valley,430544.018,4605626.515,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,35243,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.562677,2025,Cache,Bear River,Cache Valley,430486.297,4601631.205,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,35391,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.743805,2025,Cache,Bear River,Cache Valley,430669.368,4606877.555,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35428,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.033227,2025,Cache,Bear River,Cache Valley,431891.795,4603312.401,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35438,Agricultural,Hay/Turf,Alfalfa,Pivot,43.176732,2025,Cache,Bear River,Cache Valley,432220.944,4605811.713,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35458,Agricultural,Hay/Turf,Alfalfa,Wheel,14.971645,2025,Cache,Bear River,Cache Valley,432358.296,4606912.775,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,35666,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.664335,2025,Cache,Bear River,Cache Valley,429612.053,4608871.713,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35750,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.39466,2025,Cache,Bear River,Cache Valley,430468.376,4599020.098,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35762,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.730467,2025,Cache,Bear River,Cache Valley,430124.275,4599068.506,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,35785,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.185232,2025,Cache,Bear River,Cache Valley,431882.504,4603107.809,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,35793,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.193925,2025,Cache,Bear River,Cache Valley,426649.873,4610419.882,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,35999,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.266776,2025,Cache,Bear River,Cache Valley,428015.799,4610063.512,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,36146,Agricultural,Hay/Turf,Alfalfa,Wheel,14.658664,2025,Cache,Bear River,Cache Valley,431012.548,4606880.108,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,36170,Agricultural,Hay/Turf,Alfalfa,Sprinkler,24.881209,2025,Cache,Bear River,Cache Valley,429747.186,4606477.05,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,36180,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.413002,2025,Cache,Bear River,Cache Valley,431290.15,4598483.478,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,36225,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.549771,2025,Cache,Bear River,Cache Valley,427760.872,4610683.767,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,36445,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.151183,2025,Cache,Bear River,Cache Valley,429800.758,4601690.649,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,36532,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.545974,2025,Cache,Bear River,Cache Valley,430151.073,4603400.172,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,36561,Agricultural,Hay/Turf,Alfalfa,Pivot,17.65986,2025,Cache,Bear River,Cache Valley,431675.682,4598800.113,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,36579,Agricultural,Hay/Turf,Alfalfa,Sprinkler,13.769242,2025,Cache,Bear River,Cache Valley,430215.06,4603208.032,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,36895,Agricultural,Hay/Turf,Alfalfa,Wheel,23.348954,2025,Cache,Bear River,Cache Valley,429559.773,4602614.874,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37007,Agricultural,Hay/Turf,Alfalfa,Sprinkler,26.231867,2025,Cache,Bear River,Cache Valley,430193.03,4605990.675,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37294,Agricultural,Hay/Turf,Grass Hay,Wheel,5.275183,2025,Cache,Bear River,Cache Valley,431081.623,4600129.129,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37306,Agricultural,Hay/Turf,Grass Hay,Sprinkler,12.184409,2025,Cache,Bear River,Cache Valley,430220.977,4601355.549,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,37342,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.060676,2025,Cache,Bear River,Cache Valley,431957.406,4601100.995,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,37571,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.397213,2025,Cache,Bear River,Cache Valley,430417.901,4606241.106,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,37677,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.901375,2025,Cache,Bear River,Cache Valley,432097.277,4605471.039,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37695,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.846807,2025,Cache,Bear River,Cache Valley,429369.903,4603805.149,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37779,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.518387,2025,Cache,Bear River,Cache Valley,429301.966,4603945.541,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,37934,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.393689,2025,Cache,Bear River,Cache Valley,431171.244,4600688.212,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,38022,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.017188,2025,Cache,Bear River,Cache Valley,430534.734,4602787.644,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,38043,Agricultural,Hay/Turf,Alfalfa,Pivot,42.728844,2025,Cache,Bear River,Cache Valley,431645.979,4605182.558,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,38317,Agricultural,Hay/Turf,Grass Hay,Sprinkler,12.602173,2025,Cache,Bear River,Cache Valley,431959.527,4597237.053,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,38351,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.684251,2025,Cache,Bear River,Cache Valley,430582.995,4601382.866,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,38427,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.23937,2025,Cache,Bear River,Cache Valley,431167.863,4606999.146,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,38443,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.504747,2025,Cache,Bear River,Cache Valley,429928.59,4606469.261,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,38449,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.263928,2025,Cache,Bear River,Cache Valley,430246.833,4605388.987,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,38484,Agricultural,Hay/Turf,Alfalfa,Pivot,40.405119,2025,Cache,Bear River,Cache Valley,430597.647,4604018.823,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,38563,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.707021,2025,Cache,Bear River,Cache Valley,431800.163,4601508.119,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,38623,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.588742,2025,Cache,Bear River,Cache Valley,427518.975,4610431.528,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,38709,Agricultural,Hay/Turf,Alfalfa,Wheel,27.831933,2025,Cache,Bear River,Cache Valley,430435.107,4603264.229,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,38890,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.773381,2025,Cache,Bear River,Cache Valley,429913.923,4603968.531,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,39018,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.661557,2025,Cache,Bear River,Cache Valley,430590.112,4600251.158,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39037,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.459514,2025,Cache,Bear River,Cache Valley,431307.581,4598749.789,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39071,Agricultural,Hay/Turf,Grass Hay,Wheel,10.581463,2025,Cache,Bear River,Cache Valley,431581.148,4598461.49,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39105,Agricultural,Hay/Turf,Grass Hay,Sprinkler,7.968977,2025,Cache,Bear River,Cache Valley,430539.982,4600777.995,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39191,Agricultural,Hay/Turf,Alfalfa,Sprinkler,13.145801,2025,Cache,Bear River,Cache Valley,429185.317,4604369.974,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,39210,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.825527,2025,Cache,Bear River,Cache Valley,426234.471,4610660.017,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39225,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.167345,2025,Cache,Bear River,Cache Valley,430769.973,4602848.615,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,39423,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.463819,2025,Cache,Bear River,Cache Valley,427308.484,4610465.873,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,39475,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.334668,2025,Cache,Bear River,Cache Valley,430282.98,4608918.423,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39496,Agricultural,Hay/Turf,Grass Hay,Sprinkler,6.997817,2025,Cache,Bear River,Cache Valley,429623.775,4601650.545,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,39558,Agricultural,Hay/Turf,Alfalfa,Wheel,28.235809,2025,Cache,Bear River,Cache Valley,430680.959,4604528.197,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39717,Agricultural,Hay/Turf,Alfalfa,Sprinkler,19.273262,2025,Cache,Bear River,Cache Valley,429711.303,4605282.462,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,39814,Agricultural,Hay/Turf,Alfalfa,Pivot,44.914333,2025,Cache,Bear River,Cache Valley,431704.538,4604809.824,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39869,Agricultural,Hay/Turf,Grass Hay,Wheel,10.740612,2025,Cache,Bear River,Cache Valley,429943.061,4603681.129,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39888,Agricultural,Hay/Turf,Alfalfa,Sprinkler,14.43993,2025,Cache,Bear River,Cache Valley,430100.678,4604881.623,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,39893,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.337415,2025,Cache,Bear River,Cache Valley,430995.441,4600061.028,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,40040,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.940751,2025,Cache,Bear River,Cache Valley,430870.846,4606877.699,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40149,Agricultural,Hay/Turf,Alfalfa,Wheel,10.574008,2025,Cache,Bear River,Cache Valley,429418.404,4604375.656,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40173,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.837288,2025,Cache,Bear River,Cache Valley,429301.816,4606166.024,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40193,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.118891,2025,Cache,Bear River,Cache Valley,430689.766,4599931.815,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,40195,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.74014,2025,Cache,Bear River,Cache Valley,432789.638,4608432.043,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40375,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.318278,2025,Cache,Bear River,Cache Valley,429809.037,4602381.271,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,40381,Agricultural,Hay/Turf,Alfalfa,Sprinkler,34.115851,2025,Cache,Bear River,Cache Valley,430415.229,4603623.553,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40418,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.438432,2025,Cache,Bear River,Cache Valley,429966.98,4601631.601,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40506,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.419261,2025,Cache,Bear River,Cache Valley,429974.001,4603311.869,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40661,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.827793,2025,Cache,Bear River,Cache Valley,431295.976,4598661.487,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,40749,Agricultural,Hay/Turf,Alfalfa,Sprinkler,7.439751,2025,Cache,Bear River,Cache Valley,430224.899,4604288.089,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40785,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.810611,2025,Cache,Bear River,Cache Valley,429393.512,4605832.757,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40842,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.80681,2025,Cache,Bear River,Cache Valley,429458.983,4605189.138,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,40871,Agricultural,Hay/Turf,Alfalfa,Sprinkler,14.384591,2025,Cache,Bear River,Cache Valley,431709.98,4603462.925,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40878,Agricultural,Hay/Turf,Alfalfa,Wheel,16.847369,2025,Cache,Bear River,Cache Valley,431231.254,4599930.476,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,40975,Agricultural,Hay/Turf,Alfalfa,Sprinkler,18.954751,2025,Cache,Bear River,Cache Valley,429558.556,4602147.702,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41035,Agricultural,Hay/Turf,Alfalfa,Wheel,15.520602,2025,Cache,Bear River,Cache Valley,431345.118,4600296.755,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41184,Agricultural,Hay/Turf,Alfalfa,Wheel,16.542826,2025,Cache,Bear River,Cache Valley,429679.583,4604591.282,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41204,Agricultural,Hay/Turf,Alfalfa,Sprinkler,21.31304,2025,Cache,Bear River,Cache Valley,430651.8,4605910.089,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41209,Agricultural,Hay/Turf,Alfalfa,Wheel,16.099136,2025,Cache,Bear River,Cache Valley,429527.973,4601821.085,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41370,Agricultural,Hay/Turf,Alfalfa,Sprinkler,17.028307,2025,Cache,Bear River,Cache Valley,430362.453,4600969.692,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41373,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.219239,2025,Cache,Bear River,Cache Valley,430174.733,4601589.553,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,41406,Agricultural,Hay/Turf,Alfalfa,Wheel,12.195062,2025,Cache,Bear River,Cache Valley,431965.858,4601517.366,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41450,Agricultural,Hay/Turf,Grass Hay,Sprinkler,9.189957,2025,Cache,Bear River,Cache Valley,429388.555,4604196.96,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41537,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.863312,2025,Cache,Bear River,Cache Valley,430656.743,4601616.125,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41553,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.272872,2025,Cache,Bear River,Cache Valley,430719.519,4600588.486,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,41637,Agricultural,Hay/Turf,Alfalfa,Wheel,9.611164,2025,Cache,Bear River,Cache Valley,431456.328,4601509.216,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41757,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.637721,2025,Cache,Bear River,Cache Valley,429293.592,4605866.615,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,41775,Agricultural,Hay/Turf,Alfalfa,Pivot,17.708307,2025,Cache,Bear River,Cache Valley,431964.583,4598746.954,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,41852,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.781185,2025,Cache,Bear River,Cache Valley,429976.471,4602867.967,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,41865,Agricultural,Hay/Turf,Alfalfa,Sprinkler,21.860406,2025,Cache,Bear River,Cache Valley,430271.868,4603977.913,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,41974,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.169098,2025,Cache,Bear River,Cache Valley,432966.549,4608434.521,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,41998,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.916503,2025,Cache,Bear River,Cache Valley,430760.569,4607148.392,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,42006,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.028578,2025,Cache,Bear River,Cache Valley,431772.255,4603179.951,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42063,Agricultural,Hay/Turf,Alfalfa,Wheel,9.662254,2025,Cache,Bear River,Cache Valley,431707.197,4597979.606,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42070,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.485595,2025,Cache,Bear River,Cache Valley,430725.805,4602621.542,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,42132,Agricultural,Hay/Turf,Alfalfa,Wheel,6.587607,2025,Cache,Bear River,Cache Valley,431581.23,4601508.089,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42162,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.779684,2025,Cache,Bear River,Cache Valley,429612.534,4603004.121,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42218,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.904716,2025,Cache,Bear River,Cache Valley,427450.743,4610401.823,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42240,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.249906,2025,Cache,Bear River,Cache Valley,431917.085,4597405.283,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42325,Agricultural,Hay/Turf,Alfalfa,Sprinkler,17.594898,2025,Cache,Bear River,Cache Valley,430774.204,4607355.311,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,42350,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.979319,2025,Cache,Bear River,Cache Valley,431484.213,4601731.48,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,42415,Agricultural,Hay/Turf,Grass Hay,Sprinkler,20.107697,2025,Cache,Bear River,Cache Valley,430721.93,4603477.534,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42463,Agricultural,Hay/Turf,Alfalfa,Wheel,12.630668,2025,Cache,Bear River,Cache Valley,429095.282,4604169.05,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42500,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.820647,2025,Cache,Bear River,Cache Valley,431094.935,4601573.438,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42519,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.053234,2025,Cache,Bear River,Cache Valley,425752.413,4610335.136,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42655,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.336857,2025,Cache,Bear River,Cache Valley,430669.411,4602609.864,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42675,Agricultural,Hay/Turf,Grass Hay,Sprinkler,7.731681,2025,Cache,Bear River,Cache Valley,430156.015,4605254.115,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42759,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.625885,2025,Cache,Bear River,Cache Valley,428926.165,4604097.178,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42766,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.923267,2025,Cache,Bear River,Cache Valley,431227.827,4600237.628,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42774,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.232858,2025,Cache,Bear River,Cache Valley,429989.463,4603530.943,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42903,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.853082,2025,Cache,Bear River,Cache Valley,428096.463,4610731.132,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,42927,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.226515,2025,Cache,Bear River,Cache Valley,429753.567,4609636.216,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,42968,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.054959,2025,Cache,Bear River,Cache Valley,430468.491,4601202.487,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,42989,Agricultural,Hay/Turf,Alfalfa,Sprinkler,17.469778,2025,Cache,Bear River,Cache Valley,432571.338,4606921.295,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43051,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.089727,2025,Cache,Bear River,Cache Valley,429169.538,4603747.282,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,43081,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.094246,2025,Cache,Bear River,Cache Valley,431957.089,4604307.403,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43125,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.719719,2025,Cache,Bear River,Cache Valley,431282.224,4598291.853,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,43133,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.339439,2025,Cache,Bear River,Cache Valley,430914.873,4603098.545,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43245,Agricultural,Hay/Turf,Alfalfa,Sprinkler,45.631402,2025,Cache,Bear River,Cache Valley,429665.415,4605779.901,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43275,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.190221,2025,Cache,Bear River,Cache Valley,430001.014,4601319.497,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,43415,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.535461,2025,Cache,Bear River,Cache Valley,430122.632,4599805.397,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43638,Agricultural,Hay/Turf,Grass Hay,Wheel,1.982118,2025,Cache,Bear River,Cache Valley,431222.233,4601413.898,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,43874,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.489389,2025,Cache,Bear River,Cache Valley,430677.467,4601835.209,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,43892,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.096345,2025,Cache,Bear River,Cache Valley,430785.581,4607589.412,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,43948,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.581738,2025,Cache,Bear River,Cache Valley,431922.488,4601329.123,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,43997,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.548389,2025,Cache,Bear River,Cache Valley,430570.239,4606440.556,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,44191,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.784551,2025,Cache,Bear River,Cache Valley,429742.092,4603536.006,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,44449,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.339409,2025,Cache,Bear River,Cache Valley,432097.85,4597470.486,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,44518,Agricultural,Hay/Turf,Alfalfa,Pivot,16.454521,2025,Cache,Bear River,Cache Valley,431927.805,4598003.647,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,44539,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.284832,2025,Cache,Bear River,Cache Valley,429881.998,4603529.555,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,44607,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.938612,2025,Cache,Bear River,Cache Valley,430852.562,4601821.722,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,44619,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.261765,2025,Cache,Bear River,Cache Valley,429582.868,4606627.115,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,44729,Agricultural,Hay/Turf,Grass Hay,Sprinkler,7.710937,2025,Cache,Bear River,Cache Valley,431921.524,4606952.88,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,44856,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.512673,2025,Cache,Bear River,Cache Valley,427788.177,4610290.619,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,44872,Agricultural,Hay/Turf,Alfalfa,Wheel,23.568117,2025,Cache,Bear River,Cache Valley,432032.185,4606678.876,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,44909,Agricultural,Hay/Turf,Alfalfa,Wheel,6.44944,2025,Cache,Bear River,Cache Valley,431940.363,4601733.919,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,44950,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.251059,2025,Cache,Bear River,Cache Valley,429616.444,4601530.519,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45006,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.218426,2025,Cache,Bear River,Cache Valley,429366.882,4606139.735,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45132,Agricultural,Hay/Turf,Alfalfa,Wheel,21.156204,2025,Cache,Bear River,Cache Valley,431348.807,4608489.959,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45279,Agricultural,Hay/Turf,Alfalfa,Sprinkler,16.802339,2025,Cache,Bear River,Cache Valley,429936.679,4604907.882,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45298,Agricultural,Hay/Turf,Alfalfa,Wheel,5.905132,2025,Cache,Bear River,Cache Valley,430457.618,4601336.973,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45305,Agricultural,Hay/Turf,Alfalfa,Sprinkler,14.540674,2025,Cache,Bear River,Cache Valley,431503.811,4602312.485,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45322,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.47442,2025,Cache,Bear River,Cache Valley,429711.913,4605013.668,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45396,Agricultural,Hay/Turf,Alfalfa,Wheel,5.383541,2025,Cache,Bear River,Cache Valley,431654.332,4602895.375,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45424,Agricultural,Hay/Turf,Alfalfa,Sprinkler,5.673707,2025,Cache,Bear River,Cache Valley,432499.136,4602921.561,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45458,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.927634,2025,Cache,Bear River,Cache Valley,431233.159,4598180.057,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45569,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.163539,2025,Cache,Bear River,Cache Valley,430723.322,4600882.064,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45580,Agricultural,Hay/Turf,Alfalfa,Wheel,16.194976,2025,Cache,Bear River,Cache Valley,430924.312,4600383.753,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45617,Agricultural,Hay/Turf,Alfalfa,Pivot,7.446197,2025,Cache,Bear River,Cache Valley,431748.389,4602142.49,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45626,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.259441,2025,Cache,Bear River,Cache Valley,431136.426,4598361.209,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,45693,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.793951,2025,Cache,Bear River,Cache Valley,431825.922,4601733.407,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45764,Agricultural,Hay/Turf,Alfalfa,Sprinkler,15.06433,2025,Cache,Bear River,Cache Valley,429534.652,4603508.385,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,45931,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.467146,2025,Cache,Bear River,Cache Valley,429824.09,4605070.051,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,45940,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.681778,2025,Cache,Bear River,Cache Valley,428009.583,4610614.788,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46006,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.672066,2025,Cache,Bear River,Cache Valley,430035.066,4602843.788,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46022,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.939655,2025,Cache,Bear River,Cache Valley,430025.185,4602776.04,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46085,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.612838,2025,Cache,Bear River,Cache Valley,431100.923,4601342.38,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,46086,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.211379,2025,Cache,Bear River,Cache Valley,427253.787,4610314.576,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,46198,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.242801,2025,Cache,Bear River,Cache Valley,430207.601,4603765.861,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,46214,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.018048,2025,Cache,Bear River,Cache Valley,427682.54,4610602.228,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46215,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.475993,2025,Cache,Bear River,Cache Valley,429736.325,4602814.449,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46305,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.666338,2025,Cache,Bear River,Cache Valley,430255.2,4602602.628,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,46325,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.158828,2025,Cache,Bear River,Cache Valley,430009.306,4600126.828,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,46357,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.406811,2025,Cache,Bear River,Cache Valley,431336.968,4601754.943,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46388,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.30949,2025,Cache,Bear River,Cache Valley,429367.734,4603701.142,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46496,Agricultural,Hay/Turf,Grass Hay,Wheel,6.822506,2025,Cache,Bear River,Cache Valley,429624.418,4604362.107,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46503,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.60255,2025,Cache,Bear River,Cache Valley,429913.648,4603489.622,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,46523,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.750898,2025,Cache,Bear River,Cache Valley,427492.554,4610112.963,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,46581,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.238284,2025,Cache,Bear River,Cache Valley,429585.825,4606394.039,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,46623,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.66243,2025,Cache,Bear River,Cache Valley,430697.084,4606261.927,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,46799,Agricultural,Hay/Turf,Grass Hay,Sprinkler,9.71191,2025,Cache,Bear River,Cache Valley,432097.37,4600699.791,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,46867,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.603039,2025,Cache,Bear River,Cache Valley,429639.548,4604182.417,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,47270,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.384663,2025,Cache,Bear River,Cache Valley,432702.206,4606732.652,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,47506,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.255373,2025,Cache,Bear River,Cache Valley,429384.228,4602285.913,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,47507,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.018702,2025,Cache,Bear River,Cache Valley,432045.242,4602768.856,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,48068,Agricultural,Hay/Turf,Alfalfa,Pivot,48.106294,2025,Cache,Bear River,Cache Valley,432533.719,4606519.98,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,48107,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.266574,2025,Cache,Bear River,Cache Valley,431922.234,4598887.853,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,48180,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.110934,2025,Cache,Bear River,Cache Valley,431205.928,4599042.742,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,48339,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.975698,2025,Cache,Bear River,Cache Valley,432784.094,4606609.179,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,48568,Agricultural,Hay/Turf,Grass Hay,Wheel,2.020101,2025,Cache,Bear River,Cache Valley,429440.188,4603299.057,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,48582,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.798512,2025,Cache,Bear River,Cache Valley,428874.97,4610098.4,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,48873,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.201751,2025,Cache,Bear River,Cache Valley,431202.262,4598646.003,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,49141,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.350446,2025,Cache,Bear River,Cache Valley,432034.564,4598898.018,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,49177,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.597271,2025,Cache,Bear River,Cache Valley,432414.982,4606294.494,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,49231,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.533215,2025,Cache,Bear River,Cache Valley,430929.517,4599824.765,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,49678,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.690034,2025,Cache,Bear River,Cache Valley,431203.047,4599168.353,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,49764,Agricultural,Hay/Turf,Alfalfa,Sprinkler,12.202685,2025,Cache,Bear River,Cache Valley,431865.004,4598577.933,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,49805,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.723155,2025,Cache,Bear River,Cache Valley,429668.681,4603291.12,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,50031,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.59303,2025,Cache,Bear River,Cache Valley,432335.521,4597934.223,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,50175,Agricultural,Hay/Turf,Alfalfa,Sprinkler,26.622596,2025,Cache,Bear River,Cache Valley,430768.177,4606509.497,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,50467,Agricultural,Hay/Turf,Alfalfa,Sprinkler,8.924272,2025,Cache,Bear River,Cache Valley,431249.922,4601261.678,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,50685,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.63132,2025,Cache,Bear River,Cache Valley,430302.475,4602777.502,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,50762,Agricultural,Hay/Turf,Grass Hay,Sprinkler,7.651158,2025,Cache,Bear River,Cache Valley,430784.884,4603304.108,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,50892,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.754486,2025,Cache,Bear River,Cache Valley,431340.449,4601609.746,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,50937,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.886693,2025,Cache,Bear River,Cache Valley,432542.513,4607604.408,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,50970,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.337137,2025,Cache,Bear River,Cache Valley,432622.39,4606752.719,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,51039,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.418152,2025,Cache,Bear River,Cache Valley,432418.73,4606753.357,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,51062,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.495678,2025,Cache,Bear River,Cache Valley,430058.99,4604095.513,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,51194,Agricultural,Hay/Turf,Alfalfa,Sprinkler,9.597383,2025,Cache,Bear River,Cache Valley,432471.413,4608547.369,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,51421,Agricultural,Hay/Turf,Alfalfa,Wheel,9.872943,2025,Cache,Bear River,Cache Valley,429957.116,4605232.691,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,51538,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.999655,2025,Cache,Bear River,Cache Valley,431632.512,4609868.74,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,51685,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.769584,2025,Cache,Bear River,Cache Valley,432069.832,4598975.82,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,51857,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.61074,2025,Cache,Bear River,Cache Valley,425666.98,4610341.28,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,51911,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.883104,2025,Cache,Bear River,Cache Valley,429699.752,4605091.661,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,51953,Agricultural,Hay/Turf,Grass Hay,Sprinkler,7.923627,2025,Cache,Bear River,Cache Valley,432506.527,4598025.71,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52015,Agricultural,Hay/Turf,Alfalfa,Sprinkler,4.805206,2025,Cache,Bear River,Cache Valley,431468.852,4604683.952,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,52061,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.526695,2025,Cache,Bear River,Cache Valley,430893.972,4599953.953,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52146,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.937172,2025,Cache,Bear River,Cache Valley,431543.485,4610130.143,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52253,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.466282,2025,Cache,Bear River,Cache Valley,432225.284,4605555.985,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52262,Agricultural,Hay/Turf,Alfalfa,Sprinkler,10.99135,2025,Cache,Bear River,Cache Valley,431118.438,4603431.837,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52376,Agricultural,Hay/Turf,Alfalfa,Sprinkler,3.366391,2025,Cache,Bear River,Cache Valley,432267.532,4602940.595,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,52627,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.891229,2025,Cache,Bear River,Cache Valley,429717.279,4603114.992,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52808,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.86403,2025,Cache,Bear River,Cache Valley,432038.305,4599027.958,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52891,Agricultural,Hay/Turf,Alfalfa,Sprinkler,6.867343,2025,Cache,Bear River,Cache Valley,431949.343,4604066.681,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,52985,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.847273,2025,Cache,Bear River,Cache Valley,432300.343,4606303.416,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,53023,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.577814,2025,Cache,Bear River,Cache Valley,429342.747,4606339.976,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,53075,Agricultural,Hay/Turf,Alfalfa,Sprinkler,1.329102,2025,Cache,Bear River,Cache Valley,427960.497,4610162.965,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53243,Agricultural,Hay/Turf,Alfalfa,Sprinkler,2.141169,2025,Cache,Bear River,Cache Valley,432737.975,4606346.558,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53475,Agricultural,Small Fruit,Berries,Flood,3.050312,2025,Cache,Bear River,Cache Valley,431865.101,4602947.649,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53489,Agricultural,Small Fruit,Berries,Sprinkler,2.969849,2025,Cache,Bear River,Cache Valley,431702.43,4603084.341,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53505,Agricultural,Small Fruit,Berries,Sprinkler,3.100352,2025,Cache,Bear River,Cache Valley,431702.925,4603236.695,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53506,Agricultural,Small Fruit,Berries,Sprinkler,3.932636,2025,Cache,Bear River,Cache Valley,431636.16,4603160.555,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53507,Agricultural,Small Fruit,Berries,Sprinkler,2.598844,2025,Cache,Bear River,Cache Valley,432764.169,4602815.65,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53508,Agricultural,Small Fruit,Berries,Sprinkler,5.683272,2025,Cache,Bear River,Cache Valley,432061.013,4602663.156,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53510,Agricultural,Small Fruit,Berries,Sprinkler,1.27824,2025,Cache,Bear River,Cache Valley,431949.106,4602790.135,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53512,Agricultural,Small Fruit,Berries,Sprinkler,6.66086,2025,Cache,Bear River,Cache Valley,432136.21,4602837.843,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53513,Agricultural,Small Fruit,Berries,Sprinkler,3.146184,2025,Cache,Bear River,Cache Valley,432658.315,4602804.04,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53514,Agricultural,Small Fruit,Berries,Sprinkler,5.318943,2025,Cache,Bear River,Cache Valley,431574.458,4603160.5,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,53516,Agricultural,Small Fruit,Berries,Sprinkler,10.387761,2025,Cache,Bear River,Cache Valley,431469.388,4603163.07,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,54176,Agricultural,Field Crops,Corn,Flood,1.414543,2025,Cache,Bear River,Cache Valley,429748.401,4609881.128,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,54648,Agricultural,Field Crops,Corn,Flood,2.26802,2025,Cache,Bear River,Cache Valley,429694.813,4609854.035,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,55180,Agricultural,Field Crops,Corn,Flood,2.338525,2025,Cache,Bear River,Cache Valley,429802.068,4609917.541,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,55381,Agricultural,Field Crops,Corn,Flood,28.483617,2025,Cache,Bear River,Cache Valley,426989.512,4610523.249,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,55953,Agricultural,Field Crops,Corn,Flood,5.185058,2025,Cache,Bear River,Cache Valley,429888.169,4609892.261,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,57448,Agricultural,Field Crops,Corn,Sprinkler,1.803598,2025,Cache,Bear River,Cache Valley,429489.409,4602279.665,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,59042,Agricultural,Hay/Turf,Alfalfa,Dry Crop,3.422649,2025,Cache,Bear River,Cache Valley,432286.017,4606219.088,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,59475,Agricultural,Hay/Turf,Alfalfa,Dry Crop,7.400415,2025,Cache,Bear River,Cache Valley,431229.118,4602247.054,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,59520,Agricultural,Hay/Turf,Alfalfa,Dry Crop,8.607076,2025,Cache,Bear River,Cache Valley,430604.372,4601089.436,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,59986,Agricultural,Hay/Turf,Alfalfa,Dry Crop,2.42921,2025,Cache,Bear River,Cache Valley,431867.071,4602536.472,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,60776,Agricultural,Hay/Turf,Alfalfa,Dry Crop,10.043747,2025,Cache,Bear River,Cache Valley,431328.159,4602832.022,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,60905,Agricultural,Hay/Turf,Alfalfa,Dry Crop,0.799496,2025,Cache,Bear River,Cache Valley,429382.019,4606798.131,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,60989,Agricultural,Hay/Turf,Alfalfa,Dry Crop,1.075526,2025,Cache,Bear River,Cache Valley,430601.4,4602526.172,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,60991,Agricultural,Hay/Turf,Alfalfa,Dry Crop,1.276944,2025,Cache,Bear River,Cache Valley,430911.07,4601449.917,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,61138,Agricultural,Hay/Turf,Alfalfa,Dry Crop,1.080153,2025,Cache,Bear River,Cache Valley,431208.896,4602755.377,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,63913,Agricultural,Hay/Turf,Alfalfa,Dry Crop,6.020537,2025,Cache,Bear River,Cache Valley,431011.147,4603516.419,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,64624,Agricultural,Hay/Turf,Alfalfa,Dry Crop,2.41472,2025,Cache,Bear River,Cache Valley,432288.682,4608436.422,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,76083,Agricultural,Hay/Turf,Grass Hay,Dry Crop,7.794978,2025,Cache,Bear River,Cache Valley,432937.115,4607139.317,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,131025,Agricultural,Pasture Land,Pasture,Dry Crop,1.246418,2025,Cache,Bear River,Cache Valley,429999.227,4602439.068,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,131100,Agricultural,Pasture Land,Pasture,Dry Crop,0.613966,2025,Cache,Bear River,Cache Valley,430007.826,4602146.273,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,131197,Agricultural,Pasture Land,Pasture,Dry Crop,2.825494,2025,Cache,Bear River,Cache Valley,431213.726,4602835.144,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,131211,Agricultural,Pasture Land,Pasture,Dry Crop,2.684343,2025,Cache,Bear River,Cache Valley,428235.489,4610420.234,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,131485,Agricultural,Pasture Land,Pasture,Dry Crop,1.446958,2025,Cache,Bear River,Cache Valley,430286.625,4609723.415,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,131532,Agricultural,Pasture Land,Pasture,Dry Crop,0.915747,2025,Cache,Bear River,Cache Valley,427881.241,4608926.763,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,141370,Agricultural,Hay/Turf,Grass Hay,Flood,5.58778,2025,Cache,Bear River,Cache Valley,429602.169,4610095.378,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,150517,Agricultural,Fallow/Idle,Fallow/Idle,Wheel,12.846808,2025,Cache,Bear River,Cache Valley,431280.084,4604518.492,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,150783,Agricultural,Fallow/Idle,Fallow/Idle,Sprinkler,3.183266,2025,Cache,Bear River,Cache Valley,431756.742,4609985.297,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,152458,Agricultural,Fallow/Idle,Fallow/Idle,Sprinkler,8.020195,2025,Cache,Bear River,Cache Valley,432066.897,4602448.784,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,156188,Agricultural,Hay/Turf,Grass Hay,Flood,9.516493,2025,Cache,Bear River,Cache Valley,430409.678,4607340.807,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,158572,Agricultural,Hay/Turf,Grass Hay,Flood,7.02839,2025,Cache,Bear River,Cache Valley,429291.649,4609999.446,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,159013,Agricultural,Hay/Turf,Grass Hay,Flood,18.056742,2025,Cache,Bear River,Cache Valley,429961.773,4607312.237,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,162435,Agricultural,Hay/Turf,Grass Hay,Flood,2.816986,2025,Cache,Bear River,Cache Valley,430009.158,4606978.969,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,162805,Agricultural,Hay/Turf,Grass Hay,Flood,9.696645,2025,Cache,Bear River,Cache Valley,429432.247,4610080.415,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,164174,Agricultural,Hay/Turf,Grass Hay,Flood,2.840851,2025,Cache,Bear River,Cache Valley,429599.571,4609974.325,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,164221,Agricultural,Hay/Turf,Grass Hay,Flood,3.427847,2025,Cache,Bear River,Cache Valley,430157.84,4607201.646,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,164877,Agricultural,Hay/Turf,Grass Hay,Flood,1.545595,2025,Cache,Bear River,Cache Valley,430574.032,4607149.109,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,164997,Agricultural,Hay/Turf,Grass Hay,Flood,5.852017,2025,Cache,Bear River,Cache Valley,431865.205,4602810.006,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,166584,Agricultural,Hay/Turf,Grass Hay,Flood,45.151688,2025,Cache,Bear River,Cache Valley,430245.003,4607509.638,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,167406,Agricultural,Hay/Turf,Grass Hay,Flood,0.821445,2025,Cache,Bear River,Cache Valley,429854.117,4610204.847,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,168778,Agricultural,Hay/Turf,Grass Hay,Flood,4.429157,2025,Cache,Bear River,Cache Valley,425974.512,4610054.591,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,170559,Agricultural,Hay/Turf,Grass Hay,Flood,13.520385,2025,Cache,Bear River,Cache Valley,431173.428,4608954.384,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,171078,Agricultural,Hay/Turf,Grass Hay,Flood,4.331226,2025,Cache,Bear River,Cache Valley,429934.827,4606792.113,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,174831,Agricultural,Hay/Turf,Grass Hay,Flood,3.400119,2025,Cache,Bear River,Cache Valley,432642.994,4602683.09,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,176634,Agricultural,Hay/Turf,Grass Hay,Flood,2.354753,2025,Cache,Bear River,Cache Valley,430998.921,4604520.005,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,177314,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.627442,2025,Cache,Bear River,Cache Valley,430208.293,4610514.751,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,177324,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.459778,2025,Cache,Bear River,Cache Valley,427442.239,4610340.945,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,177337,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.005443,2025,Cache,Bear River,Cache Valley,427955.781,4608924.906,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,177360,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.331092,2025,Cache,Bear River,Cache Valley,430311.361,4602613.45,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,177368,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.233651,2025,Cache,Bear River,Cache Valley,427948.709,4608975.398,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,177375,Agricultural,Hay/Turf,Grass Hay,Wheel,2.960447,2025,Cache,Bear River,Cache Valley,429701.875,4603891.587,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,177392,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.222624,2025,Cache,Bear River,Cache Valley,429749.728,4608925.153,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,177763,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.007848,2025,Cache,Bear River,Cache Valley,429959.427,4603903.441,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,178508,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.446635,2025,Cache,Bear River,Cache Valley,429691.458,4604181.909,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,179139,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.580428,2025,Cache,Bear River,Cache Valley,429913.659,4603451.645,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,179742,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.967096,2025,Cache,Bear River,Cache Valley,430744.472,4601417.432,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,180200,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.350388,2025,Cache,Bear River,Cache Valley,429714.203,4604953.549,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,181077,Agricultural,Hay/Turf,Grass Hay,Sprinkler,8.500808,2025,Cache,Bear River,Cache Valley,430077.085,4600356.489,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,181314,Agricultural,Hay/Turf,Grass Hay,Wheel,6.27809,2025,Cache,Bear River,Cache Valley,431679.51,4601507.236,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,181597,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.328838,2025,Cache,Bear River,Cache Valley,426575.475,4610421.594,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,182034,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.863913,2025,Cache,Bear River,Cache Valley,430484.625,4599886.793,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,182380,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.917123,2025,Cache,Bear River,Cache Valley,430714.057,4600447.475,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,182716,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.87467,2025,Cache,Bear River,Cache Valley,431193.083,4599230.298,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,183072,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.996036,2025,Cache,Bear River,Cache Valley,430309.127,4601134.109,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,183126,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.282252,2025,Cache,Bear River,Cache Valley,430583.093,4600952.47,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,183266,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.674334,2025,Cache,Bear River,Cache Valley,432667.549,4602916.279,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,183520,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.193897,2025,Cache,Bear River,Cache Valley,429902.551,4601314.431,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,184131,Agricultural,Hay/Turf,Grass Hay,Sprinkler,6.331168,2025,Cache,Bear River,Cache Valley,431504.52,4607397.892,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,184348,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.959636,2025,Cache,Bear River,Cache Valley,432030.78,4602863.729,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,184574,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.494466,2025,Cache,Bear River,Cache Valley,432090.062,4602137.371,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,186940,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.20764,2025,Cache,Bear River,Cache Valley,430944.83,4600074.819,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,187350,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.149097,2025,Cache,Bear River,Cache Valley,430587.213,4600413.559,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,187568,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.079253,2025,Cache,Bear River,Cache Valley,429466.015,4606355.643,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,187598,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.093449,2025,Cache,Bear River,Cache Valley,430135.625,4603742.31,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,187628,Agricultural,Hay/Turf,Grass Hay,Wheel,6.932445,2025,Cache,Bear River,Cache Valley,430157.69,4603556.76,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,187683,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.711085,2025,Cache,Bear River,Cache Valley,429766.558,4604171.853,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,187876,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.647193,2025,Cache,Bear River,Cache Valley,430948.617,4600960.84,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,188171,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.694394,2025,Cache,Bear River,Cache Valley,430900.829,4600962.299,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,188179,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.474831,2025,Cache,Bear River,Cache Valley,430827.326,4600975.264,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,188222,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.305691,2025,Cache,Bear River,Cache Valley,430430.169,4606053.976,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,188884,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.710535,2025,Cache,Bear River,Cache Valley,429368.722,4603742.058,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,188947,Agricultural,Hay/Turf,Grass Hay,Sprinkler,5.848675,2025,Cache,Bear River,Cache Valley,430703.525,4600267.661,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,189240,Agricultural,Hay/Turf,Grass Hay,Sprinkler,2.811157,2025,Cache,Bear River,Cache Valley,430651.237,4603642.324,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,189299,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.381721,2025,Cache,Bear River,Cache Valley,430728.055,4601837.011,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,189343,Agricultural,Hay/Turf,Grass Hay,Pivot,23.271668,2025,Cache,Bear River,Cache Valley,431439.541,4601170.381,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,190125,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.665633,2025,Cache,Bear River,Cache Valley,430427.301,4605776.947,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,190456,Agricultural,Hay/Turf,Grass Hay,Wheel,6.120369,2025,Cache,Bear River,Cache Valley,430130.404,4605434.226,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,190670,Agricultural,Hay/Turf,Grass Hay,Sprinkler,0.699836,2025,Cache,Bear River,Cache Valley,432006.345,4602769.141,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,190764,Agricultural,Hay/Turf,Grass Hay,Sprinkler,4.001949,2025,Cache,Bear River,Cache Valley,430848.908,4601113.51,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,190809,Agricultural,Hay/Turf,Grass Hay,Sprinkler,22.339373,2025,Cache,Bear River,Cache Valley,431912.577,4605632.104,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191341,Agricultural,Hay/Turf,Grass Hay,Wheel,20.164633,2025,Cache,Bear River,Cache Valley,431755.242,4604514.023,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191443,Agricultural,Hay/Turf,Grass Hay,Wheel,5.733349,2025,Cache,Bear River,Cache Valley,431113.699,4602357.677,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191563,Agricultural,Hay/Turf,Grass Hay,Sprinkler,15.230647,2025,Cache,Bear River,Cache Valley,431817.208,4608032.272,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,191570,Agricultural,Hay/Turf,Grass Hay,Sprinkler,1.018452,2025,Cache,Bear River,Cache Valley,426728.488,4610395.718,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191593,Agricultural,Hay/Turf,Grass Hay,Sprinkler,14.471173,2025,Cache,Bear River,Cache Valley,432137.806,4605171.184,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191676,Agricultural,Hay/Turf,Grass Hay,Sprinkler,12.243813,2025,Cache,Bear River,Cache Valley,431610.842,4609988.282,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,191856,Agricultural,Hay/Turf,Grass Hay,Sprinkler,6.777464,2025,Cache,Bear River,Cache Valley,431479.413,4604516.802,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,192049,Agricultural,Hay/Turf,Grass Hay,Sprinkler,9.074775,2025,Cache,Bear River,Cache Valley,432388.265,4607134.902,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,192314,Agricultural,Hay/Turf,Grass Hay,Sprinkler,56.70671,2025,Cache,Bear River,Cache Valley,432791.119,4607358.234,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,192321,Agricultural,Hay/Turf,Grass Hay,Sprinkler,3.001834,2025,Cache,Bear River,Cache Valley,432905.567,4597813.822,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,192354,Agricultural,Hay/Turf,Grass Hay,Wheel,6.233505,2025,Cache,Bear River,Cache Valley,431086.215,4604519.815,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,192426,Agricultural,Hay/Turf,Grass Hay,Pivot,41.450343,2025,Cache,Bear River,Cache Valley,431609.391,4605636.637,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,199094,Agricultural,Grain/Seeds,Winter Wheat,Flood,1.004516,2025,Cache,Bear River,Cache Valley,431172.797,4603634.724,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,201160,Agricultural,Grain/Seeds,Barley,Sprinkler,8.061731,2025,Cache,Bear River,Cache Valley,432290.494,4606571.003,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,201245,Agricultural,Grain/Seeds,Barley,Wheel,21.59952,2025,Cache,Bear River,Cache Valley,432826.762,4606928.034,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,201380,Agricultural,Grain/Seeds,Barley,Pivot,38.44769,2025,Cache,Bear River,Cache Valley,432547.89,4608053.987,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,201718,Agricultural,Grain/Seeds,Barley,Wheel,19.196236,2025,Cache,Bear River,Cache Valley,430714.561,4603058.544,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,201898,Agricultural,Grain/Seeds,Barley,Wheel,21.015095,2025,Cache,Bear River,Cache Valley,431544.056,4607677.977,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202330,Agricultural,Grain/Seeds,Barley,Sprinkler,2.157658,2025,Cache,Bear River,Cache Valley,432350.172,4607723.984,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202355,Agricultural,Grain/Seeds,Barley,Sprinkler,12.209335,2025,Cache,Bear River,Cache Valley,432459.038,4607487.722,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202567,Agricultural,Grain/Seeds,Spring Wheat,Wheel,8.749367,2025,Cache,Bear River,Cache Valley,431315.525,4604316.862,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202585,Agricultural,Grain/Seeds,Barley,Pivot,14.604594,2025,Cache,Bear River,Cache Valley,432309.589,4607469.244,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202624,Agricultural,Grain/Seeds,Spring Wheat,Wheel,10.202989,2025,Cache,Bear River,Cache Valley,431125.843,4604320.235,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202762,Agricultural,Grain/Seeds,Spring Wheat,Wheel,4.408473,2025,Cache,Bear River,Cache Valley,430846.668,4604322.615,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,202846,Agricultural,Grain/Seeds,Spring Wheat,Pivot,28.786358,2025,Cache,Bear River,Cache Valley,431691.957,4601165.31,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,202903,Agricultural,Grain/Seeds,Spring Wheat,Wheel,10.735707,2025,Cache,Bear River,Cache Valley,430737.821,4607790.871,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203016,Agricultural,Grain/Seeds,Spring Wheat,Sprinkler,3.682921,2025,Cache,Bear River,Cache Valley,432299.46,4607952.038,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,203056,Agricultural,Grain/Seeds,Spring Wheat,Wheel,10.136878,2025,Cache,Bear River,Cache Valley,430942.757,4607785.521,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,203065,Agricultural,Grain/Seeds,Spring Wheat,Wheel,32.913162,2025,Cache,Bear River,Cache Valley,431303.529,4607623.613,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203074,Agricultural,Grain/Seeds,Spring Wheat,Wheel,10.108342,2025,Cache,Bear River,Cache Valley,431609.921,4604262.559,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203133,Agricultural,Grain/Seeds,Spring Wheat,Pivot,30.146805,2025,Cache,Bear River,Cache Valley,432445.416,4605626.656,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203229,Agricultural,Grain/Seeds,Spring Wheat,Sprinkler,5.137198,2025,Cache,Bear River,Cache Valley,431856.82,4601167.866,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203244,Agricultural,Grain/Seeds,Spring Wheat,Wheel,6.435253,2025,Cache,Bear River,Cache Valley,430957.27,4604320.048,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203701,Agricultural,Grain/Seeds,Winter Wheat,Sprinkler,17.678265,2025,Cache,Bear River,Cache Valley,431588.767,4608032.409,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,203874,Agricultural,Grain/Seeds,Winter Wheat,Sprinkler,4.268755,2025,Cache,Bear River,Cache Valley,430765.536,4602345.516,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,203942,Agricultural,Grain/Seeds,Winter Wheat,Wheel,10.201591,2025,Cache,Bear River,Cache Valley,431557.79,4599550.04,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204125,Agricultural,Grain/Seeds,Winter Wheat,Sprinkler,9.465387,2025,Cache,Bear River,Cache Valley,431091.01,4603719.407,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204251,Agricultural,Grain/Seeds,Winter Wheat,Pivot,17.313189,2025,Cache,Bear River,Cache Valley,431698.664,4599554.003,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204430,Agricultural,Grain/Seeds,Winter Wheat,Pivot,35.205493,2025,Cache,Bear River,Cache Valley,431577.886,4599160.515,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204733,Agricultural,Garden,Horticulture,Sprinkler,3.032992,2025,Cache,Bear River,Cache Valley,432147.283,4604072.83,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204752,Agricultural,Garden,Horticulture,Wheel,5.216585,2025,Cache,Bear River,Cache Valley,431500.346,4604364.847,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204772,Agricultural,Garden,Horticulture,Sprinkler,9.624851,2025,Cache,Bear River,Cache Valley,431911.763,4603918.777,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,204782,Agricultural,Garden,Horticulture,Wheel,5.549057,2025,Cache,Bear River,Cache Valley,431707.348,4604365.092,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,207145,Agricultural,Orchard,Orchard unspecified,Sprinkler,0.703887,2025,Cache,Bear River,Cache Valley,430725.604,4602767.069,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,207646,Agricultural,Orchard,Orchard unspecified,Sprinkler,1.438726,2025,Cache,Bear River,Cache Valley,430791.149,4602765.901,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,208016,Agricultural,Orchard,Orchard unspecified,Sprinkler,4.271168,2025,Cache,Bear River,Cache Valley,431862.91,4602654.832,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,208083,Agricultural,Orchard,Apples,Sprinkler,1.242835,2025,Cache,Bear River,Cache Valley,430835.595,4600149.986,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,208747,Agricultural,Pasture Land,Pasture,Flood,1.053639,2025,Cache,Bear River,Cache Valley,429281.491,4608456.839,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,208960,Agricultural,Pasture Land,Pasture,Flood,5.959783,2025,Cache,Bear River,Cache Valley,429441.718,4608448.958,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,209637,Agricultural,Pasture Land,Pasture,Flood,2.661264,2025,Cache,Bear River,Cache Valley,429587.107,4608399.288,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,209826,Agricultural,Pasture Land,Pasture,Flood,3.471761,2025,Cache,Bear River,Cache Valley,430652.025,4602385.29,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,213111,Agricultural,Pasture Land,Pasture,Flood,1.620839,2025,Cache,Bear River,Cache Valley,425731.14,4610244.827,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,221244,Agricultural,Pasture Land,Pasture,Flood,1.045665,2025,Cache,Bear River,Cache Valley,429213.908,4606295.522,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,222508,Agricultural,Pasture Land,Pasture,Sprinkler,0.637001,2025,Cache,Bear River,Cache Valley,428004.804,4610561.952,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,222548,Agricultural,Pasture Land,Pasture,Sprinkler,1.271737,2025,Cache,Bear River,Cache Valley,427966.129,4610492.821,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,222614,Agricultural,Pasture Land,Pasture,Sprinkler,0.451432,2025,Cache,Bear River,Cache Valley,428020.606,4610530.922,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222669,Agricultural,Pasture Land,Pasture,Sprinkler,0.697124,2025,Cache,Bear River,Cache Valley,430480.473,4602178.804,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222681,Agricultural,Pasture Land,Pasture,Sprinkler,1.507696,2025,Cache,Bear River,Cache Valley,430498.021,4601787.433,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222724,Agricultural,Pasture Land,Pasture,Sprinkler,2.128213,2025,Cache,Bear River,Cache Valley,429953.828,4602151.652,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222725,Agricultural,Pasture Land,Pasture,Sprinkler,1.112402,2025,Cache,Bear River,Cache Valley,430246.03,4602656.542,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,222791,Agricultural,Pasture Land,Pasture,Sprinkler,2.748877,2025,Cache,Bear River,Cache Valley,427467.305,4608866.869,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222822,Agricultural,Pasture Land,Pasture,Sprinkler,4.240928,2025,Cache,Bear River,Cache Valley,429735.085,4601908.258,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222865,Agricultural,Pasture Land,Pasture,Sprinkler,1.936751,2025,Cache,Bear River,Cache Valley,430488.428,4601908.442,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,222898,Agricultural,Pasture Land,Pasture,Sprinkler,0.490701,2025,Cache,Bear River,Cache Valley,427885.268,4610759.603,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,222960,Agricultural,Pasture Land,Pasture,Sprinkler,2.072196,2025,Cache,Bear River,Cache Valley,430009.768,4603079.659,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223064,Agricultural,Pasture Land,Pasture,Sprinkler,1.578957,2025,Cache,Bear River,Cache Valley,428121.024,4608989.956,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223079,Agricultural,Pasture Land,Pasture,Sprinkler,2.083324,2025,Cache,Bear River,Cache Valley,429969.074,4601872.448,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223155,Agricultural,Pasture Land,Pasture,Sprinkler,0.68077,2025,Cache,Bear River,Cache Valley,430481.027,4602132.328,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223176,Agricultural,Pasture Land,Pasture,Sprinkler,1.979732,2025,Cache,Bear River,Cache Valley,430017.084,4602059.17,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223184,Agricultural,Pasture Land,Pasture,Sprinkler,1.239531,2025,Cache,Bear River,Cache Valley,427945.183,4610753.09,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223198,Agricultural,Pasture Land,Pasture,Sprinkler,1.245249,2025,Cache,Bear River,Cache Valley,428007.597,4608864.751,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223229,Agricultural,Pasture Land,Pasture,Sprinkler,1.652369,2025,Cache,Bear River,Cache Valley,430504.233,4602021.069,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223238,Agricultural,Pasture Land,Pasture,Sprinkler,1.132061,2025,Cache,Bear River,Cache Valley,430468.768,4601699.924,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223245,Agricultural,Pasture Land,Pasture,Sprinkler,3.743614,2025,Cache,Bear River,Cache Valley,430527.306,4608855.584,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223249,Agricultural,Pasture Land,Pasture,Sprinkler,1.293497,2025,Cache,Bear River,Cache Valley,428111.12,4608920.493,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223252,Agricultural,Pasture Land,Pasture,Sprinkler,1.111649,2025,Cache,Bear River,Cache Valley,427307.106,4608801.349,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223293,Agricultural,Pasture Land,Pasture,Sprinkler,1.358998,2025,Cache,Bear River,Cache Valley,430407.991,4601685.844,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223310,Agricultural,Pasture Land,Pasture,Sprinkler,1.58949,2025,Cache,Bear River,Cache Valley,430004.471,4602368.673,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223351,Agricultural,Pasture Land,Pasture,Sprinkler,0.994774,2025,Cache,Bear River,Cache Valley,430171.238,4608909.135,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223395,Agricultural,Pasture Land,Pasture,Sprinkler,1.912741,2025,Cache,Bear River,Cache Valley,427468.966,4608956.106,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,223454,Agricultural,Pasture Land,Pasture,Sprinkler,1.802946,2025,Cache,Bear River,Cache Valley,431185.882,4602942.679,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223493,Agricultural,Pasture Land,Pasture,Sprinkler,0.41715,2025,Cache,Bear River,Cache Valley,430779.636,4602538.202,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,223521,Agricultural,Pasture Land,Pasture,Sprinkler,0.404124,2025,Cache,Bear River,Cache Valley,428010.785,4610754.459,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223682,Agricultural,Pasture Land,Pasture,Sprinkler,2.929148,2025,Cache,Bear River,Cache Valley,431146.718,4598461.293,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223844,Agricultural,Pasture Land,Pasture,Sprinkler,1.444084,2025,Cache,Bear River,Cache Valley,430263.481,4602306.091,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,223999,Agricultural,Pasture Land,Pasture,Sprinkler,0.691817,2025,Cache,Bear River,Cache Valley,429913.153,4603410.218,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,224083,Agricultural,Pasture Land,Pasture,Sprinkler,3.576354,2025,Cache,Bear River,Cache Valley,429846.353,4609602.359,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,224749,Agricultural,Pasture Land,Pasture,Sprinkler,0.73534,2025,Cache,Bear River,Cache Valley,430779.565,4602480.336,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,227377,Agricultural,Pasture Land,Pasture,Sprinkler,1.602278,2025,Cache,Bear River,Cache Valley,429363.558,4606595.179,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,227697,Agricultural,Pasture Land,Pasture,Sprinkler,7.897135,2025,Cache,Bear River,Cache Valley,432476.084,4607305.074,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,229075,Agricultural,Pasture Land,Pasture,Sprinkler,2.251918,2025,Cache,Bear River,Cache Valley,431628.507,4598158.253,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_132,229092,Agricultural,Pasture Land,Pasture,Sprinkler,7.66462,2025,Cache,Bear River,Cache Valley,429824.669,4600342.557,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,229240,Agricultural,Pasture Land,Pasture,Sub-irrigated,3.313476,2025,Cache,Bear River,Cache Valley,430417.479,4605863.117,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,295077,Agricultural,Garden,Vegetables,Sprinkler,1.154679,2025,Cache,Bear River,Cache Valley,430709.154,4601952.893,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_088,295160,Agricultural,Garden,Vegetables,Sprinkler,1.584266,2025,Cache,Bear River,Cache Valley,430603.008,4606129.203,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,295166,Agricultural,Garden,Vegetables,Sprinkler,1.315179,2025,Cache,Bear River,Cache Valley,430850.31,4600076.55,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,332544,Agricultural,Hay/Turf,Alfalfa,Sprinkler,0.097451,2025,Cache,Bear River,Cache Valley,429490.853,4603280.658,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,332545,Agricultural,Hay/Turf,Alfalfa,Wheel,1.283715,2025,Cache,Bear River,Cache Valley,429495.376,4603218.896,area_weighted_polygon_centroid_in_simplified_service_area,1
+company_130,332549,Agricultural,Pasture Land,Pasture,Sprinkler,0.166193,2025,Cache,Bear River,Cache Valley,429986.454,4601791.623,area_weighted_polygon_centroid_in_simplified_service_area,1

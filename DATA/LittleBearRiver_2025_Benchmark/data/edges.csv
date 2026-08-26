@@ -1,0 +1,20 @@
+edge_id,source_record_id,from_node,to_node,edge_role,flowline_type,flowline_name,length_m,capacity_cfs_base,capacity_basis,capacity_status,efficiency_base,efficiency_basis,valid_in_2025
+e_3554,3554,n_8102,n_8103,physical,canal,Hyrum Canal,7977.083051,35.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.960899537,assumed_exp_length_decay_0.005_per_km,True
+e_3577,3577,n_8142,n_8143,physical,canal,Jackson Ditch - Porcupine Highland Canal,6854.480045,50.0,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.966308246,assumed_exp_length_decay_0.005_per_km,True
+e_5854,5854,n_8142,n_17709,physical,stream,East Fork Little Bear River,2150.441778,90.643,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.997851869,assumed_exp_length_decay_0.001_per_km,True
+e_5855,5855,n_10435,n_8142,physical,stream,East Fork Little Bear River,424.869028,73.927,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.999575221,assumed_exp_length_decay_0.001_per_km,True
+e_5868,5868,n_8103,n_10438,physical,canal,Hyrum Canal,4472.907363,35.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.977883695,assumed_exp_length_decay_0.005_per_km,True
+e_8814,8814,n_8143,n_17356,physical,canal,Porcupine Highline Canal,6481.069237,50.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.968114081,assumed_exp_length_decay_0.005_per_km,True
+e_8912,8912,n_9548,n_13099,physical,canal,Hyrum Feeder Canal,1778.989268,9.0,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.991144497,assumed_exp_length_decay_0.005_per_km,True
+e_10136,10136,n_10434,n_19380,physical,canal,Paradise Canal,3040.250204,35.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.984913705,assumed_exp_length_decay_0.005_per_km,True
+e_11195,11195,n_15269,n_9548,physical,stream,Little Bear River,667.061084,241.31,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.999333161,assumed_exp_length_decay_0.001_per_km,True
+e_11213,11213,n_15286,n_10435,physical,stream,East Fork Little Bear River,413.016001,68.599,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.999587069,assumed_exp_length_decay_0.001_per_km,True
+e_11819,11819,n_15957,n_15958,physical,canal,Hyrum Canal,1724.581763,35.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.991414162,assumed_exp_length_decay_0.005_per_km,True
+e_13081,13081,n_17356,n_12988,physical,canal,Porcupine Highline Canal,8225.118009,50.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.959708593,assumed_exp_length_decay_0.005_per_km,True
+e_13448,13448,n_17709,n_10434,physical,stream,East Fork Little Bear River,2935.279821,90.643,Distribution_Network.RelativeSize_used_as_CFS_proxy,proxy_requires_calibration,0.997069024,assumed_exp_length_decay_0.001_per_km,True
+e_15158,15158,n_19380,n_14065,physical,canal,Paradise Canal,5825.940092,35.0,Utah_Canals.MaxCFS_exact_name_join,observed_design_attribute,0.971290479,assumed_exp_length_decay_0.005_per_km,True
+c_10438_16801,,n_10438,n_16801,derived_connector,logical_connector,Path-table topology connector,0.0,35.0,minimum_adjacent_path_capacity,derived_topology_repair,1.0,lossless_logical_connector,True
+c_12988_16803,,n_12988,n_16803,derived_connector,logical_connector,Path-table topology connector,0.0,50.0,minimum_adjacent_path_capacity,derived_topology_repair,1.0,lossless_logical_connector,True
+c_13099_16801,,n_13099,n_16801,derived_connector,logical_connector,Path-table topology connector,0.0,9.0,minimum_adjacent_path_capacity,derived_topology_repair,1.0,lossless_logical_connector,True
+c_14065_16802,,n_14065,n_16802,derived_connector,logical_connector,Path-table topology connector,0.0,35.0,minimum_adjacent_path_capacity,derived_topology_repair,1.0,lossless_logical_connector,True
+c_15958_8102,,n_15958,n_8102,derived_connector,logical_connector,Path-table topology connector,0.0,35.0,minimum_adjacent_path_capacity,derived_topology_repair,1.0,lossless_logical_connector,True

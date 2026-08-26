@@ -1,0 +1,77 @@
+# CTI-RLex public-repository allowlist
+#
+# Everything at the repository root is private by default. Only the software,
+# reproducibility tests, and benchmark packages explicitly allowed below are
+# eligible for Git/GitHub. This prevents manuscript and working files from
+# being committed accidentally.
+
+/*
+
+# Public repository metadata and documentation
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/LICENSE.*
+!/CITATION.cff
+!/CHANGELOG.md
+!/CONTRIBUTING.md
+!/.github/
+!/.github/**
+
+# Installable application and package metadata
+!/main.py
+!/pyproject.toml
+!/requirements.txt
+!/src/
+!/src/**
+
+# Reproducibility checks retained for reviewers
+!/tests/
+!/tests/**
+
+# Public CTI-RLex benchmark packages used by the GUI
+!/DATA/
+!/DATA/LittleBearRiver_2025_Benchmark/
+!/DATA/LittleBearRiver_2025_Benchmark/**
+!/DATA/benchmarks_dag/
+!/DATA/benchmarks_dag/SCHEMA_DAG.md
+!/DATA/benchmarks_dag/cache_valley_2025.json
+
+# Python bytecode and tool caches inside otherwise public directories
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local environments and packaging products
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Local IDE, OS, log, and temporary files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.temp
+*.bak
+~$*
+
+# GUI result packages are generated locally and must not be committed
+cti_rlex_export_*/
+

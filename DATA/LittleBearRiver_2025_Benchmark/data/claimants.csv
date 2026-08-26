@@ -1,0 +1,4 @@
+claimant_id,claimant_name,claimant_kind,individual_farmer_identity_available,company_id,service_polygon_objectid,service_area_dataset_acres,assigned_wrlu_acres,irrigated_demand_acres,excluded_nonirrigated_acres,assigned_wrlu_polygons,water_rights_text,measurement_station_ids,county,basin,subarea
+company_088,Hyrum Irrigation Co.,irrigation_company_service_area,False,88,380,2075.020799,863.285682,858.238634,5.047048,152,"25-1719 to 25-1724, 25-2037 to 25-2040","2771, 2772",Cache,Bear River,01-01-04
+company_130,Paradise Irrigation Co.,irrigation_company_service_area,False,130,398,1923.828867,1248.146387,1234.526961,13.619426,236,25-1551,"2776, 9738",Cache,Bear River,01-01-04
+company_132,Porcupine Highline Canal Co.,irrigation_company_service_area,False,132,399,2780.958233,2297.262497,2229.780325,67.482172,214,25-1946,9739,Cache,Bear River,01-01-04

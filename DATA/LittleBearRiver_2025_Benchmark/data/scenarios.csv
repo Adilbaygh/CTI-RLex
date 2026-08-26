@@ -1,0 +1,6 @@
+scenario_id,label,description,recourse_budget,probability_weight
+nominal,Design-envelope reference,All selected sources and reaches are available.,0.0,0.0
+moderate_system_shortage,Moderate system shortage,"Experimental shared-system, surface-diversion and storage-release derating.",0.25,0.25
+severe_system_shortage,Severe system shortage,Non-nested experimental stress with a low shared-system envelope.,0.4,0.25
+paradise_diversion_outage_under_shortage,Paradise diversion outage under shortage,The local Paradise diversion is disabled while the storage route remains available.,0.35,0.25
+hyrum_canal_restriction_under_shortage,Hyrum canal restriction under shortage,Hyrum Canal head capacity and both local sources are derated without disconnecting the claimant.,0.25,0.25

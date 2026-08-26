@@ -1,0 +1,70 @@
+{
+  "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+  "counts": {
+    "claimants": 3,
+    "control_assets": 7,
+    "demand_rows": 15,
+    "derived_connectors": 5,
+    "edge_parameter_rows": 475,
+    "edges": 19,
+    "nodes": 21,
+    "periods": 5,
+    "physical_edges": 14,
+    "scenarios": 5,
+    "sensitivity_cases": 135,
+    "source_groups": 2,
+    "source_limit_rows": 100,
+    "sources": 4,
+    "terminals": 3,
+    "wrlu_polygons": 602
+  },
+  "every_terminal_reachable_in_every_scenario": true,
+  "graph_is_dag": true,
+  "input_data_status": {
+    "assumed_or_experimental": "demand duty/profile, conveyance and application efficiency, source/group derating, restrictions, control normalization and recourse budgets",
+    "derived": "path connectors; WRLU centroid assignment; active irrigated area; application-efficiency aggregation; period volume conversion",
+    "observed_or_directly_joined": "network nodes/path relations; service-area identity; WRLU attributes; exact-name canal MaxCFS",
+    "proxy": "Distribution Network RelativeSize where no exact MaxCFS join exists"
+  },
+  "per_claimant": {
+    "company_088": {
+      "application_efficiency": 0.669132506,
+      "assigned_wrlu_acres": 863.285682,
+      "assigned_wrlu_polygons": 152,
+      "excluded_nonirrigated_acres": 5.047048,
+      "irrigated_demand_acres": 858.238634,
+      "seasonal_net_demand_af": 1716.477268
+    },
+    "company_130": {
+      "application_efficiency": 0.758318435,
+      "assigned_wrlu_acres": 1248.146387,
+      "assigned_wrlu_polygons": 236,
+      "excluded_nonirrigated_acres": 13.619426,
+      "irrigated_demand_acres": 1234.526961,
+      "seasonal_net_demand_af": 2469.053922
+    },
+    "company_132": {
+      "application_efficiency": 0.779046322,
+      "assigned_wrlu_acres": 2297.262497,
+      "assigned_wrlu_polygons": 214,
+      "excluded_nonirrigated_acres": 67.482172,
+      "irrigated_demand_acres": 2229.780325,
+      "seasonal_net_demand_af": 4459.56065
+    }
+  },
+  "schema_version": "cti-rlex-benchmark-v2",
+  "scientific_scope": {
+    "claimant_definition": "each F element is an irrigation-company service area, not an individual farmer",
+    "classification": "data-informed computational benchmark",
+    "does_not_validate": "individual-farmer fairness, observed 2025 source availability, or calibrated conveyance losses",
+    "supports": "real path-based DAG routing, claimant-terminal aggregation, gross/net delivery, shared source envelopes, operational recourse and stress experiments"
+  },
+  "seasonal_totals": {
+    "assigned_acres": 4408.694566,
+    "excluded_nonirrigated_acres": 86.148646,
+    "irrigated_demand_acres": 4322.54592,
+    "net_demand_af": 8645.09184
+  },
+  "status": "pass",
+  "weakly_connected_components": 2
+}
