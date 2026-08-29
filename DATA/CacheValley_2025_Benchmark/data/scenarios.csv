@@ -1,0 +1,6 @@
+scenario_id,label,description,recourse_budget,probability_weight
+nominal,Design-envelope reference,"All selected sources and reaches are available. This scenario carries the nominal plan itself, so its recourse budget is zero by definition and it is a reference anchor rather than a comparable stress case.",0.0,0.0
+moderate_system_shortage,Moderate system shortage,Uniform experimental derating of every shared delivery subsystem.,0.25,0.25
+severe_system_shortage,Severe system shortage,Deep uniform derating of every shared delivery subsystem.,0.25,0.25
+subsystem_01_restriction_under_shortage,Subsystem 1 restriction under shortage,Shared envelope of subsystem_03 is restricted while the remaining subsystems operate under a moderate shortage.,0.25,0.25
+subsystem_02_restriction_under_shortage,Subsystem 2 restriction under shortage,Shared envelope of subsystem_02 is restricted while the remaining subsystems operate under a moderate shortage.,0.25,0.25

@@ -1,0 +1,4 @@
+﻿claimant,seasonal_net_demand_af,application_efficiency,robust_period_guarantee,nominal_seasonal_ratio,severe_seasonal_ratio,binding_cell_count,binding_cells
+Hyrum,1716.5,0.67,0.4477,0.6133,0.6133,5,Nominal:07; Moderate shortage:07; Severe shortage:07; Paradise outage:07; Hyrum restriction:07
+Paradise,2469.1,0.76,0.4195,0.6789,0.6789,5,Nominal:07; Moderate shortage:07; Severe shortage:07; Paradise outage:07; Hyrum restriction:07
+Porcupine Highline,4459.6,0.78,0.4195,0.7154,0.4961,7,Nominal:06; Moderate shortage:06; Severe shortage:06; Severe shortage:07; Severe shortage:08; Paradise outage:06; Hyrum restriction:06

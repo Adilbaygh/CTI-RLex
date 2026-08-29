@@ -9,19 +9,21 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
+import statistics
 import math
 import sqlite3
 import struct
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, Mapping
 
 from validate_benchmark import validate_payload
 
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
-DATASETS = REPO / "DataSETs"
+DATASETS = Path(os.environ.get("LEXIMIN_DATASETS", str(REPO / "DataSETs")))
 OUT = HERE / "data"
 
 BENCHMARK_ID = "lbr_hyrum_paradise_highline_2025_v2"
@@ -73,6 +75,7 @@ STREAM_LOSS_RATE_PER_KM = 0.001
 # The claimant coefficient is the crop-area weighted harmonic mean, which preserves
 # the gross water required to meet a common net duty across methods.
 IRRIGATION_METHOD_EFFICIENCY = {
+    "Drip": 0.90,
     "Flood": 0.60,
     "Pivot": 0.85,
     "Sprinkler": 0.75,
@@ -102,6 +105,36 @@ GROUP_SCENARIO_FACTORS = {
     "paradise_diversion_outage_under_shortage": {"hyrum_subsystem": 0.35, "paradise_highline_subsystem": 0.32},
     "hyrum_canal_restriction_under_shortage": {"hyrum_subsystem": 0.18, "paradise_highline_subsystem": 0.50},
 }
+
+# Claimant-specific operational role labels for (source, claimant) pairs. Pairs that are
+# not listed fall back to _derived_source_role, so the generator scales to any claimant set.
+SOURCE_ROLE_NAMES = {
+    ("s_15269", "company_088"): "supplemental_storage_release",
+    ("s_15957", "company_088"): "routine_surface_diversion",
+    ("s_10434", "company_130"): "routine_surface_diversion",
+    ("s_15286", "company_130"): "supplemental_storage_release",
+    ("s_15286", "company_132"): "routine_storage_supply",
+}
+
+# Physical branch/head gates promoted to recourse control assets, in addition to sources.
+EXTRA_CONTROL_EDGES = [
+    ("e_3577", "Highline branch gate"),
+    ("e_5854", "Paradise branch gate"),
+    ("e_10136", "Paradise Canal head gate"),
+]
+
+
+def _derived_source_role(source_class: str, source_count: int) -> str:
+    """Role label for a (source, claimant) pair that is not explicitly named.
+
+    A claimant served by a single source uses it routinely; a claimant with several
+    sources treats storage releases as supplemental to routine surface diversions.
+    """
+
+    if source_class == "reservoir_release":
+        return "routine_storage_supply" if source_count == 1 else "supplemental_storage_release"
+    return "routine_surface_diversion"
+
 
 SCENARIO_SPECS = [
     {
@@ -438,6 +471,63 @@ def extract_parcels(service_areas: dict[str, dict[str, Any]]) -> list[dict[str, 
     return rows
 
 
+# Populated by extract_network when the derived-connector repair has to reject a
+# candidate. It stays empty whenever the path table needs no acyclic reduction, so
+# benchmarks that were already acyclic are byte-for-byte unaffected.
+TOPOLOGY_REDUCTION: dict[str, Any] = {}
+
+
+def acyclic_connector_selection(
+    physical_edges: dict[str, dict[str, Any]],
+    candidate_pairs: Mapping[tuple[str, str], list[float]],
+) -> tuple[set[tuple[str, str]], list[dict[str, str]]]:
+    """Accept derived gap connectors only while the graph stays acyclic.
+
+    The official reach topology is acyclic on its own. Cycles appear only when the
+    path table is repaired by bridging a gap with a logical connector, because two
+    paths may need bridges that together close a loop. Candidates are considered in a
+    deterministic node order and a candidate is rejected when its head can already
+    reach its tail, which is precisely the condition for closing a cycle.
+    """
+
+    adjacency: dict[str, set[str]] = defaultdict(set)
+    for edge in physical_edges.values():
+        adjacency[edge["from_node"]].add(edge["to_node"])
+
+    def reaches(start: str, target: str) -> bool:
+        seen = {start}
+        stack = [start]
+        while stack:
+            node = stack.pop()
+            for following in adjacency.get(node, ()):
+                if following == target:
+                    return True
+                if following not in seen:
+                    seen.add(following)
+                    stack.append(following)
+        return False
+
+    # Bridges that more paths depend on are considered first, so a rejection removes as
+    # few source-terminal paths as possible. Ties break on node order for determinism.
+    accepted: set[tuple[str, str]] = set()
+    rejected: list[dict[str, str]] = []
+    order = sorted(
+        candidate_pairs,
+        key=lambda item: (-len(candidate_pairs[item]), int(item[0]), int(item[1])),
+    )
+    for pair in order:
+        tail, head = node_id(pair[0]), node_id(pair[1])
+        if tail == head:
+            rejected.append({"connector": f"c_{pair[0]}_{pair[1]}", "reason": "self_loop"})
+            continue
+        if reaches(head, tail):
+            rejected.append({"connector": f"c_{pair[0]}_{pair[1]}", "reason": "would_close_a_cycle"})
+            continue
+        accepted.add(pair)
+        adjacency[tail].add(head)
+    return accepted, rejected
+
+
 def extract_network() -> tuple[
     list[dict[str, Any]],
     list[dict[str, Any]],
@@ -474,21 +564,62 @@ def extract_network() -> tuple[
             canal_capacities[normalize_name(row["Canal"])].add(float(row["MaxCFS"]))
 
     physical_ids = {row["FlowlineID"] for row in pathline_rows}
-    physical_edges: dict[str, dict[str, Any]] = {}
+
+    # Capacity evidence is assigned in three declared tiers. Tier 1 and tier 2 are
+    # per-reach; tier 3 exists because a small number of officially named reaches carry
+    # neither an exact-name MaxCFS join nor a RelativeSize attribute. Those reaches
+    # inherit the minimum known capacity of the paths that traverse them, which is the
+    # same conservative rule already applied to derived path connectors.
+    capacity_by_raw: dict[str, tuple[float, str, str]] = {}
+    pending: list[str] = []
     for raw in sorted(physical_ids, key=int):
         row = flow_rows[raw]
         name_key = normalize_name(row["FlowlineName"])
         matching = canal_capacities.get(name_key, set()) if row["FlowlineType"] == "1" else set()
         if len(matching) == 1:
-            capacity = next(iter(matching))
-            capacity_basis = "Utah_Canals.MaxCFS_exact_name_join"
-            capacity_status = "observed_design_attribute"
+            capacity_by_raw[raw] = (
+                next(iter(matching)),
+                "Utah_Canals.MaxCFS_exact_name_join",
+                "observed_design_attribute",
+            )
         elif row["RelativeSize"]:
-            capacity = float(row["RelativeSize"])
-            capacity_basis = "Distribution_Network.RelativeSize_used_as_CFS_proxy"
-            capacity_status = "proxy_requires_calibration"
+            capacity_by_raw[raw] = (
+                float(row["RelativeSize"]),
+                "Distribution_Network.RelativeSize_used_as_CFS_proxy",
+                "proxy_requires_calibration",
+            )
         else:
-            raise ValueError(f"No capacity basis for flowline {raw}.")
+            pending.append(raw)
+
+    if pending:
+        paths_of_flowline: dict[str, set[str]] = defaultdict(set)
+        flowlines_of_path: dict[str, set[str]] = defaultdict(set)
+        for line in pathline_rows:
+            paths_of_flowline[line["FlowlineID"]].add(line["PathId"])
+            flowlines_of_path[line["PathId"]].add(line["FlowlineID"])
+        known = [value[0] for value in capacity_by_raw.values()]
+        if not known:
+            raise ValueError("No reach in the selection carries a capacity basis.")
+        fallback = statistics.median(known)
+        for raw in pending:
+            neighbours = [
+                capacity_by_raw[other][0]
+                for path in paths_of_flowline[raw]
+                for other in flowlines_of_path[path]
+                if other in capacity_by_raw
+            ]
+            capacity_by_raw[raw] = (
+                min(neighbours) if neighbours else fallback,
+                "derived_minimum_capacity_of_traversing_paths"
+                if neighbours
+                else "derived_median_capacity_of_selected_reaches",
+                "derived_requires_calibration",
+            )
+
+    physical_edges: dict[str, dict[str, Any]] = {}
+    for raw in sorted(physical_ids, key=int):
+        row = flow_rows[raw]
+        capacity, capacity_basis, capacity_status = capacity_by_raw[raw]
         length_m = float(row["Shape__Length"])
         kind = "stream" if row["FlowlineType"] == "0" else "canal"
         rate = STREAM_LOSS_RATE_PER_KM if kind == "stream" else CANAL_LOSS_RATE_PER_KM
@@ -513,6 +644,7 @@ def extract_network() -> tuple[
     connector_candidates: dict[tuple[str, str], list[float]] = defaultdict(list)
     path_edge_rows: list[dict[str, Any]] = []
     paths: list[dict[str, Any]] = []
+    path_plans: list[dict[str, Any]] = []
 
     for path_raw in sorted(SELECTED_PATHS, key=int):
         source_raw = path_points[path_raw]["1"]
@@ -545,6 +677,38 @@ def extract_network() -> tuple[
             connector_candidates[(current, terminal_raw)].append(previous_capacity)
             sequence.append((connector, "derived_terminal_connector"))
 
+        path_plans.append(
+            {
+                "path_raw": path_raw,
+                "source_raw": source_raw,
+                "terminal_raw": terminal_raw,
+                "sequence": sequence,
+            }
+        )
+
+    accepted_connectors, rejected_connectors = acyclic_connector_selection(
+        physical_edges, connector_candidates
+    )
+    rejected_ids = {row["connector"] for row in rejected_connectors}
+    dropped_paths: list[dict[str, str]] = []
+    retained_source_raws: set[str] = set()
+    for plan in path_plans:
+        blocking = sorted(
+            {identifier for identifier, _ in plan["sequence"] if identifier in rejected_ids}
+        )
+        if blocking:
+            dropped_paths.append(
+                {
+                    "path_id": f"p_{plan['path_raw']}",
+                    "terminal_node": node_id(plan["terminal_raw"]),
+                    "blocking_connectors": "|".join(blocking),
+                }
+            )
+            continue
+        path_raw = plan["path_raw"]
+        source_raw = plan["source_raw"]
+        terminal_raw = plan["terminal_raw"]
+        retained_source_raws.add(source_raw)
         wrnum = path_rows[path_raw]["wrnum"]
         paths.append(
             {
@@ -557,7 +721,7 @@ def extract_network() -> tuple[
                 "valid_in_2025": True,
             }
         )
-        for order, (selected_edge, relation) in enumerate(sequence, start=1):
+        for order, (selected_edge, relation) in enumerate(plan["sequence"], start=1):
             path_edge_rows.append(
                 {
                     "path_id": f"p_{path_raw}",
@@ -569,6 +733,29 @@ def extract_network() -> tuple[
                     "water_right_number": wrnum,
                 }
             )
+
+    if rejected_connectors or dropped_paths:
+        TOPOLOGY_REDUCTION.clear()
+        TOPOLOGY_REDUCTION.update(
+            {
+                "rule": "derived gap connectors are accepted only while the graph stays acyclic",
+                "physical_reach_topology_is_acyclic": True,
+                "connector_candidates": len(connector_candidates),
+                "connectors_rejected": rejected_connectors,
+                "paths_dropped": dropped_paths,
+            }
+        )
+
+    # Retain only the reaches and connectors that a surviving path still traverses.
+    used_edges = {row["edge_id"] for row in path_edge_rows}
+    physical_edges = {
+        identifier: edge for identifier, edge in physical_edges.items() if identifier in used_edges
+    }
+    connector_candidates = {
+        pair: values
+        for pair, values in connector_candidates.items()
+        if pair in accepted_connectors and f"c_{pair[0]}_{pair[1]}" in used_edges
+    }
 
     connector_edges: dict[str, dict[str, Any]] = {}
     for (u, v), candidates in sorted(connector_candidates.items(), key=lambda item: (int(item[0][0]), int(item[0][1]))):
@@ -621,7 +808,7 @@ def extract_network() -> tuple[
                 "roles": "|".join(roles),
                 "latitude": round_float(source["Lat"], 8),
                 "longitude": round_float(source["Lon"], 8),
-                "system_id": int(source["systemId"]),
+                "system_id": int(source["systemId"]) if source["systemId"] else "",
                 "pou_polygon_id": int(source["PouPolygonId"]) if source["PouPolygonId"] else "",
             }
         )
@@ -642,7 +829,9 @@ def extract_network() -> tuple[
             raise ValueError(f"Path {path['path_id']} does not reach its terminal.")
 
     source_rows: list[dict[str, Any]] = []
-    for raw in sorted({value["1"] for value in path_points.values()}, key=int):
+    # Sources are taken from the retained paths, so an injection whose every path was
+    # removed by the acyclic reduction does not survive as a dangling source.
+    for raw in sorted(retained_source_raws, key=int):
         node = node_rows[raw]
         outgoing = [edge for edge in edges if edge["from_node"] == node_id(raw)]
         if not outgoing:
@@ -664,8 +853,11 @@ def extract_network() -> tuple[
     return nodes, edges, source_rows, paths, path_edge_rows
 
 
+MEASUREMENT_STATION_IDS = {"2771", "2772", "2776", "9738", "9739"}
+
+
 def extract_measurement_stations(selected_edges: set[str]) -> list[dict[str, Any]]:
-    target = {"2771", "2772", "2776", "9738", "9739"}
+    target = set(MEASUREMENT_STATION_IDS)
     rows: list[dict[str, Any]] = []
     for row in read_csv(NETWORK_DIR / "6_Measurement_Stations.csv"):
         if row["STATION_ID"] not in target:
@@ -696,9 +888,30 @@ def is_irrigated_demand_parcel(parcel: dict[str, Any]) -> bool:
     )
 
 
+# Optional per-scenario source derating table. When set, it fully replaces the built-in
+# Little Bear scenario chain below, so a driver can define its own scenario set without
+# editing this module. Shape:
+#   {scenario_id: {"reservoir_release": f, "surface_diversion": f,
+#                  "overrides": {source_id: f}}}
+SOURCE_SCENARIO_FACTORS: dict[str, dict[str, Any]] | None = None
+
+# Optional per-scenario reach capacity derating, keyed scenario -> edge -> factor.
+# When set it replaces the built-in Little Bear canal-restriction rule.
+EDGE_SCENARIO_FACTORS: dict[str, dict[str, float]] | None = None
+
+
 def source_availability_factor(scenario_id: str, source: dict[str, Any]) -> float:
     source_class = source["source_class"]
     source_id_value = source["source_id"]
+    if SOURCE_SCENARIO_FACTORS is not None:
+        try:
+            specification = SOURCE_SCENARIO_FACTORS[scenario_id]
+        except KeyError:
+            raise ValueError(f"Unknown scenario {scenario_id!r}.") from None
+        overrides = specification.get("overrides", {})
+        if source_id_value in overrides:
+            return float(overrides[source_id_value])
+        return float(specification[source_class])
     if scenario_id == "nominal":
         return 1.0
     if scenario_id == "moderate_system_shortage":
@@ -893,9 +1106,14 @@ def build() -> dict[str, Any]:
         scenario_id = scenario["scenario_id"]
         for period_id, days, _ in PERIOD_SPECS:
             for edge in edges:
-                factor = 1.0
-                if scenario_id == "hyrum_canal_restriction_under_shortage" and edge["edge_id"] == "e_11819":
-                    factor = 0.35
+                if EDGE_SCENARIO_FACTORS is not None:
+                    factor = float(
+                        EDGE_SCENARIO_FACTORS.get(scenario_id, {}).get(edge["edge_id"], 1.0)
+                    )
+                else:
+                    factor = 1.0
+                    if scenario_id == "hyrum_canal_restriction_under_shortage" and edge["edge_id"] == "e_11819":
+                        factor = 0.35
                 capacity = float(edge["capacity_cfs_base"]) * days * CFS_DAY_TO_AF * factor
                 edge_parameters.append(
                     {
@@ -955,13 +1173,11 @@ def build() -> dict[str, Any]:
                 )
 
     terminal_to_claimant = {row["terminal_node"]: row["claimant_id"] for row in claimant_terminals}
-    source_role_names = {
-        ("s_15269", "company_088"): "supplemental_storage_release",
-        ("s_15957", "company_088"): "routine_surface_diversion",
-        ("s_10434", "company_130"): "routine_surface_diversion",
-        ("s_15286", "company_130"): "supplemental_storage_release",
-        ("s_15286", "company_132"): "routine_storage_supply",
-    }
+    source_role_names = dict(SOURCE_ROLE_NAMES)
+    source_class_by_id = {row["source_id"]: row["source_class"] for row in sources}
+    sources_per_claimant: dict[str, set[str]] = defaultdict(set)
+    for row in paths:
+        sources_per_claimant[terminal_to_claimant[row["terminal_node"]]].add(row["source_id"])
     source_roles: list[dict[str, Any]] = []
     for source_id_value, claimant_id in sorted(
         {(row["source_id"], terminal_to_claimant[row["terminal_node"]]) for row in paths}
@@ -970,7 +1186,13 @@ def build() -> dict[str, Any]:
             {
                 "source_id": source_id_value,
                 "claimant_id": claimant_id,
-                "operational_role": source_role_names[(source_id_value, claimant_id)],
+                "operational_role": source_role_names.get(
+                    (source_id_value, claimant_id),
+                    _derived_source_role(
+                        source_class_by_id[source_id_value],
+                        len(sources_per_claimant[claimant_id]),
+                    ),
+                ),
                 "role_basis": "observed_path_reachability_plus_claimant_specific_interpretation",
                 "data_status": "derived_and_interpreted",
             }
@@ -990,9 +1212,7 @@ def build() -> dict[str, Any]:
     edge_by_id = {row["edge_id"]: row for row in edges}
     control_specs = [
         *(('source', source["source_id"], source["source_name"]) for source in sources),
-        ("edge", "e_3577", "Highline branch gate"),
-        ("edge", "e_5854", "Paradise branch gate"),
-        ("edge", "e_10136", "Paradise Canal head gate"),
+        *(("edge", eid, label) for eid, label in EXTRA_CONTROL_EDGES if eid in edge_by_id),
     ]
     control_assets: list[dict[str, Any]] = []
     for resource_type, resource_id_value, label in control_specs:
@@ -1215,6 +1435,10 @@ def build() -> dict[str, Any]:
 
     write_json(HERE / "benchmark.json", payload)
     report = validate_payload(payload)
+    if TOPOLOGY_REDUCTION:
+        # Only present when the path table needed an acyclic reduction, so benchmarks
+        # whose connectors were already acyclic keep their previous validation report.
+        report["topology_reduction"] = dict(TOPOLOGY_REDUCTION)
     report["per_claimant"] = {
         row["claimant_id"]: {
             "assigned_wrlu_polygons": row["assigned_wrlu_polygons"],

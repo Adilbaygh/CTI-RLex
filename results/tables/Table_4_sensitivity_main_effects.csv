@@ -1,0 +1,15 @@
+﻿factor,level,case_count,mean_minimum_guarantee,minimum,maximum
+Net duty (acre-ft acre-1),1.5,45,0.5422,0.3738,0.7011
+Net duty (acre-ft acre-1),2,45,0.4067,0.2803,0.5258
+Net duty (acre-ft acre-1),2.5,45,0.3253,0.2243,0.4207
+Conveyance-loss multiplier,0.5,45,0.4500,0.2570,0.7011
+Conveyance-loss multiplier,1,45,0.4307,0.2458,0.6712
+Conveyance-loss multiplier,2,45,0.3935,0.2243,0.6134
+Source-limit scale,0.8,45,0.3398,0.2243,0.4674
+Source-limit scale,1,45,0.4247,0.2803,0.5843
+Source-limit scale,1.2,45,0.5097,0.3364,0.7011
+Recourse-budget scale,0,27,0.3955,0.2243,0.6424
+Recourse-budget scale,0.25,27,0.4319,0.2454,0.7009
+Recourse-budget scale,0.5,27,0.4321,0.2454,0.7011
+Recourse-budget scale,1,27,0.4321,0.2454,0.7011
+Recourse-budget scale,2,27,0.4321,0.2454,0.7011

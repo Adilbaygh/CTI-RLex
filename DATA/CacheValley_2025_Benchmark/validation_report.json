@@ -1,0 +1,295 @@
+{
+  "benchmark_id": "cache_valley_2025_multiclaimant_v3",
+  "counts": {
+    "claimants": 10,
+    "control_assets": 20,
+    "demand_rows": 50,
+    "derived_connectors": 15,
+    "edge_parameter_rows": 1725,
+    "edges": 69,
+    "nodes": 76,
+    "periods": 5,
+    "physical_edges": 54,
+    "scenarios": 5,
+    "sensitivity_cases": 135,
+    "source_groups": 7,
+    "source_limit_rows": 250,
+    "sources": 10,
+    "terminals": 10,
+    "wrlu_polygons": 2612
+  },
+  "every_terminal_reachable_in_every_scenario": true,
+  "graph_is_dag": true,
+  "input_data_status": {
+    "assumed_or_experimental": "demand duty/profile, conveyance and application efficiency, source/group derating, restrictions, control normalization and recourse budgets",
+    "derived": "path connectors; WRLU centroid assignment; active irrigated area; application-efficiency aggregation; period volume conversion",
+    "observed_or_directly_joined": "network nodes/path relations; service-area identity; WRLU attributes; exact-name canal MaxCFS",
+    "proxy": "Distribution Network RelativeSize where no exact MaxCFS join exists"
+  },
+  "per_claimant": {
+    "company_088": {
+      "application_efficiency": 0.669132506,
+      "assigned_wrlu_acres": 863.285682,
+      "assigned_wrlu_polygons": 152,
+      "excluded_nonirrigated_acres": 5.047048,
+      "irrigated_demand_acres": 858.238634,
+      "seasonal_net_demand_af": 1716.477268
+    },
+    "company_10390": {
+      "application_efficiency": 0.604073512,
+      "assigned_wrlu_acres": 552.060339,
+      "assigned_wrlu_polygons": 79,
+      "excluded_nonirrigated_acres": 23.989713,
+      "irrigated_demand_acres": 528.070626,
+      "seasonal_net_demand_af": 1056.141252
+    },
+    "company_105": {
+      "application_efficiency": 0.60334495,
+      "assigned_wrlu_acres": 906.313651,
+      "assigned_wrlu_polygons": 127,
+      "excluded_nonirrigated_acres": 34.822094,
+      "irrigated_demand_acres": 871.491557,
+      "seasonal_net_demand_af": 1742.983114
+    },
+    "company_106": {
+      "application_efficiency": 0.615674694,
+      "assigned_wrlu_acres": 2455.843755,
+      "assigned_wrlu_polygons": 307,
+      "excluded_nonirrigated_acres": 0.0,
+      "irrigated_demand_acres": 2455.843755,
+      "seasonal_net_demand_af": 4911.68751
+    },
+    "company_1249": {
+      "application_efficiency": 0.754967662,
+      "assigned_wrlu_acres": 895.537595,
+      "assigned_wrlu_polygons": 234,
+      "excluded_nonirrigated_acres": 47.918302,
+      "irrigated_demand_acres": 847.619293,
+      "seasonal_net_demand_af": 1695.238586
+    },
+    "company_130": {
+      "application_efficiency": 0.758318435,
+      "assigned_wrlu_acres": 1248.146387,
+      "assigned_wrlu_polygons": 236,
+      "excluded_nonirrigated_acres": 13.619426,
+      "irrigated_demand_acres": 1234.526961,
+      "seasonal_net_demand_af": 2469.053922
+    },
+    "company_132": {
+      "application_efficiency": 0.779046322,
+      "assigned_wrlu_acres": 2297.262497,
+      "assigned_wrlu_polygons": 214,
+      "excluded_nonirrigated_acres": 67.482172,
+      "irrigated_demand_acres": 2229.780325,
+      "seasonal_net_demand_af": 4459.56065
+    },
+    "company_136": {
+      "application_efficiency": 0.628574986,
+      "assigned_wrlu_acres": 41.895691,
+      "assigned_wrlu_polygons": 13,
+      "excluded_nonirrigated_acres": 3.401551,
+      "irrigated_demand_acres": 38.49414,
+      "seasonal_net_demand_af": 76.98828
+    },
+    "company_164": {
+      "application_efficiency": 0.629315558,
+      "assigned_wrlu_acres": 2339.045538,
+      "assigned_wrlu_polygons": 307,
+      "excluded_nonirrigated_acres": 24.542035,
+      "irrigated_demand_acres": 2314.503503,
+      "seasonal_net_demand_af": 4629.007006
+    },
+    "company_168": {
+      "application_efficiency": 0.742370142,
+      "assigned_wrlu_acres": 12046.30061,
+      "assigned_wrlu_polygons": 943,
+      "excluded_nonirrigated_acres": 308.376539,
+      "irrigated_demand_acres": 11737.924071,
+      "seasonal_net_demand_af": 23475.848142
+    }
+  },
+  "schema_version": "cti-rlex-benchmark-v2",
+  "scientific_scope": {
+    "claimant_definition": "each F element is an irrigation-company service area, not an individual farmer",
+    "classification": "data-informed computational benchmark",
+    "does_not_validate": "individual-farmer fairness, observed 2025 source availability, or calibrated conveyance losses",
+    "supports": "real path-based DAG routing, claimant-terminal aggregation, gross/net delivery, shared source envelopes, operational recourse and stress experiments"
+  },
+  "seasonal_totals": {
+    "assigned_acres": 23645.691745,
+    "excluded_nonirrigated_acres": 529.19888,
+    "irrigated_demand_acres": 23116.492865,
+    "net_demand_af": 46232.985728
+  },
+  "status": "pass",
+  "topology_reduction": {
+    "connector_candidates": 41,
+    "connectors_rejected": [
+      {
+        "connector": "c_8415_15364",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_13933_15349",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_8420_15366",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_10416_15360",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_9549_9548",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_6979_15350",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_9558_9557",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_10439_15309",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_13012_15304",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15305_15304",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15306_8419",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15308_13012",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15309_13012",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15310_15309",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15350_15306",
+        "reason": "would_close_a_cycle"
+      }
+    ],
+    "paths_dropped": [
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2040",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2041",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2042",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2043",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2044",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_15305_15304|c_15308_13012|c_15310_15309|c_6979_15350",
+        "path_id": "p_2065",
+        "terminal_node": "n_16820"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2068",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2069",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2070",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2071",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2072",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2073",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2074",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2075",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_10439_15309|c_13012_15304|c_15306_8419|c_15309_13012|c_15350_15306|c_6979_15350",
+        "path_id": "p_2082",
+        "terminal_node": "n_16823"
+      },
+      {
+        "blocking_connectors": "c_9558_9557",
+        "path_id": "p_4138",
+        "terminal_node": "n_16825"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4139",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4140",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4141",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4142",
+        "terminal_node": "n_16826"
+      }
+    ],
+    "physical_reach_topology_is_acyclic": true,
+    "rule": "derived gap connectors are accepted only while the graph stays acyclic"
+  },
+  "weakly_connected_components": 7
+}

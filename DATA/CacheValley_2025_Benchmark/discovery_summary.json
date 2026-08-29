@@ -1,0 +1,221 @@
+{
+  "acyclic_reduction": {
+    "connector_candidates": 41,
+    "connectors_rejected": [
+      {
+        "connector": "c_8415_15364",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_13933_15349",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_8420_15366",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_10416_15360",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_9549_9548",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_6979_15350",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_9558_9557",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_10439_15309",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_13012_15304",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15305_15304",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15306_8419",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15308_13012",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15309_13012",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15310_15309",
+        "reason": "would_close_a_cycle"
+      },
+      {
+        "connector": "c_15350_15306",
+        "reason": "would_close_a_cycle"
+      }
+    ],
+    "paths_dropped": [
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2040",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2041",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2042",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2043",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_10416_15360|c_8420_15366",
+        "path_id": "p_2044",
+        "terminal_node": "n_16818"
+      },
+      {
+        "blocking_connectors": "c_15305_15304|c_15308_13012|c_15310_15309|c_6979_15350",
+        "path_id": "p_2065",
+        "terminal_node": "n_16820"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2068",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2069",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2070",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2071",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2072",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2073",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2074",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_13933_15349|c_8415_15364",
+        "path_id": "p_2075",
+        "terminal_node": "n_16822"
+      },
+      {
+        "blocking_connectors": "c_10439_15309|c_13012_15304|c_15306_8419|c_15309_13012|c_15350_15306|c_6979_15350",
+        "path_id": "p_2082",
+        "terminal_node": "n_16823"
+      },
+      {
+        "blocking_connectors": "c_9558_9557",
+        "path_id": "p_4138",
+        "terminal_node": "n_16825"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4139",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4140",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4141",
+        "terminal_node": "n_16826"
+      },
+      {
+        "blocking_connectors": "c_9549_9548",
+        "path_id": "p_4142",
+        "terminal_node": "n_16826"
+      }
+    ],
+    "physical_reach_topology_is_acyclic": true,
+    "rule": "derived gap connectors are accepted only while the graph stays acyclic"
+  },
+  "claimants": {
+    "10390": "Logan Southwest Field Irrigation Co.",
+    "105": "Logan Northwest Field Irrigation Co.",
+    "106": "Logan River Blacksmith Fork Irrigation Co.",
+    "1249": "Logan, Hyde Park, Smithfield Canal Co.",
+    "130": "Paradise Irrigation Co.",
+    "132": "Porcupine Highline Canal Co.",
+    "136": "Providence Logan Irrigation Co.",
+    "164": "Wellsville East Field Irrigation And Canal Co.",
+    "168": "West Cache Irrigation Co.",
+    "88": "Hyrum Irrigation Co."
+  },
+  "county": "Cache",
+  "excluded_no_acyclic_path": [
+    "company_103 (Logan Island Irrigation Co.)",
+    "company_104 (Logan North Field Irrigation Co.)",
+    "company_109 (Logan & Northern Irrigation Co.)",
+    "company_162 (Wellsville-Mendon Conservancy District)",
+    "company_072 (Cub River Irrigation Co.)"
+  ],
+  "excluded_no_irrigated_acres": [
+    "company_102 (Logan Hollow Irrigation Co.)"
+  ],
+  "path_count": 31,
+  "subsystems": {
+    "subsystem_01": [
+      "s_10422"
+    ],
+    "subsystem_02": [
+      "s_10434",
+      "s_15286"
+    ],
+    "subsystem_03": [
+      "s_15269",
+      "s_15957",
+      "s_9548"
+    ],
+    "subsystem_04": [
+      "s_10424"
+    ],
+    "subsystem_05": [
+      "s_10450"
+    ],
+    "subsystem_06": [
+      "s_6925"
+    ],
+    "subsystem_07": [
+      "s_9154"
+    ]
+  }
+}

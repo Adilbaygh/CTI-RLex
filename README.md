@@ -153,6 +153,32 @@ company service areas, not identified individual farmers. Its parameter status a
 scientific limitations are recorded inside the benchmark metadata and must be retained
 when results are interpreted.
 
+## Reproducing the published results
+
+Every number reported in the article is produced by a script in `scripts/` and written to
+a file in `results/`. From the repository root:
+
+```powershell
+python -B scripts\run_cti_rlex.py             # base solution
+python -B scripts\run_cti_experiments.py      # comparators, ablation, 135-case factorial
+python -B scripts\run_cti_verification.py     # residual and representation audits
+python -B scripts\equal_budget_experiment.py  # guarantee vector under three budget regimes
+python -B scripts\restriction_threshold_experiment.py  # severity sweep of the canal restriction
+python -B scripts\record_environment.py       # machine and solver versions for the timings
+```
+
+The mapping from article object to file is:
+
+| Article object | Script | Result file |
+|---|---|---|
+| Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
+| Table 4, source ablation | `run_cti_experiments.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
+| Table 3, Figure 4(b), Supplementary S6, S8, S9 | `results/discrimination/k1.py` | `results/revision_experiments.json` |
+| Supplementary S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
+| Supplementary S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
+| Supplementary S13, S14 | `run_cti_experiments.py` | `results/scalability_cache_valley.json` |
+| Reported solve times | `record_environment.py` | `results/environment.json` |
+
 ## Reproducibility checks
 
 Run the automated test suite with:
@@ -164,6 +190,15 @@ python -B -m pytest
 The tests cover schema consistency, physical balances, robust guarantees, comparator
 behavior, recourse, scaling, terminal-representation invariance and GUI integration.
 
+A benchmark rebuild is itself a regression test. Re-running a generator against unchanged
+input layers must leave that benchmark's `checksums_sha256.txt` untouched:
+
+```powershell
+$env:LEXIMIN_DATASETS = "C:\DataSETs"
+python -B DATA\LittleBearRiver_2025_Benchmark\generate_benchmark.py
+git diff --exit-code DATA/LittleBearRiver_2025_Benchmark/checksums_sha256.txt
+```
+
 ## Repository layout
 
 - `main.py` — desktop application entry point;
@@ -171,7 +206,20 @@ behavior, recourse, scaling, terminal-representation invariance and GUI integrat
   analysis and verification;
 - `src/leximin/gui/` — standalone PyQt6 interface and dynamic chart generation;
 - `tests/` — solver, benchmark and GUI checks;
-- `DATA/LittleBearRiver_2025_Benchmark/` — example benchmark template instance.
+- `DATA/LittleBearRiver_2025_Benchmark/` — the three-claimant benchmark, its normalized
+  CSV layers, provenance, checksums and the deterministic generator that builds it from
+  the open Utah layers;
+- `DATA/CacheValley_2025_Benchmark/` — the ten-claimant county-wide benchmark with the
+  same layer structure, its selection and discovery records and its validation report;
+- `scripts/` — the experiment scripts that produce the published numbers and figures;
+- `results/` — the result files those scripts write, together with the published tables
+  and figures.
+
+Only the experiment scripts are published here. The tools used to typeset the manuscript
+are working code and are kept out of this repository.
+
+Benchmark generators read the open-data root from `LEXIMIN_DATASETS`, falling back to
+`DataSETs/` beside the repository.
 
 Generated exports are user-selected run artifacts and are not required by the source
 repository.

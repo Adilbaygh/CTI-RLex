@@ -1,0 +1,11 @@
+claimant_id,claimant_name,claimant_kind,individual_farmer_identity_available,company_id,service_polygon_objectid,service_area_dataset_acres,assigned_wrlu_acres,irrigated_demand_acres,excluded_nonirrigated_acres,assigned_wrlu_polygons,water_rights_text,measurement_station_ids,county,basin,subarea
+company_10390,Logan Southwest Field Irrigation Co.,irrigation_company_service_area,False,10390,389,824.650587,552.060339,528.070626,23.989713,79,,,Cache,Bear River,01-01-04
+company_105,Logan Northwest Field Irrigation Co.,irrigation_company_service_area,False,105,387,2074.454611,906.313651,871.491557,34.822094,127,25-5243,19,Cache,Bear River,01-01-04
+company_106,Logan River Blacksmith Fork Irrigation Co.,irrigation_company_service_area,False,106,388,2559.160986,2455.843755,2455.843755,0.0,307,"25-774, 25-3514, 25-4148",2631,Cache,Bear River,01-01-04
+company_1249,"Logan, Hyde Park, Smithfield Canal Co.",irrigation_company_service_area,False,1249,390,2460.161416,895.537595,847.619293,47.918302,234,,"10108400, 9840",Cache,Bear River,01-01-04
+company_130,Paradise Irrigation Co.,irrigation_company_service_area,False,130,398,1923.828867,1248.146387,1234.526961,13.619426,236,25-1551,"2776, 9738",Cache,Bear River,01-01-04
+company_132,Porcupine Highline Canal Co.,irrigation_company_service_area,False,132,399,2780.958233,2297.262497,2229.780325,67.482172,214,25-1946,9739,Cache,Bear River,01-01-04
+company_136,Providence Logan Irrigation Co.,irrigation_company_service_area,False,136,401,266.701744,41.895691,38.49414,3.401551,13,25-5137 to 25-5140,,Cache,Bear River,01-01-04
+company_164,Wellsville East Field Irrigation And Canal Co.,irrigation_company_service_area,False,164,413,2441.236863,2339.045538,2314.503503,24.542035,307,,2770,Cache,Bear River,01-01-04
+company_168,West Cache Irrigation Co.,irrigation_company_service_area,False,168,415,13197.16508,12046.30061,11737.924071,308.376539,943,25-5132,"10090250, 10514, 1689, 1711, 1724, 1782, 1692, 10521, 1747, 1688, 15314",Cache,Bear River,01-01-04
+company_088,Hyrum Irrigation Co.,irrigation_company_service_area,False,88,380,2075.020799,863.285682,858.238634,5.047048,152,"25-1719 to 25-1724, 25-2037 to 25-2040","2771, 2772",Cache,Bear River,01-01-04

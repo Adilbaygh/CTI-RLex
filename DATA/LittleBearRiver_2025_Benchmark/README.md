@@ -53,14 +53,22 @@ source group, including competition between the Paradise and Highline claimants.
 | active demand area | deterministic filter | Dry Crop and Fallow/Idle excluded; all rows retained in parcel tables |
 | net demand `d` | derived with assumptions | active acres x 2.0 net AF/acre x monthly shares |
 | application efficiency `alpha` | derived with assumptions | area-weighted harmonic mean of method efficiencies |
-| 7 canal capacities | observed design attribute | exact-name join to Utah Canals `MaxCFS` |
-| 7 other reach capacities | proxy | Distribution Network `RelativeSize` treated as CFS pending calibration |
+| reach capacity, tier 1 (7 reaches here) | observed design attribute | exact-name join to Utah Canals `MaxCFS` |
+| reach capacity, tier 2 (7 reaches here) | proxy | Distribution Network `RelativeSize` treated as CFS pending calibration |
+| reach capacity, tier 3 (0 reaches here) | derived | minimum known capacity of the paths that traverse the reach; used only where neither an exact-name `MaxCFS` join nor a `RelativeSize` attribute exists |
 | connector capacities | derived | minimum adjacent path capacity |
 | conveyance efficiency `eta` | assumed | exponential length decay; connectors are lossless |
 | period source limit `Q` | experimental envelope | source design/proxy CFS x days x scenario factor |
 | seasonal source limit `V` | external/derived ceiling | Hyrum storage capacity where available; otherwise summed design envelope |
 | shared limit `W` | derived plus experimental derating | minimum of summed source design and terminal-ingress capacity x scenario factor |
 | control effort and budget | experimental | only source setpoints and selected physical gates; normalized by reachable gross demand |
+
+Reach capacity evidence is assigned in three declared tiers, in order. Tier 3 exists
+because a small number of officially named reaches in the wider Cache Valley selection
+carry neither an exact-name `MaxCFS` join nor a `RelativeSize` attribute; it applies the
+same conservative rule already used for derived path connectors. **No reach in this
+instance falls into tier 3**, so every capacity here is either observed or a
+`RelativeSize` proxy, exactly as in the previously published build.
 
 The common crop duty and monthly profile are not calibrated ET. Irrigation method affects
 gross/net conversion, but crop-specific ET is not inferred without a defensible local
@@ -88,6 +96,10 @@ secondary tie-break after the complete robust guarantee vector is fixed.
 - `checksums_sha256.txt` — SHA-256 integrity hashes;
 - `generate_benchmark.py` and `validate_benchmark.py` — deterministic build and
   dependency-free validation;
+- `generate_cache_valley_benchmark.py` — driver that reuses every routine of
+  `generate_benchmark.py` but selects, from the same open layers, every Cache Valley
+  irrigation company that owns an official delivery terminal; it writes a separate
+  multi-claimant instance and never modifies this one;
 - `little_bear_river_2025_benchmark_map.png` and `.svg` — publication map;
 - `data/claimants.csv`, `claimant_terminals.csv`, `terminal_parameters.csv` — claimant,
   terminal-record and application-efficiency inputs;
@@ -106,7 +118,11 @@ secondary tie-break after the complete robust guarantee vector is fixed.
 
 Run from the repository root:
 
+The open-data root defaults to `DataSETs/` beside the repository. Set
+`LEXIMIN_DATASETS` when the layers live elsewhere:
+
 ```powershell
+$env:LEXIMIN_DATASETS = "C:\DataSETs"
 python -B DATA\LittleBearRiver_2025_Benchmark\generate_benchmark.py
 python -B DATA\LittleBearRiver_2025_Benchmark\validate_benchmark.py
 python -B DATA\LittleBearRiver_2025_Benchmark\plot_benchmark_map.py
@@ -122,6 +138,14 @@ The base run gives period-wise robust guarantees of approximately 0.447698 for
 are below `4e-13`, and splitting the Paradise terminal record into four records changes
 the guarantee vector by about `1.1e-16`. These are numerical verification results, not
 field-performance claims.
+
+### Build determinism
+
+`generate_benchmark.py` is deterministic: rebuilding from unchanged input layers
+reproduces every file byte for byte, so `checksums_sha256.txt` is a regression test for
+the generator itself. Any change to the generator must leave this file unchanged unless
+the change is intended to alter the benchmark, in which case the new hashes and the
+reason belong in the same commit.
 
 ## Source datasets
 

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.825884pt" height="197.028004pt" viewBox="0 0 510.825884 197.028004" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-26T21:56:10.631823</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 197.028004 
+L 510.825884 197.028004 
+L 510.825884 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.557439 159.82034 
+L 159.898289 159.82034 
+L 159.898289 40.47949 
+L 40.557439 40.47949 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pf68a56f12c)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAKYAAACmCAYAAABQiPR3AAACEElEQVR4nO3UoU2DYRiF0Rfyd4oikFVNcSQYJNMwFYN0CiZAVWBILbAAnidfzpngiif35uXu9WcWdT3tZ2Wfh92s6va/B8BfhEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJG3X035WdXnYzcq+j1+zKo9JkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkiRMkoRJkjBJEiZJwiRJmCQJkyRhkrR9PG+zqsen91nZ2/15VuUxSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYTJFv8+PDfBFuts+AAAAAElFTkSuQmCC" id="image59884950a7" transform="scale(1 -1) translate(0 -119.52)" x="40.557439" y="-40.30034" width="119.52" height="119.52"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m782a2796f9" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m782a2796f9" x="60.44758" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="60.44758" y="174.272247" transform="rotate(-0 60.44758 174.272247)">0.8</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m782a2796f9" x="100.227864" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="100.227864" y="174.272247" transform="rotate(-0 100.227864 174.272247)">1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m782a2796f9" x="140.008148" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="140.008148" y="174.272247" transform="rotate(-0 140.008148 174.272247)">1.2</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="100.227864" y="189.553963" transform="rotate(-0 100.227864 189.553963)">Source-limit scale</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <defs>
+       <path id="md011bf343c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md011bf343c" x="40.557439" y="60.369631" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="33.557439" y="64.095585" transform="rotate(-0 33.557439 64.095585)">1.5</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#md011bf343c" x="40.557439" y="100.149915" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="33.557439" y="103.875868" transform="rotate(-0 33.557439 103.875868)">2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#md011bf343c" x="40.557439" y="139.930199" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="33.557439" y="143.656152" transform="rotate(-0 33.557439 143.656152)">2.5</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <!-- Net duty (acre-ft acre$^{-1}$) -->
+     <g transform="translate(13.313957 163.04349) rotate(-90)">
+      <text>
+       <tspan x="0" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">N</tspan>
+       <tspan x="9.661011" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">e</tspan>
+       <tspan x="15.229431" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">t</tspan>
+       <tspan x="19.021179" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'"> </tspan>
+       <tspan x="21.927429" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">d</tspan>
+       <tspan x="29.028442" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">u</tspan>
+       <tspan x="36.038635" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">t</tspan>
+       <tspan x="39.830383" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">y</tspan>
+       <tspan x="46.295654" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'"> </tspan>
+       <tspan x="49.201904" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">(</tspan>
+       <tspan x="53.07312" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">a</tspan>
+       <tspan x="58.88562" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">c</tspan>
+       <tspan x="64.045349" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">r</tspan>
+       <tspan x="68.637451" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">e</tspan>
+       <tspan x="74.205872" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">-</tspan>
+       <tspan x="78.077087" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">f</tspan>
+       <tspan x="81.948303" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">t</tspan>
+       <tspan x="85.740051" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'"> </tspan>
+       <tspan x="88.646301" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">a</tspan>
+       <tspan x="94.458801" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">c</tspan>
+       <tspan x="99.61853" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">r</tspan>
+       <tspan x="104.210632" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">e</tspan>
+       <tspan x="122.217682" y="-0.28125" style="font-size: 11.593286px; font-family: 'Palatino Linotype'">)</tspan>
+       <tspan x="109.893896" y="-4.875" style="font-size: 8.1153px; font-family: 'DejaVu Sans'">−</tspan>
+       <tspan x="116.712231" y="-4.875" style="font-size: 8.1153px; font-family: 'DejaVu Sans'">1</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.557439 159.82034 
+L 40.557439 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 159.898289 159.82034 
+L 159.898289 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 40.557439 159.82034 
+L 159.898289 159.82034 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 40.557439 40.47949 
+L 159.898289 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10.949214px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="19.076085" y="35.705856" transform="rotate(-0 19.076085 35.705856)">(a)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="60.44758" y="62.418745" transform="rotate(-0 60.44758 62.418745)">0.467</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="100.227864" y="62.418745" transform="rotate(-0 100.227864 62.418745)">0.584</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="140.008148" y="62.418745" transform="rotate(-0 140.008148 62.418745)">0.701</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="60.44758" y="102.199028" transform="rotate(-0 60.44758 102.199028)">0.351</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="100.227864" y="102.199028" transform="rotate(-0 100.227864 102.199028)">0.438</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="140.008148" y="102.199028" transform="rotate(-0 140.008148 102.199028)">0.526</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="60.44758" y="141.979312" transform="rotate(-0 60.44758 141.979312)">0.280</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="100.227864" y="141.979312" transform="rotate(-0 100.227864 141.979312)">0.351</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="140.008148" y="141.979312" transform="rotate(-0 140.008148 141.979312)">0.421</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="100.227864" y="34.47949" transform="rotate(-0 100.227864 34.47949)">Loss multiplier = 0.5</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 187.976818 159.82034 
+L 307.317669 159.82034 
+L 307.317669 40.47949 
+L 187.976818 40.47949 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p0d0de19f2b)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAKYAAACmCAYAAABQiPR3AAACEElEQVR4nO3UIU5DURRF0VvShGocsoIEgWgtCsdIGBthXmAQNbhvYAL17LysNYIjds7u9e7tdxa1nY6zssvj7azq5r8HwDXCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyS9tvpOKv6Ph9mZT9P26zKY5IkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgk7T9fDrOq++evWdnHw/usymOSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCZIr+AIn0DdX6b4DwAAAAAElFTkSuQmCC" id="imageef5bf08683" transform="scale(1 -1) translate(0 -119.52)" x="187.976818" y="-40.30034" width="119.52" height="119.52"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m782a2796f9" x="207.86696" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="207.86696" y="174.272247" transform="rotate(-0 207.86696 174.272247)">0.8</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m782a2796f9" x="247.647243" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="247.647243" y="174.272247" transform="rotate(-0 247.647243 174.272247)">1</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m782a2796f9" x="287.427527" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="287.427527" y="174.272247" transform="rotate(-0 287.427527 174.272247)">1.2</text>
+     </g>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="247.647243" y="189.553963" transform="rotate(-0 247.647243 189.553963)">Source-limit scale</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#md011bf343c" x="187.976818" y="60.369631" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="180.976818" y="64.095585" transform="rotate(-0 180.976818 64.095585)">1.5</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#md011bf343c" x="187.976818" y="100.149915" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="180.976818" y="103.875868" transform="rotate(-0 180.976818 103.875868)">2</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#md011bf343c" x="187.976818" y="139.930199" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="180.976818" y="143.656152" transform="rotate(-0 180.976818 143.656152)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 187.976818 159.82034 
+L 187.976818 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 307.317669 159.82034 
+L 307.317669 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 187.976818 159.82034 
+L 307.317669 159.82034 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 187.976818 40.47949 
+L 307.317669 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 10.949214px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="166.495465" y="35.705856" transform="rotate(-0 166.495465 35.705856)">(b)</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="207.86696" y="62.418745" transform="rotate(-0 207.86696 62.418745)">0.447</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="247.647243" y="62.418745" transform="rotate(-0 247.647243 62.418745)">0.559</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="287.427527" y="62.418745" transform="rotate(-0 287.427527 62.418745)">0.671</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="207.86696" y="102.199028" transform="rotate(-0 207.86696 102.199028)">0.336</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="247.647243" y="102.199028" transform="rotate(-0 247.647243 102.199028)">0.420</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="287.427527" y="102.199028" transform="rotate(-0 287.427527 102.199028)">0.503</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="207.86696" y="141.979312" transform="rotate(-0 207.86696 141.979312)">0.268</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="247.647243" y="141.979312" transform="rotate(-0 247.647243 141.979312)">0.336</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="287.427527" y="141.979312" transform="rotate(-0 287.427527 141.979312)">0.403</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="247.647243" y="34.47949" transform="rotate(-0 247.647243 34.47949)">Loss multiplier = 1</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_12">
+    <path d="M 335.396197 159.82034 
+L 454.737048 159.82034 
+L 454.737048 40.47949 
+L 335.396197 40.47949 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p9910a70eb9)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAKYAAACmCAYAAABQiPR3AAACDElEQVR4nO3UIU5DURRF0dufegKToEH84HAohoBmvsykqiQ1yHYCeHZe1hrBETvn8HH4vM2itv00K7s+P8yqtv8eAH8RJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSdNz206zq8vo4K/t5mWV5TJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgkCZOk4/n9aVZ1ffudlX3t37Mqj0mSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTJGGSJEyShEmSMEkSJknCJEmYJAmTKboD6NQLtbHOUyUAAAAASUVORK5CYII=" id="imagef748619b9f" transform="scale(1 -1) translate(0 -119.52)" x="335.396197" y="-40.30034" width="119.52" height="119.52"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m782a2796f9" x="355.286339" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="355.286339" y="174.272247" transform="rotate(-0 355.286339 174.272247)">0.8</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m782a2796f9" x="395.066623" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="395.066623" y="174.272247" transform="rotate(-0 395.066623 174.272247)">1</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m782a2796f9" x="434.846906" y="159.82034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="434.846906" y="174.272247" transform="rotate(-0 434.846906 174.272247)">1.2</text>
+     </g>
+    </g>
+    <g id="text_41">
+     <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="395.066623" y="189.553963" transform="rotate(-0 395.066623 189.553963)">Source-limit scale</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_7">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#md011bf343c" x="335.396197" y="60.369631" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="328.396197" y="64.095585" transform="rotate(-0 328.396197 64.095585)">1.5</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#md011bf343c" x="335.396197" y="100.149915" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="328.396197" y="103.875868" transform="rotate(-0 328.396197 103.875868)">2</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#md011bf343c" x="335.396197" y="139.930199" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: end" x="328.396197" y="143.656152" transform="rotate(-0 328.396197 143.656152)">2.5</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_13">
+    <path d="M 335.396197 159.82034 
+L 335.396197 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 454.737048 159.82034 
+L 454.737048 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 335.396197 159.82034 
+L 454.737048 159.82034 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 335.396197 40.47949 
+L 454.737048 40.47949 
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 10.949214px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="313.914844" y="35.705856" transform="rotate(-0 313.914844 35.705856)">(c)</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="355.286339" y="62.418745" transform="rotate(-0 355.286339 62.418745)">0.409</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="395.066623" y="62.418745" transform="rotate(-0 395.066623 62.418745)">0.511</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="434.846906" y="62.418745" transform="rotate(-0 434.846906 62.418745)">0.613</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="355.286339" y="102.199028" transform="rotate(-0 355.286339 102.199028)">0.307</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="395.066623" y="102.199028" transform="rotate(-0 395.066623 102.199028)">0.383</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="434.846906" y="102.199028" transform="rotate(-0 434.846906 102.199028)">0.460</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="355.286339" y="141.979312" transform="rotate(-0 355.286339 141.979312)">0.245</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="395.066623" y="141.979312" transform="rotate(-0 395.066623 141.979312)">0.307</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 9.274629px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="434.846906" y="141.979312" transform="rotate(-0 434.846906 141.979312)">0.368</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="395.066623" y="34.47949" transform="rotate(-0 395.066623 34.47949)">Loss multiplier = 2</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_17">
+    <path d="M 463.02064 194.148004 
+L 472.420449 194.148004 
+L 472.420449 6.151826 
+L 463.02064 6.151826 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAA0AAAEFCAYAAAA4z22lAAABXklEQVR4nO2Wy23FMAwEl5RLeyWk/1LEHF4F3AATgrDvg/2QkhWf+Ck1v0eRXUZPZGibkjyl6EORjj1HSaBS9KGYPScNrzy4TJy9yRvR96alcyrPntYdjVpYRM3OVF4RouwlpoRlkqNU2BoVmEmzhyvor1GYvVpYeW3MlJjSxvaiD7nPUW0r4gH/T2EpGZAwqF6lxZWLUppeRFBKr73v9xbxlyKyj+jd8n857tWHFt5G2UdEZhI1p+wjYi/LciBLiYOoTMMrj9n2ZEHi2tuoZEDWRoQHad2coi8kt71yoDajJ0F75UBthsyUWphptFK2CflzKkNpI6TZ9lYWcSkljc50wEzXgQylM9xeWJVz7XFFOErClKzzJOzkgkp38u6d4Wsk6lo253QhpQM+Ry803KPRu+fdEeLao95G3sKKs8c9c9qMvUb97zmevcDshaNkQGamwDKlA1n2LKX+eH8BEyaNDKYskUMAAAAASUVORK5CYII=" id="image17a99447ac" transform="scale(1 -1) translate(0 -187.92)" x="462.96" y="-5.76" width="9.36" height="187.92"/>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_10">
+     <g id="line2d_19">
+      <defs>
+       <path id="m1cb75b0f6c" d="M 0 0 
+L 3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1cb75b0f6c" x="472.420449" y="171.611886" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_56">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="479.420449" y="175.337839" transform="rotate(-0 479.420449 175.337839)">0.3</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m1cb75b0f6c" x="472.420449" y="130.360403" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_57">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="479.420449" y="134.086356" transform="rotate(-0 479.420449 134.086356)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m1cb75b0f6c" x="472.420449" y="89.10892" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="479.420449" y="92.834873" transform="rotate(-0 479.420449 92.834873)">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m1cb75b0f6c" x="472.420449" y="47.857436" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="479.420449" y="51.58339" transform="rotate(-0 479.420449 51.58339)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m1cb75b0f6c" x="472.420449" y="6.605953" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <text style="font-size: 10.305143px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="479.420449" y="10.331906" transform="rotate(-0 479.420449 10.331906)">0.7</text>
+     </g>
+    </g>
+    <g id="text_61">
+     <text style="font-size: 11.593286px; font-family: 'Palatino Linotype', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: middle" x="504.685273" y="100.149915" transform="rotate(-90 504.685273 100.149915)">Minimum robust guarantee</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+   <g id="patch_18">
+    <path d="M 463.02064 194.148004 
+L 467.720545 194.148004 
+L 472.420449 194.148004 
+L 472.420449 6.151826 
+L 467.720545 6.151826 
+L 463.02064 6.151826 
+L 463.02064 194.148004 
+z
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf68a56f12c">
+   <rect x="40.557439" y="40.47949" width="119.340851" height="119.340851"/>
+  </clipPath>
+  <clipPath id="p0d0de19f2b">
+   <rect x="187.976818" y="40.47949" width="119.340851" height="119.340851"/>
+  </clipPath>
+  <clipPath id="p9910a70eb9">
+   <rect x="335.396197" y="40.47949" width="119.340851" height="119.340851"/>
+  </clipPath>
+ </defs>
+</svg>

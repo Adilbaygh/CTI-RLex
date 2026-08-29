@@ -1,0 +1,48 @@
+{
+  "base_min_guarantee": 0.41951076293707945,
+  "base_nominal_delivery_af": 5919.097890994499,
+  "rows": [
+    {
+      "source_id": "s_15286",
+      "source_class": "reservoir_release",
+      "disconnected_claimants": [
+        "company_132"
+      ],
+      "min_guarantee": -0.0,
+      "delta_percentage_points": -41.95107629370794,
+      "nominal_delivery_af": 2129.82535851,
+      "delta_nominal_af": -3789.2725324844987,
+      "explanation": "structural_disconnection"
+    },
+    {
+      "source_id": "s_10434",
+      "source_class": "surface_diversion",
+      "disconnected_claimants": [],
+      "min_guarantee": 0.3840922138847762,
+      "delta_percentage_points": -3.541854905230324,
+      "nominal_delivery_af": 5716.835907410902,
+      "delta_nominal_af": -202.2619835835967,
+      "explanation": "binding_capacity_or_envelope"
+    },
+    {
+      "source_id": "s_15269",
+      "source_class": "reservoir_release",
+      "disconnected_claimants": [],
+      "min_guarantee": 0.41868096458610105,
+      "delta_percentage_points": -0.08297983509784057,
+      "nominal_delivery_af": 5859.460897970461,
+      "delta_nominal_af": -59.63699302403802,
+      "explanation": "binding_capacity_or_envelope"
+    },
+    {
+      "source_id": "s_15957",
+      "source_class": "surface_diversion",
+      "disconnected_claimants": [],
+      "min_guarantee": 0.4195107629370794,
+      "delta_percentage_points": -5.551115123125783e-15,
+      "nominal_delivery_af": 5919.097890994506,
+      "delta_nominal_af": 7.275957614183426e-12,
+      "explanation": "redundant_at_the_optimum"
+    }
+  ]
+}

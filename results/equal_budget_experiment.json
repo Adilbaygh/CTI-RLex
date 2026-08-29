@@ -1,0 +1,248 @@
+{
+ "benchmark": "lbr_hyrum_paradise_highline_2025_v2",
+ "rigid_min_guarantee": 0.3840922138847762,
+ "nominal_only_af": 8645.091840000001,
+ "guarantee_vector_invariant_to_budget_regime": true,
+ "cases": [
+  {
+   "label": "published per-scenario budgets",
+   "recourse_budget": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.4,
+    "paradise_diversion_outage_under_shortage": 0.35,
+    "hyrum_canal_restriction_under_shortage": 0.25
+   },
+   "sorted_rho": [
+    0.41951076293707945,
+    0.41951076293707945,
+    0.4476976354639018
+   ],
+   "min_guarantee": 0.41951076293707945,
+   "levels": [
+    {
+     "theta": 0.41951076293707945,
+     "blocked": [
+      "company_130",
+      "company_132"
+     ]
+    },
+    {
+     "theta": 0.4476976354639018,
+     "blocked": [
+      "company_088"
+     ]
+    }
+   ],
+   "nominal_af": 5919.097890994499,
+   "utilitarian_nominal_af": 6075.143337059908,
+   "utilitarian_min": 0.10730505957071346,
+   "proportional_nominal_af": 5919.097890994498,
+   "proportional_min": 0.4195107629370794,
+   "price_of_fairness_pct": 2.568588713182988,
+   "value_of_recourse_pct": 9.221366060528487,
+   "price_of_robustness_pct": 31.532272871788273,
+   "cells_above_nominal": [
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-07",
+     "claimant": "company_132",
+     "nominal_ratio": 0.5912092359295722,
+     "contingency_ratio": 0.9288936605402244,
+     "excess": 0.3376844246106522
+    },
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-07",
+     "claimant": "company_132",
+     "nominal_ratio": 0.5912092359295722,
+     "contingency_ratio": 0.9288917557271292,
+     "excess": 0.33768251979755703
+    },
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.8230065387855564,
+     "contingency_ratio": 1.0,
+     "excess": 0.1769934612144436
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.8230065387855564,
+     "contingency_ratio": 1.0,
+     "excess": 0.1769934612144436
+    }
+   ],
+   "max_residual": 3.410605131648481e-13
+  },
+  {
+   "label": "one common contingency budget b=0.25",
+   "recourse_budget": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.25,
+    "paradise_diversion_outage_under_shortage": 0.25,
+    "hyrum_canal_restriction_under_shortage": 0.25
+   },
+   "sorted_rho": [
+    0.41951076293707945,
+    0.41951076293707945,
+    0.4476976354639018
+   ],
+   "min_guarantee": 0.41951076293707945,
+   "levels": [
+    {
+     "theta": 0.41951076293707945,
+     "blocked": [
+      "company_130",
+      "company_132"
+     ]
+    },
+    {
+     "theta": 0.4476976354639018,
+     "blocked": [
+      "company_088"
+     ]
+    }
+   ],
+   "nominal_af": 5434.342092857081,
+   "utilitarian_nominal_af": 5663.461555426369,
+   "utilitarian_min": 0.10730505957403853,
+   "proportional_nominal_af": 5434.342092857078,
+   "proportional_min": 0.41951076293707934,
+   "price_of_fairness_pct": 4.045572841396974,
+   "value_of_recourse_pct": 9.221366060528487,
+   "price_of_robustness_pct": 37.13956782144398,
+   "cells_above_nominal": [
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.42904346314621217,
+     "contingency_ratio": 1.0,
+     "excess": 0.5709565368537879
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.42904346314621217,
+     "contingency_ratio": 1.0,
+     "excess": 0.5709565368537879
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-07",
+     "claimant": "company_132",
+     "nominal_ratio": 0.41951076293707934,
+     "contingency_ratio": 0.4195125512854363,
+     "excess": 1.7883483569569592e-06
+    }
+   ],
+   "max_residual": 3.410605131648481e-13
+  },
+  {
+   "label": "one common contingency budget b=0.4",
+   "recourse_budget": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.4,
+    "severe_system_shortage": 0.4,
+    "paradise_diversion_outage_under_shortage": 0.4,
+    "hyrum_canal_restriction_under_shortage": 0.4
+   },
+   "sorted_rho": [
+    0.4195107629370794,
+    0.4195107629370794,
+    0.4476976354639018
+   ],
+   "min_guarantee": 0.4195107629370794,
+   "levels": [
+    {
+     "theta": 0.4195107629370794,
+     "blocked": [
+      "company_130",
+      "company_132"
+     ]
+    },
+    {
+     "theta": 0.4476976354639018,
+     "blocked": [
+      "company_088"
+     ]
+    }
+   ],
+   "nominal_af": 5976.327314757984,
+   "utilitarian_nominal_af": 6075.481303144039,
+   "utilitarian_min": 0.10730505957071346,
+   "proportional_nominal_af": 5976.327314757971,
+   "proportional_min": 0.41951076293707934,
+   "price_of_fairness_pct": 1.6320351168679137,
+   "value_of_recourse_pct": 9.221366060528473,
+   "price_of_robustness_pct": 30.870285413208713,
+   "cells_above_nominal": [
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-07",
+     "claimant": "company_132",
+     "nominal_ratio": 0.6368786024675428,
+     "contingency_ratio": 1.0,
+     "excess": 0.3631213975324572
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-07",
+     "claimant": "company_132",
+     "nominal_ratio": 0.6368786024675428,
+     "contingency_ratio": 1.0,
+     "excess": 0.3631213975324572
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-06",
+     "claimant": "company_132",
+     "nominal_ratio": 0.41951076293707934,
+     "contingency_ratio": 0.7608579671754072,
+     "excess": 0.3413472042383279
+    },
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-06",
+     "claimant": "company_132",
+     "nominal_ratio": 0.41951076293707934,
+     "contingency_ratio": 0.7608554508103037,
+     "excess": 0.34134468787322436
+    },
+    {
+     "scenario": "moderate_system_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.8230094371233402,
+     "contingency_ratio": 1.0,
+     "excess": 0.17699056287665982
+    },
+    {
+     "scenario": "hyrum_canal_restriction_under_shortage",
+     "period": "2025-08",
+     "claimant": "company_132",
+     "nominal_ratio": 0.8230094371233402,
+     "contingency_ratio": 1.0,
+     "excess": 0.17699056287665982
+    }
+   ],
+   "max_residual": 9.094947017729282e-13
+  }
+ ],
+ "mechanism_check": {
+  "note": "Without contingency scenarios the same claimant is fully served in every month, so a contingency cell above its nominal cell is produced by the secondary per-scenario delivery objectives above the fairness floor, not by the budget regime.",
+  "nominal_only_ratios_company_132": {
+   "2025-05": 1.0,
+   "2025-06": 1.0,
+   "2025-07": 1.0,
+   "2025-08": 1.0,
+   "2025-09": 1.0
+  }
+ }
+}

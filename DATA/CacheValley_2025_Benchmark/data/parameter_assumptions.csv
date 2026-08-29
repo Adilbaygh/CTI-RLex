@@ -1,0 +1,8 @@
+parameter,base_value,unit,status,required_sensitivity
+demand_duty,2.0,net acre-foot/acre/May-Sep,assumed,"1.5, 2.0, 2.5"
+monthly_demand_profile,0.12|0.22|0.28|0.24|0.14,fraction for May|Jun|Jul|Aug|Sep,assumed,replace with calibrated ET or diversion profile
+application_efficiency_by_method,Flood=0.60|Pivot=0.85|Sprinkler=0.75|Sub-irrigated=0.65|Wheel=0.78,beneficial delivery/gross terminal withdrawal,assumed_from_method_class,"multiply application-loss fraction by 0.5, 1.0 and 1.5"
+canal_loss_rate,0.005,exponential loss/km,assumed,"0.0025, 0.005, 0.010"
+stream_loss_rate,0.001,exponential loss/km,assumed,"0.0005, 0.001, 0.002"
+source_availability_and_outages,see scenarios.csv,fraction of design/proxy envelope,experimental,factorial or one-at-a-time scenario sweep
+recourse_budget,0|0.25|0.40|0.35|0.25,normalized reconfiguration effort,experimental,"scale contingency budgets by 0, 0.25, 0.5, 1 and 2"

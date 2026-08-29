@@ -1,0 +1,31 @@
+==============================================================================
+Little Bear (v2, 3 claimants)
+  LP dims: {'variables': 869, 'equality_constraints': 600, 'inequality_constraints': 507, 'nonzeros': 2686}
+  CTI-RLex levels     : 2  distinct values=2
+      theta*=0.419511  blocked=['company_130', 'company_132']
+      theta*=0.447698  blocked=['company_088']
+  sorted rho (RLex)   : [0.419511, 0.419511, 0.447698]
+  sorted rho (PROP-BR): [0.419511, 0.419511, 0.447698]
+  min guarantee       : RLex=0.419511  PROP=0.419511
+  LEXIMIN GAIN  delta = 0.000000   strictly improved n+ = 0 of 3
+  nominal delivery    : RLex=5919.1  PROP=5919.1
+  runtime             : RLex=0.13s  PROP=0.06s
+  max residual        : 3.41e-13
+==============================================================================
+Cache Valley (v3, 10 claimants)
+  LP dims: {'variables': 2886, 'equality_constraints': 2150, 'inequality_constraints': 1539, 'nonzeros': 8520}
+  CTI-RLex levels     : 7  distinct values=7
+      theta*=0.056394  blocked=['company_168']
+      theta*=0.137445  blocked=['company_106']
+      theta*=0.307274  blocked=['company_130', 'company_132']
+      theta*=0.365296  blocked=['company_164', 'company_088']
+      theta*=0.674098  blocked=['company_10390', 'company_105']
+      theta*=0.882145  blocked=['company_1249']
+      theta*=1.000000  blocked=['company_136']
+  sorted rho (RLex)   : [0.056394, 0.137445, 0.307274, 0.307274, 0.365296, 0.365296, 0.674098, 0.674098, 0.882145, 1.0]
+  sorted rho (PROP-BR): [0.056394, 0.056394, 0.137445, 0.189221, 0.424984, 0.4805, 0.774872, 0.882145, 1.0, 1.0]
+  min guarantee       : RLex=0.056394  PROP=0.056394
+  LEXIMIN GAIN  delta = -0.232635   strictly improved n+ = 3 of 10
+  nominal delivery    : RLex=16846.4  PROP=17053.6
+  runtime             : RLex=1.77s  PROP=0.16s
+  max residual        : 1.09e-11

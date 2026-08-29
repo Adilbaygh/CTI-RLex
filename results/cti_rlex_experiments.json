@@ -1,0 +1,3414 @@
+{
+  "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+  "derived_indicators": {
+    "price_of_fairness_nominal_fraction": 0.025685887131829843,
+    "value_of_recourse_minimum_guarantee_absolute": 0.03541854905230324,
+    "value_of_recourse_minimum_guarantee_percent": 9.22136606052848
+  },
+  "experiment_design": {
+    "method_runtime_repeats": 3,
+    "methods": [
+      "UTIL-BR",
+      "PROP-BR",
+      "CTI-RLex rigid",
+      "CTI-RLex proposed",
+      "CTI-RLex nominal only"
+    ],
+    "scalability_runtime_repeats": 3,
+    "sensitivity_case_count": 135,
+    "sensitivity_design": "3x3x3x5 full factorial"
+  },
+  "method_comparison": [
+    {
+      "guarantee_scope": "five-scenario bounded recourse",
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.744335110592877,
+        "company_132": 0.10730505957071346
+      },
+      "jain_guarantee_index": 0.7346900492239147,
+      "leximin_vector": [
+        0.10730505957071346,
+        0.4476976354639018,
+        0.744335110592877
+      ],
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "method": "UTIL-BR",
+      "minimum_guarantee": 0.10730505957071346,
+      "nominal_beneficial_delivery_af": 6075.143337059908,
+      "normalized_recourse_effort": 1.2499990127401237,
+      "runtime_seconds": 0.05219770000257995,
+      "scenario_beneficial_delivery_af": {
+        "hyrum_canal_restriction_under_shortage": 6686.236635722225,
+        "moderate_system_shortage": 6686.234222488249,
+        "nominal": 6075.142729545573,
+        "paradise_diversion_outage_under_shortage": 5662.474826156164,
+        "severe_system_shortage": 5097.392479662931
+      },
+      "weighted_contingency_beneficial_delivery_af": 6033.085144315908,
+      "worst_scenario_beneficial_delivery_af": 5097.392479662931
+    },
+    {
+      "guarantee_scope": "five-scenario common robust floor",
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.4195107629370794
+      },
+      "jain_guarantee_index": 0.99904117438131,
+      "leximin_vector": [
+        0.4195107629370794,
+        0.41951076293707945,
+        0.4476976354639018
+      ],
+      "maximum_lp_residual": 5.684341886080801e-13,
+      "method": "PROP-BR",
+      "minimum_guarantee": 0.4195107629370794,
+      "nominal_beneficial_delivery_af": 5919.097890994498,
+      "normalized_recourse_effort": 1.2499990269515024,
+      "runtime_seconds": 0.06854059999750461,
+      "scenario_beneficial_delivery_af": {
+        "hyrum_canal_restriction_under_shortage": 6530.191205261361,
+        "moderate_system_shortage": 6530.188826765331,
+        "nominal": 5919.0972990847085,
+        "paradise_diversion_outage_under_shortage": 5783.232413027855,
+        "severe_system_shortage": 4941.347049202066
+      },
+      "weighted_contingency_beneficial_delivery_af": 5946.2404681882,
+      "worst_scenario_beneficial_delivery_af": 4941.347049202066
+    },
+    {
+      "guarantee_scope": "five-scenario zero recourse",
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.3840922138847762,
+        "company_132": 0.3840922138847762
+      },
+      "jain_guarantee_index": 0.9945566670910533,
+      "leximin_vector": [
+        0.3840922138847762,
+        0.3840922138847762,
+        0.4476976354639018
+      ],
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "method": "CTI-RLex rigid",
+      "minimum_guarantee": 0.3840922138847762,
+      "nominal_beneficial_delivery_af": 4739.08565752826,
+      "normalized_recourse_effort": 0.0,
+      "runtime_seconds": 0.12857879999501165,
+      "scenario_beneficial_delivery_af": {
+        "hyrum_canal_restriction_under_shortage": 4739.0851836196925,
+        "moderate_system_shortage": 4739.0851836196925,
+        "nominal": 4739.0851836196925,
+        "paradise_diversion_outage_under_shortage": 4739.0851836196925,
+        "severe_system_shortage": 4739.0851836196925
+      },
+      "weighted_contingency_beneficial_delivery_af": 4739.08565752826,
+      "worst_scenario_beneficial_delivery_af": 4739.0851836196925
+    },
+    {
+      "guarantee_scope": "five-scenario bounded recourse",
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945
+      },
+      "jain_guarantee_index": 0.9990411743813099,
+      "leximin_vector": [
+        0.41951076293707945,
+        0.41951076293707945,
+        0.4476976354639018
+      ],
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "method": "CTI-RLex proposed",
+      "minimum_guarantee": 0.41951076293707945,
+      "nominal_beneficial_delivery_af": 5919.097890994499,
+      "normalized_recourse_effort": 1.2499990269514052,
+      "runtime_seconds": 0.14287209999747574,
+      "scenario_beneficial_delivery_af": {
+        "hyrum_canal_restriction_under_shortage": 6530.191205261362,
+        "moderate_system_shortage": 6530.188826765095,
+        "nominal": 5919.097299084709,
+        "paradise_diversion_outage_under_shortage": 5783.232413027859,
+        "severe_system_shortage": 4941.347049202067
+      },
+      "weighted_contingency_beneficial_delivery_af": 5946.240468188143,
+      "worst_scenario_beneficial_delivery_af": 4941.347049202067
+    },
+    {
+      "guarantee_scope": "nominal scenario only",
+      "guarantees": {
+        "company_088": 1.0,
+        "company_130": 1.0,
+        "company_132": 1.0
+      },
+      "jain_guarantee_index": 1.0,
+      "leximin_vector": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "method": "CTI-RLex nominal only",
+      "minimum_guarantee": 1.0,
+      "nominal_beneficial_delivery_af": 8645.091840000001,
+      "normalized_recourse_effort": 0,
+      "runtime_seconds": 0.029451499998685904,
+      "scenario_beneficial_delivery_af": {
+        "nominal": 8645.091840000001
+      },
+      "weighted_contingency_beneficial_delivery_af": 0.0,
+      "worst_scenario_beneficial_delivery_af": 8645.091840000001
+    }
+  ],
+  "operational_audit": {
+    "most_utilized_edges": [
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-06",
+        "scenario_id": "nominal",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-09",
+        "scenario_id": "nominal",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-06",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-09",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-06",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-09",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-06",
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-09",
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-06",
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 535.53719,
+        "edge_id": "e_8912",
+        "flow_af": 313.97230931066673,
+        "period_id": "2025-09",
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "utilization": 0.5862754542045282
+      },
+      {
+        "capacity_af": 553.38843,
+        "edge_id": "e_8912",
+        "flow_af": 324.43805268786673,
+        "period_id": "2025-07",
+        "scenario_id": "nominal",
+        "utilization": 0.586275453369827
+      },
+      {
+        "capacity_af": 553.38843,
+        "edge_id": "e_8912",
+        "flow_af": 324.43805268786673,
+        "period_id": "2025-08",
+        "scenario_id": "nominal",
+        "utilization": 0.586275453369827
+      },
+      {
+        "capacity_af": 553.38843,
+        "edge_id": "e_8912",
+        "flow_af": 324.43805268786673,
+        "period_id": "2025-07",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.586275453369827
+      },
+      {
+        "capacity_af": 553.38843,
+        "edge_id": "e_8912",
+        "flow_af": 324.43805268786673,
+        "period_id": "2025-08",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.586275453369827
+      },
+      {
+        "capacity_af": 553.38843,
+        "edge_id": "e_8912",
+        "flow_af": 324.43805268786673,
+        "period_id": "2025-07",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.586275453369827
+      }
+    ],
+    "most_utilized_source_groups": [
+      {
+        "group_id": "hyrum_subsystem",
+        "limit_af": 314.181818,
+        "period_id": "2025-06",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 314.181818
+      },
+      {
+        "group_id": "hyrum_subsystem",
+        "limit_af": 324.654545,
+        "period_id": "2025-07",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 324.654545
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1149.818182,
+        "period_id": "2025-07",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 1149.818182
+      },
+      {
+        "group_id": "hyrum_subsystem",
+        "limit_af": 324.654545,
+        "period_id": "2025-08",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 324.654545
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1149.818182,
+        "period_id": "2025-08",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 1149.818182
+      },
+      {
+        "group_id": "hyrum_subsystem",
+        "limit_af": 314.181818,
+        "period_id": "2025-09",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 314.181818
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1672.46281,
+        "period_id": "2025-08",
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "utilization": 1.0,
+        "weighted_use_af": 1672.46281
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1112.727273,
+        "period_id": "2025-06",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.9997521974845565,
+        "weighted_use_af": 1112.451536382748
+      },
+      {
+        "group_id": "hyrum_subsystem",
+        "limit_af": 324.654545,
+        "period_id": "2025-05",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.9572787397684294,
+        "weighted_use_af": 310.78489369769284
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 2195.107438,
+        "period_id": "2025-07",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.9384350750878392,
+        "weighted_use_af": 2059.9658134054043
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 2195.107438,
+        "period_id": "2025-08",
+        "scenario_id": "moderate_system_shortage",
+        "utilization": 0.9288148257678133,
+        "weighted_use_af": 2038.848332567601
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1149.818182,
+        "period_id": "2025-05",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.9170989305159551,
+        "weighted_use_af": 1054.497025
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1112.727273,
+        "period_id": "2025-09",
+        "scenario_id": "severe_system_shortage",
+        "utilization": 0.9170989304941751,
+        "weighted_use_af": 1020.480992
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1672.46281,
+        "period_id": "2025-07",
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "utilization": 0.8720804130994576,
+        "weighted_use_af": 1458.5220582382797
+      },
+      {
+        "group_id": "paradise_highline_subsystem",
+        "limit_af": 1618.512397,
+        "period_id": "2025-09",
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "utilization": 0.8481327421493786,
+        "weighted_use_af": 1372.7133574703737
+      }
+    ],
+    "scenario_water_balance": [
+      {
+        "application_loss_af": 1959.5684387804686,
+        "beneficial_delivery_af": 5919.097299084709,
+        "conveyance_loss_af": 595.9519381472328,
+        "end_to_end_efficiency": 0.6984500688259769,
+        "gross_terminal_withdrawal_af": 7878.665737865178,
+        "recourse_budget": 0.0,
+        "recourse_effort": 0.0,
+        "scenario_id": "nominal",
+        "scenario_label": "Design-envelope reference",
+        "source_injection_af": 8474.61767601241
+      },
+      {
+        "application_loss_af": 2132.886657251719,
+        "beneficial_delivery_af": 6530.188826765095,
+        "conveyance_loss_af": 685.9726253616136,
+        "end_to_end_efficiency": 0.6984870278092146,
+        "gross_terminal_withdrawal_af": 8663.075484016814,
+        "recourse_budget": 0.25,
+        "recourse_effort": 0.24999902695140525,
+        "scenario_id": "moderate_system_shortage",
+        "scenario_label": "Moderate system shortage",
+        "source_injection_af": 9349.048109378427
+      },
+      {
+        "application_loss_af": 1682.2582098811545,
+        "beneficial_delivery_af": 4941.347049202067,
+        "conveyance_loss_af": 451.91827799721887,
+        "end_to_end_efficiency": 0.6983719329468877,
+        "gross_terminal_withdrawal_af": 6623.605259083221,
+        "recourse_budget": 0.4,
+        "recourse_effort": 0.4000000000000001,
+        "scenario_id": "severe_system_shortage",
+        "scenario_label": "Severe system shortage",
+        "source_injection_af": 7075.52353708044
+      },
+      {
+        "application_loss_af": 1916.267317806446,
+        "beneficial_delivery_af": 5783.232413027859,
+        "conveyance_loss_af": 589.748556426649,
+        "end_to_end_efficiency": 0.6976787535626868,
+        "gross_terminal_withdrawal_af": 7699.499730834305,
+        "recourse_budget": 0.35,
+        "recourse_effort": 0.3499999999999998,
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "scenario_label": "Paradise diversion outage under shortage",
+        "source_injection_af": 8289.248287260954
+      },
+      {
+        "application_loss_af": 2132.8873318425403,
+        "beneficial_delivery_af": 6530.191205261362,
+        "conveyance_loss_af": 685.9729757409914,
+        "end_to_end_efficiency": 0.6984870279396118,
+        "gross_terminal_withdrawal_af": 8663.078537103902,
+        "recourse_budget": 0.25,
+        "recourse_effort": 0.25,
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "scenario_label": "Hyrum canal restriction under shortage",
+        "source_injection_af": 9349.051512844893
+      }
+    ],
+    "source_activation": [
+      {
+        "operational_roles": [
+          "company_130:routine_surface_diversion"
+        ],
+        "scenario_id": "nominal",
+        "scenario_label": "Design-envelope reference",
+        "seasonal_injection_af": 510.1016183827408,
+        "seasonal_limit_af": 10621.487603,
+        "seasonal_utilization": 0.04802544026306301,
+        "source_class": "surface_diversion",
+        "source_id": "s_10434",
+        "source_name": "Surface diversion at node 10434"
+      },
+      {
+        "operational_roles": [
+          "company_088:supplemental_storage_release"
+        ],
+        "scenario_id": "nominal",
+        "scenario_label": "Design-envelope reference",
+        "seasonal_injection_af": 1588.4576196976927,
+        "seasonal_limit_af": 18685.0,
+        "seasonal_utilization": 0.08501244954229022,
+        "source_class": "reservoir_release",
+        "source_id": "s_15269",
+        "source_name": "Hyrum Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_130:supplemental_storage_release",
+          "company_132:routine_storage_supply"
+        ],
+        "scenario_id": "nominal",
+        "scenario_label": "Design-envelope reference",
+        "seasonal_injection_af": 6376.058437931977,
+        "seasonal_limit_af": 20817.812231,
+        "seasonal_utilization": 0.3062789868205905,
+        "source_class": "reservoir_release",
+        "source_id": "s_15286",
+        "source_name": "Porcupine Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_088:routine_surface_diversion"
+        ],
+        "scenario_id": "nominal",
+        "scenario_label": "Design-envelope reference",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 10621.487603,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_15957",
+        "source_name": "Surface diversion at node 15957"
+      },
+      {
+        "operational_roles": [
+          "company_130:routine_surface_diversion"
+        ],
+        "scenario_id": "moderate_system_shortage",
+        "scenario_label": "Moderate system shortage",
+        "seasonal_injection_af": 510.1016183827408,
+        "seasonal_limit_af": 3717.520661,
+        "seasonal_utilization": 0.13721554361059699,
+        "source_class": "surface_diversion",
+        "source_id": "s_10434",
+        "source_name": "Surface diversion at node 10434"
+      },
+      {
+        "operational_roles": [
+          "company_088:supplemental_storage_release"
+        ],
+        "scenario_id": "moderate_system_shortage",
+        "scenario_label": "Moderate system shortage",
+        "seasonal_injection_af": 1588.4576196976927,
+        "seasonal_limit_af": 9342.5,
+        "seasonal_utilization": 0.17002489908458043,
+        "source_class": "reservoir_release",
+        "source_id": "s_15269",
+        "source_name": "Hyrum Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_130:supplemental_storage_release",
+          "company_132:routine_storage_supply"
+        ],
+        "scenario_id": "moderate_system_shortage",
+        "scenario_label": "Moderate system shortage",
+        "seasonal_injection_af": 7250.488871297994,
+        "seasonal_limit_af": 10408.906116,
+        "seasonal_utilization": 0.6965658821874605,
+        "source_class": "reservoir_release",
+        "source_id": "s_15286",
+        "source_name": "Porcupine Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_088:routine_surface_diversion"
+        ],
+        "scenario_id": "moderate_system_shortage",
+        "scenario_label": "Moderate system shortage",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 3717.520661,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_15957",
+        "source_name": "Surface diversion at node 15957"
+      },
+      {
+        "operational_roles": [
+          "company_130:routine_surface_diversion"
+        ],
+        "scenario_id": "severe_system_shortage",
+        "scenario_label": "Severe system shortage",
+        "seasonal_injection_af": 510.101618382741,
+        "seasonal_limit_af": 1593.22314,
+        "seasonal_utilization": 0.3201696018441842,
+        "source_class": "surface_diversion",
+        "source_id": "s_10434",
+        "source_name": "Surface diversion at node 10434"
+      },
+      {
+        "operational_roles": [
+          "company_088:supplemental_storage_release"
+        ],
+        "scenario_id": "severe_system_shortage",
+        "scenario_label": "Severe system shortage",
+        "seasonal_injection_af": 1588.4576196976927,
+        "seasonal_limit_af": 4671.25,
+        "seasonal_utilization": 0.34004979816916087,
+        "source_class": "reservoir_release",
+        "source_id": "s_15269",
+        "source_name": "Hyrum Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_130:supplemental_storage_release",
+          "company_132:routine_storage_supply"
+        ],
+        "scenario_id": "severe_system_shortage",
+        "scenario_label": "Severe system shortage",
+        "seasonal_injection_af": 4976.964299000007,
+        "seasonal_limit_af": 5204.453058,
+        "seasonal_utilization": 0.956289593456836,
+        "source_class": "reservoir_release",
+        "source_id": "s_15286",
+        "source_name": "Porcupine Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_088:routine_surface_diversion"
+        ],
+        "scenario_id": "severe_system_shortage",
+        "scenario_label": "Severe system shortage",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 1593.22314,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_15957",
+        "source_name": "Surface diversion at node 15957"
+      },
+      {
+        "operational_roles": [
+          "company_130:routine_surface_diversion"
+        ],
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "scenario_label": "Paradise diversion outage under shortage",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 0.0,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_10434",
+        "source_name": "Surface diversion at node 10434"
+      },
+      {
+        "operational_roles": [
+          "company_088:supplemental_storage_release"
+        ],
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "scenario_label": "Paradise diversion outage under shortage",
+        "seasonal_injection_af": 1588.4576196976927,
+        "seasonal_limit_af": 18685.0,
+        "seasonal_utilization": 0.08501244954229022,
+        "source_class": "reservoir_release",
+        "source_id": "s_15269",
+        "source_name": "Hyrum Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_130:supplemental_storage_release",
+          "company_132:routine_storage_supply"
+        ],
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "scenario_label": "Paradise diversion outage under shortage",
+        "seasonal_injection_af": 6700.790667563261,
+        "seasonal_limit_af": 11449.796727,
+        "seasonal_utilization": 0.5852322820510856,
+        "source_class": "reservoir_release",
+        "source_id": "s_15286",
+        "source_name": "Porcupine Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_088:routine_surface_diversion"
+        ],
+        "scenario_id": "paradise_diversion_outage_under_shortage",
+        "scenario_label": "Paradise diversion outage under shortage",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 10621.487603,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_15957",
+        "source_name": "Surface diversion at node 15957"
+      },
+      {
+        "operational_roles": [
+          "company_130:routine_surface_diversion"
+        ],
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "scenario_label": "Hyrum canal restriction under shortage",
+        "seasonal_injection_af": 510.1016183827408,
+        "seasonal_limit_af": 10621.487603,
+        "seasonal_utilization": 0.04802544026306301,
+        "source_class": "surface_diversion",
+        "source_id": "s_10434",
+        "source_name": "Surface diversion at node 10434"
+      },
+      {
+        "operational_roles": [
+          "company_088:supplemental_storage_release"
+        ],
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "scenario_label": "Hyrum canal restriction under shortage",
+        "seasonal_injection_af": 1588.4576196976927,
+        "seasonal_limit_af": 5605.5,
+        "seasonal_utilization": 0.28337483180763406,
+        "source_class": "reservoir_release",
+        "source_id": "s_15269",
+        "source_name": "Hyrum Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_130:supplemental_storage_release",
+          "company_132:routine_storage_supply"
+        ],
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "scenario_label": "Hyrum canal restriction under shortage",
+        "seasonal_injection_af": 7250.492274764459,
+        "seasonal_limit_af": 20817.812231,
+        "seasonal_utilization": 0.34828310459865147,
+        "source_class": "reservoir_release",
+        "source_id": "s_15286",
+        "source_name": "Porcupine Reservoir"
+      },
+      {
+        "operational_roles": [
+          "company_088:routine_surface_diversion"
+        ],
+        "scenario_id": "hyrum_canal_restriction_under_shortage",
+        "scenario_label": "Hyrum canal restriction under shortage",
+        "seasonal_injection_af": 0.0,
+        "seasonal_limit_af": 2655.371901,
+        "seasonal_utilization": 0.0,
+        "source_class": "surface_diversion",
+        "source_id": "s_15957",
+        "source_name": "Surface diversion at node 15957"
+      }
+    ]
+  },
+  "scalability": [
+    {
+      "equality_constraints": 120,
+      "inequality_constraints": 47,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "median_runtime_seconds": 0.02924899999925401,
+      "minimum_guarantee": 1.0,
+      "nonzeros": 346,
+      "runtime_seconds_repeats": [
+        0.029758799995761365,
+        0.02924899999925401,
+        0.028541899999254383
+      ],
+      "scenario_count": 1,
+      "scenarios": [
+        "nominal"
+      ],
+      "variables": 149
+    },
+    {
+      "equality_constraints": 360,
+      "inequality_constraints": 277,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "median_runtime_seconds": 0.08659269999770913,
+      "minimum_guarantee": 0.41951076293707945,
+      "nonzeros": 1516,
+      "runtime_seconds_repeats": [
+        0.08648779999930412,
+        0.08731200000329409,
+        0.08659269999770913
+      ],
+      "scenario_count": 3,
+      "scenarios": [
+        "nominal",
+        "moderate_system_shortage",
+        "severe_system_shortage"
+      ],
+      "variables": 509
+    },
+    {
+      "equality_constraints": 600,
+      "inequality_constraints": 507,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "median_runtime_seconds": 0.1401559000078123,
+      "minimum_guarantee": 0.41951076293707945,
+      "nonzeros": 2686,
+      "runtime_seconds_repeats": [
+        0.1401559000078123,
+        0.1420840000064345,
+        0.14007029999629594
+      ],
+      "scenario_count": 5,
+      "scenarios": [
+        "nominal",
+        "moderate_system_shortage",
+        "severe_system_shortage",
+        "paradise_diversion_outage_under_shortage",
+        "hyrum_canal_restriction_under_shortage"
+      ],
+      "variables": 869
+    }
+  ],
+  "sensitivity": [
+    {
+      "case_id": "factorial_001",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47983752363105087,
+        "company_130": 0.4282961145844582,
+        "company_132": 0.4282961145844582
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.4282961145844582,
+      "nominal_beneficial_delivery_af": 3911.169883366928,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12617250000766944,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3911.169492249942
+    },
+    {
+      "case_id": "factorial_002",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47983752363105087,
+        "company_130": 0.4674002211957936,
+        "company_132": 0.4674002211957936
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 8.594724931754172e-11,
+      "minimum_guarantee": 0.4674002211957936,
+      "nominal_beneficial_delivery_af": 3967.953900357922,
+      "normalized_recourse_effort": 0.3124993726543558,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14370960000087507,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3967.953900357922
+    },
+    {
+      "case_id": "factorial_003",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47983752363105087,
+        "company_130": 0.46740058367296594,
+        "company_132": 0.46740058367296594
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.46740058367296594,
+      "nominal_beneficial_delivery_af": 4451.520999781804,
+      "normalized_recourse_effort": 0.6249993039569111,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.1444199999968987,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3967.954426719799
+    },
+    {
+      "case_id": "factorial_004",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47983752363105087,
+        "company_130": 0.46740058367296605,
+        "company_132": 0.46740058367296605
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 8.765255188336596e-11,
+      "minimum_guarantee": 0.46740058367296605,
+      "nominal_beneficial_delivery_af": 5166.963772875569,
+      "normalized_recourse_effort": 1.2499987979372371,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14287479998893104,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4134.390713953162
+    },
+    {
+      "case_id": "factorial_005",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47983752363105087,
+        "company_130": 0.46740058367296605,
+        "company_132": 0.46740058367296605
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.46740058367296605,
+      "nominal_beneficial_delivery_af": 5971.42517986004,
+      "normalized_recourse_effort": 2.4987427393552197,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.13985629999660887,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4135.465360949574
+    },
+    {
+      "case_id": "factorial_006",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5997969045388135,
+        "company_130": 0.5353701432305725,
+        "company_132": 0.5353701432305725
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.1368683772161603e-13,
+      "minimum_guarantee": 0.5353701432305725,
+      "nominal_beneficial_delivery_af": 4639.510054795717,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1354834999947343,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4639.509590844714
+    },
+    {
+      "case_id": "factorial_007",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5997969045388135,
+        "company_130": 0.5841531963474222,
+        "company_132": 0.5841531963474222
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.205524651799351e-10,
+      "minimum_guarantee": 0.5841531963474222,
+      "nominal_beneficial_delivery_af": 4710.349102872677,
+      "normalized_recourse_effort": 0.3124992576182497,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1430341000086628,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4710.349102872706
+    },
+    {
+      "case_id": "factorial_008",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5997969045388135,
+        "company_130": 0.5842507295912073,
+        "company_132": 0.5842507295912073
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.5842507295912073,
+      "nominal_beneficial_delivery_af": 5072.939759991992,
+      "normalized_recourse_effort": 0.6249992029745424,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13964929999201559,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4710.490733248587
+    },
+    {
+      "case_id": "factorial_009",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5997969045388135,
+        "company_130": 0.5842507295912073,
+        "company_132": 0.5842507295912073
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5842507295912073,
+      "nominal_beneficial_delivery_af": 5880.7854623730545,
+      "normalized_recourse_effort": 1.2499980852733592,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14048809999076184,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4849.420584620063
+    },
+    {
+      "case_id": "factorial_010",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5997969045388135,
+        "company_130": 0.5842507295912073,
+        "company_132": 0.5842507295912073
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5842507295912073,
+      "nominal_beneficial_delivery_af": 6454.9599087364795,
+      "normalized_recourse_effort": 1.568958327919065,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14247070001147222,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4850.082998704605
+    },
+    {
+      "case_id": "factorial_011",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7197562854465762,
+        "company_130": 0.6424441718766868,
+        "company_132": 0.6424441718766868
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.6424441718766868,
+      "nominal_beneficial_delivery_af": 5230.207270761617,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.15541239999583922,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5230.206747740894
+    },
+    {
+      "case_id": "factorial_012",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7197562854465762,
+        "company_130": 0.7009061714990507,
+        "company_132": 0.7009061714990507
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.7009061714990507,
+      "nominal_beneficial_delivery_af": 5315.147563658726,
+      "normalized_recourse_effort": 0.3124991639030574,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13981419999618083,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5315.147563658549
+    },
+    {
+      "case_id": "factorial_013",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7197562854465762,
+        "company_130": 0.7011008755094489,
+        "company_132": 0.7011008755094489
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.7011008755094489,
+      "nominal_beneficial_delivery_af": 5556.761778472897,
+      "normalized_recourse_effort": 0.6249991233131251,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14069190000009257,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5315.430298048305
+    },
+    {
+      "case_id": "factorial_014",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7197562854465762,
+        "company_130": 0.7011008755094488,
+        "company_132": 0.7011008755094488
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.7011008755094488,
+      "nominal_beneficial_delivery_af": 6328.438117496222,
+      "normalized_recourse_effort": 1.0073313692408898,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14060289999179076,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5405.961876739641
+    },
+    {
+      "case_id": "factorial_015",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7197562854465762,
+        "company_130": 0.7011008755094489,
+        "company_132": 0.7011008755094489
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.7011008755094489,
+      "nominal_beneficial_delivery_af": 6483.81888,
+      "normalized_recourse_effort": 1.350127745100653,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1356078999961028,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5483.4249599819605
+    },
+    {
+      "case_id": "factorial_016",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.4775441444948285,
+        "company_130": 0.4096983614770948,
+        "company_132": 0.4096983614770948
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.4096983614770948,
+      "nominal_beneficial_delivery_af": 3779.97684563274,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12743130000308156,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3779.9764676350546
+    },
+    {
+      "case_id": "factorial_017",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.4775441444948285,
+        "company_130": 0.4474763108193709,
+        "company_132": 0.4474763108193709
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.4474763108193709,
+      "nominal_beneficial_delivery_af": 3833.088907580536,
+      "normalized_recourse_effort": 0.31249936024959557,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13809069999842905,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3833.0889075804425
+    },
+    {
+      "case_id": "factorial_018",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.4775441444948285,
+        "company_130": 0.4474781471328847,
+        "company_132": 0.4474781471328847
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.7284841053187847e-12,
+      "minimum_guarantee": 0.4474781471328847,
+      "nominal_beneficial_delivery_af": 4290.279652157887,
+      "normalized_recourse_effort": 0.6249992916381448,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14290210000763182,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3833.091489255673
+    },
+    {
+      "case_id": "factorial_019",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.4775441444948285,
+        "company_130": 0.44747814713288475,
+        "company_132": 0.44747814713288475
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.637978807091713e-12,
+      "minimum_guarantee": 0.44747814713288475,
+      "nominal_beneficial_delivery_af": 4998.738747797628,
+      "normalized_recourse_effort": 1.2499988252217162,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14117429999168962,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4020.987998041112
+    },
+    {
+      "case_id": "factorial_020",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.4775441444948285,
+        "company_130": 0.44747814713288475,
+        "company_132": 0.44747814713288475
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.44747814713288475,
+      "nominal_beneficial_delivery_af": 5828.8656356761585,
+      "normalized_recourse_effort": 2.499926531838901,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.13965749999624677,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4022.962701825039
+    },
+    {
+      "case_id": "factorial_021",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5969301806185356,
+        "company_130": 0.5121229518463684,
+        "company_132": 0.5121229518463684
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.5121229518463684,
+      "nominal_beneficial_delivery_af": 4534.400496493601,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12659960000019055,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4534.400043053551
+    },
+    {
+      "case_id": "factorial_022",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5969301806185356,
+        "company_130": 0.5591595621689827,
+        "company_132": 0.5591595621689827
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.5591595621689827,
+      "nominal_beneficial_delivery_af": 4600.529319748066,
+      "normalized_recourse_effort": 0.3124992346649899,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13731329998699948,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4600.529319747961
+    },
+    {
+      "case_id": "factorial_023",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5969301806185356,
+        "company_130": 0.5593476839161058,
+        "company_132": 0.5593476839161058
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.5593476839161058,
+      "nominal_beneficial_delivery_af": 4943.118789135027,
+      "normalized_recourse_effort": 0.6249991801077815,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13810100000409875,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4600.793800323421
+    },
+    {
+      "case_id": "factorial_024",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5969301806185356,
+        "company_130": 0.559347683916106,
+        "company_132": 0.559347683916106
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.9326762412674725e-12,
+      "minimum_guarantee": 0.559347683916106,
+      "nominal_beneficial_delivery_af": 5714.41272926098,
+      "normalized_recourse_effort": 1.249998083135801,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.13938309998775367,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4736.661907937066
+    },
+    {
+      "case_id": "factorial_025",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5969301806185356,
+        "company_130": 0.559347683916106,
+        "company_132": 0.559347683916106
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.559347683916106,
+      "nominal_beneficial_delivery_af": 6348.717518525828,
+      "normalized_recourse_effort": 1.7509696584952767,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.13843709998764098,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4744.316709159227
+    },
+    {
+      "case_id": "factorial_026",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7163162167422428,
+        "company_130": 0.6145475422156421,
+        "company_132": 0.6145475422156421
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.6145475422156421,
+      "nominal_beneficial_delivery_af": 5111.434090151596,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12928239999746438,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5111.433579008186
+    },
+    {
+      "case_id": "factorial_027",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7163162167422428,
+        "company_130": 0.6708428135185946,
+        "company_132": 0.6708428135185946
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.6708428135185946,
+      "nominal_beneficial_delivery_af": 5190.860434487688,
+      "normalized_recourse_effort": 0.3124991380625327,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1376497000019299,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5190.860434487654
+    },
+    {
+      "case_id": "factorial_028",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7163162167422428,
+        "company_130": 0.6712172206993271,
+        "company_132": 0.6712172206993271
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.6712172206993271,
+      "nominal_beneficial_delivery_af": 5418.848628684157,
+      "normalized_recourse_effort": 0.6249990975599204,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13995539999450557,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5191.386813963343
+    },
+    {
+      "case_id": "factorial_029",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7163162167422428,
+        "company_130": 0.6712172206993271,
+        "company_132": 0.6712172206993271
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.6712172206993271,
+      "nominal_beneficial_delivery_af": 6199.578882470442,
+      "normalized_recourse_effort": 1.1939684637374055,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1394942000042647,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5271.758990769389
+    },
+    {
+      "case_id": "factorial_030",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7163162167422428,
+        "company_130": 0.671217220699327,
+        "company_132": 0.671217220699327
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.671217220699327,
+      "nominal_beneficial_delivery_af": 6483.81888,
+      "normalized_recourse_effort": 1.4380895736195,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14318790000106674,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5355.49891911498
+    },
+    {
+      "case_id": "factorial_031",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47296165685031805,
+        "company_130": 0.37379388935695795,
+        "company_132": 0.37379388935695795
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.37379388935695795,
+      "nominal_beneficial_delivery_af": 3529.6174647940024,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.13186259999929462,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3529.6171118322563
+    },
+    {
+      "case_id": "factorial_032",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47296165685031805,
+        "company_130": 0.40894069666546096,
+        "company_132": 0.40894069666546096
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.40894069666546096,
+      "nominal_beneficial_delivery_af": 3575.500965050279,
+      "normalized_recourse_effort": 0.3124993329316852,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13866100000450388,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3575.500965050226
+    },
+    {
+      "case_id": "factorial_033",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47296165685031805,
+        "company_130": 0.4089482493825554,
+        "company_132": 0.4089482493825554
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.4089482493825554,
+      "nominal_beneficial_delivery_af": 3982.9104287685086,
+      "normalized_recourse_effort": 0.6249992644928009,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13924620000761934,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3575.51082498117
+    },
+    {
+      "case_id": "factorial_034",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47296165685031805,
+        "company_130": 0.40894824938255536,
+        "company_132": 0.40894824938255536
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.40894824938255536,
+      "nominal_beneficial_delivery_af": 4624.774961411687,
+      "normalized_recourse_effort": 1.249999151679923,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14161089999834076,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3750.793656925277
+    },
+    {
+      "case_id": "factorial_035",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.47296165685031805,
+        "company_130": 0.40894824938255536,
+        "company_132": 0.40894824938255536
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.40894824938255536,
+      "nominal_beneficial_delivery_af": 5499.783387812948,
+      "normalized_recourse_effort": 2.499973457060667,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14148259999637958,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3776.5612425243057
+    },
+    {
+      "case_id": "factorial_036",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5912020710628975,
+        "company_130": 0.46724236169619743,
+        "company_132": 0.46724236169619743
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.46724236169619743,
+      "nominal_beneficial_delivery_af": 4282.2483440027845,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12565850000828505,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4282.247915777949
+    },
+    {
+      "case_id": "factorial_037",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5912020710628975,
+        "company_130": 0.5108364346603423,
+        "company_132": 0.5108364346603423
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 7.435119186993688e-11,
+      "minimum_guarantee": 0.5108364346603423,
+      "nominal_beneficial_delivery_af": 4339.159591123667,
+      "normalized_recourse_effort": 0.31249919312840807,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13718279999739025,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4339.159591123681
+    },
+    {
+      "case_id": "factorial_038",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5912020710628975,
+        "company_130": 0.5111853117281941,
+        "company_132": 0.5111853117281941
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.8421709430404007e-13,
+      "minimum_guarantee": 0.5111853117281941,
+      "nominal_beneficial_delivery_af": 4644.025288500723,
+      "normalized_recourse_effort": 0.6249991387486573,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14064280000457074,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4339.615043612387
+    },
+    {
+      "case_id": "factorial_039",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5912020710628975,
+        "company_130": 0.5111853117281941,
+        "company_132": 0.5111853117281941
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5111853117281941,
+      "nominal_beneficial_delivery_af": 5342.611013183996,
+      "normalized_recourse_effort": 1.2499987294224777,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.13911479999660514,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4468.629636913982
+    },
+    {
+      "case_id": "factorial_040",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.5912020710628975,
+        "company_130": 0.5111853117281941,
+        "company_132": 0.5111853117281941
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.5111853117281941,
+      "nominal_beneficial_delivery_af": 6128.4842096234715,
+      "normalized_recourse_effort": 2.212302385431613,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.13700299999618437,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4530.696298171312
+    },
+    {
+      "case_id": "factorial_041",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7094424852754769,
+        "company_130": 0.5606908340354367,
+        "company_132": 0.5606908340354367
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.206412995699793e-12,
+      "minimum_guarantee": 0.5606908340354367,
+      "nominal_beneficial_delivery_af": 4882.414988172635,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12557219999143854,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 4882.414499931137
+    },
+    {
+      "case_id": "factorial_042",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7094424852754769,
+        "company_130": 0.6127321726552234,
+        "company_132": 0.6127321726552234
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.9554136088117957e-11,
+      "minimum_guarantee": 0.6127321726552234,
+      "nominal_beneficial_delivery_af": 4950.353982657745,
+      "normalized_recourse_effort": 0.31249908123684017,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1396565000031842,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 4950.353982657732
+    },
+    {
+      "case_id": "factorial_043",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7094424852754769,
+        "company_130": 0.6134223740738332,
+        "company_132": 0.6134223740738332
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.6134223740738332,
+      "nominal_beneficial_delivery_af": 5152.675913693471,
+      "normalized_recourse_effort": 0.624999040916238,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14014390000374988,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 4951.25502770416
+    },
+    {
+      "case_id": "factorial_044",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7094424852754769,
+        "company_130": 0.613422374073833,
+        "company_132": 0.613422374073833
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.613422374073833,
+      "nominal_beneficial_delivery_af": 5901.056816056051,
+      "normalized_recourse_effort": 1.2499979241564985,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1394342000130564,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5027.075383941455
+    },
+    {
+      "case_id": "factorial_045",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 1.5,
+      "guarantees": {
+        "company_088": 0.7094424852754769,
+        "company_130": 0.6134223740738332,
+        "company_132": 0.6134223740738332
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.6134223740738332,
+      "nominal_beneficial_delivery_af": 6483.81888,
+      "normalized_recourse_effort": 1.4997623061635905,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1356048000016017,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5108.781678439184
+    },
+    {
+      "case_id": "factorial_046",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35987814272328816,
+        "company_130": 0.32122208593834356,
+        "company_132": 0.32122208593834356
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.1368683772161603e-13,
+      "minimum_guarantee": 0.32122208593834356,
+      "nominal_beneficial_delivery_af": 3929.9496412906515,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.127573100005975,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3929.9492482956907
+    },
+    {
+      "case_id": "factorial_047",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35987814272328816,
+        "company_130": 0.3505501658968452,
+        "company_132": 0.3505501658968452
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.198703441536054e-10,
+      "minimum_guarantee": 0.3505501658968452,
+      "nominal_beneficial_delivery_af": 3986.733658281646,
+      "normalized_recourse_effort": 0.31249936974439974,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14096859999699518,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3986.733658281596
+    },
+    {
+      "case_id": "factorial_048",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35987814272328816,
+        "company_130": 0.3505504377547245,
+        "company_132": 0.3505504377547245
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.092726157978177e-11,
+      "minimum_guarantee": 0.3505504377547245,
+      "nominal_beneficial_delivery_af": 4470.300757705499,
+      "normalized_recourse_effort": 0.6249993010469455,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14222280000103638,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3986.7341846435224
+    },
+    {
+      "case_id": "factorial_049",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35987814272328816,
+        "company_130": 0.3505504377547245,
+        "company_132": 0.3505504377547245
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 5.007905201637186e-11,
+      "minimum_guarantee": 0.3505504377547245,
+      "nominal_beneficial_delivery_af": 5215.176207011269,
+      "normalized_recourse_effort": 1.2499991894876283,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14175880000402685,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4182.603143267618
+    },
+    {
+      "case_id": "factorial_050",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35987814272328816,
+        "company_130": 0.3505504377547245,
+        "company_132": 0.3505504377547245
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.3505504377547245,
+      "nominal_beneficial_delivery_af": 6275.10433409039,
+      "normalized_recourse_effort": 2.4997797997786018,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14227419999951962,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4209.958622127897
+    },
+    {
+      "case_id": "factorial_051",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.44984767840411016,
+        "company_130": 0.40152760742292937,
+        "company_132": 0.40152760742292937
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 7.685943330723521e-12,
+      "minimum_guarantee": 0.40152760742292937,
+      "nominal_beneficial_delivery_af": 4901.911026106768,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1275683999992907,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4901.910535915666
+    },
+    {
+      "case_id": "factorial_052",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.44984767840411016,
+        "company_130": 0.4381148972605667,
+        "company_132": 0.4381148972605667
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.141860022675246e-10,
+      "minimum_guarantee": 0.4381148972605667,
+      "nominal_beneficial_delivery_af": 4972.750074921945,
+      "normalized_recourse_effort": 0.31249921695848437,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1393030000035651,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4972.750074921977
+    },
+    {
+      "case_id": "factorial_053",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.44984767840411016,
+        "company_130": 0.4381880471934055,
+        "company_132": 0.4381880471934055
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.4381880471934055,
+      "nominal_beneficial_delivery_af": 5335.340732041192,
+      "normalized_recourse_effort": 0.6249991623146777,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14241760000004433,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4972.891705297857
+    },
+    {
+      "case_id": "factorial_054",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.44984767840411016,
+        "company_130": 0.4381880471934055,
+        "company_132": 0.4381880471934055
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.4381880471934055,
+      "nominal_beneficial_delivery_af": 6144.831494957737,
+      "normalized_recourse_effort": 1.2499990432398473,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14135540000279434,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5112.258338248556
+    },
+    {
+      "case_id": "factorial_055",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.44984767840411016,
+        "company_130": 0.43818804719340554,
+        "company_132": 0.43818804719340554
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.43818804719340554,
+      "nominal_beneficial_delivery_af": 7277.038722279085,
+      "normalized_recourse_effort": 2.4999977077755955,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14147529999900144,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5233.337478852158
+    },
+    {
+      "case_id": "factorial_056",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5398172140849322,
+        "company_130": 0.4818331289075151,
+        "company_132": 0.4818331289075151
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.4818331289075151,
+      "nominal_beneficial_delivery_af": 5726.830505710421,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1249017000081949,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5726.829933027372
+    },
+    {
+      "case_id": "factorial_057",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5398172140849322,
+        "company_130": 0.525679628624288,
+        "company_132": 0.525679628624288
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.525679628624288,
+      "nominal_beneficial_delivery_af": 5811.724585464272,
+      "normalized_recourse_effort": 0.31249908695696826,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1399914999929024,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5811.72458546411
+    },
+    {
+      "case_id": "factorial_058",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5398172140849322,
+        "company_130": 0.5258256566320867,
+        "company_132": 0.5258256566320867
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.143885234952904e-11,
+      "minimum_guarantee": 0.5258256566320867,
+      "nominal_beneficial_delivery_af": 6053.338800278413,
+      "normalized_recourse_effort": 0.6249990463670275,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13687959998787846,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5812.007319853865
+    },
+    {
+      "case_id": "factorial_059",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5398172140849322,
+        "company_130": 0.5258256566320866,
+        "company_132": 0.5258256566320866
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5258256566320866,
+      "nominal_beneficial_delivery_af": 6927.287182563394,
+      "normalized_recourse_effort": 1.2499983695983075,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.13785689999349415,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5894.713947608645
+    },
+    {
+      "case_id": "factorial_060",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5398172140849322,
+        "company_130": 0.5258256566320868,
+        "company_132": 0.5258256566320868
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.5143086784519255e-10,
+      "minimum_guarantee": 0.5258256566320868,
+      "nominal_beneficial_delivery_af": 7940.754670274269,
+      "normalized_recourse_effort": 2.474553667848573,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.13998040001024492,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 6045.047849971565
+    },
+    {
+      "case_id": "factorial_061",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.307273771107821,
+        "company_132": 0.307273771107821
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.307273771107821,
+      "nominal_beneficial_delivery_af": 3802.593645951045,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12967049999861047,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3802.5932656916784
+    },
+    {
+      "case_id": "factorial_062",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.3356072331145282,
+        "company_132": 0.3356072331145282
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3356072331145282,
+      "nominal_beneficial_delivery_af": 3855.705707898807,
+      "normalized_recourse_effort": 0.312499356548525,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1407852999982424,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3855.7057078987464
+    },
+    {
+      "case_id": "factorial_063",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.33560861034966355,
+        "company_132": 0.33560861034966355
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.33560861034966355,
+      "nominal_beneficial_delivery_af": 4312.89645247619,
+      "normalized_recourse_effort": 0.6249992879371115,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.13990120000380557,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3855.708289573977
+    },
+    {
+      "case_id": "factorial_064",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.33560861034966355,
+        "company_132": 0.33560861034966355
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.33560861034966355,
+      "nominal_beneficial_delivery_af": 5022.270974682342,
+      "normalized_recourse_effort": 1.249999175979425,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1407440999901155,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4044.5202225726043
+    },
+    {
+      "case_id": "factorial_065",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.3356086103496636,
+        "company_132": 0.3356086103496636
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.3356086103496636,
+      "nominal_beneficial_delivery_af": 6027.347892668859,
+      "normalized_recourse_effort": 2.4999711948808363,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14618959999643266,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4071.846790168784
+    },
+    {
+      "case_id": "factorial_066",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.3840922138847762,
+        "company_132": 0.3840922138847762
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.3840922138847762,
+      "nominal_beneficial_delivery_af": 4739.08565752826,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12590410000120755,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4739.0851836196925
+    },
+    {
+      "case_id": "factorial_067",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.419369671626737,
+        "company_132": 0.419369671626737
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.419369671626737,
+      "nominal_beneficial_delivery_af": 4805.214481481551,
+      "normalized_recourse_effort": 0.31249920117000796,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14233810000587255,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4805.214481481465
+    },
+    {
+      "case_id": "factorial_068",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.41951076293707945,
+      "nominal_beneficial_delivery_af": 5147.803950868455,
+      "normalized_recourse_effort": 0.6249991466129077,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.15163419999589678,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4805.4789620569245
+    },
+    {
+      "case_id": "factorial_069",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945
+      },
+      "is_base_case": true,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.41951076293707945,
+      "nominal_beneficial_delivery_af": 5919.097890994499,
+      "normalized_recourse_effort": 1.2499990269514052,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14004620000196155,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4941.347049202067
+    },
+    {
+      "case_id": "factorial_070",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.4195107629370794,
+        "company_132": 0.4195107629370794
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.4195107629370794,
+      "nominal_beneficial_delivery_af": 7029.903502215846,
+      "normalized_recourse_effort": 2.499997716712588,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1431330000050366,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5074.402299460211
+    },
+    {
+      "case_id": "factorial_071",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5372371625566821,
+        "company_130": 0.4609106566617315,
+        "company_132": 0.4609106566617315
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.4609106566617315,
+      "nominal_beneficial_delivery_af": 5570.121567003773,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12628869999025483,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5570.121009991619
+    },
+    {
+      "case_id": "factorial_072",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5372371625566821,
+        "company_130": 0.5031321101389461,
+        "company_132": 0.5031321101389461
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.5031321101389461,
+      "nominal_beneficial_delivery_af": 5649.267152123853,
+      "normalized_recourse_effort": 0.31249906304843195,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13959050000994466,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5649.267152123867
+    },
+    {
+      "case_id": "factorial_073",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5372371625566821,
+        "company_130": 0.5034129155244953,
+        "company_132": 0.5034129155244953
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.5034129155244953,
+      "nominal_beneficial_delivery_af": 5877.2553463203785,
+      "normalized_recourse_effort": 0.6249990225457541,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14438470000459347,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5649.793531599556
+    },
+    {
+      "case_id": "factorial_074",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5372371625566821,
+        "company_130": 0.5034129155244953,
+        "company_132": 0.5034129155244953
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5034129155244953,
+      "nominal_beneficial_delivery_af": 6707.916578246144,
+      "normalized_recourse_effort": 1.2499988955980186,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1405194999970263,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5730.165657571843
+    },
+    {
+      "case_id": "factorial_075",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5372371625566821,
+        "company_130": 0.5034129155244954,
+        "company_132": 0.5034129155244954
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.5034129155244954,
+      "nominal_beneficial_delivery_af": 7759.084371425142,
+      "normalized_recourse_effort": 2.499997468493712,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14199080000980757,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5892.189349587101
+    },
+    {
+      "case_id": "factorial_076",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.28034541701771837,
+        "company_132": 0.28034541701771837
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.28034541701771837,
+      "nominal_beneficial_delivery_af": 3559.834255409089,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12788780000119004,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3559.8338994256637
+    },
+    {
+      "case_id": "factorial_077",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.30670552249909583,
+        "company_132": 0.30670552249909583
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.30670552249909583,
+      "nominal_beneficial_delivery_af": 3605.717755665318,
+      "normalized_recourse_effort": 0.3124993273999043,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1423670999938622,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3605.717755665313
+    },
+    {
+      "case_id": "factorial_078",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.3067111870369165,
+        "company_132": 0.3067111870369165
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3067111870369165,
+      "nominal_beneficial_delivery_af": 4013.127219383608,
+      "normalized_recourse_effort": 0.6249992589610017,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14245670000673272,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3605.7276155962563
+    },
+    {
+      "case_id": "factorial_079",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.3067111870369165,
+        "company_132": 0.3067111870369165
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.3067111870369165,
+      "nominal_beneficial_delivery_af": 4654.991752026771,
+      "normalized_recourse_effort": 1.249999146148139,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1426567000016803,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3781.010444518683
+    },
+    {
+      "case_id": "factorial_080",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.3067111870369165,
+        "company_132": 0.3067111870369165
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.3067111870369165,
+      "nominal_beneficial_delivery_af": 5556.344194861316,
+      "normalized_recourse_effort": 2.4999987069545924,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14353139999730047,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3808.3819552090686
+    },
+    {
+      "case_id": "factorial_081",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4434015532971731,
+        "company_130": 0.350431771272148,
+        "company_132": 0.350431771272148
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.350431771272148,
+      "nominal_beneficial_delivery_af": 4428.449380187314,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1326755000045523,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4428.448937342375
+    },
+    {
+      "case_id": "factorial_082",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4434015532971731,
+        "company_130": 0.3831273259952567,
+        "company_132": 0.3831273259952567
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3831273259952567,
+      "nominal_beneficial_delivery_af": 4485.360627932609,
+      "normalized_recourse_effort": 0.3124991663633782,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14360320000560023,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4485.360627932591
+    },
+    {
+      "case_id": "factorial_083",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4434015532971731,
+        "company_130": 0.3833889837961456,
+        "company_132": 0.3833889837961456
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3833889837961456,
+      "nominal_beneficial_delivery_af": 4790.2263253096135,
+      "normalized_recourse_effort": 0.6249991119836177,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14426079999248032,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4485.816080421274
+    },
+    {
+      "case_id": "factorial_084",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4434015532971731,
+        "company_130": 0.38338898379614567,
+        "company_132": 0.38338898379614567
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.38338898379614567,
+      "nominal_beneficial_delivery_af": 5488.812049992884,
+      "normalized_recourse_effort": 1.2499989910657516,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14710159999958705,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4614.830659102766
+    },
+    {
+      "case_id": "factorial_085",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.4434015532971731,
+        "company_130": 0.3833889837961456,
+        "company_132": 0.3833889837961456
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.3833889837961456,
+      "nominal_beneficial_delivery_af": 6484.9807418342225,
+      "normalized_recourse_effort": 2.499997746750041,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14376750000519678,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4737.018409318321
+    },
+    {
+      "case_id": "factorial_086",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5320818639566077,
+        "company_130": 0.42051812552657736,
+        "company_132": 0.42051812552657736
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.42051812552657736,
+      "nominal_beneficial_delivery_af": 5254.401337158983,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12524200000916608,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5254.400811718854
+    },
+    {
+      "case_id": "factorial_087",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5320818639566077,
+        "company_130": 0.45954912949141735,
+        "company_132": 0.45954912949141735
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.45954912949141735,
+      "nominal_beneficial_delivery_af": 5322.340332393373,
+      "normalized_recourse_effort": 0.3124990131371592,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.13931079999019857,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5322.340332393312
+    },
+    {
+      "case_id": "factorial_088",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5320818639566077,
+        "company_130": 0.4600667805553748,
+        "company_132": 0.4600667805553748
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.410605131648481e-13,
+      "minimum_guarantee": 0.4600667805553748,
+      "nominal_beneficial_delivery_af": 5524.662263429031,
+      "normalized_recourse_effort": 0.6249989728165627,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.1421386000001803,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5323.241377439735
+    },
+    {
+      "case_id": "factorial_089",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5320818639566077,
+        "company_130": 0.46006678055537475,
+        "company_132": 0.46006678055537475
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.46006678055537475,
+      "nominal_beneficial_delivery_af": 6273.04316579163,
+      "normalized_recourse_effort": 1.249998845061714,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.13861020001058932,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5399.0616964783985
+    },
+    {
+      "case_id": "factorial_090",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.0,
+      "guarantees": {
+        "company_088": 0.5320818639566077,
+        "company_130": 0.4600667805553748,
+        "company_132": 0.4600667805553748
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.4600667805553748,
+      "nominal_beneficial_delivery_af": 7314.574799207484,
+      "normalized_recourse_effort": 2.4999974854073033,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14406829999643378,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5566.612383732176
+    },
+    {
+      "case_id": "factorial_091",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28790251417863055,
+        "company_130": 0.25697766875067485,
+        "company_132": 0.25697766875067485
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.1368683772161603e-13,
+      "minimum_guarantee": 0.25697766875067485,
+      "nominal_beneficial_delivery_af": 3930.1953385059587,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1281775999959791,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3930.1949454864257
+    },
+    {
+      "case_id": "factorial_092",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28790251417863055,
+        "company_130": 0.28044013271747614,
+        "company_132": 0.28044013271747614
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.899014361901209e-10,
+      "minimum_guarantee": 0.28044013271747614,
+      "nominal_beneficial_delivery_af": 3986.945021104889,
+      "normalized_recourse_effort": 0.3124993697117166,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1413742999866372,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3986.945021104889
+    },
+    {
+      "case_id": "factorial_093",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28790251417863055,
+        "company_130": 0.2804403502037796,
+        "company_132": 0.2804403502037796
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.6830093702301383e-11,
+      "minimum_guarantee": 0.2804403502037796,
+      "nominal_beneficial_delivery_af": 4470.512120210509,
+      "normalized_recourse_effort": 0.624999301014126,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14240789999894332,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3986.9455471485767
+    },
+    {
+      "case_id": "factorial_094",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28790251417863055,
+        "company_130": 0.2804403502037796,
+        "company_132": 0.2804403502037796
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.092726157978177e-11,
+      "minimum_guarantee": 0.2804403502037796,
+      "nominal_beneficial_delivery_af": 5215.4765766037035,
+      "normalized_recourse_effort": 1.2499991894410711,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14200750000600237,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4182.903512830016
+    },
+    {
+      "case_id": "factorial_095",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28790251417863055,
+        "company_130": 0.2804403502037796,
+        "company_132": 0.2804403502037796
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.979483492206782e-11,
+      "minimum_guarantee": 0.2804403502037796,
+      "nominal_beneficial_delivery_af": 6275.726777083235,
+      "normalized_recourse_effort": 2.4999985524610415,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1665810000122292,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4210.581065058499
+    },
+    {
+      "case_id": "factorial_096",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3598781427232881,
+        "company_130": 0.32122208593834345,
+        "company_132": 0.32122208593834345
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.32122208593834345,
+      "nominal_beneficial_delivery_af": 4912.437051613313,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12809689999266993,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4912.43656036961
+    },
+    {
+      "case_id": "factorial_097",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3598781427232881,
+        "company_130": 0.35049191780845335,
+        "company_132": 0.35049191780845335
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2032509150449187e-10,
+      "minimum_guarantee": 0.35049191780845335,
+      "nominal_beneficial_delivery_af": 4983.276100428521,
+      "normalized_recourse_effort": 0.31249921532741737,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14171589999750722,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4983.27610042852
+    },
+    {
+      "case_id": "factorial_098",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3598781427232881,
+        "company_130": 0.35055043775472444,
+        "company_132": 0.35055043775472444
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 8.86757334228605e-12,
+      "minimum_guarantee": 0.35055043775472444,
+      "nominal_beneficial_delivery_af": 5345.866757547629,
+      "normalized_recourse_effort": 0.6249991606836909,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14147970000340138,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4983.417730804402
+    },
+    {
+      "case_id": "factorial_099",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3598781427232881,
+        "company_130": 0.3505504377547245,
+        "company_132": 0.3505504377547245
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.0874146028072573e-10,
+      "minimum_guarantee": 0.3505504377547245,
+      "nominal_beneficial_delivery_af": 6155.357520464122,
+      "normalized_recourse_effort": 1.2499990416089704,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14040799999202136,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5122.784362702338
+    },
+    {
+      "case_id": "factorial_100",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3598781427232881,
+        "company_130": 0.35055043775472444,
+        "company_132": 0.35055043775472444
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.35055043775472444,
+      "nominal_beneficial_delivery_af": 7327.3930300373795,
+      "normalized_recourse_effort": 2.4999983019580196,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1434754000074463,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5262.247212846016
+    },
+    {
+      "case_id": "factorial_101",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4318537712679457,
+        "company_130": 0.38546650312601205,
+        "company_132": 0.38546650312601205
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.9438962241190897e-12,
+      "minimum_guarantee": 0.38546650312601205,
+      "nominal_beneficial_delivery_af": 5892.652168846609,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1322358999896096,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5892.651579581392
+    },
+    {
+      "case_id": "factorial_102",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4318537712679457,
+        "company_130": 0.42054370289943055,
+        "company_132": 0.42054370289943055
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.178683982696384e-10,
+      "minimum_guarantee": 0.42054370289943055,
+      "nominal_beneficial_delivery_af": 5977.546249486117,
+      "normalized_recourse_effort": 0.3124990612625058,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1453429000102915,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5977.546249486042
+    },
+    {
+      "case_id": "factorial_103",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4318537712679457,
+        "company_130": 0.42066052530566944,
+        "company_132": 0.42066052530566944
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.3778844731859863e-10,
+      "minimum_guarantee": 0.42066052530566944,
+      "nominal_beneficial_delivery_af": 6219.160464300347,
+      "normalized_recourse_effort": 0.6249990206725733,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14165710000088438,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5977.828983875915
+    },
+    {
+      "case_id": "factorial_104",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4318537712679457,
+        "company_130": 0.42066052530566944,
+        "company_132": 0.42066052530566944
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.382431946694851e-10,
+      "minimum_guarantee": 0.42066052530566944,
+      "nominal_beneficial_delivery_af": 7093.108846585272,
+      "normalized_recourse_effort": 1.2499988941069395,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1448207000066759,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 6060.535595048357
+    },
+    {
+      "case_id": "factorial_105",
+      "conveyance_loss_multiplier": 0.5,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4318537712679457,
+        "company_130": 0.42066052530566944,
+        "company_132": 0.42066052530566944
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.310952009400353e-11,
+      "minimum_guarantee": 0.42066052530566944,
+      "nominal_beneficial_delivery_af": 8377.058728270458,
+      "normalized_recourse_effort": 2.4999972751405175,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.15190340000845026,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 6311.912806112526
+    },
+    {
+      "case_id": "factorial_106",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.2865264866968971,
+        "company_130": 0.2458190168862568,
+        "company_132": 0.2458190168862568
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.3642420526593924e-12,
+      "minimum_guarantee": 0.2458190168862568,
+      "nominal_beneficial_delivery_af": 3806.279852074008,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12881729999207892,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3806.2794714460215
+    },
+    {
+      "case_id": "factorial_107",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.2865264866968971,
+        "company_130": 0.26848578649162264,
+        "company_132": 0.26848578649162264
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.290789780090563e-11,
+      "minimum_guarantee": 0.26848578649162264,
+      "nominal_beneficial_delivery_af": 3858.827288795257,
+      "normalized_recourse_effort": 0.312499356037767,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14191599999321625,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3858.8272887952558
+    },
+    {
+      "case_id": "factorial_108",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.2865264866968971,
+        "company_130": 0.2684868882797309,
+        "company_132": 0.2684868882797309
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.0800249583553523e-11,
+      "minimum_guarantee": 0.2684868882797309,
+      "nominal_beneficial_delivery_af": 4316.0180059272925,
+      "normalized_recourse_effort": 0.6249992874263112,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14182949998939876,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3858.8298430251475
+    },
+    {
+      "case_id": "factorial_109",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.2865264866968971,
+        "company_130": 0.26848688827973083,
+        "company_132": 0.26848688827973083
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.26848688827973083,
+      "nominal_beneficial_delivery_af": 5027.048423783771,
+      "normalized_recourse_effort": 1.2499991751976631,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14100390000385232,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4049.2976711962874
+    },
+    {
+      "case_id": "factorial_110",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.2865264866968971,
+        "company_130": 0.26848688827973083,
+        "company_132": 0.26848688827973083
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.26848688827973083,
+      "nominal_beneficial_delivery_af": 6032.548620244609,
+      "normalized_recourse_effort": 2.4999985974786325,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1447760000010021,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 4077.0475172244637
+    },
+    {
+      "case_id": "factorial_111",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.30727377110782095,
+        "company_132": 0.30727377110782095
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.30727377110782095,
+      "nominal_beneficial_delivery_af": 4753.242057438805,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.13356080000812653,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4753.241582114599
+    },
+    {
+      "case_id": "factorial_112",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.3354957373013897,
+        "company_132": 0.3354957373013897
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 9.322320693172514e-12,
+      "minimum_guarantee": 0.3354957373013897,
+      "nominal_beneficial_delivery_af": 4819.370881392031,
+      "normalized_recourse_effort": 0.3124991988534976,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1414723000052618,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4819.3708813920075
+    },
+    {
+      "case_id": "factorial_113",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.33560861034966355,
+        "company_132": 0.33560861034966355
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.7284841053187847e-12,
+      "minimum_guarantee": 0.33560861034966355,
+      "nominal_beneficial_delivery_af": 5161.960350779002,
+      "normalized_recourse_effort": 0.6249991442963595,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14145840000128374,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4819.635361967471
+    },
+    {
+      "case_id": "factorial_114",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.33560861034966355,
+        "company_132": 0.33560861034966355
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 5.4569682106375694e-12,
+      "minimum_guarantee": 0.33560861034966355,
+      "nominal_beneficial_delivery_af": 5933.254290905044,
+      "normalized_recourse_effort": 1.2499990246348676,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14087639999343082,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4955.503447696973
+    },
+    {
+      "case_id": "factorial_115",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.35815810837112144,
+        "company_130": 0.33560861034966355,
+        "company_132": 0.33560861034966355
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.33560861034966355,
+      "nominal_beneficial_delivery_af": 7044.673437196216,
+      "normalized_recourse_effort": 2.4999983526085843,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.1421355000056792,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 5089.172232963585
+    },
+    {
+      "case_id": "factorial_116",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4297897300453457,
+        "company_130": 0.3687285253293852,
+        "company_132": 0.3687285253293852
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.3687285253293852,
+      "nominal_beneficial_delivery_af": 5698.194469423778,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1285710999945877,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5698.193899604329
+    },
+    {
+      "case_id": "factorial_117",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4297897300453457,
+        "company_130": 0.4025056881111567,
+        "company_132": 0.4025056881111567
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 3.637978807091713e-12,
+      "minimum_guarantee": 0.4025056881111567,
+      "nominal_beneficial_delivery_af": 5777.340055382609,
+      "normalized_recourse_effort": 0.3124990420904786,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14181709999684244,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5777.340055382487
+    },
+    {
+      "case_id": "factorial_118",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4297897300453457,
+        "company_130": 0.4027303324195963,
+        "company_132": 0.4027303324195963
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.013145371573046e-11,
+      "minimum_guarantee": 0.4027303324195963,
+      "nominal_beneficial_delivery_af": 6005.328249578923,
+      "normalized_recourse_effort": 0.6249990015877792,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14186530000006314,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5777.866434858177
+    },
+    {
+      "case_id": "factorial_119",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4297897300453457,
+        "company_130": 0.4027303324195962,
+        "company_132": 0.4027303324195962
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.4027303324195962,
+      "nominal_beneficial_delivery_af": 6835.989481504776,
+      "normalized_recourse_effort": 1.2499988746400474,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.14433089998783544,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5858.238548023188
+    },
+    {
+      "case_id": "factorial_120",
+      "conveyance_loss_multiplier": 1.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.4297897300453457,
+        "company_130": 0.40273033241959627,
+        "company_132": 0.40273033241959627
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.40273033241959627,
+      "nominal_beneficial_delivery_af": 8055.855256606689,
+      "normalized_recourse_effort": 2.4999981205791597,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14169129999936558,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 6100.353951255879
+    },
+    {
+      "case_id": "factorial_121",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28377699411019086,
+        "company_130": 0.2242763336141747,
+        "company_132": 0.2242763336141747
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.2242763336141747,
+      "nominal_beneficial_delivery_af": 3568.303817542703,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.12651140001253225,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3568.3034607123213
+    },
+    {
+      "case_id": "factorial_122",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28377699411019086,
+        "company_130": 0.24536441799927663,
+        "company_132": 0.24536441799927663
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.24536441799927663,
+      "nominal_beneficial_delivery_af": 3612.5878411402336,
+      "normalized_recourse_effort": 0.3124993261421785,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.1400116999866441,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3612.5878411402114
+    },
+    {
+      "case_id": "factorial_123",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28377699411019086,
+        "company_130": 0.24536894962953323,
+        "company_132": 0.24536894962953323
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.1368683772161603e-13,
+      "minimum_guarantee": 0.24536894962953323,
+      "nominal_beneficial_delivery_af": 4019.9969611460588,
+      "normalized_recourse_effort": 0.6249992577033694,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14085010001144838,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3612.597357358721
+    },
+    {
+      "case_id": "factorial_124",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28377699411019086,
+        "company_130": 0.24536894962953323,
+        "company_132": 0.24536894962953323
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.24536894962953323,
+      "nominal_beneficial_delivery_af": 4666.39290383791,
+      "normalized_recourse_effort": 1.2499991440609155,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.142259300002479,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3792.4115951897065
+    },
+    {
+      "case_id": "factorial_125",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.28377699411019086,
+        "company_130": 0.2453689496295332,
+        "company_132": 0.2453689496295332
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-12,
+      "minimum_guarantee": 0.2453689496295332,
+      "nominal_beneficial_delivery_af": 5568.095831179358,
+      "normalized_recourse_effort": 2.499998689153497,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14430149999679998,
+      "source_limit_scale": 0.8,
+      "worst_scenario_beneficial_delivery_af": 3820.1335903519475
+    },
+    {
+      "case_id": "factorial_126",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.2803454170177184,
+        "company_132": 0.2803454170177184
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.2803454170177184,
+      "nominal_beneficial_delivery_af": 4449.792819261362,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.1268498000135878,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4449.792374282078
+    },
+    {
+      "case_id": "factorial_127",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.306501860796205,
+        "company_132": 0.306501860796205
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.306501860796205,
+      "nominal_beneficial_delivery_af": 4506.704067006795,
+      "normalized_recourse_effort": 0.3124991624559812,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14320219999353867,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4506.704067006637
+    },
+    {
+      "case_id": "factorial_128",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.3067111870369165,
+        "company_132": 0.3067111870369165
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 1.8189894035458565e-12,
+      "minimum_guarantee": 0.3067111870369165,
+      "nominal_beneficial_delivery_af": 4811.5697643836575,
+      "normalized_recourse_effort": 0.6249991080762446,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14066859999729786,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4507.159519495321
+    },
+    {
+      "case_id": "factorial_129",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.30671118703691647,
+        "company_132": 0.30671118703691647
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.30671118703691647,
+      "nominal_beneficial_delivery_af": 5510.155489066943,
+      "normalized_recourse_effort": 1.2499989871584265,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.141994399993564,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4636.174096042481
+    },
+    {
+      "case_id": "factorial_130",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.3547212426377385,
+        "company_130": 0.30671118703691647,
+        "company_132": 0.30671118703691647
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.30671118703691647,
+      "nominal_beneficial_delivery_af": 6506.61768530488,
+      "normalized_recourse_effort": 2.4999984613318644,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14362679999612737,
+      "source_limit_scale": 1.0,
+      "worst_scenario_beneficial_delivery_af": 4758.655350625284
+    },
+    {
+      "case_id": "factorial_131",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.42566549116528624,
+        "company_130": 0.33641450042126203,
+        "company_132": 0.33641450042126203
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.33641450042126203,
+      "nominal_beneficial_delivery_af": 5325.535504334386,
+      "normalized_recourse_effort": 0.0,
+      "recourse_budget_scale": 0.0,
+      "runtime_seconds": 0.13045460000284947,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5325.5349717808385
+    },
+    {
+      "case_id": "factorial_132",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.42566549116528624,
+        "company_130": 0.36763930359313396,
+        "company_132": 0.36763930359313396
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.36763930359313396,
+      "nominal_beneficial_delivery_af": 5393.474499568723,
+      "normalized_recourse_effort": 0.31249900011463716,
+      "recourse_budget_scale": 0.25,
+      "runtime_seconds": 0.14541810000082478,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5393.474499568716
+    },
+    {
+      "case_id": "factorial_133",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.42566549116528624,
+        "company_130": 0.3680534244442999,
+        "company_132": 0.3680534244442999
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3680534244442999,
+      "nominal_beneficial_delivery_af": 5595.796430604432,
+      "normalized_recourse_effort": 0.6249989597939886,
+      "recourse_budget_scale": 0.5,
+      "runtime_seconds": 0.14725340000586584,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5394.375544615138
+    },
+    {
+      "case_id": "factorial_134",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.42566549116528624,
+        "company_130": 0.3680534244442999,
+        "company_132": 0.3680534244442999
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3680534244442999,
+      "nominal_beneficial_delivery_af": 6344.177332967021,
+      "normalized_recourse_effort": 1.2499988320391515,
+      "recourse_budget_scale": 1.0,
+      "runtime_seconds": 0.1461853000073461,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5470.195856540374
+    },
+    {
+      "case_id": "factorial_135",
+      "conveyance_loss_multiplier": 2.0,
+      "demand_duty_af_per_acre": 2.5,
+      "guarantees": {
+        "company_088": 0.42566549116528624,
+        "company_130": 0.3680534244442999,
+        "company_132": 0.3680534244442999
+      },
+      "is_base_case": false,
+      "maximum_lp_residual": 4.547473508864641e-13,
+      "minimum_guarantee": 0.3680534244442999,
+      "nominal_beneficial_delivery_af": 7442.435141148034,
+      "normalized_recourse_effort": 2.4999982344156493,
+      "recourse_budget_scale": 2.0,
+      "runtime_seconds": 0.14487750000262167,
+      "source_limit_scale": 1.2,
+      "worst_scenario_beneficial_delivery_af": 5694.472712886692
+    }
+  ],
+  "source_ablation": [
+    {
+      "change_in_minimum_guarantee": -0.03541854905230324,
+      "change_in_nominal_delivery_af": -202.2619835835967,
+      "disabled_source_class": "surface_diversion",
+      "disabled_source_id": "s_10434",
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.3840922138847762,
+      "nominal_beneficial_delivery_af": 5716.835907410902,
+      "runtime_seconds": 0.13413399999262765,
+      "worst_scenario_beneficial_delivery_af": 4739.08565752826
+    },
+    {
+      "change_in_minimum_guarantee": -0.0008297983509784057,
+      "change_in_nominal_delivery_af": -59.63699302403802,
+      "disabled_source_class": "reservoir_release",
+      "disabled_source_id": "s_15269",
+      "maximum_lp_residual": 9.094947017729282e-13,
+      "minimum_guarantee": 0.41868096458610105,
+      "nominal_beneficial_delivery_af": 5859.460897970461,
+      "runtime_seconds": 0.15464580000843853,
+      "worst_scenario_beneficial_delivery_af": 4881.710062141729
+    },
+    {
+      "change_in_minimum_guarantee": -0.41951076293707945,
+      "change_in_nominal_delivery_af": -3789.2725324844987,
+      "disabled_source_class": "reservoir_release",
+      "disabled_source_id": "s_15286",
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": -0.0,
+      "nominal_beneficial_delivery_af": 2129.82535851,
+      "runtime_seconds": 0.12913600000320002,
+      "worst_scenario_beneficial_delivery_af": 1469.5319746889272
+    },
+    {
+      "change_in_minimum_guarantee": -5.551115123125783e-17,
+      "change_in_nominal_delivery_af": 7.275957614183426e-12,
+      "disabled_source_class": "surface_diversion",
+      "disabled_source_id": "s_15957",
+      "maximum_lp_residual": 2.2737367544323206e-13,
+      "minimum_guarantee": 0.4195107629370794,
+      "nominal_beneficial_delivery_af": 5919.097890994506,
+      "runtime_seconds": 0.13790070000686683,
+      "worst_scenario_beneficial_delivery_af": 4941.347049202074
+    }
+  ]
+}

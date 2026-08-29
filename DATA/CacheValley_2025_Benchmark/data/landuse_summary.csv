@@ -1,0 +1,131 @@
+claimant_id,crop_group,irrigation_method,polygon_count,acres
+company_088,Field Crops,Flood,5,39.689763
+company_088,Garden,Sprinkler,1,1.584266
+company_088,Grain/Seeds,Wheel,4,74.800842
+company_088,Hay/Turf,Flood,59,382.289852
+company_088,Hay/Turf,Sprinkler,58,281.156583
+company_088,Hay/Turf,Wheel,3,44.721565
+company_088,Pasture Land,Dry Crop,3,5.047048
+company_088,Pasture Land,Flood,4,11.295525
+company_088,Pasture Land,Sprinkler,15,22.700238
+company_10390,Fallow/Idle,Flood,1,20.410574
+company_10390,Hay/Turf,Flood,53,408.929722
+company_10390,Hay/Turf,Sub-irrigated,3,6.648204
+company_10390,Pasture Land,Dry Crop,2,3.579139
+company_10390,Pasture Land,Flood,9,72.84798
+company_10390,Pasture Land,Sub-irrigated,11,39.64472
+company_105,Garden,Sprinkler,1,1.78025
+company_105,Grain/Seeds,Flood,11,81.877581
+company_105,Hay/Turf,Dry Crop,4,17.649737
+company_105,Hay/Turf,Flood,63,549.15359
+company_105,Hay/Turf,Sprinkler,2,3.911706
+company_105,Hay/Turf,Sub-irrigated,5,23.66143
+company_105,Pasture Land,Dry Crop,8,17.172357
+company_105,Pasture Land,Flood,24,190.45461
+company_105,Pasture Land,Sprinkler,5,2.310836
+company_105,Pasture Land,Sub-irrigated,4,18.341554
+company_106,Field Crops,Flood,1,8.851137
+company_106,Field Crops,Sprinkler,1,9.89691
+company_106,Grain/Seeds,Flood,11,103.418569
+company_106,Grain/Seeds,Sprinkler,1,20.993723
+company_106,Hay/Turf,Flood,261,2021.334592
+company_106,Hay/Turf,Pivot,8,120.151894
+company_106,Hay/Turf,Sprinkler,10,53.62571
+company_106,Hay/Turf,Sub-irrigated,5,40.345658
+company_106,Hay/Turf,Wheel,2,19.333359
+company_106,Orchard,Flood,1,1.23298
+company_106,Pasture Land,Flood,2,21.33648
+company_106,Pasture Land,Sub-irrigated,4,35.322743
+company_1249,Fallow/Idle,Sprinkler,2,10.235817
+company_1249,Field Crops,Pivot,1,53.772254
+company_1249,Field Crops,Sprinkler,3,20.30123
+company_1249,Grain/Seeds,Pivot,1,14.276468
+company_1249,Grain/Seeds,Sprinkler,1,2.713876
+company_1249,Hay/Turf,Dry Crop,1,0.269781
+company_1249,Hay/Turf,Flood,7,20.943174
+company_1249,Hay/Turf,Sprinkler,118,449.053807
+company_1249,Hay/Turf,Wheel,15,156.069635
+company_1249,Orchard,Flood,1,0.56942
+company_1249,Orchard,Sprinkler,6,7.142451
+company_1249,Pasture Land,Dry Crop,9,37.412704
+company_1249,Pasture Land,Flood,3,13.242465
+company_1249,Pasture Land,Sprinkler,57,96.10132
+company_1249,Pasture Land,Wheel,2,3.289404
+company_1249,Small Fruit,Drip,4,4.517666
+company_1249,Small Fruit,Flood,1,2.487194
+company_1249,Small Fruit,Sprinkler,2,3.138929
+company_130,Field Crops,Sprinkler,1,1.803598
+company_130,Garden,Sprinkler,2,2.469858
+company_130,Grain/Seeds,Sprinkler,1,4.268755
+company_130,Hay/Turf,Dry Crop,4,11.759042
+company_130,Hay/Turf,Flood,4,7.584982
+company_130,Hay/Turf,Pivot,2,35.800053
+company_130,Hay/Turf,Sprinkler,161,802.461555
+company_130,Hay/Turf,Wheel,31,334.511828
+company_130,Orchard,Sprinkler,3,3.385448
+company_130,Pasture Land,Dry Crop,2,1.860384
+company_130,Pasture Land,Flood,2,4.517426
+company_130,Pasture Land,Sprinkler,22,34.409982
+company_130,Pasture Land,Sub-irrigated,1,3.313476
+company_132,Fallow/Idle,Sprinkler,2,11.203461
+company_132,Fallow/Idle,Wheel,1,12.846808
+company_132,Garden,Sprinkler,2,12.657843
+company_132,Garden,Wheel,2,10.765642
+company_132,Grain/Seeds,Flood,1,1.004516
+company_132,Grain/Seeds,Pivot,6,164.504129
+company_132,Grain/Seeds,Sprinkler,7,58.392495
+company_132,Grain/Seeds,Wheel,8,90.901771
+company_132,Hay/Turf,Dry Crop,8,40.606409
+company_132,Hay/Turf,Flood,9,51.395407
+company_132,Hay/Turf,Pivot,16,490.039184
+company_132,Hay/Turf,Sprinkler,106,862.189477
+company_132,Hay/Turf,Wheel,30,418.166739
+company_132,Orchard,Sprinkler,1,4.271168
+company_132,Pasture Land,Dry Crop,1,2.825494
+company_132,Pasture Land,Sprinkler,3,17.364701
+company_132,Small Fruit,Flood,1,3.050312
+company_132,Small Fruit,Sprinkler,10,45.076941
+company_136,Garden,Flood,1,4.059119
+company_136,Grain/Seeds,Sprinkler,1,0.680082
+company_136,Hay/Turf,Flood,3,15.020934
+company_136,Hay/Turf,Sprinkler,2,6.413013
+company_136,Pasture Land,Dry Crop,1,3.401551
+company_136,Pasture Land,Flood,4,10.664379
+company_136,Pasture Land,Sprinkler,1,1.656613
+company_164,Fallow/Idle,Flood,1,7.673587
+company_164,Field Crops,Flood,17,175.132587
+company_164,Grain/Seeds,Flood,25,271.609066
+company_164,Grain/Seeds,Sprinkler,3,47.554791
+company_164,Grain/Seeds,Wheel,2,26.646957
+company_164,Hay/Turf,Dry Crop,4,11.459822
+company_164,Hay/Turf,Flood,196,1333.248086
+company_164,Hay/Turf,Pivot,1,45.296388
+company_164,Hay/Turf,Sprinkler,35,271.275453
+company_164,Hay/Turf,Sub-irrigated,1,1.825121
+company_164,Hay/Turf,Wheel,9,99.013081
+company_164,Pasture Land,Dry Crop,2,5.408626
+company_164,Pasture Land,Flood,8,25.365212
+company_164,Pasture Land,Sprinkler,1,1.287977
+company_164,Pasture Land,Sub-irrigated,1,15.580965
+company_164,Small Fruit,Sprinkler,1,0.667819
+company_168,Fallow/Idle,Flood,2,21.65251
+company_168,Field Crops,Flood,26,291.709818
+company_168,Field Crops,Pivot,30,686.526624
+company_168,Field Crops,Sprinkler,22,364.209849
+company_168,Field Crops,Wheel,11,187.676216
+company_168,Grain/Seeds,Dry Crop,7,85.53722
+company_168,Grain/Seeds,Flood,21,235.900557
+company_168,Grain/Seeds,Pivot,17,483.565094
+company_168,Grain/Seeds,Sprinkler,41,534.618945
+company_168,Grain/Seeds,Wheel,32,630.468675
+company_168,Hay/Turf,Dry Crop,14,119.67778
+company_168,Hay/Turf,Flood,199,1827.570407
+company_168,Hay/Turf,Pivot,85,2012.685835
+company_168,Hay/Turf,Sprinkler,252,2037.13336
+company_168,Hay/Turf,Sub-irrigated,6,38.781947
+company_168,Hay/Turf,Wheel,152,2297.199343
+company_168,Pasture Land,Dry Crop,8,81.509029
+company_168,Pasture Land,Flood,2,20.824921
+company_168,Pasture Land,Sprinkler,1,1.301142
+company_168,Pasture Land,Sub-irrigated,13,72.815618
+company_168,Small Fruit,Flood,2,14.93572

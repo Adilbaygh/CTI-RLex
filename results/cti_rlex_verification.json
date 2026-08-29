@@ -1,0 +1,86 @@
+{
+  "base_guarantees": {
+    "company_088": 0.4476976354639018,
+    "company_130": 0.41951076293707945,
+    "company_132": 0.41951076293707945
+  },
+  "base_residuals": {
+    "max_bound_violation": 1.1368683772161603e-13,
+    "max_equality_residual": 2.2737367544323206e-13,
+    "max_inequality_violation": 3.410605131648481e-13
+  },
+  "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+  "recourse_frontier": [
+    {
+      "budget_scale": 0.0,
+      "first_leximin_level": 0.3840922138847762,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.3840922138847762,
+        "company_132": 0.3840922138847762
+      },
+      "normalized_recourse_effort": 0.0
+    },
+    {
+      "budget_scale": 0.25,
+      "first_leximin_level": 0.419369671626737,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.419369671626737,
+        "company_132": 0.419369671626737
+      },
+      "normalized_recourse_effort": 0.31249920117000796
+    },
+    {
+      "budget_scale": 0.5,
+      "first_leximin_level": 0.41951076293707945,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945
+      },
+      "normalized_recourse_effort": 0.6249991466129077
+    },
+    {
+      "budget_scale": 1.0,
+      "first_leximin_level": 0.41951076293707945,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945
+      },
+      "normalized_recourse_effort": 1.2499990269514052
+    },
+    {
+      "budget_scale": 2.0,
+      "first_leximin_level": 0.4195107629370794,
+      "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.4195107629370794,
+        "company_132": 0.4195107629370794
+      },
+      "normalized_recourse_effort": 2.499997716712588
+    }
+  ],
+  "recourse_frontier_nondecreasing": true,
+  "representation_tests": [
+    {
+      "copies": 2,
+      "guarantee_infinity_norm_error": 0.0,
+      "pass_at_1e-8": true,
+      "terminal_id": "terminal_company_130_1"
+    },
+    {
+      "copies": 4,
+      "guarantee_infinity_norm_error": 1.1102230246251565e-16,
+      "pass_at_1e-8": true,
+      "terminal_id": "terminal_company_130_1"
+    },
+    {
+      "copies": 8,
+      "guarantee_infinity_norm_error": 5.551115123125783e-17,
+      "pass_at_1e-8": true,
+      "terminal_id": "terminal_company_130_1"
+    }
+  ]
+}

@@ -1,13 +1,17 @@
 # CTI-RLex public-repository allowlist
 #
-# Everything at the repository root is private by default. Only the software,
-# reproducibility tests, and benchmark packages explicitly allowed below are
-# eligible for Git/GitHub. This prevents manuscript and working files from
-# being committed accidentally.
+# Everything at the repository root is private by default. Only what a reader or reviewer
+# needs in order to rerun the study and check its numbers is allowed below: the software,
+# the two benchmark packages with their provenance, the experiment scripts named in the
+# Data Availability Statement, the result files those scripts write, and the tests.
+#
+# Deliberately NOT published: the manuscript and its working files (Paper/), the reference
+# PDFs (references/, publisher copyright), the internal planning and audit notes, the model
+# working document, and every local build product.
 
 /*
 
-# Public repository metadata and documentation
+# ---------------------------------------------------------------- repository metadata
 !/.gitignore
 !/.gitattributes
 !/README.md
@@ -16,29 +20,73 @@
 !/CITATION.cff
 !/CHANGELOG.md
 !/CONTRIBUTING.md
+!/requirements-lock.txt
 !/.github/
 !/.github/**
 
-# Installable application and package metadata
+# ---------------------------------------------------------------- application and package
 !/main.py
 !/pyproject.toml
 !/requirements.txt
 !/src/
 !/src/**
 
-# Reproducibility checks retained for reviewers
+# ---------------------------------------------------------------- reproducibility tests
 !/tests/
 !/tests/**
 
-# Public CTI-RLex benchmark packages used by the GUI
+# ---------------------------------------------------------------- benchmark packages
+# Both instances are published in full: the canonical benchmark.json, the normalized CSV
+# layers behind it, the generator, the validation report and the SHA-256 checksums.
 !/DATA/
+/DATA/*
 !/DATA/LittleBearRiver_2025_Benchmark/
 !/DATA/LittleBearRiver_2025_Benchmark/**
+!/DATA/CacheValley_2025_Benchmark/
+!/DATA/CacheValley_2025_Benchmark/**
 !/DATA/benchmarks_dag/
-!/DATA/benchmarks_dag/SCHEMA_DAG.md
-!/DATA/benchmarks_dag/cache_valley_2025.json
+!/DATA/benchmarks_dag/**
 
-# Python bytecode and tool caches inside otherwise public directories
+# ---------------------------------------------------------------- experiment scripts
+# Only the scripts that produce published numbers and figures. The manuscript-authoring
+# tools in this directory operate on the Word files and are working code, not results.
+!/scripts/
+/scripts/*
+!/scripts/run_cti_rlex.py
+!/scripts/run_cti_experiments.py
+!/scripts/run_cti_verification.py
+!/scripts/equal_budget_experiment.py
+!/scripts/restriction_threshold_experiment.py
+!/scripts/create_results_artifacts.py
+!/scripts/update_figure4_two_panel.py
+!/scripts/verify_publication_figures.py
+!/scripts/record_environment.py
+
+# ---------------------------------------------------------------- published results
+# The files the manuscript and the Supplementary Material cite by name, plus the tables
+# and figures built from them.
+!/results/
+/results/*
+!/results/*.json
+!/results/discrimination/
+!/results/discrimination/**
+!/results/tables/
+!/results/tables/**
+!/results/figures/
+!/results/figures/**
+
+# ---------------------------------------------------------------- re-excluded everywhere
+# These rules come last so they win over the allowances above.
+
+# Uzbek-labelled working copies of published figures
+*_uz.*
+
+# Editor backups and generator scratch
+*.bak
+*.orig
+*.rej
+
+# Python bytecode and tool caches
 **/__pycache__/
 *.py[cod]
 *$py.class
@@ -59,7 +107,7 @@ ENV/
 dist/
 build/
 
-# Local IDE, OS, log, and temporary files
+# IDE, OS, log and temporary files
 .vscode/
 .idea/
 *.code-workspace
@@ -69,9 +117,7 @@ Desktop.ini
 *.log
 *.tmp
 *.temp
-*.bak
 ~$*
 
 # GUI result packages are generated locally and must not be committed
 cti_rlex_export_*/
-

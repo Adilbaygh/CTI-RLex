@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+from collections import defaultdict
 from dataclasses import replace
 from time import perf_counter
-from typing import Iterable, Mapping
+from typing import Any, Iterable, Mapping
 
 from .domain import CTIBenchmark
 from .lp import LPData, VariableKey, build_lp, objective_value, run_lp, value
@@ -144,6 +145,168 @@ def solve_robust_proportional(model: CTIBenchmark) -> CTIRLexSolution:
     )
 
 
+def solve_utilitarian_fair(
+    model: CTIBenchmark, *, preservation_tolerance: float = 1e-7
+) -> CTIRLexSolution:
+    """Utilitarian allocation with a fairness-optimistic tie-break.
+
+    Maximizing delivery alone leaves many optima that move the same total volume but
+    distribute it very differently, so the guarantee carried by one solver vertex is an
+    artefact of the pivot rule. This first fixes the delivery optimum, then selects the
+    plan with the highest common service floor among the plans that attain it. The
+    comparison against CTI-RLex is then a property of the objective, not of the solver.
+    """
+
+    nominal_objective = nominal_delivery_objective(model)
+    delivery_problem = build_lp(model, nominal_objective, maximize=True)
+    delivery_result = run_lp(delivery_problem)
+    optimum = objective_value(delivery_problem, delivery_result)
+    preservation = _preservation_row(nominal_objective, optimum, preservation_tolerance)
+
+    theta_problem = build_lp(
+        model,
+        {("theta",): 1.0},
+        maximize=True,
+        theta_active=model.claimants,
+        extra_ub=(preservation,),
+    )
+    theta_result = run_lp(theta_problem)
+    theta_star = value(theta_problem, theta_result, ("theta",))
+
+    fixed = {claimant: theta_star for claimant in model.claimants}
+    problem, result, nominal_value, contingency_value = _secondary_stages(
+        model, fixed_rho=fixed, preservation_tolerance=preservation_tolerance
+    )
+    guarantees = realized_guarantees(model, problem, result)
+    return _extract_solution(
+        model,
+        problem,
+        result,
+        guarantees,
+        (LeximinLevel(theta_star, tuple(model.claimants)),),
+        nominal_value,
+        contingency_value,
+    )
+
+
+def utilitarian_fairness_range(
+    model: CTIBenchmark, *, preservation_tolerance: float = 1e-7
+) -> dict[str, Any]:
+    """How far the minimum service can move without changing total delivery.
+
+    Returns the delivery optimum, the highest common floor attainable on the
+    delivery-optimal face, and, for every claimant, the lowest seasonal service ratio a
+    delivery-maximizing plan can impose on it. A wide interval means a reported
+    utilitarian guarantee is a solver artefact rather than a property of the objective.
+    """
+
+    nominal_objective = nominal_delivery_objective(model)
+    delivery_problem = build_lp(model, nominal_objective, maximize=True)
+    delivery_result = run_lp(delivery_problem)
+    optimum = objective_value(delivery_problem, delivery_result)
+    preservation = _preservation_row(nominal_objective, optimum, preservation_tolerance)
+
+    theta_problem = build_lp(
+        model,
+        {("theta",): 1.0},
+        maximize=True,
+        theta_active=model.claimants,
+        extra_ub=(preservation,),
+    )
+    theta_result = run_lp(theta_problem)
+    theta_max = value(theta_problem, theta_result, ("theta",))
+
+    nominal = model.nominal_scenario
+    worst_ratio: dict[str, float] = {}
+    for claimant, terminals in model.terminals_by_claimant.items():
+        demand = sum(model.demand[period, claimant] for period in model.periods)
+        if demand <= 0:
+            continue
+        objective = {
+            ("x", nominal, period, terminal.terminal_id): 1.0
+            for period in model.periods
+            for terminal in terminals
+        }
+        floor_problem = build_lp(
+            model, objective, maximize=False, extra_ub=(preservation,)
+        )
+        floor_result = run_lp(floor_problem)
+        worst_ratio[claimant] = objective_value(floor_problem, floor_result) / demand
+
+    return {
+        "nominal_delivery_optimum": optimum,
+        "max_common_floor_on_optimal_face": theta_max,
+        "min_seasonal_ratio_by_claimant": worst_ratio,
+        "worst_claimant_seasonal_ratio": min(worst_ratio.values()) if worst_ratio else None,
+    }
+
+
+def source_ablation_report(model: CTIBenchmark, *, tolerance: float = 1e-9) -> dict[str, Any]:
+    """Separate structural disconnection from capacity scarcity in source ablation.
+
+    Removing a source can drive the minimum guarantee to zero for two very different
+    reasons: the claimant may lose every directed path to a remaining injection, or it
+    may stay connected but be throttled by reach capacity, a seasonal volume or a shared
+    envelope. The first is a property of the graph and no allocation rule can repair it;
+    only the second is an optimization result. Each ablation is therefore reported with
+    the set of claimants that becomes unreachable, so criticality claims stay precise.
+    """
+
+    from .solver import solve_cti_rlex
+
+    base = solve_cti_rlex(model)
+    base_minimum = min(base.guarantees.values())
+    base_nominal = base.nominal_beneficial_delivery
+
+    successors: dict[str, list[str]] = defaultdict(list)
+    for edge in model.edges:
+        successors[edge.tail].append(edge.head)
+
+    rows: list[dict[str, Any]] = []
+    for source in model.sources:
+        remaining = [item for item in model.sources if item.source_id != source.source_id]
+        reached = {item.node for item in remaining}
+        stack = list(reached)
+        while stack:
+            node = stack.pop()
+            for following in successors.get(node, ()):
+                if following not in reached:
+                    reached.add(following)
+                    stack.append(following)
+        disconnected = sorted(
+            claimant
+            for claimant, terminals in model.terminals_by_claimant.items()
+            if not any(terminal.node in reached for terminal in terminals)
+        )
+
+        solution = solve_cti_rlex(disable_source(model, source.source_id))
+        minimum = min(solution.guarantees.values())
+        if disconnected:
+            explanation = "structural_disconnection"
+        elif minimum < base_minimum - tolerance:
+            explanation = "binding_capacity_or_envelope"
+        else:
+            explanation = "redundant_at_the_optimum"
+        rows.append(
+            {
+                "source_id": source.source_id,
+                "source_class": source.source_class,
+                "disconnected_claimants": disconnected,
+                "min_guarantee": minimum,
+                "delta_percentage_points": 100.0 * (minimum - base_minimum),
+                "nominal_delivery_af": solution.nominal_beneficial_delivery,
+                "delta_nominal_af": solution.nominal_beneficial_delivery - base_nominal,
+                "explanation": explanation,
+            }
+        )
+
+    return {
+        "base_min_guarantee": base_minimum,
+        "base_nominal_delivery_af": base_nominal,
+        "rows": sorted(rows, key=lambda row: row["min_guarantee"]),
+    }
+
+
 def subset_scenarios(model: CTIBenchmark, scenarios: Iterable[str]) -> CTIBenchmark:
     selected = tuple(scenarios)
     if model.nominal_scenario not in selected:
@@ -166,6 +329,36 @@ def subset_scenarios(model: CTIBenchmark, scenarios: Iterable[str]) -> CTIBenchm
         },
         recourse_budget={key: model.recourse_budget[key] for key in selected},
         scenario_weight={key: model.scenario_weight[key] for key in selected},
+    )
+
+
+def subset_claimants(model: CTIBenchmark, claimants: Iterable[str]) -> CTIBenchmark:
+    """Restrict the fairness subjects while keeping the physical network intact.
+
+    Scalability has to be measured against the number of guarantee levels the solver
+    has to resolve, not only against the number of scenarios. Holding the reaches,
+    sources and envelopes fixed and varying only the claimant set isolates that effect,
+    which is what the progressive-filling sequence actually grows with.
+    """
+
+    selected = tuple(claimants)
+    unknown = set(selected) - set(model.claimants)
+    if unknown:
+        raise ValueError(f"Unknown claimants: {sorted(unknown)}")
+    if not selected:
+        raise ValueError("At least one claimant must be retained.")
+    keep = set(selected)
+    terminals = tuple(item for item in model.terminals if item.claimant_id in keep)
+    demand = {
+        (period, claimant): value
+        for (period, claimant), value in model.demand.items()
+        if claimant in keep
+    }
+    return replace(
+        model,
+        claimants=selected,
+        terminals=terminals,
+        demand=demand,
     )
 
 

@@ -15,9 +15,11 @@ from leximin.dag import (
 )
 
 
+# The directory is DATA in upper case. A lower-case component here resolves on Windows
+# and macOS but not on a case-sensitive Linux filesystem, where the fixture would fail.
 BENCHMARK = (
     Path(__file__).resolve().parents[1]
-    / "data"
+    / "DATA"
     / "LittleBearRiver_2025_Benchmark"
     / "benchmark.json"
 )

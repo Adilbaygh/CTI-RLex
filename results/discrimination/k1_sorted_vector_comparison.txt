@@ -1,0 +1,17 @@
+i  sorted RLex   sorted PROP    diff
+ 1  0.056394      0.056394     +0.000000
+ 2  0.137445      0.056394     +0.081051  <-- FIRST DIFFERENCE
+ 3  0.307274      0.137445     +0.169829
+ 4  0.307274      0.189221     +0.118053
+ 5  0.365296      0.424984     -0.059688
+ 6  0.365296      0.480500     -0.115204
+ 7  0.674098      0.774872     -0.100774
+ 8  0.674098      0.882145     -0.208047
+ 9  0.882145      1.000000     -0.117855
+10  1.000000      1.000000     +0.000000
+
+VERDICT: sorted vectors first differ at position 2; CTI-RLex is higher there
+         => sort_up(rho_RLex) >_lex sort_up(rho_PROP)
+positions where RLex is strictly higher: 3
+positions where PROP is strictly higher: 5
+claimants at the common floor: RLex=1  PROP=2
