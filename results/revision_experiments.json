@@ -1,185 +1,221 @@
 {
-  "cache_valley_v3": {
-    "claimants": 10,
-    "cti_rlex": {
-      "levels": [
-        {
-          "blocked": [
-            "company_168"
-          ],
-          "theta": 0.056393646245954054
-        },
-        {
-          "blocked": [
-            "company_106"
-          ],
-          "theta": 0.13744468899532894
-        },
-        {
-          "blocked": [
-            "company_130",
-            "company_132"
-          ],
-          "theta": 0.307273771107821
-        },
-        {
-          "blocked": [
-            "company_164",
-            "company_088"
-          ],
-          "theta": 0.36529559348158364
-        },
-        {
-          "blocked": [
-            "company_10390",
-            "company_105"
-          ],
-          "theta": 0.6740982692651426
-        },
-        {
-          "blocked": [
-            "company_1249"
-          ],
-          "theta": 0.8821454660844299
-        },
-        {
-          "blocked": [
-            "company_136"
-          ],
-          "theta": 1.0
-        }
-      ],
-      "max_residual": 1.0913936421275139e-11,
-      "min": 0.056393646245954054,
-      "nominal_af": 16846.380233866606,
-      "runtime_s": 1.8079390420025447,
-      "sorted_rho": [
-        0.056393646245954054,
-        0.13744468899532894,
-        0.307273771107821,
-        0.307273771107821,
-        0.36529559348158364,
-        0.36529559348158364,
-        0.6740982692651426,
-        0.6740982692651426,
-        0.8821454660844299,
-        1.0
-      ]
-    },
-    "lexicographic_comparison": {
-      "claimants_at_floor_prop": 2,
-      "claimants_at_floor_rlex": 1,
-      "first_differing_position": 2,
-      "higher_at_that_position": "CTI-RLex",
-      "note": "the sum of differences is NOT the leximin criterion; compare sorted vectors position by position"
-    },
-    "lp_dimensions": {
-      "equality_constraints": 2150,
-      "inequality_constraints": 1539,
-      "nonzeros": 8520,
-      "variables": 2886
-    },
-    "price_of_lexicographic_refinement_pct": 1.2152240086243278,
-    "prop_br": {
-      "min": 0.056393646245954054,
-      "nominal_af": 17053.619917442913,
-      "sorted_rho": [
-        0.056393646245954054,
-        0.05639364624595406,
-        0.13744468899532894,
-        0.18922062253219465,
-        0.42498398489012895,
-        0.4804998677786354,
-        0.7748722561742207,
-        0.8821454660844299,
-        1.0,
-        1.0
-      ]
-    },
-    "utilitarian": {
-      "degeneracy_span": 4.279095460767851e-05,
-      "fairness_optimistic_min": 0.041622520987109175,
-      "max_common_floor_on_optimal_face": 0.041622520987109175,
-      "min_seasonal_ratio_by_claimant": {
-        "company_088": 0.8945504089479759,
-        "company_10390": 0.9999177731668976,
-        "company_105": 0.7133173166846217,
-        "company_106": 0.1899393455061532,
-        "company_1249": 0.9669997244772448,
-        "company_130": 0.9268150820260922,
-        "company_132": 0.2576062037112849,
-        "company_136": 0.9999778477426244,
-        "company_164": 0.5953107429067375,
-        "company_168": 0.18647150775165702
-      },
-      "nominal_delivery_optimum": 17054.64191540233,
-      "reported_min": 0.0415797300325015,
-      "worst_claimant_seasonal_ratio": 0.18647150775165702
-    }
+ "little_bear_v2": {
+  "claimants": 3,
+  "lp_dimensions": {
+   "variables": 869,
+   "equality_constraints": 600,
+   "inequality_constraints": 507,
+   "nonzeros": 2686
   },
-  "little_bear_v2": {
-    "claimants": 3,
-    "cti_rlex": {
-      "levels": [
-        {
-          "blocked": [
-            "company_130",
-            "company_132"
-          ],
-          "theta": 0.41951076293707945
-        },
-        {
-          "blocked": [
-            "company_088"
-          ],
-          "theta": 0.4476976354639018
-        }
-      ],
-      "max_residual": 3.410605131648481e-13,
-      "min": 0.41951076293707945,
-      "nominal_af": 5919.097890994499,
-      "runtime_s": 0.11955016900174087,
-      "sorted_rho": [
-        0.41951076293707945,
-        0.41951076293707945,
-        0.4476976354639018
-      ]
+  "cti_rlex": {
+   "levels": [
+    {
+     "theta": 0.41951076293707945,
+     "blocked": [
+      "company_130",
+      "company_132"
+     ]
     },
-    "lexicographic_comparison": {
-      "claimants_at_floor_prop": 2,
-      "claimants_at_floor_rlex": 2,
-      "first_differing_position": null,
-      "higher_at_that_position": null,
-      "note": "the sum of differences is NOT the leximin criterion; compare sorted vectors position by position"
-    },
-    "lp_dimensions": {
-      "equality_constraints": 600,
-      "inequality_constraints": 507,
-      "nonzeros": 2686,
-      "variables": 869
-    },
-    "price_of_lexicographic_refinement_pct": -1.5365427612823604e-14,
-    "prop_br": {
-      "min": 0.4195107629370794,
-      "nominal_af": 5919.097890994498,
-      "sorted_rho": [
-        0.4195107629370794,
-        0.41951076293707945,
-        0.4476976354639018
-      ]
-    },
-    "utilitarian": {
-      "degeneracy_span": 0.00034554724551585925,
-      "fairness_optimistic_min": 0.10765060681622926,
-      "max_common_floor_on_optimal_face": 0.10765060681622932,
-      "min_seasonal_ratio_by_claimant": {
-        "company_088": 0.6133335566969238,
-        "company_130": 0.9999920451724683,
-        "company_132": 0.5725482631209949
-      },
-      "nominal_delivery_optimum": 6075.143337059908,
-      "reported_min": 0.10730505957071346,
-      "worst_claimant_seasonal_ratio": 0.5725482631209949
+    {
+     "theta": 0.4476976354639018,
+     "blocked": [
+      "company_088"
+     ]
     }
-  }
+   ],
+   "guarantees": {
+    "company_130": 0.41951076293707945,
+    "company_132": 0.41951076293707945,
+    "company_088": 0.4476976354639018
+   },
+   "sorted_rho": [
+    0.41951076293707945,
+    0.41951076293707945,
+    0.4476976354639018
+   ],
+   "min": 0.41951076293707945,
+   "nominal_af": 5919.097890994499,
+   "runtime_s": 0.1591647000022931,
+   "max_residual": 3.410605131648481e-13
+  },
+  "prop_br": {
+   "guarantees": {
+    "company_088": 0.4476976354639018,
+    "company_130": 0.41951076293707945,
+    "company_132": 0.4195107629370794
+   },
+   "sorted_rho": [
+    0.4195107629370794,
+    0.41951076293707945,
+    0.4476976354639018
+   ],
+   "min": 0.4195107629370794,
+   "nominal_af": 5919.097890994498
+  },
+  "utilitarian": {
+   "reported_min": 0.10765060681622926,
+   "raw_solver_vertex_min": 0.10730505957071346,
+   "nominal_delivery_optimum": 6075.143337059908,
+   "max_common_floor_on_optimal_face": 0.10765060681622932,
+   "fairness_optimistic_min": 0.10765060681622932,
+   "degeneracy_span": 0.00034554724551585925,
+   "min_seasonal_ratio_by_claimant": {
+    "company_088": 0.6133335566969237,
+    "company_130": 0.9999920451724683,
+    "company_132": 0.5725482631209948
+   },
+   "worst_claimant_seasonal_ratio": 0.5725482631209948
+  },
+  "lexicographic_comparison": {
+   "first_differing_position": null,
+   "higher_at_that_position": null,
+   "claimants_at_floor_rlex": 2,
+   "claimants_at_floor_prop": 2,
+   "note": "the sum of differences is NOT the leximin criterion; compare sorted vectors position by position"
+  },
+  "price_of_lexicographic_refinement_pct": -1.5365427612823604e-14
+ },
+ "cache_valley_v3": {
+  "claimants": 10,
+  "lp_dimensions": {
+   "variables": 2886,
+   "equality_constraints": 2150,
+   "inequality_constraints": 1539,
+   "nonzeros": 8520
+  },
+  "cti_rlex": {
+   "levels": [
+    {
+     "theta": 0.056393646245954054,
+     "blocked": [
+      "company_168"
+     ]
+    },
+    {
+     "theta": 0.13744468899532894,
+     "blocked": [
+      "company_106"
+     ]
+    },
+    {
+     "theta": 0.307273771107821,
+     "blocked": [
+      "company_130",
+      "company_132"
+     ]
+    },
+    {
+     "theta": 0.36529559348158364,
+     "blocked": [
+      "company_164",
+      "company_088"
+     ]
+    },
+    {
+     "theta": 0.6740982692651426,
+     "blocked": [
+      "company_10390",
+      "company_105"
+     ]
+    },
+    {
+     "theta": 0.8821454660844299,
+     "blocked": [
+      "company_1249"
+     ]
+    },
+    {
+     "theta": 1.0,
+     "blocked": [
+      "company_136"
+     ]
+    }
+   ],
+   "guarantees": {
+    "company_168": 0.056393646245954054,
+    "company_106": 0.13744468899532894,
+    "company_130": 0.307273771107821,
+    "company_132": 0.307273771107821,
+    "company_164": 0.36529559348158364,
+    "company_088": 0.36529559348158364,
+    "company_10390": 0.6740982692651426,
+    "company_105": 0.6740982692651426,
+    "company_1249": 0.8821454660844299,
+    "company_136": 1.0
+   },
+   "sorted_rho": [
+    0.056393646245954054,
+    0.13744468899532894,
+    0.307273771107821,
+    0.307273771107821,
+    0.36529559348158364,
+    0.36529559348158364,
+    0.6740982692651426,
+    0.6740982692651426,
+    0.8821454660844299,
+    1.0
+   ],
+   "min": 0.056393646245954054,
+   "nominal_af": 16846.380233866606,
+   "runtime_s": 2.186325399998168,
+   "max_residual": 1.0913936421275139e-11
+  },
+  "prop_br": {
+   "guarantees": {
+    "company_10390": 1.0,
+    "company_105": 0.4804998677786354,
+    "company_106": 0.13744468899532894,
+    "company_1249": 0.8821454660844299,
+    "company_130": 0.7748722561742207,
+    "company_132": 0.056393646245954054,
+    "company_136": 1.0,
+    "company_164": 0.42498398489012895,
+    "company_168": 0.05639364624595406,
+    "company_088": 0.18922062253219465
+   },
+   "sorted_rho": [
+    0.056393646245954054,
+    0.05639364624595406,
+    0.13744468899532894,
+    0.18922062253219465,
+    0.42498398489012895,
+    0.4804998677786354,
+    0.7748722561742207,
+    0.8821454660844299,
+    1.0,
+    1.0
+   ],
+   "min": 0.056393646245954054,
+   "nominal_af": 17053.619917442913
+  },
+  "utilitarian": {
+   "reported_min": 0.041622520987109175,
+   "raw_solver_vertex_min": 0.0415797300325015,
+   "nominal_delivery_optimum": 17054.64191540233,
+   "max_common_floor_on_optimal_face": 0.041622520987109175,
+   "fairness_optimistic_min": 0.041622520987109175,
+   "degeneracy_span": 4.279095460767851e-05,
+   "min_seasonal_ratio_by_claimant": {
+    "company_10390": 0.9999177731668976,
+    "company_105": 0.7133173166846217,
+    "company_106": 0.18993934550615318,
+    "company_1249": 0.9669997244772449,
+    "company_130": 0.9268150820260922,
+    "company_132": 0.25760620371128484,
+    "company_136": 0.9999778477426244,
+    "company_164": 0.5953107429067375,
+    "company_168": 0.186471507751657,
+    "company_088": 0.8945504089479758
+   },
+   "worst_claimant_seasonal_ratio": 0.186471507751657
+  },
+  "lexicographic_comparison": {
+   "first_differing_position": 2,
+   "higher_at_that_position": "CTI-RLex",
+   "claimants_at_floor_rlex": 1,
+   "claimants_at_floor_prop": 2,
+   "note": "the sum of differences is NOT the leximin criterion; compare sorted vectors position by position"
+  },
+  "price_of_lexicographic_refinement_pct": 1.2152240086243278
+ }
 }

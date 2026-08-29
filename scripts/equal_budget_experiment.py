@@ -3,9 +3,15 @@
 Reviewer item K2: in the published Little Bear benchmark each contingency scenario
 carries its own recourse budget (0.25, 0.40, 0.35, 0.25), so a scenario-wise delivery
 panel mixes stress severity with operating freedom. This script re-solves the whole
-comparator set under a single budget shared by every contingency and reports what
-changes and what does not, including whether any contingency cell still receives a
-larger service ratio than the corresponding nominal cell.
+comparator set under a uniform per-contingency budget and reports what changes and what
+does not, including whether any contingency cell still receives a larger service ratio
+than the corresponding nominal cell.
+
+The regime tested here assigns the SAME budget value to every contingency separately; it
+is not a pooled budget shared across scenarios. Each scenario still gets its own
+constraint, so the total reconfiguration allowance grows with the number of scenarios. A
+pooled budget would be a single constraint over the whole scenario set and is not part of
+this model.
 
 Run:  python scripts/equal_budget_experiment.py
 Writes: results/equal_budget_experiment.json
@@ -24,19 +30,24 @@ sys.path.insert(0, str(REPO / "src"))
 from leximin.dag.io import load_cti_benchmark  # noqa: E402
 from leximin.dag.experiments import (  # noqa: E402
     solve_robust_proportional,
-    solve_utilitarian,
+    solve_utilitarian_fair,
     subset_scenarios,
 )
 from leximin.dag.solver import solve_cti_rlex  # noqa: E402
 
 BENCHMARK = REPO / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json"
 OUTPUT = REPO / "results" / "equal_budget_experiment.json"
-COMMON_BUDGETS = (0.25, 0.40)
+UNIFORM_BUDGETS = (0.25, 0.40)
 TOLERANCE = 1e-9
 
 
-def with_common_budget(model, budget: float):
-    """One budget for every contingency; the nominal scenario keeps zero by definition."""
+def with_uniform_budget(model, budget: float):
+    """Assign the same budget value to every contingency, separately for each one.
+
+    This is a uniform per-contingency budget, not a pooled one: the constraint
+    remains per scenario, and only its right-hand side is harmonized. The nominal
+    scenario keeps a budget of zero by definition.
+    """
 
     return replace(
         model,
@@ -77,7 +88,9 @@ def cells_above_nominal(solution, model) -> list[dict]:
 
 def evaluate(label: str, model, rigid_min: float, nominal_only_af: float) -> dict:
     solution = solve_cti_rlex(model)
-    utilitarian = solve_utilitarian(model)
+    # Same fairness-optimistic tie-break as the published comparator, so the minimum
+    # guarantee compared here is a property of the objective, not of the pivot rule.
+    utilitarian = solve_utilitarian_fair(model)
     proportional = solve_robust_proportional(model)
     sorted_rho = sorted(solution.guarantees.values())
     minimum = min(sorted_rho)
@@ -108,17 +121,17 @@ def evaluate(label: str, model, rigid_min: float, nominal_only_af: float) -> dic
 
 def main() -> None:
     model = load_cti_benchmark(BENCHMARK)
-    rigid = solve_cti_rlex(with_common_budget(model, 0.0))
+    rigid = solve_cti_rlex(with_uniform_budget(model, 0.0))
     rigid_min = min(rigid.guarantees.values())
     nominal_only = solve_cti_rlex(subset_scenarios(model, (model.nominal_scenario,)))
     nominal_only_af = nominal_only.nominal_beneficial_delivery
 
     cases = [evaluate("published per-scenario budgets", model, rigid_min, nominal_only_af)]
-    for budget in COMMON_BUDGETS:
+    for budget in UNIFORM_BUDGETS:
         cases.append(
             evaluate(
-                f"one common contingency budget b={budget:g}",
-                with_common_budget(model, budget),
+                f"uniform per-contingency budget b={budget:g}",
+                with_uniform_budget(model, budget),
                 rigid_min,
                 nominal_only_af,
             )

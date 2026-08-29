@@ -2,9 +2,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-from leximin.dag import load_cti_benchmark, solve_cti_rlex
+# Run from a clone without installing the package: put src/ on the import path first.
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
+
+from leximin.dag import load_cti_benchmark, solve_cti_rlex  # noqa: E402
 
 
 def main() -> None:

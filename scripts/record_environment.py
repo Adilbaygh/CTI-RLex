@@ -24,21 +24,30 @@ OUTPUT = REPO / "results" / "environment.json"
 
 
 def processor_name() -> str:
-    """A readable CPU name, since platform.processor() is often empty or a bare family."""
+    """A readable CPU name.
+
+    ``platform.processor()`` returns a family/model string on Windows, and shelling out to
+    wmic breaks on any console whose code page is not UTF-8, so the value is read from the
+    registry there and from the kernel elsewhere.
+    """
 
     system = platform.system()
     try:
         if system == "Windows":
-            out = subprocess.run(
-                ["wmic", "cpu", "get", "name"], capture_output=True, text=True, timeout=20
-            ).stdout
-            lines = [line.strip() for line in out.splitlines() if line.strip()]
-            if len(lines) > 1:
-                return lines[1]
+            import winreg
+
+            key = winreg.OpenKey(
+                winreg.HKEY_LOCAL_MACHINE,
+                r"HARDWARE\DESCRIPTION\System\CentralProcessor\0",
+            )
+            with key:
+                name, _ = winreg.QueryValueEx(key, "ProcessorNameString")
+            if name:
+                return " ".join(str(name).split())
         elif system == "Darwin":
             return subprocess.run(
                 ["sysctl", "-n", "machdep.cpu.brand_string"],
-                capture_output=True, text=True, timeout=20,
+                capture_output=True, text=True, errors="replace", timeout=20,
             ).stdout.strip()
         elif system == "Linux":
             for line in Path("/proc/cpuinfo").read_text(encoding="utf-8").splitlines():
@@ -50,22 +59,35 @@ def processor_name() -> str:
 
 
 def memory_gib() -> float | None:
+    """Installed physical memory, without shelling out to a localized command."""
+
     try:
         if platform.system() == "Windows":
-            out = subprocess.run(
-                ["wmic", "computersystem", "get", "TotalPhysicalMemory"],
-                capture_output=True, text=True, timeout=20,
-            ).stdout
-            digits = [line.strip() for line in out.splitlines() if line.strip().isdigit()]
-            if digits:
-                return round(int(digits[0]) / 1024**3, 1)
-        else:
-            import os
+            import ctypes
 
-            return round(os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES") / 1024**3, 1)
+            class MemoryStatus(ctypes.Structure):
+                _fields_ = [
+                    ("dwLength", ctypes.c_ulong),
+                    ("dwMemoryLoad", ctypes.c_ulong),
+                    ("ullTotalPhys", ctypes.c_ulonglong),
+                    ("ullAvailPhys", ctypes.c_ulonglong),
+                    ("ullTotalPageFile", ctypes.c_ulonglong),
+                    ("ullAvailPageFile", ctypes.c_ulonglong),
+                    ("ullTotalVirtual", ctypes.c_ulonglong),
+                    ("ullAvailVirtual", ctypes.c_ulonglong),
+                    ("ullAvailExtendedVirtual", ctypes.c_ulonglong),
+                ]
+
+            status = MemoryStatus()
+            status.dwLength = ctypes.sizeof(MemoryStatus)
+            if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
+                return round(status.ullTotalPhys / 1024**3, 1)
+            return None
+        import os
+
+        return round(os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES") / 1024**3, 1)
     except Exception:
         return None
-    return None
 
 
 def logical_cores() -> int | None:
@@ -120,14 +142,19 @@ def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(record, indent=1), encoding="utf-8")
 
-    memory = f", {record['memory_gib']} GiB RAM" if record["memory_gib"] else ""
-    cores = f" ({record['logical_cores']} logical cores)" if record["logical_cores"] else ""
+    details = []
+    if record["logical_cores"]:
+        details.append(f"{record['logical_cores']} logical cores")
+    if record["memory_gib"]:
+        details.append(f"{record['memory_gib']} GiB of memory")
+    hardware = f" ({', '.join(details)})" if details else ""
+    article = "an" if record["processor"][:1].upper() in "AEIOU" else "a"
     print(json.dumps(record, indent=1))
     print("\nwrote", OUTPUT)
     print("\nSentence for Section 2.7:\n")
     print(
-        f"All solve times were measured on a {record['processor']}{cores}{memory} running "
-        f"{record['operating_system']}, with Python {record['python']}, NumPy "
+        f"All solve times were measured on {article} {record['processor']}{hardware}, "
+        f"running {record['operating_system']}, with Python {record['python']}, NumPy "
         f"{record['numpy']} and SciPy {record['scipy']}, solving each linear program with "
         f"HiGHS through scipy.optimize.linprog at its default options."
     )

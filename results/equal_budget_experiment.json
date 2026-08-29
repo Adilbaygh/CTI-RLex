@@ -35,11 +35,11 @@
     }
    ],
    "nominal_af": 5919.097890994499,
-   "utilitarian_nominal_af": 6075.143337059908,
-   "utilitarian_min": 0.10730505957071346,
+   "utilitarian_nominal_af": 6075.142729545574,
+   "utilitarian_min": 0.10765060681622926,
    "proportional_nominal_af": 5919.097890994498,
    "proportional_min": 0.4195107629370794,
-   "price_of_fairness_pct": 2.568588713182988,
+   "price_of_fairness_pct": 2.568578970040884,
    "value_of_recourse_pct": 9.221366060528487,
    "price_of_robustness_pct": 31.532272871788273,
    "cells_above_nominal": [
@@ -79,7 +79,7 @@
    "max_residual": 3.410605131648481e-13
   },
   {
-   "label": "one common contingency budget b=0.25",
+   "label": "uniform per-contingency budget b=0.25",
    "recourse_budget": {
     "nominal": 0.0,
     "moderate_system_shortage": 0.25,
@@ -109,11 +109,11 @@
     }
    ],
    "nominal_af": 5434.342092857081,
-   "utilitarian_nominal_af": 5663.461555426369,
-   "utilitarian_min": 0.10730505957403853,
+   "utilitarian_nominal_af": 5663.460989080214,
+   "utilitarian_min": 0.10731926948402859,
    "proportional_nominal_af": 5434.342092857078,
    "proportional_min": 0.41951076293707934,
-   "price_of_fairness_pct": 4.045572841396974,
+   "price_of_fairness_pct": 4.045563245953305,
    "value_of_recourse_pct": 9.221366060528487,
    "price_of_robustness_pct": 37.13956782144398,
    "cells_above_nominal": [
@@ -145,7 +145,7 @@
    "max_residual": 3.410605131648481e-13
   },
   {
-   "label": "one common contingency budget b=0.4",
+   "label": "uniform per-contingency budget b=0.4",
    "recourse_budget": {
     "nominal": 0.0,
     "moderate_system_shortage": 0.4,
@@ -175,11 +175,11 @@
     }
    ],
    "nominal_af": 5976.327314757984,
-   "utilitarian_nominal_af": 6075.481303144039,
-   "utilitarian_min": 0.10730505957071346,
+   "utilitarian_nominal_af": 6075.480695595908,
+   "utilitarian_min": 0.10792126700127339,
    "proportional_nominal_af": 5976.327314757971,
    "proportional_min": 0.41951076293707934,
-   "price_of_fairness_pct": 1.6320351168679137,
+   "price_of_fairness_pct": 1.6320252800704376,
    "value_of_recourse_pct": 9.221366060528473,
    "price_of_robustness_pct": 30.870285413208713,
    "cells_above_nominal": [
@@ -212,8 +212,8 @@
      "period": "2025-06",
      "claimant": "company_132",
      "nominal_ratio": 0.41951076293707934,
-     "contingency_ratio": 0.7608554508103037,
-     "excess": 0.34134468787322436
+     "contingency_ratio": 0.7608554508103074,
+     "excess": 0.341344687873228
     },
     {
      "scenario": "moderate_system_shortage",

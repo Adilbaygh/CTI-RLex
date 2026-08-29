@@ -1,7 +1,7 @@
 {
   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
   "derived_indicators": {
-    "price_of_fairness_nominal_fraction": 0.025685887131829843,
+    "price_of_fairness_nominal_fraction": 0.0256857897004088,
     "value_of_recourse_minimum_guarantee_absolute": 0.03541854905230324,
     "value_of_recourse_minimum_guarantee_percent": 9.22136606052848
   },
@@ -23,30 +23,30 @@
       "guarantee_scope": "five-scenario bounded recourse",
       "guarantees": {
         "company_088": 0.4476976354639018,
-        "company_130": 0.744335110592877,
-        "company_132": 0.10730505957071346
+        "company_130": 0.7666131350861322,
+        "company_132": 0.10765060681622926
       },
-      "jain_guarantee_index": 0.7346900492239147,
+      "jain_guarantee_index": 0.7284163174198521,
       "leximin_vector": [
-        0.10730505957071346,
+        0.10765060681622926,
         0.4476976354639018,
-        0.744335110592877
+        0.7666131350861322
       ],
-      "maximum_lp_residual": 1.8189894035458565e-12,
+      "maximum_lp_residual": 3.410605131648481e-13,
       "method": "UTIL-BR",
-      "minimum_guarantee": 0.10730505957071346,
-      "nominal_beneficial_delivery_af": 6075.143337059908,
-      "normalized_recourse_effort": 1.2499990127401237,
-      "runtime_seconds": 0.05219770000257995,
+      "minimum_guarantee": 0.10765060681622926,
+      "nominal_beneficial_delivery_af": 6075.142729545574,
+      "normalized_recourse_effort": 1.2499990127408644,
+      "runtime_seconds": 0.09362979999787058,
       "scenario_beneficial_delivery_af": {
-        "hyrum_canal_restriction_under_shortage": 6686.236635722225,
-        "moderate_system_shortage": 6686.234222488249,
-        "nominal": 6075.142729545573,
-        "paradise_diversion_outage_under_shortage": 5662.474826156164,
-        "severe_system_shortage": 5097.392479662931
+        "hyrum_canal_restriction_under_shortage": 6686.236028207953,
+        "moderate_system_shortage": 6686.233614975787,
+        "nominal": 6075.142122031301,
+        "paradise_diversion_outage_under_shortage": 5662.45317964897,
+        "severe_system_shortage": 5097.391872148659
       },
-      "weighted_contingency_beneficial_delivery_af": 6033.085144315908,
-      "worst_scenario_beneficial_delivery_af": 5097.392479662931
+      "weighted_contingency_beneficial_delivery_af": 6033.079277053271,
+      "worst_scenario_beneficial_delivery_af": 5097.391872148659
     },
     {
       "guarantee_scope": "five-scenario common robust floor",
@@ -66,7 +66,7 @@
       "minimum_guarantee": 0.4195107629370794,
       "nominal_beneficial_delivery_af": 5919.097890994498,
       "normalized_recourse_effort": 1.2499990269515024,
-      "runtime_seconds": 0.06854059999750461,
+      "runtime_seconds": 0.06971460000204388,
       "scenario_beneficial_delivery_af": {
         "hyrum_canal_restriction_under_shortage": 6530.191205261361,
         "moderate_system_shortage": 6530.188826765331,
@@ -95,7 +95,7 @@
       "minimum_guarantee": 0.3840922138847762,
       "nominal_beneficial_delivery_af": 4739.08565752826,
       "normalized_recourse_effort": 0.0,
-      "runtime_seconds": 0.12857879999501165,
+      "runtime_seconds": 0.15618240000185324,
       "scenario_beneficial_delivery_af": {
         "hyrum_canal_restriction_under_shortage": 4739.0851836196925,
         "moderate_system_shortage": 4739.0851836196925,
@@ -124,7 +124,7 @@
       "minimum_guarantee": 0.41951076293707945,
       "nominal_beneficial_delivery_af": 5919.097890994499,
       "normalized_recourse_effort": 1.2499990269514052,
-      "runtime_seconds": 0.14287209999747574,
+      "runtime_seconds": 0.17228740000064136,
       "scenario_beneficial_delivery_af": {
         "hyrum_canal_restriction_under_shortage": 6530.191205261362,
         "moderate_system_shortage": 6530.188826765095,
@@ -153,7 +153,7 @@
       "minimum_guarantee": 1.0,
       "nominal_beneficial_delivery_af": 8645.091840000001,
       "normalized_recourse_effort": 0,
-      "runtime_seconds": 0.029451499998685904,
+      "runtime_seconds": 0.03412209999805782,
       "scenario_beneficial_delivery_af": {
         "nominal": 8645.091840000001
       },
@@ -741,13 +741,13 @@
       "equality_constraints": 120,
       "inequality_constraints": 47,
       "maximum_lp_residual": 2.2737367544323206e-13,
-      "median_runtime_seconds": 0.02924899999925401,
+      "median_runtime_seconds": 0.031122899999900255,
       "minimum_guarantee": 1.0,
       "nonzeros": 346,
       "runtime_seconds_repeats": [
-        0.029758799995761365,
-        0.02924899999925401,
-        0.028541899999254383
+        0.032899000001634704,
+        0.031122899999900255,
+        0.02807790000224486
       ],
       "scenario_count": 1,
       "scenarios": [
@@ -759,13 +759,13 @@
       "equality_constraints": 360,
       "inequality_constraints": 277,
       "maximum_lp_residual": 9.094947017729282e-13,
-      "median_runtime_seconds": 0.08659269999770913,
+      "median_runtime_seconds": 0.09110599999985425,
       "minimum_guarantee": 0.41951076293707945,
       "nonzeros": 1516,
       "runtime_seconds_repeats": [
-        0.08648779999930412,
-        0.08731200000329409,
-        0.08659269999770913
+        0.09389130000272417,
+        0.09110599999985425,
+        0.09079990000100224
       ],
       "scenario_count": 3,
       "scenarios": [
@@ -779,13 +779,13 @@
       "equality_constraints": 600,
       "inequality_constraints": 507,
       "maximum_lp_residual": 3.410605131648481e-13,
-      "median_runtime_seconds": 0.1401559000078123,
+      "median_runtime_seconds": 0.13832059999913326,
       "minimum_guarantee": 0.41951076293707945,
       "nonzeros": 2686,
       "runtime_seconds_repeats": [
-        0.1401559000078123,
-        0.1420840000064345,
-        0.14007029999629594
+        0.13832059999913326,
+        0.1376380000001518,
+        0.1389749000009033
       ],
       "scenario_count": 5,
       "scenarios": [
@@ -814,7 +814,7 @@
       "nominal_beneficial_delivery_af": 3911.169883366928,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12617250000766944,
+      "runtime_seconds": 0.15472090000184835,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3911.169492249942
     },
@@ -833,7 +833,7 @@
       "nominal_beneficial_delivery_af": 3967.953900357922,
       "normalized_recourse_effort": 0.3124993726543558,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14370960000087507,
+      "runtime_seconds": 0.13953720000063186,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3967.953900357922
     },
@@ -852,7 +852,7 @@
       "nominal_beneficial_delivery_af": 4451.520999781804,
       "normalized_recourse_effort": 0.6249993039569111,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.1444199999968987,
+      "runtime_seconds": 0.1364181999997527,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3967.954426719799
     },
@@ -871,7 +871,7 @@
       "nominal_beneficial_delivery_af": 5166.963772875569,
       "normalized_recourse_effort": 1.2499987979372371,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14287479998893104,
+      "runtime_seconds": 0.1382527999994636,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4134.390713953162
     },
@@ -890,7 +890,7 @@
       "nominal_beneficial_delivery_af": 5971.42517986004,
       "normalized_recourse_effort": 2.4987427393552197,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.13985629999660887,
+      "runtime_seconds": 0.13839179999922635,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4135.465360949574
     },
@@ -909,7 +909,7 @@
       "nominal_beneficial_delivery_af": 4639.510054795717,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1354834999947343,
+      "runtime_seconds": 0.12370579999696929,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4639.509590844714
     },
@@ -928,7 +928,7 @@
       "nominal_beneficial_delivery_af": 4710.349102872677,
       "normalized_recourse_effort": 0.3124992576182497,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1430341000086628,
+      "runtime_seconds": 0.1338751000002958,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4710.349102872706
     },
@@ -947,7 +947,7 @@
       "nominal_beneficial_delivery_af": 5072.939759991992,
       "normalized_recourse_effort": 0.6249992029745424,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13964929999201559,
+      "runtime_seconds": 0.1348017999989679,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4710.490733248587
     },
@@ -966,7 +966,7 @@
       "nominal_beneficial_delivery_af": 5880.7854623730545,
       "normalized_recourse_effort": 1.2499980852733592,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14048809999076184,
+      "runtime_seconds": 0.15942870000071707,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4849.420584620063
     },
@@ -985,7 +985,7 @@
       "nominal_beneficial_delivery_af": 6454.9599087364795,
       "normalized_recourse_effort": 1.568958327919065,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14247070001147222,
+      "runtime_seconds": 0.13459309999961988,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4850.082998704605
     },
@@ -1004,7 +1004,7 @@
       "nominal_beneficial_delivery_af": 5230.207270761617,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.15541239999583922,
+      "runtime_seconds": 0.12821049999911338,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5230.206747740894
     },
@@ -1023,7 +1023,7 @@
       "nominal_beneficial_delivery_af": 5315.147563658726,
       "normalized_recourse_effort": 0.3124991639030574,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13981419999618083,
+      "runtime_seconds": 0.14297240000087186,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5315.147563658549
     },
@@ -1042,7 +1042,7 @@
       "nominal_beneficial_delivery_af": 5556.761778472897,
       "normalized_recourse_effort": 0.6249991233131251,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14069190000009257,
+      "runtime_seconds": 0.1392303000029642,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5315.430298048305
     },
@@ -1061,7 +1061,7 @@
       "nominal_beneficial_delivery_af": 6328.438117496222,
       "normalized_recourse_effort": 1.0073313692408898,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14060289999179076,
+      "runtime_seconds": 0.14067150000119,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5405.961876739641
     },
@@ -1080,7 +1080,7 @@
       "nominal_beneficial_delivery_af": 6483.81888,
       "normalized_recourse_effort": 1.350127745100653,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1356078999961028,
+      "runtime_seconds": 0.13692680000167456,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5483.4249599819605
     },
@@ -1099,7 +1099,7 @@
       "nominal_beneficial_delivery_af": 3779.97684563274,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12743130000308156,
+      "runtime_seconds": 0.1248989999985497,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3779.9764676350546
     },
@@ -1118,7 +1118,7 @@
       "nominal_beneficial_delivery_af": 3833.088907580536,
       "normalized_recourse_effort": 0.31249936024959557,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13809069999842905,
+      "runtime_seconds": 0.13939600000230712,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3833.0889075804425
     },
@@ -1137,7 +1137,7 @@
       "nominal_beneficial_delivery_af": 4290.279652157887,
       "normalized_recourse_effort": 0.6249992916381448,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14290210000763182,
+      "runtime_seconds": 0.138825199999701,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3833.091489255673
     },
@@ -1156,7 +1156,7 @@
       "nominal_beneficial_delivery_af": 4998.738747797628,
       "normalized_recourse_effort": 1.2499988252217162,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14117429999168962,
+      "runtime_seconds": 0.14254569999684463,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4020.987998041112
     },
@@ -1175,7 +1175,7 @@
       "nominal_beneficial_delivery_af": 5828.8656356761585,
       "normalized_recourse_effort": 2.499926531838901,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.13965749999624677,
+      "runtime_seconds": 0.14092789999995148,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4022.962701825039
     },
@@ -1194,7 +1194,7 @@
       "nominal_beneficial_delivery_af": 4534.400496493601,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12659960000019055,
+      "runtime_seconds": 0.12558680000074673,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4534.400043053551
     },
@@ -1213,7 +1213,7 @@
       "nominal_beneficial_delivery_af": 4600.529319748066,
       "normalized_recourse_effort": 0.3124992346649899,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13731329998699948,
+      "runtime_seconds": 0.13587270000061835,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4600.529319747961
     },
@@ -1232,7 +1232,7 @@
       "nominal_beneficial_delivery_af": 4943.118789135027,
       "normalized_recourse_effort": 0.6249991801077815,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13810100000409875,
+      "runtime_seconds": 0.13634859999729088,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4600.793800323421
     },
@@ -1251,7 +1251,7 @@
       "nominal_beneficial_delivery_af": 5714.41272926098,
       "normalized_recourse_effort": 1.249998083135801,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.13938309998775367,
+      "runtime_seconds": 0.13754090000293218,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4736.661907937066
     },
@@ -1270,7 +1270,7 @@
       "nominal_beneficial_delivery_af": 6348.717518525828,
       "normalized_recourse_effort": 1.7509696584952767,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.13843709998764098,
+      "runtime_seconds": 0.1360209999984363,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4744.316709159227
     },
@@ -1289,7 +1289,7 @@
       "nominal_beneficial_delivery_af": 5111.434090151596,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12928239999746438,
+      "runtime_seconds": 0.12561039999854984,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5111.433579008186
     },
@@ -1308,7 +1308,7 @@
       "nominal_beneficial_delivery_af": 5190.860434487688,
       "normalized_recourse_effort": 0.3124991380625327,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1376497000019299,
+      "runtime_seconds": 0.1454413999999815,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5190.860434487654
     },
@@ -1327,7 +1327,7 @@
       "nominal_beneficial_delivery_af": 5418.848628684157,
       "normalized_recourse_effort": 0.6249990975599204,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13995539999450557,
+      "runtime_seconds": 0.1380018999989261,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5191.386813963343
     },
@@ -1346,7 +1346,7 @@
       "nominal_beneficial_delivery_af": 6199.578882470442,
       "normalized_recourse_effort": 1.1939684637374055,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1394942000042647,
+      "runtime_seconds": 0.13944309999715188,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5271.758990769389
     },
@@ -1365,7 +1365,7 @@
       "nominal_beneficial_delivery_af": 6483.81888,
       "normalized_recourse_effort": 1.4380895736195,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14318790000106674,
+      "runtime_seconds": 0.13275350000185426,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5355.49891911498
     },
@@ -1384,7 +1384,7 @@
       "nominal_beneficial_delivery_af": 3529.6174647940024,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.13186259999929462,
+      "runtime_seconds": 0.13189649999912945,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3529.6171118322563
     },
@@ -1403,7 +1403,7 @@
       "nominal_beneficial_delivery_af": 3575.500965050279,
       "normalized_recourse_effort": 0.3124993329316852,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13866100000450388,
+      "runtime_seconds": 0.13941290000002482,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3575.500965050226
     },
@@ -1422,7 +1422,7 @@
       "nominal_beneficial_delivery_af": 3982.9104287685086,
       "normalized_recourse_effort": 0.6249992644928009,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13924620000761934,
+      "runtime_seconds": 0.1376559999989695,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3575.51082498117
     },
@@ -1441,7 +1441,7 @@
       "nominal_beneficial_delivery_af": 4624.774961411687,
       "normalized_recourse_effort": 1.249999151679923,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14161089999834076,
+      "runtime_seconds": 0.14168770000105724,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3750.793656925277
     },
@@ -1460,7 +1460,7 @@
       "nominal_beneficial_delivery_af": 5499.783387812948,
       "normalized_recourse_effort": 2.499973457060667,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14148259999637958,
+      "runtime_seconds": 0.1391801999998279,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3776.5612425243057
     },
@@ -1479,7 +1479,7 @@
       "nominal_beneficial_delivery_af": 4282.2483440027845,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12565850000828505,
+      "runtime_seconds": 0.1253431000004639,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4282.247915777949
     },
@@ -1498,7 +1498,7 @@
       "nominal_beneficial_delivery_af": 4339.159591123667,
       "normalized_recourse_effort": 0.31249919312840807,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13718279999739025,
+      "runtime_seconds": 0.13894230000005336,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4339.159591123681
     },
@@ -1517,7 +1517,7 @@
       "nominal_beneficial_delivery_af": 4644.025288500723,
       "normalized_recourse_effort": 0.6249991387486573,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14064280000457074,
+      "runtime_seconds": 0.13588670000171987,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4339.615043612387
     },
@@ -1536,7 +1536,7 @@
       "nominal_beneficial_delivery_af": 5342.611013183996,
       "normalized_recourse_effort": 1.2499987294224777,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.13911479999660514,
+      "runtime_seconds": 0.13971410000158357,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4468.629636913982
     },
@@ -1555,7 +1555,7 @@
       "nominal_beneficial_delivery_af": 6128.4842096234715,
       "normalized_recourse_effort": 2.212302385431613,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.13700299999618437,
+      "runtime_seconds": 0.13583110000035958,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4530.696298171312
     },
@@ -1574,7 +1574,7 @@
       "nominal_beneficial_delivery_af": 4882.414988172635,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12557219999143854,
+      "runtime_seconds": 0.1385175999967032,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 4882.414499931137
     },
@@ -1593,7 +1593,7 @@
       "nominal_beneficial_delivery_af": 4950.353982657745,
       "normalized_recourse_effort": 0.31249908123684017,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1396565000031842,
+      "runtime_seconds": 0.14577300000019022,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 4950.353982657732
     },
@@ -1612,7 +1612,7 @@
       "nominal_beneficial_delivery_af": 5152.675913693471,
       "normalized_recourse_effort": 0.624999040916238,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14014390000374988,
+      "runtime_seconds": 0.13799309999740217,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 4951.25502770416
     },
@@ -1631,7 +1631,7 @@
       "nominal_beneficial_delivery_af": 5901.056816056051,
       "normalized_recourse_effort": 1.2499979241564985,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1394342000130564,
+      "runtime_seconds": 0.14014060000044992,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5027.075383941455
     },
@@ -1650,7 +1650,7 @@
       "nominal_beneficial_delivery_af": 6483.81888,
       "normalized_recourse_effort": 1.4997623061635905,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1356048000016017,
+      "runtime_seconds": 0.13380640000104904,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5108.781678439184
     },
@@ -1669,7 +1669,7 @@
       "nominal_beneficial_delivery_af": 3929.9496412906515,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.127573100005975,
+      "runtime_seconds": 0.12526849999994738,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3929.9492482956907
     },
@@ -1688,7 +1688,7 @@
       "nominal_beneficial_delivery_af": 3986.733658281646,
       "normalized_recourse_effort": 0.31249936974439974,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14096859999699518,
+      "runtime_seconds": 0.13936939999985043,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3986.733658281596
     },
@@ -1707,7 +1707,7 @@
       "nominal_beneficial_delivery_af": 4470.300757705499,
       "normalized_recourse_effort": 0.6249993010469455,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14222280000103638,
+      "runtime_seconds": 0.13834660000065924,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3986.7341846435224
     },
@@ -1726,7 +1726,7 @@
       "nominal_beneficial_delivery_af": 5215.176207011269,
       "normalized_recourse_effort": 1.2499991894876283,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14175880000402685,
+      "runtime_seconds": 0.1387695999983407,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4182.603143267618
     },
@@ -1745,7 +1745,7 @@
       "nominal_beneficial_delivery_af": 6275.10433409039,
       "normalized_recourse_effort": 2.4997797997786018,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14227419999951962,
+      "runtime_seconds": 0.13861960000213003,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4209.958622127897
     },
@@ -1764,7 +1764,7 @@
       "nominal_beneficial_delivery_af": 4901.911026106768,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1275683999992907,
+      "runtime_seconds": 0.13022319999799947,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4901.910535915666
     },
@@ -1783,7 +1783,7 @@
       "nominal_beneficial_delivery_af": 4972.750074921945,
       "normalized_recourse_effort": 0.31249921695848437,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1393030000035651,
+      "runtime_seconds": 0.1371112999986508,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4972.750074921977
     },
@@ -1802,7 +1802,7 @@
       "nominal_beneficial_delivery_af": 5335.340732041192,
       "normalized_recourse_effort": 0.6249991623146777,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14241760000004433,
+      "runtime_seconds": 0.13806800000020303,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4972.891705297857
     },
@@ -1821,7 +1821,7 @@
       "nominal_beneficial_delivery_af": 6144.831494957737,
       "normalized_recourse_effort": 1.2499990432398473,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14135540000279434,
+      "runtime_seconds": 0.13998699999865494,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5112.258338248556
     },
@@ -1840,7 +1840,7 @@
       "nominal_beneficial_delivery_af": 7277.038722279085,
       "normalized_recourse_effort": 2.4999977077755955,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14147529999900144,
+      "runtime_seconds": 0.14030089999869233,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5233.337478852158
     },
@@ -1859,7 +1859,7 @@
       "nominal_beneficial_delivery_af": 5726.830505710421,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1249017000081949,
+      "runtime_seconds": 0.12663830000019516,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5726.829933027372
     },
@@ -1878,7 +1878,7 @@
       "nominal_beneficial_delivery_af": 5811.724585464272,
       "normalized_recourse_effort": 0.31249908695696826,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1399914999929024,
+      "runtime_seconds": 0.13629470000159927,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5811.72458546411
     },
@@ -1897,7 +1897,7 @@
       "nominal_beneficial_delivery_af": 6053.338800278413,
       "normalized_recourse_effort": 0.6249990463670275,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13687959998787846,
+      "runtime_seconds": 0.1379491000006965,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5812.007319853865
     },
@@ -1916,7 +1916,7 @@
       "nominal_beneficial_delivery_af": 6927.287182563394,
       "normalized_recourse_effort": 1.2499983695983075,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.13785689999349415,
+      "runtime_seconds": 0.13727189999917755,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5894.713947608645
     },
@@ -1935,7 +1935,7 @@
       "nominal_beneficial_delivery_af": 7940.754670274269,
       "normalized_recourse_effort": 2.474553667848573,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.13998040001024492,
+      "runtime_seconds": 0.16956650000065565,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 6045.047849971565
     },
@@ -1954,7 +1954,7 @@
       "nominal_beneficial_delivery_af": 3802.593645951045,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12967049999861047,
+      "runtime_seconds": 0.13184130000081495,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3802.5932656916784
     },
@@ -1973,7 +1973,7 @@
       "nominal_beneficial_delivery_af": 3855.705707898807,
       "normalized_recourse_effort": 0.312499356548525,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1407852999982424,
+      "runtime_seconds": 0.14248589999988326,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3855.7057078987464
     },
@@ -1992,7 +1992,7 @@
       "nominal_beneficial_delivery_af": 4312.89645247619,
       "normalized_recourse_effort": 0.6249992879371115,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.13990120000380557,
+      "runtime_seconds": 0.14406959999905666,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3855.708289573977
     },
@@ -2011,7 +2011,7 @@
       "nominal_beneficial_delivery_af": 5022.270974682342,
       "normalized_recourse_effort": 1.249999175979425,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1407440999901155,
+      "runtime_seconds": 0.14452920000258018,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4044.5202225726043
     },
@@ -2030,7 +2030,7 @@
       "nominal_beneficial_delivery_af": 6027.347892668859,
       "normalized_recourse_effort": 2.4999711948808363,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14618959999643266,
+      "runtime_seconds": 0.14434350000010454,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4071.846790168784
     },
@@ -2049,7 +2049,7 @@
       "nominal_beneficial_delivery_af": 4739.08565752826,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12590410000120755,
+      "runtime_seconds": 0.1304052999985288,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4739.0851836196925
     },
@@ -2068,7 +2068,7 @@
       "nominal_beneficial_delivery_af": 4805.214481481551,
       "normalized_recourse_effort": 0.31249920117000796,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14233810000587255,
+      "runtime_seconds": 0.1435557999975572,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4805.214481481465
     },
@@ -2087,7 +2087,7 @@
       "nominal_beneficial_delivery_af": 5147.803950868455,
       "normalized_recourse_effort": 0.6249991466129077,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.15163419999589678,
+      "runtime_seconds": 0.1403482999994594,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4805.4789620569245
     },
@@ -2106,7 +2106,7 @@
       "nominal_beneficial_delivery_af": 5919.097890994499,
       "normalized_recourse_effort": 1.2499990269514052,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14004620000196155,
+      "runtime_seconds": 0.13964190000115195,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4941.347049202067
     },
@@ -2125,7 +2125,7 @@
       "nominal_beneficial_delivery_af": 7029.903502215846,
       "normalized_recourse_effort": 2.499997716712588,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1431330000050366,
+      "runtime_seconds": 0.1421593999984907,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5074.402299460211
     },
@@ -2144,7 +2144,7 @@
       "nominal_beneficial_delivery_af": 5570.121567003773,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12628869999025483,
+      "runtime_seconds": 0.13501630000246223,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5570.121009991619
     },
@@ -2163,7 +2163,7 @@
       "nominal_beneficial_delivery_af": 5649.267152123853,
       "normalized_recourse_effort": 0.31249906304843195,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13959050000994466,
+      "runtime_seconds": 0.13735240000096383,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5649.267152123867
     },
@@ -2182,7 +2182,7 @@
       "nominal_beneficial_delivery_af": 5877.2553463203785,
       "normalized_recourse_effort": 0.6249990225457541,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14438470000459347,
+      "runtime_seconds": 0.13772379999863915,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5649.793531599556
     },
@@ -2201,7 +2201,7 @@
       "nominal_beneficial_delivery_af": 6707.916578246144,
       "normalized_recourse_effort": 1.2499988955980186,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1405194999970263,
+      "runtime_seconds": 0.1374324999997043,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5730.165657571843
     },
@@ -2220,7 +2220,7 @@
       "nominal_beneficial_delivery_af": 7759.084371425142,
       "normalized_recourse_effort": 2.499997468493712,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14199080000980757,
+      "runtime_seconds": 0.13854229999924428,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5892.189349587101
     },
@@ -2239,7 +2239,7 @@
       "nominal_beneficial_delivery_af": 3559.834255409089,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12788780000119004,
+      "runtime_seconds": 0.12695399999938672,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3559.8338994256637
     },
@@ -2258,7 +2258,7 @@
       "nominal_beneficial_delivery_af": 3605.717755665318,
       "normalized_recourse_effort": 0.3124993273999043,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1423670999938622,
+      "runtime_seconds": 0.15897799999947893,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3605.717755665313
     },
@@ -2277,7 +2277,7 @@
       "nominal_beneficial_delivery_af": 4013.127219383608,
       "normalized_recourse_effort": 0.6249992589610017,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14245670000673272,
+      "runtime_seconds": 0.15689410000049975,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3605.7276155962563
     },
@@ -2296,7 +2296,7 @@
       "nominal_beneficial_delivery_af": 4654.991752026771,
       "normalized_recourse_effort": 1.249999146148139,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1426567000016803,
+      "runtime_seconds": 0.13906659999702242,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3781.010444518683
     },
@@ -2315,7 +2315,7 @@
       "nominal_beneficial_delivery_af": 5556.344194861316,
       "normalized_recourse_effort": 2.4999987069545924,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14353139999730047,
+      "runtime_seconds": 0.1425266999976884,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3808.3819552090686
     },
@@ -2334,7 +2334,7 @@
       "nominal_beneficial_delivery_af": 4428.449380187314,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1326755000045523,
+      "runtime_seconds": 0.1279543000018748,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4428.448937342375
     },
@@ -2353,7 +2353,7 @@
       "nominal_beneficial_delivery_af": 4485.360627932609,
       "normalized_recourse_effort": 0.3124991663633782,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14360320000560023,
+      "runtime_seconds": 0.13688689999980852,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4485.360627932591
     },
@@ -2372,7 +2372,7 @@
       "nominal_beneficial_delivery_af": 4790.2263253096135,
       "normalized_recourse_effort": 0.6249991119836177,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14426079999248032,
+      "runtime_seconds": 0.13763459999972838,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4485.816080421274
     },
@@ -2391,7 +2391,7 @@
       "nominal_beneficial_delivery_af": 5488.812049992884,
       "normalized_recourse_effort": 1.2499989910657516,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14710159999958705,
+      "runtime_seconds": 0.13781529999687336,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4614.830659102766
     },
@@ -2410,7 +2410,7 @@
       "nominal_beneficial_delivery_af": 6484.9807418342225,
       "normalized_recourse_effort": 2.499997746750041,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14376750000519678,
+      "runtime_seconds": 0.1424460000016552,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4737.018409318321
     },
@@ -2429,7 +2429,7 @@
       "nominal_beneficial_delivery_af": 5254.401337158983,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12524200000916608,
+      "runtime_seconds": 0.12468050000097719,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5254.400811718854
     },
@@ -2448,7 +2448,7 @@
       "nominal_beneficial_delivery_af": 5322.340332393373,
       "normalized_recourse_effort": 0.3124990131371592,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.13931079999019857,
+      "runtime_seconds": 0.13956300000063493,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5322.340332393312
     },
@@ -2467,7 +2467,7 @@
       "nominal_beneficial_delivery_af": 5524.662263429031,
       "normalized_recourse_effort": 0.6249989728165627,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.1421386000001803,
+      "runtime_seconds": 0.1343535999985761,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5323.241377439735
     },
@@ -2486,7 +2486,7 @@
       "nominal_beneficial_delivery_af": 6273.04316579163,
       "normalized_recourse_effort": 1.249998845061714,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.13861020001058932,
+      "runtime_seconds": 0.13690249999854132,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5399.0616964783985
     },
@@ -2505,7 +2505,7 @@
       "nominal_beneficial_delivery_af": 7314.574799207484,
       "normalized_recourse_effort": 2.4999974854073033,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14406829999643378,
+      "runtime_seconds": 0.1369592000010016,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5566.612383732176
     },
@@ -2524,7 +2524,7 @@
       "nominal_beneficial_delivery_af": 3930.1953385059587,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1281775999959791,
+      "runtime_seconds": 0.12816359999851556,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3930.1949454864257
     },
@@ -2543,7 +2543,7 @@
       "nominal_beneficial_delivery_af": 3986.945021104889,
       "normalized_recourse_effort": 0.3124993697117166,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1413742999866372,
+      "runtime_seconds": 0.14302130000214675,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3986.945021104889
     },
@@ -2562,7 +2562,7 @@
       "nominal_beneficial_delivery_af": 4470.512120210509,
       "normalized_recourse_effort": 0.624999301014126,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14240789999894332,
+      "runtime_seconds": 0.16458639999837033,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3986.9455471485767
     },
@@ -2581,7 +2581,7 @@
       "nominal_beneficial_delivery_af": 5215.4765766037035,
       "normalized_recourse_effort": 1.2499991894410711,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14200750000600237,
+      "runtime_seconds": 0.1425950999982888,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4182.903512830016
     },
@@ -2600,7 +2600,7 @@
       "nominal_beneficial_delivery_af": 6275.726777083235,
       "normalized_recourse_effort": 2.4999985524610415,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1665810000122292,
+      "runtime_seconds": 0.1406544000019494,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4210.581065058499
     },
@@ -2619,7 +2619,7 @@
       "nominal_beneficial_delivery_af": 4912.437051613313,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12809689999266993,
+      "runtime_seconds": 0.12444559999858029,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4912.43656036961
     },
@@ -2638,7 +2638,7 @@
       "nominal_beneficial_delivery_af": 4983.276100428521,
       "normalized_recourse_effort": 0.31249921532741737,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14171589999750722,
+      "runtime_seconds": 0.13775759999771253,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4983.27610042852
     },
@@ -2657,7 +2657,7 @@
       "nominal_beneficial_delivery_af": 5345.866757547629,
       "normalized_recourse_effort": 0.6249991606836909,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14147970000340138,
+      "runtime_seconds": 0.13997989999916172,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4983.417730804402
     },
@@ -2676,7 +2676,7 @@
       "nominal_beneficial_delivery_af": 6155.357520464122,
       "normalized_recourse_effort": 1.2499990416089704,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14040799999202136,
+      "runtime_seconds": 0.14053160000185017,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5122.784362702338
     },
@@ -2695,7 +2695,7 @@
       "nominal_beneficial_delivery_af": 7327.3930300373795,
       "normalized_recourse_effort": 2.4999983019580196,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1434754000074463,
+      "runtime_seconds": 0.14239599999928032,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5262.247212846016
     },
@@ -2714,7 +2714,7 @@
       "nominal_beneficial_delivery_af": 5892.652168846609,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1322358999896096,
+      "runtime_seconds": 0.13140560000101686,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5892.651579581392
     },
@@ -2733,7 +2733,7 @@
       "nominal_beneficial_delivery_af": 5977.546249486117,
       "normalized_recourse_effort": 0.3124990612625058,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1453429000102915,
+      "runtime_seconds": 0.14430260000153794,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5977.546249486042
     },
@@ -2752,7 +2752,7 @@
       "nominal_beneficial_delivery_af": 6219.160464300347,
       "normalized_recourse_effort": 0.6249990206725733,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14165710000088438,
+      "runtime_seconds": 0.13893989999996847,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5977.828983875915
     },
@@ -2771,7 +2771,7 @@
       "nominal_beneficial_delivery_af": 7093.108846585272,
       "normalized_recourse_effort": 1.2499988941069395,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1448207000066759,
+      "runtime_seconds": 0.14027830000122776,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 6060.535595048357
     },
@@ -2790,7 +2790,7 @@
       "nominal_beneficial_delivery_af": 8377.058728270458,
       "normalized_recourse_effort": 2.4999972751405175,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.15190340000845026,
+      "runtime_seconds": 0.14277940000101808,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 6311.912806112526
     },
@@ -2809,7 +2809,7 @@
       "nominal_beneficial_delivery_af": 3806.279852074008,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12881729999207892,
+      "runtime_seconds": 0.12540209999860963,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3806.2794714460215
     },
@@ -2828,7 +2828,7 @@
       "nominal_beneficial_delivery_af": 3858.827288795257,
       "normalized_recourse_effort": 0.312499356037767,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14191599999321625,
+      "runtime_seconds": 0.1400294999984908,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3858.8272887952558
     },
@@ -2847,7 +2847,7 @@
       "nominal_beneficial_delivery_af": 4316.0180059272925,
       "normalized_recourse_effort": 0.6249992874263112,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14182949998939876,
+      "runtime_seconds": 0.14204139999856125,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3858.8298430251475
     },
@@ -2866,7 +2866,7 @@
       "nominal_beneficial_delivery_af": 5027.048423783771,
       "normalized_recourse_effort": 1.2499991751976631,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14100390000385232,
+      "runtime_seconds": 0.14215219999823603,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4049.2976711962874
     },
@@ -2885,7 +2885,7 @@
       "nominal_beneficial_delivery_af": 6032.548620244609,
       "normalized_recourse_effort": 2.4999985974786325,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1447760000010021,
+      "runtime_seconds": 0.13953509999919333,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 4077.0475172244637
     },
@@ -2904,7 +2904,7 @@
       "nominal_beneficial_delivery_af": 4753.242057438805,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.13356080000812653,
+      "runtime_seconds": 0.1332016999986081,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4753.241582114599
     },
@@ -2923,7 +2923,7 @@
       "nominal_beneficial_delivery_af": 4819.370881392031,
       "normalized_recourse_effort": 0.3124991988534976,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1414723000052618,
+      "runtime_seconds": 0.1388290999966557,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4819.3708813920075
     },
@@ -2942,7 +2942,7 @@
       "nominal_beneficial_delivery_af": 5161.960350779002,
       "normalized_recourse_effort": 0.6249991442963595,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14145840000128374,
+      "runtime_seconds": 0.14304190000257222,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4819.635361967471
     },
@@ -2961,7 +2961,7 @@
       "nominal_beneficial_delivery_af": 5933.254290905044,
       "normalized_recourse_effort": 1.2499990246348676,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14087639999343082,
+      "runtime_seconds": 0.13913539999703062,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4955.503447696973
     },
@@ -2980,7 +2980,7 @@
       "nominal_beneficial_delivery_af": 7044.673437196216,
       "normalized_recourse_effort": 2.4999983526085843,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.1421355000056792,
+      "runtime_seconds": 0.13971999999921536,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 5089.172232963585
     },
@@ -2999,7 +2999,7 @@
       "nominal_beneficial_delivery_af": 5698.194469423778,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1285710999945877,
+      "runtime_seconds": 0.12598430000070948,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5698.193899604329
     },
@@ -3018,7 +3018,7 @@
       "nominal_beneficial_delivery_af": 5777.340055382609,
       "normalized_recourse_effort": 0.3124990420904786,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14181709999684244,
+      "runtime_seconds": 0.1432189000006474,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5777.340055382487
     },
@@ -3037,7 +3037,7 @@
       "nominal_beneficial_delivery_af": 6005.328249578923,
       "normalized_recourse_effort": 0.6249990015877792,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14186530000006314,
+      "runtime_seconds": 0.13947879999977886,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5777.866434858177
     },
@@ -3056,7 +3056,7 @@
       "nominal_beneficial_delivery_af": 6835.989481504776,
       "normalized_recourse_effort": 1.2499988746400474,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.14433089998783544,
+      "runtime_seconds": 0.13961339999877964,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5858.238548023188
     },
@@ -3075,7 +3075,7 @@
       "nominal_beneficial_delivery_af": 8055.855256606689,
       "normalized_recourse_effort": 2.4999981205791597,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14169129999936558,
+      "runtime_seconds": 0.13898069999777363,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 6100.353951255879
     },
@@ -3094,7 +3094,7 @@
       "nominal_beneficial_delivery_af": 3568.303817542703,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.12651140001253225,
+      "runtime_seconds": 0.12709470000118017,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3568.3034607123213
     },
@@ -3113,7 +3113,7 @@
       "nominal_beneficial_delivery_af": 3612.5878411402336,
       "normalized_recourse_effort": 0.3124993261421785,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.1400116999866441,
+      "runtime_seconds": 0.13848779999898397,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3612.5878411402114
     },
@@ -3132,7 +3132,7 @@
       "nominal_beneficial_delivery_af": 4019.9969611460588,
       "normalized_recourse_effort": 0.6249992577033694,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14085010001144838,
+      "runtime_seconds": 0.16601389999777894,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3612.597357358721
     },
@@ -3151,7 +3151,7 @@
       "nominal_beneficial_delivery_af": 4666.39290383791,
       "normalized_recourse_effort": 1.2499991440609155,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.142259300002479,
+      "runtime_seconds": 0.14247529999920516,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3792.4115951897065
     },
@@ -3170,7 +3170,7 @@
       "nominal_beneficial_delivery_af": 5568.095831179358,
       "normalized_recourse_effort": 2.499998689153497,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14430149999679998,
+      "runtime_seconds": 0.14147349999984726,
       "source_limit_scale": 0.8,
       "worst_scenario_beneficial_delivery_af": 3820.1335903519475
     },
@@ -3189,7 +3189,7 @@
       "nominal_beneficial_delivery_af": 4449.792819261362,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.1268498000135878,
+      "runtime_seconds": 0.12575029999788967,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4449.792374282078
     },
@@ -3208,7 +3208,7 @@
       "nominal_beneficial_delivery_af": 4506.704067006795,
       "normalized_recourse_effort": 0.3124991624559812,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14320219999353867,
+      "runtime_seconds": 0.13989829999991343,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4506.704067006637
     },
@@ -3227,7 +3227,7 @@
       "nominal_beneficial_delivery_af": 4811.5697643836575,
       "normalized_recourse_effort": 0.6249991080762446,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14066859999729786,
+      "runtime_seconds": 0.13861319999705302,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4507.159519495321
     },
@@ -3246,7 +3246,7 @@
       "nominal_beneficial_delivery_af": 5510.155489066943,
       "normalized_recourse_effort": 1.2499989871584265,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.141994399993564,
+      "runtime_seconds": 0.14041550000183634,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4636.174096042481
     },
@@ -3265,7 +3265,7 @@
       "nominal_beneficial_delivery_af": 6506.61768530488,
       "normalized_recourse_effort": 2.4999984613318644,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14362679999612737,
+      "runtime_seconds": 0.14051760000074864,
       "source_limit_scale": 1.0,
       "worst_scenario_beneficial_delivery_af": 4758.655350625284
     },
@@ -3284,7 +3284,7 @@
       "nominal_beneficial_delivery_af": 5325.535504334386,
       "normalized_recourse_effort": 0.0,
       "recourse_budget_scale": 0.0,
-      "runtime_seconds": 0.13045460000284947,
+      "runtime_seconds": 0.1380462000015541,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5325.5349717808385
     },
@@ -3303,7 +3303,7 @@
       "nominal_beneficial_delivery_af": 5393.474499568723,
       "normalized_recourse_effort": 0.31249900011463716,
       "recourse_budget_scale": 0.25,
-      "runtime_seconds": 0.14541810000082478,
+      "runtime_seconds": 0.13840630000049714,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5393.474499568716
     },
@@ -3322,7 +3322,7 @@
       "nominal_beneficial_delivery_af": 5595.796430604432,
       "normalized_recourse_effort": 0.6249989597939886,
       "recourse_budget_scale": 0.5,
-      "runtime_seconds": 0.14725340000586584,
+      "runtime_seconds": 0.14075120000052266,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5394.375544615138
     },
@@ -3341,7 +3341,7 @@
       "nominal_beneficial_delivery_af": 6344.177332967021,
       "normalized_recourse_effort": 1.2499988320391515,
       "recourse_budget_scale": 1.0,
-      "runtime_seconds": 0.1461853000073461,
+      "runtime_seconds": 0.1391220000004978,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5470.195856540374
     },
@@ -3360,7 +3360,7 @@
       "nominal_beneficial_delivery_af": 7442.435141148034,
       "normalized_recourse_effort": 2.4999982344156493,
       "recourse_budget_scale": 2.0,
-      "runtime_seconds": 0.14487750000262167,
+      "runtime_seconds": 0.13966380000056233,
       "source_limit_scale": 1.2,
       "worst_scenario_beneficial_delivery_af": 5694.472712886692
     }
@@ -3374,7 +3374,7 @@
       "maximum_lp_residual": 2.2737367544323206e-13,
       "minimum_guarantee": 0.3840922138847762,
       "nominal_beneficial_delivery_af": 5716.835907410902,
-      "runtime_seconds": 0.13413399999262765,
+      "runtime_seconds": 0.1505472999997437,
       "worst_scenario_beneficial_delivery_af": 4739.08565752826
     },
     {
@@ -3385,7 +3385,7 @@
       "maximum_lp_residual": 9.094947017729282e-13,
       "minimum_guarantee": 0.41868096458610105,
       "nominal_beneficial_delivery_af": 5859.460897970461,
-      "runtime_seconds": 0.15464580000843853,
+      "runtime_seconds": 0.1776663999989978,
       "worst_scenario_beneficial_delivery_af": 4881.710062141729
     },
     {
@@ -3396,7 +3396,7 @@
       "maximum_lp_residual": 2.2737367544323206e-13,
       "minimum_guarantee": -0.0,
       "nominal_beneficial_delivery_af": 2129.82535851,
-      "runtime_seconds": 0.12913600000320002,
+      "runtime_seconds": 0.13327850000132457,
       "worst_scenario_beneficial_delivery_af": 1469.5319746889272
     },
     {
@@ -3407,7 +3407,7 @@
       "maximum_lp_residual": 2.2737367544323206e-13,
       "minimum_guarantee": 0.4195107629370794,
       "nominal_beneficial_delivery_af": 5919.097890994506,
-      "runtime_seconds": 0.13790070000686683,
+      "runtime_seconds": 0.14476840000133961,
       "worst_scenario_beneficial_delivery_af": 4941.347049202074
     }
   ]

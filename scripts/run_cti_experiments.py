@@ -3,11 +3,16 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 from pathlib import Path
 from statistics import median
 from time import perf_counter
 
-from leximin.dag import (
+# Run from a clone without installing the package: put src/ on the import path first.
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
+
+from leximin.dag import (  # noqa: E402
     CTIBenchmark,
     CTIRLexSolution,
     disable_source,
@@ -16,7 +21,7 @@ from leximin.dag import (
     scale_benchmark,
     solve_cti_rlex,
     solve_robust_proportional,
-    solve_utilitarian,
+    solve_utilitarian_fair,
     subset_scenarios,
     timed_solve,
 )
@@ -283,7 +288,11 @@ def main() -> None:
     model = load_cti_benchmark(args.benchmark)
 
     method_runs: list[tuple[str, str, CTIBenchmark, object]] = [
-        ("UTIL-BR", "five-scenario bounded recourse", model, solve_utilitarian),
+        # UTIL-BR is reported after the fairness-optimistic tie-break described in
+        # Section 2.9: the delivery optimum is fixed first, and the plan with the
+        # highest common floor among the delivery-optimal plans is selected, so the
+        # reported guarantee is a property of the objective and not of the pivot rule.
+        ("UTIL-BR", "five-scenario bounded recourse", model, solve_utilitarian_fair),
         ("PROP-BR", "five-scenario common robust floor", model, solve_robust_proportional),
         ("CTI-RLex rigid", "five-scenario zero recourse", rigid_model(model), solve_cti_rlex),
         ("CTI-RLex proposed", "five-scenario bounded recourse", model, solve_cti_rlex),

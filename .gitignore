@@ -55,6 +55,8 @@
 !/scripts/run_cti_rlex.py
 !/scripts/run_cti_experiments.py
 !/scripts/run_cti_verification.py
+!/scripts/revision_experiments.py
+!/scripts/scalability_experiment.py
 !/scripts/equal_budget_experiment.py
 !/scripts/restriction_threshold_experiment.py
 !/scripts/create_results_artifacts.py

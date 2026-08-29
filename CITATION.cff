@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: >-
+  CTI-RLex: claimant-terminal-invariant robust lexicographic water allocation
+message: >-
+  If you use this software or either benchmark, please cite both the software and the
+  article it accompanies.
+type: software
+license: MIT
+version: 0.3.0
+repository-code: "https://github.com/Adilbaygh/CTI-RLex"
+abstract: >-
+  A linear-programming implementation of claimant-terminal-invariant robust lexicographic
+  allocation for lossy multi-source irrigation networks, with two open Utah benchmarks,
+  the comparator and sensitivity experiments reported in the accompanying article, and a
+  desktop benchmark analyzer.
+keywords:
+  - irrigation water allocation
+  - lexicographic max-min fairness
+  - multi-source networks
+  - water scarcity
+  - robust optimization
+  - bounded recourse
+  - computational benchmark
+authors:
+  - family-names: Kudaybergenov
+    given-names: Adilbay
+    email: adilbaygm@gmail.com
+    affiliation: >-
+      Karakalpak State University named after Berdakh, Department of Information Systems
+      and Technologies, Nukus, Uzbekistan
+  - family-names: Kabulov
+    given-names: Anvar
+    affiliation: >-
+      National University of Uzbekistan named after Mirzo Ulugbek, Department of
+      Information Security, Tashkent, Uzbekistan
+  - family-names: Kazimbetova
+    given-names: Mukhabbad
+    affiliation: >-
+      Karakalpak State University named after Berdakh, Department of Information Systems
+      and Technologies, Nukus, Uzbekistan
+  - family-names: Ametova
+    given-names: Gulsara
+    affiliation: >-
+      "Tashkent Institute of Irrigation and Agricultural Mechanization Engineers"
+      National Research University, Department of Digital Technologies and Artificial
+      Intelligence, Tashkent, Uzbekistan
+  - family-names: Ispanova
+    given-names: Jadira
+    affiliation: >-
+      Karakalpak State University named after Berdakh, Department of Information Systems
+      and Technologies, Nukus, Uzbekistan

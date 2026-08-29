@@ -156,28 +156,63 @@ when results are interpreted.
 ## Reproducing the published results
 
 Every number reported in the article is produced by a script in `scripts/` and written to
-a file in `results/`. From the repository root:
+a file in `results/`. Run them from the repository root, in this order:
 
 ```powershell
-python -B scripts\run_cti_rlex.py             # base solution
-python -B scripts\run_cti_experiments.py      # comparators, ablation, 135-case factorial
-python -B scripts\run_cti_verification.py     # residual and representation audits
-python -B scripts\equal_budget_experiment.py  # guarantee vector under three budget regimes
-python -B scripts\restriction_threshold_experiment.py  # severity sweep of the canal restriction
-python -B scripts\record_environment.py       # machine and solver versions for the timings
+# 1. base solution
+python -B scripts\run_cti_rlex.py DATA\LittleBearRiver_2025_Benchmark\benchmark.json `
+    --output results\cti_rlex_base.json
+
+# 2. comparators, source ablation, 135-case factorial, scalability
+python -B scripts\run_cti_experiments.py DATA\LittleBearRiver_2025_Benchmark\benchmark.json `
+    --sensitivity-cases DATA\LittleBearRiver_2025_Benchmark\data\sensitivity_cases.csv `
+    --output results\cti_rlex_experiments.json
+
+# 3. residual, feasibility and terminal-representation audits
+python -B scripts\run_cti_verification.py DATA\LittleBearRiver_2025_Benchmark\benchmark.json `
+    --output results\cti_rlex_verification.json
+
+# 4. both instances: lexicographic vector against a common floor
+python -B scripts\revision_experiments.py
+
+# 5. guarantee vector under three recourse-budget regimes
+python -B scripts\equal_budget_experiment.py
+
+# 6. severity sweep of the canal-restriction scenario, then the scalability sweep
+python -B scripts\restriction_threshold_experiment.py
+python -B scripts\scalability_experiment.py
+
+# 7. published CSV tables and PNG/SVG figures, then Figure 4 and a resolution check
+python -B scripts\create_results_artifacts.py
+python -B scripts\update_figure4_two_panel.py
+python -B scripts\verify_publication_figures.py
+
+# 8. machine and solver versions behind the reported solve times
+python -B scripts\record_environment.py
 ```
+
+Run them in this order: step 7 reads the files written by steps 1 to 3. Every script puts
+`src/` on the import path itself, so a fresh clone works without installing the package
+first.
 
 The mapping from article object to file is:
 
 | Article object | Script | Result file |
 |---|---|---|
 | Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
-| Table 4, source ablation | `run_cti_experiments.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
-| Table 3, Figure 4(b), Supplementary S6, S8, S9 | `results/discrimination/k1.py` | `results/revision_experiments.json` |
+| Table 4 and Supplementary S16, source ablation | `run_cti_experiments.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
+| Table 3, Figure 4(b), Supplementary S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json`, `results/cache_valley_per_claimant.json` |
 | Supplementary S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
 | Supplementary S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
-| Supplementary S13, S14 | `run_cti_experiments.py` | `results/scalability_cache_valley.json` |
+| Supplementary S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
+| Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
+| Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
+| Figure resolution and font check | `verify_publication_figures.py` | printed report, no file written |
 | Reported solve times | `record_environment.py` | `results/environment.json` |
+
+`results/discrimination/k1.py` and `k1b.py` are the exploratory scripts that first
+established the discrimination result. They print to the terminal and write nothing; the
+published file is produced by `scripts/revision_experiments.py`.
 
 ## Reproducibility checks
 
@@ -194,10 +229,14 @@ A benchmark rebuild is itself a regression test. Re-running a generator against 
 input layers must leave that benchmark's `checksums_sha256.txt` untouched:
 
 ```powershell
+# Point LEXIMIN_DATASETS at your own copy of the open Utah layers; the path below is only
+# an example. The layers themselves are listed in the benchmark provenance files.
 $env:LEXIMIN_DATASETS = "C:\DataSETs"
 python -B DATA\LittleBearRiver_2025_Benchmark\generate_benchmark.py
 git diff --exit-code DATA/LittleBearRiver_2025_Benchmark/checksums_sha256.txt
 ```
+
+This check covers the Little Bear River instance, whose generator is published here.
 
 ## Repository layout
 
@@ -210,7 +249,13 @@ git diff --exit-code DATA/LittleBearRiver_2025_Benchmark/checksums_sha256.txt
   CSV layers, provenance, checksums and the deterministic generator that builds it from
   the open Utah layers;
 - `DATA/CacheValley_2025_Benchmark/` — the ten-claimant county-wide benchmark with the
-  same layer structure, its selection and discovery records and its validation report;
+  same layer structure, its selection and discovery records and its validation report.
+  Its canonical JSON, normalized CSV layers, checksums and connector accept/reject log are
+  published; the county-scale discovery script that assembled it from the open Utah layers
+  is not part of this release, so the byte-for-byte rebuild check below applies to the
+  Little Bear River instance only;
+- `DATA/benchmarks_dag/` — the benchmark schema (`SCHEMA_DAG.md`) and the compact DAG
+  export of the Cache Valley instance used by the desktop application;
 - `scripts/` — the experiment scripts that produce the published numbers and figures;
 - `results/` — the result files those scripts write, together with the published tables
   and figures.

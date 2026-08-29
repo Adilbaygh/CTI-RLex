@@ -5,6 +5,6 @@ Terminal-record invariance,m=8,5.551e-17,<=1.0e-8,Pass
 Base LP equality residual,5 scenarios,2.274e-13,<=1.0e-7,Pass
 Base LP inequality violation,5 scenarios,3.411e-13,<=1.0e-7,Pass
 Full-factorial LP residual,135 cases,3.179e-10,<=1.0e-7,Pass
-LP size and solve time,1 scenario(s),149 var; 167 con; 0.029 s,3 repeats,Reported
-LP size and solve time,3 scenario(s),509 var; 637 con; 0.087 s,3 repeats,Reported
-LP size and solve time,5 scenario(s),869 var; 1107 con; 0.140 s,3 repeats,Reported
+LP size and solve time,1 scenario(s),149 var; 167 con; 0.031 s,3 repeats,Reported
+LP size and solve time,3 scenario(s),509 var; 637 con; 0.091 s,3 repeats,Reported
+LP size and solve time,5 scenario(s),869 var; 1107 con; 0.138 s,3 repeats,Reported

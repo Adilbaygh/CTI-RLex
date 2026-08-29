@@ -22,7 +22,10 @@ import matplotlib.pyplot as plt
 REPO = Path(__file__).resolve().parents[1]
 EXPERIMENTS = REPO / "results" / "cti_rlex_experiments.json"
 REVISION = REPO / "results" / "revision_experiments.json"
-OUTPUT = REPO / "build" / "fig"
+# The published figure set lives beside the other artifacts so that a reader can find it
+# from the repository; the article numbers this panel pair Figure 4.
+OUTPUT = REPO / "results" / "figures"
+STEM = "Figure_6_method_tradeoff_two_panel"
 
 COMPACT_14_CM_FONT_SCALE = 7.1 * 2.54 / 14.0
 
@@ -172,10 +175,11 @@ def main() -> None:
     right.text(-0.14, 1.02, "(b)", transform=right.transAxes, fontweight="bold")
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUTPUT / "figure4_two_panel.png", dpi=600, bbox_inches="tight", pad_inches=0.04)
-    fig.savefig(OUTPUT / "figure4_two_panel.svg", bbox_inches="tight", pad_inches=0.04)
+    fig.savefig(OUTPUT / f"{STEM}.png", dpi=600, bbox_inches="tight", pad_inches=0.04)
+    fig.savefig(OUTPUT / f"{STEM}.svg", bbox_inches="tight", pad_inches=0.04)
     plt.close(fig)
-    print("wrote", OUTPUT / "figure4_two_panel.png")
+    print("wrote", OUTPUT / f"{STEM}.png")
+    print("wrote", OUTPUT / f"{STEM}.svg")
 
 
 if __name__ == "__main__":
