@@ -1,7 +1,8 @@
 # Little Bear River 2025 CTI-RLex benchmark
 
-This directory contains a reproducible, data-informed benchmark for the CTI-RLex model
-in `Model/MATHEMATICAL_MODEL.md`. It represents selected Hyrum, Paradise and Porcupine
+This directory contains a reproducible, data-informed benchmark for the CTI-RLex model.
+The model is defined in the accompanying article and its schema is documented in
+`DATA/benchmarks_dag/SCHEMA_DAG.md`. It represents selected Hyrum, Paradise and Porcupine
 Highline distribution paths in Cache Valley, Utah. The canonical input is
 `benchmark.json`; normalized CSV tables contain the same inputs for Python, R, GIS and
 supplementary-material workflows.
@@ -96,10 +97,17 @@ secondary tie-break after the complete robust guarantee vector is fixed.
 - `checksums_sha256.txt` — SHA-256 integrity hashes;
 - `generate_benchmark.py` and `validate_benchmark.py` — deterministic build and
   dependency-free validation;
-- `generate_cache_valley_benchmark.py` — driver that reuses every routine of
-  `generate_benchmark.py` but selects, from the same open layers, every Cache Valley
-  irrigation company that owns an official delivery terminal; it writes a separate
-  multi-claimant instance and never modifies this one;
+- the ten-claimant county-wide instance lives in `../CacheValley_2025_Benchmark/` and was
+  assembled from the same open layers under the same schema and selection rules by a
+  county-scale discovery driver that is **not part of this release**; that instance is
+  therefore distributed as a canonical benchmark document with its normalized layers,
+  selection and connector records, validation report and checksums, and the byte-for-byte
+  rebuild check below applies to this instance only. The acyclicity repair it applied is
+  the `acyclic_connector_selection` routine in `generate_benchmark.py`: candidates are
+  ordered by decreasing number of dependent candidate paths, then by increasing tail-node
+  identifier, then by increasing head-node identifier, and each is accepted only while the
+  graph stays acyclic, so re-sorting the published rejection list with that key reproduces
+  the recorded order exactly;
 - `little_bear_river_2025_benchmark_map.png` and `.svg` — publication map;
 - `data/claimants.csv`, `claimant_terminals.csv`, `terminal_parameters.csv` — claimant,
   terminal-record and application-efficiency inputs;
