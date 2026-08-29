@@ -20,6 +20,9 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO / "scripts"))
+
+from timing_protocol import timed  # noqa: E402
 
 from leximin.dag.experiments import (  # noqa: E402
     lp_dimensions,
@@ -50,7 +53,7 @@ def first_difference(left: list[float], right: list[float], tolerance: float = 1
 
 def instance_report(path: Path) -> dict:
     model = load_cti_benchmark(path)
-    rlex, rlex_seconds = timed_solve(solve_cti_rlex, model)
+    rlex, rlex_timing = timed(lambda: solve_cti_rlex(model))
     prop, _ = timed_solve(solve_robust_proportional, model)
     utilitarian, _ = timed_solve(solve_utilitarian_fair, model)
     # The raw vertex the plain delivery maximization happens to return. Reported beside
@@ -76,7 +79,8 @@ def instance_report(path: Path) -> dict:
             "sorted_rho": rlex_sorted,
             "min": min(rlex_sorted),
             "nominal_af": rlex.nominal_beneficial_delivery,
-            "runtime_s": rlex_seconds,
+            **rlex_timing,
+            "runtime_s": rlex_timing["median_runtime_seconds"],
             "max_residual": max(rlex.residuals.values(), default=0.0),
         },
         "prop_br": {

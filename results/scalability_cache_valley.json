@@ -8,7 +8,18 @@
   "nonzeros": 904,
   "levels": 1,
   "lp_solves": 6,
-  "runtime_s": 0.043070399999123765,
+  "repeats": 5,
+  "median_runtime_seconds": 0.0424397000024328,
+  "min_runtime_seconds": 0.04214720000163652,
+  "max_runtime_seconds": 0.04566039999917848,
+  "runtime_seconds_repeats": [
+   0.04566039999917848,
+   0.042472699999052566,
+   0.04214720000163652,
+   0.04225360000418732,
+   0.0424397000024328
+  ],
+  "runtime_s": 0.0424397000024328,
   "min_rho": 0.7284612297930854,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -22,7 +33,18 @@
   "nonzeros": 4104,
   "levels": 1,
   "lp_solves": 6,
-  "runtime_s": 0.12347610000142595,
+  "repeats": 5,
+  "median_runtime_seconds": 0.1173214000009466,
+  "min_runtime_seconds": 0.11681250000401633,
+  "max_runtime_seconds": 0.12002290000236826,
+  "runtime_seconds_repeats": [
+   0.12002290000236826,
+   0.11690719999751309,
+   0.11681250000401633,
+   0.1173214000009466,
+   0.11868549999780953
+  ],
+  "runtime_s": 0.1173214000009466,
   "min_rho": 0.6740982692651426,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -36,7 +58,18 @@
   "nonzeros": 7304,
   "levels": 1,
   "lp_solves": 6,
-  "runtime_s": 0.19866860000183806,
+  "repeats": 5,
+  "median_runtime_seconds": 0.21671510000305716,
+  "min_runtime_seconds": 0.19185019999713404,
+  "max_runtime_seconds": 0.327399299996614,
+  "runtime_seconds_repeats": [
+   0.19834589999663876,
+   0.21671510000305716,
+   0.19185019999713404,
+   0.327399299996614,
+   0.22957619999942835
+  ],
+  "runtime_s": 0.21671510000305716,
   "min_rho": 0.6740982692651426,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -50,7 +83,18 @@
   "nonzeros": 968,
   "levels": 3,
   "lp_solves": 13,
-  "runtime_s": 0.09793440000066767,
+  "repeats": 5,
+  "median_runtime_seconds": 0.11007680000329856,
+  "min_runtime_seconds": 0.09536529999604682,
+  "max_runtime_seconds": 0.1319597000037902,
+  "runtime_seconds_repeats": [
+   0.11048079999454785,
+   0.1319597000037902,
+   0.10551359999954002,
+   0.09536529999604682,
+   0.11007680000329856
+  ],
+  "runtime_s": 0.11007680000329856,
   "min_rho": 0.7284612297930854,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -64,7 +108,18 @@
   "nonzeros": 4288,
   "levels": 3,
   "lp_solves": 14,
-  "runtime_s": 0.2922763999995368,
+  "repeats": 5,
+  "median_runtime_seconds": 0.3174443000025349,
+  "min_runtime_seconds": 0.3066590000016731,
+  "max_runtime_seconds": 0.3506924999965122,
+  "runtime_seconds_repeats": [
+   0.3506924999965122,
+   0.3209744000050705,
+   0.3174443000025349,
+   0.3102532999982941,
+   0.3066590000016731
+  ],
+  "runtime_s": 0.3174443000025349,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -78,7 +133,18 @@
   "nonzeros": 7608,
   "levels": 3,
   "lp_solves": 14,
-  "runtime_s": 0.47713459999795305,
+  "repeats": 5,
+  "median_runtime_seconds": 0.4965732999989996,
+  "min_runtime_seconds": 0.4663679000004777,
+  "max_runtime_seconds": 0.5759221999978763,
+  "runtime_seconds_repeats": [
+   0.4792364000022644,
+   0.5759221999978763,
+   0.4965732999989996,
+   0.5074868999945465,
+   0.4663679000004777
+  ],
+  "runtime_s": 0.4965732999989996,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -92,7 +158,18 @@
   "nonzeros": 1032,
   "levels": 3,
   "lp_solves": 19,
-  "runtime_s": 0.14286390000052052,
+  "repeats": 5,
+  "median_runtime_seconds": 0.14280899999721441,
+  "min_runtime_seconds": 0.1407104000027175,
+  "max_runtime_seconds": 0.15368080000189366,
+  "runtime_seconds_repeats": [
+   0.15368080000189366,
+   0.14294800000061514,
+   0.1407104000027175,
+   0.14280899999721441,
+   0.14240409999911208
+  ],
+  "runtime_s": 0.14280899999721441,
   "min_rho": 0.7284612297930854,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -106,7 +183,18 @@
   "nonzeros": 4472,
   "levels": 4,
   "lp_solves": 22,
-  "runtime_s": 0.48334260000046925,
+  "repeats": 5,
+  "median_runtime_seconds": 0.48112810000020545,
+  "min_runtime_seconds": 0.47354099999938626,
+  "max_runtime_seconds": 0.5507910000014817,
+  "runtime_seconds_repeats": [
+   0.47354099999938626,
+   0.4806966999967699,
+   0.48112810000020545,
+   0.5235042999993311,
+   0.5507910000014817
+  ],
+  "runtime_s": 0.48112810000020545,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -120,7 +208,18 @@
   "nonzeros": 7912,
   "levels": 4,
   "lp_solves": 22,
-  "runtime_s": 0.8396986000007018,
+  "repeats": 5,
+  "median_runtime_seconds": 0.7970512000028975,
+  "min_runtime_seconds": 0.7737759000010556,
+  "max_runtime_seconds": 0.8030896999989636,
+  "runtime_seconds_repeats": [
+   0.8017408000014257,
+   0.7970512000028975,
+   0.7775623000052292,
+   0.7737759000010556,
+   0.8030896999989636
+  ],
+  "runtime_s": 0.7970512000028975,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -134,7 +233,18 @@
   "nonzeros": 1096,
   "levels": 3,
   "lp_solves": 25,
-  "runtime_s": 0.193385099999432,
+  "repeats": 5,
+  "median_runtime_seconds": 0.1947758000023896,
+  "min_runtime_seconds": 0.19329759999527596,
+  "max_runtime_seconds": 0.19800270000268938,
+  "runtime_seconds_repeats": [
+   0.19800270000268938,
+   0.19329759999527596,
+   0.1947758000023896,
+   0.1932978999975603,
+   0.19689579999976559
+  ],
+  "runtime_s": 0.1947758000023896,
   "min_rho": 0.7284612297930854,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -148,7 +258,18 @@
   "nonzeros": 4656,
   "levels": 6,
   "lp_solves": 35,
-  "runtime_s": 0.8101663999987068,
+  "repeats": 5,
+  "median_runtime_seconds": 0.7917239000016707,
+  "min_runtime_seconds": 0.78778830000374,
+  "max_runtime_seconds": 0.8109739999999874,
+  "runtime_seconds_repeats": [
+   0.7969682999973884,
+   0.7917239000016707,
+   0.8109739999999874,
+   0.78778830000374,
+   0.7879695000010543
+  ],
+  "runtime_s": 0.7917239000016707,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -162,7 +283,18 @@
   "nonzeros": 8216,
   "levels": 6,
   "lp_solves": 36,
-  "runtime_s": 1.380934900000284,
+  "repeats": 5,
+  "median_runtime_seconds": 1.3659989000007045,
+  "min_runtime_seconds": 1.3441174999970826,
+  "max_runtime_seconds": 1.411326099994767,
+  "runtime_seconds_repeats": [
+   1.4039013000001432,
+   1.411326099994767,
+   1.3659989000007045,
+   1.3614188999999897,
+   1.3441174999970826
+  ],
+  "runtime_s": 1.3659989000007045,
   "min_rho": 0.13744468899532894,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -176,7 +308,18 @@
   "nonzeros": 1160,
   "levels": 4,
   "lp_solves": 39,
-  "runtime_s": 0.32114919999730773,
+  "repeats": 5,
+  "median_runtime_seconds": 0.32256239999696845,
+  "min_runtime_seconds": 0.3212234000020544,
+  "max_runtime_seconds": 0.3234413000027416,
+  "runtime_seconds_repeats": [
+   0.3234413000027416,
+   0.3212234000020544,
+   0.32256239999696845,
+   0.3229983999990509,
+   0.3216184999982943
+  ],
+  "runtime_s": 0.32256239999696845,
   "min_rho": 0.1611247034725207,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -190,7 +333,18 @@
   "nonzeros": 4840,
   "levels": 7,
   "lp_solves": 50,
-  "runtime_s": 1.2040598000021419,
+  "repeats": 5,
+  "median_runtime_seconds": 1.209894899999199,
+  "min_runtime_seconds": 1.1855236000046716,
+  "max_runtime_seconds": 1.2153092000007746,
+  "runtime_seconds_repeats": [
+   1.2140457999994396,
+   1.209894899999199,
+   1.1855236000046716,
+   1.2153092000007746,
+   1.1952773000011803
+  ],
+  "runtime_s": 1.209894899999199,
   "min_rho": 0.056393646245954054,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -204,7 +358,18 @@
   "nonzeros": 8520,
   "levels": 7,
   "lp_solves": 50,
-  "runtime_s": 2.0836954999977024,
+  "repeats": 5,
+  "median_runtime_seconds": 2.0624194000047282,
+  "min_runtime_seconds": 2.0488217000020086,
+  "max_runtime_seconds": 2.0745941000059247,
+  "runtime_seconds_repeats": [
+   2.0745941000059247,
+   2.0488217000020086,
+   2.0524443999966024,
+   2.067117899998266,
+   2.0624194000047282
+  ],
+  "runtime_s": 2.0624194000047282,
   "min_rho": 0.056393646245954054,
   "benchmark": "cache_valley_v3",
   "edges": 69
@@ -218,7 +383,18 @@
   "nonzeros": 2686,
   "levels": 2,
   "lp_solves": 9,
-  "runtime_s": 0.13589299999875948,
+  "repeats": 5,
+  "median_runtime_seconds": 0.13795699999900535,
+  "min_runtime_seconds": 0.13613340000301832,
+  "max_runtime_seconds": 0.18447089999972377,
+  "runtime_seconds_repeats": [
+   0.13795699999900535,
+   0.13613340000301832,
+   0.137727300003462,
+   0.17185269999754382,
+   0.18447089999972377
+  ],
+  "runtime_s": 0.13795699999900535,
   "min_rho": 0.41951076293707945,
   "benchmark": "little_bear_v2",
   "edges": 19

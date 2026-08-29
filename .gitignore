@@ -48,10 +48,13 @@
 !/DATA/benchmarks_dag/**
 
 # ---------------------------------------------------------------- experiment scripts
-# Only the scripts that produce published numbers and figures. The manuscript-authoring
-# tools in this directory operate on the Word files and are working code, not results.
+# Only the scripts that produce published numbers and figures, plus the shared timing
+# protocol they all import. The manuscript-authoring tools in this directory operate on
+# the Word files and are working code, not results.
 !/scripts/
 /scripts/*
+!/scripts/timing_protocol.py
+!/scripts/rerun_all_results.ps1
 !/scripts/run_cti_rlex.py
 !/scripts/run_cti_experiments.py
 !/scripts/run_cti_verification.py

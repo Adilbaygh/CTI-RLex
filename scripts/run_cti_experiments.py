@@ -5,13 +5,13 @@ import csv
 import json
 import sys
 from pathlib import Path
-from statistics import median
-from time import perf_counter
 
 # Run from a clone without installing the package: put src/ on the import path first.
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO / "scripts"))
 
+from timing_protocol import REPEATS as TIMING_REPEATS, timed  # noqa: E402
 from leximin.dag import (  # noqa: E402
     CTIBenchmark,
     CTIRLexSolution,
@@ -23,7 +23,6 @@ from leximin.dag import (  # noqa: E402
     solve_robust_proportional,
     solve_utilitarian_fair,
     subset_scenarios,
-    timed_solve,
 )
 
 
@@ -54,7 +53,7 @@ def method_summary(
     scope: str,
     model: CTIBenchmark,
     solution: CTIRLexSolution,
-    runtime_seconds: float,
+    timing: dict,
 ) -> dict[str, object]:
     totals = scenario_delivery_totals(model, solution)
     guarantees = dict(solution.guarantees)
@@ -72,7 +71,8 @@ def method_summary(
         "scenario_beneficial_delivery_af": totals,
         "worst_scenario_beneficial_delivery_af": min(totals.values()),
         "normalized_recourse_effort": solution.normalized_recourse_effort,
-        "runtime_seconds": runtime_seconds,
+        **timing,
+        "runtime_seconds": timing["median_runtime_seconds"],
         "maximum_lp_residual": maximum_residual(solution),
     }
 
@@ -201,14 +201,12 @@ def read_sensitivity_cases(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(stream))
 
 
-def repeated_timed_solve(solver, model: CTIBenchmark, repeats: int) -> tuple[CTIRLexSolution, float]:
-    runtimes: list[float] = []
-    solution: CTIRLexSolution | None = None
-    for _ in range(repeats):
-        solution, runtime = timed_solve(solver, model)
-        runtimes.append(runtime)
+def repeated_timed_solve(solver, model: CTIBenchmark, repeats: int) -> tuple[CTIRLexSolution, dict]:
+    """Time one solve under the shared protocol of scripts/timing_protocol.py."""
+
+    solution, timing = timed(lambda: solver(model), repeats)
     assert solution is not None
-    return solution, median(runtimes)
+    return solution, timing
 
 
 def run_sensitivity(
@@ -229,7 +227,7 @@ def run_sensitivity(
             source_limit_scale=factors["source_limit_scale"],
             recourse_budget_scale=factors["recourse_budget_scale"],
         )
-        solution, runtime = timed_solve(solve_cti_rlex, scaled)
+        solution, timing = timed(lambda: solve_cti_rlex(scaled))
         totals = scenario_delivery_totals(scaled, solution)
         records.append(
             {
@@ -241,7 +239,8 @@ def run_sensitivity(
                 "nominal_beneficial_delivery_af": solution.nominal_beneficial_delivery,
                 "worst_scenario_beneficial_delivery_af": min(totals.values()),
                 "normalized_recourse_effort": solution.normalized_recourse_effort,
-                "runtime_seconds": runtime,
+                **timing,
+                "runtime_seconds": timing["median_runtime_seconds"],
                 "maximum_lp_residual": maximum_residual(solution),
             }
         )
@@ -250,26 +249,20 @@ def run_sensitivity(
     return records
 
 
-def run_scalability(model: CTIBenchmark, repeats: int = 3) -> list[dict[str, object]]:
+def run_scalability(model: CTIBenchmark, repeats: int = TIMING_REPEATS) -> list[dict[str, object]]:
     records: list[dict[str, object]] = []
     counts = sorted({1, min(3, len(model.scenarios)), len(model.scenarios)})
     for count in counts:
         scenarios = (model.nominal_scenario,) + tuple(model.contingency_scenarios[: count - 1])
         reduced = subset_scenarios(model, scenarios)
-        runtimes: list[float] = []
-        solution: CTIRLexSolution | None = None
-        for _ in range(repeats):
-            started = perf_counter()
-            solution = solve_cti_rlex(reduced)
-            runtimes.append(perf_counter() - started)
+        solution, timing = timed(lambda: solve_cti_rlex(reduced), repeats)
         assert solution is not None
         records.append(
             {
                 "scenario_count": count,
                 "scenarios": list(scenarios),
                 **lp_dimensions(reduced),
-                "runtime_seconds_repeats": runtimes,
-                "median_runtime_seconds": median(runtimes),
+                **timing,
                 "minimum_guarantee": min(solution.guarantees.values()),
                 "maximum_lp_residual": maximum_residual(solution),
             }
@@ -305,12 +298,12 @@ def main() -> None:
     ]
     methods: list[dict[str, object]] = []
     solutions: dict[str, CTIRLexSolution] = {}
-    method_runtime_repeats = 3
+    method_runtime_repeats = TIMING_REPEATS
     for method, scope, item_model, solver in method_runs:
-        solution, runtime = repeated_timed_solve(solver, item_model, method_runtime_repeats)
+        solution, timing = repeated_timed_solve(solver, item_model, method_runtime_repeats)
         solutions[method] = solution
-        methods.append(method_summary(method, scope, item_model, solution, runtime))
-        print(f"method={method} runtime={runtime:.4f}s", flush=True)
+        methods.append(method_summary(method, scope, item_model, solution, timing))
+        print(f"method={method} runtime={timing['median_runtime_seconds']:.4f}s", flush=True)
 
     proposed = solutions["CTI-RLex proposed"]
     proposed_summary = next(row for row in methods if row["method"] == "CTI-RLex proposed")
@@ -320,7 +313,7 @@ def main() -> None:
     ablation: list[dict[str, object]] = []
     for source in model.sources:
         ablated = disable_source(model, source.source_id)
-        solution, runtime = timed_solve(solve_cti_rlex, ablated)
+        solution, timing = timed(lambda: solve_cti_rlex(ablated))
         totals = scenario_delivery_totals(ablated, solution)
         ablation.append(
             {
@@ -336,7 +329,8 @@ def main() -> None:
                     - proposed_summary["nominal_beneficial_delivery_af"]
                 ),
                 "worst_scenario_beneficial_delivery_af": min(totals.values()),
-                "runtime_seconds": runtime,
+                **timing,
+                "runtime_seconds": timing["median_runtime_seconds"],
                 "maximum_lp_residual": maximum_residual(solution),
             }
         )

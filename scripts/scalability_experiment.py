@@ -19,11 +19,9 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from statistics import median
-from time import perf_counter
-
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO / "scripts"))
 
 from leximin.dag.experiments import (  # noqa: E402
     lp_dimensions,
@@ -32,6 +30,7 @@ from leximin.dag.experiments import (  # noqa: E402
 )
 from leximin.dag.io import load_cti_benchmark  # noqa: E402
 from leximin.dag.solver import solve_cti_rlex  # noqa: E402
+from timing_protocol import timed  # noqa: E402
 
 OUTPUT = REPO / "results" / "scalability_cache_valley.json"
 CACHE_VALLEY = REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json"
@@ -39,7 +38,6 @@ LITTLE_BEAR = REPO / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json
 
 CLAIMANT_COUNTS = (2, 4, 6, 8, 10)
 SCENARIO_COUNTS = (1, 3, 5)
-REPEATS = 3
 SECONDARY_STAGES = 3
 
 
@@ -55,11 +53,7 @@ def linear_programs(solution) -> int:
 
 
 def measure(model, benchmark: str) -> dict:
-    runtimes = []
-    for _ in range(REPEATS):
-        start = perf_counter()
-        solution = solve_cti_rlex(model)
-        runtimes.append(perf_counter() - start)
+    solution, timing = timed(lambda: solve_cti_rlex(model))
     dimensions = lp_dimensions(model)
     return {
         "claimants": len(model.claimants),
@@ -70,7 +64,8 @@ def measure(model, benchmark: str) -> dict:
         "nonzeros": dimensions["nonzeros"],
         "levels": len(solution.leximin_levels),
         "lp_solves": linear_programs(solution),
-        "runtime_s": median(runtimes),
+        **timing,
+        "runtime_s": timing["median_runtime_seconds"],
         "min_rho": min(solution.guarantees.values()),
         "benchmark": benchmark,
         "edges": len(model.edges),
