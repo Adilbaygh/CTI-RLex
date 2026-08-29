@@ -269,6 +269,21 @@ Benchmark generators read the open-data root from `LEXIMIN_DATASETS`, falling ba
 Generated exports are user-selected run artifacts and are not required by the source
 repository.
 
+## Citation
+
+Every release of this repository is archived on Zenodo. The concept DOI below is stable
+and always resolves to the most recent version:
+
+**https://doi.org/10.5281/zenodo.22160054**
+
+Each individual release also receives its own version DOI, which is immutable. The
+accompanying article cites a version DOI together with the exact commit hash, so that the
+numbers reported there can be traced to one archived state. Use the concept DOI to refer
+to the software in general, and a version DOI to refer to a specific archived state.
+
+Machine-readable citation metadata is in `CITATION.cff`. If you use this software or
+either benchmark, please cite both the software and the accompanying article.
+
 ## License
 
 This project is distributed under the MIT License.
