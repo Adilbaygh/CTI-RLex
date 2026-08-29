@@ -344,7 +344,11 @@ def main() -> None:
             "sensitivity_case_count": len(sensitivity),
             "sensitivity_design": "3x3x3x5 full factorial",
             "method_runtime_repeats": method_runtime_repeats,
-            "scalability_runtime_repeats": 3,
+            # Both figures come from the one protocol in timing_protocol.py. This was a
+            # hardcoded 3 that survived the move to five repeats, so the metadata block
+            # contradicted the per-row "repeats" it described; derive it from the constant
+            # so the two cannot disagree again.
+            "scalability_runtime_repeats": TIMING_REPEATS,
         },
         "method_comparison": methods,
         "derived_indicators": {

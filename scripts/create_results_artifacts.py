@@ -274,7 +274,10 @@ def build_table_5(verification: dict, experiments: dict) -> None:
                     f'{item["variables"]} var; {item["equality_constraints"] + item["inequality_constraints"]} con; '
                     f'{item["median_runtime_seconds"]:.3f} s'
                 ),
-                "criterion": "3 repeats",
+                # Read the repeat count the run itself recorded. This was a hardcoded
+                # "3 repeats" that survived the move to the single five-repeat protocol, so
+                # the published CSV contradicted both the manuscript and its own timings.
+                "criterion": f'{item["repeats"]} repeats',
                 "outcome": "Reported",
             }
         )

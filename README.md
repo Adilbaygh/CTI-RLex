@@ -214,6 +214,22 @@ The mapping from article object to file is:
 established the discrimination result. They print to the terminal and write nothing; the
 published file is produced by `scripts/revision_experiments.py`.
 
+`scripts/rerun_all_results.ps1` runs the whole sequence above in order and prints the values
+that a correct rerun must reproduce unchanged.
+
+### Timing protocol
+
+Every solve time published in the article and in these files is the **median of five
+repeats** of a single protocol, implemented once in `scripts/timing_protocol.py` and imported
+by every producing script, so the same configuration cannot be reported with two different
+numbers. Alongside the median, each record carries `min_runtime_seconds`,
+`max_runtime_seconds` and the raw `runtime_seconds_repeats`, so a rerun can be compared
+against the measured spread rather than against a single number. Runtimes depend on the
+machine and on operating-system scheduling; the processor, memory, operating system and the
+exact Python, SciPy and HiGHS versions behind the published times are recorded in
+`results/environment.json`. Every other number in `results/` is machine-independent and a
+correct rerun reproduces it exactly.
+
 ## Reproducibility checks
 
 Run the automated test suite with:

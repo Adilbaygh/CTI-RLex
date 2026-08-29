@@ -14,7 +14,7 @@
       "CTI-RLex proposed",
       "CTI-RLex nominal only"
     ],
-    "scalability_runtime_repeats": 3,
+    "scalability_runtime_repeats": 5,
     "sensitivity_case_count": 135,
     "sensitivity_design": "3x3x3x5 full factorial"
   },
