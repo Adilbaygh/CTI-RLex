@@ -225,7 +225,18 @@ class MainWindow(QMainWindow):
     ) -> None:
         super().__init__()
         self.paths = paths
-        self.settings = QSettings("Leximin Research", "CTI-RLex Studio")
+        # Named format and scope, not QSettings("organization", "application"): the
+        # two-argument constructor reaches the native store whatever
+        # QSettings.setDefaultFormat() says (measured on Qt 6.11), so no test could point
+        # it at a clean profile and the English-on-first-launch promise in the README could
+        # not be checked. defaultFormat() is the native format unless a test changes it, so
+        # a user's saved preference stays exactly where it has always been.
+        self.settings = QSettings(
+            QSettings.defaultFormat(),
+            QSettings.Scope.UserScope,
+            "Leximin Research",
+            "CTI-RLex Studio",
+        )
         self.language = normalize_language(
             language if language is not None else self.settings.value("ui_language", DEFAULT_LANGUAGE)
         )

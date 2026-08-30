@@ -32,10 +32,19 @@ def test_a_first_launch_opens_in_english(tmp_path) -> None:
     """A machine with nothing saved must open the interface in English.
 
     The check above covers the helper. The window has a second fallback of its own, read
-    from QSettings, and that is the one a first-time reader meets. It is also the one an
-    author stops being able to see: the preference is stored per user profile, so once the
-    interface has been switched on a machine, every later launch there keeps that choice.
-    Isolating the settings makes the first launch observable again.
+    from QSettings, and that is the one a first-time reader meets -- a reviewer opening the
+    application for the first time. It is also the one an author stops being able to see:
+    the preference is stored per user profile, so once the interface has been switched on a
+    machine, every later launch there keeps that choice.
+
+    Isolating the settings is therefore the whole check, and the first version of it did
+    not isolate anything. QSettings("organization", "application") reaches the native store
+    whatever QSettings.setDefaultFormat() says, measured on Qt 6.11, so the window opened
+    the author's real preference and this test reported it as a first launch. The window
+    now names the format and scope, and the first assertion below is that the isolation
+    actually happened. A check that silently measures the machine it runs on is worse than
+    no check: it fails for the author for the wrong reason, and it passes on a fresh
+    machine whatever the code does.
 
     Qt runs in its own process because building a QApplication inside the test process ends
     it with 0xC0000409 during Qt's own shutdown on Windows, which takes the whole suite with
@@ -66,9 +75,12 @@ def test_a_first_launch_opens_in_english(tmp_path) -> None:
         # immediately and the window is built with none alive.
         application = QApplication([])
         window = MainWindow(ProjectPaths.from_root(Path(sys.argv[2])), auto_load=False)
+
+        # The store comes first, so the parent can tell a first launch from this machine's
+        # own saved preference before it reads anything else.
+        print(window.settings.fileName())
         print(window.language)
         print(window.settings.value("ui_language"))
-        print(application.applicationName() or "unnamed")
         sys.stdout.flush()
         os._exit(0)
         """
@@ -87,9 +99,20 @@ def test_a_first_launch_opens_in_english(tmp_path) -> None:
         env=environment,
         timeout=300,
     )
-    reported = finished.stdout.split()
-    assert reported[:2] == ["en", "en"], (
-        f"a first launch reported {reported!r}\n{finished.stderr[-800:]}"
+    reported = [line.strip() for line in finished.stdout.strip().splitlines()]
+    assert len(reported) == 3, (
+        f"the first-launch child reported {finished.stdout!r}\n{finished.stderr[-800:]}"
+    )
+    store, language, saved = reported
+
+    assert Path(store).is_relative_to(tmp_path), (
+        "this check did not isolate the settings, so what it measured is the saved "
+        "preference of the machine it ran on rather than a first launch. The window "
+        f"opened {store!r}, which is outside {tmp_path}."
+    )
+    assert [language, saved] == ["en", "en"], (
+        f"a first launch came up in {language!r} and saved {saved!r}\n"
+        f"{finished.stderr[-800:]}"
     )
 
 
