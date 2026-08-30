@@ -1,6 +1,12 @@
 from __future__ import annotations
 
+import os
+import subprocess
+import sys
+import textwrap
 from pathlib import Path
+
+import pytest
 
 from leximin.dag import load_cti_benchmark, run_full_analysis, solve_cti_rlex
 from leximin.gui.data import (
@@ -20,6 +26,71 @@ PATHS = ProjectPaths.from_root(ROOT)
 
 def test_default_interface_language_is_english() -> None:
     assert normalize_language(None) == "en"
+
+
+def test_a_first_launch_opens_in_english(tmp_path) -> None:
+    """A machine with nothing saved must open the interface in English.
+
+    The check above covers the helper. The window has a second fallback of its own, read
+    from QSettings, and that is the one a first-time reader meets. It is also the one an
+    author stops being able to see: the preference is stored per user profile, so once the
+    interface has been switched on a machine, every later launch there keeps that choice.
+    Isolating the settings makes the first launch observable again.
+
+    Qt runs in its own process because building a QApplication inside the test process ends
+    it with 0xC0000409 during Qt's own shutdown on Windows, which takes the whole suite with
+    it. The child leaves through os._exit so that shutdown never runs; the property being
+    checked is the same.
+    """
+
+    pytest.importorskip("PyQt6.QtCore")
+
+    program = textwrap.dedent(
+        """
+        import os, sys
+        from pathlib import Path
+        from PyQt6.QtCore import QSettings
+        from PyQt6.QtWidgets import QApplication
+
+        # Read and write the preference inside the directory the parent passed, so this
+        # neither inherits what the machine remembers nor changes it.
+        QSettings.setDefaultFormat(QSettings.Format.IniFormat)
+        QSettings.setPath(
+            QSettings.Format.IniFormat, QSettings.Scope.UserScope, sys.argv[1]
+        )
+
+        from leximin.gui.data import ProjectPaths
+        from leximin.gui.window import MainWindow
+
+        # The application has to be held in a name. Left as a bare call it is collected
+        # immediately and the window is built with none alive.
+        application = QApplication([])
+        window = MainWindow(ProjectPaths.from_root(Path(sys.argv[2])), auto_load=False)
+        print(window.language)
+        print(window.settings.value("ui_language"))
+        print(application.applicationName() or "unnamed")
+        sys.stdout.flush()
+        os._exit(0)
+        """
+    )
+
+    environment = dict(os.environ)
+    environment["QT_QPA_PLATFORM"] = "offscreen"
+    environment["PYTHONPATH"] = os.pathsep.join(
+        [str(ROOT / "src"), environment.get("PYTHONPATH", "")]
+    ).strip(os.pathsep)
+
+    finished = subprocess.run(
+        [sys.executable, "-c", program, str(tmp_path), str(ROOT)],
+        capture_output=True,
+        text=True,
+        env=environment,
+        timeout=300,
+    )
+    reported = finished.stdout.split()
+    assert reported[:2] == ["en", "en"], (
+        f"a first launch reported {reported!r}\n{finished.stderr[-800:]}"
+    )
 
 
 def test_project_paths_require_no_generated_result_folder() -> None:
