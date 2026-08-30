@@ -1,607 +1,1946 @@
 {
  "scenario": "hyrum_canal_restriction_under_shortage",
- "restricted_edges": [
-  "e_11819"
- ],
- "restricted_sources": [
-  "s_15269",
-  "s_15957"
- ],
- "published_retained_fraction": {
-  "reach": 0.35,
-  "reservoir": 0.3
+ "parameterization": "severity t retains min(1, t*d_i) of the nominal value of every derated quantity i, where d_i is the factor the scenario declares; t = 1 is the declared scenario",
+ "declared_factors": {
+  "edge": {
+   "e_11819": 0.3500000000960317
+  },
+  "source_period": {
+   "s_15269": 0.3000000000208929,
+   "s_15957": 0.25
+  },
+  "source_seasonal": {
+   "s_15269": 0.3,
+   "s_15957": 0.2500000000235372
+  },
+  "group": {
+   "hyrum_subsystem": 0.17999999990833332,
+   "paradise_highline_subsystem": 0.5
+  }
  },
+ "restricted_subsystem": [
+  "hyrum_subsystem"
+ ],
+ "severity_one_reproduces_the_published_solution": true,
+ "severity_one_max_guarantee_drift": 0.0,
  "reference_guarantees": {
   "company_130": 0.41951076293707945,
   "company_132": 0.41951076293707945,
   "company_088": 0.4476976354639018
  },
- "first_binding_fraction": 0.04,
- "rows": [
-  {
-   "retained_fraction": 1.0,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994499
-  },
-  {
-   "retained_fraction": 0.5,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994499
-  },
-  {
-   "retained_fraction": 0.35,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994499
-  },
-  {
-   "retained_fraction": 0.25,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994499
-  },
-  {
-   "retained_fraction": 0.2,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994499
-  },
-  {
-   "retained_fraction": 0.15,
-   "guarantees": {
-    "company_130": 0.41951076293707956,
-    "company_132": 0.41951076293707956,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707956,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994442
-  },
-  {
-   "retained_fraction": 0.12,
-   "guarantees": {
-    "company_130": 0.41951076293707956,
-    "company_132": 0.41951076293707956,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707956,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994441
-  },
-  {
-   "retained_fraction": 0.1,
-   "guarantees": {
-    "company_130": 0.41951076293707956,
-    "company_132": 0.41951076293707956,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.41951076293707956,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994452
-  },
-  {
-   "retained_fraction": 0.08,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994506
-  },
-  {
-   "retained_fraction": 0.06,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5919.097890994506
-  },
-  {
-   "retained_fraction": 0.05,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5918.239356860712
-  },
-  {
-   "retained_fraction": 0.046,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5914.87122014411
-  },
-  {
-   "retained_fraction": 0.044,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5913.187151785797
-  },
-  {
-   "retained_fraction": 0.042,
-   "guarantees": {
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794,
-    "company_088": 0.4476976354639018
-   },
-   "min_guarantee": 0.4195107629370794,
-   "claimants_reduced": [],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5911.5030834274985
-  },
-  {
-   "retained_fraction": 0.04,
-   "guarantees": {
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945,
-    "company_088": 0.4428761434568864
-   },
-   "min_guarantee": 0.41951076293707945,
-   "claimants_reduced": [
-    "company_088"
+ "families": {
+  "restriction": {
+   "severities": [
+    2.0,
+    1.5,
+    1.25,
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.3,
+    0.25,
+    0.2,
+    0.15,
+    0.125,
+    0.1,
+    0.075,
+    0.05
    ],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5910.080657623224
-  },
-  {
-   "retained_fraction": 0.035,
-   "guarantees": {
-    "company_088": 0.3875166255247755,
-    "company_130": 0.4195107629370794,
-    "company_132": 0.4195107629370794
-   },
-   "min_guarantee": 0.3875166255247755,
-   "claimants_reduced": [
-    "company_088"
+   "guarantee_is_monotone_in_the_severity": true,
+   "first_binding_severity_on_the_grid": 0.6,
+   "threshold_bracket": [
+    0.6664062499999999,
+    0.6671874999999999
    ],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5908.874620228447
-  },
-  {
-   "retained_fraction": 0.03,
-   "guarantees": {
-    "company_088": 0.3321571075926647,
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945
-   },
-   "min_guarantee": 0.3321571075926647,
-   "claimants_reduced": [
-    "company_088"
+   "threshold_resolution": 0.001,
+   "declared_is_weaker_by_a_factor_of": 1.5,
+   "rows": [
+    {
+     "severity": 2.0,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.7
+      },
+      "source_period": {
+       "s_15269": 0.6,
+       "s_15957": 0.5
+      },
+      "source_seasonal": {
+       "s_15269": 0.6,
+       "s_15957": 0.5
+      },
+      "group": {
+       "hyrum_subsystem": 0.36
+      }
+     },
+     "guarantees": {
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.4195107629370794,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994513,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 1.5,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.525
+      },
+      "source_period": {
+       "s_15269": 0.45,
+       "s_15957": 0.375
+      },
+      "source_seasonal": {
+       "s_15269": 0.45,
+       "s_15957": 0.375
+      },
+      "group": {
+       "hyrum_subsystem": 0.27
+      }
+     },
+     "guarantees": {
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.4195107629370794,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994515,
+     "max_lp_residual": 9.094947017729282e-13
+    },
+    {
+     "severity": 1.25,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.4375
+      },
+      "source_period": {
+       "s_15269": 0.375,
+       "s_15957": 0.3125
+      },
+      "source_seasonal": {
+       "s_15269": 0.375,
+       "s_15957": 0.3125
+      },
+      "group": {
+       "hyrum_subsystem": 0.225
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 1.0,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.35
+      },
+      "source_period": {
+       "s_15269": 0.3,
+       "s_15957": 0.25
+      },
+      "source_seasonal": {
+       "s_15269": 0.3,
+       "s_15957": 0.25
+      },
+      "group": {
+       "hyrum_subsystem": 0.18
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 0.9,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.315
+      },
+      "source_period": {
+       "s_15269": 0.27,
+       "s_15957": 0.225
+      },
+      "source_seasonal": {
+       "s_15269": 0.27,
+       "s_15957": 0.225
+      },
+      "group": {
+       "hyrum_subsystem": 0.162
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 2.3305801732931286e-12
+    },
+    {
+     "severity": 0.8,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.28
+      },
+      "source_period": {
+       "s_15269": 0.24,
+       "s_15957": 0.2
+      },
+      "source_seasonal": {
+       "s_15269": 0.24,
+       "s_15957": 0.2
+      },
+      "group": {
+       "hyrum_subsystem": 0.144
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 2.3305801732931286e-12
+    },
+    {
+     "severity": 0.7,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.245
+      },
+      "source_period": {
+       "s_15269": 0.21,
+       "s_15957": 0.175
+      },
+      "source_seasonal": {
+       "s_15269": 0.21,
+       "s_15957": 0.175
+      },
+      "group": {
+       "hyrum_subsystem": 0.126
+      }
+     },
+     "guarantees": {
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.4195107629370794,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994516,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 0.6,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.21
+      },
+      "source_period": {
+       "s_15269": 0.18,
+       "s_15957": 0.15
+      },
+      "source_seasonal": {
+       "s_15269": 0.18,
+       "s_15957": 0.15
+      },
+      "group": {
+       "hyrum_subsystem": 0.108
+      }
+     },
+     "guarantees": {
+      "company_088": 0.4029278722087557,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.4029278722087557,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 9.094947017729282e-13
+    },
+    {
+     "severity": 0.5,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.175
+      },
+      "source_period": {
+       "s_15269": 0.15,
+       "s_15957": 0.125
+      },
+      "source_seasonal": {
+       "s_15269": 0.15,
+       "s_15957": 0.125
+      },
+      "group": {
+       "hyrum_subsystem": 0.09
+      }
+     },
+     "guarantees": {
+      "company_088": 0.3357732268406298,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.3357732268406298,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 2.7284841053187847e-12
+    },
+    {
+     "severity": 0.4,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.14
+      },
+      "source_period": {
+       "s_15269": 0.12,
+       "s_15957": 0.1
+      },
+      "source_seasonal": {
+       "s_15269": 0.12,
+       "s_15957": 0.1
+      },
+      "group": {
+       "hyrum_subsystem": 0.072
+      }
+     },
+     "guarantees": {
+      "company_088": 0.2686185814725038,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.2686185814725038,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 2.7284841053187847e-12
+    },
+    {
+     "severity": 0.3,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.105
+      },
+      "source_period": {
+       "s_15269": 0.09,
+       "s_15957": 0.075
+      },
+      "source_seasonal": {
+       "s_15269": 0.09,
+       "s_15957": 0.075
+      },
+      "group": {
+       "hyrum_subsystem": 0.054
+      }
+     },
+     "guarantees": {
+      "company_088": 0.20146393610437785,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.20146393610437785,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5769.244520539145,
+     "max_lp_residual": 9.094947017729282e-13
+    },
+    {
+     "severity": 0.25,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0875
+      },
+      "source_period": {
+       "s_15269": 0.075,
+       "s_15957": 0.0625
+      },
+      "source_seasonal": {
+       "s_15269": 0.075,
+       "s_15957": 0.0625
+      },
+      "group": {
+       "hyrum_subsystem": 0.045
+      }
+     },
+     "guarantees": {
+      "company_088": 0.1678866134203149,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.1678866134203149,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5689.5970681605995,
+     "max_lp_residual": 1.8189894035458565e-12
+    },
+    {
+     "severity": 0.2,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.07
+      },
+      "source_period": {
+       "s_15269": 0.06,
+       "s_15957": 0.05
+      },
+      "source_seasonal": {
+       "s_15269": 0.06,
+       "s_15957": 0.05
+      },
+      "group": {
+       "hyrum_subsystem": 0.036
+      }
+     },
+     "guarantees": {
+      "company_088": 0.1343092907362519,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.1343092907362519,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5609.94961578205,
+     "max_lp_residual": 5.4569682106375694e-12
+    },
+    {
+     "severity": 0.15,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0525
+      },
+      "source_period": {
+       "s_15269": 0.045,
+       "s_15957": 0.0375
+      },
+      "source_seasonal": {
+       "s_15269": 0.045,
+       "s_15957": 0.0375
+      },
+      "group": {
+       "hyrum_subsystem": 0.027
+      }
+     },
+     "guarantees": {
+      "company_088": 0.10073196805218892,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.10073196805218892,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5530.302163403501,
+     "max_lp_residual": 2.7284841053187847e-12
+    },
+    {
+     "severity": 0.125,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.04375
+      },
+      "source_period": {
+       "s_15269": 0.0375,
+       "s_15957": 0.03125
+      },
+      "source_seasonal": {
+       "s_15269": 0.0375,
+       "s_15957": 0.03125
+      },
+      "group": {
+       "hyrum_subsystem": 0.0225
+      }
+     },
+     "guarantees": {
+      "company_088": 0.08394330671015746,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.08394330671015746,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5490.478437214227,
+     "max_lp_residual": 1.8189894035458565e-12
+    },
+    {
+     "severity": 0.1,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.035
+      },
+      "source_period": {
+       "s_15269": 0.03,
+       "s_15957": 0.025
+      },
+      "source_seasonal": {
+       "s_15269": 0.03,
+       "s_15957": 0.025
+      },
+      "group": {
+       "hyrum_subsystem": 0.018
+      }
+     },
+     "guarantees": {
+      "company_088": 0.06715464536812595,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.06715464536812595,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5450.654711024952,
+     "max_lp_residual": 3.637978807091713e-12
+    },
+    {
+     "severity": 0.075,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.02625
+      },
+      "source_period": {
+       "s_15269": 0.0225,
+       "s_15957": 0.01875
+      },
+      "source_seasonal": {
+       "s_15269": 0.0225,
+       "s_15957": 0.01875
+      },
+      "group": {
+       "hyrum_subsystem": 0.0135
+      }
+     },
+     "guarantees": {
+      "company_088": 0.05036598402609446,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.05036598402609446,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5410.830984835674,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 0.05,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0175
+      },
+      "source_period": {
+       "s_15269": 0.015,
+       "s_15957": 0.0125
+      },
+      "source_seasonal": {
+       "s_15269": 0.015,
+       "s_15957": 0.0125
+      },
+      "group": {
+       "hyrum_subsystem": 0.009
+      }
+     },
+     "guarantees": {
+      "company_088": 0.03357732268406297,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945
+     },
+     "min_guarantee": 0.03357732268406297,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5371.007258646403,
+     "max_lp_residual": 9.094947017729282e-13
+    }
    ],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5861.499930855293
+   "scope": [
+    "hyrum_subsystem"
+   ]
   },
-  {
-   "retained_fraction": 0.02,
-   "guarantees": {
-    "company_088": 0.22143807172844318,
-    "company_130": 0.41951076293707945,
-    "company_132": 0.41951076293707945
-   },
-   "min_guarantee": 0.22143807172844318,
-   "claimants_reduced": [
-    "company_088"
+  "whole_scenario": {
+   "severities": [
+    2.0,
+    1.5,
+    1.25,
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.3,
+    0.25,
+    0.2,
+    0.15,
+    0.125,
+    0.1,
+    0.075,
+    0.05
    ],
-   "binding_scenarios": {
-    "company_088": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_130": [
-     "hyrum_canal_restriction_under_shortage",
-     "moderate_system_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ],
-    "company_132": [
-     "hyrum_canal_restriction_under_shortage",
-     "nominal",
-     "paradise_diversion_outage_under_shortage",
-     "severe_system_shortage"
-    ]
-   },
-   "nominal_af": 5671.453222659471
+   "guarantee_is_monotone_in_the_severity": true,
+   "first_binding_severity_on_the_grid": 0.6,
+   "threshold_bracket": [
+    0.6664062499999999,
+    0.6671874999999999
+   ],
+   "threshold_resolution": 0.001,
+   "declared_is_weaker_by_a_factor_of": 1.5,
+   "rows": [
+    {
+     "severity": 2.0,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.7
+      },
+      "source_period": {
+       "s_15269": 0.6,
+       "s_15957": 0.5
+      },
+      "source_seasonal": {
+       "s_15269": 0.6,
+       "s_15957": 0.5
+      },
+      "group": {
+       "hyrum_subsystem": 0.36,
+       "paradise_highline_subsystem": 1.0
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 1.5,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.525
+      },
+      "source_period": {
+       "s_15269": 0.45,
+       "s_15957": 0.375
+      },
+      "source_seasonal": {
+       "s_15269": 0.45,
+       "s_15957": 0.375
+      },
+      "group": {
+       "hyrum_subsystem": 0.27,
+       "paradise_highline_subsystem": 0.75
+      }
+     },
+     "guarantees": {
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.4195107629370794,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994517,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 1.25,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.4375
+      },
+      "source_period": {
+       "s_15269": 0.375,
+       "s_15957": 0.3125
+      },
+      "source_seasonal": {
+       "s_15269": 0.375,
+       "s_15957": 0.3125
+      },
+      "group": {
+       "hyrum_subsystem": 0.225,
+       "paradise_highline_subsystem": 0.625
+      }
+     },
+     "guarantees": {
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.4195107629370794,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994515,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 1.0,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.35
+      },
+      "source_period": {
+       "s_15269": 0.3,
+       "s_15957": 0.25
+      },
+      "source_seasonal": {
+       "s_15269": 0.3,
+       "s_15957": 0.25
+      },
+      "group": {
+       "hyrum_subsystem": 0.18,
+       "paradise_highline_subsystem": 0.5
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 0.9,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.315
+      },
+      "source_period": {
+       "s_15269": 0.27,
+       "s_15957": 0.225
+      },
+      "source_seasonal": {
+       "s_15269": 0.27,
+       "s_15957": 0.225
+      },
+      "group": {
+       "hyrum_subsystem": 0.162,
+       "paradise_highline_subsystem": 0.45
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 2.3305801732931286e-12
+    },
+    {
+     "severity": 0.8,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.28
+      },
+      "source_period": {
+       "s_15269": 0.24,
+       "s_15957": 0.2
+      },
+      "source_seasonal": {
+       "s_15269": 0.24,
+       "s_15957": 0.2
+      },
+      "group": {
+       "hyrum_subsystem": 0.144,
+       "paradise_highline_subsystem": 0.4
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707945,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994499,
+     "max_lp_residual": 9.094947017729282e-13
+    },
+    {
+     "severity": 0.7,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.245
+      },
+      "source_period": {
+       "s_15269": 0.21,
+       "s_15957": 0.175
+      },
+      "source_seasonal": {
+       "s_15269": 0.21,
+       "s_15957": 0.175
+      },
+      "group": {
+       "hyrum_subsystem": 0.126,
+       "paradise_highline_subsystem": 0.35
+      }
+     },
+     "guarantees": {
+      "company_130": 0.41951076293707956,
+      "company_132": 0.41951076293707956,
+      "company_088": 0.4476976354639018
+     },
+     "min_guarantee": 0.41951076293707956,
+     "claimants_reduced": [],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994441,
+     "max_lp_residual": 6.326672519207932e-11
+    },
+    {
+     "severity": 0.6,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.21
+      },
+      "source_period": {
+       "s_15269": 0.18,
+       "s_15957": 0.15
+      },
+      "source_seasonal": {
+       "s_15269": 0.18,
+       "s_15957": 0.15
+      },
+      "group": {
+       "hyrum_subsystem": 0.108,
+       "paradise_highline_subsystem": 0.3
+      }
+     },
+     "guarantees": {
+      "company_088": 0.4029278722087557,
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794
+     },
+     "min_guarantee": 0.4029278722087557,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5919.097890994506,
+     "max_lp_residual": 3.410605131648481e-13
+    },
+    {
+     "severity": 0.5,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.175
+      },
+      "source_period": {
+       "s_15269": 0.15,
+       "s_15957": 0.125
+      },
+      "source_seasonal": {
+       "s_15269": 0.15,
+       "s_15957": 0.125
+      },
+      "group": {
+       "hyrum_subsystem": 0.09,
+       "paradise_highline_subsystem": 0.25
+      }
+     },
+     "guarantees": {
+      "company_088": 0.3357732268406298,
+      "company_130": 0.4195107629370794,
+      "company_132": 0.4195107629370794
+     },
+     "min_guarantee": 0.3357732268406298,
+     "claimants_reduced": [
+      "company_088"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 5812.0381657798935,
+     "max_lp_residual": 2.2737367544323206e-13
+    },
+    {
+     "severity": 0.4,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.14
+      },
+      "source_period": {
+       "s_15269": 0.12,
+       "s_15957": 0.1
+      },
+      "source_seasonal": {
+       "s_15269": 0.12,
+       "s_15957": 0.1
+      },
+      "group": {
+       "hyrum_subsystem": 0.072,
+       "paradise_highline_subsystem": 0.2
+      }
+     },
+     "guarantees": {
+      "company_088": 0.2686185814725038,
+      "company_130": 0.3815251782444918,
+      "company_132": 0.3815251782444918
+     },
+     "min_guarantee": 0.2686185814725038,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage"
+      ]
+     },
+     "nominal_af": 4904.640666817855,
+     "max_lp_residual": 2.2737367544323206e-13
+    },
+    {
+     "severity": 0.3,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.105
+      },
+      "source_period": {
+       "s_15269": 0.09,
+       "s_15957": 0.075
+      },
+      "source_seasonal": {
+       "s_15269": 0.09,
+       "s_15957": 0.075
+      },
+      "group": {
+       "hyrum_subsystem": 0.054,
+       "paradise_highline_subsystem": 0.15
+      }
+     },
+     "guarantees": {
+      "company_088": 0.20146393610437785,
+      "company_130": 0.2861438836833689,
+      "company_132": 0.2861438836833689
+     },
+     "min_guarantee": 0.20146393610437785,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage"
+      ]
+     },
+     "nominal_af": 3836.828379067676,
+     "max_lp_residual": 2.1367833632868373e-11
+    },
+    {
+     "severity": 0.25,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0875
+      },
+      "source_period": {
+       "s_15269": 0.075,
+       "s_15957": 0.0625
+      },
+      "source_seasonal": {
+       "s_15269": 0.075,
+       "s_15957": 0.0625
+      },
+      "group": {
+       "hyrum_subsystem": 0.045,
+       "paradise_highline_subsystem": 0.125
+      }
+     },
+     "guarantees": {
+      "company_088": 0.1678866134203149,
+      "company_130": 0.23845323640280738,
+      "company_132": 0.23845323640280738
+     },
+     "min_guarantee": 0.1678866134203149,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage"
+      ]
+     },
+     "nominal_af": 3301.5810477071527,
+     "max_lp_residual": 1.9895196601282805e-13
+    },
+    {
+     "severity": 0.2,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.07
+      },
+      "source_period": {
+       "s_15269": 0.06,
+       "s_15957": 0.05
+      },
+      "source_seasonal": {
+       "s_15269": 0.06,
+       "s_15957": 0.05
+      },
+      "group": {
+       "hyrum_subsystem": 0.036,
+       "paradise_highline_subsystem": 0.1
+      }
+     },
+     "guarantees": {
+      "company_088": 0.1343092907362519,
+      "company_130": 0.19076258912224595,
+      "company_132": 0.19076258912224595
+     },
+     "min_guarantee": 0.1343092907362519,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage"
+      ]
+     },
+     "nominal_af": 2765.039990461093,
+     "max_lp_residual": 1.424144720943746e-12
+    },
+    {
+     "severity": 0.15,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0525
+      },
+      "source_period": {
+       "s_15269": 0.045,
+       "s_15957": 0.0375
+      },
+      "source_seasonal": {
+       "s_15269": 0.045,
+       "s_15957": 0.0375
+      },
+      "group": {
+       "hyrum_subsystem": 0.027,
+       "paradise_highline_subsystem": 0.075
+      }
+     },
+     "guarantees": {
+      "company_088": 0.10073196805218892,
+      "company_130": 0.1430719418416844,
+      "company_132": 0.1430719418416844
+     },
+     "min_guarantee": 0.10073196805218892,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 2227.16378785077,
+     "max_lp_residual": 4.547473508864641e-13
+    },
+    {
+     "severity": 0.125,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.04375
+      },
+      "source_period": {
+       "s_15269": 0.0375,
+       "s_15957": 0.03125
+      },
+      "source_seasonal": {
+       "s_15269": 0.0375,
+       "s_15957": 0.03125
+      },
+      "group": {
+       "hyrum_subsystem": 0.0225,
+       "paradise_highline_subsystem": 0.0625
+      }
+     },
+     "guarantees": {
+      "company_088": 0.08394330671015746,
+      "company_130": 0.11922661820140369,
+      "company_132": 0.11922661820140369
+     },
+     "min_guarantee": 0.08394330671015746,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 1958.2256865456084,
+     "max_lp_residual": 1.1368683772161603e-13
+    },
+    {
+     "severity": 0.1,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.035
+      },
+      "source_period": {
+       "s_15269": 0.03,
+       "s_15957": 0.025
+      },
+      "source_seasonal": {
+       "s_15269": 0.03,
+       "s_15957": 0.025
+      },
+      "group": {
+       "hyrum_subsystem": 0.018,
+       "paradise_highline_subsystem": 0.05
+      }
+     },
+     "guarantees": {
+      "company_088": 0.06715464536812595,
+      "company_130": 0.09538129456112297,
+      "company_132": 0.09538129456112297
+     },
+     "min_guarantee": 0.06715464536812595,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 1689.2163890216448,
+     "max_lp_residual": 1.1368683772161603e-13
+    },
+    {
+     "severity": 0.075,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.02625
+      },
+      "source_period": {
+       "s_15269": 0.0225,
+       "s_15957": 0.01875
+      },
+      "source_seasonal": {
+       "s_15269": 0.0225,
+       "s_15957": 0.01875
+      },
+      "group": {
+       "hyrum_subsystem": 0.0135,
+       "paradise_highline_subsystem": 0.0375
+      }
+     },
+     "guarantees": {
+      "company_088": 0.05036598402609446,
+      "company_130": 0.0715359709208422,
+      "company_132": 0.0715359709208422
+     },
+     "min_guarantee": 0.05036598402609446,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 1420.1508227886513,
+     "max_lp_residual": 1.1368683772161603e-13
+    },
+    {
+     "severity": 0.05,
+     "retained_of_nominal": {
+      "edge": {
+       "e_11819": 0.0175
+      },
+      "source_period": {
+       "s_15269": 0.015,
+       "s_15957": 0.0125
+      },
+      "source_seasonal": {
+       "s_15269": 0.015,
+       "s_15957": 0.0125
+      },
+      "group": {
+       "hyrum_subsystem": 0.009,
+       "paradise_highline_subsystem": 0.025
+      }
+     },
+     "guarantees": {
+      "company_088": 0.03357732268406297,
+      "company_130": 0.04769064728056147,
+      "company_132": 0.04769064728056147
+     },
+     "min_guarantee": 0.03357732268406297,
+     "claimants_reduced": [
+      "company_088",
+      "company_130",
+      "company_132"
+     ],
+     "binding_scenarios": {
+      "company_088": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_130": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ],
+      "company_132": [
+       "hyrum_canal_restriction_under_shortage",
+       "moderate_system_shortage",
+       "nominal",
+       "paradise_diversion_outage_under_shortage",
+       "severe_system_shortage"
+      ]
+     },
+     "nominal_af": 1150.465183917985,
+     "max_lp_residual": 1.5916157281026244e-12
+    }
+   ],
+   "scope": "every derated quantity"
   }
- ]
+ }
 }
