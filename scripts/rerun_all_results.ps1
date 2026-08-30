@@ -48,13 +48,14 @@ Step 4 "residual, feasibility and representation audits" {
 }
 Step 5 "lexicographic vector against a common floor" { python -B scripts\revision_experiments.py }
 Step 6 "component-level analysis of the ten-claimant instance" { python -B scripts\component_analysis.py }
-Step 7 "parameter provenance and coefficient tables" { python -B scripts\benchmark_parameter_tables.py }
-Step 8 "source-removal ablation on both instances" { python -B scripts\ablation_experiment.py }
-Step 9 "guarantee vector under three recourse-budget regimes" { python -B scripts\equal_budget_experiment.py }
-Step 10 "guarantee vector under three effort-coefficient weightings" { python -B scripts\normalization_sensitivity.py }
-Step 11 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
-Step 12 "scalability sweep" { python -B scripts\scalability_experiment.py }
-Step 13 "acyclicity-repair order sensitivity and excluded service areas" {
+Step 7 "audit layer of the ten-claimant instance" { python -B scripts\cache_valley_audit.py }
+Step 8 "parameter provenance and coefficient tables" { python -B scripts\benchmark_parameter_tables.py }
+Step 9 "source-removal ablation on both instances" { python -B scripts\ablation_experiment.py }
+Step 10 "guarantee vector under three recourse-budget regimes" { python -B scripts\equal_budget_experiment.py }
+Step 11 "guarantee vector under three effort-coefficient weightings" { python -B scripts\normalization_sensitivity.py }
+Step 12 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
+Step 13 "scalability sweep" { python -B scripts\scalability_experiment.py }
+Step 14 "acyclicity-repair order sensitivity and excluded service areas" {
     if ($env:LEXIMIN_DATASETS) {
         python -B scripts\excluded_service_areas.py
         python -B scripts\connector_order_experiment.py --build --rebuild
@@ -62,11 +63,11 @@ Step 13 "acyclicity-repair order sensitivity and excluded service areas" {
         python -c "print('   skipped: these rebuild from the raw Utah layers; set LEXIMIN_DATASETS to the open-data root first')"
     }
 }
-Step 14 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
-Step 15 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
-Step 16 "figure resolution check" { python -B scripts\verify_publication_figures.py }
-Step 17 "machine and solver versions" { python -B scripts\record_environment.py }
-Step 18 "test suite" { python -B -m pytest -q }
+Step 15 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
+Step 16 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
+Step 17 "figure resolution check" { python -B scripts\verify_publication_figures.py }
+Step 18 "machine and solver versions" { python -B scripts\record_environment.py }
+Step 19 "test suite" { python -B -m pytest -q }
 
 $summary = @'
 import json
