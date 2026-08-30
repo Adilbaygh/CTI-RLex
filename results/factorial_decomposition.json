@@ -1,0 +1,811 @@
+{
+ "design": "3x3x3x5 complete balanced factorial",
+ "cases": 135,
+ "factors": {
+  "net duty": [
+   1.5,
+   2.0,
+   2.5
+  ],
+  "conveyance loss": [
+   0.5,
+   1.0,
+   2.0
+  ],
+  "source limit": [
+   0.8,
+   1.0,
+   1.2
+  ],
+  "recourse budget": [
+   0.0,
+   0.25,
+   0.5,
+   1.0,
+   2.0
+  ]
+ },
+ "note": "the cases are deterministic solves of one model, so the split carries no inferential content: there is no error term, no replication and no p-value, and the shares describe the observed variation rather than estimating anything",
+ "responses": {
+  "minimum_guarantee": {
+   "label": "minimum guarantee",
+   "grand_mean": 0.42473564867316793,
+   "minimum": 0.2242763336141747,
+   "maximum": 0.7011008755094489,
+   "total_sum_of_squares": 1.8688588166061997,
+   "sum_of_squares_accounted": 1.8688588166061997,
+   "decomposition_is_exact": true,
+   "main_effect_share_percent": 98.05746502911126,
+   "interaction_share_percent": 1.9425349708887507,
+   "terms": {
+    "net duty": {
+     "order": 1,
+     "factors": [
+      "demand_duty_af_per_acre"
+     ],
+     "sum_of_squares": 1.0804422415970998,
+     "degrees_of_freedom": 2,
+     "share_percent": 57.812940816960996
+    },
+    "source limit": {
+     "order": 1,
+     "factors": [
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.6490438433506733,
+     "degrees_of_freedom": 2,
+     "share_percent": 34.729420841394564
+    },
+    "conveyance loss": {
+     "order": 1,
+     "factors": [
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 0.07425016355800915,
+     "degrees_of_freedom": 2,
+     "share_percent": 3.973021551881889
+    },
+    "recourse budget": {
+     "order": 1,
+     "factors": [
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.028819332031304355,
+     "degrees_of_freedom": 4,
+     "share_percent": 1.5420818188738052
+    },
+    "net duty x source limit": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.02879415873624528,
+     "degrees_of_freedom": 4,
+     "share_percent": 1.540734831352041
+    },
+    "net duty x conveyance loss": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 0.0032940317015322843,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.1762589914370398
+    },
+    "conveyance loss x source limit": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.001990608101492785,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.10651463255569402
+    },
+    "net duty x recourse budget": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.00127853985471606,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.06841286475764156
+    },
+    "source limit x recourse budget": {
+     "order": 2,
+     "factors": [
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.0007620373626543655,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.0407755447272473
+    },
+    "net duty x conveyance loss x source limit": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 8.831126932833451e-05,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.004725411494095929
+    },
+    "conveyance loss x recourse budget": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 5.735849107711458e-05,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.0030691719763655634
+    },
+    "net duty x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 3.380699933912465e-05,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.0018089648634088532
+    },
+    "net duty x conveyance loss x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 2.5446501247427427e-06,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.00013616063996550382
+    },
+    "conveyance loss x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1.7607871044771461e-06,
+     "degrees_of_freedom": 16,
+     "share_percent": 9.42172350758251e-05
+    },
+    "net duty x conveyance loss x source limit x recourse budget": {
+     "order": 4,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 7.811549852361032e-08,
+     "degrees_of_freedom": 32,
+     "share_percent": 4.179850175384896e-06
+    }
+   },
+   "marginal_means": {
+    "net duty": {
+     "1.5": 0.5422157217104272,
+     "2": 0.4066617912828204,
+     "2.5": 0.32532943302625633
+    },
+    "conveyance loss": {
+     "0.5": 0.4499898327750867,
+     "1": 0.43072767196964146,
+     "2": 0.3934894412747758
+    },
+    "source limit": {
+     "0.8": 0.33981451903247184,
+     "1": 0.42473564867316793,
+     "1.2": 0.5096567783138641
+    },
+    "recourse budget": {
+     "0": 0.39551425815743046,
+     "0.25": 0.4319167337739284,
+     "0.5": 0.432082417144827,
+     "1": 0.432082417144827,
+     "2": 0.432082417144827
+    }
+   },
+   "direction": {
+    "net duty": "decreasing",
+    "conveyance loss": "decreasing",
+    "source limit": "increasing",
+    "recourse budget": "increasing"
+   }
+  },
+  "nominal_beneficial_delivery_af": {
+   "label": "nominal beneficial delivery (acre-ft)",
+   "grand_mean": 5335.554375956405,
+   "minimum": 3529.6174647940024,
+   "maximum": 8377.058728270458,
+   "total_sum_of_squares": 151493393.31484124,
+   "sum_of_squares_accounted": 151493393.31484148,
+   "decomposition_is_exact": true,
+   "main_effect_share_percent": 97.18601964300927,
+   "interaction_share_percent": 2.8139803569908732,
+   "terms": {
+    "recourse budget": {
+     "order": 1,
+     "factors": [
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 82411075.76577234,
+     "degrees_of_freedom": 4,
+     "share_percent": 54.39912194355662
+    },
+    "source limit": {
+     "order": 1,
+     "factors": [
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 55134288.076696165,
+     "degrees_of_freedom": 2,
+     "share_percent": 36.393856438421246
+    },
+    "conveyance loss": {
+     "order": 1,
+     "factors": [
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 6027531.251945654,
+     "degrees_of_freedom": 2,
+     "share_percent": 3.9787419900344654
+    },
+    "net duty": {
+     "order": 1,
+     "factors": [
+      "demand_duty_af_per_acre"
+     ],
+     "sum_of_squares": 3657503.890408746,
+     "degrees_of_freedom": 2,
+     "share_percent": 2.4142992709969446
+    },
+    "net duty x source limit": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 2050900.0810698282,
+     "degrees_of_freedom": 4,
+     "share_percent": 1.35378846310977
+    },
+    "net duty x recourse budget": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1057533.6133942804,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.6980724309187929
+    },
+    "net duty x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 369442.54103376745,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.2438670974027054
+    },
+    "source limit x recourse budget": {
+     "order": 2,
+     "factors": [
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 198365.0518350674,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.13093973769721765
+    },
+    "net duty x conveyance loss": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 172268.90542112794,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.11371380734941357
+    },
+    "net duty x conveyance loss x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 139460.06429937194,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.09205686218245766
+    },
+    "conveyance loss x recourse budget": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 133269.9488383216,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.0879707992026776
+    },
+    "net duty x conveyance loss x source limit": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 82296.04849521903,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.05432319304128809
+    },
+    "conveyance loss x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 25411.49816350392,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.016773997603111615
+    },
+    "net duty x conveyance loss x source limit x recourse budget": {
+     "order": 4,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 23358.720964672248,
+     "degrees_of_freedom": 32,
+     "share_percent": 0.015418970064342655
+    },
+    "conveyance loss x source limit": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 10687.856503396812,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.007054998419095919
+    }
+   },
+   "marginal_means": {
+    "net duty": {
+     "1.5": 5105.29016506791,
+     "2": 5421.144528121008,
+     "2.5": 5480.228434680297
+    },
+    "conveyance loss": {
+     "0.5": 5561.638595099259,
+     "1": 5391.737010016006,
+     "2": 5053.287522753949
+    },
+    "source limit": {
+     "0.8": 4534.569345811265,
+     "1": 5373.527323329905,
+     "1.2": 6098.566458728044
+    },
+    "recourse budget": {
+     "0": 4598.177390131809,
+     "0.25": 4662.734449926143,
+     "0.5": 4999.416377462099,
+     "1": 5751.546246848551,
+     "2": 6665.897415413422
+    }
+   },
+   "direction": {
+    "net duty": "increasing",
+    "conveyance loss": "decreasing",
+    "source limit": "increasing",
+    "recourse budget": "increasing"
+   }
+  },
+  "worst_scenario_beneficial_delivery_af": {
+   "label": "worst-scenario delivery (acre-ft)",
+   "grand_mean": 4721.567334476131,
+   "minimum": 3529.6171118322563,
+   "maximum": 6311.912806112526,
+   "total_sum_of_squares": 71649894.65278825,
+   "sum_of_squares_accounted": 71649894.65278828,
+   "decomposition_is_exact": true,
+   "main_effect_share_percent": 97.85510663814637,
+   "interaction_share_percent": 2.14489336185368,
+   "terms": {
+    "source limit": {
+     "order": 1,
+     "factors": [
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 62049040.882110596,
+     "degrees_of_freedom": 2,
+     "share_percent": 86.60032395413432
+    },
+    "conveyance loss": {
+     "order": 1,
+     "factors": [
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 4412953.605005593,
+     "degrees_of_freedom": 2,
+     "share_percent": 6.159051072427311
+    },
+    "net duty": {
+     "order": 1,
+     "factors": [
+      "demand_duty_af_per_acre"
+     ],
+     "sum_of_squares": 2157800.418316391,
+     "degrees_of_freedom": 2,
+     "share_percent": 3.011589101104729
+    },
+    "recourse budget": {
+     "order": 1,
+     "factors": [
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1493285.913172893,
+     "degrees_of_freedom": 4,
+     "share_percent": 2.084142510479995
+    },
+    "net duty x source limit": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 1306829.058386213,
+     "degrees_of_freedom": 4,
+     "share_percent": 1.823909253068745
+    },
+    "net duty x conveyance loss": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 52705.35382255606,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.07355956917726611
+    },
+    "source limit x recourse budget": {
+     "order": 2,
+     "factors": [
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 48772.35110103601,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.06807037377707859
+    },
+    "net duty x conveyance loss x source limit": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 37746.690587761346,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.05268212991893413
+    },
+    "conveyance loss x source limit": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 37733.69041676088,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.05266398589923464
+    },
+    "net duty x recourse budget": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 35945.847542385156,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.0501687374651099
+    },
+    "net duty x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 12465.451147407859,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.017397724320202843
+    },
+    "net duty x conveyance loss x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1666.8316985975266,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.002326356105162343
+    },
+    "conveyance loss x recourse budget": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1404.789649225403,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.001960630446189687
+    },
+    "net duty x conveyance loss x source limit x recourse budget": {
+     "order": 4,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1271.6078766906107,
+     "degrees_of_freedom": 32,
+     "share_percent": 0.0017747519139459421
+    },
+    "conveyance loss x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 272.1619541764118,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.00037984976181094866
+    }
+   },
+   "marginal_means": {
+    "net duty": {
+     "1.5": 4545.3982064928605,
+     "2": 4783.215390326067,
+     "2.5": 4836.088406609464
+    },
+    "conveyance loss": {
+     "0.5": 4915.302583318935,
+     "1": 4769.208560476624,
+     "2": 4480.190859632832
+    },
+    "source limit": {
+     "0.8": 3876.798573130812,
+     "1": 4751.258332889387,
+     "1.2": 5536.645097408192
+    },
+    "recourse budget": {
+     "0": 4598.176930314071,
+     "0.25": 4662.734449926097,
+     "0.5": 4663.0216239810625,
+     "1": 4796.082836803039,
+     "2": 4887.820831356384
+    }
+   },
+   "direction": {
+    "net duty": "increasing",
+    "conveyance loss": "decreasing",
+    "source limit": "increasing",
+    "recourse budget": "increasing"
+   }
+  },
+  "normalized_recourse_effort": {
+   "label": "normalized recourse effort",
+   "grand_mean": 0.8967174514359867,
+   "minimum": 0.0,
+   "maximum": 2.4999987069545924,
+   "total_sum_of_squares": 93.80974589906245,
+   "sum_of_squares_accounted": 93.80974589906245,
+   "decomposition_is_exact": true,
+   "main_effect_share_percent": 96.35276399194946,
+   "interaction_share_percent": 3.647236008050545,
+   "terms": {
+    "recourse budget": {
+     "order": 1,
+     "factors": [
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 89.79351383949377,
+     "degrees_of_freedom": 4,
+     "share_percent": 95.71874753408876
+    },
+    "net duty x recourse budget": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 1.5424595861451005,
+     "degrees_of_freedom": 8,
+     "share_percent": 1.6442423666777206
+    },
+    "net duty x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.8965547028686863,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.9557159485682465
+    },
+    "source limit x recourse budget": {
+     "order": 2,
+     "factors": [
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.4579053310441267,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.4881212785042871
+    },
+    "net duty": {
+     "order": 1,
+     "factors": [
+      "demand_duty_af_per_acre"
+     ],
+     "sum_of_squares": 0.442791582686137,
+     "degrees_of_freedom": 2,
+     "share_percent": 0.4720102143359098
+    },
+    "net duty x source limit": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.27314265441490027,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.29116660726146376
+    },
+    "source limit": {
+     "order": 1,
+     "factors": [
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.13939938989041906,
+     "degrees_of_freedom": 2,
+     "share_percent": 0.14859798260237292
+    },
+    "net duty x conveyance loss x source limit x recourse budget": {
+     "order": 4,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.08097471383162606,
+     "degrees_of_freedom": 32,
+     "share_percent": 0.08631801851244045
+    },
+    "net duty x conveyance loss x recourse budget": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.05423036711783001,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.05780888392574998
+    },
+    "conveyance loss x source limit x recourse budget": {
+     "order": 3,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.03918528713510699,
+     "degrees_of_freedom": 16,
+     "share_percent": 0.04177101937496945
+    },
+    "conveyance loss x recourse budget": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "recourse_budget_scale"
+     ],
+     "sum_of_squares": 0.029301449291521894,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.03123497352082129
+    },
+    "net duty x conveyance loss": {
+     "order": 2,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 0.023451535461626958,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.0249990395314154
+    },
+    "net duty x conveyance loss x source limit": {
+     "order": 3,
+     "factors": [
+      "demand_duty_af_per_acre",
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.01598558766021089,
+     "degrees_of_freedom": 8,
+     "share_percent": 0.017040433813146755
+    },
+    "conveyance loss": {
+     "order": 1,
+     "factors": [
+      "conveyance_loss_multiplier"
+     ],
+     "sum_of_squares": 0.012578255500797513,
+     "degrees_of_freedom": 2,
+     "share_percent": 0.013408260922411498
+    },
+    "conveyance loss x source limit": {
+     "order": 2,
+     "factors": [
+      "conveyance_loss_multiplier",
+      "source_limit_scale"
+     ],
+     "sum_of_squares": 0.008271616520588828,
+     "degrees_of_freedom": 4,
+     "share_percent": 0.008817438360283945
+    }
+   },
+   "marginal_means": {
+    "net duty": {
+     "1.5": 0.815725065176614,
+     "2": 0.9369281619921098,
+     "2.5": 0.9374991271392366
+    },
+    "conveyance loss": {
+     "0.5": 0.8852658185278292,
+     "1": 0.896008714894254,
+     "2": 0.9088778208858771
+    },
+    "source limit": {
+     "0.8": 0.9374637286602792,
+     "1": 0.8937709527513877,
+     "1.2": 0.8589176728962935
+    },
+    "recourse budget": {
+     "0": 0.0,
+     "0.25": 0.31249920991752417,
+     "0.5": 0.624999155390673,
+     "1": 1.2389359731786518,
+     "2": 2.307152918693085
+    }
+   },
+   "direction": {
+    "net duty": "increasing",
+    "conveyance loss": "increasing",
+    "source limit": "decreasing",
+    "recourse budget": "increasing"
+   }
+  }
+ }
+}
