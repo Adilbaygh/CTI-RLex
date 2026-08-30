@@ -110,7 +110,28 @@ def classify(
     return "fully_redundant"
 
 
+def disconnected_by(benchmark: dict, removed: str) -> list[str]:
+    """Claimants left with no path from a remaining source, on the published path table.
+
+    The paper's distinction between a disconnection and a capacity effect is a statement
+    about routes, not about the solution: a claimant can stay reachable and still end at a
+    zero guarantee because the routes that remain cannot carry its demand. Reading the
+    published paths keeps the two apart, and it is auditable without running the model.
+    """
+
+    served = {
+        row["terminal_node"] for row in benchmark["paths"] if row["source_id"] != removed
+    }
+    terminals: dict[str, set[str]] = {}
+    for row in benchmark["claimant_terminals"]:
+        terminals.setdefault(row["claimant_id"], set()).add(row["terminal_node"])
+    return sorted(
+        claimant for claimant, nodes in terminals.items() if not (nodes & served)
+    )
+
+
 def report(path: Path) -> dict:
+    benchmark = json.loads(path.read_text(encoding="utf-8"))
     model = load_cti_benchmark(path)
     base, base_timing = timed(lambda: solve_cti_rlex(model))
     base_sorted = sorted(base.guarantees.values())
@@ -128,11 +149,12 @@ def report(path: Path) -> dict:
         worst = min(totals.values())
         nominal = solution.nominal_beneficial_delivery
 
-        # A claimant that cannot be served at all in some demand-positive period of some
-        # scenario carries a zero guarantee; on these benchmarks the base guarantee of
-        # every claimant is strictly positive, so a zero here means the removal took away
-        # the claimant's last route.
-        disconnected = sorted(
+        disconnected = disconnected_by(benchmark, source.source_id)
+        # A claimant can keep a route and still fall to a zero guarantee, because the
+        # routes that remain cannot carry its demand in every period and scenario. Both
+        # facts are recorded, because conflating them is what turns a capacity result into
+        # a claim about the graph.
+        at_zero = sorted(
             claimant for claimant, value in guarantees.items()
             if value <= GUARANTEE_TOLERANCE
         )
@@ -155,6 +177,7 @@ def report(path: Path) -> dict:
                 "explanation": classification,
                 # what the review asks to be reported for every removal
                 "guarantees": guarantees,
+                "claimants_at_zero_guarantee": at_zero,
                 "sorted_rho": sorted_rho,
                 "first_differing_position": differing,
                 "worst_scenario_delivery_af": worst,

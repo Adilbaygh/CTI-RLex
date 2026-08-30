@@ -22,15 +22,15 @@
   "fully_redundant": "redundant for the full objective hierarchy"
  },
  "base_repeats": 5,
- "base_median_runtime_seconds": 0.13816210000004503,
- "base_min_runtime_seconds": 0.1376696000006632,
- "base_max_runtime_seconds": 0.16570800000044983,
+ "base_median_runtime_seconds": 0.15673229999811156,
+ "base_min_runtime_seconds": 0.15431299999909243,
+ "base_max_runtime_seconds": 0.1596815000011702,
  "base_runtime_seconds_repeats": [
-  0.16570800000044983,
-  0.1376696000006632,
-  0.13769219999812776,
-  0.14227580000078888,
-  0.13816210000004503
+  0.1596815000011702,
+  0.1567137999991246,
+  0.15877109999928507,
+  0.15673229999811156,
+  0.15431299999909243
  ],
  "rows": [
   {
@@ -47,6 +47,7 @@
     "company_132": 0.3840922138847762,
     "company_088": 0.4476976354639018
    },
+   "claimants_at_zero_guarantee": [],
    "sorted_rho": [
     0.3840922138847762,
     0.3840922138847762,
@@ -59,15 +60,15 @@
    "reading": "minimum guarantee falls",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1345497999973304,
-   "min_runtime_seconds": 0.13093160000062198,
-   "max_runtime_seconds": 0.13795759999993606,
+   "median_runtime_seconds": 0.1490747999996529,
+   "min_runtime_seconds": 0.1478190000016184,
+   "max_runtime_seconds": 0.15149050000036368,
    "runtime_seconds_repeats": [
-    0.13093160000062198,
-    0.13218640000195592,
-    0.13795759999993606,
-    0.1345497999973304,
-    0.13545410000006086
+    0.15149050000036368,
+    0.1493640000007872,
+    0.1482227000014973,
+    0.1478190000016184,
+    0.1490747999996529
    ]
   },
   {
@@ -84,6 +85,7 @@
     "company_130": 0.41951076293707945,
     "company_132": 0.41951076293707945
    },
+   "claimants_at_zero_guarantee": [],
    "sorted_rho": [
     0.41868096458610105,
     0.41951076293707945,
@@ -96,22 +98,21 @@
    "reading": "minimum guarantee falls",
    "max_lp_residual": 9.094947017729282e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1486293999987538,
-   "min_runtime_seconds": 0.1478132000011101,
-   "max_runtime_seconds": 0.1533463000014308,
+   "median_runtime_seconds": 0.16784840000036638,
+   "min_runtime_seconds": 0.14902939999956288,
+   "max_runtime_seconds": 0.18016010000064853,
    "runtime_seconds_repeats": [
-    0.1533463000014308,
-    0.1483595999998215,
-    0.1478132000011101,
-    0.1486293999987538,
-    0.14924650000102702
+    0.18016010000064853,
+    0.17149789999893983,
+    0.16784840000036638,
+    0.14902939999956288,
+    0.14945819999775267
    ]
   },
   {
    "source_id": "s_15286",
    "source_class": "reservoir_release",
    "disconnected_claimants": [
-    "company_130",
     "company_132"
    ],
    "min_guarantee": -0.0,
@@ -124,6 +125,10 @@
     "company_132": -0.0,
     "company_088": 0.4476976354639018
    },
+   "claimants_at_zero_guarantee": [
+    "company_130",
+    "company_132"
+   ],
    "sorted_rho": [
     -0.0,
     -0.0,
@@ -136,15 +141,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.12260880000030738,
-   "min_runtime_seconds": 0.1221624999998312,
-   "max_runtime_seconds": 0.1251016999995045,
+   "median_runtime_seconds": 0.12376640000002226,
+   "min_runtime_seconds": 0.12230469999849447,
+   "max_runtime_seconds": 0.12622620000183815,
    "runtime_seconds_repeats": [
-    0.1251016999995045,
-    0.12218030000076396,
-    0.1221624999998312,
-    0.12260880000030738,
-    0.1236782999985735
+    0.12344049999956042,
+    0.12551560000065365,
+    0.12230469999849447,
+    0.12622620000183815,
+    0.12376640000002226
    ]
   },
   {
@@ -161,6 +166,7 @@
     "company_132": 0.4195107629370794,
     "company_088": 0.4476976354639018
    },
+   "claimants_at_zero_guarantee": [],
    "sorted_rho": [
     0.4195107629370794,
     0.4195107629370794,
@@ -173,15 +179,15 @@
    "reading": "redundant for the full objective hierarchy",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.13334350000150152,
-   "min_runtime_seconds": 0.13160459999926388,
-   "max_runtime_seconds": 0.1557388000001083,
+   "median_runtime_seconds": 0.150426600001083,
+   "min_runtime_seconds": 0.13504180000018096,
+   "max_runtime_seconds": 0.16970639999999548,
    "runtime_seconds_repeats": [
-    0.13591029999952298,
-    0.13334350000150152,
-    0.13197329999820795,
-    0.1557388000001083,
-    0.13160459999926388
+    0.16970639999999548,
+    0.150426600001083,
+    0.14081889999943087,
+    0.1641605000004347,
+    0.13504180000018096
    ]
   }
  ]
