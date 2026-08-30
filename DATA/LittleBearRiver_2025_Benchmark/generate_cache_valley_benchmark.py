@@ -36,6 +36,7 @@ from __future__ import annotations
 import collections
 import gc
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -44,7 +45,11 @@ sys.path.insert(0, str(HERE))
 
 import generate_benchmark as gb  # noqa: E402
 
-TARGET = HERE.parent / "CacheValley_2025_Benchmark"
+# A sensitivity rebuild must never be able to overwrite the released benchmark, so the
+# output directory is selectable and defaults to the released one.
+TARGET = Path(os.environ["LEXIMIN_COUNTY_TARGET"]) if os.environ.get(
+    "LEXIMIN_COUNTY_TARGET"
+) else HERE.parent / "CacheValley_2025_Benchmark"
 COUNTY = "Cache"
 SELECTION = TARGET / "selection.json"
 UNROUTED = TARGET / "unrouted_claimants.json"

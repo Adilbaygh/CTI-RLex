@@ -10,6 +10,7 @@ import csv
 import hashlib
 import json
 import os
+import random
 import statistics
 import math
 import sqlite3
@@ -33,7 +34,28 @@ CFS_DAY_TO_AF = 1.9834710743801653
 NETWORK_DIR = DATASETS / "Utah_Distribution_Network_2026" / "csv"
 CANALS_CSV = DATASETS / "Utah Canals" / "UDNR.WRT.Canals_CFS.csv"
 SERVICE_GEOJSON = DATASETS / "Utah Irrigation Company Service Areas" / "utah_service_areas.geojson"
-WRLU_GPKG = next((DATASETS / "WaterRelatedLandUse_2025").glob("*.gpkg"))
+
+
+def dataset_layer(folder: str, pattern: str) -> Path:
+    """The raw open-data layer a folder is expected to contain, or a legible failure.
+
+    The generators are meant to be run by somebody who has downloaded the open Utah layers
+    themselves, so the one error they are most likely to hit -- an unset or mistyped
+    open-data root -- has to name the variable, the directory searched and the file looked
+    for, rather than raising StopIteration from an exhausted iterator.
+    """
+
+    found = next((DATASETS / folder).glob(pattern), None)
+    if found is None:
+        raise SystemExit(
+            f"open-data layer not found: {DATASETS / folder}\\{pattern}\n"
+            f"LEXIMIN_DATASETS is currently {DATASETS}; point it at the root that holds "
+            f"{folder}. The layers are listed in each benchmark's provenance file."
+        )
+    return found
+
+
+WRLU_GPKG = dataset_layer("WaterRelatedLandUse_2025", "*.gpkg")
 
 COMPANIES = {
     "88": {
@@ -477,6 +499,55 @@ def extract_parcels(service_areas: dict[str, dict[str, Any]]) -> list[dict[str, 
 TOPOLOGY_REDUCTION: dict[str, Any] = {}
 
 
+# ------------------------------------------------------------------ repair order
+#
+# Which candidate the repair considers first decides which one closes a cycle and is
+# rejected, so the repaired graph is a function of this order. The published build uses
+# "dependents": bridges that more candidate paths depend on come first, so a rejection
+# removes as few source-terminal paths as possible, with node identifiers breaking ties.
+# That rule is defensible but arbitrary, and a released package that fixes it cannot be
+# used to ask whether the reported allocation survives a different one. The order is
+# therefore selectable and defaults to the published rule, so an unset environment rebuilds
+# the released bytes; scripts/connector_order_experiment.py uses the other settings.
+CONNECTOR_ORDER = os.environ.get("LEXIMIN_CONNECTOR_ORDER", "dependents")
+
+# When set, the repair writes its own inputs to this path before deciding anything. The
+# repair is a pure graph computation, so the dump lets every alternative order be replayed
+# from one build instead of rebuilding from the raw layers once per order tested.
+REPAIR_INPUT_DUMP = os.environ.get("LEXIMIN_REPAIR_DUMP", "")
+
+
+def connector_order(
+    candidate_pairs: Mapping[tuple[str, str], list[float]],
+) -> list[tuple[str, str]]:
+    """The order in which the acyclicity repair considers candidate connectors.
+
+    Every rule here is a total order on the candidate set, so each is as deterministic as
+    the published one; they differ only in the arbitrary part. "seed:<n>" is a uniformly
+    random permutation of the node-sorted candidates, which is the only setting that tests
+    the claim rather than another hand-chosen rule.
+    """
+
+    pairs = list(candidate_pairs)
+    dependents = {pair: len(values) for pair, values in candidate_pairs.items()}
+    nodes = {pair: (int(pair[0]), int(pair[1])) for pair in pairs}
+    if CONNECTOR_ORDER == "dependents":  # the published rule
+        return sorted(pairs, key=lambda pair: (-dependents[pair], nodes[pair]))
+    if CONNECTOR_ORDER == "dependents_desc_nodes":  # same priority, opposite tie-break
+        return sorted(pairs, key=lambda pair: (-dependents[pair], tuple(-n for n in nodes[pair])))
+    if CONNECTOR_ORDER == "fewest_dependents":  # the adversarial inverse of the rule
+        return sorted(pairs, key=lambda pair: (dependents[pair], nodes[pair]))
+    if CONNECTOR_ORDER == "nodes":  # node identifiers alone, dependents ignored
+        return sorted(pairs, key=lambda pair: nodes[pair])
+    if CONNECTOR_ORDER == "nodes_desc":
+        return sorted(pairs, key=lambda pair: nodes[pair], reverse=True)
+    if CONNECTOR_ORDER.startswith("seed:"):
+        ordered = sorted(pairs, key=lambda pair: nodes[pair])
+        random.Random(int(CONNECTOR_ORDER.split(":", 1)[1])).shuffle(ordered)
+        return ordered
+    raise ValueError(f"unknown connector order: {CONNECTOR_ORDER!r}")
+
+
 def acyclic_connector_selection(
     physical_edges: dict[str, dict[str, Any]],
     candidate_pairs: Mapping[tuple[str, str], list[float]],
@@ -490,9 +561,9 @@ def acyclic_connector_selection(
 
     The official reach topology is acyclic on its own. Cycles appear only when the
     path table is repaired by bridging a gap with a logical connector, because two
-    paths may need bridges that together close a loop. Candidates are considered in a
-    deterministic node order and a candidate is rejected when its head can already
-    reach its tail, which is precisely the condition for closing a cycle.
+    paths may need bridges that together close a loop. Candidates are considered in the
+    deterministic order ``connector_order`` returns and a candidate is rejected when its
+    head can already reach its tail, which is precisely the condition for closing a cycle.
     """
 
     adjacency: dict[str, set[str]] = defaultdict(set)
@@ -517,10 +588,7 @@ def acyclic_connector_selection(
     accepted: set[tuple[str, str]] = set()
     rejected: list[dict[str, str]] = []
     decisions: list[dict[str, Any]] = []
-    order = sorted(
-        candidate_pairs,
-        key=lambda item: (-len(candidate_pairs[item]), int(item[0]), int(item[1])),
-    )
+    order = connector_order(candidate_pairs)
     for position, pair in enumerate(order, start=1):
         connector = f"c_{pair[0]}_{pair[1]}"
         record = {
@@ -701,6 +769,44 @@ def extract_network() -> tuple[
                 "terminal_raw": terminal_raw,
                 "sequence": sequence,
             }
+        )
+
+    if REPAIR_INPUT_DUMP:
+        # The repair decides on the physical adjacency and the candidate bridges alone, and
+        # which paths a rejection breaks is decided by the connectors each path traverses.
+        # Those three facts are its whole input, so an alternative order can be replayed
+        # from this file without the raw layers and without a rebuild.
+        write_json(
+            Path(REPAIR_INPUT_DUMP),
+            {
+                "connector_order": CONNECTOR_ORDER,
+                "physical_adjacency": sorted(
+                    [edge["from_node"], edge["to_node"]] for edge in physical_edges.values()
+                ),
+                "candidates": [
+                    {
+                        "connector": f"c_{pair[0]}_{pair[1]}",
+                        "tail_raw": pair[0],
+                        "head_raw": pair[1],
+                        "dependent_candidate_paths": len(values),
+                    }
+                    for pair, values in sorted(connector_candidates.items())
+                ],
+                "path_plans": [
+                    {
+                        "path_id": f"p_{plan['path_raw']}",
+                        "source_id": source_id(plan["source_raw"]),
+                        "terminal_node": node_id(plan["terminal_raw"]),
+                        "terminal_raw": plan["terminal_raw"],
+                        "connectors": [
+                            identifier
+                            for identifier, relation in plan["sequence"]
+                            if relation != "physical_pathline"
+                        ],
+                    }
+                    for plan in path_plans
+                ],
+            },
         )
 
     accepted_connectors, rejected_connectors, connector_decisions = acyclic_connector_selection(

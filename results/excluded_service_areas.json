@@ -1,0 +1,294 @@
+{
+ "instance": "cache_valley_2025_multiclaimant_v3",
+ "demand_duty_af_per_acre": 2.0,
+ "demand_basis": "irrigated_nonfallow_WRLU_acres_x_assumed_net_duty",
+ "service_areas_with_official_terminal": 16,
+ "claimants": 10,
+ "excluded_no_irrigated_acres": 1,
+ "excluded_no_acyclic_route": 5,
+ "claimant_seasonal_demand_af": 46232.986,
+ "excluded_seasonal_demand_af": 39506.569,
+ "excluded_share_of_qualifying_demand_percent": 46.08,
+ "logical_connector_parameterization": {
+  "capacity_cfs_base": "minimum_adjacent_path_capacity",
+  "efficiency_base": 1.0,
+  "efficiency_basis": "lossless_logical_connector",
+  "length_m": 0.0,
+  "capacity_status": "derived_topology_repair",
+  "note": "a logical connector carries no loss and no length: it stands for a gap in the path table, not for a reach, so giving it a loss would invent physical conveyance that the layers do not record"
+ },
+ "service_areas": [
+  {
+   "claimant_id": "company_072",
+   "name": "Cub River Irrigation Co.",
+   "terminal_node": "n_16825",
+   "status": "excluded_no_acyclic_route",
+   "irrigated_demand_acres": 12904.224,
+   "seasonal_net_demand_af": 25808.447,
+   "paths_dropped": 1,
+   "dropped_path_ids": [
+    "p_4138"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_9558_9557",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_088",
+   "name": "Hyrum Irrigation Co.",
+   "terminal_node": "n_16801",
+   "status": "claimant",
+   "irrigated_demand_acres": 858.239,
+   "seasonal_net_demand_af": 1716.477,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_102",
+   "name": "Logan Hollow Irrigation Co.",
+   "terminal_node": "n_16819",
+   "status": "excluded_no_irrigated_acres",
+   "irrigated_demand_acres": 0.0,
+   "seasonal_net_demand_af": 0.0,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_103",
+   "name": "Logan Island Irrigation Co.",
+   "terminal_node": "n_16820",
+   "status": "excluded_no_acyclic_route",
+   "irrigated_demand_acres": 5.588,
+   "seasonal_net_demand_af": 11.177,
+   "paths_dropped": 1,
+   "dropped_path_ids": [
+    "p_2065"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_15305_15304",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_15308_13012",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_15310_15309",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_6979_15350",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_104",
+   "name": "Logan North Field Irrigation Co.",
+   "terminal_node": "n_16822",
+   "status": "excluded_no_acyclic_route",
+   "irrigated_demand_acres": 166.856,
+   "seasonal_net_demand_af": 333.712,
+   "paths_dropped": 8,
+   "dropped_path_ids": [
+    "p_2068",
+    "p_2069",
+    "p_2070",
+    "p_2071",
+    "p_2072",
+    "p_2073",
+    "p_2074",
+    "p_2075"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_13933_15349",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_8415_15364",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_105",
+   "name": "Logan Northwest Field Irrigation Co.",
+   "terminal_node": "n_16823",
+   "status": "claimant",
+   "irrigated_demand_acres": 871.492,
+   "seasonal_net_demand_af": 1742.983,
+   "paths_dropped": 1,
+   "dropped_path_ids": [
+    "p_2082"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_10439_15309",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_13012_15304",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_15306_8419",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_15309_13012",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_15350_15306",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_6979_15350",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_106",
+   "name": "Logan River Blacksmith Fork Irrigation Co.",
+   "terminal_node": "n_16816",
+   "status": "claimant",
+   "irrigated_demand_acres": 2455.844,
+   "seasonal_net_demand_af": 4911.688,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_109",
+   "name": "Logan & Northern Irrigation Co.",
+   "terminal_node": "n_16818",
+   "status": "excluded_no_acyclic_route",
+   "irrigated_demand_acres": 3180.67,
+   "seasonal_net_demand_af": 6361.341,
+   "paths_dropped": 5,
+   "dropped_path_ids": [
+    "p_2040",
+    "p_2041",
+    "p_2042",
+    "p_2043",
+    "p_2044"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_10416_15360",
+     "reason": "would_close_a_cycle"
+    },
+    {
+     "connector": "c_8420_15366",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_130",
+   "name": "Paradise Irrigation Co.",
+   "terminal_node": "n_16802",
+   "status": "claimant",
+   "irrigated_demand_acres": 1234.527,
+   "seasonal_net_demand_af": 2469.054,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_132",
+   "name": "Porcupine Highline Canal Co.",
+   "terminal_node": "n_16803",
+   "status": "claimant",
+   "irrigated_demand_acres": 2229.78,
+   "seasonal_net_demand_af": 4459.561,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_136",
+   "name": "Providence Logan Irrigation Co.",
+   "terminal_node": "n_16827",
+   "status": "claimant",
+   "irrigated_demand_acres": 38.494,
+   "seasonal_net_demand_af": 76.988,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_162",
+   "name": "Wellsville-Mendon Conservancy District",
+   "terminal_node": "n_16826",
+   "status": "excluded_no_acyclic_route",
+   "irrigated_demand_acres": 3495.946,
+   "seasonal_net_demand_af": 6991.892,
+   "paths_dropped": 4,
+   "dropped_path_ids": [
+    "p_4139",
+    "p_4140",
+    "p_4141",
+    "p_4142"
+   ],
+   "blocking_connectors": [
+    {
+     "connector": "c_9549_9548",
+     "reason": "would_close_a_cycle"
+    }
+   ]
+  },
+  {
+   "claimant_id": "company_164",
+   "name": "Wellsville East Field Irrigation And Canal Co.",
+   "terminal_node": "n_16800",
+   "status": "claimant",
+   "irrigated_demand_acres": 2314.504,
+   "seasonal_net_demand_af": 4629.007,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_168",
+   "name": "West Cache Irrigation Co.",
+   "terminal_node": "n_16804",
+   "status": "claimant",
+   "irrigated_demand_acres": 11737.924,
+   "seasonal_net_demand_af": 23475.848,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_1249",
+   "name": "Logan, Hyde Park, Smithfield Canal Co.",
+   "terminal_node": "n_16817",
+   "status": "claimant",
+   "irrigated_demand_acres": 847.619,
+   "seasonal_net_demand_af": 1695.239,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  },
+  {
+   "claimant_id": "company_10390",
+   "name": "Logan Southwest Field Irrigation Co.",
+   "terminal_node": "n_16824",
+   "status": "claimant",
+   "irrigated_demand_acres": 528.071,
+   "seasonal_net_demand_af": 1056.141,
+   "paths_dropped": 0,
+   "dropped_path_ids": [],
+   "blocking_connectors": []
+  }
+ ]
+}

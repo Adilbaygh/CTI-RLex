@@ -35,7 +35,12 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 BENCHMARK_DIR = REPO / "DATA" / "LittleBearRiver_2025_Benchmark"
-TARGET = REPO / "DATA" / "CacheValley_2025_Benchmark"
+# The county driver's output directory is selectable so a sensitivity rebuild cannot
+# overwrite the released benchmark; the two-pass driver has to look in the same place
+# for the report pass one leaves behind.
+TARGET = Path(os.environ["LEXIMIN_COUNTY_TARGET"]) if os.environ.get(
+    "LEXIMIN_COUNTY_TARGET"
+) else REPO / "DATA" / "CacheValley_2025_Benchmark"
 SELECTION = TARGET / "selection.json"
 # The reconstructed source is preferred; the surviving 3.10 bytecode is the fallback and is
 # an older revision -- it names the reference scenario "reference", which the validator no
