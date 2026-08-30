@@ -170,8 +170,9 @@ every route to the repair, which is how the instance arrives at ten claimants, s
 subsystems and thirty-one paths. The expensive county-wide discovery pass over the raw
 layers is served from the published `selection.json`, which the rebuild only reads, so the
 two passes take minutes rather than hours and reproduce `benchmark.json` byte for byte.
-`scripts/verify_revision_2026.py` pins that checksum, the 41-record decision log and the
-head-gate control list on every run.
+Each of those is checkable from the published records alone: `checksums_sha256.txt` carries
+the checksum, `discovery_summary.json` the ordered decision record for all 41 connector
+candidates, and the `control_assets` block of `benchmark.json` the ten head gates.
 
 ### Build determinism
 
