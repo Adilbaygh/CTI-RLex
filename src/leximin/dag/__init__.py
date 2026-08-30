@@ -16,7 +16,11 @@ from .experiments import (
 )
 from .solver import CTIRLexSolution, LeximinLevel, solve_cti_rlex
 from .verification import representation_invariance_error, split_terminal_record
-from .analysis import AnalysisCancelled, run_full_analysis
+from .analysis import (
+    AnalysisCancelled,
+    run_full_analysis,
+    weakly_connected_components,
+)
 
 __all__ = [
     "ClaimantTerminal",
@@ -46,4 +50,5 @@ __all__ = [
     "split_terminal_record",
     "AnalysisCancelled",
     "run_full_analysis",
+    "weakly_connected_components",
 ]

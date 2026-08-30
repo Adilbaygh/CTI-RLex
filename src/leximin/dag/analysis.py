@@ -6,6 +6,8 @@ of manuscripts, project working folders, or pre-generated result files.
 
 from __future__ import annotations
 
+from collections import defaultdict
+
 from collections.abc import Callable
 from dataclasses import replace
 from statistics import median
@@ -47,6 +49,56 @@ def _notify(
 def _check_cancelled(callback: CancelCallback | None) -> None:
     if callback is not None and callback():
         raise AnalysisCancelled("Analysis cancelled by the user.")
+
+
+def weakly_connected_components(model: CTIBenchmark) -> dict[str, str]:
+    """Label each claimant with the weakly connected component of the network serving it.
+
+    Claimants in different components share no reach, no source and no group envelope, so
+    they cannot compete: the lexicographic order over the whole instance merely interleaves
+    guarantees that were decided separately. Reporting the component beside each claimant is
+    what keeps a reader from reading competition into that interleaving, and the component is
+    computed from the released edge list rather than asserted.
+
+    Labels are numbered by the order in which the components first appear in the released
+    edge list, so a given release always yields the same labels.
+    """
+
+    adjacency: dict[str, set[str]] = defaultdict(set)
+    for edge in model.edges:
+        adjacency[edge.tail].add(edge.head)
+        adjacency[edge.head].add(edge.tail)
+
+    seen: set[str] = set()
+    groups: list[set[str]] = []
+    # Components are discovered in the order their nodes first appear in the released edge
+    # list, which is itself sorted when the benchmark is written, so the numbering is stable
+    # for a given release rather than dependent on set iteration.
+    for node in list(adjacency):
+        if node in seen:
+            continue
+        stack, group = [node], set()
+        while stack:
+            current = stack.pop()
+            if current in seen:
+                continue
+            seen.add(current)
+            group.add(current)
+            stack.extend(adjacency[current] - seen)
+        groups.append(group)
+
+    terminals: dict[str, list[str]] = defaultdict(list)
+    for terminal in model.terminals:
+        terminals[terminal.claimant_id].append(terminal.node)
+
+    membership: dict[str, int] = {}
+    for claimant in terminals:
+        for index, group in enumerate(groups):
+            if any(node in group for node in terminals[claimant]):
+                membership[claimant] = index
+                break
+    order = {old: new for new, old in enumerate(sorted(set(membership.values())), start=1)}
+    return {claimant: f"C{order[index]}" for claimant, index in membership.items()}
 
 
 def jain_index(values: list[float]) -> float:

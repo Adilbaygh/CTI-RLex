@@ -1,0 +1,858 @@
+{
+ "provenance_classes": {
+  "observed_design_attribute": "observed",
+  "observed_company_level_not_farmer_level": "observed",
+  "proxy_requires_calibration": "derived",
+  "derived_requires_calibration": "derived",
+  "derived_topology_repair": "derived",
+  "derived_envelope_not_observed_2025_supply": "derived",
+  "derived_operational_envelope_not_observed_hydrologic_supply": "derived",
+  "derived_from_WRLU_method_with_assumed_method_efficiencies": "derived",
+  "derived_attributes_plus_assumed_duty_and_profile": "derived",
+  "assumed_exp_length_decay_0.005_per_km": "assumed",
+  "assumed_exp_length_decay_0.001_per_km": "assumed",
+  "lossless_logical_connector": "assumed",
+  "experimental_normalization": "assumed",
+  "experimental_derating": "assumed"
+ },
+ "instances": {
+  "little_bear_v2": {
+   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+   "provenance": {
+    "blocks": [
+     {
+      "block": "Reach capacity",
+      "table": "edges",
+      "field": "capacity_status",
+      "rows": 19,
+      "by_provenance": {
+       "observed": 7,
+       "derived": 12
+      },
+      "by_status": [
+       {
+        "status": "observed_design_attribute",
+        "provenance": "observed",
+        "rows": 7,
+        "share_percent": 36.8421052631579
+       },
+       {
+        "status": "proxy_requires_calibration",
+        "provenance": "derived",
+        "rows": 7,
+        "share_percent": 36.8421052631579
+       },
+       {
+        "status": "derived_topology_repair",
+        "provenance": "derived",
+        "rows": 5,
+        "share_percent": 26.31578947368421
+       }
+      ]
+     },
+     {
+      "block": "Reach efficiency",
+      "table": "edges",
+      "field": "efficiency_basis",
+      "rows": 19,
+      "by_provenance": {
+       "assumed": 19
+      },
+      "by_status": [
+       {
+        "status": "assumed_exp_length_decay_0.005_per_km",
+        "provenance": "assumed",
+        "rows": 9,
+        "share_percent": 47.36842105263158
+       },
+       {
+        "status": "assumed_exp_length_decay_0.001_per_km",
+        "provenance": "assumed",
+        "rows": 5,
+        "share_percent": 26.31578947368421
+       },
+       {
+        "status": "lossless_logical_connector",
+        "provenance": "assumed",
+        "rows": 5,
+        "share_percent": 26.31578947368421
+       }
+      ]
+     },
+     {
+      "block": "Source seasonal envelope",
+      "table": "sources",
+      "field": "limit_status",
+      "rows": 4,
+      "by_provenance": {
+       "derived": 4
+      },
+      "by_status": [
+       {
+        "status": "derived_envelope_not_observed_2025_supply",
+        "provenance": "derived",
+        "rows": 4,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Shared group envelope",
+      "table": "source_groups",
+      "field": "data_status",
+      "rows": 2,
+      "by_provenance": {
+       "derived": 2
+      },
+      "by_status": [
+       {
+        "status": "derived_operational_envelope_not_observed_hydrologic_supply",
+        "provenance": "derived",
+        "rows": 2,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Application efficiency",
+      "table": "terminal_parameters",
+      "field": "data_status",
+      "rows": 15,
+      "by_provenance": {
+       "derived": 15
+      },
+      "by_status": [
+       {
+        "status": "derived_from_WRLU_method_with_assumed_method_efficiencies",
+        "provenance": "derived",
+        "rows": 15,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Claimant-terminal mapping",
+      "table": "claimant_terminals",
+      "field": "mapping_status",
+      "rows": 3,
+      "by_provenance": {
+       "observed": 3
+      },
+      "by_status": [
+       {
+        "status": "observed_company_level_not_farmer_level",
+        "provenance": "observed",
+        "rows": 3,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Monthly demand",
+      "table": "demands",
+      "field": "data_status",
+      "rows": 15,
+      "by_provenance": {
+       "derived": 15
+      },
+      "by_status": [
+       {
+        "status": "derived_attributes_plus_assumed_duty_and_profile",
+        "provenance": "derived",
+        "rows": 15,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Control normalization",
+      "table": "control_assets",
+      "field": "data_status",
+      "rows": 7,
+      "by_provenance": {
+       "assumed": 7
+      },
+      "by_status": [
+       {
+        "status": "experimental_normalization",
+        "provenance": "assumed",
+        "rows": 7,
+        "share_percent": 100.0
+       }
+      ]
+     }
+    ],
+    "rows_by_provenance": {
+     "observed": 10,
+     "derived": 48,
+     "assumed": 26
+    },
+    "share_by_provenance_percent": {
+     "assumed": 30.952380952380953,
+     "derived": 57.142857142857146,
+     "observed": 11.904761904761905
+    },
+    "total_rows": 84
+   },
+   "scenarios": [
+    {
+     "scenario_id": "nominal",
+     "label": "Design-envelope reference",
+     "probability_weight": 0.0,
+     "recourse_budget": 0.0
+    },
+    {
+     "scenario_id": "moderate_system_shortage",
+     "label": "Moderate system shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    },
+    {
+     "scenario_id": "severe_system_shortage",
+     "label": "Severe system shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.4
+    },
+    {
+     "scenario_id": "paradise_diversion_outage_under_shortage",
+     "label": "Paradise diversion outage under shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.35
+    },
+    {
+     "scenario_id": "hyrum_canal_restriction_under_shortage",
+     "label": "Hyrum canal restriction under shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    }
+   ],
+   "controls": [
+    {
+     "control_asset_id": "source:s_10434",
+     "resource_type": "source",
+     "resource_id": "s_10434",
+     "control_label": "Surface diversion at node 10434",
+     "reachable_claimants": "company_130",
+     "normalization_scale_af": 3255.959248,
+     "effort_coefficient": 0.000307129151,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15269",
+     "resource_type": "source",
+     "resource_id": "s_15269",
+     "control_label": "Hyrum Reservoir",
+     "reachable_claimants": "company_088",
+     "normalization_scale_af": 2565.227742,
+     "effort_coefficient": 0.000389828935,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15286",
+     "resource_type": "source",
+     "resource_id": "s_15286",
+     "control_label": "Porcupine Reservoir",
+     "reachable_claimants": "company_130|company_132",
+     "normalization_scale_af": 8980.343693,
+     "effort_coefficient": 0.000111354313,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15957",
+     "resource_type": "source",
+     "resource_id": "s_15957",
+     "control_label": "Surface diversion at node 15957",
+     "reachable_claimants": "company_088",
+     "normalization_scale_af": 2565.227742,
+     "effort_coefficient": 0.000389828935,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_3577",
+     "resource_type": "edge",
+     "resource_id": "e_3577",
+     "control_label": "Highline branch gate",
+     "reachable_claimants": "company_132",
+     "normalization_scale_af": 5724.384445,
+     "effort_coefficient": 0.000174691272,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_5854",
+     "resource_type": "edge",
+     "resource_id": "e_5854",
+     "control_label": "Paradise branch gate",
+     "reachable_claimants": "company_130",
+     "normalization_scale_af": 3255.959248,
+     "effort_coefficient": 0.000307129151,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_10136",
+     "resource_type": "edge",
+     "resource_id": "e_10136",
+     "control_label": "Paradise Canal head gate",
+     "reachable_claimants": "company_130",
+     "normalization_scale_af": 3255.959248,
+     "effort_coefficient": 0.000307129151,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    }
+   ],
+   "source_groups": [
+    {
+     "group_id": "hyrum_subsystem",
+     "group_label": "Hyrum delivery subsystem",
+     "base_envelope_cfs": 44.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_15269",
+       "beta": 1.0
+      },
+      {
+       "source_id": "s_15957",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "paradise_highline_subsystem",
+     "group_label": "Paradise-Highline delivery subsystem",
+     "base_envelope_cfs": 85.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_10434",
+       "beta": 1.0
+      },
+      {
+       "source_id": "s_15286",
+       "beta": 1.0
+      }
+     ]
+    }
+   ],
+   "logical_connectors": 5,
+   "logical_connectors_in_the_control_set": []
+  },
+  "cache_valley_v3": {
+   "benchmark_id": "cache_valley_2025_multiclaimant_v3",
+   "provenance": {
+    "blocks": [
+     {
+      "block": "Reach capacity",
+      "table": "edges",
+      "field": "capacity_status",
+      "rows": 69,
+      "by_provenance": {
+       "derived": 43,
+       "observed": 26
+      },
+      "by_status": [
+       {
+        "status": "proxy_requires_calibration",
+        "provenance": "derived",
+        "rows": 27,
+        "share_percent": 39.130434782608695
+       },
+       {
+        "status": "observed_design_attribute",
+        "provenance": "observed",
+        "rows": 26,
+        "share_percent": 37.68115942028985
+       },
+       {
+        "status": "derived_topology_repair",
+        "provenance": "derived",
+        "rows": 15,
+        "share_percent": 21.73913043478261
+       },
+       {
+        "status": "derived_requires_calibration",
+        "provenance": "derived",
+        "rows": 1,
+        "share_percent": 1.4492753623188406
+       }
+      ]
+     },
+     {
+      "block": "Reach efficiency",
+      "table": "edges",
+      "field": "efficiency_basis",
+      "rows": 69,
+      "by_provenance": {
+       "assumed": 69
+      },
+      "by_status": [
+       {
+        "status": "assumed_exp_length_decay_0.005_per_km",
+        "provenance": "assumed",
+        "rows": 48,
+        "share_percent": 69.56521739130434
+       },
+       {
+        "status": "lossless_logical_connector",
+        "provenance": "assumed",
+        "rows": 15,
+        "share_percent": 21.73913043478261
+       },
+       {
+        "status": "assumed_exp_length_decay_0.001_per_km",
+        "provenance": "assumed",
+        "rows": 6,
+        "share_percent": 8.695652173913043
+       }
+      ]
+     },
+     {
+      "block": "Source seasonal envelope",
+      "table": "sources",
+      "field": "limit_status",
+      "rows": 10,
+      "by_provenance": {
+       "derived": 10
+      },
+      "by_status": [
+       {
+        "status": "derived_envelope_not_observed_2025_supply",
+        "provenance": "derived",
+        "rows": 10,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Shared group envelope",
+      "table": "source_groups",
+      "field": "data_status",
+      "rows": 7,
+      "by_provenance": {
+       "derived": 7
+      },
+      "by_status": [
+       {
+        "status": "derived_operational_envelope_not_observed_hydrologic_supply",
+        "provenance": "derived",
+        "rows": 7,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Application efficiency",
+      "table": "terminal_parameters",
+      "field": "data_status",
+      "rows": 50,
+      "by_provenance": {
+       "derived": 50
+      },
+      "by_status": [
+       {
+        "status": "derived_from_WRLU_method_with_assumed_method_efficiencies",
+        "provenance": "derived",
+        "rows": 50,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Claimant-terminal mapping",
+      "table": "claimant_terminals",
+      "field": "mapping_status",
+      "rows": 10,
+      "by_provenance": {
+       "observed": 10
+      },
+      "by_status": [
+       {
+        "status": "observed_company_level_not_farmer_level",
+        "provenance": "observed",
+        "rows": 10,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Monthly demand",
+      "table": "demands",
+      "field": "data_status",
+      "rows": 50,
+      "by_provenance": {
+       "derived": 50
+      },
+      "by_status": [
+       {
+        "status": "derived_attributes_plus_assumed_duty_and_profile",
+        "provenance": "derived",
+        "rows": 50,
+        "share_percent": 100.0
+       }
+      ]
+     },
+     {
+      "block": "Control normalization",
+      "table": "control_assets",
+      "field": "data_status",
+      "rows": 20,
+      "by_provenance": {
+       "assumed": 20
+      },
+      "by_status": [
+       {
+        "status": "experimental_normalization",
+        "provenance": "assumed",
+        "rows": 20,
+        "share_percent": 100.0
+       }
+      ]
+     }
+    ],
+    "rows_by_provenance": {
+     "derived": 160,
+     "observed": 36,
+     "assumed": 89
+    },
+    "share_by_provenance_percent": {
+     "assumed": 31.228070175438596,
+     "derived": 56.14035087719298,
+     "observed": 12.631578947368421
+    },
+    "total_rows": 285
+   },
+   "scenarios": [
+    {
+     "scenario_id": "nominal",
+     "label": "Design-envelope reference",
+     "probability_weight": 0.0,
+     "recourse_budget": 0.0
+    },
+    {
+     "scenario_id": "moderate_system_shortage",
+     "label": "Moderate system shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    },
+    {
+     "scenario_id": "severe_system_shortage",
+     "label": "Severe system shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    },
+    {
+     "scenario_id": "subsystem_01_restriction_under_shortage",
+     "label": "Subsystem 1 restriction under shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    },
+    {
+     "scenario_id": "subsystem_02_restriction_under_shortage",
+     "label": "Subsystem 2 restriction under shortage",
+     "probability_weight": 0.25,
+     "recourse_budget": 0.25
+    }
+   ],
+   "controls": [
+    {
+     "control_asset_id": "source:s_6925",
+     "resource_type": "source",
+     "resource_id": "s_6925",
+     "control_label": "Surface diversion at node 6925",
+     "reachable_claimants": "company_168",
+     "normalization_scale_af": 31622.834488,
+     "effort_coefficient": 3.1622719e-05,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_9154",
+     "resource_type": "source",
+     "resource_id": "s_9154",
+     "control_label": "Surface diversion at node 9154",
+     "reachable_claimants": "company_1249",
+     "normalization_scale_af": 2245.445296,
+     "effort_coefficient": 0.000445345964,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_9548",
+     "resource_type": "source",
+     "resource_id": "s_9548",
+     "control_label": "Surface diversion at node 9548",
+     "reachable_claimants": "company_088|company_164",
+     "normalization_scale_af": 9920.849169,
+     "effort_coefficient": 0.000100797823,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_10422",
+     "resource_type": "source",
+     "resource_id": "s_10422",
+     "control_label": "Surface diversion at node 10422",
+     "reachable_claimants": "company_10390|company_105",
+     "normalization_scale_af": 4637.232104,
+     "effort_coefficient": 0.00021564588,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_10424",
+     "resource_type": "source",
+     "resource_id": "s_10424",
+     "control_label": "Surface diversion at node 10424",
+     "reachable_claimants": "company_106",
+     "normalization_scale_af": 7977.731676,
+     "effort_coefficient": 0.000125348914,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_10434",
+     "resource_type": "source",
+     "resource_id": "s_10434",
+     "control_label": "Surface diversion at node 10434",
+     "reachable_claimants": "company_130",
+     "normalization_scale_af": 3255.959248,
+     "effort_coefficient": 0.000307129151,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_10450",
+     "resource_type": "source",
+     "resource_id": "s_10450",
+     "control_label": "Surface diversion at node 10450",
+     "reachable_claimants": "company_136",
+     "normalization_scale_af": 122.480661,
+     "effort_coefficient": 0.008164554217,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15269",
+     "resource_type": "source",
+     "resource_id": "s_15269",
+     "control_label": "Hyrum Reservoir",
+     "reachable_claimants": "company_088|company_164",
+     "normalization_scale_af": 9920.849169,
+     "effort_coefficient": 0.000100797823,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15286",
+     "resource_type": "source",
+     "resource_id": "s_15286",
+     "control_label": "Porcupine Reservoir",
+     "reachable_claimants": "company_130|company_132",
+     "normalization_scale_af": 8980.343693,
+     "effort_coefficient": 0.000111354313,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "source:s_15957",
+     "resource_type": "source",
+     "resource_id": "s_15957",
+     "control_label": "Surface diversion at node 15957",
+     "reachable_claimants": "company_088",
+     "normalization_scale_af": 2565.227742,
+     "effort_coefficient": 0.000389828935,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_8949",
+     "resource_type": "edge",
+     "resource_id": "e_8949",
+     "control_label": "Head gate at n_16800",
+     "reachable_claimants": "company_164",
+     "normalization_scale_af": 7355.621426,
+     "effort_coefficient": 0.000135950444,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_5868",
+     "resource_type": "edge",
+     "resource_id": "e_5868",
+     "control_label": "Head gate at n_16801",
+     "reachable_claimants": "company_088",
+     "normalization_scale_af": 2565.227742,
+     "effort_coefficient": 0.000389828935,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_15158",
+     "resource_type": "edge",
+     "resource_id": "e_15158",
+     "control_label": "Head gate at n_16802",
+     "reachable_claimants": "company_130",
+     "normalization_scale_af": 3255.959248,
+     "effort_coefficient": 0.000307129151,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_13081",
+     "resource_type": "edge",
+     "resource_id": "e_13081",
+     "control_label": "Head gate at n_16803",
+     "reachable_claimants": "company_132",
+     "normalization_scale_af": 5724.384445,
+     "effort_coefficient": 0.000174691272,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_9834",
+     "resource_type": "edge",
+     "resource_id": "e_9834",
+     "control_label": "Head gate at n_16804",
+     "reachable_claimants": "company_168",
+     "normalization_scale_af": 31622.834488,
+     "effort_coefficient": 3.1622719e-05,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_9121",
+     "resource_type": "edge",
+     "resource_id": "e_9121",
+     "control_label": "Head gate at n_16816",
+     "reachable_claimants": "company_106",
+     "normalization_scale_af": 7977.731676,
+     "effort_coefficient": 0.000125348914,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_9861",
+     "resource_type": "edge",
+     "resource_id": "e_9861",
+     "control_label": "Head gate at n_16817",
+     "reachable_claimants": "company_1249",
+     "normalization_scale_af": 2245.445296,
+     "effort_coefficient": 0.000445345964,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_8851",
+     "resource_type": "edge",
+     "resource_id": "e_8851",
+     "control_label": "Head gate at n_16823",
+     "reachable_claimants": "company_105",
+     "normalization_scale_af": 2888.866666,
+     "effort_coefficient": 0.000346156509,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_8842",
+     "resource_type": "edge",
+     "resource_id": "e_8842",
+     "control_label": "Head gate at n_16824",
+     "reachable_claimants": "company_10390",
+     "normalization_scale_af": 1748.365438,
+     "effort_coefficient": 0.000571962805,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    },
+    {
+     "control_asset_id": "edge:e_8940",
+     "resource_type": "edge",
+     "resource_id": "e_8940",
+     "control_label": "Head gate at n_16827",
+     "reachable_claimants": "company_136",
+     "normalization_scale_af": 122.480661,
+     "effort_coefficient": 0.008164554217,
+     "basis": "inverse_seasonal_gross_demand_reachable_from_control"
+    }
+   ],
+   "source_groups": [
+    {
+     "group_id": "subsystem_01",
+     "group_label": "Cache Valley delivery subsystem 1",
+     "base_envelope_cfs": 100.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_10422",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_02",
+     "group_label": "Cache Valley delivery subsystem 2",
+     "base_envelope_cfs": 85.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_10434",
+       "beta": 1.0
+      },
+      {
+       "source_id": "s_15286",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_03",
+     "group_label": "Cache Valley delivery subsystem 3",
+     "base_envelope_cfs": 85.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_15269",
+       "beta": 1.0
+      },
+      {
+       "source_id": "s_15957",
+       "beta": 1.0
+      },
+      {
+       "source_id": "s_9548",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_04",
+     "group_label": "Cache Valley delivery subsystem 4",
+     "base_envelope_cfs": 34.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_10424",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_05",
+     "group_label": "Cache Valley delivery subsystem 5",
+     "base_envelope_cfs": 15.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_10450",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_06",
+     "group_label": "Cache Valley delivery subsystem 6",
+     "base_envelope_cfs": 30.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_6925",
+       "beta": 1.0
+      }
+     ]
+    },
+    {
+     "group_id": "subsystem_07",
+     "group_label": "Cache Valley delivery subsystem 7",
+     "base_envelope_cfs": 65.0,
+     "envelope_basis": "minimum_of_summed_source_design_and_terminal_ingress_capacity",
+     "members": [
+      {
+       "source_id": "s_9154",
+       "beta": 1.0
+      }
+     ]
+    }
+   ],
+   "logical_connectors": 15,
+   "logical_connectors_in_the_control_set": []
+  }
+ }
+}

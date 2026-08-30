@@ -1,0 +1,378 @@
+{
+ "benchmark_id": "cache_valley_2025_multiclaimant_v3",
+ "components": 7,
+ "largest_component_claimants": 2,
+ "components_where_the_rules_differ": [
+  "C1",
+  "C2",
+  "C5"
+ ],
+ "global_sorted_rho": [
+  0.056393646245954054,
+  0.13744468899532894,
+  0.307273771107821,
+  0.307273771107821,
+  0.36529559348158364,
+  0.36529559348158364,
+  0.6740982692651426,
+  0.6740982692651426,
+  0.8821454660844299,
+  1.0
+ ],
+ "merged_sorted_rho": [
+  0.05639364624595406,
+  0.13744468899532894,
+  0.307273771107821,
+  0.307273771107821,
+  0.3652955934815835,
+  0.3652955934815835,
+  0.6740982692651426,
+  0.6740982692651426,
+  0.8821454660844299,
+  1.0
+ ],
+ "the_guarantee_vector_decomposes_by_component": true,
+ "the_delivery_decomposes_by_component": false,
+ "the_recourse_budget_is_the_only_coupling": "components share no reach, no source and no group envelope, but the recourse budget sums control deviations over the whole instance and the contingency plans deviate from one common first-stage plan",
+ "total_delivery_cost_af": 207.23966285233848,
+ "total_delivery_cost_alone_af": 0.0,
+ "global_repeats": 5,
+ "global_median_runtime_seconds": 2.059089499998663,
+ "global_min_runtime_seconds": 2.0360213999992993,
+ "global_max_runtime_seconds": 2.3671143999999913,
+ "global_runtime_seconds_repeats": [
+  2.3671143999999913,
+  2.059089499998663,
+  2.057297600000311,
+  2.0360213999992993,
+  2.0751214000010805
+ ],
+ "rows": [
+  {
+   "component": "C1",
+   "claimants": [
+    "Hyrum Irrigation Co.",
+    "Wellsville East Field Irrigation And Canal Co."
+   ],
+   "claimant_ids": [
+    "company_088",
+    "company_164"
+   ],
+   "sources": [
+    "s_15269",
+    "s_15957",
+    "s_9548"
+   ],
+   "shared_groups": [
+    "subsystem_03"
+   ],
+   "cti_rlex": {
+    "company_088": 0.36529559348158364,
+    "company_164": 0.36529559348158364
+   },
+   "prop_br": {
+    "company_088": 0.18922062253219465,
+    "company_164": 0.42498398489012895
+   },
+   "solved_alone": {
+    "company_088": 0.3652955934815835,
+    "company_164": 0.3652955934815835
+   },
+   "cti_rlex_nominal_delivery_af": 4230.877161350484,
+   "prop_br_nominal_delivery_af": 4291.180044523513,
+   "cti_rlex_nominal_delivery_alone_af": 4374.492567415792,
+   "prop_br_nominal_delivery_alone_af": 4374.492567415792,
+   "max_lp_residual": 6.821210263296962e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.19656649999888032,
+   "min_runtime_seconds": 0.19425869999759016,
+   "max_runtime_seconds": 0.21790920000057667,
+   "runtime_seconds_repeats": [
+    0.19425869999759016,
+    0.1968087999994168,
+    0.21790920000057667,
+    0.19459210000059102,
+    0.19656649999888032
+   ],
+   "delivery_cost_af": 60.30288317302893,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": false,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C2",
+   "claimants": [
+    "Paradise Irrigation Co.",
+    "Porcupine Highline Canal Co."
+   ],
+   "claimant_ids": [
+    "company_130",
+    "company_132"
+   ],
+   "sources": [
+    "s_10434",
+    "s_15286"
+   ],
+   "shared_groups": [
+    "subsystem_02"
+   ],
+   "cti_rlex": {
+    "company_130": 0.307273771107821,
+    "company_132": 0.307273771107821
+   },
+   "prop_br": {
+    "company_130": 0.7748722561742207,
+    "company_132": 0.056393646245954054
+   },
+   "solved_alone": {
+    "company_130": 0.307273771107821,
+    "company_132": 0.307273771107821
+   },
+   "cti_rlex_nominal_delivery_af": 3449.208311769129,
+   "prop_br_nominal_delivery_af": 3436.2071568304978,
+   "cti_rlex_nominal_delivery_alone_af": 3589.166190793733,
+   "prop_br_nominal_delivery_alone_af": 3589.166190793733,
+   "max_lp_residual": 4.547473508864641e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.19088750000082655,
+   "min_runtime_seconds": 0.18930309999996098,
+   "max_runtime_seconds": 0.1912880000018049,
+   "runtime_seconds_repeats": [
+    0.19059560000096099,
+    0.18930309999996098,
+    0.1912880000018049,
+    0.19095649999871966,
+    0.19088750000082655
+   ],
+   "delivery_cost_af": -13.001154938631316,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": false,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C3",
+   "claimants": [
+    "Logan, Hyde Park, Smithfield Canal Co."
+   ],
+   "claimant_ids": [
+    "company_1249"
+   ],
+   "sources": [
+    "s_9154"
+   ],
+   "shared_groups": [
+    "subsystem_07"
+   ],
+   "cti_rlex": {
+    "company_1249": 0.8821454660844299
+   },
+   "prop_br": {
+    "company_1249": 0.8821454660844299
+   },
+   "solved_alone": {
+    "company_1249": 0.8821454660844299
+   },
+   "cti_rlex_nominal_delivery_af": 1639.2969510493867,
+   "prop_br_nominal_delivery_af": 1639.2969510493867,
+   "cti_rlex_nominal_delivery_alone_af": 1695.2385860000002,
+   "prop_br_nominal_delivery_alone_af": 1695.2385860000002,
+   "max_lp_residual": 1.1368683772161603e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.15046309999888763,
+   "min_runtime_seconds": 0.1489233999964199,
+   "max_runtime_seconds": 0.17174840000006952,
+   "runtime_seconds_repeats": [
+    0.14927220000026864,
+    0.1489233999964199,
+    0.17174840000006952,
+    0.15126099999906728,
+    0.15046309999888763
+   ],
+   "delivery_cost_af": 0.0,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": true,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C4",
+   "claimants": [
+    "West Cache Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_168"
+   ],
+   "sources": [
+    "s_6925"
+   ],
+   "shared_groups": [
+    "subsystem_06"
+   ],
+   "cti_rlex": {
+    "company_168": 0.056393646245954054
+   },
+   "prop_br": {
+    "company_168": 0.05639364624595406
+   },
+   "solved_alone": {
+    "company_168": 0.05639364624595406
+   },
+   "cti_rlex_nominal_delivery_af": 4219.653125017932,
+   "prop_br_nominal_delivery_af": 4377.576799184319,
+   "cti_rlex_nominal_delivery_alone_af": 4377.583418028222,
+   "prop_br_nominal_delivery_alone_af": 4377.583418028222,
+   "max_lp_residual": 0.0,
+   "repeats": 5,
+   "median_runtime_seconds": 0.15060710000034305,
+   "min_runtime_seconds": 0.14977429999999003,
+   "max_runtime_seconds": 0.15183560000150464,
+   "runtime_seconds_repeats": [
+    0.15061490000152844,
+    0.15024849999826984,
+    0.15183560000150464,
+    0.14977429999999003,
+    0.15060710000034305
+   ],
+   "delivery_cost_af": 157.92367416638626,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": true,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C5",
+   "claimants": [
+    "Logan Southwest Field Irrigation Co.",
+    "Logan Northwest Field Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_10390",
+    "company_105"
+   ],
+   "sources": [
+    "s_10422"
+   ],
+   "shared_groups": [
+    "subsystem_01"
+   ],
+   "cti_rlex": {
+    "company_10390": 0.6740982692651426,
+    "company_105": 0.6740982692651426
+   },
+   "prop_br": {
+    "company_10390": 1.0,
+    "company_105": 0.4804998677786354
+   },
+   "solved_alone": {
+    "company_10390": 0.6740982692651426,
+    "company_105": 0.6740982692651426
+   },
+   "cti_rlex_nominal_delivery_af": 2297.4287529951143,
+   "prop_br_nominal_delivery_af": 2299.442994369278,
+   "cti_rlex_nominal_delivery_alone_af": 2423.9078275812344,
+   "prop_br_nominal_delivery_alone_af": 2423.9078275812344,
+   "max_lp_residual": 2.2737367544323206e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.1877344999993511,
+   "min_runtime_seconds": 0.18568130000130623,
+   "max_runtime_seconds": 0.20908889999918756,
+   "runtime_seconds_repeats": [
+    0.1877344999993511,
+    0.20908889999918756,
+    0.18568130000130623,
+    0.18822569999974803,
+    0.1874000000025262
+   ],
+   "delivery_cost_af": 2.014241374163703,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": false,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C6",
+   "claimants": [
+    "Providence Logan Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_136"
+   ],
+   "sources": [
+    "s_10450"
+   ],
+   "shared_groups": [
+    "subsystem_05"
+   ],
+   "cti_rlex": {
+    "company_136": 1.0
+   },
+   "prop_br": {
+    "company_136": 1.0
+   },
+   "solved_alone": {
+    "company_136": 1.0
+   },
+   "cti_rlex_nominal_delivery_af": 76.98828,
+   "prop_br_nominal_delivery_af": 76.98828,
+   "cti_rlex_nominal_delivery_alone_af": 76.98828,
+   "prop_br_nominal_delivery_alone_af": 76.98828,
+   "max_lp_residual": 0.0,
+   "repeats": 5,
+   "median_runtime_seconds": 0.1488093999978446,
+   "min_runtime_seconds": 0.1473641000011412,
+   "max_runtime_seconds": 0.1498871000003419,
+   "runtime_seconds_repeats": [
+    0.14758100000108243,
+    0.1473641000011412,
+    0.1498871000003419,
+    0.14910279999821796,
+    0.1488093999978446
+   ],
+   "delivery_cost_af": 0.0,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": true,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C7",
+   "claimants": [
+    "Logan River Blacksmith Fork Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_106"
+   ],
+   "sources": [
+    "s_10424"
+   ],
+   "shared_groups": [
+    "subsystem_04"
+   ],
+   "cti_rlex": {
+    "company_106": 0.13744468899532894
+   },
+   "prop_br": {
+    "company_106": 0.13744468899532894
+   },
+   "solved_alone": {
+    "company_106": 0.13744468899532894
+   },
+   "cti_rlex_nominal_delivery_af": 932.9259670465344,
+   "prop_br_nominal_delivery_af": 932.9259861239253,
+   "cti_rlex_nominal_delivery_alone_af": 1537.2766944778573,
+   "prop_br_nominal_delivery_alone_af": 1537.2766944778573,
+   "max_lp_residual": 1.1368683772161603e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.15035180000268156,
+   "min_runtime_seconds": 0.1490689000020211,
+   "max_runtime_seconds": 0.1716513000028499,
+   "runtime_seconds_repeats": [
+    0.1716513000028499,
+    0.14990359999865177,
+    0.15035180000268156,
+    0.1490689000020211,
+    0.15151069999774336
+   ],
+   "delivery_cost_af": 1.907739090256655e-05,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": true,
+   "solving_alone_reproduces_the_global_guarantee": true
+  }
+ ]
+}

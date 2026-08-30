@@ -47,12 +47,14 @@ Step 4 "residual, feasibility and representation audits" {
     python -B scripts\run_cti_verification.py DATA\LittleBearRiver_2025_Benchmark\benchmark.json --output results\cti_rlex_verification.json
 }
 Step 5 "lexicographic vector against a common floor" { python -B scripts\revision_experiments.py }
-Step 6 "source-removal ablation on both instances" { python -B scripts\ablation_experiment.py }
-Step 7 "guarantee vector under three recourse-budget regimes" { python -B scripts\equal_budget_experiment.py }
-Step 8 "guarantee vector under three effort-coefficient weightings" { python -B scripts\normalization_sensitivity.py }
-Step 9 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
-Step 10 "scalability sweep" { python -B scripts\scalability_experiment.py }
-Step 11 "acyclicity-repair order sensitivity and excluded service areas" {
+Step 6 "component-level analysis of the ten-claimant instance" { python -B scripts\component_analysis.py }
+Step 7 "parameter provenance and coefficient tables" { python -B scripts\benchmark_parameter_tables.py }
+Step 8 "source-removal ablation on both instances" { python -B scripts\ablation_experiment.py }
+Step 9 "guarantee vector under three recourse-budget regimes" { python -B scripts\equal_budget_experiment.py }
+Step 10 "guarantee vector under three effort-coefficient weightings" { python -B scripts\normalization_sensitivity.py }
+Step 11 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
+Step 12 "scalability sweep" { python -B scripts\scalability_experiment.py }
+Step 13 "acyclicity-repair order sensitivity and excluded service areas" {
     if ($env:LEXIMIN_DATASETS) {
         python -B scripts\excluded_service_areas.py
         python -B scripts\connector_order_experiment.py --build --rebuild
@@ -60,11 +62,11 @@ Step 11 "acyclicity-repair order sensitivity and excluded service areas" {
         python -c "print('   skipped: these rebuild from the raw Utah layers; set LEXIMIN_DATASETS to the open-data root first')"
     }
 }
-Step 12 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
-Step 13 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
-Step 14 "figure resolution check" { python -B scripts\verify_publication_figures.py }
-Step 15 "machine and solver versions" { python -B scripts\record_environment.py }
-Step 16 "test suite" { python -B -m pytest -q }
+Step 14 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
+Step 15 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
+Step 16 "figure resolution check" { python -B scripts\verify_publication_figures.py }
+Step 17 "machine and solver versions" { python -B scripts\record_environment.py }
+Step 18 "test suite" { python -B -m pytest -q }
 
 $summary = @'
 import json

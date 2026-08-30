@@ -209,6 +209,8 @@ The mapping from article object to file is:
 | Supplementary S21, excluded service areas | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
 | Supplementary S22, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
 | Supplementary S24, S25, factorial effect decomposition | `factorial_decomposition.py` | `results/factorial_decomposition.json` |
+| Supplementary S27, component-level analysis | `component_analysis.py` | `results/component_analysis.json` |
+| Supplementary S28 to S31, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
 | Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
 | Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
 | Figure resolution and font check | `verify_publication_figures.py` | printed report, no file written |
