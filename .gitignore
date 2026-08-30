@@ -66,6 +66,9 @@
 !/scripts/update_figure4_two_panel.py
 !/scripts/verify_publication_figures.py
 !/scripts/record_environment.py
+# The two-pass driver for the county benchmark. Not an experiment script, but the
+# README and the manuscript tell a reader to run it, so it has to be in the release.
+!/scripts/rebuild_cache_valley.py
 
 # ---------------------------------------------------------------- published results
 # The files the manuscript and the Supplementary Material cite by name, plus the tables

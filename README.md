@@ -252,7 +252,20 @@ python -B DATA\LittleBearRiver_2025_Benchmark\generate_benchmark.py
 git diff --exit-code DATA/LittleBearRiver_2025_Benchmark/checksums_sha256.txt
 ```
 
-This check covers the Little Bear River instance, whose generator is published here.
+The ten-claimant county instance rebuilds the same way, in the two passes its construction
+needs: the shared source groups are derived from the claimant set, but which service areas
+keep a route is known only after the acyclicity repair has run, so the first pass stops
+there and the second rebuilds from the survivors on the same path set.
+
+```powershell
+$env:LEXIMIN_DATASETS = "C:\DataSETs"
+python -B scripts\rebuild_cache_valley.py
+git diff --exit-code DATA/CacheValley_2025_Benchmark/benchmark.json
+```
+
+The county-wide discovery pass over the raw layers is served from the published
+`selection.json`, which the rebuild only reads, so both passes take minutes rather than
+hours.
 
 ## Repository layout
 
@@ -265,11 +278,11 @@ This check covers the Little Bear River instance, whose generator is published h
   CSV layers, provenance, checksums and the deterministic generator that builds it from
   the open Utah layers;
 - `DATA/CacheValley_2025_Benchmark/` — the ten-claimant county-wide benchmark with the
-  same layer structure, its selection and discovery records and its validation report.
-  Its canonical JSON, normalized CSV layers, checksums and connector accept/reject log are
-  published; the county-scale discovery script that assembled it from the open Utah layers
-  is not part of this release, so the byte-for-byte rebuild check below applies to the
-  Little Bear River instance only;
+  same layer structure, its selection and discovery records and its validation report. Its
+  canonical JSON, normalized CSV layers, checksums and the ordered decision record for all
+  41 connector candidates are published, and so is the county-scale driver that assembles
+  it from the open Utah layers, so the byte-for-byte rebuild check above covers both
+  instances;
 - `DATA/benchmarks_dag/` — the benchmark schema (`SCHEMA_DAG.md`) and the compact DAG
   export of the Cache Valley instance used by the desktop application;
 - `scripts/` — the experiment scripts that produce the published numbers and figures;

@@ -1,6 +1,377 @@
 {
   "acyclic_reduction": {
     "connector_candidates": 41,
+    "connector_decisions": [
+      {
+        "connector": "c_8415_15364",
+        "decision": "rejected",
+        "dependent_candidate_paths": 8,
+        "head_node": "15364",
+        "position": 1,
+        "reason": "would_close_a_cycle",
+        "tail_node": "8415"
+      },
+      {
+        "connector": "c_13933_15349",
+        "decision": "rejected",
+        "dependent_candidate_paths": 8,
+        "head_node": "15349",
+        "position": 2,
+        "reason": "would_close_a_cycle",
+        "tail_node": "13933"
+      },
+      {
+        "connector": "c_15349_16822",
+        "decision": "accepted",
+        "dependent_candidate_paths": 8,
+        "head_node": "16822",
+        "position": 3,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15349"
+      },
+      {
+        "connector": "c_15364_8415",
+        "decision": "accepted",
+        "dependent_candidate_paths": 8,
+        "head_node": "8415",
+        "position": 4,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15364"
+      },
+      {
+        "connector": "c_8420_15366",
+        "decision": "rejected",
+        "dependent_candidate_paths": 5,
+        "head_node": "15366",
+        "position": 5,
+        "reason": "would_close_a_cycle",
+        "tail_node": "8420"
+      },
+      {
+        "connector": "c_9366_16817",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "16817",
+        "position": 6,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "9366"
+      },
+      {
+        "connector": "c_10416_15360",
+        "decision": "rejected",
+        "dependent_candidate_paths": 5,
+        "head_node": "15360",
+        "position": 7,
+        "reason": "would_close_a_cycle",
+        "tail_node": "10416"
+      },
+      {
+        "connector": "c_10438_16801",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "16801",
+        "position": 8,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "10438"
+      },
+      {
+        "connector": "c_13728_16818",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "16818",
+        "position": 9,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13728"
+      },
+      {
+        "connector": "c_14065_16802",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "16802",
+        "position": 10,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "14065"
+      },
+      {
+        "connector": "c_15360_8420",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "8420",
+        "position": 11,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15360"
+      },
+      {
+        "connector": "c_15366_13728",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "13728",
+        "position": 12,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15366"
+      },
+      {
+        "connector": "c_15958_8102",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "8102",
+        "position": 13,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15958"
+      },
+      {
+        "connector": "c_17671_22238",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "22238",
+        "position": 14,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "17671"
+      },
+      {
+        "connector": "c_22229_17668",
+        "decision": "accepted",
+        "dependent_candidate_paths": 5,
+        "head_node": "17668",
+        "position": 15,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "22229"
+      },
+      {
+        "connector": "c_9549_9548",
+        "decision": "rejected",
+        "dependent_candidate_paths": 4,
+        "head_node": "9548",
+        "position": 16,
+        "reason": "would_close_a_cycle",
+        "tail_node": "9549"
+      },
+      {
+        "connector": "c_13134_16827",
+        "decision": "accepted",
+        "dependent_candidate_paths": 4,
+        "head_node": "16827",
+        "position": 17,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13134"
+      },
+      {
+        "connector": "c_13148_16800",
+        "decision": "accepted",
+        "dependent_candidate_paths": 4,
+        "head_node": "16800",
+        "position": 18,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13148"
+      },
+      {
+        "connector": "c_13470_16826",
+        "decision": "accepted",
+        "dependent_candidate_paths": 4,
+        "head_node": "16826",
+        "position": 19,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13470"
+      },
+      {
+        "connector": "c_6979_15350",
+        "decision": "rejected",
+        "dependent_candidate_paths": 2,
+        "head_node": "15350",
+        "position": 20,
+        "reason": "would_close_a_cycle",
+        "tail_node": "6979"
+      },
+      {
+        "connector": "c_13020_16824",
+        "decision": "accepted",
+        "dependent_candidate_paths": 2,
+        "head_node": "16824",
+        "position": 21,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13020"
+      },
+      {
+        "connector": "c_13384_16816",
+        "decision": "accepted",
+        "dependent_candidate_paths": 2,
+        "head_node": "16816",
+        "position": 22,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13384"
+      },
+      {
+        "connector": "c_8419_6979",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "6979",
+        "position": 23,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "8419"
+      },
+      {
+        "connector": "c_9558_9557",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "9557",
+        "position": 24,
+        "reason": "would_close_a_cycle",
+        "tail_node": "9558"
+      },
+      {
+        "connector": "c_10439_6980",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "6980",
+        "position": 25,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "10439"
+      },
+      {
+        "connector": "c_10439_15309",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "15309",
+        "position": 26,
+        "reason": "would_close_a_cycle",
+        "tail_node": "10439"
+      },
+      {
+        "connector": "c_12988_16803",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16803",
+        "position": 27,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "12988"
+      },
+      {
+        "connector": "c_13012_15304",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "15304",
+        "position": 28,
+        "reason": "would_close_a_cycle",
+        "tail_node": "13012"
+      },
+      {
+        "connector": "c_13021_16825",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16825",
+        "position": 29,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13021"
+      },
+      {
+        "connector": "c_13027_16823",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16823",
+        "position": 30,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13027"
+      },
+      {
+        "connector": "c_13099_16801",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16801",
+        "position": 31,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13099"
+      },
+      {
+        "connector": "c_13922_16804",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16804",
+        "position": 32,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "13922"
+      },
+      {
+        "connector": "c_15304_16823",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16823",
+        "position": 33,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15304"
+      },
+      {
+        "connector": "c_15305_15304",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "15304",
+        "position": 34,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15305"
+      },
+      {
+        "connector": "c_15306_8419",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "8419",
+        "position": 35,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15306"
+      },
+      {
+        "connector": "c_15308_13012",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "13012",
+        "position": 36,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15308"
+      },
+      {
+        "connector": "c_15309_13012",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "13012",
+        "position": 37,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15309"
+      },
+      {
+        "connector": "c_15309_16820",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "16820",
+        "position": 38,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15309"
+      },
+      {
+        "connector": "c_15310_15309",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "15309",
+        "position": 39,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15310"
+      },
+      {
+        "connector": "c_15350_15306",
+        "decision": "rejected",
+        "dependent_candidate_paths": 1,
+        "head_node": "15306",
+        "position": 40,
+        "reason": "would_close_a_cycle",
+        "tail_node": "15350"
+      },
+      {
+        "connector": "c_15350_15309",
+        "decision": "accepted",
+        "dependent_candidate_paths": 1,
+        "head_node": "15309",
+        "position": 41,
+        "reason": "graph_stays_acyclic",
+        "tail_node": "15350"
+      }
+    ],
     "connectors_rejected": [
       {
         "connector": "c_8415_15364",

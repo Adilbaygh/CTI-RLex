@@ -97,17 +97,20 @@ secondary tie-break after the complete robust guarantee vector is fixed.
 - `checksums_sha256.txt` — SHA-256 integrity hashes;
 - `generate_benchmark.py` and `validate_benchmark.py` — deterministic build and
   dependency-free validation;
-- the ten-claimant county-wide instance lives in `../CacheValley_2025_Benchmark/` and was
-  assembled from the same open layers under the same schema and selection rules by a
-  county-scale discovery driver that is **not part of this release**; that instance is
-  therefore distributed as a canonical benchmark document with its normalized layers,
-  selection and connector records, validation report and checksums, and the byte-for-byte
-  rebuild check below applies to this instance only. The acyclicity repair it applied is
-  the `acyclic_connector_selection` routine in `generate_benchmark.py`: candidates are
-  ordered by decreasing number of dependent candidate paths, then by increasing tail-node
+- `generate_cache_valley_benchmark.py` — the county-scale driver that builds the
+  ten-claimant instance in `../CacheValley_2025_Benchmark/` from the same open layers,
+  under the same schema and selection rules. Its own source was lost and only a stale
+  Python 3.10 bytecode of an earlier revision survived; the file shipped here is
+  reconstructed from that bytecode, and wherever the two disagree the released records
+  decide. It rebuilds the released instance byte for byte, so the determinism check below
+  now covers both instances. The acyclicity repair it applies is the
+  `acyclic_connector_selection` routine in `generate_benchmark.py`: candidates are ordered
+  by decreasing number of dependent candidate paths, then by increasing tail-node
   identifier, then by increasing head-node identifier, and each is accepted only while the
-  graph stays acyclic, so re-sorting the published rejection list with that key reproduces
-  the recorded order exactly;
+  graph stays acyclic. The full ordered decision record for all 41 candidates — position,
+  connector, endpoints, dependent candidate paths, decision and reason — is published in
+  `../CacheValley_2025_Benchmark/discovery_summary.json` under `connector_decisions`, so
+  the reduction can be audited or replayed under a different repair rule;
 - `little_bear_river_2025_benchmark_map.png` and `.svg` — publication map;
 - `data/claimants.csv`, `claimant_terminals.csv`, `terminal_parameters.csv` — claimant,
   terminal-record and application-efficiency inputs;
@@ -146,6 +149,29 @@ The base run gives period-wise robust guarantees of approximately 0.447698 for
 are below `4e-13`, and splitting the Paradise terminal record into four records changes
 the guarantee vector by about `1.1e-16`. These are numerical verification results, not
 field-performance claims.
+
+### Rebuilding the ten-claimant instance
+
+The county instance takes two passes. The acyclicity repair can leave a service area with
+no route at all, and which areas those are is known only after the repair has run — but the
+shared source groups are derived from the claimant set, so they have to be derived from the
+survivors. The first pass therefore stops as soon as the repair reports them, before any
+benchmark file is written, and leaves `unrouted_claimants.json` behind; the second rebuilds
+with the survivors as claimants while keeping the first pass's path set, so the repair sees
+the same candidate connectors and settles on the same graph:
+
+```powershell
+$env:LEXIMIN_DATASETS = "C:\DataSETs"
+python -B scripts\rebuild_cache_valley.py
+```
+
+Of the sixteen discovered service areas one carries no irrigated WRLU acreage and five lose
+every route to the repair, which is how the instance arrives at ten claimants, seven shared
+subsystems and thirty-one paths. The expensive county-wide discovery pass over the raw
+layers is served from the published `selection.json`, which the rebuild only reads, so the
+two passes take minutes rather than hours and reproduce `benchmark.json` byte for byte.
+`scripts/verify_revision_2026.py` pins that checksum, the 41-record decision log and the
+head-gate control list on every run.
 
 ### Build determinism
 

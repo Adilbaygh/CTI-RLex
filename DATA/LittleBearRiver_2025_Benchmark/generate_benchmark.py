@@ -480,8 +480,13 @@ TOPOLOGY_REDUCTION: dict[str, Any] = {}
 def acyclic_connector_selection(
     physical_edges: dict[str, dict[str, Any]],
     candidate_pairs: Mapping[tuple[str, str], list[float]],
-) -> tuple[set[tuple[str, str]], list[dict[str, str]]]:
+) -> tuple[set[tuple[str, str]], list[dict[str, str]], list[dict[str, Any]]]:
     """Accept derived gap connectors only while the graph stays acyclic.
+
+    The third return value is the ordered decision record: every candidate the rule
+    considered, in the order it considered them, with the decision and its reason. Only
+    the candidate *count* used to be published, so an alternative repair rule could not
+    be tested from the release; the record makes the whole reduction auditable.
 
     The official reach topology is acyclic on its own. Cycles appear only when the
     path table is repaired by bridging a gap with a logical connector, because two
@@ -511,21 +516,33 @@ def acyclic_connector_selection(
     # few source-terminal paths as possible. Ties break on node order for determinism.
     accepted: set[tuple[str, str]] = set()
     rejected: list[dict[str, str]] = []
+    decisions: list[dict[str, Any]] = []
     order = sorted(
         candidate_pairs,
         key=lambda item: (-len(candidate_pairs[item]), int(item[0]), int(item[1])),
     )
-    for pair in order:
+    for position, pair in enumerate(order, start=1):
+        connector = f"c_{pair[0]}_{pair[1]}"
+        record = {
+            "position": position,
+            "connector": connector,
+            "tail_node": pair[0],
+            "head_node": pair[1],
+            "dependent_candidate_paths": len(candidate_pairs[pair]),
+        }
         tail, head = node_id(pair[0]), node_id(pair[1])
         if tail == head:
-            rejected.append({"connector": f"c_{pair[0]}_{pair[1]}", "reason": "self_loop"})
+            rejected.append({"connector": connector, "reason": "self_loop"})
+            decisions.append({**record, "decision": "rejected", "reason": "self_loop"})
             continue
         if reaches(head, tail):
-            rejected.append({"connector": f"c_{pair[0]}_{pair[1]}", "reason": "would_close_a_cycle"})
+            rejected.append({"connector": connector, "reason": "would_close_a_cycle"})
+            decisions.append({**record, "decision": "rejected", "reason": "would_close_a_cycle"})
             continue
         accepted.add(pair)
         adjacency[tail].add(head)
-    return accepted, rejected
+        decisions.append({**record, "decision": "accepted", "reason": "graph_stays_acyclic"})
+    return accepted, rejected, decisions
 
 
 def extract_network() -> tuple[
@@ -686,7 +703,7 @@ def extract_network() -> tuple[
             }
         )
 
-    accepted_connectors, rejected_connectors = acyclic_connector_selection(
+    accepted_connectors, rejected_connectors, connector_decisions = acyclic_connector_selection(
         physical_edges, connector_candidates
     )
     rejected_ids = {row["connector"] for row in rejected_connectors}
@@ -741,6 +758,9 @@ def extract_network() -> tuple[
                 "rule": "derived gap connectors are accepted only while the graph stays acyclic",
                 "physical_reach_topology_is_acyclic": True,
                 "connector_candidates": len(connector_candidates),
+                # The full ordered decision record, so the reduction can be audited and
+                # replayed under a different repair rule without this script.
+                "connector_decisions": connector_decisions,
                 "connectors_rejected": rejected_connectors,
                 "paths_dropped": dropped_paths,
             }
@@ -948,11 +968,47 @@ def reachable_nodes(start: str, edges: list[dict[str, Any]]) -> set[str]:
     return seen
 
 
+class UnroutedClaimants(RuntimeError):
+    """Raised when the acyclicity repair leaves a selected company with no route.
+
+    Construction is a two-pass procedure and this is the end of the first pass. Which
+    companies lose every route can only be known after the repair has run, but the source
+    groups are derived from the claimant set before it, so a benchmark built in one pass
+    would carry claimant records whose terminal node no longer exists and source groups
+    whose components were merged by companies that are about to disappear. The exception
+    is raised before any benchmark file is written, so a first pass can never leave a
+    damaged benchmark behind. It leaves one artefact, unrouted_claimants.json, and that is
+    what the second pass reads; scripts/rebuild_cache_valley.py runs both. The second pass
+    keeps the first pass's path set, so the repair sees the same candidate connectors and
+    settles on the same graph.
+    """
+
+
 def build() -> dict[str, Any]:
     OUT.mkdir(parents=True, exist_ok=True)
     service_areas = extract_service_areas()
     parcels = extract_parcels(service_areas)
     nodes, edges, sources, paths, path_edges = extract_network()
+
+    surviving_nodes = {row["node_id"] for row in nodes}
+    unrouted = [
+        {"company_id": company, "claimant_id": specification["claimant_id"], "name": specification["name"]}
+        for company, specification in COMPANIES.items()
+        if node_id(specification["terminal_raw"]) not in surviving_nodes
+    ]
+    if unrouted:
+        TOPOLOGY_REDUCTION["claimants_without_route"] = [
+            f"{row['claimant_id']} ({row['name']})" for row in unrouted
+        ]
+        write_json(HERE / "unrouted_claimants.json", {
+            "reason": "the acyclicity repair removed every route to these service areas",
+            "companies": unrouted,
+        })
+        raise UnroutedClaimants(
+            f"{len(unrouted)} selected companies lost every route: "
+            + ", ".join(row["claimant_id"] for row in unrouted)
+            + ". Nothing was written except unrouted_claimants.json; run the second pass."
+        )
 
     acres_by_claimant: dict[str, float] = defaultdict(float)
     demand_acres_by_claimant: dict[str, float] = defaultdict(float)
