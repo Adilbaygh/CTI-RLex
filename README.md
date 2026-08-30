@@ -200,7 +200,7 @@ The mapping from article object to file is:
 | Article object | Script | Result file |
 |---|---|---|
 | Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
-| Table 4 and Supplementary S16, source ablation | `run_cti_experiments.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
+| Table 4 and Supplementary S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
 | Table 3, Figure 4(b), Supplementary S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json`, `results/cache_valley_per_claimant.json` |
 | Supplementary S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
 | Supplementary S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |

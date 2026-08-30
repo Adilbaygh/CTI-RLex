@@ -1,48 +1,188 @@
 {
-  "base_min_guarantee": 0.41951076293707945,
-  "base_nominal_delivery_af": 5919.097890994499,
-  "rows": [
-    {
-      "source_id": "s_15286",
-      "source_class": "reservoir_release",
-      "disconnected_claimants": [
-        "company_132"
-      ],
-      "min_guarantee": -0.0,
-      "delta_percentage_points": -41.95107629370794,
-      "nominal_delivery_af": 2129.82535851,
-      "delta_nominal_af": -3789.2725324844987,
-      "explanation": "structural_disconnection"
-    },
-    {
-      "source_id": "s_10434",
-      "source_class": "surface_diversion",
-      "disconnected_claimants": [],
-      "min_guarantee": 0.3840922138847762,
-      "delta_percentage_points": -3.541854905230324,
-      "nominal_delivery_af": 5716.835907410902,
-      "delta_nominal_af": -202.2619835835967,
-      "explanation": "binding_capacity_or_envelope"
-    },
-    {
-      "source_id": "s_15269",
-      "source_class": "reservoir_release",
-      "disconnected_claimants": [],
-      "min_guarantee": 0.41868096458610105,
-      "delta_percentage_points": -0.08297983509784057,
-      "nominal_delivery_af": 5859.460897970461,
-      "delta_nominal_af": -59.63699302403802,
-      "explanation": "binding_capacity_or_envelope"
-    },
-    {
-      "source_id": "s_15957",
-      "source_class": "surface_diversion",
-      "disconnected_claimants": [],
-      "min_guarantee": 0.4195107629370794,
-      "delta_percentage_points": -5.551115123125783e-15,
-      "nominal_delivery_af": 5919.097890994506,
-      "delta_nominal_af": 7.275957614183426e-12,
-      "explanation": "redundant_at_the_optimum"
-    }
-  ]
+ "base_min_guarantee": 0.41951076293707945,
+ "base_nominal_delivery_af": 5919.097890994499,
+ "base_worst_scenario_delivery_af": 4941.347049202067,
+ "base_sorted_rho": [
+  0.41951076293707945,
+  0.41951076293707945,
+  0.4476976354639018
+ ],
+ "base_guarantees": {
+  "company_130": 0.41951076293707945,
+  "company_132": 0.41951076293707945,
+  "company_088": 0.4476976354639018
+ },
+ "guarantee_tolerance": 1e-07,
+ "delivery_tolerance_af": 0.05,
+ "classification_meaning": {
+  "connectivity_critical": "structural disconnection",
+  "minimum_guarantee_critical": "minimum guarantee falls",
+  "higher_level_fairness_critical": "higher guarantee levels fall",
+  "delivery_critical": "guarantee vector held, nominal delivery falls",
+  "fully_redundant": "redundant for the full objective hierarchy"
+ },
+ "base_repeats": 5,
+ "base_median_runtime_seconds": 0.13816210000004503,
+ "base_min_runtime_seconds": 0.1376696000006632,
+ "base_max_runtime_seconds": 0.16570800000044983,
+ "base_runtime_seconds_repeats": [
+  0.16570800000044983,
+  0.1376696000006632,
+  0.13769219999812776,
+  0.14227580000078888,
+  0.13816210000004503
+ ],
+ "rows": [
+  {
+   "source_id": "s_10434",
+   "source_class": "surface_diversion",
+   "disconnected_claimants": [],
+   "min_guarantee": 0.3840922138847762,
+   "delta_percentage_points": -3.541854905230324,
+   "nominal_delivery_af": 5716.835907410902,
+   "delta_nominal_af": -202.2619835835967,
+   "explanation": "minimum_guarantee_critical",
+   "guarantees": {
+    "company_130": 0.3840922138847762,
+    "company_132": 0.3840922138847762,
+    "company_088": 0.4476976354639018
+   },
+   "sorted_rho": [
+    0.3840922138847762,
+    0.3840922138847762,
+    0.4476976354639018
+   ],
+   "first_differing_position": 1,
+   "worst_scenario_delivery_af": 4739.08565752826,
+   "delta_worst_af": -202.26139167380734,
+   "classification": "minimum_guarantee_critical",
+   "reading": "minimum guarantee falls",
+   "max_lp_residual": 2.2737367544323206e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.1345497999973304,
+   "min_runtime_seconds": 0.13093160000062198,
+   "max_runtime_seconds": 0.13795759999993606,
+   "runtime_seconds_repeats": [
+    0.13093160000062198,
+    0.13218640000195592,
+    0.13795759999993606,
+    0.1345497999973304,
+    0.13545410000006086
+   ]
+  },
+  {
+   "source_id": "s_15269",
+   "source_class": "reservoir_release",
+   "disconnected_claimants": [],
+   "min_guarantee": 0.41868096458610105,
+   "delta_percentage_points": -0.08297983509784057,
+   "nominal_delivery_af": 5859.460897970461,
+   "delta_nominal_af": -59.63699302403802,
+   "explanation": "minimum_guarantee_critical",
+   "guarantees": {
+    "company_088": 0.41868096458610105,
+    "company_130": 0.41951076293707945,
+    "company_132": 0.41951076293707945
+   },
+   "sorted_rho": [
+    0.41868096458610105,
+    0.41951076293707945,
+    0.41951076293707945
+   ],
+   "first_differing_position": 1,
+   "worst_scenario_delivery_af": 4881.710062141729,
+   "delta_worst_af": -59.63698706033756,
+   "classification": "minimum_guarantee_critical",
+   "reading": "minimum guarantee falls",
+   "max_lp_residual": 9.094947017729282e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.1486293999987538,
+   "min_runtime_seconds": 0.1478132000011101,
+   "max_runtime_seconds": 0.1533463000014308,
+   "runtime_seconds_repeats": [
+    0.1533463000014308,
+    0.1483595999998215,
+    0.1478132000011101,
+    0.1486293999987538,
+    0.14924650000102702
+   ]
+  },
+  {
+   "source_id": "s_15286",
+   "source_class": "reservoir_release",
+   "disconnected_claimants": [
+    "company_130",
+    "company_132"
+   ],
+   "min_guarantee": -0.0,
+   "delta_percentage_points": -41.95107629370794,
+   "nominal_delivery_af": 2129.82535851,
+   "delta_nominal_af": -3789.2725324844987,
+   "explanation": "connectivity_critical",
+   "guarantees": {
+    "company_130": -0.0,
+    "company_132": -0.0,
+    "company_088": 0.4476976354639018
+   },
+   "sorted_rho": [
+    -0.0,
+    -0.0,
+    0.4476976354639018
+   ],
+   "first_differing_position": 1,
+   "worst_scenario_delivery_af": 1469.5319746889272,
+   "delta_worst_af": -3471.8150745131397,
+   "classification": "connectivity_critical",
+   "reading": "structural disconnection",
+   "max_lp_residual": 2.2737367544323206e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.12260880000030738,
+   "min_runtime_seconds": 0.1221624999998312,
+   "max_runtime_seconds": 0.1251016999995045,
+   "runtime_seconds_repeats": [
+    0.1251016999995045,
+    0.12218030000076396,
+    0.1221624999998312,
+    0.12260880000030738,
+    0.1236782999985735
+   ]
+  },
+  {
+   "source_id": "s_15957",
+   "source_class": "surface_diversion",
+   "disconnected_claimants": [],
+   "min_guarantee": 0.4195107629370794,
+   "delta_percentage_points": -5.551115123125783e-15,
+   "nominal_delivery_af": 5919.097890994506,
+   "delta_nominal_af": 7.275957614183426e-12,
+   "explanation": "fully_redundant",
+   "guarantees": {
+    "company_130": 0.4195107629370794,
+    "company_132": 0.4195107629370794,
+    "company_088": 0.4476976354639018
+   },
+   "sorted_rho": [
+    0.4195107629370794,
+    0.4195107629370794,
+    0.4476976354639018
+   ],
+   "first_differing_position": null,
+   "worst_scenario_delivery_af": 4941.347049202074,
+   "delta_worst_af": 7.275957614183426e-12,
+   "classification": "fully_redundant",
+   "reading": "redundant for the full objective hierarchy",
+   "max_lp_residual": 2.2737367544323206e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.13334350000150152,
+   "min_runtime_seconds": 0.13160459999926388,
+   "max_runtime_seconds": 0.1557388000001083,
+   "runtime_seconds_repeats": [
+    0.13591029999952298,
+    0.13334350000150152,
+    0.13197329999820795,
+    0.1557388000001083,
+    0.13160459999926388
+   ]
+  }
+ ]
 }
