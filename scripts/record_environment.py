@@ -20,7 +20,21 @@ from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
 OUTPUT = REPO / "results" / "environment.json"
+
+
+def solver_options() -> str:
+    """The options the released code passes, read from the code that passes them.
+
+    Written out rather than described. A description drifts from the call, and the record a
+    reader compares a rerun against would then name a configuration nobody is using.
+    """
+
+    from leximin.dag.lp import HIGHS_OPTIONS
+
+    settings = ", ".join(f"{name}={value!r}" for name, value in sorted(HIGHS_OPTIONS.items()))
+    return f"scipy.optimize.linprog(method='highs') with {settings}; no thread count set"
 
 
 def processor_name() -> str:
@@ -137,7 +151,7 @@ def main() -> None:
         "scipy": versions["scipy"],
         "linear_solver": "HiGHS via scipy.optimize.linprog(method='highs')",
         "highs": versions["highs"],
-        "solver_options": "SciPy defaults; presolve on; no thread count set",
+        "solver_options": solver_options(),
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(record, indent=1), encoding="utf-8")
@@ -156,7 +170,8 @@ def main() -> None:
         f"All solve times were measured on {article} {record['processor']}{hardware}, "
         f"running {record['operating_system']}, with Python {record['python']}, NumPy "
         f"{record['numpy']} and SciPy {record['scipy']}, solving each linear program with "
-        f"HiGHS through scipy.optimize.linprog at its default options."
+        f"HiGHS through scipy.optimize.linprog with the primal and dual feasibility "
+        f"tolerances of Section 2.7 set explicitly and without setting a thread count."
     )
 
 

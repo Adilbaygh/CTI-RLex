@@ -230,6 +230,25 @@ def build_lp(
     )
 
 
+# Section 2.7 of the manuscript declares a solver feasibility tolerance. Until this was
+# added, nothing passed it: linprog was called with no options, so the tolerance in force
+# was whichever default the reader's SciPy build carried, and the declaration described an
+# installation rather than this code. The constant below is the declared value, and it is
+# passed on every solve.
+#
+# The setting was measured before it was made. SciPy 1.17.0 documents 1e-7 for both
+# tolerances and presolve on, and on that build both released benchmarks return guarantee
+# vectors identical bit for bit and residuals identical to the last digit with and without
+# these options. The options therefore pin the configuration; they do not move any result.
+LP_FEASIBILITY_TOLERANCE = 1e-7
+
+HIGHS_OPTIONS: dict[str, object] = {
+    "presolve": True,
+    "primal_feasibility_tolerance": LP_FEASIBILITY_TOLERANCE,
+    "dual_feasibility_tolerance": LP_FEASIBILITY_TOLERANCE,
+}
+
+
 def run_lp(problem: LPData) -> OptimizeResult:
     result = linprog(
         c=problem.c,
@@ -239,6 +258,8 @@ def run_lp(problem: LPData) -> OptimizeResult:
         b_eq=problem.b_eq,
         bounds=problem.bounds,
         method="highs",
+        # A copy, because SciPy is free to consume the mapping it is handed.
+        options=dict(HIGHS_OPTIONS),
     )
     if not result.success:
         raise OptimizationError(f"LP failed with status {result.status}: {result.message}")

@@ -1,5 +1,5 @@
 {
- "recorded_on": "2026-08-29",
+ "recorded_on": "2026-08-31",
  "processor": "AMD Ryzen 5 5500U with Radeon Graphics",
  "logical_cores": 12,
  "memory_gib": 7.3,
@@ -11,5 +11,5 @@
  "scipy": "1.17.0",
  "linear_solver": "HiGHS via scipy.optimize.linprog(method='highs')",
  "highs": "bundled with SciPy 1.17.0",
- "solver_options": "SciPy defaults; presolve on; no thread count set"
+ "solver_options": "scipy.optimize.linprog(method='highs') with dual_feasibility_tolerance=1e-07, presolve=True, primal_feasibility_tolerance=1e-07; no thread count set"
 }

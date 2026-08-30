@@ -36,15 +36,15 @@
   "fully_redundant": "redundant for the full objective hierarchy"
  },
  "base_repeats": 5,
- "base_median_runtime_seconds": 2.140414999998029,
- "base_min_runtime_seconds": 2.095742400000745,
- "base_max_runtime_seconds": 2.32724259999668,
+ "base_median_runtime_seconds": 2.0568469999998342,
+ "base_min_runtime_seconds": 2.055068699999538,
+ "base_max_runtime_seconds": 2.091139700001804,
  "base_runtime_seconds_repeats": [
-  2.1820454000007885,
-  2.1240978999994695,
-  2.140414999998029,
-  2.32724259999668,
-  2.095742400000745
+  2.091139700001804,
+  2.0734943999996176,
+  2.055068699999538,
+  2.0568469999998342,
+  2.055591900003492
  ],
  "rows": [
   {
@@ -92,15 +92,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 7.275957614183426e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.034811000001355,
-   "min_runtime_seconds": 2.000664200000756,
-   "max_runtime_seconds": 2.0512892000006104,
+   "median_runtime_seconds": 2.0391219000011915,
+   "min_runtime_seconds": 2.00659799999994,
+   "max_runtime_seconds": 2.0930429000000004,
    "runtime_seconds_repeats": [
-    2.0512892000006104,
-    2.034811000001355,
-    2.000664200000756,
-    2.0351130999988527,
-    2.025781799999095
+    2.00659799999994,
+    2.0930429000000004,
+    2.022200999999768,
+    2.0455332999990787,
+    2.0391219000011915
    ]
   },
   {
@@ -148,15 +148,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 9.094947017729282e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.1475157999993826,
-   "min_runtime_seconds": 2.1423273000000336,
-   "max_runtime_seconds": 2.1559937999991234,
+   "median_runtime_seconds": 2.1543135000028997,
+   "min_runtime_seconds": 2.125468499994895,
+   "max_runtime_seconds": 2.218648000001849,
    "runtime_seconds_repeats": [
-    2.1559937999991234,
-    2.1487202999996953,
-    2.1475157999993826,
-    2.1423273000000336,
-    2.1459289000013086
+    2.125468499994895,
+    2.1560835000054794,
+    2.1543135000028997,
+    2.1425338000044576,
+    2.218648000001849
    ]
   },
   {
@@ -200,15 +200,15 @@
    "reading": "higher guarantee levels fall",
    "max_lp_residual": 7.275957614183426e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.053187400000752,
-   "min_runtime_seconds": 2.0298978999999235,
-   "max_runtime_seconds": 2.073127300001943,
+   "median_runtime_seconds": 2.0270917999951052,
+   "min_runtime_seconds": 2.0215830000015558,
+   "max_runtime_seconds": 2.0377393000017037,
    "runtime_seconds_repeats": [
-    2.053187400000752,
-    2.063589500001399,
-    2.0344158000007155,
-    2.073127300001943,
-    2.0298978999999235
+    2.034742700001516,
+    2.0377393000017037,
+    2.0215830000015558,
+    2.026397599998745,
+    2.0270917999951052
    ]
   },
   {
@@ -258,15 +258,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 1.4551915228366852e-11,
    "repeats": 5,
-   "median_runtime_seconds": 1.9315032999984396,
-   "min_runtime_seconds": 1.9200263999991876,
-   "max_runtime_seconds": 1.9457581999995455,
+   "median_runtime_seconds": 1.95765460000257,
+   "min_runtime_seconds": 1.9317710999966948,
+   "max_runtime_seconds": 2.065597399996477,
    "runtime_seconds_repeats": [
-    1.9457581999995455,
-    1.9230620999987877,
-    1.9452576000003319,
-    1.9200263999991876,
-    1.9315032999984396
+    1.95765460000257,
+    2.065597399996477,
+    2.0346770999967703,
+    1.9317710999966948,
+    1.9330832999985432
    ]
   },
   {
@@ -314,15 +314,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 5.4569682106375694e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.0285727999980736,
-   "min_runtime_seconds": 2.00363440000001,
-   "max_runtime_seconds": 2.0707683000000543,
+   "median_runtime_seconds": 2.028216099999554,
+   "min_runtime_seconds": 1.9996406999998726,
+   "max_runtime_seconds": 2.0394062000050326,
    "runtime_seconds_repeats": [
-    2.0707683000000543,
-    2.0057403999999224,
-    2.00363440000001,
-    2.0285727999980736,
-    2.0400529999969876
+    2.0394062000050326,
+    2.0029321999973035,
+    1.9996406999998726,
+    2.0294464000035077,
+    2.028216099999554
    ]
   },
   {
@@ -366,15 +366,15 @@
    "reading": "redundant for the full objective hierarchy",
    "max_lp_residual": 9.094947017729282e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.0738669999991544,
-   "min_runtime_seconds": 2.0139154999997118,
-   "max_runtime_seconds": 2.099742599999445,
+   "median_runtime_seconds": 2.020133199999691,
+   "min_runtime_seconds": 1.997839199997543,
+   "max_runtime_seconds": 2.038927599998715,
    "runtime_seconds_repeats": [
-    2.0738669999991544,
-    2.0162831999987247,
-    2.0139154999997118,
-    2.0758863000010024,
-    2.099742599999445
+    2.038927599998715,
+    2.02170230000047,
+    1.997839199997543,
+    2.0111880999975256,
+    2.020133199999691
    ]
   },
   {
@@ -422,15 +422,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 1.8189894035458565e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.1456945999998425,
-   "min_runtime_seconds": 2.1195725999969,
-   "max_runtime_seconds": 2.1995844000011857,
+   "median_runtime_seconds": 2.1477267000009306,
+   "min_runtime_seconds": 2.128144299997075,
+   "max_runtime_seconds": 2.183857399999397,
    "runtime_seconds_repeats": [
-    2.1995844000011857,
-    2.1195725999969,
-    2.129631600000721,
-    2.147053799999412,
-    2.1456945999998425
+    2.183857399999397,
+    2.1458705000040936,
+    2.128144299997075,
+    2.157042899998487,
+    2.1477267000009306
    ]
   },
   {
@@ -474,15 +474,15 @@
    "reading": "higher guarantee levels fall",
    "max_lp_residual": 7.275957614183426e-12,
    "repeats": 5,
-   "median_runtime_seconds": 2.075133900001674,
-   "min_runtime_seconds": 2.0424448999983724,
-   "max_runtime_seconds": 2.0976343999973324,
+   "median_runtime_seconds": 2.0615621999968425,
+   "min_runtime_seconds": 2.035597800000687,
+   "max_runtime_seconds": 2.095520700000634,
    "runtime_seconds_repeats": [
-    2.0976343999973324,
-    2.0424448999983724,
-    2.075133900001674,
-    2.048107599999639,
-    2.079731800000445
+    2.0664749999996275,
+    2.0615621999968425,
+    2.035597800000687,
+    2.0573674000042956,
+    2.095520700000634
    ]
   },
   {
@@ -531,15 +531,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 5.4569682106375694e-12,
    "repeats": 5,
-   "median_runtime_seconds": 1.9365758999992977,
-   "min_runtime_seconds": 1.9099451000001864,
-   "max_runtime_seconds": 1.9378154000005452,
+   "median_runtime_seconds": 1.935283699996944,
+   "min_runtime_seconds": 1.9082232000000658,
+   "max_runtime_seconds": 2.0022733000005246,
    "runtime_seconds_repeats": [
-    1.9378154000005452,
-    1.9367002000035427,
-    1.9365758999992977,
-    1.9099451000001864,
-    1.9266962000001513
+    2.0022733000005246,
+    1.9424238000065088,
+    1.935283699996944,
+    1.9082232000000658,
+    1.9319536999973934
    ]
   },
   {
@@ -583,15 +583,15 @@
    "reading": "redundant for the full objective hierarchy",
    "max_lp_residual": 1.0913936421275139e-11,
    "repeats": 5,
-   "median_runtime_seconds": 2.035500099998899,
-   "min_runtime_seconds": 2.034141100000852,
-   "max_runtime_seconds": 2.0379787999991095,
+   "median_runtime_seconds": 2.01580880000256,
+   "min_runtime_seconds": 1.9993694000004325,
+   "max_runtime_seconds": 2.0358539000008022,
    "runtime_seconds_repeats": [
-    2.0379787999991095,
-    2.0359466999980214,
-    2.035500099998899,
-    2.0344606999969983,
-    2.034141100000852
+    2.02702649999992,
+    2.001295800000662,
+    2.01580880000256,
+    2.0358539000008022,
+    1.9993694000004325
    ]
   }
  ]
