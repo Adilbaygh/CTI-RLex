@@ -1,0 +1,1092 @@
+{
+ "little_bear_v2": {
+  "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+  "budget_scales": [
+   0.05,
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "weightings_at_the_published_total_weight": [
+   "reachable_demand",
+   "control_capacity",
+   "uniform"
+  ],
+  "budget_scales_at_which_the_fairness_stage_still_improves": [
+   0.05,
+   0.1,
+   0.25
+  ],
+  "guarantee_vector_invariant_at_the_declared_budgets": true,
+  "largest_guarantee_difference_across_the_frontier": 0.0028028351835293064,
+  "nominal_delivery_range_af": [
+   5705.25818991985,
+   5919.097890994499
+  ],
+  "price_of_fairness_range_pct": [
+   2.568578970040884,
+   3.717715951357233
+  ],
+  "controls": 7,
+  "rigid_min_guarantee": 0.3840922138847762,
+  "nominal_only_delivery_af": 8645.091840000001,
+  "declared_recourse_budget": {
+   "nominal": 0.0,
+   "moderate_system_shortage": 0.25,
+   "severe_system_shortage": 0.4,
+   "paradise_diversion_outage_under_shortage": 0.35,
+   "hyrum_canal_restriction_under_shortage": 0.25
+  },
+  "tolerance": 1e-07,
+  "variants": {
+   "reachable_demand": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.4029703014823626,
+      "sorted_rho": [
+       0.4029703014823626,
+       0.4029703014823626,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.41903518418732155,
+      "sorted_rho": [
+       0.41903518418732155,
+       0.41903518418732155,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.419369671626737,
+      "sorted_rho": [
+       0.419369671626737,
+       0.419369671626737,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.41951076293707945,
+      "sorted_rho": [
+       0.41951076293707945,
+       0.41951076293707945,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.41951076293707945,
+      "sorted_rho": [
+       0.41951076293707945,
+       0.41951076293707945,
+       0.4476976354639018
+      ]
+     }
+    ],
+    "description": "published: the inverse seasonal gross demand reachable from the control",
+    "rescaled_to_the_published_total": false,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_10434": 0.000307129151,
+     "source:s_15269": 0.000389828935,
+     "source:s_15286": 0.000111354313,
+     "source:s_15957": 0.000389828935,
+     "edge:e_3577": 0.000174691272,
+     "edge:e_5854": 0.000307129151,
+     "edge:e_10136": 0.000307129151
+    },
+    "sorted_rho": [
+     0.41951076293707945,
+     0.41951076293707945,
+     0.4476976354639018
+    ],
+    "guarantees": {
+     "company_130": 0.41951076293707945,
+     "company_132": 0.41951076293707945,
+     "company_088": 0.4476976354639018
+    },
+    "min_guarantee": 0.41951076293707945,
+    "nominal_delivery_af": 5919.097890994499,
+    "normalized_recourse_effort": 1.2499990269514052,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.24999902695140525,
+     "severe_system_shortage": 0.4000000000000001,
+     "paradise_diversion_outage_under_shortage": 0.3499999999999998,
+     "hyrum_canal_restriction_under_shortage": 0.25
+    },
+    "value_of_recourse_pct": 9.221366060528487,
+    "price_of_fairness_pct": 2.568578970040884,
+    "price_of_robustness_pct": 31.532272871788273,
+    "max_lp_residual": 3.410605131648481e-13,
+    "repeats": 5,
+    "median_runtime_seconds": 0.15343880000000354,
+    "min_runtime_seconds": 0.14430309999806923,
+    "max_runtime_seconds": 0.16261479999957373,
+    "runtime_seconds_repeats": [
+     0.15343880000000354,
+     0.1539630000006582,
+     0.15218090000053053,
+     0.16261479999957373,
+     0.14430309999806923
+    ]
+   },
+   "control_capacity": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.40287538409791085,
+      "sorted_rho": [
+       0.40287538409791085,
+       0.40287538409791085,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.41903406300479634,
+      "sorted_rho": [
+       0.41903406300479634,
+       0.41903406300479634,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.4193668686704242,
+      "sorted_rho": [
+       0.4193668686704242,
+       0.4193668686704242,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.41951076293707945,
+      "sorted_rho": [
+       0.41951076293707945,
+       0.41951076293707945,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     }
+    ],
+    "description": "the inverse of the control's own seasonal capacity, rescaled to the published total weight",
+    "rescaled_to_the_published_total": true,
+    "scale_factor": 4.086488424405375,
+    "effort_coefficients": {
+     "source:s_10434": 0.00038473786131908324,
+     "source:s_15269": 0.00021870422394462804,
+     "source:s_15286": 0.0001962976886841234,
+     "source:s_15957": 0.00038473786131908324,
+     "edge:e_3577": 0.0002693165029157515,
+     "edge:e_5854": 0.0001485589085344704,
+     "edge:e_10136": 0.00038473786128286053
+    },
+    "sorted_rho": [
+     0.4195107629370794,
+     0.4195107629370794,
+     0.4476976354639018
+    ],
+    "guarantees": {
+     "company_130": 0.4195107629370794,
+     "company_132": 0.4195107629370794,
+     "company_088": 0.4476976354639018
+    },
+    "min_guarantee": 0.4195107629370794,
+    "nominal_delivery_af": 5802.761155443837,
+    "normalized_recourse_effort": 1.2499985070251662,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.249998507025166,
+     "severe_system_shortage": 0.39999999999999997,
+     "paradise_diversion_outage_under_shortage": 0.3500000000000001,
+     "hyrum_canal_restriction_under_shortage": 0.2500000000000001
+    },
+    "value_of_recourse_pct": 9.221366060528473,
+    "price_of_fairness_pct": 3.717715951357233,
+    "price_of_robustness_pct": 32.87796980252975,
+    "max_lp_residual": 2.2737367544323206e-13,
+    "repeats": 5,
+    "median_runtime_seconds": 0.1384780000007595,
+    "min_runtime_seconds": 0.1374087000003783,
+    "max_runtime_seconds": 0.1422348999985843,
+    "runtime_seconds_repeats": [
+     0.1422348999985843,
+     0.13748599999962607,
+     0.14002049999908195,
+     0.1384780000007595,
+     0.1374087000003783
+    ]
+   },
+   "control_capacity_unscaled": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.41926552806109973,
+      "sorted_rho": [
+       0.41926552806109973,
+       0.41926552806109973,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     }
+    ],
+    "description": "the same weighting adopted naively, without matching the total weight, so the allowance itself changes",
+    "rescaled_to_the_published_total": false,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_10434": 9.414877062206934e-05,
+     "source:s_15269": 5.3518865400053516e-05,
+     "source:s_15286": 4.8035787281763e-05,
+     "source:s_15957": 9.414877062206934e-05,
+     "edge:e_3577": 6.59041394335871e-05,
+     "edge:e_5854": 3.6353683922666976e-05,
+     "edge:e_10136": 9.414877061320533e-05
+    },
+    "sorted_rho": [
+     0.4195107629370794,
+     0.4195107629370794,
+     0.4476976354639018
+    ],
+    "guarantees": {
+     "company_130": 0.4195107629370794,
+     "company_132": 0.4195107629370794,
+     "company_088": 0.4476976354639018
+    },
+    "min_guarantee": 0.4195107629370794,
+    "nominal_delivery_af": 7815.468411225375,
+    "normalized_recourse_effort": 1.2498781663528786,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.25,
+     "severe_system_shortage": 0.40000000000000013,
+     "paradise_diversion_outage_under_shortage": 0.35000000000000003,
+     "hyrum_canal_restriction_under_shortage": 0.2498781663528785
+    },
+    "value_of_recourse_pct": 9.221366060528473,
+    "price_of_fairness_pct": 0.8864062311070063,
+    "price_of_robustness_pct": 9.596467500044806,
+    "max_lp_residual": 9.094947017729282e-13,
+    "repeats": 5,
+    "median_runtime_seconds": 0.137754399998812,
+    "min_runtime_seconds": 0.1373277999991842,
+    "max_runtime_seconds": 0.1385109000002558,
+    "runtime_seconds_repeats": [
+     0.13819689999945695,
+     0.1373277999991842,
+     0.137754399998812,
+     0.1385109000002558,
+     0.13743519999843556
+    ]
+   },
+   "uniform": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.4001674662988333,
+      "sorted_rho": [
+       0.4001674662988333,
+       0.4001674662988333,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.4162427187128903,
+      "sorted_rho": [
+       0.4162427187128903,
+       0.4162427187128903,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.41928690254690704,
+      "sorted_rho": [
+       0.41928690254690704,
+       0.41928690254690704,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.41951076293707945,
+      "sorted_rho": [
+       0.41951076293707945,
+       0.41951076293707945,
+       0.4476976354639018
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.4195107629370794,
+      "sorted_rho": [
+       0.4195107629370794,
+       0.4195107629370794,
+       0.4476976354639018
+      ]
+     }
+    ],
+    "description": "every control carries the same weight, at the published mean, so the total weight is unchanged",
+    "rescaled_to_the_published_total": true,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_10434": 0.00028387012971428573,
+     "source:s_15269": 0.00028387012971428573,
+     "source:s_15286": 0.00028387012971428573,
+     "source:s_15957": 0.00028387012971428573,
+     "edge:e_3577": 0.00028387012971428573,
+     "edge:e_5854": 0.00028387012971428573,
+     "edge:e_10136": 0.00028387012971428573
+    },
+    "sorted_rho": [
+     0.4195107629370794,
+     0.4195107629370794,
+     0.4476976354639018
+    ],
+    "guarantees": {
+     "company_130": 0.4195107629370794,
+     "company_132": 0.4195107629370794,
+     "company_088": 0.4476976354639018
+    },
+    "min_guarantee": 0.4195107629370794,
+    "nominal_delivery_af": 5705.25818991985,
+    "normalized_recourse_effort": 1.2499982933182519,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.24999829331825146,
+     "severe_system_shortage": 0.40000000000000036,
+     "paradise_diversion_outage_under_shortage": 0.35,
+     "hyrum_canal_restriction_under_shortage": 0.25
+    },
+    "value_of_recourse_pct": 9.221366060528473,
+    "price_of_fairness_pct": 3.264070505583729,
+    "price_of_robustness_pct": 34.00581167313719,
+    "max_lp_residual": 2.2737367544323206e-13,
+    "repeats": 5,
+    "median_runtime_seconds": 0.14409840000007534,
+    "min_runtime_seconds": 0.14276869999957853,
+    "max_runtime_seconds": 0.14738389999911305,
+    "runtime_seconds_repeats": [
+     0.14570269999967422,
+     0.1437902999969083,
+     0.14276869999957853,
+     0.14409840000007534,
+     0.14738389999911305
+    ]
+   }
+  }
+ },
+ "cache_valley_v3": {
+  "benchmark_id": "cache_valley_2025_multiclaimant_v3",
+  "budget_scales": [
+   0.05,
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "weightings_at_the_published_total_weight": [
+   "reachable_demand",
+   "control_capacity",
+   "uniform"
+  ],
+  "budget_scales_at_which_the_fairness_stage_still_improves": [],
+  "guarantee_vector_invariant_at_the_declared_budgets": true,
+  "largest_guarantee_difference_across_the_frontier": 3.019967918954647e-05,
+  "nominal_delivery_range_af": [
+   13235.335226655105,
+   16846.380233866606
+  ],
+  "price_of_fairness_range_pct": [
+   0.7640105720622742,
+   1.2211337999976122
+  ],
+  "controls": 20,
+  "rigid_min_guarantee": 0.056393646245954054,
+  "nominal_only_delivery_af": 27493.501383644245,
+  "declared_recourse_budget": {
+   "nominal": 0.0,
+   "moderate_system_shortage": 0.25,
+   "severe_system_shortage": 0.25,
+   "subsystem_01_restriction_under_shortage": 0.25,
+   "subsystem_02_restriction_under_shortage": 0.25
+  },
+  "tolerance": 1e-07,
+  "variants": {
+   "reachable_demand": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.3652886587191049,
+       0.3652886587191049,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.3072737711078209,
+       0.3072737711078209,
+       0.3652955934815837,
+       0.3652955934815837,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.3652955934815836,
+       0.3652955934815836,
+       0.6740982692651424,
+       0.6740982692651424,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158364,
+       0.36529559348158364,
+       0.6740982692651425,
+       0.6740982692651425,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158364,
+       0.36529559348158364,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     }
+    ],
+    "description": "published: the inverse seasonal gross demand reachable from the control",
+    "rescaled_to_the_published_total": false,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_6925": 3.1622719e-05,
+     "source:s_9154": 0.000445345964,
+     "source:s_9548": 0.000100797823,
+     "source:s_10422": 0.00021564588,
+     "source:s_10424": 0.000125348914,
+     "source:s_10434": 0.000307129151,
+     "source:s_10450": 0.008164554217,
+     "source:s_15269": 0.000100797823,
+     "source:s_15286": 0.000111354313,
+     "source:s_15957": 0.000389828935,
+     "edge:e_8949": 0.000135950444,
+     "edge:e_5868": 0.000389828935,
+     "edge:e_15158": 0.000307129151,
+     "edge:e_13081": 0.000174691272,
+     "edge:e_9834": 3.1622719e-05,
+     "edge:e_9121": 0.000125348914,
+     "edge:e_9861": 0.000445345964,
+     "edge:e_8851": 0.000346156509,
+     "edge:e_8842": 0.000571962805,
+     "edge:e_8940": 0.008164554217
+    },
+    "sorted_rho": [
+     0.056393646245954054,
+     0.13744468899532894,
+     0.307273771107821,
+     0.307273771107821,
+     0.36529559348158364,
+     0.36529559348158364,
+     0.6740982692651426,
+     0.6740982692651426,
+     0.8821454660844299,
+     1.0
+    ],
+    "guarantees": {
+     "company_168": 0.056393646245954054,
+     "company_106": 0.13744468899532894,
+     "company_130": 0.307273771107821,
+     "company_132": 0.307273771107821,
+     "company_164": 0.36529559348158364,
+     "company_088": 0.36529559348158364,
+     "company_10390": 0.6740982692651426,
+     "company_105": 0.6740982692651426,
+     "company_1249": 0.8821454660844299,
+     "company_136": 1.0
+    },
+    "min_guarantee": 0.056393646245954054,
+    "nominal_delivery_af": 16846.380233866606,
+    "normalized_recourse_effort": 0.9999976383132573,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.24999763831325733,
+     "severe_system_shortage": 0.24999999999999994,
+     "subsystem_01_restriction_under_shortage": 0.25,
+     "subsystem_02_restriction_under_shortage": 0.25
+    },
+    "value_of_recourse_pct": 0.0,
+    "price_of_fairness_pct": 1.2211337999976122,
+    "price_of_robustness_pct": 38.72595564023563,
+    "max_lp_residual": 1.0913936421275139e-11,
+    "repeats": 5,
+    "median_runtime_seconds": 2.085244900001271,
+    "min_runtime_seconds": 2.072867299997597,
+    "max_runtime_seconds": 2.0924142000003485,
+    "runtime_seconds_repeats": [
+     2.073761100000411,
+     2.0924142000003485,
+     2.072867299997597,
+     2.085244900001271,
+     2.090940400001273
+    ]
+   },
+   "control_capacity": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36526404501243237,
+       0.36526404501243237,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.3652683289333262,
+       0.3652683289333262,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36528118069600723,
+       0.36528118069600723,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     }
+    ],
+    "description": "the inverse of the control's own seasonal capacity, rescaled to the published total weight",
+    "rescaled_to_the_published_total": true,
+    "scale_factor": 11.38751398381715,
+    "effort_coefficients": {
+     "source:s_6925": 0.00020846786372136222,
+     "source:s_9154": 0.0005772956225999957,
+     "source:s_9548": 0.0007504843093914084,
+     "source:s_10422": 0.0003752421546957042,
+     "source:s_10424": 0.0011036533961552785,
+     "source:s_10434": 0.0010721204420180077,
+     "source:s_10450": 0.002501614364473161,
+     "source:s_15269": 0.0006094468281411372,
+     "source:s_15286": 0.0005470081993947422,
+     "source:s_15957": 0.0010721204420180077,
+     "edge:e_8949": 0.0009152247675196037,
+     "edge:e_5868": 0.0010721204419170689,
+     "edge:e_15158": 0.0010721204419170689,
+     "edge:e_13081": 0.0007504843093914084,
+     "edge:e_9834": 0.0012508071823739695,
+     "edge:e_9121": 0.0011036533962622424,
+     "edge:e_9861": 0.0005772956225999957,
+     "edge:e_8851": 0.00041693572741219353,
+     "edge:e_8842": 0.002207306792524485,
+     "edge:e_8940": 0.002501614364473161
+    },
+    "sorted_rho": [
+     0.056393646245954054,
+     0.13744468899532894,
+     0.307273771107821,
+     0.307273771107821,
+     0.36529559348158375,
+     0.36529559348158375,
+     0.6740982692651426,
+     0.6740982692651426,
+     0.8821454660844299,
+     1.0
+    ],
+    "guarantees": {
+     "company_168": 0.056393646245954054,
+     "company_106": 0.13744468899532894,
+     "company_130": 0.307273771107821,
+     "company_132": 0.307273771107821,
+     "company_164": 0.36529559348158375,
+     "company_088": 0.36529559348158375,
+     "company_10390": 0.6740982692651426,
+     "company_105": 0.6740982692651426,
+     "company_1249": 0.8821454660844299,
+     "company_136": 1.0
+    },
+    "min_guarantee": 0.056393646245954054,
+    "nominal_delivery_af": 13466.186925110003,
+    "normalized_recourse_effort": 0.9999904482384239,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.2499904482384236,
+     "severe_system_shortage": 0.2500000000000002,
+     "subsystem_01_restriction_under_shortage": 0.24999999999999992,
+     "subsystem_02_restriction_under_shortage": 0.2500000000000001
+    },
+    "value_of_recourse_pct": 0.0,
+    "price_of_fairness_pct": 0.8562933986134303,
+    "price_of_robustness_pct": 51.020473030325,
+    "max_lp_residual": 5.4569682106375694e-12,
+    "repeats": 5,
+    "median_runtime_seconds": 2.0857328999991296,
+    "min_runtime_seconds": 2.0628099999994447,
+    "max_runtime_seconds": 2.0932685999978276,
+    "runtime_seconds_repeats": [
+     2.078589099997771,
+     2.0857328999991296,
+     2.0628099999994447,
+     2.0874254000009387,
+     2.0932685999978276
+    ]
+   },
+   "control_capacity_unscaled": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651428,
+       0.6740982692651428,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651425,
+       0.6740982692651425,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.30727377110782106,
+       0.30727377110782106,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158364,
+       0.36529559348158364,
+       0.6740982692651425,
+       0.6740982692651425,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.3072737711078209,
+       0.3072737711078209,
+       0.36529559348158364,
+       0.36529559348158364,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     }
+    ],
+    "description": "the same weighting adopted naively, without matching the total weight, so the allowance itself changes",
+    "rescaled_to_the_published_total": false,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_6925": 1.8306705398352693e-05,
+     "source:s_9154": 5.0695491871219056e-05,
+     "source:s_9548": 6.59041394335871e-05,
+     "source:s_10422": 3.295206971679355e-05,
+     "source:s_10424": 9.691785210746486e-05,
+     "source:s_10434": 9.414877062206934e-05,
+     "source:s_10450": 0.0002196804647641458,
+     "source:s_15269": 5.3518865400053516e-05,
+     "source:s_15286": 4.8035787281763e-05,
+     "source:s_15957": 9.414877062206934e-05,
+     "edge:e_8949": 8.037090174556395e-05,
+     "edge:e_5868": 9.414877061320533e-05,
+     "edge:e_15158": 9.414877061320533e-05,
+     "edge:e_13081": 6.59041394335871e-05,
+     "edge:e_9834": 0.00010984023239413778,
+     "edge:e_9121": 9.691785211685794e-05,
+     "edge:e_9861": 5.0695491871219056e-05,
+     "edge:e_8851": 3.66134107940243e-05,
+     "edge:e_8842": 0.0001938357042337159,
+     "edge:e_8940": 0.0002196804647641458
+    },
+    "sorted_rho": [
+     0.056393646245954054,
+     0.13744468899532894,
+     0.3072737711078209,
+     0.3072737711078209,
+     0.36529559348158364,
+     0.36529559348158364,
+     0.6740982692651426,
+     0.6740982692651426,
+     0.8821454660844299,
+     1.0
+    ],
+    "guarantees": {
+     "company_168": 0.056393646245954054,
+     "company_106": 0.13744468899532894,
+     "company_130": 0.3072737711078209,
+     "company_132": 0.3072737711078209,
+     "company_164": 0.36529559348158364,
+     "company_088": 0.36529559348158364,
+     "company_10390": 0.6740982692651426,
+     "company_105": 0.6740982692651426,
+     "company_1249": 0.8821454660844299,
+     "company_136": 1.0
+    },
+    "min_guarantee": 0.056393646245954054,
+    "nominal_delivery_af": 17174.490138482637,
+    "normalized_recourse_effort": 0.9999988085182036,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.24999880851820364,
+     "severe_system_shortage": 0.25,
+     "subsystem_01_restriction_under_shortage": 0.24999999999999994,
+     "subsystem_02_restriction_under_shortage": 0.25
+    },
+    "value_of_recourse_pct": 0.0,
+    "price_of_fairness_pct": 0.5442675668470892,
+    "price_of_robustness_pct": 37.53254669592699,
+    "max_lp_residual": 7.275957614183426e-12,
+    "repeats": 5,
+    "median_runtime_seconds": 2.052956700001232,
+    "min_runtime_seconds": 2.0295666999991226,
+    "max_runtime_seconds": 2.054661100002704,
+    "runtime_seconds_repeats": [
+     2.0295666999991226,
+     2.054661100002704,
+     2.053072400001838,
+     2.0298108999995748,
+     2.052956700001232
+    ]
+   },
+   "uniform": {
+    "budget_frontier": [
+     {
+      "budget_scale": 0.05,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.3652625774469663,
+       0.3652625774469663,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.1,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36526539380239414,
+       0.36526539380239414,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.25,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.30727377110782106,
+       0.30727377110782106,
+       0.3652738428686777,
+       0.3652738428686777,
+       0.6740982692651424,
+       0.6740982692651424,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 0.5,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.3652879246458169,
+       0.3652879246458169,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     },
+     {
+      "budget_scale": 1.0,
+      "min_guarantee": 0.056393646245954054,
+      "sorted_rho": [
+       0.056393646245954054,
+       0.13744468899532894,
+       0.307273771107821,
+       0.307273771107821,
+       0.36529559348158375,
+       0.36529559348158375,
+       0.6740982692651426,
+       0.6740982692651426,
+       0.8821454660844299,
+       1.0
+      ]
+     }
+    ],
+    "description": "every control carries the same weight, at the published mean, so the total weight is unchanged",
+    "rescaled_to_the_published_total": true,
+    "scale_factor": 1.0,
+    "effort_coefficients": {
+     "source:s_6925": 0.00103425083345,
+     "source:s_9154": 0.00103425083345,
+     "source:s_9548": 0.00103425083345,
+     "source:s_10422": 0.00103425083345,
+     "source:s_10424": 0.00103425083345,
+     "source:s_10434": 0.00103425083345,
+     "source:s_10450": 0.00103425083345,
+     "source:s_15269": 0.00103425083345,
+     "source:s_15286": 0.00103425083345,
+     "source:s_15957": 0.00103425083345,
+     "edge:e_8949": 0.00103425083345,
+     "edge:e_5868": 0.00103425083345,
+     "edge:e_15158": 0.00103425083345,
+     "edge:e_13081": 0.00103425083345,
+     "edge:e_9834": 0.00103425083345,
+     "edge:e_9121": 0.00103425083345,
+     "edge:e_9861": 0.00103425083345,
+     "edge:e_8851": 0.00103425083345,
+     "edge:e_8842": 0.00103425083345,
+     "edge:e_8940": 0.00103425083345
+    },
+    "sorted_rho": [
+     0.056393646245954054,
+     0.13744468899532894,
+     0.307273771107821,
+     0.307273771107821,
+     0.36529559348158375,
+     0.36529559348158375,
+     0.6740982692651426,
+     0.6740982692651426,
+     0.8821454660844299,
+     1.0
+    ],
+    "guarantees": {
+     "company_168": 0.056393646245954054,
+     "company_106": 0.13744468899532894,
+     "company_130": 0.307273771107821,
+     "company_132": 0.307273771107821,
+     "company_164": 0.36529559348158375,
+     "company_088": 0.36529559348158375,
+     "company_10390": 0.6740982692651426,
+     "company_105": 0.6740982692651426,
+     "company_1249": 0.8821454660844299,
+     "company_136": 1.0
+    },
+    "min_guarantee": 0.056393646245954054,
+    "nominal_delivery_af": 13235.335226655105,
+    "normalized_recourse_effort": 0.9999917785610453,
+    "recourse_by_scenario": {
+     "moderate_system_shortage": 0.24999177856104515,
+     "severe_system_shortage": 0.25000000000000017,
+     "subsystem_01_restriction_under_shortage": 0.25,
+     "subsystem_02_restriction_under_shortage": 0.25
+    },
+    "value_of_recourse_pct": 0.0,
+    "price_of_fairness_pct": 0.7640105720622742,
+    "price_of_robustness_pct": 51.86013217462093,
+    "max_lp_residual": 1.8189894035458565e-12,
+    "repeats": 5,
+    "median_runtime_seconds": 2.1850664999983564,
+    "min_runtime_seconds": 2.135701200000767,
+    "max_runtime_seconds": 2.255092400002468,
+    "runtime_seconds_repeats": [
+     2.255092400002468,
+     2.1850664999983564,
+     2.1982083000002604,
+     2.14513960000113,
+     2.135701200000767
+    ]
+   }
+  }
+ }
+}

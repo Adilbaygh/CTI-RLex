@@ -207,6 +207,7 @@ The mapping from article object to file is:
 | Supplementary S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
 | Supplementary S20, acyclicity-repair order sensitivity | `connector_order_experiment.py` | `results/connector_order_sensitivity.json`, `results/repair_inputs_cache_valley.json` |
 | Supplementary S21, excluded service areas | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
+| Supplementary S22, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
 | Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
 | Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
 | Figure resolution and font check | `verify_publication_figures.py` | printed report, no file written |

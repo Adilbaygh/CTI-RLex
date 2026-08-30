@@ -48,9 +48,10 @@ Step 3 "residual, feasibility and representation audits" {
 Step 4 "lexicographic vector against a common floor" { python -B scripts\revision_experiments.py }
 Step 5 "source-removal ablation on both instances" { python -B scripts\ablation_experiment.py }
 Step 6 "guarantee vector under three recourse-budget regimes" { python -B scripts\equal_budget_experiment.py }
-Step 7 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
-Step 8 "scalability sweep" { python -B scripts\scalability_experiment.py }
-Step 9 "acyclicity-repair order sensitivity and excluded service areas" {
+Step 7 "guarantee vector under three effort-coefficient weightings" { python -B scripts\normalization_sensitivity.py }
+Step 8 "canal-restriction severity sweep" { python -B scripts\restriction_threshold_experiment.py }
+Step 9 "scalability sweep" { python -B scripts\scalability_experiment.py }
+Step 10 "acyclicity-repair order sensitivity and excluded service areas" {
     if ($env:LEXIMIN_DATASETS) {
         python -B scripts\excluded_service_areas.py
         python -B scripts\connector_order_experiment.py --build --rebuild
@@ -58,11 +59,11 @@ Step 9 "acyclicity-repair order sensitivity and excluded service areas" {
         python -c "print('   skipped: these rebuild from the raw Utah layers; set LEXIMIN_DATASETS to the open-data root first')"
     }
 }
-Step 10 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
-Step 11 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
-Step 12 "figure resolution check" { python -B scripts\verify_publication_figures.py }
-Step 13 "machine and solver versions" { python -B scripts\record_environment.py }
-Step 14 "test suite" { python -B -m pytest -q }
+Step 11 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
+Step 12 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
+Step 13 "figure resolution check" { python -B scripts\verify_publication_figures.py }
+Step 14 "machine and solver versions" { python -B scripts\record_environment.py }
+Step 15 "test suite" { python -B -m pytest -q }
 
 $summary = @'
 import json
