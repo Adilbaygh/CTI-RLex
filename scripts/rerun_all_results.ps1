@@ -63,11 +63,22 @@ Step 14 "acyclicity-repair order sensitivity and excluded service areas" {
         python -c "print('   skipped: these rebuild from the raw Utah layers; set LEXIMIN_DATASETS to the open-data root first')"
     }
 }
-Step 15 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
-Step 16 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
-Step 17 "figure resolution check" { python -B scripts\verify_publication_figures.py }
-Step 18 "machine and solver versions" { python -B scripts\record_environment.py }
-Step 19 "test suite" { python -B -m pytest -q }
+Step 15 "benchmark network map (Figure 1)" {
+    # The only producer that needs the open Utah layers rather than the published
+    # benchmark. A reader who has the repository but not the layers keeps every other step.
+    if ($env:LEXIMIN_DATASETS -and (Test-Path $env:LEXIMIN_DATASETS)) {
+        python -B DATA\LittleBearRiver_2025_Benchmark\plot_benchmark_map.py
+    } else {
+        Write-Host "   skipped: set LEXIMIN_DATASETS to the open-layer root to redraw Figure 1" -ForegroundColor Yellow
+        $global:LASTEXITCODE = 0
+    }
+}
+
+Step 16 "published CSV tables and figures" { python -B scripts\create_results_artifacts.py }
+Step 17 "Figure 4" { python -B scripts\update_figure4_two_panel.py }
+Step 18 "figure map, resolution, printed type size and greyscale check" { python -B scripts\verify_publication_figures.py }
+Step 19 "machine and solver versions" { python -B scripts\record_environment.py }
+Step 20 "test suite" { python -B -m pytest -q }
 
 $summary = @'
 import json

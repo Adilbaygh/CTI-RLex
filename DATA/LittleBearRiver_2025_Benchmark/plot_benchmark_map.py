@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -16,8 +17,14 @@ from matplotlib.ticker import MaxNLocator
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 BENCHMARK = HERE / "benchmark.json"
-SERVICE_AREAS = REPO / "DataSETs" / "Utah Irrigation Company Service Areas" / "utah_service_areas.geojson"
-SUBAREAS = REPO / "DataSETs" / "Utah Water Budget Subareas" / "utah_subareas.geojson"
+# The open layers are resolved exactly as generate_benchmark.py resolves them. They are
+# not part of the repository, and the directory this used to assume does not exist, so a
+# reader following the benchmark README could not redraw this map at all.
+DATASETS = Path(os.environ.get("LEXIMIN_DATASETS", str(REPO / "DataSETs")))
+SERVICE_AREAS = (
+    DATASETS / "Utah Irrigation Company Service Areas" / "utah_service_areas.geojson"
+)
+SUBAREAS = DATASETS / "Utah Water Budget Subareas" / "utah_subareas.geojson"
 
 PNG_OUTPUT = HERE / "little_bear_river_2025_benchmark_map.png"
 SVG_OUTPUT = HERE / "little_bear_river_2025_benchmark_map.svg"
@@ -71,6 +78,18 @@ def plot_geometry(ax: Any, geometry: dict[str, Any], **kwargs: Any) -> None:
         )
 
 
+def open_layer(path: Path) -> Path:
+    """Return the layer, or say which file was wanted and where to point the variable."""
+
+    if path.exists():
+        return path
+    raise SystemExit(
+        f"missing open layer {path}\n"
+        f"LEXIMIN_DATASETS is currently {DATASETS}; point it at the root that holds "
+        f"{path.parent.name}."
+    )
+
+
 def main() -> None:
     plt.rcParams.update(
         {
@@ -82,8 +101,8 @@ def main() -> None:
         }
     )
     benchmark = json.loads(BENCHMARK.read_text(encoding="utf-8"))
-    services = json.loads(SERVICE_AREAS.read_text(encoding="utf-8"))
-    subareas = json.loads(SUBAREAS.read_text(encoding="utf-8"))
+    services = json.loads(open_layer(SERVICE_AREAS).read_text(encoding="utf-8"))
+    subareas = json.loads(open_layer(SUBAREAS).read_text(encoding="utf-8"))
 
     node_by_id = {row["node_id"]: row for row in benchmark["nodes"]}
     company_by_terminal = {
@@ -120,7 +139,7 @@ def main() -> None:
     # specified at their intended final printed scale instead of relying on a
     # large canvas that would later be reduced by roughly 50%.
     fig, ax = plt.subplots(figsize=(7.3, 6.9), constrained_layout=False)
-    fig.subplots_adjust(left=0.12, right=0.98, bottom=0.275, top=0.975)
+    fig.subplots_adjust(left=0.12, right=0.98, bottom=0.335, top=0.975)
 
     # Geographic context: only the visible local part of the Cache Valley boundary
     # is shown because the axes are cropped to the three service areas.
@@ -351,15 +370,27 @@ def main() -> None:
         zorder=12,
     )
 
-    legend_handles = [
-        Line2D([0], [0], color="#3C5488", lw=2.5, label="Canal reach"),
-        Line2D([0], [0], color="#0072B2", lw=2.5, label="Stream reach"),
-        Line2D([0], [0], color="#5F6368", lw=1.7, linestyle=(0, (4, 3)), label="Path connector"),
+    # Two legends rather than one. A canal reach and a path connector are different kinds
+    # of thing -- one is a mapped channel, the other a link the model adds to close a gap in
+    # the official path table -- and a single flat block gave no sign of that. The two
+    # physical entries carry the arrowhead the map draws, so the legend shows what the
+    # picture shows.
+    link_handles = [
+        Line2D([0, 1], [0, 0], color="#3C5488", lw=2.5, marker=">", markevery=[1],
+               markersize=6, markerfacecolor="#3C5488", markeredgecolor="#3C5488",
+               label="Canal reach"),
+        Line2D([0, 1], [0, 0], color="#0072B2", lw=2.5, marker=">", markevery=[1],
+               markersize=6, markerfacecolor="#0072B2", markeredgecolor="#0072B2",
+               label="Stream reach"),
+        Line2D([0], [0], color="#5F6368", lw=1.7, linestyle=(0, (4, 3)),
+               label="Path connector"),
+    ]
+    feature_handles = [
         Line2D([0], [0], marker="^", color="none", markerfacecolor="#D55E00", markeredgecolor="#202124", markersize=9, label="Surface diversion"),
         Line2D([0], [0], marker="s", color="none", markerfacecolor="#56B4E9", markeredgecolor="#202124", markersize=9, label="Reservoir"),
         Line2D([0], [0], marker="*", color="none", markerfacecolor="#E69F00", markeredgecolor="#202124", markersize=12, label="Terminal"),
     ]
-    legend_handles.extend(
+    feature_handles.extend(
         Patch(
             facecolor=color,
             edgecolor=color,
@@ -368,21 +399,44 @@ def main() -> None:
         )
         for company, color in COMPANY_COLORS.items()
     )
-    ax.legend(
-        handles=legend_handles,
-        loc="upper center",
-        bbox_to_anchor=(0.5, -0.13),
-        frameon=True,
-        framealpha=0.94,
-        facecolor="#FFFFFF",
-        edgecolor="#B5B5B5",
-        fontsize=9.2,
+    common = {
+        "loc": "upper center",
+        "frameon": True,
+        "framealpha": 0.94,
+        "facecolor": "#FFFFFF",
+        "edgecolor": "#B5B5B5",
+        "fontsize": 9.2,
+        "columnspacing": 1.25,
+        "handlelength": 2.2,
+        "handletextpad": 0.65,
+        "borderpad": 0.65,
+    }
+    links = ax.legend(
+        handles=link_handles,
+        title="Mapped channels (arrow: flow direction) and the logical connector",
+        bbox_to_anchor=(0.5, -0.115),
         ncol=3,
-        columnspacing=1.25,
-        handlelength=2.2,
-        handletextpad=0.65,
-        borderpad=0.65,
+        **common,
     )
+    links.get_title().set_fontsize(9.2)
+    ax.add_artist(links)
+    # Where the second legend goes is asked of the first rather than assumed. A constant
+    # chosen before either was drawn left a blank band between them, and it would be wrong
+    # again, silently, the next time an entry is added to either list.
+    fig.canvas.draw()
+    below = (
+        links.get_window_extent()
+        .transformed(ax.transAxes.inverted())
+        .y0
+        - 0.025
+    )
+    ax.legend(
+        handles=feature_handles,
+        title="Nodes and service areas",
+        bbox_to_anchor=(0.5, below),
+        ncol=3,
+        **common,
+    ).get_title().set_fontsize(9.2)
 
     fig.savefig(PNG_OUTPUT, dpi=600, facecolor="white", bbox_inches="tight")
     fig.savefig(SVG_OUTPUT, facecolor="white", bbox_inches="tight")

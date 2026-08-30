@@ -214,8 +214,33 @@ The mapping from article object to file is:
 | Supplementary S28 to S31, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
 | Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
 | Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
+| Figure 1, benchmark network map | `DATA/LittleBearRiver_2025_Benchmark/plot_benchmark_map.py` | `DATA/LittleBearRiver_2025_Benchmark/little_bear_river_2025_benchmark_map.png`, `.svg` |
 | Figure resolution and font check | `verify_publication_figures.py` | printed report, no file written |
 | Reported solve times | `record_environment.py` | `results/environment.json` |
+
+
+Figure files are named for the order in which they were written, not for the order the
+article prints them, so the mapping is stated here and every entry is resolved by
+`scripts/verify_publication_figures.py`. The printed width is what the type size of a
+figure has to be legible at: the two producing scripts draw on one 7.1 inch canvas and let
+the journal reduce.
+
+| Article | File, under `results/figures/` unless stated | Printed width |
+|---|---|---|
+| Figure 1 | `DATA/LittleBearRiver_2025_Benchmark/little_bear_river_2025_benchmark_map` | 18 cm |
+| Figure 2 | `Figure_2_cti_rlex_solution_workflow` | 18 cm |
+| Figure 3 | `Figure_1_claimant_guarantees` | 14 cm |
+| Figure 4 | `Figure_6_method_tradeoff_two_panel` | 14 cm |
+| Figure 5 | `Figure_2_recourse_frontier` | 18 cm |
+| Figure 6 | `Figure_3_period_service_heatmap` | 18 cm |
+| Figure 7 | `Figure_4_source_activation_water_balance` | 18 cm |
+| Figure 8 | `Figure_5_sensitivity_heatmaps` | 14 cm |
+
+`Figure_6_method_tradeoff` is the single-panel form that Figure 4 replaced. It is still
+produced so that form stays reproducible; the article does not print it.
+
+The map is drawn from the same open layers the benchmark is generated from, so
+`LEXIMIN_DATASETS` has to point at them before `plot_benchmark_map.py` will run.
 
 `results/discrimination/k1.py` and `k1b.py` are the exploratory scripts that first
 established the discrimination result. They print to the terminal and write nothing; the

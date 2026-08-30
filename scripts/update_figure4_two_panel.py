@@ -67,18 +67,25 @@ def configure() -> None:
     )
 
 
+NOMINAL_ONLY = "CTI-RLex nominal only"
+
+
 def panel_tradeoff(ax, methods: dict) -> None:
     for method in METHOD_ORDER:
         row = methods[method]
         marker, color = STYLES[method]
+        # The nominal-only plan protects one scenario, so its guarantee is not measured
+        # against the same requirement as the other four. It is drawn open rather than
+        # filled, which is a difference a reader keeps in greyscale.
+        open_marker = method == NOMINAL_ONLY
         ax.scatter(
             row["nominal_beneficial_delivery_af"],
             row["minimum_guarantee"],
             marker=marker,
             s=44,
-            color=color,
-            edgecolor="white",
-            linewidth=0.7,
+            facecolor="none" if open_marker else color,
+            edgecolor=color if open_marker else "white",
+            linewidth=1.3 if open_marker else 0.7,
             label=method,
             zorder=3,
         )
@@ -91,12 +98,29 @@ def panel_tradeoff(ax, methods: dict) -> None:
         arrowprops={"arrowstyle": "-", "color": "#555555", "lw": 0.7},
         fontsize=7.7 * COMPACT_14_CM_FONT_SCALE,
     )
-    nominal = methods["CTI-RLex nominal only"]
+    # Separate the region only the nominal-only plan occupies. The caption already said
+    # the point is not contingency-robust; saying it in the picture as well means a reader
+    # cannot compare the two guarantees by eye before reaching the sentence.
+    nominal = methods[NOMINAL_ONLY]
+    robust_delivery = max(
+        methods[method]["nominal_beneficial_delivery_af"]
+        for method in METHOD_ORDER
+        if method != NOMINAL_ONLY
+    )
+    nominal_delivery = nominal["nominal_beneficial_delivery_af"]
+    separator = (robust_delivery + nominal_delivery) / 2.0
+    right = nominal_delivery + 0.28 * (nominal_delivery - robust_delivery)
+    ax.set_xlim(ax.get_xlim()[0], right)
+    ax.axvspan(separator, right, facecolor="#EDEDED", edgecolor="none", zorder=0)
+    ax.axvline(separator, color="#9A9A9A", linewidth=0.9, linestyle=(0, (5, 3)), zorder=1)
     ax.annotate(
-        "Not contingency-robust",
-        xy=(nominal["nominal_beneficial_delivery_af"], nominal["minimum_guarantee"]),
-        xytext=(-118, -22),
-        textcoords="offset points",
+        "Not contingency-robust:\nprotects the nominal scenario only",
+        xy=(nominal_delivery, nominal["minimum_guarantee"]),
+        xytext=(0.985, 0.30),
+        textcoords="axes fraction",
+        ha="right",
+        va="top",
+        arrowprops={"arrowstyle": "-", "color": "#555555", "lw": 0.7},
         fontsize=7.7 * COMPACT_14_CM_FONT_SCALE,
     )
     ax.set_xlabel("Nominal beneficial delivery (acre-ft)")

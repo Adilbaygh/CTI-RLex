@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULT_PATH = ROOT / "results" / "cti_rlex_base.json"
 VERIFY_PATH = ROOT / "results" / "cti_rlex_verification.json"
 EXPERIMENT_PATH = ROOT / "results" / "cti_rlex_experiments.json"
-BENCHMARK_PATH = ROOT / "data" / "LittleBearRiver_2025_Benchmark" / "benchmark.json"
+BENCHMARK_PATH = ROOT / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json"
 RESULTS_DIR = ROOT / "results"
 FIGURE_DIR = RESULTS_DIR / "figures"
 TABLE_DIR = RESULTS_DIR / "tables"
@@ -388,12 +388,24 @@ def figure_service_heatmap(result: dict) -> None:
     image = ax.imshow(matrix, cmap="cividis", vmin=0.40, vmax=1.00, aspect="auto")
     ax.set_xticks(np.arange(len(PERIOD_LABEL)), PERIOD_LABEL)
     ax.set_yticks(np.arange(len(row_labels)), row_labels)
-    ax.tick_params(axis="y", labelsize=7.2)
+    ax.tick_params(axis="y", labelsize=8.4)
     ax.tick_params(axis="x", top=True, labeltop=True, bottom=False, labelbottom=False)
     for i in range(matrix.shape[0]):
         for j in range(matrix.shape[1]):
             color = "white" if matrix[i, j] < 0.67 else "black"
-            ax.text(j, i, f"{matrix[i, j]:.2f}", ha="center", va="center", color=color, fontsize=6.9)
+            # A binding cell is marked twice. The outline is the primary cue, but an
+            # outline and a colour are the two things a photocopy loses first, so the
+            # value is printed bold as well and the mark survives in grey.
+            ax.text(
+                j,
+                i,
+                f"{matrix[i, j]:.2f}",
+                ha="center",
+                va="center",
+                color=color,
+                fontsize=7.4,
+                fontweight="bold" if bindings[i][j] else "normal",
+            )
             if bindings[i][j]:
                 ax.add_patch(
                     Rectangle(
@@ -448,7 +460,15 @@ def figure_source_activation(experiments: dict) -> None:
     ax1.text(-0.10, 1.03, "(a)", transform=ax1.transAxes, fontweight="bold")
     conveyance = [water[scenario]["conveyance_loss_af"] for scenario in SCENARIO_ORDER]
     application = [water[scenario]["application_loss_af"] for scenario in SCENARIO_ORDER]
-    ax2.barh(x, conveyance, color="#9ECAE1", label="Conveyance loss")
+    ax2.barh(
+        x,
+        conveyance,
+        color="#9ECAE1",
+        hatch="///",
+        edgecolor="#4A7EA1",
+        linewidth=0.0,
+        label="Conveyance loss",
+    )
     ax2.barh(x, application, left=conveyance, color="#FDD0A2", label="Application loss")
     ax2.set_yticks(x, [SCENARIO_SHORT[item].replace("\n", " ") for item in SCENARIO_ORDER])
     ax2.invert_yaxis()
