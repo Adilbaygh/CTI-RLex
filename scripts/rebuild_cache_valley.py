@@ -15,10 +15,12 @@ companies without a route, before any benchmark file is written. It leaves
 survivors as claimants -- while keeping pass one's path set, so the repair sees the same
 candidate connectors and settles on the same graph.
 
-Nothing outside the benchmark directory is edited: ``selection.json`` is what discovery
-produced and is only ever read.
+Nothing outside the benchmark directory is edited. ``selection.json`` is the cache the
+discovery pass writes, and by default it is only read; ``--rediscover`` deletes it first so
+the pass runs again over the raw layers, and the file it writes back must be byte-identical
+to the released one. That is the check that the cache is a cache and not a hidden input.
 
-Run:  python scripts/rebuild_cache_valley.py
+Run:  python scripts/rebuild_cache_valley.py [--rediscover]
 Environment: LEXIMIN_DATASETS must point at the open-data root.
 """
 
@@ -34,6 +36,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 BENCHMARK_DIR = REPO / "DATA" / "LittleBearRiver_2025_Benchmark"
 TARGET = REPO / "DATA" / "CacheValley_2025_Benchmark"
+SELECTION = TARGET / "selection.json"
 # The reconstructed source is preferred; the surviving 3.10 bytecode is the fallback and is
 # an older revision -- it names the reference scenario "reference", which the validator no
 # longer accepts, and it promotes no head gates to recourse controls.
@@ -70,6 +73,12 @@ def main() -> None:
         default=["py"],
         help="interpreter that runs the driver (default: py; use 'py -3.10' for the bytecode)",
     )
+    parser.add_argument(
+        "--rediscover",
+        action="store_true",
+        help="delete selection.json first, so the pass over the raw layers runs again; the "
+        "rewritten file must come back byte-identical to the released one",
+    )
     arguments = parser.parse_args()
 
     if not DRIVER.exists():
@@ -80,6 +89,9 @@ def main() -> None:
     # A stale report would make pass one behave like pass two.
     for stale in UNROUTED_CANDIDATES:
         stale.unlink(missing_ok=True)
+    if arguments.rediscover:
+        SELECTION.unlink(missing_ok=True)
+        print(f"removed {SELECTION.name}: the discovery pass will run over the raw layers")
 
     print("pass 1: building from every qualifying company to learn which lose every route")
     first = run_driver(arguments.python)

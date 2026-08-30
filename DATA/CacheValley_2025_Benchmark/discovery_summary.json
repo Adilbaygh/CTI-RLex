@@ -553,11 +553,11 @@
   },
   "county": "Cache",
   "excluded_no_acyclic_path": [
+    "company_072 (Cub River Irrigation Co.)",
     "company_103 (Logan Island Irrigation Co.)",
     "company_104 (Logan North Field Irrigation Co.)",
     "company_109 (Logan & Northern Irrigation Co.)",
-    "company_162 (Wellsville-Mendon Conservancy District)",
-    "company_072 (Cub River Irrigation Co.)"
+    "company_162 (Wellsville-Mendon Conservancy District)"
   ],
   "excluded_no_irrigated_acres": [
     "company_102 (Logan Hollow Irrigation Co.)"

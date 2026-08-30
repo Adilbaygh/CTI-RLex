@@ -1,6 +1,11 @@
 {
   "companies": [
     {
+      "claimant_id": "company_072",
+      "company_id": "72",
+      "name": "Cub River Irrigation Co."
+    },
+    {
       "claimant_id": "company_103",
       "company_id": "103",
       "name": "Logan Island Irrigation Co."
@@ -19,11 +24,6 @@
       "claimant_id": "company_162",
       "company_id": "162",
       "name": "Wellsville-Mendon Conservancy District"
-    },
-    {
-      "claimant_id": "company_072",
-      "company_id": "72",
-      "name": "Cub River Irrigation Co."
     }
   ],
   "reason": "the acyclicity repair removed every route to these service areas"

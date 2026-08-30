@@ -991,11 +991,17 @@ def build() -> dict[str, Any]:
     nodes, edges, sources, paths, path_edges = extract_network()
 
     surviving_nodes = {row["node_id"] for row in nodes}
-    unrouted = [
-        {"company_id": company, "claimant_id": specification["claimant_id"], "name": specification["name"]}
-        for company, specification in COMPANIES.items()
-        if node_id(specification["terminal_raw"]) not in surviving_nodes
-    ]
+    # Sorted by claimant identifier, not by the order COMPANIES happens to carry: a driver
+    # that reads its selection from a cache and one that rediscovers it insert the same
+    # companies in different orders, and this report has to be the same file either way.
+    unrouted = sorted(
+        (
+            {"company_id": company, "claimant_id": specification["claimant_id"], "name": specification["name"]}
+            for company, specification in COMPANIES.items()
+            if node_id(specification["terminal_raw"]) not in surviving_nodes
+        ),
+        key=lambda row: row["claimant_id"],
+    )
     if unrouted:
         TOPOLOGY_REDUCTION["claimants_without_route"] = [
             f"{row['claimant_id']} ({row['name']})" for row in unrouted

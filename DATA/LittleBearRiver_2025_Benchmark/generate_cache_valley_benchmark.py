@@ -13,8 +13,12 @@ shared envelopes by different factors, and promotes no head gates to recourse co
 file is rebuilt from that bytecode, and every place where the two disagree is decided by the
 released records rather than by the bytecode -- the reconstruction is checked the only way a
 reconstruction can be, by reproducing the published selection, reduction, derating and
-benchmark records exactly. The expensive discovery pass is still served from the published
-``selection.json`` cache.
+benchmark records exactly.
+
+That includes the discovery pass: ``discover`` selects the claimants, terminals and paths
+from the raw Utah layers with its own point-in-polygon test and no geospatial dependency, so
+``selection.json`` is a cache and not an input -- delete it and the pass runs again and must
+write the same bytes back.
 
 Construction takes two passes. The acyclicity repair can leave a service area with no route
 at all, and which areas those are is known only after the repair has run -- but the shared
@@ -84,10 +88,132 @@ RESTRICTED_HEAD_GATE_FACTOR = 0.35
 FULL_OUTAGE_SOURCES = {"s_15957", "s_10434"}
 
 
-# ------------------------------------------------------------------ discovery cache
+# ------------------------------------------------------------------ geometry
+#
+# Point-in-polygon on the raw service-area layer, with no geospatial dependency: the whole
+# selection has to be reproducible from a stock Python installation, and the only geometric
+# question asked of the layer is whether an official delivery terminal falls inside a
+# service polygon.
+
+def _rings(geometry: dict) -> list:
+    """The polygon parts of a GeoJSON geometry, each a list of rings, outer ring first."""
+
+    kind = geometry["type"]
+    coordinates = geometry["coordinates"]
+    if kind == "Polygon":
+        return [coordinates]
+    if kind == "MultiPolygon":
+        return coordinates
+    return []
+
+
+def _in_ring(x: float, y: float, ring: list) -> bool:
+    """Ray casting: a point is inside a closed ring when a ray crosses it an odd number of times.
+
+    The epsilon on the denominator only guards a horizontal edge, which the crossing test
+    above has already excluded, so it changes no result; it keeps the division defined.
+    """
+
+    inside = False
+    count = len(ring)
+    j = count - 1
+    for i in range(count):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if (yi > y) != (yj > y):
+            denominator = (yj - yi) or 1e-18
+            if x < (xj - xi) * (y - yi) / denominator + xi:
+                inside = not inside
+        j = i
+    return inside
+
+
+def _in_polygon(x: float, y: float, polygon: list) -> bool:
+    """Inside the outer ring of some part of the polygon and outside every hole of that part."""
+
+    for rings in polygon:
+        if _in_ring(x, y, rings[0]) and not any(_in_ring(x, y, hole) for hole in rings[1:]):
+            return True
+    return False
+
+
+# ------------------------------------------------------------------ discovery
+
+def discover() -> dict:
+    """Select claimants, terminals and paths from the open layers.
+
+    Every service area of the county that owns an official delivery terminal becomes a
+    candidate claimant. A terminal is assigned to the first service polygon that contains
+    it; a company's own terminal is the lowest-numbered node assigned to it, so the choice
+    does not depend on the order the layer happens to list its nodes. A path is selected when
+    its endpoint node is one of those terminals and it declares a source.
+    """
+
+    service = json.loads(gb.SERVICE_GEOJSON.read_text(encoding="utf-8"))
+    polygons = [
+        (feature["properties"], _rings(feature["geometry"]))
+        for feature in service["features"]
+        if (feature["properties"].get("COUNTY") or "").strip().lower() == COUNTY.lower()
+    ]
+    network = gb.NETWORK_DIR
+    nodes = list(gb.read_csv(network / "0_NetNodes.csv"))
+    terminals = [row for row in nodes if row["NodeType"] == "3"]
+
+    matched: dict[str, list[dict]] = collections.defaultdict(list)
+    for node in terminals:
+        try:
+            lon, lat = float(node["Lon"]), float(node["Lat"])
+        except (TypeError, ValueError):
+            continue
+        for properties, polygon in polygons:
+            if _in_polygon(lon, lat, polygon):
+                matched[str(properties["COMPANYID"])].append(node)
+                break
+
+    point_rows: dict[str, dict[str, str]] = collections.defaultdict(dict)
+    for row in gb.read_csv(network / "3_PathPoints_Table.csv"):
+        point_rows[row["PathId"]][row["PointType"]] = row["NodeId"]
+
+    terminal_to_company = {
+        node["NodeId"]: company for company, group in matched.items() for node in group
+    }
+    selected_paths = {
+        path_id
+        for path_id, endpoints in point_rows.items()
+        if endpoints.get("2") in terminal_to_company and endpoints.get("1")
+    }
+
+    by_id = {str(properties["COMPANYID"]): properties for properties, _ in polygons}
+    companies: dict[str, dict] = {}
+    for company, group in sorted(matched.items(), key=lambda item: int(item[0])):
+        node = sorted(group, key=lambda row: int(row["NodeId"]))[0]
+        companies[company] = {
+            "claimant_id": f"company_{int(company):03d}",
+            "terminal_raw": node["NodeId"],
+            "name": (by_id[company].get("COMPNAME") or f"Company {company}").strip(),
+        }
+
+    source_to_company: dict[str, set[str]] = collections.defaultdict(set)
+    for path_id in selected_paths:
+        endpoints = point_rows[path_id]
+        source_to_company[endpoints["1"]].add(terminal_to_company[endpoints["2"]])
+
+    return {
+        "companies": companies,
+        "selected_paths": sorted(selected_paths),
+        "path_terminal": {path: point_rows[path]["2"] for path in sorted(selected_paths)},
+        "terminal_to_company": terminal_to_company,
+        "source_to_company": {key: sorted(value) for key, value in source_to_company.items()},
+    }
+
 
 def load_or_discover() -> dict:
-    """Discovery is cached so a long build can be restarted without re-scanning."""
+    """Discovery is cached so a long build can be restarted without re-scanning.
+
+    Deleting ``selection.json`` re-runs the pass over the raw layers, which is the check that
+    the cache is a cache and not an input: the rediscovered file must be byte-identical to
+    the released one.
+    """
 
     if SELECTION.exists():
         cached = json.loads(SELECTION.read_text(encoding="utf-8"))
@@ -95,10 +221,14 @@ def load_or_discover() -> dict:
             print(f"reusing cached selection: {SELECTION}")
             return cached
         print("cached selection has an older schema; rediscovering")
-    raise SystemExit(
-        f"no usable selection cache at {SELECTION}. The county-wide discovery pass over the "
-        "raw layers is not reconstructed here; restore selection.json from the release."
-    )
+    print("discovering claimants, terminals and paths from the raw layers")
+    discovery = discover()
+    TARGET.mkdir(parents=True, exist_ok=True)
+    # Newline pinned, so the file is the same bytes on every platform.
+    with SELECTION.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(json.dumps(discovery, ensure_ascii=False, indent=2, sort_keys=True))
+    print(f"wrote {SELECTION}")
+    return discovery
 
 
 def unrouted_company_ids() -> set[str]:
@@ -139,7 +269,9 @@ def qualifying_companies(companies: dict) -> tuple[dict, list[str]]:
             kept[company] = specification
         else:
             dropped.append(f"{specification['claimant_id']} ({specification['name']})")
-    return kept, dropped
+    # Sorted for the same reason the unrouted report is: the cached and the rediscovered
+    # selection insert the same companies in different orders.
+    return kept, sorted(dropped)
 
 
 # ------------------------------------------------------------------ shared source groups
