@@ -95,6 +95,14 @@ FIGURES: dict[str, tuple[Path, float, str]] = {
 # in the directory knows the article does not print it.
 UNUSED = FIGURE_DIR / "Figure_6_method_tradeoff"
 
+# Figure 2 is a drawn schematic of the solution workflow, not a plot of any result. No
+# script regenerates it and none should: the SVG shipped beside the PNG is its editable
+# source. Naming it here keeps a reader from hunting for a producer that does not exist,
+# and keeps the rest of the mapping honest -- every other figure in the article comes from
+# a file in results/. It is still checked for resolution and printed type size, because it
+# is printed at the same size as the others.
+SCHEMATICS = frozenset({"Figure 2"})
+
 MINIMUM_PRINTED_POINTS = 7.0   # labels, annotations and tick text
 MINIMUM_SCRIPT_POINTS = 5.0    # subscripts and superscripts, set at 0.7 of their base
 SAFE_SEQUENTIAL_SCALES = {"cividis", "viridis", "magma", "inferno", "plasma", "gray"}
@@ -179,6 +187,8 @@ def check_files() -> None:
             if any_size < ordinary - 0.05:
                 note += f", subscripts {any_size:.1f} pt"
         print(f"  ok    {number}: {png.name}, {width}x{height} px, {note} - {subject}")
+        if number in SCHEMATICS:
+            print("        drawn schematic, shipped as an asset; the SVG is its source")
 
     if UNUSED.with_suffix(".png").exists():
         print(f"  note  {UNUSED.name} is produced but not printed by the article")

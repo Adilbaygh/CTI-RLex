@@ -54,7 +54,7 @@
 !/scripts/
 /scripts/*
 !/scripts/timing_protocol.py
-!/scripts/rerun_all_results.ps1
+!/scripts/rerun_all_results.py
 !/scripts/run_cti_rlex.py
 !/scripts/run_cti_experiments.py
 !/scripts/run_cti_verification.py

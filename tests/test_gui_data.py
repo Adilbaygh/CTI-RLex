@@ -116,6 +116,57 @@ def test_a_first_launch_opens_in_english(tmp_path) -> None:
     )
 
 
+def test_the_table_builders_import_without_qt() -> None:
+    """The solver-only installation must still be able to run this suite.
+
+    leximin.gui.data is ordinary Python: tables, ratios and the benchmark passport. Nothing
+    in it needs Qt, and the README offers `pip install -e .` to readers who want the solver
+    alone. This asserts that importing it does not reach for PyQt6, because while it did,
+    the whole suite ended in a collection error instead of one skipped test -- and on a
+    machine that has PyQt6 installed, as the author's does, that failure is invisible.
+
+    PyQt6 is hidden with a meta path finder rather than uninstalled, so the check means the
+    same thing whether or not the machine running it has Qt.
+    """
+
+    program = textwrap.dedent(
+        """
+        import importlib.abc, sys
+
+        class Hidden(importlib.abc.MetaPathFinder):
+            def find_spec(self, fullname, path=None, target=None):
+                if fullname == "PyQt6" or fullname.startswith("PyQt6."):
+                    raise ImportError("PyQt6 is hidden for this check")
+                return None
+
+        sys.meta_path.insert(0, Hidden())
+
+        from leximin.gui.data import ProjectPaths, benchmark_counts
+        from leximin.gui.i18n import normalize_language
+
+        assert "PyQt6" not in sys.modules
+        print("imported without Qt")
+        """
+    )
+
+    environment = dict(os.environ)
+    environment["PYTHONPATH"] = os.pathsep.join(
+        [str(ROOT / "src"), environment.get("PYTHONPATH", "")]
+    ).strip(os.pathsep)
+
+    finished = subprocess.run(
+        [sys.executable, "-c", program],
+        capture_output=True,
+        text=True,
+        env=environment,
+        timeout=300,
+    )
+    assert "imported without Qt" in finished.stdout, (
+        "the table builders could not be imported without PyQt6, so a solver-only "
+        f"installation cannot run this suite\n{finished.stderr[-800:]}"
+    )
+
+
 def test_project_paths_require_no_generated_result_folder() -> None:
     assert PATHS.default_benchmark.exists()
     assert set(PATHS.__dataclass_fields__) == {"root", "default_benchmark"}

@@ -48,7 +48,7 @@ def dataset_layer(folder: str, pattern: str) -> Path:
     found = next((DATASETS / folder).glob(pattern), None)
     if found is None:
         raise SystemExit(
-            f"open-data layer not found: {DATASETS / folder}\\{pattern}\n"
+            f"open-data layer not found: {DATASETS / folder / pattern}\n"
             f"LEXIMIN_DATASETS is currently {DATASETS}; point it at the root that holds "
             f"{folder}. The layers are listed in each benchmark's provenance file."
         )

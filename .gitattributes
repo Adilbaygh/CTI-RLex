@@ -1,0 +1,9 @@
+# Byte-identical checkouts on every platform.
+#
+# The SHA-256 values in each benchmark's checksums_sha256.txt are computed over the bytes
+# stored in this repository. Git for Windows installs with core.autocrlf=true, which
+# rewrites line endings on checkout; a reviewer cloning there would then fail every
+# checksum in the package while nothing was actually wrong with the data. Turning text
+# conversion off for everything keeps a clone byte-for-byte identical to what was
+# published, which is the only state in which those checksums mean anything.
+* -text
