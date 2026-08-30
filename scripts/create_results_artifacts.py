@@ -184,6 +184,24 @@ def build_table_2(experiments: dict) -> None:
     write_csv(TABLE_DIR / "Table_2_method_comparison.csv", list(rows[0]), rows)
 
 
+def no_negative_zero(value: float, places: int) -> str:
+    """Format a number without printing a negative zero.
+
+    A change of -0.0001 percentage points prints as "-0.00" at two decimals, which reads as
+    a signed quantity when it is a rounding artifact of a value the printed precision cannot
+    resolve. The sign is dropped only when the printed value is zero.
+    """
+
+    printed = f"{value:.{places}f}"
+    return printed.lstrip("-") if float(printed) == 0.0 else printed
+
+
+def scenario_label(count: int) -> str:
+    """Name a scenario count the way the article prints it, not the way a generator does."""
+
+    return f"{count} scenario" if count == 1 else f"{count} scenarios"
+
+
 def build_table_3(experiments: dict) -> None:
     activation = experiments["operational_audit"]["source_activation"]
     names = {row["source_id"]: row["source_name"] for row in activation}
@@ -194,7 +212,7 @@ def build_table_3(experiments: dict) -> None:
                 "disabled_source": names[item["disabled_source_id"]],
                 "source_class": item["disabled_source_class"].replace("_", " "),
                 "minimum_guarantee": f'{max(0.0, item["minimum_guarantee"]):.4f}',
-                "change_minimum_guarantee_pp": f'{100 * item["change_in_minimum_guarantee"]:.2f}',
+                "change_minimum_guarantee_pp": no_negative_zero(100 * item["change_in_minimum_guarantee"], 2),
                 "nominal_delivery_af": f'{item["nominal_beneficial_delivery_af"]:.1f}',
                 "change_nominal_delivery_af": f'{item["change_in_nominal_delivery_af"]:.1f}',
                 "worst_scenario_delivery_af": f'{item["worst_scenario_beneficial_delivery_af"]:.1f}',
@@ -269,7 +287,7 @@ def build_table_5(verification: dict, experiments: dict) -> None:
         rows.append(
             {
                 "audit": "LP size and solve time",
-                "case": f'{item["scenario_count"]} scenario(s)',
+                "case": scenario_label(item["scenario_count"]),
                 "observed": (
                     f'{item["variables"]} var; {item["equality_constraints"] + item["inequality_constraints"]} con; '
                     f'{item["median_runtime_seconds"]:.3f} s'

@@ -202,18 +202,18 @@ The mapping from article object to file is:
 | Article object | Script | Result file |
 |---|---|---|
 | Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
-| Table 4 and Supplementary S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
-| Table 3, Figure 4(b), Supplementary S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json`, `results/cache_valley_per_claimant.json` |
-| Supplementary S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
-| Supplementary S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
-| Supplementary S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
-| Supplementary S20, acyclicity-repair order sensitivity | `connector_order_experiment.py` | `results/connector_order_sensitivity.json`, `results/repair_inputs_cache_valley.json` |
-| Supplementary S21, excluded service areas | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
-| Supplementary S22, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
-| Supplementary S24, S25, factorial effect decomposition | `factorial_decomposition.py` | `results/factorial_decomposition.json` |
-| Supplementary S27, component-level analysis | `component_analysis.py` | `results/component_analysis.json` |
-| Supplementary S32 to S35, ten-claimant audit layer | `cache_valley_audit.py` | `results/cache_valley_audit.json` |
-| Supplementary S28 to S31, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
+| Table 4 and Supplementary Table S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
+| Table 3, Figure 4(b), Supplementary Tables S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json`, `results/cache_valley_per_claimant.json` |
+| Supplementary Tables S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
+| Supplementary Table S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
+| Supplementary Tables S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
+| Supplementary Table S20, acyclicity-repair order sensitivity | `connector_order_experiment.py` | `results/connector_order_sensitivity.json`, `results/repair_inputs_cache_valley.json` |
+| Supplementary Table S21, excluded service areas | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
+| Supplementary Table S22, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
+| Supplementary Tables S24, S25, factorial effect decomposition | `factorial_decomposition.py` | `results/factorial_decomposition.json` |
+| Supplementary Table S27, component-level analysis | `component_analysis.py` | `results/component_analysis.json` |
+| Supplementary Tables S32 to S35, ten-claimant audit layer | `cache_valley_audit.py` | `results/cache_valley_audit.json` |
+| Supplementary Tables S28 to S31, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
 | Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
 | Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
 | Figure 1, benchmark network map | `DATA/LittleBearRiver_2025_Benchmark/plot_benchmark_map.py` | `DATA/LittleBearRiver_2025_Benchmark/little_bear_river_2025_benchmark_map.png`, `.svg` |
@@ -354,10 +354,12 @@ and always resolves to the most recent version:
 
 **https://doi.org/10.5281/zenodo.22160054**
 
-Each individual release also receives its own version DOI, which is immutable. The
-accompanying article cites a version DOI together with the exact commit hash, so that the
-numbers reported there can be traced to one archived state. Use the concept DOI to refer
-to the software in general, and a version DOI to refer to a specific archived state.
+Each individual release also receives its own version DOI, which is immutable. Use the
+concept DOI to refer to the software in general, and a version DOI together with the
+commit hash to refer to the one archived state a set of numbers came from. The Data
+Availability Statement of the accompanying article names the repository and the commit;
+the version DOI of the archived release is added there at submission, once the release
+that matches the submitted manuscript exists.
 
 Machine-readable citation metadata is in `CITATION.cff`. If you use this software or
 either benchmark, please cite both the software and the accompanying article.

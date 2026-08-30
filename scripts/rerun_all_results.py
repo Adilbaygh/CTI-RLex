@@ -170,7 +170,9 @@ def summary() -> None:
 
     for row in experiments["scalability"]:
         constraints = row["equality_constraints"] + row["inequality_constraints"]
-        print(f"    Table 6, {row['scenario_count']} scenario(s)      {row['variables']:4d} var; "
+        count = row["scenario_count"]
+        label = f"{count} scenario" if count == 1 else f"{count} scenarios"
+        print(f"    Table 6, {label:12s}{row['variables']:4d} var; "
               f"{constraints:4d} con; {row['median_runtime_seconds']:.3f} s" + spread(row))
     for row in scalability:
         if (row["claimants"], row["scenarios"]) in {(2, 5), (10, 1), (10, 5), (3, 5)}:
