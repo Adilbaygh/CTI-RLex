@@ -33,7 +33,7 @@ from PyQt6.QtWidgets import (
 )
 
 from .charts import ChartStore
-from .i18n import normalize_language, pick
+from .i18n import DEFAULT_LANGUAGE, normalize_language, pick
 from .data import (
     ProjectPaths,
     allocation_table,
@@ -42,6 +42,7 @@ from .data import (
     claimant_table,
     load_benchmark_document,
     method_table,
+    project_version,
     recourse_table,
     rows_from_dicts,
     scenario_table,
@@ -139,7 +140,7 @@ def chart_info(key: str, language: str) -> tuple[str, str]:
 class AnalysisProgressDialog(QDialog):
     cancel_requested = pyqtSignal()
 
-    def __init__(self, parent: QWidget | None = None, language: str = "uz") -> None:
+    def __init__(self, parent: QWidget | None = None, language: str = DEFAULT_LANGUAGE) -> None:
         super().__init__(parent)
         self.language = normalize_language(language)
         self.setWindowTitle(
@@ -226,8 +227,11 @@ class MainWindow(QMainWindow):
         self.paths = paths
         self.settings = QSettings("Leximin Research", "CTI-RLex Studio")
         self.language = normalize_language(
-            language if language is not None else self.settings.value("ui_language", "en")
+            language if language is not None else self.settings.value("ui_language", DEFAULT_LANGUAGE)
         )
+        # Store it straight away, so launching once with --language settles the preference
+        # instead of leaving the next start to fall back to whatever was saved before.
+        self.settings.setValue("ui_language", self.language)
         self.chart_store = ChartStore()
         self.chart_paths: dict[str, Path] = {}
         self.current_benchmark: Path | None = None
@@ -1441,6 +1445,7 @@ class MainWindow(QMainWindow):
         dialog.resize(650, 520)
         layout = QVBoxLayout(dialog)
         browser = QTextBrowser()
+        version = project_version(self.paths.root)
         browser.setHtml(
             "<h2>CTI-RLex Studio</h2>"
             "<p><b>Claimant-centred Temporally Invariant Robust Leximin Allocation</b></p>"
@@ -1450,19 +1455,23 @@ class MainWindow(QMainWindow):
                 "текшириш учун очиқ манбали илмий дастур.</p>"
                 "<p>GUI барча натижаларни танланган benchmarkдан ҳисоблайди; ташқи ишчи папкалар "
                 "ёки олдиндан тайёрланган натижаларга боғлиқ эмас.</p>"
-                "<hr><p><b>Версия:</b> 0.3.0<br>"
+                f"<hr><p><b>Версия:</b> {version}<br>"
                 "<b>Муаллиф:</b> Adilbay Kudaybergenov<br>"
                 "<b>Ҳисоблаш ядроси:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
-                "<b>GUI:</b> PyQt6 ва Matplotlib</p>",
+                "<b>GUI:</b> PyQt6 ва Matplotlib<br>"
+                "<b>Репозиторий:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
+                "<b>Архив (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054</p>",
                 "<p>Open-source scientific software for computing, comparing and validating "
                 "scenario–period robust guarantees and bounded operational recourse in lossy, "
                 "multi-source irrigation DAGs.</p>"
                 "<p>The GUI computes every result from the selected benchmark and does not depend "
                 "on external working folders or precomputed results.</p>"
-                "<hr><p><b>Version:</b> 0.3.0<br>"
+                f"<hr><p><b>Version:</b> {version}<br>"
                 "<b>Author:</b> Adilbay Kudaybergenov<br>"
                 "<b>Computational core:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
-                "<b>GUI:</b> PyQt6 and Matplotlib</p>",
+                "<b>GUI:</b> PyQt6 and Matplotlib<br>"
+                "<b>Repository:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
+                "<b>Archive (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054</p>",
             )
         )
         close = QPushButton(self._tr("Ёпиш", "Close"))

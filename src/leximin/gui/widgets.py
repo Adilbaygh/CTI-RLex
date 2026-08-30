@@ -35,7 +35,7 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from .i18n import normalize_language, pick
+from .i18n import DEFAULT_LANGUAGE, normalize_language, pick
 
 
 def clear_layout(layout: QVBoxLayout | QHBoxLayout) -> None:
@@ -52,7 +52,7 @@ def clear_layout(layout: QVBoxLayout | QHBoxLayout) -> None:
 class NumericItem(QStandardItem):
     """Table item with numeric sorting when possible."""
 
-    def __init__(self, value: Any, language: str = "uz") -> None:
+    def __init__(self, value: Any, language: str = DEFAULT_LANGUAGE) -> None:
         if value is None:
             display = ""
         elif isinstance(value, bool):
@@ -148,7 +148,7 @@ class Notice(QLabel):
 
 
 class DataTable(QTableView):
-    def __init__(self, language: str = "uz") -> None:
+    def __init__(self, language: str = DEFAULT_LANGUAGE) -> None:
         super().__init__()
         self.language = normalize_language(language)
         self._headers: list[str] = []
@@ -207,7 +207,7 @@ class TablePanel(QFrame):
         title: str,
         caption: str = "",
         minimum_height: int = 310,
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> None:
         super().__init__()
         self.language = normalize_language(language)
@@ -255,7 +255,7 @@ class TablePanel(QFrame):
 class ImageCanvas(QScrollArea):
     zoom_changed = pyqtSignal(int)
 
-    def __init__(self, path: Path | None = None, language: str = "uz") -> None:
+    def __init__(self, path: Path | None = None, language: str = DEFAULT_LANGUAGE) -> None:
         super().__init__()
         self.language = normalize_language(language)
         self.setFrameShape(QFrame.Shape.NoFrame)
@@ -358,7 +358,7 @@ class ImagePanel(QFrame):
         caption: str,
         path: Path | None,
         minimum_height: int = 500,
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> None:
         super().__init__()
         self.language = normalize_language(language)
@@ -469,7 +469,7 @@ class FigureDialog(QDialog):
         caption: str,
         path: Path,
         parent: QWidget | None = None,
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> None:
         super().__init__(parent)
         self.setWindowTitle(title)
@@ -490,7 +490,7 @@ class FigureTile(QFrame):
         title: str,
         caption: str,
         path: Path,
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> None:
         super().__init__()
         language = normalize_language(language)
@@ -550,7 +550,7 @@ def open_figure_dialog(
     title: str,
     caption: str,
     path: Path,
-    language: str = "uz",
+    language: str = DEFAULT_LANGUAGE,
 ) -> Callable[[], None]:
     def callback() -> None:
         dialog = FigureDialog(title, caption, path, parent, language)

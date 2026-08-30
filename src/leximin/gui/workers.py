@@ -9,7 +9,7 @@ from PyQt6.QtCore import QThread, pyqtSignal
 
 from leximin.dag.analysis import AnalysisCancelled
 
-from .i18n import normalize_language, pick
+from .i18n import DEFAULT_LANGUAGE, normalize_language, pick
 
 
 def localized_progress(message: str, language: str) -> str:
@@ -67,7 +67,7 @@ class FullAnalysisWorker(QThread):
     completed = pyqtSignal(dict)
     failed = pyqtSignal(str)
 
-    def __init__(self, benchmark: Path, language: str = "uz") -> None:
+    def __init__(self, benchmark: Path, language: str = DEFAULT_LANGUAGE) -> None:
         super().__init__()
         self.benchmark = benchmark
         self.language = normalize_language(language)

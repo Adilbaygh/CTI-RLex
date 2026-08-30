@@ -8,7 +8,7 @@ from pathlib import Path
 from statistics import mean
 from typing import Any, Iterable
 
-from .i18n import pick
+from .i18n import DEFAULT_LANGUAGE, pick
 
 
 @dataclass(frozen=True, slots=True)
@@ -31,7 +31,24 @@ def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def validate_benchmark_document(raw: dict[str, Any], language: str = "uz") -> None:
+def project_version(root: Path) -> str:
+    """The release version, read from CITATION.cff.
+
+    The GUI, the citation file and the archived release name one and the same software, so
+    the version is read from the file that the release carries rather than repeated in the
+    code, where it would drift away at the next release.
+    """
+
+    try:
+        for line in (root / "CITATION.cff").read_text(encoding="utf-8").splitlines():
+            if line.startswith("version:"):
+                return line.split(":", 1)[1].strip().strip('"').strip("'")
+    except OSError:
+        pass
+    return "unreleased"
+
+
+def validate_benchmark_document(raw: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> None:
     required = {
         "benchmark_id",
         "claimants",
@@ -66,7 +83,7 @@ def validate_benchmark_document(raw: dict[str, Any], language: str = "uz") -> No
         )
 
 
-def load_benchmark_document(path: Path, language: str = "uz") -> dict[str, Any]:
+def load_benchmark_document(path: Path, language: str = DEFAULT_LANGUAGE) -> dict[str, Any]:
     raw = read_json(path)
     validate_benchmark_document(raw, language)
     return raw
@@ -98,7 +115,7 @@ def rows_from_dicts(
 
 
 def claimant_table(
-    raw: dict[str, Any], language: str = "uz"
+    raw: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     return rows_from_dicts(
         raw.get("claimants", []),
@@ -117,7 +134,7 @@ def claimant_table(
 
 
 def source_table(
-    raw: dict[str, Any], language: str = "uz"
+    raw: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     return rows_from_dicts(
         raw.get("sources", []),
@@ -133,7 +150,7 @@ def source_table(
 
 
 def scenario_table(
-    raw: dict[str, Any], language: str = "uz"
+    raw: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     return rows_from_dicts(
         raw.get("scenarios", []),
@@ -155,7 +172,7 @@ def flatten_mapping_table(
 
 
 def base_result_tables(
-    base: dict[str, Any], language: str = "uz"
+    base: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> dict[str, tuple[list[str], list[list[Any]]]]:
     return {
         pick(language, "Кафолатлар", "Guarantees"): (
@@ -203,7 +220,7 @@ def base_result_tables(
 
 
 def allocation_table(
-    raw: dict[str, Any], base: dict[str, Any], language: str = "uz"
+    raw: dict[str, Any], base: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     names = {
         row["claimant_id"]: row.get("claimant_name", row["claimant_id"])
@@ -262,7 +279,7 @@ def allocation_table(
 
 
 def method_table(
-    analysis: dict[str, Any], language: str = "uz"
+    analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     return rows_from_dicts(
         analysis.get("method_comparison", []),
@@ -280,7 +297,7 @@ def method_table(
 
 
 def recourse_table(
-    raw: dict[str, Any], analysis: dict[str, Any], language: str = "uz"
+    raw: dict[str, Any], analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     claimant_ids = [row["claimant_id"] for row in raw.get("claimants", [])]
     headers = [
@@ -305,7 +322,7 @@ def recourse_table(
 
 
 def sensitivity_main_effects(
-    analysis: dict[str, Any], language: str = "uz"
+    analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE
 ) -> tuple[list[str], list[list[Any]]]:
     factors = [
         "demand_duty_af_per_acre",

@@ -9,7 +9,7 @@ from PyQt6.QtCore import QTimer
 from PyQt6.QtGui import QFont
 from PyQt6.QtWidgets import QApplication
 
-from .data import ProjectPaths
+from .data import ProjectPaths, project_version
 from .theme import APP_STYLE
 from .window import MainWindow
 
@@ -23,7 +23,7 @@ def launch(
 ) -> int:
     app = QApplication.instance() or QApplication(sys.argv)
     app.setApplicationName("CTI-RLex Studio")
-    app.setApplicationVersion("0.3.0")
+    app.setApplicationVersion(project_version(project_root))
     app.setOrganizationName("Leximin Research")
     app.setFont(QFont("Segoe UI", 10))
     app.setStyle("Fusion")

@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import networkx as nx  # noqa: E402
 import numpy as np  # noqa: E402
 
-from .i18n import pick
+from .i18n import DEFAULT_LANGUAGE, pick
 
 
 PALETTE = ["#0284C7", "#0F766E", "#D97706", "#7C3AED", "#DC2626", "#475569"]
@@ -62,7 +62,7 @@ class ChartStore:
         self.paths[key] = png
         return png
 
-    def network(self, raw: dict[str, Any], language: str = "uz") -> Path:
+    def network(self, raw: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         nodes = {row["node_id"]: row for row in raw.get("nodes", [])}
         graph = nx.DiGraph()
         graph.add_nodes_from(nodes)
@@ -152,7 +152,7 @@ class ChartStore:
         raw: dict[str, Any],
         base: dict[str, Any],
         analysis: dict[str, Any] | None = None,
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> Path:
         proposed = base.get("guarantees", {})
         claimants = list(proposed)
@@ -199,7 +199,7 @@ class ChartStore:
         figure.tight_layout()
         return self.save("claimant_guarantees", figure)
 
-    def method_tradeoff(self, analysis: dict[str, Any], language: str = "uz") -> Path:
+    def method_tradeoff(self, analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         figure, axis = plt.subplots(figsize=(9.2, 4.8))
         for index, row in enumerate(analysis["method_comparison"]):
             axis.scatter(
@@ -229,7 +229,7 @@ class ChartStore:
         return self.save("method_tradeoff", figure)
 
     def recourse_frontier(
-        self, raw: dict[str, Any], analysis: dict[str, Any], language: str = "uz"
+        self, raw: dict[str, Any], analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE
     ) -> Path:
         frontier = analysis["recourse_frontier"]
         claimant_ids = list(frontier[0]["guarantees"]) if frontier else []
@@ -264,7 +264,7 @@ class ChartStore:
         return self.save("recourse_frontier", figure)
 
     def service_heatmap(
-        self, raw: dict[str, Any], base: dict[str, Any], language: str = "uz"
+        self, raw: dict[str, Any], base: dict[str, Any], language: str = DEFAULT_LANGUAGE
     ) -> Path:
         claimants = [row["claimant_id"] for row in raw.get("claimants", [])]
         scenarios = [row["scenario_id"] for row in raw.get("scenarios", [])]
@@ -311,7 +311,7 @@ class ChartStore:
         figure.tight_layout()
         return self.save("service_heatmap", figure)
 
-    def source_balance(self, analysis: dict[str, Any], language: str = "uz") -> Path:
+    def source_balance(self, analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         audit = analysis["operational_audit"]
         source_rows = audit["source_activation"]
         balance_rows = audit["scenario_water_balance"]
@@ -369,7 +369,7 @@ class ChartStore:
         figure.tight_layout()
         return self.save("source_water_balance", figure)
 
-    def source_ablation(self, analysis: dict[str, Any], language: str = "uz") -> Path:
+    def source_ablation(self, analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         rows = analysis["source_ablation"]
         labels = [row["disabled_source_name"] for row in rows]
         changes = [100 * row["change_in_minimum_guarantee"] for row in rows]
@@ -391,7 +391,7 @@ class ChartStore:
         figure.tight_layout()
         return self.save("source_ablation", figure)
 
-    def sensitivity(self, analysis: dict[str, Any], language: str = "uz") -> Path:
+    def sensitivity(self, analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         records = analysis.get("sensitivity", [])
         factors = [
             ("demand_duty_af_per_acre", pick(language, "Сув талаби меъёри", "Demand duty")),
@@ -449,7 +449,7 @@ class ChartStore:
         figure.tight_layout()
         return self.save("sensitivity_main_effects", figure)
 
-    def scalability(self, analysis: dict[str, Any], language: str = "uz") -> Path:
+    def scalability(self, analysis: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> Path:
         rows = analysis.get("scalability", [])
         figure, left = plt.subplots(figsize=(9.2, 4.3))
         scenarios = [row["scenario_count"] for row in rows]
@@ -478,7 +478,7 @@ class ChartStore:
         return self.save("scalability", figure)
 
     def render_base(
-        self, raw: dict[str, Any], base: dict[str, Any], language: str = "uz"
+        self, raw: dict[str, Any], base: dict[str, Any], language: str = DEFAULT_LANGUAGE
     ) -> dict[str, Path]:
         return {
             "network": self.network(raw, language),
@@ -490,7 +490,7 @@ class ChartStore:
         self,
         raw: dict[str, Any],
         analysis: dict[str, Any],
-        language: str = "uz",
+        language: str = DEFAULT_LANGUAGE,
     ) -> dict[str, Path]:
         base = analysis["base_solution"]
         return {

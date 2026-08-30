@@ -36,15 +36,20 @@ def test_benchmark_counts_and_dynamic_result_tables() -> None:
     assert counts["sources"] == 4
     assert counts["scenarios"] == 5
     assert counts["periods"] == 5
-    tables = base_result_tables(solution)
-    assert len(tables["Ойлик нисбатлар"][1]) == 75
-    assert len(tables["Тармоқ оқимлари"][1]) == 475
-    assert len(allocation_table(raw, solution)[1]) == 3
+    # The language is passed explicitly on both sides, so these row counts stay valid
+    # whichever language the interface defaults to.
+    uzbek_tables = base_result_tables(solution, "uz")
+    assert len(uzbek_tables["Ойлик нисбатлар"][1]) == 75
+    assert len(uzbek_tables["Тармоқ оқимлари"][1]) == 475
+    assert len(allocation_table(raw, solution, "uz")[1]) == 3
 
     english_tables = base_result_tables(solution, "en")
-    assert "Period ratios" in english_tables
-    assert "Network flows" in english_tables
+    assert len(english_tables["Period ratios"][1]) == 75
+    assert len(english_tables["Network flows"][1]) == 475
     assert allocation_table(raw, solution, "en")[0][1] == "Name"
+
+    # English is the interface default, so calling without a language must match "en".
+    assert set(base_result_tables(solution)) == set(english_tables)
 
 
 def test_benchmark_template_validation_reports_missing_fields() -> None:
