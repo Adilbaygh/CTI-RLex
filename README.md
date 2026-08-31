@@ -381,9 +381,13 @@ and always resolves to the most recent version:
 
 **https://doi.org/10.5281/zenodo.22160054**
 
-Each individual release also receives its own version DOI, which is immutable. Use the
-concept DOI to refer to the software in general, and a version DOI together with the
-commit hash to refer to the one archived state a set of numbers came from. The Data
+The release archived from this state of the repository has its own immutable version
+DOI, reserved before the deposit so that the archive can name itself:
+
+**https://doi.org/10.5281/zenodo.22199894**
+
+Use the concept DOI to refer to the software in general, and the version DOI together
+with the commit hash to refer to the one archived state a set of numbers came from. The Data
 Availability Statement of the accompanying article names the repository and the commit;
 the version DOI of the archived release is added there at submission, once the release
 that matches the submitted manuscript exists.

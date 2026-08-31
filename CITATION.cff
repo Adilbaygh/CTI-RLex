@@ -9,6 +9,15 @@ license: MIT
 version: 1.1.2
 date-released: "2026-08-30"
 doi: 10.5281/zenodo.22160054
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22160054
+    description: >-
+      Concept DOI of the record; always resolves to the most recent archived version.
+  - type: doi
+    value: 10.5281/zenodo.22199894
+    description: >-
+      Version DOI of the release archived from this state of the repository.
 repository-code: "https://github.com/Adilbaygh/CTI-RLex"
 abstract: >-
   A linear-programming implementation of claimant-terminal-invariant robust lexicographic

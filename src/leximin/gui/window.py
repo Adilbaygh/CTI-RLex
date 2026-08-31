@@ -1471,7 +1471,8 @@ class MainWindow(QMainWindow):
                 "<b>Ҳисоблаш ядроси:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
                 "<b>GUI:</b> PyQt6 ва Matplotlib<br>"
                 "<b>Репозиторий:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
-                "<b>Архив (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054</p>",
+                "<b>Архив (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054<br>"
+                "<b>Ушбу релиз (version DOI):</b> https://doi.org/10.5281/zenodo.22199894</p>",
                 "<p>Open-source scientific software for computing, comparing and validating "
                 "scenario–period robust guarantees and bounded operational recourse in lossy, "
                 "multi-source irrigation DAGs.</p>"
@@ -1482,7 +1483,8 @@ class MainWindow(QMainWindow):
                 "<b>Computational core:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
                 "<b>GUI:</b> PyQt6 and Matplotlib<br>"
                 "<b>Repository:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
-                "<b>Archive (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054</p>",
+                "<b>Archive (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054<br>"
+                "<b>This release (version DOI):</b> https://doi.org/10.5281/zenodo.22199894</p>",
             )
         )
         close = QPushButton(self._tr("Ёпиш", "Close"))
