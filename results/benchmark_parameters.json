@@ -1,7 +1,7 @@
 {
  "provenance_classes": {
   "observed_design_attribute": "observed",
-  "observed_company_level_not_farmer_level": "observed",
+  "observed_company_level_not_farmer_level": "derived",
   "proxy_requires_calibration": "derived",
   "derived_requires_calibration": "derived",
   "derived_topology_repair": "derived",
@@ -136,12 +136,12 @@
       "field": "mapping_status",
       "rows": 3,
       "by_provenance": {
-       "observed": 3
+       "derived": 3
       },
       "by_status": [
        {
         "status": "observed_company_level_not_farmer_level",
-        "provenance": "observed",
+        "provenance": "derived",
         "rows": 3,
         "share_percent": 100.0
        }
@@ -183,14 +183,14 @@
      }
     ],
     "rows_by_provenance": {
-     "observed": 10,
-     "derived": 48,
+     "observed": 7,
+     "derived": 51,
      "assumed": 26
     },
     "share_by_provenance_percent": {
      "assumed": 30.952380952380953,
-     "derived": 57.142857142857146,
-     "observed": 11.904761904761905
+     "derived": 60.714285714285715,
+     "observed": 8.333333333333334
     },
     "total_rows": 84
    },
@@ -461,12 +461,12 @@
       "field": "mapping_status",
       "rows": 10,
       "by_provenance": {
-       "observed": 10
+       "derived": 10
       },
       "by_status": [
        {
         "status": "observed_company_level_not_farmer_level",
-        "provenance": "observed",
+        "provenance": "derived",
         "rows": 10,
         "share_percent": 100.0
        }
@@ -508,14 +508,14 @@
      }
     ],
     "rows_by_provenance": {
-     "derived": 160,
-     "observed": 36,
+     "derived": 170,
+     "observed": 26,
      "assumed": 89
     },
     "share_by_provenance_percent": {
      "assumed": 31.228070175438596,
-     "derived": 56.14035087719298,
-     "observed": 12.631578947368421
+     "derived": 59.64912280701754,
+     "observed": 9.12280701754386
     },
     "total_rows": 285
    },

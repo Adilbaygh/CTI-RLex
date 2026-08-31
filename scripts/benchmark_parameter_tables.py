@@ -42,7 +42,14 @@ OUTPUT = REPO / "results" / "benchmark_parameters.json"
 # calibration, so it is counted as derived and its own status string says the rest.
 PROVENANCE = {
     "observed_design_attribute": "observed",
-    "observed_company_level_not_farmer_level": "observed",
+    # The claimant-terminal mapping is a spatial intersection of the service-area layer
+    # with the network, not a value a layer states, so the rule above makes it derived --
+    # which is what Appendix A.1 of the manuscript has always called it. The status string
+    # itself is left alone: it sits in a checksummed CSV, and what it records is true and
+    # narrower than its prefix suggests, that the claimant is resolved at company level
+    # rather than at farmer level. It was never a statement about where the mapping
+    # came from.
+    "observed_company_level_not_farmer_level": "derived",
     "proxy_requires_calibration": "derived",
     "derived_requires_calibration": "derived",
     "derived_topology_repair": "derived",
