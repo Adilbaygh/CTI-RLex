@@ -75,8 +75,12 @@ def main() -> None:
     parser.add_argument(
         "--python",
         nargs="+",
-        default=["py"],
-        help="interpreter that runs the driver (default: py; use 'py -3.10' for the bytecode)",
+        # "py" is the Windows Python launcher and does not exist on macOS or Linux, where
+        # this script is in the release and the README tells a reader to run it. The
+        # interpreter already running this file is right on every platform.
+        default=[sys.executable],
+        help="interpreter that runs the driver (default: the one running this script; on "
+        "Windows use 'py -3.10' to reach the 3.10 bytecode fallback)",
     )
     parser.add_argument(
         "--rediscover",
