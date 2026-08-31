@@ -1,8 +1,0 @@
-﻿test,case,observed,tolerance,outcome
-Terminal-record split,m=2,0.000e+00,1.0e-8,Pass
-Terminal-record split,m=4,1.110e-16,1.0e-8,Pass
-Terminal-record split,m=8,5.551e-17,1.0e-8,Pass
-LP equality residual,Base,2.274e-13,1.0e-7,Pass
-LP inequality violation,Base,3.411e-13,1.0e-7,Pass
-LP bound violation,Base,1.137e-13,1.0e-7,Pass
-Recourse frontier,b=0-2,Nondecreasing,Required,Pass
