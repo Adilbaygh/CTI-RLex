@@ -1,38 +1,18 @@
-"""Leximin — fair water allocation on lossy irrigation trees and DAGs.
+"""Leximin -- claimant-level robust leximin allocation on lossy irrigation networks.
 
-Core solver copied and adapted from the appliedmath-lexflow project.
-Stage 1 (max-min guarantee lambda*), Stage 2 (weighted seasonal satisfaction S*),
-Stage 3 (temporal service-ratio smoothness Omega), plus price-of-fairness and
-exact progressive-filling leximin.
+The package is the CTI-RLex model of the accompanying article. ``leximin.dag`` carries the
+benchmark loader and validator, the linear-programming model, the leximin solver, the
+comparators and the analysis layers; ``leximin.gui`` carries the desktop benchmark
+analyzer and imports Qt only when something asks it to, so the solver-only installation
+can import and test everything else.
+
+The names below are the ones the experiment scripts and the tests use. Anything deeper --
+the LP builder, the ablation and scaling helpers, the audit -- is reached through
+``leximin.dag`` directly.
 """
 
-from .domain import Benchmark, Edge, User
-from .io import load_benchmark, validate_benchmark
-from .operators import build_graph, build_operator_exact
-from .stage1 import (
-    Stage1ClosedForm,
-    Stage1LP,
-    solve_stage1_closed_form,
-    solve_stage1_lp,
-)
-from .lexicographic import (
-    StageSolution,
-    ThreeStageSolution,
-    solve_three_stage,
-)
-from .robust import (
-    LeximinSolution,
-    PriceOfFairness,
-    VariationBounds,
-    price_of_fairness,
-    solve_leximin,
-    stage2_variation_bounds,
-)
-from .verification import (
-    OperatorVerification,
-    maximum_physical_violation,
-    verify_operator_exact,
-)
+from __future__ import annotations
+
 from .dag import (
     CTIBenchmark,
     CTIRLexSolution,
@@ -51,29 +31,6 @@ from .dag import (
 )
 
 __all__ = [
-    "Benchmark",
-    "Edge",
-    "User",
-    "load_benchmark",
-    "validate_benchmark",
-    "build_graph",
-    "build_operator_exact",
-    "Stage1ClosedForm",
-    "Stage1LP",
-    "solve_stage1_closed_form",
-    "solve_stage1_lp",
-    "StageSolution",
-    "ThreeStageSolution",
-    "solve_three_stage",
-    "LeximinSolution",
-    "PriceOfFairness",
-    "VariationBounds",
-    "price_of_fairness",
-    "solve_leximin",
-    "stage2_variation_bounds",
-    "OperatorVerification",
-    "maximum_physical_violation",
-    "verify_operator_exact",
     "CTIBenchmark",
     "CTIRLexSolution",
     "ClaimantTerminal",
@@ -90,4 +47,5 @@ __all__ = [
     "validate_cti_benchmark",
 ]
 
-__version__ = "0.2.0"
+# Kept equal to the version in pyproject.toml by tests/test_package_metadata.py.
+__version__ = "0.3.0"
