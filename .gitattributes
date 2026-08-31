@@ -7,3 +7,24 @@
 # conversion off for everything keeps a clone byte-for-byte identical to what was
 # published, which is the only state in which those checksums mean anything.
 * -text
+
+# ...except the files a rerun rewrites.
+#
+# Nothing under results/ carries a published checksum -- those are taken over the
+# benchmark inputs in DATA/, which the rule above keeps byte-for-byte. What
+# results/ carries instead is output, rewritten on every run, and Python's text mode ends
+# the lines the way the platform does: CRLF on Windows, LF everywhere else. Stored
+# verbatim, that turns an unchanged number into a whole-file diff for the next person to
+# rerun on the other platform, and it did. Normalizing means the bytes in the repository
+# are LF whichever machine produced them, so a rerun leaves the tree clean on all of them.
+results/**/*.json text eol=lf
+results/**/*.csv text eol=lf
+results/**/*.txt text eol=lf
+results/**/*.svg text eol=lf
+
+# Python is edited and rewritten by the maintenance scripts, and no checksum covers it.
+*.py text eol=lf
+# Written by the county build and by the map, and not checksummed either.
+DATA/**/discovery_summary.json text eol=lf
+DATA/**/*.svg text eol=lf
+

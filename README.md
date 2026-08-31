@@ -203,7 +203,7 @@ The mapping from article object to file is:
 |---|---|---|
 | Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
 | Table 4 and Supplementary Table S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
-| Table 3, Figure 4(b), Supplementary Tables S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json`, `results/cache_valley_per_claimant.json` |
+| Table 3, Figure 4(b), Supplementary Tables S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json` |
 | Supplementary Tables S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
 | Supplementary Table S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
 | Supplementary Tables S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
@@ -272,8 +272,19 @@ numbers. Alongside the median, each record carries `min_runtime_seconds`,
 against the measured spread rather than against a single number. Runtimes depend on the
 machine and on operating-system scheduling; the processor, memory, operating system and the
 exact Python, SciPy and HiGHS versions behind the published times are recorded in
-`results/environment.json`. Every other number in `results/` is machine-independent and a
-correct rerun reproduces it exactly.
+`results/environment.json`. Every other number in `results/` is a property of the model and
+the data rather than of the machine. On the stack recorded in `results/environment.json`
+a rerun reproduces them exactly: the run that set the solver tolerances explicitly
+rewrote every result file and moved nothing but the timings. On a different platform or
+a different HiGHS build, expect agreement within the tolerances and the reported
+precision the accompanying article declares, rather than bit-for-bit equality.
+
+The solver configuration is set by this package rather than inherited from your install.
+`src/leximin/dag/lp.py` defines `LP_FEASIBILITY_TOLERANCE` and passes it to HiGHS as both
+the primal and the dual feasibility tolerance on every solve, with presolve on and no
+thread count set. `results/environment.json` records the options that were actually
+passed, read from that module rather than described beside it, so a rerun can be compared
+against the configuration that produced the published numbers.
 
 ## Reproducibility checks
 

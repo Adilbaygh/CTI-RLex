@@ -163,15 +163,15 @@
     "beats_rigid_on_the_minimum": false,
     "max_lp_residual": 1.4551915228366852e-11,
     "repeats": 5,
-    "median_runtime_seconds": 1.1865943000011612,
-    "min_runtime_seconds": 1.1705935999998474,
-    "max_runtime_seconds": 1.1970364000007976,
+    "median_runtime_seconds": 1.185316299997794,
+    "min_runtime_seconds": 1.1679074999992736,
+    "max_runtime_seconds": 1.245474600000307,
     "runtime_seconds_repeats": [
-     1.1865943000011612,
-     1.1970364000007976,
-     1.1719898999981524,
-     1.1705935999998474,
-     1.1951528000026883
+     1.2407219000015175,
+     1.245474600000307,
+     1.1691489000004367,
+     1.1679074999992736,
+     1.185316299997794
     ]
    }
   },
@@ -317,15 +317,15 @@
     "beats_rigid_on_the_minimum": false,
     "max_lp_residual": 1.4551915228366852e-11,
     "repeats": 5,
-    "median_runtime_seconds": 1.227186599997367,
-    "min_runtime_seconds": 1.1744961000003968,
-    "max_runtime_seconds": 1.2700638999995135,
+    "median_runtime_seconds": 1.1696551999993972,
+    "min_runtime_seconds": 1.1650185999969835,
+    "max_runtime_seconds": 1.2013671000022441,
     "runtime_seconds_repeats": [
-     1.1744961000003968,
-     1.227186599997367,
-     1.2700638999995135,
-     1.188539499999024,
-     1.2410608999998658
+     1.1666113000028417,
+     1.191348400003335,
+     1.1650185999969835,
+     1.1696551999993972,
+     1.2013671000022441
     ]
    }
   },
@@ -478,15 +478,15 @@
     "beats_rigid_on_the_minimum": false,
     "max_lp_residual": 1.0913936421275139e-11,
     "repeats": 5,
-    "median_runtime_seconds": 2.0640133999986574,
-    "min_runtime_seconds": 2.0467031999978644,
-    "max_runtime_seconds": 2.0839816000006977,
+    "median_runtime_seconds": 2.07955810000567,
+    "min_runtime_seconds": 2.052731199997652,
+    "max_runtime_seconds": 2.0877353999967454,
     "runtime_seconds_repeats": [
-     2.0467031999978644,
-     2.0610849000004237,
-     2.0839816000006977,
-     2.0667845999996644,
-     2.0640133999986574
+     2.052731199997652,
+     2.07955810000567,
+     2.0770604999997886,
+     2.0877353999967454,
+     2.0811387000067043
     ]
    }
   }

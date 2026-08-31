@@ -96,6 +96,11 @@ def main() -> None:
             "font.family": "serif",
             "font.serif": ["Palatino Linotype", "Palatino", "DejaVu Serif"],
             "svg.fonttype": "none",
+            # Matplotlib salts the identifiers it generates with a per-process value, so
+            # two runs over the same data produce different bytes for the same picture.
+            # This file is in DATA/, where the rule is byte-for-byte storage rather than
+            # normalization, so the salt is fixed here instead.
+            "svg.hashsalt": "little_bear_river_2025_benchmark_map",
             "figure.facecolor": "white",
             "savefig.facecolor": "white",
         }
@@ -439,8 +444,15 @@ def main() -> None:
     ).get_title().set_fontsize(9.2)
 
     fig.savefig(PNG_OUTPUT, dpi=600, facecolor="white", bbox_inches="tight")
-    fig.savefig(SVG_OUTPUT, facecolor="white", bbox_inches="tight")
+    # No date: it is the time of the run, not a property of the figure, and it is the
+    # only reason an unchanged map came back as five thousand changed lines.
+    fig.savefig(
+        SVG_OUTPUT, facecolor="white", bbox_inches="tight", metadata={"Date": None}
+    )
     plt.close(fig)
+    # Matplotlib writes the SVG through a text stream, so it lands with CRLF on Windows
+    # and LF elsewhere. Git is told to store DATA/ verbatim, so the writer settles it.
+    SVG_OUTPUT.write_bytes(SVG_OUTPUT.read_bytes().replace(b"\r\n", b"\n"))
     print(PNG_OUTPUT)
     print(SVG_OUTPUT)
 
