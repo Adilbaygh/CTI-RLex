@@ -16,10 +16,12 @@ lexicographic refinement the instance reports.
 
 Second, how far the instance separates, which is less far than it looks. Claimants in
 different components share no reach, no source and no group envelope, but they do share the
-recourse budget: that constraint sums control deviations over the whole instance, and the
-contingency plans deviate from one common first-stage plan, so a deviation spent in one
-component is not available in another. The feasible set is therefore not a product and no
-separability theorem applies.
+recourse budget, and that one constraint is the whole of the coupling: it sums control
+deviations over the whole instance, so a deviation spent in one component is not available
+in another. The common first-stage plan is not a second coupling -- the variables of
+different components appear in none of each other's constraints, so that plan ties the
+scenarios of one component together rather than tying the components to each other. The
+feasible set is therefore not a product and no separability theorem applies.
 
 What can be measured is what actually happens. Each component is solved alone, with the whole
 budget to itself, and the merged guarantee vector is compared with the global one; on this
