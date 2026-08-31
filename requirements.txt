@@ -1,3 +1,20 @@
+# Everything the instructions in README.md need, in one file.
+#
+# pyproject.toml is the authority on what the package itself requires; this mirrors it for
+# a reader who prefers pip install -r. The first three lines are the solver. matplotlib,
+# pillow and fonttools are needed because scripts/create_results_artifacts.py,
+# scripts/update_figure4_two_panel.py, scripts/verify_publication_figures.py and the
+# benchmark map draw and check the published figures, and pytest is needed because
+# scripts/rerun_all_results.py finishes by running the test suite.
+#
+# The desktop application additionally needs PyQt6; install it with
+#     python -m pip install -e ".[gui]"
+# requirements-lock.txt records the exact versions the published numbers were produced on.
+
 numpy>=2.1
 scipy>=1.14
 networkx>=3.4
+matplotlib>=3.9
+pillow>=11.0
+fonttools>=4.55
+pytest>=8.0

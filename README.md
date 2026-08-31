@@ -57,6 +57,14 @@ The solver-only installation is:
 python -m pip install -e .
 ```
 
+That installation runs the library and the solver, and nothing else. The reproducibility
+instructions below draw figures, measure them and run the test suite, so to follow this
+file end to end install the extra that covers all of it:
+
+```bash
+python -m pip install -e ".[repro]"
+```
+
 The commands in this file use forward slashes, which PowerShell, cmd, bash and zsh all
 accept. The test suite and every result producer have been run on Windows and on Linux.
 

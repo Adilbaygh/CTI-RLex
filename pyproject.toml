@@ -20,7 +20,16 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.9"]
+# The figure producers are not the desktop application: create_results_artifacts.py,
+# update_figure4_two_panel.py, verify_publication_figures.py and the benchmark map all
+# draw or measure published figures, and a reader who installs only the solver cannot
+# finish scripts/rerun_all_results.py without them. fonttools is what the type-size check
+# reads a font with; it arrives with matplotlib in practice, and is named here so that it
+# is required rather than inherited.
+figures = ["matplotlib>=3.9", "pillow>=11.0", "fonttools>=4.55"]
 gui = ["PyQt6>=6.8", "matplotlib>=3.9", "pillow>=11.0"]
+# Everything the instructions in README.md ask a reader to run, in one extra.
+repro = ["matplotlib>=3.9", "pillow>=11.0", "fonttools>=4.55", "pytest>=8.0"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
