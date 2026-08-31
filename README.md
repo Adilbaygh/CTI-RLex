@@ -258,8 +258,16 @@ The map is drawn from the same open layers the benchmark is generated from, so
 `LEXIMIN_DATASETS` has to point at them before `plot_benchmark_map.py` will run.
 
 `results/discrimination/k1.py` and `k1b.py` are the exploratory scripts that first
-established the discrimination result. They print to the terminal and write nothing; the
-published file is produced by `scripts/revision_experiments.py`.
+established the discrimination result, and `k1_leximin_vs_common_floor.txt` and
+`k1_sorted_vector_comparison.txt` are the terminal output of that first run, kept as a
+record of it. The scripts themselves write no file; the published result is produced by
+`scripts/revision_experiments.py`, and every guarantee, sorted vector and delivery figure
+in the two transcripts is one that file carries.
+
+The two solve times in them are not. They are single ad-hoc measurements taken before the
+timing protocol below existed, so they differ from the medians the article reports and
+are not comparable with them; every runtime in the article and in `results/` comes from
+`scripts/timing_protocol.py`.
 
 `scripts/rerun_all_results.py` runs the whole sequence above, together with the seven
 producers listed in the table, in the order the later ones need the earlier output. It
