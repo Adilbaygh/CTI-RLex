@@ -1,4 +1,4 @@
-"""The audit layer of the three-claimant instance, applied to the ten-claimant one.
+"""The audit layer of the three-claimant instance, applied to the fifteen-claimant one.
 
 The larger instance carries the paper's discriminating claim -- that a complete
 lexicographic vector separates from a common floor -- and it is the instance whose audit is
@@ -7,7 +7,7 @@ balance, a source-activation schedule and a residual report; the larger one is p
 with a claimant register and a level trace. A reader who wants to check the discriminating
 result cell by cell cannot.
 
-This produces the same four layers for the ten-claimant instance, from the same routines the
+This produces the same four layers for the fifteen-claimant instance, from the same routines the
 smaller one uses, so the two audits are comparable rather than merely similar.
 
 Three properties are asserted rather than reported, because each is a way the layer could be

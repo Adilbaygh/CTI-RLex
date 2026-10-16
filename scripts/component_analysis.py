@@ -1,10 +1,10 @@
-"""What the seven components of the county instance decide separately.
+"""What the components of the county instance decide separately.
 
-The ten-claimant instance is not one network in which ten claimants compete: it is seven
-weakly connected components, the largest holding two claimants. A global sorted guarantee
-vector therefore interleaves guarantees that were decided in different subsystems, and a
-reader who reads position 4 as "the fourth-worst competitor" is reading competition into an
-interleaving. The remedy is to report the components themselves.
+The county instance is not one network in which all its claimants compete: it is several
+weakly connected components, and the report states how many and how large. A global sorted
+guarantee vector therefore interleaves guarantees that were decided in different
+subsystems, and a reader who reads position 4 as "the fourth-worst competitor" is reading
+competition into an interleaving. The remedy is to report the components themselves.
 
 Two things follow, and the second is the one worth stating in the paper.
 
@@ -24,13 +24,14 @@ scenarios of one component together rather than tying the components to each oth
 feasible set is therefore not a product and no separability theorem applies.
 
 What can be measured is what actually happens. Each component is solved alone, with the whole
-budget to itself, and the merged guarantee vector is compared with the global one; on this
-instance they agree exactly, which is a property of this instance rather than a theorem, and
-it is consistent with the budget being slack for the fairness stage here. Delivery does not
-agree: a component whose guarantee is identical under both rules can still deliver a
-different volume in the global solve, and solving it alone makes that difference vanish.
-That gap is where the shared budget shows, and reporting it is what keeps the separability
-statement from being read as more than it is.
+budget to itself, and the merged guarantee vector is compared with the global one. Whether
+they agree is a property of the instance rather than a theorem, so it is recorded, not
+assumed: the report says which way it went, and the article may describe the vector as
+decomposing by component only when it did. Delivery need not agree even when the guarantees
+do: a component whose guarantee is identical under both rules can still deliver a different
+volume in the global solve, and solving it alone makes that difference vanish. That gap is
+where the shared budget shows, and reporting it is what keeps a separability statement from
+being read as more than it is.
 
 Run:  python scripts/component_analysis.py
 Writes: results/component_analysis.json
@@ -237,10 +238,11 @@ def main() -> None:
         "rows": rows,
     }
     if not separable:
-        raise SystemExit(
-            "solving the components separately did not reproduce the global guarantee vector; "
-            "the components are not independent and the claim must not be made"
-        )
+        # Recorded rather than fatal: the vector is what it is, and the finding is that the
+        # components are not independent on this instance. What must not happen is a text
+        # that says otherwise, and the manuscript verifier reads this flag for that.
+        print("NOTE: solving the components separately does not reproduce the global "
+              "guarantee vector; the separability statement must not be made")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(

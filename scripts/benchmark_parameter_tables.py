@@ -31,7 +31,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parents[1]
 INSTANCES = {
     "little_bear_v2": REPO / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json",
-    "cache_valley_v3": REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json",
+    "cache_valley_v4": REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json",
 }
 OUTPUT = REPO / "results" / "benchmark_parameters.json"
 

@@ -1,0 +1,340 @@
+{
+ "dataset": "Utah Points of Diversion (WRPOD), Utah Division of Water Rights",
+ "service": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_Points_of_Diversion/FeatureServer/0",
+ "item": "https://www.arcgis.com/home/item.html?id=7bf556ebe3bc4362ab07d8945332c940",
+ "field_definitions": "https://waterrights.utah.gov/gisinfo/wrpod.htm",
+ "layer_data_last_edit_utc": "2026-10-10T01:04:29.141000+00:00",
+ "retrieved_utc": "2026-10-11T18:34:25+00:00",
+ "snapshot_file": "utah_points_of_diversion_cache_county.csv",
+ "snapshot_rows": 32141,
+ "snapshot_sha256": "565971f6e5498b867ec45d8208592491f90bb9ae3af8374a71f12d2a01cf0565",
+ "selection": "the rows of the snapshot whose named_in_benchmark flag is True: every point of diversion of a water right that a claimant's water-rights text or an official path of either released benchmark names, wherever the point lies",
+ "rights_named_in_the_benchmarks": {
+  "25-1537": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4112"
+  ],
+  "25-1538": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4114"
+  ],
+  "25-1539": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4113"
+  ],
+  "25-1551": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_130",
+   "cache_valley_2025_multiclaimant_v4:path:p_4120",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_130",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4120"
+  ],
+  "25-1552": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4121",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4121"
+  ],
+  "25-1553": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4122",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4122"
+  ],
+  "25-1554": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4123",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4123"
+  ],
+  "25-1719": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "cache_valley_2025_multiclaimant_v4:path:p_4115",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4115"
+  ],
+  "25-1720": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "cache_valley_2025_multiclaimant_v4:path:p_4116",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4116"
+  ],
+  "25-1721": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "cache_valley_2025_multiclaimant_v4:path:p_4117",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4117"
+  ],
+  "25-1722": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "cache_valley_2025_multiclaimant_v4:path:p_4118",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4118"
+  ],
+  "25-1723": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "cache_valley_2025_multiclaimant_v4:path:p_4119",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:path:p_4119"
+  ],
+  "25-1724": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088"
+  ],
+  "25-1946": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_132",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_132"
+  ],
+  "25-1994": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4139"
+  ],
+  "25-1995": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4140"
+  ],
+  "25-1996": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4141"
+  ],
+  "25-2037": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088"
+  ],
+  "25-2038": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088"
+  ],
+  "25-2039": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088"
+  ],
+  "25-2040": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_088",
+   "lbr_hyrum_paradise_highline_2025_v2:claimant:company_088"
+  ],
+  "25-3055": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2039"
+  ],
+  "25-3056": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2044"
+  ],
+  "25-3514": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_106",
+   "cache_valley_2025_multiclaimant_v4:path:p_4136"
+  ],
+  "25-4148": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_106",
+   "cache_valley_2025_multiclaimant_v4:path:p_4137"
+  ],
+  "25-5023": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103"
+  ],
+  "25-5024": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103"
+  ],
+  "25-5132": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_168"
+  ],
+  "25-5133": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103"
+  ],
+  "25-5134": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103"
+  ],
+  "25-5135": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103"
+  ],
+  "25-5136": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_103",
+   "cache_valley_2025_multiclaimant_v4:path:p_2065"
+  ],
+  "25-5137": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_136",
+   "cache_valley_2025_multiclaimant_v4:path:p_2049"
+  ],
+  "25-5138": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_136",
+   "cache_valley_2025_multiclaimant_v4:path:p_2050"
+  ],
+  "25-5139": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_136",
+   "cache_valley_2025_multiclaimant_v4:path:p_2051"
+  ],
+  "25-5140": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_136",
+   "cache_valley_2025_multiclaimant_v4:path:p_2052"
+  ],
+  "25-5141": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2084"
+  ],
+  "25-5142": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2085"
+  ],
+  "25-5243": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_105",
+   "cache_valley_2025_multiclaimant_v4:path:p_2082"
+  ],
+  "25-5938": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2083"
+  ],
+  "25-6110": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_109",
+   "cache_valley_2025_multiclaimant_v4:path:p_2040"
+  ],
+  "25-6111": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_109",
+   "cache_valley_2025_multiclaimant_v4:path:p_2041"
+  ],
+  "25-6112": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_109",
+   "cache_valley_2025_multiclaimant_v4:path:p_2042"
+  ],
+  "25-6113": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_109",
+   "cache_valley_2025_multiclaimant_v4:path:p_2043"
+  ],
+  "25-6137": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2068"
+  ],
+  "25-6138": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104",
+   "cache_valley_2025_multiclaimant_v4:path:p_2069"
+  ],
+  "25-6139": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2070"
+  ],
+  "25-6140": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104",
+   "cache_valley_2025_multiclaimant_v4:path:p_2071"
+  ],
+  "25-6141": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2072"
+  ],
+  "25-6142": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104",
+   "cache_valley_2025_multiclaimant_v4:path:p_2073"
+  ],
+  "25-6143": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2074"
+  ],
+  "25-6144": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104",
+   "cache_valley_2025_multiclaimant_v4:path:p_2075"
+  ],
+  "25-6145": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2045"
+  ],
+  "25-6146": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2036"
+  ],
+  "25-6147": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2037"
+  ],
+  "25-6148": [
+   "cache_valley_2025_multiclaimant_v4:path:p_2038"
+  ],
+  "25-774": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_106"
+  ],
+  "25-9981": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104"
+  ],
+  "25-9982": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104"
+  ],
+  "25-9983": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104"
+  ],
+  "25-9984": [
+   "cache_valley_2025_multiclaimant_v4:claimant:company_104"
+  ],
+  "ID 13-2066": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4138"
+  ],
+  "ID 13-974": [
+   "cache_valley_2025_multiclaimant_v4:path:p_4128"
+  ]
+ },
+ "named_rights_not_in_the_layer": [
+  "ID 13-2066",
+  "ID 13-974"
+ ],
+ "rights_with_points": [
+  "25-1537",
+  "25-1538",
+  "25-1539",
+  "25-1551",
+  "25-1552",
+  "25-1553",
+  "25-1554",
+  "25-1719",
+  "25-1720",
+  "25-1721",
+  "25-1722",
+  "25-1723",
+  "25-1724",
+  "25-1946",
+  "25-1994",
+  "25-1995",
+  "25-1996",
+  "25-2037",
+  "25-2038",
+  "25-2039",
+  "25-2040",
+  "25-3055",
+  "25-3056",
+  "25-3514",
+  "25-4148",
+  "25-5023",
+  "25-5024",
+  "25-5132",
+  "25-5133",
+  "25-5134",
+  "25-5135",
+  "25-5136",
+  "25-5137",
+  "25-5138",
+  "25-5139",
+  "25-5140",
+  "25-5141",
+  "25-5142",
+  "25-5243",
+  "25-5938",
+  "25-6110",
+  "25-6111",
+  "25-6112",
+  "25-6113",
+  "25-6137",
+  "25-6138",
+  "25-6139",
+  "25-6140",
+  "25-6141",
+  "25-6142",
+  "25-6143",
+  "25-6144",
+  "25-6145",
+  "25-6146",
+  "25-6147",
+  "25-6148",
+  "25-774",
+  "25-9981",
+  "25-9982",
+  "25-9983",
+  "25-9984"
+ ],
+ "rows": 247,
+ "columns": [
+  "OBJECTID",
+  "WRNUM",
+  "CHEXNUM",
+  "SUMMARY_ST",
+  "STATUS",
+  "TYPE_OF_RIGHT",
+  "TYPE",
+  "PRIORITY",
+  "USES",
+  "CFS",
+  "ACFT",
+  "LOCATION",
+  "WIN",
+  "OWNER",
+  "SOURCE",
+  "WebLink",
+  "NodeId",
+  "longitude",
+  "latitude",
+  "in_study_area",
+  "named_in_benchmark"
+ ],
+ "data_file": "points_of_diversion.csv",
+ "sha256": "182cef4999fbdd991b6ea21789779e8ae4e508f12b5afaaf2f8d70ae9bf35b6b",
+ "written_by": "scripts/extract_water_rights.py"
+}

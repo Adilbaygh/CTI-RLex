@@ -22,15 +22,15 @@
   "fully_redundant": "redundant for the full objective hierarchy"
  },
  "base_repeats": 5,
- "base_median_runtime_seconds": 0.143454599994584,
- "base_min_runtime_seconds": 0.13916430000244873,
- "base_max_runtime_seconds": 0.14558100000431295,
+ "base_median_runtime_seconds": 0.14375759998802096,
+ "base_min_runtime_seconds": 0.14301309996517375,
+ "base_max_runtime_seconds": 0.14600300003075972,
  "base_runtime_seconds_repeats": [
-  0.14477199999964796,
-  0.143454599994584,
-  0.14558100000431295,
-  0.14183419999608304,
-  0.13916430000244873
+  0.14375759998802096,
+  0.14600300003075972,
+  0.14479720004601404,
+  0.14314659999217838,
+  0.14301309996517375
  ],
  "rows": [
   {
@@ -60,15 +60,15 @@
    "reading": "minimum guarantee falls",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.13166970000020228,
-   "min_runtime_seconds": 0.12972499999887077,
-   "max_runtime_seconds": 0.13245420000021113,
+   "median_runtime_seconds": 0.13397289998829365,
+   "min_runtime_seconds": 0.13147189997835085,
+   "max_runtime_seconds": 0.13570240000262856,
    "runtime_seconds_repeats": [
-    0.13002240000059828,
-    0.13166970000020228,
-    0.12972499999887077,
-    0.13179060000402387,
-    0.13245420000021113
+    0.13415810000151396,
+    0.13570240000262856,
+    0.13397289998829365,
+    0.1317653000005521,
+    0.13147189997835085
    ]
   },
   {
@@ -98,15 +98,15 @@
    "reading": "minimum guarantee falls",
    "max_lp_residual": 9.094947017729282e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1489402000006521,
-   "min_runtime_seconds": 0.14861720000044443,
-   "max_runtime_seconds": 0.1526296000010916,
+   "median_runtime_seconds": 0.15293949999613687,
+   "min_runtime_seconds": 0.15094769996358082,
+   "max_runtime_seconds": 0.15734080004040152,
    "runtime_seconds_repeats": [
-    0.1526296000010916,
-    0.1488284000006388,
-    0.14929380000103265,
-    0.1489402000006521,
-    0.14861720000044443
+    0.1529840999864973,
+    0.15236970002297312,
+    0.15094769996358082,
+    0.15734080004040152,
+    0.15293949999613687
    ]
   },
   {
@@ -141,15 +141,15 @@
    "reading": "structural disconnection",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.12552860000141663,
-   "min_runtime_seconds": 0.1233762999981991,
-   "max_runtime_seconds": 0.13121610000234796,
+   "median_runtime_seconds": 0.12618809996638447,
+   "min_runtime_seconds": 0.1252231999533251,
+   "max_runtime_seconds": 0.12844220001716167,
    "runtime_seconds_repeats": [
-    0.13121610000234796,
-    0.12552860000141663,
-    0.1233762999981991,
-    0.12421069999982137,
-    0.12852269999712007
+    0.1252231999533251,
+    0.12606249999953434,
+    0.12685920001240447,
+    0.12618809996638447,
+    0.12844220001716167
    ]
   },
   {
@@ -179,15 +179,15 @@
    "reading": "redundant for the full objective hierarchy",
    "max_lp_residual": 2.2737367544323206e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1358053000003565,
-   "min_runtime_seconds": 0.13319819999742322,
-   "max_runtime_seconds": 0.17071600000053877,
+   "median_runtime_seconds": 0.14458290004404262,
+   "min_runtime_seconds": 0.1387520999996923,
+   "max_runtime_seconds": 0.16012030001729727,
    "runtime_seconds_repeats": [
-    0.1358053000003565,
-    0.13319819999742322,
-    0.13349819999712054,
-    0.17071600000053877,
-    0.14092230000096606
+    0.14679799997247756,
+    0.14458290004404262,
+    0.1387520999996923,
+    0.16012030001729727,
+    0.13962229999015108
    ]
   }
  ]

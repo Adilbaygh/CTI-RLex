@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from types import MappingProxyType
-from typing import Mapping
+from typing import Mapping, Sequence
 
 from .domain import CTIBenchmark
 from .lp import (
@@ -183,56 +183,82 @@ def _extract_solution(
     )
 
 
+def _claimant_tiers(
+    model: CTIBenchmark, tiers: Sequence[Sequence[str]] | None
+) -> list[list[str]]:
+    if tiers is None:
+        return [list(model.claimants)]
+    order = [list(tier) for tier in tiers]
+    listed = [claimant for tier in order for claimant in tier]
+    if any(not tier for tier in order):
+        raise ValueError("Every claimant tier must name at least one claimant.")
+    if len(set(listed)) != len(listed) or set(listed) != set(model.claimants):
+        raise ValueError("The claimant tiers must name every claimant exactly once.")
+    return order
+
+
 def solve_cti_rlex(
     model: CTIBenchmark,
     *,
     blocking_tolerance: float = 1e-7,
     preservation_tolerance: float = 1e-7,
+    tiers: Sequence[Sequence[str]] | None = None,
 ) -> CTIRLexSolution:
-    """Solve the complete CTI-RLex vector and deterministic secondary stages."""
+    """Solve the complete CTI-RLex vector and deterministic secondary stages.
 
-    active = list(model.claimants)
+    ``tiers`` subordinates the max-min filling to an order of claimant tiers, the priority
+    comparator PRIOR-LEX of the revision: the claimants of the first tier are filled to
+    completion while the claimants of every later tier carry no floor, their guarantees are
+    fixed, and only then is the next tier filled. The default, one tier holding every
+    claimant, is CTI-RLex itself and runs the same sequence of programs as before the keyword
+    existed. The secondary stages are unchanged in either case.
+    """
+
     fixed: dict[str, float] = {}
     levels: list[LeximinLevel] = []
 
-    while active:
-        theta_problem = build_lp(
-            model,
-            {("theta",): 1.0},
-            maximize=True,
-            fixed_rho=fixed,
-            theta_active=active,
-        )
-        theta_result = run_lp(theta_problem)
-        theta_star = value(theta_problem, theta_result, ("theta",))
-
-        maxima: dict[str, float] = {}
-        floors = {claimant: theta_star for claimant in active}
-        for claimant in active:
-            test_problem = build_lp(
+    for tier in _claimant_tiers(model, tiers):
+        active = tier
+        while active:
+            theta_problem = build_lp(
                 model,
-                {("rho", claimant): 1.0},
+                {("theta",): 1.0},
                 maximize=True,
                 fixed_rho=fixed,
-                rho_floors=floors,
+                theta_active=active,
             )
-            test_result = run_lp(test_problem)
-            maxima[claimant] = value(test_problem, test_result, ("rho", claimant))
+            theta_result = run_lp(theta_problem)
+            theta_star = value(theta_problem, theta_result, ("theta",))
 
-        blocked = tuple(
-            claimant
-            for claimant in active
-            if maxima[claimant] <= theta_star + blocking_tolerance
-        )
-        if not blocked:
-            details = ", ".join(f"{claimant}={maximum:.12g}" for claimant, maximum in maxima.items())
-            raise OptimizationError(
-                f"Progressive filling found no blocked claimant at theta={theta_star:.12g}; {details}"
+            maxima: dict[str, float] = {}
+            floors = {claimant: theta_star for claimant in active}
+            for claimant in active:
+                test_problem = build_lp(
+                    model,
+                    {("rho", claimant): 1.0},
+                    maximize=True,
+                    fixed_rho=fixed,
+                    rho_floors=floors,
+                )
+                test_result = run_lp(test_problem)
+                maxima[claimant] = value(test_problem, test_result, ("rho", claimant))
+
+            blocked = tuple(
+                claimant
+                for claimant in active
+                if maxima[claimant] <= theta_star + blocking_tolerance
             )
-        for claimant in blocked:
-            fixed[claimant] = theta_star
-        levels.append(LeximinLevel(theta_star, blocked))
-        active = [claimant for claimant in active if claimant not in blocked]
+            if not blocked:
+                details = ", ".join(
+                    f"{claimant}={maximum:.12g}" for claimant, maximum in maxima.items()
+                )
+                raise OptimizationError(
+                    f"Progressive filling found no blocked claimant at theta={theta_star:.12g}; {details}"
+                )
+            for claimant in blocked:
+                fixed[claimant] = theta_star
+            levels.append(LeximinLevel(theta_star, blocked))
+            active = [claimant for claimant in active if claimant not in blocked]
 
     nominal_objective = _nominal_delivery_objective(model)
     nominal_problem = build_lp(model, nominal_objective, maximize=True, fixed_rho=fixed)

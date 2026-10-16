@@ -1,61 +1,73 @@
 {
- "benchmark_id": "cache_valley_2025_multiclaimant_v3",
- "components": 7,
- "largest_component_claimants": 2,
+ "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+ "components": 9,
+ "largest_component_claimants": 4,
  "components_where_the_rules_differ": [
   "C1",
   "C2",
-  "C5"
+  "C3"
  ],
  "global_sorted_rho": [
   0.056393646245954054,
+  0.06891004645765059,
   0.13744468899532894,
+  0.16175481888078302,
   0.307273771107821,
   0.307273771107821,
-  0.36529559348158364,
-  0.36529559348158364,
-  0.6740982692651426,
-  0.6740982692651426,
+  0.41517271423097657,
+  0.41517271423097657,
+  0.41517271423097657,
+  0.6068879257297796,
+  0.6068879257297796,
+  0.6068879257297796,
+  0.6068879257297796,
   0.8821454660844299,
   1.0
  ],
  "merged_sorted_rho": [
   0.05639364624595406,
+  0.06891004645765057,
   0.13744468899532894,
+  0.16175481888078302,
   0.307273771107821,
   0.307273771107821,
-  0.3652955934815835,
-  0.3652955934815835,
-  0.6740982692651426,
-  0.6740982692651426,
+  0.41517271423097657,
+  0.41517271423097657,
+  0.41517271423097657,
+  0.6068879257297795,
+  0.6068879257297795,
+  0.6068879257297795,
+  0.6068879257297795,
   0.8821454660844299,
   1.0
  ],
  "the_guarantee_vector_decomposes_by_component": true,
  "the_delivery_decomposes_by_component": false,
  "the_recourse_budget_is_the_only_coupling": "components share no reach, no source and no group envelope, but the recourse budget sums control deviations over the whole instance and the contingency plans deviate from one common first-stage plan",
- "total_delivery_cost_af": 207.23966285233848,
+ "total_delivery_cost_af": 231.37952495938544,
  "total_delivery_cost_alone_af": 0.0,
  "global_repeats": 5,
- "global_median_runtime_seconds": 2.1251516999982414,
- "global_min_runtime_seconds": 2.030548100003216,
- "global_max_runtime_seconds": 2.1662544999999227,
+ "global_median_runtime_seconds": 5.74822559999302,
+ "global_min_runtime_seconds": 5.6242363000055775,
+ "global_max_runtime_seconds": 7.214594300021417,
  "global_runtime_seconds_repeats": [
-  2.1251516999982414,
-  2.1662544999999227,
-  2.152028299999074,
-  2.030548100003216,
-  2.052819600001385
+  5.8091871999786235,
+  5.6242363000055775,
+  7.214594300021417,
+  5.731421100033913,
+  5.74822559999302
  ],
  "rows": [
   {
    "component": "C1",
    "claimants": [
     "Hyrum Irrigation Co.",
+    "Wellsville-Mendon Conservancy District",
     "Wellsville East Field Irrigation And Canal Co."
    ],
    "claimant_ids": [
     "company_088",
+    "company_162",
     "company_164"
    ],
    "sources": [
@@ -64,37 +76,40 @@
     "s_9548"
    ],
    "shared_groups": [
-    "subsystem_03"
+    "subsystem_02"
    ],
    "cti_rlex": {
-    "company_088": 0.36529559348158364,
-    "company_164": 0.36529559348158364
+    "company_088": 0.41517271423097657,
+    "company_162": 0.41517271423097657,
+    "company_164": 0.41517271423097657
    },
    "prop_br": {
-    "company_088": 0.18922062253219465,
-    "company_164": 0.42498398489012895
+    "company_088": 0.056393646245954054,
+    "company_162": 0.7896806289074826,
+    "company_164": 0.05639364624595398
    },
    "solved_alone": {
-    "company_088": 0.3652955934815835,
-    "company_164": 0.3652955934815835
+    "company_088": 0.41517271423097657,
+    "company_162": 0.41517271423097657,
+    "company_164": 0.41517271423097657
    },
-   "cti_rlex_nominal_delivery_af": 4230.877161350484,
-   "prop_br_nominal_delivery_af": 4291.180044523513,
-   "cti_rlex_nominal_delivery_alone_af": 4374.492567415792,
-   "prop_br_nominal_delivery_alone_af": 4374.492567415792,
-   "max_lp_residual": 6.821210263296962e-13,
+   "cti_rlex_nominal_delivery_af": 9310.273077447448,
+   "prop_br_nominal_delivery_af": 8368.086023434294,
+   "cti_rlex_nominal_delivery_alone_af": 10687.00029982745,
+   "prop_br_nominal_delivery_alone_af": 10687.00029982745,
+   "max_lp_residual": 4.547473508864641e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.19562419999419944,
-   "min_runtime_seconds": 0.19538469999679364,
-   "max_runtime_seconds": 0.21716220000234898,
+   "median_runtime_seconds": 0.3272149999975227,
+   "min_runtime_seconds": 0.3246198000269942,
+   "max_runtime_seconds": 0.3560587000101805,
    "runtime_seconds_repeats": [
-    0.19562419999419944,
-    0.19538469999679364,
-    0.21716220000234898,
-    0.19545749999815598,
-    0.19921579999936512
+    0.3246198000269942,
+    0.33735950000118464,
+    0.3272149999975227,
+    0.32692879997193813,
+    0.3560587000101805
    ],
-   "delivery_cost_af": 60.30288317302893,
+   "delivery_cost_af": -942.1870540131531,
    "delivery_cost_alone_af": 0.0,
    "rules_agree_within_the_component": false,
    "solving_alone_reproduces_the_global_guarantee": true
@@ -114,7 +129,7 @@
     "s_15286"
    ],
    "shared_groups": [
-    "subsystem_02"
+    "subsystem_03"
    ],
    "cti_rlex": {
     "company_130": 0.307273771107821,
@@ -128,29 +143,88 @@
     "company_130": 0.307273771107821,
     "company_132": 0.307273771107821
    },
-   "cti_rlex_nominal_delivery_af": 3449.208311769129,
-   "prop_br_nominal_delivery_af": 3436.2071568304978,
-   "cti_rlex_nominal_delivery_alone_af": 3589.166190793733,
-   "prop_br_nominal_delivery_alone_af": 3589.166190793733,
+   "cti_rlex_nominal_delivery_af": 3589.1661907937337,
+   "prop_br_nominal_delivery_af": 3615.5921387683106,
+   "cti_rlex_nominal_delivery_alone_af": 3589.1661907937337,
+   "prop_br_nominal_delivery_alone_af": 3589.1661907937337,
    "max_lp_residual": 4.547473508864641e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1911273000005167,
-   "min_runtime_seconds": 0.18986469999799738,
-   "max_runtime_seconds": 0.1933149999968009,
+   "median_runtime_seconds": 0.2710784000228159,
+   "min_runtime_seconds": 0.26778630004264414,
+   "max_runtime_seconds": 0.2717384000425227,
    "runtime_seconds_repeats": [
-    0.18986469999799738,
-    0.19083069999760482,
-    0.1911273000005167,
-    0.1933149999968009,
-    0.19151550000242423
+    0.2710784000228159,
+    0.2717384000425227,
+    0.27109809999819845,
+    0.26778630004264414,
+    0.26908739999635145
    ],
-   "delivery_cost_af": -13.001154938631316,
+   "delivery_cost_af": 26.425947974576957,
    "delivery_cost_alone_af": 0.0,
    "rules_agree_within_the_component": false,
    "solving_alone_reproduces_the_global_guarantee": true
   },
   {
    "component": "C3",
+   "claimants": [
+    "Logan Island Irrigation Co.",
+    "Logan Southwest Field Irrigation Co.",
+    "Logan North Field Irrigation Co.",
+    "Logan Northwest Field Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_103",
+    "company_10390",
+    "company_104",
+    "company_105"
+   ],
+   "sources": [
+    "s_10422"
+   ],
+   "shared_groups": [
+    "subsystem_01"
+   ],
+   "cti_rlex": {
+    "company_103": 0.6068879257297796,
+    "company_10390": 0.6068879257297796,
+    "company_104": 0.6068879257297796,
+    "company_105": 0.6068879257297796
+   },
+   "prop_br": {
+    "company_103": 1.0,
+    "company_10390": 1.0,
+    "company_104": 0.9999999999999999,
+    "company_105": 0.2949369973288018
+   },
+   "solved_alone": {
+    "company_103": 0.6068879257297795,
+    "company_10390": 0.6068879257297795,
+    "company_104": 0.6068879257297795,
+    "company_105": 0.6068879257297795
+   },
+   "cti_rlex_nominal_delivery_af": 2404.6549398143393,
+   "prop_br_nominal_delivery_af": 2407.201451299122,
+   "cti_rlex_nominal_delivery_alone_af": 2860.526522284856,
+   "prop_br_nominal_delivery_alone_af": 2860.526522284856,
+   "max_lp_residual": 3.3651303965598345e-11,
+   "repeats": 5,
+   "median_runtime_seconds": 0.39048110001021996,
+   "min_runtime_seconds": 0.3727845000103116,
+   "max_runtime_seconds": 0.4212847000453621,
+   "runtime_seconds_repeats": [
+    0.38170639995951205,
+    0.40493369998876005,
+    0.3727845000103116,
+    0.39048110001021996,
+    0.4212847000453621
+   ],
+   "delivery_cost_af": 2.5465114847825134,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": false,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C4",
    "claimants": [
     "Logan, Hyde Park, Smithfield Canal Co."
    ],
@@ -161,7 +235,7 @@
     "s_9154"
    ],
    "shared_groups": [
-    "subsystem_07"
+    "subsystem_09"
    ],
    "cti_rlex": {
     "company_1249": 0.8821454660844299
@@ -174,19 +248,19 @@
    },
    "cti_rlex_nominal_delivery_af": 1639.2969510493867,
    "prop_br_nominal_delivery_af": 1639.2969510493867,
-   "cti_rlex_nominal_delivery_alone_af": 1695.2385860000002,
-   "prop_br_nominal_delivery_alone_af": 1695.2385860000002,
+   "cti_rlex_nominal_delivery_alone_af": 1695.238586,
+   "prop_br_nominal_delivery_alone_af": 1695.238586,
    "max_lp_residual": 1.1368683772161603e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.1564940000025672,
-   "min_runtime_seconds": 0.14974480000091717,
-   "max_runtime_seconds": 0.17561019999993732,
+   "median_runtime_seconds": 0.2186622000299394,
+   "min_runtime_seconds": 0.21499010000843555,
+   "max_runtime_seconds": 0.23995439999271184,
    "runtime_seconds_repeats": [
-    0.14974480000091717,
-    0.150906800001394,
-    0.17323570000007749,
-    0.1564940000025672,
-    0.17561019999993732
+    0.23601430002599955,
+    0.23995439999271184,
+    0.2186622000299394,
+    0.21499010000843555,
+    0.21556909999344498
    ],
    "delivery_cost_af": 0.0,
    "delivery_cost_alone_af": 0.0,
@@ -194,7 +268,51 @@
    "solving_alone_reproduces_the_global_guarantee": true
   },
   {
-   "component": "C4",
+   "component": "C5",
+   "claimants": [
+    "Logan & Northern Irrigation Co."
+   ],
+   "claimant_ids": [
+    "company_109"
+   ],
+   "sources": [
+    "s_10451"
+   ],
+   "shared_groups": [
+    "subsystem_07"
+   ],
+   "cti_rlex": {
+    "company_109": 0.16175481888078302
+   },
+   "prop_br": {
+    "company_109": 0.16175481888078302
+   },
+   "solved_alone": {
+    "company_109": 0.16175481888078302
+   },
+   "cti_rlex_nominal_delivery_af": 1421.9805204652678,
+   "prop_br_nominal_delivery_af": 1421.9805204652678,
+   "cti_rlex_nominal_delivery_alone_af": 2180.7171040767844,
+   "prop_br_nominal_delivery_alone_af": 2180.7171040767844,
+   "max_lp_residual": 4.547473508864641e-13,
+   "repeats": 5,
+   "median_runtime_seconds": 0.21966689999680966,
+   "min_runtime_seconds": 0.21567479998338968,
+   "max_runtime_seconds": 0.24987280002096668,
+   "runtime_seconds_repeats": [
+    0.21567479998338968,
+    0.21966689999680966,
+    0.2282615000149235,
+    0.24987280002096668,
+    0.2166416000109166
+   ],
+   "delivery_cost_af": 0.0,
+   "delivery_cost_alone_af": 0.0,
+   "rules_agree_within_the_component": true,
+   "solving_alone_reproduces_the_global_guarantee": true
+  },
+  {
+   "component": "C6",
    "claimants": [
     "West Cache Irrigation Co."
    ],
@@ -205,7 +323,7 @@
     "s_6925"
    ],
    "shared_groups": [
-    "subsystem_06"
+    "subsystem_08"
    ],
    "cti_rlex": {
     "company_168": 0.056393646245954054
@@ -216,78 +334,73 @@
    "solved_alone": {
     "company_168": 0.05639364624595406
    },
-   "cti_rlex_nominal_delivery_af": 4219.653125017932,
-   "prop_br_nominal_delivery_af": 4377.576799184319,
+   "cti_rlex_nominal_delivery_af": 1829.5287365424276,
+   "prop_br_nominal_delivery_af": 1829.5287365424276,
    "cti_rlex_nominal_delivery_alone_af": 4377.583418028222,
    "prop_br_nominal_delivery_alone_af": 4377.583418028222,
    "max_lp_residual": 0.0,
    "repeats": 5,
-   "median_runtime_seconds": 0.154425300002913,
-   "min_runtime_seconds": 0.1528630999964662,
-   "max_runtime_seconds": 0.15579620000062278,
+   "median_runtime_seconds": 0.21807609999086708,
+   "min_runtime_seconds": 0.21509210002841428,
+   "max_runtime_seconds": 0.2306323999655433,
    "runtime_seconds_repeats": [
-    0.154425300002913,
-    0.15579620000062278,
-    0.1528630999964662,
-    0.15309549999801675,
-    0.1556672000006074
+    0.21509210002841428,
+    0.2197619000216946,
+    0.2306323999655433,
+    0.21807609999086708,
+    0.21516750002047047
    ],
-   "delivery_cost_af": 157.92367416638626,
+   "delivery_cost_af": 0.0,
    "delivery_cost_alone_af": 0.0,
    "rules_agree_within_the_component": true,
    "solving_alone_reproduces_the_global_guarantee": true
   },
   {
-   "component": "C5",
+   "component": "C7",
    "claimants": [
-    "Logan Southwest Field Irrigation Co.",
-    "Logan Northwest Field Irrigation Co."
+    "Cub River Irrigation Co."
    ],
    "claimant_ids": [
-    "company_10390",
-    "company_105"
+    "company_072"
    ],
    "sources": [
-    "s_10422"
+    "s_10406"
    ],
    "shared_groups": [
-    "subsystem_01"
+    "subsystem_04"
    ],
    "cti_rlex": {
-    "company_10390": 0.6740982692651426,
-    "company_105": 0.6740982692651426
+    "company_072": 0.06891004645765059
    },
    "prop_br": {
-    "company_10390": 1.0,
-    "company_105": 0.4804998677786354
+    "company_072": 0.06891004645765057
    },
    "solved_alone": {
-    "company_10390": 0.6740982692651426,
-    "company_105": 0.6740982692651426
+    "company_072": 0.06891004645765057
    },
-   "cti_rlex_nominal_delivery_af": 2297.4287529951143,
-   "prop_br_nominal_delivery_af": 2299.442994369278,
-   "cti_rlex_nominal_delivery_alone_af": 2423.9078275812344,
-   "prop_br_nominal_delivery_alone_af": 2423.9078275812344,
-   "max_lp_residual": 2.2737367544323206e-13,
+   "cti_rlex_nominal_delivery_af": 4403.6977266164795,
+   "prop_br_nominal_delivery_af": 5548.291846129659,
+   "cti_rlex_nominal_delivery_alone_af": 5548.291846129659,
+   "prop_br_nominal_delivery_alone_af": 5548.291846129659,
+   "max_lp_residual": 9.094947017729282e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.19441009999718517,
-   "min_runtime_seconds": 0.19188530000246828,
-   "max_runtime_seconds": 0.2562629999956698,
+   "median_runtime_seconds": 0.2160200999933295,
+   "min_runtime_seconds": 0.21544680005172268,
+   "max_runtime_seconds": 0.24522470001829788,
    "runtime_seconds_repeats": [
-    0.20406760000332724,
-    0.2562629999956698,
-    0.19441009999718517,
-    0.19359740000072634,
-    0.19188530000246828
+    0.24522470001829788,
+    0.2155170000041835,
+    0.21544680005172268,
+    0.2160200999933295,
+    0.2201329999952577
    ],
-   "delivery_cost_af": 2.014241374163703,
+   "delivery_cost_af": 1144.594119513179,
    "delivery_cost_alone_af": 0.0,
-   "rules_agree_within_the_component": false,
+   "rules_agree_within_the_component": true,
    "solving_alone_reproduces_the_global_guarantee": true
   },
   {
-   "component": "C6",
+   "component": "C8",
    "claimants": [
     "Providence Logan Irrigation Co."
    ],
@@ -298,7 +411,7 @@
     "s_10450"
    ],
    "shared_groups": [
-    "subsystem_05"
+    "subsystem_06"
    ],
    "cti_rlex": {
     "company_136": 1.0
@@ -315,15 +428,15 @@
    "prop_br_nominal_delivery_alone_af": 76.98828,
    "max_lp_residual": 0.0,
    "repeats": 5,
-   "median_runtime_seconds": 0.15187110000260873,
-   "min_runtime_seconds": 0.14878909999970347,
-   "max_runtime_seconds": 0.1527425000022049,
+   "median_runtime_seconds": 0.21976559999166057,
+   "min_runtime_seconds": 0.21674120001262054,
+   "max_runtime_seconds": 0.22087769996142015,
    "runtime_seconds_repeats": [
-    0.1527425000022049,
-    0.15236100000038277,
-    0.14878909999970347,
-    0.14942890000384068,
-    0.15187110000260873
+    0.21674120001262054,
+    0.21976559999166057,
+    0.22087769996142015,
+    0.21977199998218566,
+    0.21911850001197308
    ],
    "delivery_cost_af": 0.0,
    "delivery_cost_alone_af": 0.0,
@@ -331,7 +444,7 @@
    "solving_alone_reproduces_the_global_guarantee": true
   },
   {
-   "component": "C7",
+   "component": "C9",
    "claimants": [
     "Logan River Blacksmith Fork Irrigation Co."
    ],
@@ -342,7 +455,7 @@
     "s_10424"
    ],
    "shared_groups": [
-    "subsystem_04"
+    "subsystem_05"
    ],
    "cti_rlex": {
     "company_106": 0.13744468899532894
@@ -353,23 +466,23 @@
    "solved_alone": {
     "company_106": 0.13744468899532894
    },
-   "cti_rlex_nominal_delivery_af": 932.9259670465344,
-   "prop_br_nominal_delivery_af": 932.9259861239253,
+   "cti_rlex_nominal_delivery_af": 932.9244162544003,
+   "prop_br_nominal_delivery_af": 932.9244162544003,
    "cti_rlex_nominal_delivery_alone_af": 1537.2766944778573,
    "prop_br_nominal_delivery_alone_af": 1537.2766944778573,
    "max_lp_residual": 1.1368683772161603e-13,
    "repeats": 5,
-   "median_runtime_seconds": 0.15863350000290666,
-   "min_runtime_seconds": 0.15180169999803184,
-   "max_runtime_seconds": 0.17254769999999553,
+   "median_runtime_seconds": 0.2175769000314176,
+   "min_runtime_seconds": 0.2127489999984391,
+   "max_runtime_seconds": 0.25192220002645627,
    "runtime_seconds_repeats": [
-    0.17254769999999553,
-    0.15863350000290666,
-    0.1595182000019122,
-    0.1564243000029819,
-    0.15180169999803184
+    0.22814139997353777,
+    0.2127489999984391,
+    0.25192220002645627,
+    0.2175769000314176,
+    0.21395989996381104
    ],
-   "delivery_cost_af": 1.907739090256655e-05,
+   "delivery_cost_af": 0.0,
    "delivery_cost_alone_af": 0.0,
    "rules_agree_within_the_component": true,
    "solving_alone_reproduces_the_global_guarantee": true

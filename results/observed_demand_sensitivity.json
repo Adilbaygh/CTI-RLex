@@ -1,0 +1,1129 @@
+{
+ "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+ "reference": {
+  "methods": {
+   "UTIL-BR": {
+    "guarantees": {
+     "company_088": 0.4476976354639018,
+     "company_130": 0.7666131350861322,
+     "company_132": 0.10765060681622926
+    },
+    "sorted": [
+     0.10765060681622926,
+     0.4476976354639018,
+     0.7666131350861322
+    ],
+    "minimum_guarantee": 0.10765060681622926,
+    "levels": 1,
+    "nominal_beneficial_delivery_af": 6075.142729545574,
+    "weighted_contingency_beneficial_delivery_af": 6033.079277053271,
+    "normalized_recourse_effort": 1.2499990127408644,
+    "maximum_residual": 3.410605131648481e-13
+   },
+   "PROP-BR": {
+    "guarantees": {
+     "company_088": 0.4476976354639018,
+     "company_130": 0.41951076293707945,
+     "company_132": 0.4195107629370794
+    },
+    "sorted": [
+     0.4195107629370794,
+     0.41951076293707945,
+     0.4476976354639018
+    ],
+    "minimum_guarantee": 0.4195107629370794,
+    "levels": 1,
+    "nominal_beneficial_delivery_af": 5919.097890994498,
+    "weighted_contingency_beneficial_delivery_af": 5946.2404681882,
+    "normalized_recourse_effort": 1.2499990269515024,
+    "maximum_residual": 5.684341886080801e-13
+   },
+   "CTI-RLex rigid": {
+    "guarantees": {
+     "company_130": 0.3840922138847762,
+     "company_132": 0.3840922138847762,
+     "company_088": 0.4476976354639018
+    },
+    "sorted": [
+     0.3840922138847762,
+     0.3840922138847762,
+     0.4476976354639018
+    ],
+    "minimum_guarantee": 0.3840922138847762,
+    "levels": 2,
+    "nominal_beneficial_delivery_af": 4739.08565752826,
+    "weighted_contingency_beneficial_delivery_af": 4739.08565752826,
+    "normalized_recourse_effort": 0.0,
+    "maximum_residual": 9.094947017729282e-13
+   },
+   "CTI-RLex proposed": {
+    "guarantees": {
+     "company_130": 0.41951076293707945,
+     "company_132": 0.41951076293707945,
+     "company_088": 0.4476976354639018
+    },
+    "sorted": [
+     0.41951076293707945,
+     0.41951076293707945,
+     0.4476976354639018
+    ],
+    "minimum_guarantee": 0.41951076293707945,
+    "levels": 2,
+    "nominal_beneficial_delivery_af": 5919.097890994499,
+    "weighted_contingency_beneficial_delivery_af": 5946.240468188143,
+    "normalized_recourse_effort": 1.2499990269514052,
+    "maximum_residual": 3.410605131648481e-13
+   },
+   "CTI-RLex nominal only": {
+    "guarantees": {
+     "company_088": 1.0,
+     "company_130": 1.0,
+     "company_132": 1.0
+    },
+    "sorted": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "minimum_guarantee": 1.0,
+    "levels": 1,
+    "nominal_beneficial_delivery_af": 8645.091840000001,
+    "weighted_contingency_beneficial_delivery_af": 0.0,
+    "normalized_recourse_effort": 0,
+    "maximum_residual": 2.2737367544323206e-13
+   }
+  },
+  "indicators": {
+   "price_of_fairness_percent": 2.56857897004088,
+   "util_minimum_below_cti_rlex": true,
+   "value_of_recourse_absolute": 0.03541854905230324,
+   "value_of_recourse_percent": 9.22136606052848,
+   "robustness_cost_percent": 31.53227287178828,
+   "first_sorted_position_cti_rlex_and_prop_br_differ": null,
+   "cti_rlex_above_prop_br_there": null
+  }
+ },
+ "variants": {
+  "observed_2771+2772_2776_9739": {
+   "stations": {
+    "company_088": [
+     "2771",
+     "2772"
+    ],
+    "company_130": [
+     "2776"
+    ],
+    "company_132": [
+     "9739"
+    ]
+   },
+   "demand": {
+    "company_088": {
+     "claimant_name": "Hyrum Irrigation Co.",
+     "stations": [
+      "2771",
+      "2772"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "2771": {
+         "measured_af": 483.4670737272278,
+         "days_recorded": 19,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 11.561989728162645,
+         "days_recorded": 3,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 465.8508536735193,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 311.71594914080123,
+       "published_net_demand_af": 205.977272
+      },
+      "2025-06": {
+       "stations": {
+        "2771": {
+         "measured_af": 1257.872439552833,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 16.59393990309658,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1198.5512491097124,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 801.9896008862121,
+       "published_net_demand_af": 377.624999
+      },
+      "2025-07": {
+       "stations": {
+        "2771": {
+         "measured_af": 1411.97910879241,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 0.0,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1326.7633311669642,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 887.7804726526587,
+       "published_net_demand_af": 480.613635
+      },
+      "2025-08": {
+       "stations": {
+        "2771": {
+         "measured_af": 1365.8473949682545,
+         "days_recorded": 30,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 40.33725804569117,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1323.7530170533735,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 885.7661736259845,
+       "published_net_demand_af": 411.954544
+      },
+      "2025-09": {
+       "stations": {
+        "2771": {
+         "measured_af": 881.0948625017653,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 34.021140970479074,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 861.9401573125319,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 576.7521774845687,
+       "published_net_demand_af": 240.306818
+      }
+     },
+     "seasonal_net_demand_af": 3464.004373790225,
+     "published_seasonal_net_demand_af": 1716.477268,
+     "ratio_to_published": 2.0180892799276062
+    },
+    "company_130": {
+     "claimant_name": "Paradise Irrigation Co.",
+     "stations": [
+      "2776"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "2776": {
+         "measured_af": 920.1982280539379,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 880.2959523099164,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 667.5446488924904,
+       "published_net_demand_af": 296.286471
+      },
+      "2025-06": {
+       "stations": {
+        "2776": {
+         "measured_af": 1914.4088634162842,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 1831.3949344323241,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1388.7805405456477,
+       "published_net_demand_af": 543.191863
+      },
+      "2025-07": {
+       "stations": {
+        "2776": {
+         "measured_af": 2254.8389122344397,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 2157.0630186374633,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1635.7406524895368,
+       "published_net_demand_af": 691.335098
+      },
+      "2025-08": {
+       "stations": {
+        "2776": {
+         "measured_af": 2213.1952179311406,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 2117.225107177937,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1605.5308298178802,
+       "published_net_demand_af": 592.572941
+      },
+      "2025-09": {
+       "stations": {
+        "2776": {
+         "measured_af": 1021.7827421726678,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 977.4754880553882,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 741.237682353023,
+       "published_net_demand_af": 345.667549
+      }
+     },
+     "seasonal_net_demand_af": 6038.834354098578,
+     "published_seasonal_net_demand_af": 2469.053922,
+     "ratio_to_published": 2.4458090203258744
+    },
+    "company_132": {
+     "claimant_name": "Porcupine Highline Canal Co.",
+     "stations": [
+      "9739"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "9739": {
+         "measured_af": 23.02033922725498,
+         "days_recorded": 3,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 22.092817370171584,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 17.211328114849884,
+       "published_net_demand_af": 535.147278
+      },
+      "2025-06": {
+       "stations": {
+        "9739": {
+         "measured_af": 850.6082947588283,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 816.3360897571243,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 635.9636282411496,
+       "published_net_demand_af": 981.103343
+      },
+      "2025-07": {
+       "stations": {
+        "9739": {
+         "measured_af": 803.6639666739908,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 771.2832147014946,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 600.8653516335356,
+       "published_net_demand_af": 1248.676982
+      },
+      "2025-08": {
+       "stations": {
+        "9739": {
+         "measured_af": 839.3065453793789,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 805.4897037617344,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 627.5137911244487,
+       "published_net_demand_af": 1070.294556
+      },
+      "2025-09": {
+       "stations": {
+        "9739": {
+         "measured_af": 1.7948702877978984,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 1.7225524385200262,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 1.3419481416811576,
+       "published_net_demand_af": 624.338491
+      }
+     },
+     "seasonal_net_demand_af": 1882.896047255665,
+     "published_seasonal_net_demand_af": 4459.56065,
+     "ratio_to_published": 0.4222155936494921
+    }
+   },
+   "effort_coefficients": {
+    "source:s_10434": 0.00012557364394095798,
+    "source:s_15269": 0.00019316733866240829,
+    "source:s_15286": 9.633559735064474e-05,
+    "source:s_15957": 0.00019316733866240829,
+    "edge:e_3577": 0.0004137489815943189,
+    "edge:e_5854": 0.00012557364394095798,
+    "edge:e_10136": 0.00012557364394095798
+   },
+   "methods": {
+    "UTIL-BR": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.5077634396045543,
+      "company_132": 1.0564034275716653e-05
+     },
+     "sorted": [
+      1.0564034275716653e-05,
+      0.2423680116755566,
+      0.5077634396045543
+     ],
+     "minimum_guarantee": 1.0564034275716653e-05,
+     "levels": 1,
+     "nominal_beneficial_delivery_af": 6286.313629800237,
+     "weighted_contingency_beneficial_delivery_af": 5688.125470513496,
+     "normalized_recourse_effort": 1.249999212303922,
+     "maximum_residual": 9.094947017729282e-13
+    },
+    "PROP-BR": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.415895405568692,
+      "company_132": 0.2423680116755565
+     },
+     "sorted": [
+      0.2423680116755565,
+      0.2423680116755566,
+      0.415895405568692
+     ],
+     "minimum_guarantee": 0.2423680116755565,
+     "levels": 1,
+     "nominal_beneficial_delivery_af": 6271.89172390897,
+     "weighted_contingency_beneficial_delivery_af": 5673.703471373574,
+     "normalized_recourse_effort": 1.2499992143009364,
+     "maximum_residual": 2.7284841053187847e-12
+    },
+    "CTI-RLex rigid": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.3371118822307035,
+      "company_132": 0.3371118822307035
+     },
+     "sorted": [
+      0.2423680116755566,
+      0.3371118822307035,
+      0.3371118822307035
+     ],
+     "minimum_guarantee": 0.2423680116755566,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 4719.392948953136,
+     "weighted_contingency_beneficial_delivery_af": 4719.3929489531365,
+     "normalized_recourse_effort": 0.0,
+     "maximum_residual": 4.547473508864641e-13
+    },
+    "CTI-RLex proposed": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.3681982029247342,
+      "company_132": 0.3681982029247342
+     },
+     "sorted": [
+      0.2423680116755566,
+      0.3681982029247342,
+      0.3681982029247342
+     ],
+     "minimum_guarantee": 0.2423680116755566,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 6264.403977218544,
+     "weighted_contingency_beneficial_delivery_af": 5666.215676269024,
+     "normalized_recourse_effort": 1.2499992153379131,
+     "maximum_residual": 3.410605131648481e-13
+    },
+    "CTI-RLex nominal only": {
+     "guarantees": {
+      "company_130": 0.9544212246486651,
+      "company_088": 1.0,
+      "company_132": 1.0
+     },
+     "sorted": [
+      0.9544212246486651,
+      1.0,
+      1.0
+     ],
+     "minimum_guarantee": 0.9544212246486651,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 11266.834486350392,
+     "weighted_contingency_beneficial_delivery_af": 0.0,
+     "normalized_recourse_effort": 0,
+     "maximum_residual": 1.8189894035458565e-12
+    }
+   },
+   "indicators": {
+    "price_of_fairness_percent": 0.3485294223601998,
+    "util_minimum_below_cti_rlex": true,
+    "value_of_recourse_absolute": 0.0,
+    "value_of_recourse_percent": 0.0,
+    "robustness_cost_percent": 44.39960944835233,
+    "first_sorted_position_cti_rlex_and_prop_br_differ": 2,
+    "cti_rlex_above_prop_br_there": true
+   },
+   "with_published_effort_coefficients": {
+    "methods": {
+     "UTIL-BR": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.37146066997641314,
+       "company_132": 9.965731610861649e-06
+      },
+      "sorted": [
+       9.965731610861649e-06,
+       0.2423680116755566,
+       0.37146066997641314
+      ],
+      "minimum_guarantee": 9.965731610861649e-06,
+      "levels": 1,
+      "nominal_beneficial_delivery_af": 5930.283156205174,
+      "weighted_contingency_beneficial_delivery_af": 5888.215788911906,
+      "normalized_recourse_effort": 1.2499990364467863,
+      "maximum_residual": 2.2737367544323206e-13
+     },
+     "PROP-BR": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.3010571546190312,
+       "company_132": 0.24236801167555658
+      },
+      "sorted": [
+       0.24236801167555658,
+       0.2423680116755566,
+       0.3010571546190312
+      ],
+      "minimum_guarantee": 0.24236801167555658,
+      "levels": 1,
+      "nominal_beneficial_delivery_af": 5915.861214710854,
+      "weighted_contingency_beneficial_delivery_af": 5846.945745657087,
+      "normalized_recourse_effort": 1.2499986243631296,
+      "maximum_residual": 4.547473508864641e-13
+     },
+     "CTI-RLex rigid": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.3371118822307035,
+       "company_132": 0.3371118822307035
+      },
+      "sorted": [
+       0.2423680116755566,
+       0.3371118822307035,
+       0.3371118822307035
+      ],
+      "minimum_guarantee": 0.2423680116755566,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 4719.392948953136,
+      "weighted_contingency_beneficial_delivery_af": 4719.3929489531365,
+      "normalized_recourse_effort": 0.0,
+      "maximum_residual": 4.547473508864641e-13
+     },
+     "CTI-RLex proposed": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.3681982029247342,
+       "company_132": 0.3681982029247342
+      },
+      "sorted": [
+       0.2423680116755566,
+       0.3681982029247342,
+       0.3681982029247342
+      ],
+      "minimum_guarantee": 0.2423680116755566,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 5885.348181528027,
+      "weighted_contingency_beneficial_delivery_af": 5875.590144228262,
+      "normalized_recourse_effort": 1.2499986176241176,
+      "maximum_residual": 4.547473508864641e-13
+     },
+     "CTI-RLex nominal only": {
+      "guarantees": {
+       "company_130": 0.9544212246486651,
+       "company_088": 1.0,
+       "company_132": 1.0
+      },
+      "sorted": [
+       0.9544212246486651,
+       1.0,
+       1.0
+      ],
+      "minimum_guarantee": 0.9544212246486651,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 11266.834486350392,
+      "weighted_contingency_beneficial_delivery_af": 0.0,
+      "normalized_recourse_effort": 0,
+      "maximum_residual": 1.8189894035458565e-12
+     }
+    },
+    "indicators": {
+     "price_of_fairness_percent": 0.757720558926922,
+     "util_minimum_below_cti_rlex": true,
+     "value_of_recourse_absolute": 0.0,
+     "value_of_recourse_percent": 0.0,
+     "robustness_cost_percent": 47.76395988901725,
+     "first_sorted_position_cti_rlex_and_prop_br_differ": 2,
+     "cti_rlex_above_prop_br_there": true
+    },
+    "largest_change_in_any_sorted_guarantee": {
+     "UTIL-BR": 0.13630276962814114,
+     "PROP-BR": 0.11483825094966077,
+     "CTI-RLex rigid": 0.0,
+     "CTI-RLex proposed": 0.0,
+     "CTI-RLex nominal only": 0.0
+    }
+   }
+  },
+  "observed_2771+2772_9738_9739": {
+   "stations": {
+    "company_088": [
+     "2771",
+     "2772"
+    ],
+    "company_130": [
+     "9738"
+    ],
+    "company_132": [
+     "9739"
+    ]
+   },
+   "demand": {
+    "company_088": {
+     "claimant_name": "Hyrum Irrigation Co.",
+     "stations": [
+      "2771",
+      "2772"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "2771": {
+         "measured_af": 483.4670737272278,
+         "days_recorded": 19,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 11.561989728162645,
+         "days_recorded": 3,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 465.8508536735193,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 311.71594914080123,
+       "published_net_demand_af": 205.977272
+      },
+      "2025-06": {
+       "stations": {
+        "2771": {
+         "measured_af": 1257.872439552833,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 16.59393990309658,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1198.5512491097124,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 801.9896008862121,
+       "published_net_demand_af": 377.624999
+      },
+      "2025-07": {
+       "stations": {
+        "2771": {
+         "measured_af": 1411.97910879241,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 0.0,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1326.7633311669642,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 887.7804726526587,
+       "published_net_demand_af": 480.613635
+      },
+      "2025-08": {
+       "stations": {
+        "2771": {
+         "measured_af": 1365.8473949682545,
+         "days_recorded": 30,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 40.33725804569117,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 1323.7530170533735,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 885.7661736259845,
+       "published_net_demand_af": 411.954544
+      },
+      "2025-09": {
+       "stations": {
+        "2771": {
+         "measured_af": 881.0948625017653,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.939647989765
+        },
+        "2772": {
+         "measured_af": 34.021140970479074,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 1.0
+        }
+       },
+       "gross_at_place_of_use_af": 861.9401573125319,
+       "application_efficiency": 0.669132506,
+       "net_demand_af": 576.7521774845687,
+       "published_net_demand_af": 240.306818
+      }
+     },
+     "seasonal_net_demand_af": 3464.004373790225,
+     "published_seasonal_net_demand_af": 1716.477268,
+     "ratio_to_published": 2.0180892799276062
+    },
+    "company_130": {
+     "claimant_name": "Paradise Irrigation Co.",
+     "stations": [
+      "9738"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "9738": {
+         "measured_af": 1169.708499134777,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 1118.986785432601,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 848.5483079149308,
+       "published_net_demand_af": 296.286471
+      },
+      "2025-06": {
+       "stations": {
+        "9738": {
+         "measured_af": 1654.8983953850777,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 1583.137539856541,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1200.5223816137623,
+       "published_net_demand_af": 543.191863
+      },
+      "2025-07": {
+       "stations": {
+        "9738": {
+         "measured_af": 2309.178568188714,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 2209.0463606263124,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1675.1605790325907,
+       "published_net_demand_af": 691.335098
+      },
+      "2025-08": {
+       "stations": {
+        "9738": {
+         "measured_af": 1745.98072034519,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 1670.2702896760327,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 1266.5967520941258,
+       "published_net_demand_af": 592.572941
+      },
+      "2025-09": {
+       "stations": {
+        "9738": {
+         "measured_af": 832.7801313048991,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.956637304303
+        }
+       },
+       "gross_at_place_of_use_af": 796.668539888617,
+       "application_efficiency": 0.758318435,
+       "net_demand_af": 604.1284403820711,
+       "published_net_demand_af": 345.667549
+      }
+     },
+     "seasonal_net_demand_af": 5594.956461037481,
+     "published_seasonal_net_demand_af": 2469.053922,
+     "ratio_to_published": 2.266032511961268
+    },
+    "company_132": {
+     "claimant_name": "Porcupine Highline Canal Co.",
+     "stations": [
+      "9739"
+     ],
+     "periods": {
+      "2025-05": {
+       "stations": {
+        "9739": {
+         "measured_af": 23.02033922725498,
+         "days_recorded": 3,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 22.092817370171584,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 17.211328114849884,
+       "published_net_demand_af": 535.147278
+      },
+      "2025-06": {
+       "stations": {
+        "9739": {
+         "measured_af": 850.6082947588283,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 816.3360897571243,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 635.9636282411496,
+       "published_net_demand_af": 981.103343
+      },
+      "2025-07": {
+       "stations": {
+        "9739": {
+         "measured_af": 803.6639666739908,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 771.2832147014946,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 600.8653516335356,
+       "published_net_demand_af": 1248.676982
+      },
+      "2025-08": {
+       "stations": {
+        "9739": {
+         "measured_af": 839.3065453793789,
+         "days_recorded": 31,
+         "days": 31,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 805.4897037617344,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 627.5137911244487,
+       "published_net_demand_af": 1070.294556
+      },
+      "2025-09": {
+       "stations": {
+        "9739": {
+         "measured_af": 1.7948702877978984,
+         "days_recorded": 30,
+         "days": 30,
+         "efficiency_to_place_of_use": 0.959708593
+        }
+       },
+       "gross_at_place_of_use_af": 1.7225524385200262,
+       "application_efficiency": 0.779046322,
+       "net_demand_af": 1.3419481416811576,
+       "published_net_demand_af": 624.338491
+      }
+     },
+     "seasonal_net_demand_af": 1882.896047255665,
+     "published_seasonal_net_demand_af": 4459.56065,
+     "ratio_to_published": 0.4222155936494921
+    }
+   },
+   "effort_coefficients": {
+    "source:s_10434": 0.00013553607436998428,
+    "source:s_15269": 0.00019316733866240829,
+    "source:s_15286": 0.00010209255127362729,
+    "source:s_15957": 0.00019316733866240829,
+    "edge:e_3577": 0.0004137489815943189,
+    "edge:e_5854": 0.00013553607436998428,
+    "edge:e_10136": 0.00013553607436998428
+   },
+   "methods": {
+    "UTIL-BR": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.3560205028546945,
+      "company_132": 1.048190496482564e-05
+     },
+     "sorted": [
+      1.048190496482564e-05,
+      0.2423680116755566,
+      0.3560205028546945
+     ],
+     "minimum_guarantee": 1.048190496482564e-05,
+     "levels": 1,
+     "nominal_beneficial_delivery_af": 6295.024260125891,
+     "weighted_contingency_beneficial_delivery_af": 5454.725472836555,
+     "normalized_recourse_effort": 1.249999184697285,
+     "maximum_residual": 2.7284841053187847e-12
+    },
+    "PROP-BR": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.26631427961768384,
+      "company_132": 0.2423680116755565
+     },
+     "sorted": [
+      0.2423680116755565,
+      0.2423680116755566,
+      0.26631427961768384
+     ],
+     "minimum_guarantee": 0.2423680116755565,
+     "levels": 1,
+     "nominal_beneficial_delivery_af": 6280.4692084666785,
+     "weighted_contingency_beneficial_delivery_af": 5440.170199490223,
+     "normalized_recourse_effort": 1.2499991868726406,
+     "maximum_residual": 1.8189894035458565e-12
+    },
+    "CTI-RLex rigid": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.33132201677154505,
+      "company_132": 0.33132201677154505
+     },
+     "sorted": [
+      0.2423680116755566,
+      0.33132201677154505,
+      0.33132201677154505
+     ],
+     "minimum_guarantee": 0.2423680116755566,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 4664.815025212918,
+     "weighted_contingency_beneficial_delivery_af": 4664.815025212918,
+     "normalized_recourse_effort": 0.0,
+     "maximum_residual": 2.2737367544323206e-13
+    },
+    "CTI-RLex proposed": {
+     "guarantees": {
+      "company_088": 0.2423680116755566,
+      "company_130": 0.3618744327771747,
+      "company_132": 0.3618744327771747
+     },
+     "sorted": [
+      0.2423680116755566,
+      0.3618744327771747,
+      0.3618744327771747
+     ],
+     "minimum_guarantee": 0.2423680116755566,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 6272.629710061485,
+     "weighted_contingency_beneficial_delivery_af": 5533.883709342866,
+     "normalized_recourse_effort": 1.2499991728655147,
+     "maximum_residual": 1.8189894035458565e-12
+    },
+    "CTI-RLex nominal only": {
+     "guarantees": {
+      "company_130": 0.9319617571577877,
+      "company_088": 1.0,
+      "company_132": 1.0
+     },
+     "sorted": [
+      0.9319617571577877,
+      1.0,
+      1.0
+     ],
+     "minimum_guarantee": 0.9319617571577877,
+     "levels": 2,
+     "nominal_beneficial_delivery_af": 10827.88189980745,
+     "weighted_contingency_beneficial_delivery_af": 0.0,
+     "normalized_recourse_effort": 0,
+     "maximum_residual": 1.8189894035458565e-12
+    }
+   },
+   "indicators": {
+    "price_of_fairness_percent": 0.3557500200000452,
+    "util_minimum_below_cti_rlex": true,
+    "value_of_recourse_absolute": 0.0,
+    "value_of_recourse_percent": 0.0,
+    "robustness_cost_percent": 42.06965158926391,
+    "first_sorted_position_cti_rlex_and_prop_br_differ": 2,
+    "cti_rlex_above_prop_br_there": true
+   },
+   "with_published_effort_coefficients": {
+    "methods": {
+     "UTIL-BR": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.4539538983436473,
+       "company_132": 9.886838152096086e-06
+      },
+      "sorted": [
+       9.886838152096086e-06,
+       0.2423680116755566,
+       0.4539538983436473
+      ],
+      "minimum_guarantee": 9.886838152096086e-06,
+      "levels": 1,
+      "nominal_beneficial_delivery_af": 5937.650288561286,
+      "weighted_contingency_beneficial_delivery_af": 5895.58312036329,
+      "normalized_recourse_effort": 1.2499990352406765,
+      "maximum_residual": 5.4569682106375694e-12
+     },
+     "PROP-BR": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.3642474548485889,
+       "company_132": 0.24236801167555658
+      },
+      "sorted": [
+       0.24236801167555658,
+       0.2423680116755566,
+       0.3642474548485889
+      ],
+      "minimum_guarantee": 0.24236801167555658,
+      "levels": 1,
+      "nominal_beneficial_delivery_af": 5923.095201164673,
+      "weighted_contingency_beneficial_delivery_af": 5856.165033735323,
+      "normalized_recourse_effort": 1.2499986221943593,
+      "maximum_residual": 4.547473508864641e-13
+     },
+     "CTI-RLex rigid": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.33132201677154505,
+       "company_132": 0.33132201677154505
+      },
+      "sorted": [
+       0.2423680116755566,
+       0.33132201677154505,
+       0.33132201677154505
+      ],
+      "minimum_guarantee": 0.2423680116755566,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 4664.815025212918,
+      "weighted_contingency_beneficial_delivery_af": 4664.815025212918,
+      "normalized_recourse_effort": 0.0,
+      "maximum_residual": 2.2737367544323206e-13
+     },
+     "CTI-RLex proposed": {
+      "guarantees": {
+       "company_088": 0.2423680116755566,
+       "company_130": 0.36187443277717474,
+       "company_132": 0.36187443277717474
+      },
+      "sorted": [
+       0.2423680116755566,
+       0.36187443277717474,
+       0.36187443277717474
+      ],
+      "minimum_guarantee": 0.2423680116755566,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 5846.723139440835,
+      "weighted_contingency_beneficial_delivery_af": 5814.772153138469,
+      "normalized_recourse_effort": 1.2499986319329548,
+      "maximum_residual": 1.1198153515579179e-11
+     },
+     "CTI-RLex nominal only": {
+      "guarantees": {
+       "company_130": 0.9319617571577877,
+       "company_088": 1.0,
+       "company_132": 1.0
+      },
+      "sorted": [
+       0.9319617571577877,
+       1.0,
+       1.0
+      ],
+      "minimum_guarantee": 0.9319617571577877,
+      "levels": 2,
+      "nominal_beneficial_delivery_af": 10827.88189980745,
+      "weighted_contingency_beneficial_delivery_af": 0.0,
+      "normalized_recourse_effort": 0,
+      "maximum_residual": 1.8189894035458565e-12
+     }
+    },
+    "indicators": {
+     "price_of_fairness_percent": 1.5313658552040255,
+     "util_minimum_below_cti_rlex": true,
+     "value_of_recourse_absolute": 0.0,
+     "value_of_recourse_percent": 0.0,
+     "robustness_cost_percent": 46.00307619217008,
+     "first_sorted_position_cti_rlex_and_prop_br_differ": 2,
+     "cti_rlex_above_prop_br_there": true
+    },
+    "largest_change_in_any_sorted_guarantee": {
+     "UTIL-BR": 0.0979333954889528,
+     "PROP-BR": 0.09793317523090506,
+     "CTI-RLex rigid": 0.0,
+     "CTI-RLex proposed": 5.551115123125783e-17,
+     "CTI-RLex nominal only": 0.0
+    }
+   }
+  }
+ },
+ "seconds": 2.4
+}

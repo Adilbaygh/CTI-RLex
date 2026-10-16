@@ -1,0 +1,1993 @@
+{
+ "rule": "A claimant's tier is the rank, within its river system, of the decree year of its most senior decreed water right on its official paths (Utah Division of Water Rights, points of diversion, decree records). River systems: the Little Bear River (South Fork, East Fork, main stem; Porcupine and Hyrum reservoirs) and the Logan River. A claimant with no decreed right on its paths that draws on a reservoir of a system ranks after every decreed right of that system (PRIOR-LEX) or first (PRIOR-LEX storage shared). A claimant whose rights are not in the Utah layer and that draws on no Utah reservoir is alone in its system and ranks first. Tier k holds the claimants of rank k of every system; inside a tier the allocation is the leximin of CTI-RLex.",
+ "chosen": "requirements/decisions.md, 2026-10-12; expectations in requirements/hypotheses.md, H-2.1 and H-2.1b",
+ "water_rights": {
+  "file": "DATA/Utah_Water_Rights_2026/points_of_diversion.csv",
+  "sha256": "182cef4999fbdd991b6ea21789779e8ae4e508f12b5afaaf2f8d70ae9bf35b6b",
+  "retrieved_utc": "2026-10-11T18:34:25+00:00",
+  "layer_data_last_edit_utc": "2026-10-10T01:04:29.141000+00:00"
+ },
+ "moved_threshold": 0.0001,
+ "tolerance": 1e-07,
+ "instances": {
+  "little_bear_v2": {
+   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+   "claimants": [
+    {
+     "claimant": "company_088",
+     "name": "Hyrum Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-1719",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 3.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1720",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 30.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1721",
+       "kind": "decree",
+       "priority": "18780401",
+       "decree_year": 1878,
+       "cfs": 13.634,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1722",
+       "kind": "decree",
+       "priority": "18900501",
+       "decree_year": 1890,
+       "cfs": 15.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1723",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 10.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Hyrum Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1719"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1719",
+      "25-1720",
+      "25-1723"
+     ],
+     "flow_of_rights_of_that_year_cfs": 43.0,
+     "peak_diversion_requirement_cfs": 12.539380669982133,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_130",
+     "name": "Paradise Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-1551",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 38.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1552",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 12.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1553",
+       "kind": "decree",
+       "priority": "18900501",
+       "decree_year": 1890,
+       "cfs": 10.0,
+       "source": [
+        "East Fork of Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1554",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 10.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Porcupine Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1551",
+      "25-1552"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1551",
+      "25-1552",
+      "25-1554"
+     ],
+     "flow_of_rights_of_that_year_cfs": 60.0,
+     "peak_diversion_requirement_cfs": 15.498944189347732,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_132",
+     "name": "Porcupine Highline Canal Co.",
+     "path_rights": [],
+     "reservoirs": [
+      "Porcupine Reservoir"
+     ],
+     "basis": "storage only",
+     "river_system": "Little Bear River",
+     "decree_year": null,
+     "rank": {
+      "PRIOR-LEX": 2,
+      "PRIOR-LEX storage shared": 1
+     }
+    }
+   ],
+   "methods": {
+    "CTI-RLex": {
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "sorted": [
+      0.41951076293707945,
+      0.41951076293707945,
+      0.4476976354639018
+     ],
+     "minimum_guarantee": 0.41951076293707945,
+     "least_served": [
+      "company_130",
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.41951076293707945,
+       "blocked": [
+        "company_130",
+        "company_132"
+       ]
+      },
+      {
+       "theta": 0.4476976354639018,
+       "blocked": [
+        "company_088"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 5919.097890994499,
+     "weighted_contingency_beneficial_delivery_af": 5946.240468188143,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.24999902695140525,
+      "severe_system_shortage": 0.4000000000000001,
+      "paradise_diversion_outage_under_shortage": 0.3499999999999998,
+      "hyrum_canal_restriction_under_shortage": 0.25
+     },
+     "maximum_residual": 3.410605131648481e-13
+    },
+    "PRIOR-LEX": {
+     "guarantees": {
+      "company_088": 0.4476976354639018,
+      "company_130": 1.0,
+      "company_132": 0.10806148128546053
+     },
+     "sorted": [
+      0.10806148128546053,
+      0.4476976354639018,
+      1.0
+     ],
+     "minimum_guarantee": 0.10806148128546053,
+     "least_served": [
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.4476976354639018,
+       "blocked": [
+        "company_088"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 1.0,
+       "blocked": [
+        "company_130"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.10806148128546053,
+       "blocked": [
+        "company_132"
+       ],
+       "tier": 2
+      }
+     ],
+     "nominal_beneficial_delivery_af": 5923.075841130683,
+     "weighted_contingency_beneficial_delivery_af": 5984.185231748353,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.2499990207421223,
+      "severe_system_shortage": 0.4,
+      "paradise_diversion_outage_under_shortage": 0.3500000000000001,
+      "hyrum_canal_restriction_under_shortage": 0.25
+     },
+     "maximum_residual": 8.526512829121202e-13
+    },
+    "PRIOR-LEX storage shared": {
+     "guarantees": {
+      "company_130": 0.41951076293707945,
+      "company_132": 0.41951076293707945,
+      "company_088": 0.4476976354639018
+     },
+     "sorted": [
+      0.41951076293707945,
+      0.41951076293707945,
+      0.4476976354639018
+     ],
+     "minimum_guarantee": 0.41951076293707945,
+     "least_served": [
+      "company_130",
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.41951076293707945,
+       "blocked": [
+        "company_130",
+        "company_132"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.4476976354639018,
+       "blocked": [
+        "company_088"
+       ],
+       "tier": 1
+      }
+     ],
+     "nominal_beneficial_delivery_af": 5919.097890994499,
+     "weighted_contingency_beneficial_delivery_af": 5946.240468188143,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.24999902695140525,
+      "severe_system_shortage": 0.4000000000000001,
+      "paradise_diversion_outage_under_shortage": 0.3499999999999998,
+      "hyrum_canal_restriction_under_shortage": 0.25
+     },
+     "maximum_residual": 3.410605131648481e-13
+    },
+    "UTIL-BR": {
+     "guarantees": {
+      "company_088": 0.4476976354639018,
+      "company_130": 0.7666131350861322,
+      "company_132": 0.10765060681622926
+     },
+     "sorted": [
+      0.10765060681622926,
+      0.4476976354639018,
+      0.7666131350861322
+     ],
+     "minimum_guarantee": 0.10765060681622926,
+     "least_served": [
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.10765060681622932,
+       "blocked": [
+        "company_088",
+        "company_130",
+        "company_132"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 6075.142729545574,
+     "weighted_contingency_beneficial_delivery_af": 6033.079277053271,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.2499990127408644,
+      "severe_system_shortage": 0.4,
+      "paradise_diversion_outage_under_shortage": 0.35000000000000003,
+      "hyrum_canal_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 3.410605131648481e-13
+    },
+    "PROP-BR": {
+     "guarantees": {
+      "company_088": 0.4476976354639018,
+      "company_130": 0.41951076293707945,
+      "company_132": 0.4195107629370794
+     },
+     "sorted": [
+      0.4195107629370794,
+      0.41951076293707945,
+      0.4476976354639018
+     ],
+     "minimum_guarantee": 0.4195107629370794,
+     "least_served": [
+      "company_130",
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.41951076293707945,
+       "blocked": [
+        "company_088",
+        "company_130",
+        "company_132"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 5919.097890994498,
+     "weighted_contingency_beneficial_delivery_af": 5946.2404681882,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.24999902695150242,
+      "severe_system_shortage": 0.4,
+      "paradise_diversion_outage_under_shortage": 0.35000000000000003,
+      "hyrum_canal_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 5.684341886080801e-13
+    }
+   },
+   "against_cti_rlex": {
+    "PRIOR-LEX": {
+     "tiers": [
+      [
+       "company_088",
+       "company_130"
+      ],
+      [
+       "company_132"
+      ]
+     ],
+     "same_solution_as_cti_rlex": false,
+     "guarantee_change": {
+      "company_130": 0.5804892370629205,
+      "company_132": -0.3114492816516189,
+      "company_088": 0.0
+     },
+     "claimants_that_moved": {
+      "company_132": -0.3114492816516189,
+      "company_130": 0.5804892370629205
+     },
+     "largest_change_of_a_claimant_that_did_not_move": 0.0,
+     "minimum_guarantee": {
+      "CTI-RLex": 0.41951076293707945,
+      "PRIOR-LEX": 0.10806148128546053
+     },
+     "minimum_not_above_cti_rlex": true,
+     "first_tier_not_lexicographically_below_cti_rlex": true,
+     "first_tier_first_difference": {
+      "position": 1,
+      "higher": "PRIOR-LEX"
+     },
+     "sorted_vectors_first_difference": {
+      "position": 1,
+      "higher": "CTI-RLex"
+     },
+     "nominal_delivery_change_af": 3.9779501361845178,
+     "nominal_delivery_change_percent": 0.06720534462247525,
+     "weighted_contingency_delivery_change_af": 37.94476356021005
+    },
+    "PRIOR-LEX storage shared": {
+     "tiers": [
+      [
+       "company_088",
+       "company_130",
+       "company_132"
+      ]
+     ],
+     "same_solution_as_cti_rlex": true,
+     "guarantee_change": {
+      "company_130": 0.0,
+      "company_132": 0.0,
+      "company_088": 0.0
+     },
+     "claimants_that_moved": {},
+     "largest_change_of_a_claimant_that_did_not_move": 0.0,
+     "minimum_guarantee": {
+      "CTI-RLex": 0.41951076293707945,
+      "PRIOR-LEX": 0.41951076293707945
+     },
+     "minimum_not_above_cti_rlex": true,
+     "first_tier_not_lexicographically_below_cti_rlex": true,
+     "first_tier_first_difference": {
+      "position": null,
+      "higher": null
+     },
+     "sorted_vectors_first_difference": {
+      "position": null,
+      "higher": null
+     },
+     "nominal_delivery_change_af": 0.0,
+     "nominal_delivery_change_percent": 0.0,
+     "weighted_contingency_delivery_change_af": 0.0
+    }
+   },
+   "seconds": 1.0
+  },
+  "cache_valley_v4": {
+   "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+   "claimants": [
+    {
+     "claimant": "company_103",
+     "name": "Logan Island Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-5136",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 2.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-5136"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-5136"
+     ],
+     "flow_of_rights_of_that_year_cfs": 2.0,
+     "peak_diversion_requirement_cfs": 0.08535194707982885,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_10390",
+     "name": "Logan Southwest Field Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-5141",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 11.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-5142",
+       "kind": "decree",
+       "priority": "18650501",
+       "decree_year": 1865,
+       "cfs": 1.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-5141"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-5141"
+     ],
+     "flow_of_rights_of_that_year_cfs": 11.0,
+     "peak_diversion_requirement_cfs": 8.288651332126241,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_104",
+     "name": "Logan North Field Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-6137",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 38.5,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6138",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 35.15,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6139",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 2.1,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6140",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 2.1,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6141",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 4.8,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6142",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 4.8,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6143",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 12.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6144",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 12.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-6137",
+      "25-6138",
+      "25-6139",
+      "25-6140",
+      "25-6141",
+      "25-6142",
+      "25-6143",
+      "25-6144"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-6137",
+      "25-6138",
+      "25-6139",
+      "25-6140",
+      "25-6141",
+      "25-6142",
+      "25-6143",
+      "25-6144"
+     ],
+     "flow_of_rights_of_that_year_cfs": 111.45,
+     "peak_diversion_requirement_cfs": 2.561559003261864,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_105",
+     "name": "Logan Northwest Field Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-5243",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 32.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-5938",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 16.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-5243",
+      "25-5938"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-5243",
+      "25-5938"
+     ],
+     "flow_of_rights_of_that_year_cfs": 48.0,
+     "peak_diversion_requirement_cfs": 13.780698118796446,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_106",
+     "name": "Logan River Blacksmith Fork Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-3514",
+       "kind": "decree",
+       "priority": "18770501",
+       "decree_year": 1877,
+       "cfs": 34.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-4148",
+       "kind": "not decreed",
+       "record_types": [
+        "Application To Appropriate"
+       ],
+       "priorities": [
+        "19630322"
+       ]
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18770501",
+     "most_senior_rights": [
+      "25-3514"
+     ],
+     "decree_year": 1877,
+     "rights_of_that_year": [
+      "25-3514"
+     ],
+     "flow_of_rights_of_that_year_cfs": 34.0,
+     "peak_diversion_requirement_cfs": 37.105835369588334,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": false,
+     "rank": {
+      "PRIOR-LEX": 2,
+      "PRIOR-LEX storage shared": 2
+     }
+    },
+    {
+     "claimant": "company_109",
+     "name": "Logan & Northern Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-3056",
+       "kind": "not decreed",
+       "record_types": [
+        "Application To Appropriate"
+       ],
+       "priorities": [
+        "19281119",
+        "19890607",
+        "20251003"
+       ]
+      },
+      {
+       "right": "25-6110",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 68.1,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6111",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 7.9,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6112",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 27.2,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6113",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 20.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-6110",
+      "25-6111",
+      "25-6112",
+      "25-6113"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-6110",
+      "25-6111",
+      "25-6112",
+      "25-6113"
+     ],
+     "flow_of_rights_of_that_year_cfs": 123.19999999999999,
+     "peak_diversion_requirement_cfs": 41.72982320772388,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_1249",
+     "name": "Logan, Hyde Park, Smithfield Canal Co.",
+     "path_rights": [
+      {
+       "right": "25-3055",
+       "kind": "not decreed",
+       "record_types": [
+        "Application To Appropriate"
+       ],
+       "priorities": [
+        "19281119",
+        "20251003"
+       ]
+      },
+      {
+       "right": "25-6145",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 53.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6146",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 16.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6147",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 27.2,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-6148",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 20.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-6145",
+      "25-6146",
+      "25-6147",
+      "25-6148"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-6145",
+      "25-6146",
+      "25-6147",
+      "25-6148"
+     ],
+     "flow_of_rights_of_that_year_cfs": 116.2,
+     "peak_diversion_requirement_cfs": 11.052598886568882,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_130",
+     "name": "Paradise Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-1551",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 38.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1552",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 12.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1553",
+       "kind": "decree",
+       "priority": "18900501",
+       "decree_year": 1890,
+       "cfs": 10.0,
+       "source": [
+        "East Fork of Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1554",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 10.0,
+       "source": [
+        "East Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Porcupine Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1551",
+      "25-1552"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1551",
+      "25-1552",
+      "25-1554"
+     ],
+     "flow_of_rights_of_that_year_cfs": 60.0,
+     "peak_diversion_requirement_cfs": 15.498944189347732,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_132",
+     "name": "Porcupine Highline Canal Co.",
+     "path_rights": [],
+     "reservoirs": [
+      "Porcupine Reservoir"
+     ],
+     "basis": "storage only",
+     "river_system": "Little Bear River",
+     "decree_year": null,
+     "rank": {
+      "PRIOR-LEX": 2,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_136",
+     "name": "Providence Logan Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-5137",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 9.6,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-5138",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 1.2,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-5139",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 3.9,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      },
+      {
+       "right": "25-5140",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 3.0,
+       "source": [
+        "Logan River"
+       ],
+       "river_system": "Logan River"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "decreed right on its paths",
+     "river_system": "Logan River",
+     "most_senior_priority": "18600501",
+     "most_senior_rights": [
+      "25-5137",
+      "25-5138",
+      "25-5139",
+      "25-5140"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-5137",
+      "25-5138",
+      "25-5139",
+      "25-5140"
+     ],
+     "flow_of_rights_of_that_year_cfs": 17.7,
+     "peak_diversion_requirement_cfs": 0.5627849499705802,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_162",
+     "name": "Wellsville-Mendon Conservancy District",
+     "path_rights": [
+      {
+       "right": "25-1994",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 2.4,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1995",
+       "kind": "decree",
+       "priority": "18750501",
+       "decree_year": 1875,
+       "cfs": 1.0,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1996",
+       "kind": "decree",
+       "priority": "18670501",
+       "decree_year": 1867,
+       "cfs": 1.0,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Hyrum Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1994"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1994"
+     ],
+     "flow_of_rights_of_that_year_cfs": 2.4,
+     "peak_diversion_requirement_cfs": 44.51032671806848,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": false,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_164",
+     "name": "Wellsville East Field Irrigation And Canal Co.",
+     "path_rights": [
+      {
+       "right": "25-1537",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 30.0,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1538",
+       "kind": "decree",
+       "priority": "18780401",
+       "decree_year": 1878,
+       "cfs": 15.0,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1539",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 10.0,
+       "source": [
+        "Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Hyrum Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1537"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1537",
+      "25-1539"
+     ],
+     "flow_of_rights_of_that_year_cfs": 40.0,
+     "peak_diversion_requirement_cfs": 34.739066234705184,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_168",
+     "name": "West Cache Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "ID 13-974",
+       "kind": "not in the Utah layer"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "path rights not in the Utah layer",
+     "river_system": "own (ID 13-974)",
+     "decree_year": null,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_072",
+     "name": "Cub River Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "ID 13-2066",
+       "kind": "not in the Utah layer"
+      }
+     ],
+     "reservoirs": [],
+     "basis": "path rights not in the Utah layer",
+     "river_system": "own (ID 13-2066)",
+     "decree_year": null,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    },
+    {
+     "claimant": "company_088",
+     "name": "Hyrum Irrigation Co.",
+     "path_rights": [
+      {
+       "right": "25-1719",
+       "kind": "decree",
+       "priority": "18600401",
+       "decree_year": 1860,
+       "cfs": 3.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1720",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 30.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1721",
+       "kind": "decree",
+       "priority": "18780401",
+       "decree_year": 1878,
+       "cfs": 13.634,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1722",
+       "kind": "decree",
+       "priority": "18900501",
+       "decree_year": 1890,
+       "cfs": 15.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      },
+      {
+       "right": "25-1723",
+       "kind": "decree",
+       "priority": "18600501",
+       "decree_year": 1860,
+       "cfs": 10.0,
+       "source": [
+        "South Fork Little Bear River"
+       ],
+       "river_system": "Little Bear River"
+      }
+     ],
+     "reservoirs": [
+      "Hyrum Reservoir"
+     ],
+     "basis": "decreed right on its paths",
+     "river_system": "Little Bear River",
+     "most_senior_priority": "18600401",
+     "most_senior_rights": [
+      "25-1719"
+     ],
+     "decree_year": 1860,
+     "rights_of_that_year": [
+      "25-1719",
+      "25-1720",
+      "25-1723"
+     ],
+     "flow_of_rights_of_that_year_cfs": 43.0,
+     "peak_diversion_requirement_cfs": 12.539380669982133,
+     "peak_period": "2025-07",
+     "rights_of_that_year_cover_the_peak": true,
+     "rank": {
+      "PRIOR-LEX": 1,
+      "PRIOR-LEX storage shared": 1
+     }
+    }
+   ],
+   "methods": {
+    "CTI-RLex": {
+     "guarantees": {
+      "company_168": 0.056393646245954054,
+      "company_072": 0.06891004645765059,
+      "company_106": 0.13744468899532894,
+      "company_109": 0.16175481888078302,
+      "company_130": 0.307273771107821,
+      "company_132": 0.307273771107821,
+      "company_162": 0.41517271423097657,
+      "company_164": 0.41517271423097657,
+      "company_088": 0.41517271423097657,
+      "company_103": 0.6068879257297796,
+      "company_10390": 0.6068879257297796,
+      "company_104": 0.6068879257297796,
+      "company_105": 0.6068879257297796,
+      "company_1249": 0.8821454660844299,
+      "company_136": 1.0
+     },
+     "sorted": [
+      0.056393646245954054,
+      0.06891004645765059,
+      0.13744468899532894,
+      0.16175481888078302,
+      0.307273771107821,
+      0.307273771107821,
+      0.41517271423097657,
+      0.41517271423097657,
+      0.41517271423097657,
+      0.6068879257297796,
+      0.6068879257297796,
+      0.6068879257297796,
+      0.6068879257297796,
+      0.8821454660844299,
+      1.0
+     ],
+     "minimum_guarantee": 0.056393646245954054,
+     "least_served": [
+      "company_168"
+     ],
+     "levels": [
+      {
+       "theta": 0.056393646245954054,
+       "blocked": [
+        "company_168"
+       ]
+      },
+      {
+       "theta": 0.06891004645765059,
+       "blocked": [
+        "company_072"
+       ]
+      },
+      {
+       "theta": 0.13744468899532894,
+       "blocked": [
+        "company_106"
+       ]
+      },
+      {
+       "theta": 0.16175481888078302,
+       "blocked": [
+        "company_109"
+       ]
+      },
+      {
+       "theta": 0.307273771107821,
+       "blocked": [
+        "company_130",
+        "company_132"
+       ]
+      },
+      {
+       "theta": 0.41517271423097657,
+       "blocked": [
+        "company_162",
+        "company_164",
+        "company_088"
+       ]
+      },
+      {
+       "theta": 0.6068879257297796,
+       "blocked": [
+        "company_103",
+        "company_10390",
+        "company_104",
+        "company_105"
+       ]
+      },
+      {
+       "theta": 0.8821454660844299,
+       "blocked": [
+        "company_1249"
+       ]
+      },
+      {
+       "theta": 1.0,
+       "blocked": [
+        "company_136"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 25608.51339983481,
+     "weighted_contingency_beneficial_delivery_af": 24897.485510950348,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.24999902288318862,
+      "severe_system_shortage": 0.25000000000000006,
+      "subsystem_01_restriction_under_shortage": 0.2499999999999998,
+      "subsystem_02_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 6.821210263296962e-13
+    },
+    "PRIOR-LEX": {
+     "guarantees": {
+      "company_168": 0.056393646245954054,
+      "company_072": 0.06891004645765059,
+      "company_109": 0.16175481888078302,
+      "company_162": 0.4151727142309766,
+      "company_164": 0.4151727142309766,
+      "company_088": 0.4151727142309766,
+      "company_103": 0.6068879257297793,
+      "company_10390": 0.6068879257297793,
+      "company_104": 0.6068879257297793,
+      "company_105": 0.6068879257297793,
+      "company_130": 0.8024829119929104,
+      "company_1249": 0.8821454660844299,
+      "company_136": 1.0,
+      "company_132": 0.04157973003250156,
+      "company_106": 0.13744468899532894
+     },
+     "sorted": [
+      0.04157973003250156,
+      0.056393646245954054,
+      0.06891004645765059,
+      0.13744468899532894,
+      0.16175481888078302,
+      0.4151727142309766,
+      0.4151727142309766,
+      0.4151727142309766,
+      0.6068879257297793,
+      0.6068879257297793,
+      0.6068879257297793,
+      0.6068879257297793,
+      0.8024829119929104,
+      0.8821454660844299,
+      1.0
+     ],
+     "minimum_guarantee": 0.04157973003250156,
+     "least_served": [
+      "company_132"
+     ],
+     "levels": [
+      {
+       "theta": 0.056393646245954054,
+       "blocked": [
+        "company_168"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.06891004645765059,
+       "blocked": [
+        "company_072"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.16175481888078302,
+       "blocked": [
+        "company_109"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.4151727142309766,
+       "blocked": [
+        "company_162",
+        "company_164",
+        "company_088"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.6068879257297793,
+       "blocked": [
+        "company_103",
+        "company_10390",
+        "company_104",
+        "company_105"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.8024829119929104,
+       "blocked": [
+        "company_130"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.8821454660844299,
+       "blocked": [
+        "company_1249"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 1.0,
+       "blocked": [
+        "company_136"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.04157973003250156,
+       "blocked": [
+        "company_132"
+       ],
+       "tier": 2
+      },
+      {
+       "theta": 0.13744468899532894,
+       "blocked": [
+        "company_106"
+       ],
+       "tier": 2
+      }
+     ],
+     "nominal_beneficial_delivery_af": 25635.961345768806,
+     "weighted_contingency_beneficial_delivery_af": 24924.93458785112,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.2499990218051411,
+      "severe_system_shortage": 0.25000000000000006,
+      "subsystem_01_restriction_under_shortage": 0.24999999999999978,
+      "subsystem_02_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 9.094947017729282e-13
+    },
+    "PRIOR-LEX storage shared": {
+     "guarantees": {
+      "company_168": 0.056393646245954054,
+      "company_072": 0.06891004645765059,
+      "company_109": 0.16175481888078302,
+      "company_130": 0.307273771107821,
+      "company_132": 0.307273771107821,
+      "company_162": 0.4151727142309767,
+      "company_164": 0.4151727142309767,
+      "company_088": 0.4151727142309767,
+      "company_103": 0.6068879257297803,
+      "company_10390": 0.6068879257297803,
+      "company_104": 0.6068879257297803,
+      "company_105": 0.6068879257297803,
+      "company_1249": 0.8821454660844299,
+      "company_136": 1.0,
+      "company_106": 0.13744468899532894
+     },
+     "sorted": [
+      0.056393646245954054,
+      0.06891004645765059,
+      0.13744468899532894,
+      0.16175481888078302,
+      0.307273771107821,
+      0.307273771107821,
+      0.4151727142309767,
+      0.4151727142309767,
+      0.4151727142309767,
+      0.6068879257297803,
+      0.6068879257297803,
+      0.6068879257297803,
+      0.6068879257297803,
+      0.8821454660844299,
+      1.0
+     ],
+     "minimum_guarantee": 0.056393646245954054,
+     "least_served": [
+      "company_168"
+     ],
+     "levels": [
+      {
+       "theta": 0.056393646245954054,
+       "blocked": [
+        "company_168"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.06891004645765059,
+       "blocked": [
+        "company_072"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.16175481888078302,
+       "blocked": [
+        "company_109"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.307273771107821,
+       "blocked": [
+        "company_130",
+        "company_132"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.4151727142309767,
+       "blocked": [
+        "company_162",
+        "company_164",
+        "company_088"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.6068879257297803,
+       "blocked": [
+        "company_103",
+        "company_10390",
+        "company_104",
+        "company_105"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.8821454660844299,
+       "blocked": [
+        "company_1249"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 1.0,
+       "blocked": [
+        "company_136"
+       ],
+       "tier": 1
+      },
+      {
+       "theta": 0.13744468899532894,
+       "blocked": [
+        "company_106"
+       ],
+       "tier": 2
+      }
+     ],
+     "nominal_beneficial_delivery_af": 25608.513399834814,
+     "weighted_contingency_beneficial_delivery_af": 24897.48551095035,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.2499990228826922,
+      "severe_system_shortage": 0.25000000000000006,
+      "subsystem_01_restriction_under_shortage": 0.24999999999999953,
+      "subsystem_02_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 9.210410212290299e-13
+    },
+    "UTIL-BR": {
+     "guarantees": {
+      "company_103": 1.0,
+      "company_10390": 1.0,
+      "company_104": 0.9999999999999999,
+      "company_105": 0.2949369973288018,
+      "company_106": 0.13744468899532894,
+      "company_109": 0.16175481888078302,
+      "company_1249": 0.8821454660844299,
+      "company_130": 0.8024829119929106,
+      "company_132": 0.0415797300325015,
+      "company_136": 1.0,
+      "company_162": 0.8482714190083211,
+      "company_164": 7.464118455938742e-06,
+      "company_168": 0.05639364624595406,
+      "company_072": 0.06891004645765057,
+      "company_088": 7.464118455953374e-06
+     },
+     "sorted": [
+      7.464118455938742e-06,
+      7.464118455953374e-06,
+      0.0415797300325015,
+      0.05639364624595406,
+      0.06891004645765057,
+      0.13744468899532894,
+      0.16175481888078302,
+      0.2949369973288018,
+      0.8024829119929106,
+      0.8482714190083211,
+      0.8821454660844299,
+      0.9999999999999999,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "minimum_guarantee": 7.464118455938742e-06,
+     "least_served": [
+      "company_088",
+      "company_164"
+     ],
+     "levels": [
+      {
+       "theta": 7.464118455953374e-06,
+       "blocked": [
+        "company_103",
+        "company_10390",
+        "company_104",
+        "company_105",
+        "company_106",
+        "company_109",
+        "company_1249",
+        "company_130",
+        "company_132",
+        "company_136",
+        "company_162",
+        "company_164",
+        "company_168",
+        "company_072",
+        "company_088"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 25860.45070533421,
+     "weighted_contingency_beneficial_delivery_af": 25141.985616077924,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.2499969543474021,
+      "severe_system_shortage": 0.25,
+      "subsystem_01_restriction_under_shortage": 0.25,
+      "subsystem_02_restriction_under_shortage": 0.25000000000000006
+     },
+     "maximum_residual": 2.6147972675971687e-12
+    },
+    "PROP-BR": {
+     "guarantees": {
+      "company_103": 1.0,
+      "company_10390": 1.0,
+      "company_104": 0.9999999999999999,
+      "company_105": 0.2949369973288018,
+      "company_106": 0.13744468899532894,
+      "company_109": 0.16175481888078302,
+      "company_1249": 0.8821454660844299,
+      "company_130": 0.7748722561742207,
+      "company_132": 0.056393646245954054,
+      "company_136": 1.0,
+      "company_162": 0.7896806289074826,
+      "company_164": 0.05639364624595398,
+      "company_168": 0.05639364624595406,
+      "company_072": 0.06891004645765057,
+      "company_088": 0.056393646245954054
+     },
+     "sorted": [
+      0.05639364624595398,
+      0.056393646245954054,
+      0.056393646245954054,
+      0.05639364624595406,
+      0.06891004645765057,
+      0.13744468899532894,
+      0.16175481888078302,
+      0.2949369973288018,
+      0.7748722561742207,
+      0.7896806289074826,
+      0.8821454660844299,
+      0.9999999999999999,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "minimum_guarantee": 0.05639364624595398,
+     "least_served": [
+      "company_088",
+      "company_132",
+      "company_164",
+      "company_168"
+     ],
+     "levels": [
+      {
+       "theta": 0.056393646245954054,
+       "blocked": [
+        "company_103",
+        "company_10390",
+        "company_104",
+        "company_105",
+        "company_106",
+        "company_109",
+        "company_1249",
+        "company_130",
+        "company_132",
+        "company_136",
+        "company_162",
+        "company_164",
+        "company_168",
+        "company_072",
+        "company_088"
+       ]
+      }
+     ],
+     "nominal_beneficial_delivery_af": 25839.892947932156,
+     "weighted_contingency_beneficial_delivery_af": 25187.832502425073,
+     "recourse_effort_by_scenario": {
+      "moderate_system_shortage": 0.24999694879366904,
+      "severe_system_shortage": 0.24999999999999997,
+      "subsystem_01_restriction_under_shortage": 0.24999999999999997,
+      "subsystem_02_restriction_under_shortage": 0.25
+     },
+     "maximum_residual": 1.7053025658242404e-11
+    }
+   },
+   "against_cti_rlex": {
+    "PRIOR-LEX": {
+     "tiers": [
+      [
+       "company_103",
+       "company_10390",
+       "company_104",
+       "company_105",
+       "company_109",
+       "company_1249",
+       "company_130",
+       "company_136",
+       "company_162",
+       "company_164",
+       "company_168",
+       "company_072",
+       "company_088"
+      ],
+      [
+       "company_106",
+       "company_132"
+      ]
+     ],
+     "same_solution_as_cti_rlex": false,
+     "guarantee_change": {
+      "company_168": 0.0,
+      "company_072": 0.0,
+      "company_106": 0.0,
+      "company_109": 0.0,
+      "company_130": 0.49520914088508944,
+      "company_132": -0.26569404107531946,
+      "company_162": 5.551115123125783e-17,
+      "company_164": 5.551115123125783e-17,
+      "company_088": 5.551115123125783e-17,
+      "company_103": -2.220446049250313e-16,
+      "company_10390": -2.220446049250313e-16,
+      "company_104": -2.220446049250313e-16,
+      "company_105": -2.220446049250313e-16,
+      "company_1249": 0.0,
+      "company_136": 0.0
+     },
+     "claimants_that_moved": {
+      "company_132": -0.26569404107531946,
+      "company_130": 0.49520914088508944
+     },
+     "largest_change_of_a_claimant_that_did_not_move": 2.220446049250313e-16,
+     "minimum_guarantee": {
+      "CTI-RLex": 0.056393646245954054,
+      "PRIOR-LEX": 0.04157973003250156
+     },
+     "minimum_not_above_cti_rlex": true,
+     "first_tier_not_lexicographically_below_cti_rlex": true,
+     "first_tier_first_difference": {
+      "position": 4,
+      "higher": "PRIOR-LEX"
+     },
+     "sorted_vectors_first_difference": {
+      "position": 1,
+      "higher": "CTI-RLex"
+     },
+     "nominal_delivery_change_af": 27.44794593399638,
+     "nominal_delivery_change_percent": 0.10718289463133551,
+     "weighted_contingency_delivery_change_af": 27.449076900771615
+    },
+    "PRIOR-LEX storage shared": {
+     "tiers": [
+      [
+       "company_103",
+       "company_10390",
+       "company_104",
+       "company_105",
+       "company_109",
+       "company_1249",
+       "company_130",
+       "company_132",
+       "company_136",
+       "company_162",
+       "company_164",
+       "company_168",
+       "company_072",
+       "company_088"
+      ],
+      [
+       "company_106"
+      ]
+     ],
+     "same_solution_as_cti_rlex": false,
+     "guarantee_change": {
+      "company_168": 0.0,
+      "company_072": 0.0,
+      "company_106": 0.0,
+      "company_109": 0.0,
+      "company_130": 0.0,
+      "company_132": 0.0,
+      "company_162": 1.1102230246251565e-16,
+      "company_164": 1.1102230246251565e-16,
+      "company_088": 1.1102230246251565e-16,
+      "company_103": 7.771561172376096e-16,
+      "company_10390": 7.771561172376096e-16,
+      "company_104": 7.771561172376096e-16,
+      "company_105": 7.771561172376096e-16,
+      "company_1249": 0.0,
+      "company_136": 0.0
+     },
+     "claimants_that_moved": {},
+     "largest_change_of_a_claimant_that_did_not_move": 7.771561172376096e-16,
+     "minimum_guarantee": {
+      "CTI-RLex": 0.056393646245954054,
+      "PRIOR-LEX": 0.056393646245954054
+     },
+     "minimum_not_above_cti_rlex": true,
+     "first_tier_not_lexicographically_below_cti_rlex": true,
+     "first_tier_first_difference": {
+      "position": null,
+      "higher": null
+     },
+     "sorted_vectors_first_difference": {
+      "position": null,
+      "higher": null
+     },
+     "nominal_delivery_change_af": 3.637978807091713e-12,
+     "nominal_delivery_change_percent": 1.4206130400037903e-14,
+     "weighted_contingency_delivery_change_af": 3.637978807091713e-12
+    }
+   },
+   "seconds": 17.5
+  }
+ },
+ "seconds": 18.4
+}

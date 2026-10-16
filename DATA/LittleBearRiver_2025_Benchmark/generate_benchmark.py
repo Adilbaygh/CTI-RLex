@@ -516,6 +516,307 @@ CONNECTOR_ORDER = os.environ.get("LEXIMIN_CONNECTOR_ORDER", "dependents")
 # from one build instead of rebuilding from the raw layers once per order tested.
 REPAIR_INPUT_DUMP = os.environ.get("LEXIMIN_REPAIR_DUMP", "")
 
+# How an official path is read. The Distribution Network lists, for every path, the
+# flowlines that serve one water right, each with a SortOrder. The published build read the
+# listing as a single sequence: follow the flowlines in SortOrder and bridge every gap with
+# a logical connector. That is right when the listing is in flow order, as in all twelve
+# Little Bear River paths, but twenty Cache Valley listings are not: some name the
+# downstream part of a canal before the reach that leads into it, and some name side
+# branches -- the turnouts into a service area, or a second canal leaving the same split.
+# Read as one sequence, such a listing jumps back upstream; the jumps close cycles, and the
+# acyclicity repair below then rejected fifteen connectors and with them every route of
+# five service areas (Reviewer 1, point 1.1, of the Sci round).
+#
+# "set" (the default) reads a path as the set of reaches it lists. Every listed reach is an
+# arc in its digitized direction; a logical connector is kept only where it bridges a gap
+# between listed reaches in the downstream direction (the connectors on the loop-erased
+# walk); and the place of use is connected to every downstream end of the listed reaches
+# that the path's own diversion reaches. A connector that jumps back upstream to start
+# another branch, or forward over reaches listed later, bridges no gap and is not built.
+# A listing in flow order is read exactly as before, so the Little Bear River benchmark and
+# every Cache Valley path whose walk visits no node twice are unchanged, apart from the
+# detached reach below.
+#
+# The set reading also checks what a listing names. A run of listed reaches joined at
+# shared nodes is detached when it lies farther from the rest of its path -- the diversion,
+# the place of use and every other listed reach -- than the rest of the path spans. Such a
+# run cannot carry the path's water, so it is not built (detached_listed_reaches), and the
+# gap it leaves is bridged like any other. One run in the county selection is detached:
+# flowline 17671, a reach of La Sal Creek 438 km to the south-east in another distribution
+# system, which five Logan River listings name between two Crockett Canal reaches that meet
+# at one point. Built as listed, it was joined to the canal by two logical connectors, and
+# its proxy capacity, the smallest on those paths, passed to the four reaches on them that
+# have no capacity of their own (tier 3 below).
+#
+# "sequential" is the published reading, kept so the released ten-claimant benchmark can
+# still be rebuilt byte for byte; it builds every listing as published.
+PATH_READING = os.environ.get("LEXIMIN_PATH_READING", "set")
+if PATH_READING not in {"set", "sequential"}:
+    raise ValueError(f"unknown path reading: {PATH_READING!r}")
+
+# Filled by extract_network for every path the set reading changes: what was listed, which
+# walk connectors were not built and why, and where the place of use was attached; and,
+# under "listed_reaches_not_built", every detached run with the distances that detach it.
+# Empty when no path changes, so the Little Bear River validation report is unaffected.
+PATH_READING_RECORD: dict[str, Any] = {}
+
+EARTH_RADIUS_KM = 6371.0088
+
+
+def _loop_erased(steps: list[dict[str, Any]], start: str) -> list[dict[str, Any]]:
+    """Chronological loop erasure of a walk: drop everything between two visits of a node."""
+
+    route: list[dict[str, Any]] = []
+    nodes = [start]
+    position = {start: 0}
+    for step in steps:
+        route.append(step)
+        head = step["head"]
+        if head in position:
+            cut = position[head]
+            for dropped in nodes[cut + 1:]:
+                position.pop(dropped, None)
+            nodes = nodes[:cut + 1]
+            route = route[:cut]
+        else:
+            position[head] = len(nodes)
+            nodes.append(head)
+    return route
+
+
+def _reaches(adjacency: Mapping[str, set[str]], start: str, target: str) -> bool:
+    seen = {start}
+    stack = [start]
+    while stack:
+        node = stack.pop()
+        for following in adjacency.get(node, ()):
+            if following == target:
+                return True
+            if following not in seen:
+                seen.add(following)
+                stack.append(following)
+    return False
+
+
+def read_path_as_set(
+    walk: list[dict[str, Any]], source_raw: str, terminal_raw: str
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """The set reading of one official path, from its sequential walk.
+
+    ``walk`` is what the published reading builds: the listed reaches in SortOrder, a gap
+    connector wherever two consecutive reaches do not meet, and a terminal connector from
+    the last node. Every step carries its tail and head node; reaches carry their capacity
+    and connectors the capacity candidate the sequential reading assigns them. Returns the
+    steps of the set reading -- in walk order, terminal connectors last -- and a record of
+    what changed. A walk that visits no node twice is returned unchanged with no record.
+    """
+
+    nodes = [source_raw] + [step["head"] for step in walk]
+    if len(set(nodes)) == len(nodes):
+        return walk, {}
+
+    listed: list[dict[str, Any]] = []
+    seen_reaches: set[str] = set()
+    for step in walk:
+        if step["relation"] == "physical_pathline" and step["id"] not in seen_reaches:
+            seen_reaches.add(step["id"])
+            listed.append(step)
+    # The gaps between listed reaches are the connectors on the loop-erased walk; its
+    # terminal connector is replaced below by one from every downstream end.
+    gaps = {
+        step["id"]: step
+        for step in _loop_erased(walk, source_raw)
+        if step["relation"] == "derived_gap_connector"
+    }
+
+    adjacency: dict[str, set[str]] = defaultdict(set)
+    for step in listed + list(gaps.values()):
+        adjacency[step["tail"]].add(step["head"])
+
+    not_built: dict[str, str] = {}
+    for step in walk:
+        if step["relation"] != "derived_gap_connector" or step["id"] in gaps or step["id"] in not_built:
+            continue
+        if _reaches(adjacency, step["head"], step["tail"]):
+            not_built[step["id"]] = "jumps_back_upstream_to_another_listed_branch"
+        elif _reaches(adjacency, step["tail"], step["head"]):
+            not_built[step["id"]] = "jumps_over_reaches_listed_later"
+        else:
+            raise ValueError(
+                f"Path {source_raw}->{terminal_raw}: connector {step['id']} bridges a gap the "
+                "set reading would lose."
+            )
+
+    reachable = {source_raw}
+    stack = [source_raw]
+    while stack:
+        node = stack.pop()
+        for following in adjacency.get(node, ()):
+            if following not in reachable:
+                reachable.add(following)
+                stack.append(following)
+    graph_nodes = set(adjacency) | {head for heads in adjacency.values() for head in heads}
+    sinks = sorted(
+        (node for node in graph_nodes if not adjacency.get(node) and node in reachable),
+        key=int,
+    )
+    terminal_steps: list[dict[str, Any]] = []
+    for sink in sinks:
+        if sink == terminal_raw:
+            continue
+        # The connector inherits the capacity of the reach it continues, as the terminal
+        # connector of the sequential reading does.
+        feeding = [float(step["capacity"]) for step in listed if step["head"] == sink]
+        if not feeding:
+            raise ValueError(f"Path {source_raw}->{terminal_raw}: no listed reach ends at {sink}.")
+        terminal_steps.append(
+            {
+                "id": f"c_{sink}_{terminal_raw}",
+                "relation": "derived_terminal_connector",
+                "tail": sink,
+                "head": terminal_raw,
+                "candidate": min(feeding),
+            }
+        )
+    if not terminal_steps and terminal_raw not in reachable:
+        raise ValueError(f"Path {source_raw}->{terminal_raw}: the set reading reaches no place of use.")
+
+    kept = {step["id"] for step in listed} | set(gaps)
+    steps: list[dict[str, Any]] = []
+    placed: set[str] = set()
+    for step in walk:
+        if step["id"] in kept and step["id"] not in placed:
+            placed.add(step["id"])
+            steps.append(gaps.get(step["id"], step))
+    steps.extend(terminal_steps)
+
+    record = {
+        "listed_reaches": [step["id"] for step in listed],
+        "gap_connectors_kept": sorted(gaps),
+        "walk_connectors_not_built": dict(sorted(not_built.items())),
+        "walk_terminal_connector": next(
+            (step["id"] for step in walk if step["relation"] == "derived_terminal_connector"), ""
+        ),
+        "terminal_connectors": [step["id"] for step in terminal_steps],
+        "listed_reaches_not_reachable_from_the_diversion": sorted(
+            step["id"] for step in listed if step["tail"] not in reachable
+        ),
+    }
+    return steps, record
+
+
+def _distance_km(a: tuple[float, float], b: tuple[float, float]) -> float:
+    """Great-circle distance between two (latitude, longitude) points, in kilometres."""
+
+    lat1, lon1, lat2, lon2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lon2 - lon1) / 2) ** 2
+    return 2.0 * EARTH_RADIUS_KM * math.asin(math.sqrt(h))
+
+
+def detached_listed_reaches(
+    lines: list[dict[str, str]],
+    flow_rows: Mapping[str, dict[str, str]],
+    node_rows: Mapping[str, dict[str, str]],
+    source_raw: str,
+    terminal_raw: str,
+) -> list[dict[str, Any]]:
+    """The runs of one listing that lie too far from the rest of the path to belong to it.
+
+    ``lines`` are the path's rows of the path-lines table. The listed reaches are grouped
+    into runs, the sets of reaches joined at shared nodes. A run is detached when its
+    distance to the rest of the path -- the nearest of the diversion, the place of use and
+    the end nodes of every other listed reach -- exceeds the span of the rest, the largest
+    distance between two of its nodes. A digitizing gap between two reaches of one canal is
+    metres wide, and a reach that a listing omits lies between reaches of the same path, so
+    neither detaches a run; a reach of a distant stream does. Distances are great-circle
+    distances between the node coordinates of the network.
+
+    The rule only ever removes a run when the evidence is complete: the only run of a
+    listing is never detached, nor is a run when a node of the path has no coordinates.
+    Two detached runs on one path would each count in the other's rest and both stay built.
+    Returns one record per detached run, in listing order.
+    """
+
+    ends = {
+        line["FlowlineID"]: (flow_rows[line["FlowlineID"]]["FromNode"], flow_rows[line["FlowlineID"]]["ToNode"])
+        for line in lines
+    }
+    parent: dict[str, str] = {}
+
+    def root(node: str) -> str:
+        parent.setdefault(node, node)
+        while parent[node] != node:
+            parent[node] = parent[parent[node]]
+            node = parent[node]
+        return node
+
+    for tail, head in ends.values():
+        parent[root(tail)] = root(head)
+    runs: dict[str, list[str]] = {}
+    for raw, (tail, _) in ends.items():
+        runs.setdefault(root(tail), []).append(raw)
+    if len(runs) < 2:
+        return []
+
+    def position(raw: str) -> tuple[float, float] | None:
+        row = node_rows.get(raw)
+        if row is None or not row.get("Lat") or not row.get("Lon"):
+            return None
+        return float(row["Lat"]), float(row["Lon"])
+
+    def systems(nodes: Iterable[str]) -> list[int]:
+        return sorted({int(node_rows[node]["systemId"]) for node in nodes if node_rows[node].get("systemId")})
+
+    detached: list[dict[str, Any]] = []
+    for members in runs.values():
+        own = sorted({node for raw in members for node in ends[raw]}, key=int)
+        rest = sorted(
+            {source_raw, terminal_raw}
+            | {node for raw, pair in ends.items() if raw not in members for node in pair},
+            key=int,
+        )
+        own_points = [position(node) for node in own]
+        rest_points = [position(node) for node in rest]
+        if any(point is None for point in own_points + rest_points):
+            continue
+        distance = min(_distance_km(a, b) for a in own_points for b in rest_points)
+        if distance == 0.0:
+            continue
+        span = max(_distance_km(a, b) for a in rest_points for b in rest_points)
+        if distance <= span:
+            continue
+        detached.append(
+            {
+                "reaches": [edge_id(raw) for raw in members],
+                "flowline_names": sorted({flow_rows[raw]["FlowlineName"] for raw in members}),
+                "nodes": [node_id(node) for node in own],
+                "distance_to_the_rest_of_the_path_km": round_float(distance, 3),
+                "span_of_the_rest_of_the_path_km": round_float(span, 3),
+                "system_ids": systems(own),
+                "system_ids_of_the_rest_of_the_path": systems(rest),
+            }
+        )
+    return detached
+
+
+def _is_acyclic(arcs: list[dict[str, Any]]) -> bool:
+    outgoing: dict[str, list[str]] = defaultdict(list)
+    indegree: dict[str, int] = defaultdict(int)
+    for arc in arcs:
+        outgoing[arc["from_node"]].append(arc["to_node"])
+        indegree[arc["to_node"]] += 1
+        indegree.setdefault(arc["from_node"], 0)
+    queue = [node for node, degree in indegree.items() if degree == 0]
+    seen = 0
+    while queue:
+        node = queue.pop()
+        seen += 1
+        for following in outgoing[node]:
+            indegree[following] -= 1
+            if indegree[following] == 0:
+                queue.append(following)
+    return seen == len(indegree)
+
 
 def connector_order(
     candidate_pairs: Mapping[tuple[str, str], list[float]],
@@ -643,6 +944,36 @@ def extract_network() -> tuple[
     for lines in lines_by_path.values():
         lines.sort(key=lambda row: int(row["SortOrder"]))
 
+    # The set reading builds no detached run of a listing (detached_listed_reaches); the walk
+    # below bridges the gap a run leaves like any other. Its rows are taken out before any
+    # capacity is assigned, so no reach inherits the capacity of a reach that is not built.
+    detached_runs: dict[str, list[dict[str, Any]]] = {}
+    if PATH_READING == "set":
+        for path_raw in sorted(lines_by_path, key=int):
+            runs = detached_listed_reaches(
+                lines_by_path[path_raw],
+                flow_rows,
+                node_rows,
+                path_points[path_raw]["1"],
+                path_points[path_raw]["2"],
+            )
+            if runs:
+                detached_runs[f"p_{path_raw}"] = runs
+                not_built = {reach for run in runs for reach in run["reaches"]}
+                lines_by_path[path_raw] = [
+                    line for line in lines_by_path[path_raw] if edge_id(line["FlowlineID"]) not in not_built
+                ]
+        if detached_runs:
+            not_built_rows = {
+                (path[2:], reach[2:])
+                for path, runs in detached_runs.items()
+                for run in runs
+                for reach in run["reaches"]
+            }
+            pathline_rows = [
+                row for row in pathline_rows if (row["PathId"], row["FlowlineID"]) not in not_built_rows
+            ]
+
     canal_capacities: dict[str, set[float]] = defaultdict(set)
     for row in read_csv(CANALS_CSV):
         if row["CompanyID"] in COMPANIES and row["MaxCFS"]:
@@ -731,10 +1062,14 @@ def extract_network() -> tuple[
     paths: list[dict[str, Any]] = []
     path_plans: list[dict[str, Any]] = []
 
+    PATH_READING_RECORD.clear()
+    if detached_runs:
+        PATH_READING_RECORD["listed_reaches_not_built"] = detached_runs
     for path_raw in sorted(SELECTED_PATHS, key=int):
         source_raw = path_points[path_raw]["1"]
         terminal_raw = path_points[path_raw]["2"]
-        sequence: list[tuple[str, str]] = []
+        # The sequential reading of the listing, the walk the published build used.
+        walk: list[dict[str, Any]] = []
         current = source_raw
         previous_capacity: float | None = None
         for line in lines_by_path[path_raw]:
@@ -746,21 +1081,36 @@ def extract_network() -> tuple[
                 u, v = source_edge["ToNode"], source_edge["FromNode"]
             physical = physical_edges[edge_id(raw_edge)]
             if current != u:
-                connector = f"c_{current}_{u}"
                 candidate = float(physical["capacity_cfs_base"])
                 if previous_capacity is not None:
                     candidate = min(candidate, previous_capacity)
-                connector_candidates[(current, u)].append(candidate)
-                sequence.append((connector, "derived_gap_connector"))
-            sequence.append((edge_id(raw_edge), "physical_pathline"))
+                walk.append(
+                    {"id": f"c_{current}_{u}", "relation": "derived_gap_connector",
+                     "tail": current, "head": u, "candidate": candidate}
+                )
+            walk.append(
+                {"id": edge_id(raw_edge), "relation": "physical_pathline",
+                 "tail": u, "head": v, "capacity": float(physical["capacity_cfs_base"])}
+            )
             current = v
             previous_capacity = float(physical["capacity_cfs_base"])
         if current != terminal_raw:
-            connector = f"c_{current}_{terminal_raw}"
             if previous_capacity is None:
                 raise ValueError(f"Path {path_raw} has no physical edge.")
-            connector_candidates[(current, terminal_raw)].append(previous_capacity)
-            sequence.append((connector, "derived_terminal_connector"))
+            walk.append(
+                {"id": f"c_{current}_{terminal_raw}", "relation": "derived_terminal_connector",
+                 "tail": current, "head": terminal_raw, "candidate": previous_capacity}
+            )
+
+        steps = walk
+        if PATH_READING == "set":
+            steps, record = read_path_as_set(walk, source_raw, terminal_raw)
+            if record:
+                PATH_READING_RECORD.setdefault("paths", {})[f"p_{path_raw}"] = record
+        for step in steps:
+            if step["relation"] != "physical_pathline":
+                connector_candidates[(step["tail"], step["head"])].append(step["candidate"])
+        sequence: list[tuple[str, str]] = [(step["id"], step["relation"]) for step in steps]
 
         path_plans.append(
             {
@@ -769,6 +1119,15 @@ def extract_network() -> tuple[
                 "terminal_raw": terminal_raw,
                 "sequence": sequence,
             }
+        )
+
+    if PATH_READING_RECORD:
+        PATH_READING_RECORD["rule"] = (
+            "every listed reach is an arc in its digitized direction, except a run of listed "
+            "reaches that lies farther from the rest of its path than the rest spans, which is "
+            "not built; a logical connector is kept only where it bridges a gap between listed "
+            "reaches in the downstream direction; the place of use is connected to every "
+            "downstream end of the listed reaches that the path's own diversion reaches"
         )
 
     if REPAIR_INPUT_DUMP:
@@ -812,6 +1171,13 @@ def extract_network() -> tuple[
     accepted_connectors, rejected_connectors, connector_decisions = acyclic_connector_selection(
         physical_edges, connector_candidates
     )
+    if PATH_READING == "set" and rejected_connectors:
+        # Under the set reading the repair is only a check: a rejection would mean that the
+        # reading itself closes a cycle, and dropping paths to hide that is what it replaced.
+        raise ValueError(
+            "The set reading closes a cycle through: "
+            + ", ".join(row["connector"] for row in rejected_connectors)
+        )
     rejected_ids = {row["connector"] for row in rejected_connectors}
     dropped_paths: list[dict[str, str]] = []
     retained_source_raws: set[str] = set()
@@ -939,12 +1305,32 @@ def extract_network() -> tuple[
             }
         )
 
-    # Check every augmented path is continuous before publishing it.
+    # Check every augmented path is continuous before publishing it. A path read as a set
+    # is not a sequence; it must instead be acyclic, reach its place of use from its own
+    # diversion, and connect the place of use only from nodes no other arc of the path leaves.
+    read_as_sets = PATH_READING_RECORD.get("paths", {})
     for path in paths:
         selected = sorted(
             (row for row in path_edge_rows if row["path_id"] == path["path_id"]),
             key=lambda row: row["sequence"],
         )
+        if path["path_id"] in read_as_sets:
+            arcs = [edge_lookup[row["edge_id"]] for row in selected]
+            if not _is_acyclic(arcs):
+                raise ValueError(f"Path {path['path_id']} is cyclic as read.")
+            if path["terminal_node"] not in reachable_nodes(path["source_node"], arcs):
+                raise ValueError(f"Path {path['path_id']} does not reach its terminal.")
+            leaving: dict[str, set[str]] = defaultdict(set)
+            for arc in arcs:
+                leaving[arc["from_node"]].add(arc["to_node"])
+            for arc in arcs:
+                if (
+                    arc["edge_role"] == "derived_connector"
+                    and arc["to_node"] == path["terminal_node"]
+                    and leaving[arc["from_node"]] != {path["terminal_node"]}
+                ):
+                    raise ValueError(f"Path {path['path_id']} attaches its terminal at an interior node.")
+            continue
         current = path["source_node"]
         for relation in selected:
             edge = edge_lookup[relation["edge_id"]]
@@ -1607,6 +1993,10 @@ def build() -> dict[str, Any]:
         # Only present when the path table needed an acyclic reduction, so benchmarks
         # whose connectors were already acyclic keep their previous validation report.
         report["topology_reduction"] = dict(TOPOLOGY_REDUCTION)
+    if PATH_READING_RECORD:
+        # Only present when the set reading changed a path, so a benchmark whose listings
+        # are all in flow order keeps its previous validation report.
+        report["path_reading"] = dict(PATH_READING_RECORD)
     report["per_claimant"] = {
         row["claimant_id"]: {
             "assigned_wrlu_polygons": row["assigned_wrlu_polygons"],

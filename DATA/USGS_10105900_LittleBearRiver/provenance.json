@@ -1,0 +1,19 @@
+{
+ "site": "10105900",
+ "name": "LITTLE BEAR RIVER AT PARADISE, UT",
+ "parameter": "00060 discharge, cfs",
+ "statistic": "monthly mean",
+ "service_request": "https://waterservices.usgs.gov/nwis/stat/?format=rdb&sites=10105900&statReportType=monthly&statTypeCd=mean&parameterCd=00060",
+ "retrieved": "2026-10-11 06:38:32 -04:00",
+ "statistics_note": "The service computes the monthly statistics from approved daily-mean data (file header).",
+ "data_file": "10105900_monthly_mean_discharge.rdb",
+ "rows": 403,
+ "first_month": "1992-10",
+ "last_month": "2026-04",
+ "years_with_may_to_september_complete": [
+  1993,
+  2025,
+  33
+ ],
+ "sha256": "35aaf4bbc215b1b372f3aba600b3229e0a2a123a9b428eb078c8629e5f3c89ec"
+}

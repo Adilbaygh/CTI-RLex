@@ -18,9 +18,9 @@ Add --dry-run to print the sequence and check that every script it names exists,
 running anything: a real rerun rewrites every timing in results/, and the manuscript quotes
 them, so it belongs at the point where the documents are regenerated too.
 
-Two steps need the raw open-data layers rather than the published benchmarks. They are
-skipped, with a line saying so, unless LEXIMIN_DATASETS points at that root; every other
-step runs for a reader who has the repository alone.
+One step, the network map of Figure 1, needs the raw open-data layers rather than the
+published benchmarks. It is skipped, with a line saying so, unless LEXIMIN_DATASETS points at
+that root; every other step runs for a reader who has the repository alone.
 
 It writes only into results/. It does not commit and does not push.
 """
@@ -56,9 +56,9 @@ MIDDLE_STEPS: tuple[tuple[int, str, tuple[str, ...]], ...] = (
       "--output", "results/cti_rlex_verification.json")),
     (5, "lexicographic vector against a common floor",
      ("scripts/revision_experiments.py",)),
-    (6, "component-level analysis of the ten-claimant instance",
+    (6, "component-level analysis of the county instance",
      ("scripts/component_analysis.py",)),
-    (7, "audit layer of the ten-claimant instance",
+    (7, "audit layer of the county instance",
      ("scripts/cache_valley_audit.py",)),
     (8, "parameter provenance and coefficient tables",
      ("scripts/benchmark_parameter_tables.py",)),
@@ -74,13 +74,49 @@ MIDDLE_STEPS: tuple[tuple[int, str, tuple[str, ...]], ...] = (
      ("scripts/scalability_experiment.py",)),
 )
 
-# Steps 16 to 19: these read what everything above wrote, so they come last.
+# Steps 15 to 24: the measurements the reviewers asked for. Steps 15 to 17 are the third
+# reviewer's; steps 18 and 19 answer Reviewer 1, point 2.2: the three-claimant instance
+# against the canal flows measured in 2025, and the same instance re-solved with each
+# claimant's demand set to its measured diversion. Step 20 answers point 2.1: both instances
+# with CTI-RLex subordinated to the decree priority of the claimants' water rights. Steps 21
+# and 22 answer point 1.2: the guarantees on the convex hull of the scenarios, and the
+# three-claimant guarantees in the river's seasons of 1993 to 2025. Step 23 answers Reviewer 2
+# and Reviewer 1, point 1.4: both instances with canal conveyance losses two, four and six times
+# the published rate. Step 24 returns to point 2.1 with priority tiers assigned to rights rather
+# than to claimants, a post hoc analysis. Each reads only the released benchmarks and, for
+# steps 18 to 24, the observations, water-right records and gauge record kept beside them, so
+# they can run in any order; they come after the experiments because they are the longest
+# steps after the factorial design.
+REVIEW_STEPS: tuple[tuple[int, str, tuple[str, ...]], ...] = (
+    (15, "optimality certificates, tolerance grid and near-tied levels",
+     ("scripts/numerical_certificates.py",)),
+    (16, "what the objective hierarchy determines, and the comparators' faces",
+     ("scripts/flow_uniqueness.py",)),
+    (17, "monotone realization across nested scenarios",
+     ("scripts/monotone_realization.py",)),
+    (18, "the three-claimant instance against the canal flows measured in 2025",
+     ("scripts/station_comparison.py",)),
+    (19, "the three-claimant instance with demand set to the measured diversions",
+     ("scripts/observed_demand_sensitivity.py",)),
+    (20, "the priority comparator PRIOR-LEX on both instances",
+     ("scripts/prior_lex.py",)),
+    (21, "the guarantees on the convex hull of the scenarios, both instances",
+     ("scripts/robust_vertex_check.py",)),
+    (22, "the three-claimant guarantees in the seasons of 1993 to 2025",
+     ("scripts/historical_reliability.py",)),
+    (23, "both instances with larger canal conveyance losses",
+     ("scripts/conveyance_loss_levels.py",)),
+    (24, "PRIOR-LEX with priority tiers assigned to rights (post hoc)",
+     ("scripts/prior_lex_rights.py",)),
+)
+
+# Steps 26 to 29: these read what everything above wrote, so they come last.
 CLOSING_STEPS: tuple[tuple[int, str, tuple[str, ...]], ...] = (
-    (16, "published CSV tables and figures", ("scripts/create_results_artifacts.py",)),
-    (17, "Figure 4", ("scripts/update_figure4_two_panel.py",)),
-    (18, "figure map, resolution, printed type size and greyscale check",
+    (26, "published CSV tables and figures", ("scripts/create_results_artifacts.py",)),
+    (27, "Figure 4", ("scripts/update_figure4_two_panel.py",)),
+    (28, "figure map, resolution, printed type size and greyscale check",
      ("scripts/verify_publication_figures.py",)),
-    (19, "machine and solver versions", ("scripts/record_environment.py",)),
+    (29, "machine and solver versions", ("scripts/record_environment.py",)),
 )
 
 
@@ -146,7 +182,7 @@ def summary() -> list[tuple[str, str, str]]:
     methods = {row["method"]: row for row in experiments["method_comparison"]}
     util, rlex = methods["UTIL-BR"], methods["CTI-RLex proposed"]
     rigid, nominal = methods["CTI-RLex rigid"], methods["CTI-RLex nominal only"]
-    cache = revision["cache_valley_v3"]
+    cache = revision["cache_valley_v4"]
     factorial = [case["minimum_guarantee"] for case in experiments["sensitivity"]]
     sorted_base = sorted(verification["base_guarantees"].values())
 
@@ -162,7 +198,7 @@ def summary() -> list[tuple[str, str, str]]:
         ("CTI-RLex rigid guarantee", [rigid["minimum_guarantee"]], [0.3841], "{:.4f}"),
         ("sigma_2 CTI-RLex / PROP-BR",
          [cache["cti_rlex"]["sorted_rho"][1], cache["prop_br"]["sorted_rho"][1]],
-         [0.1374, 0.0564], "{:.4f}"),
+         [0.0689, 0.0564], "{:.4f}"),
         ("price of fairness",
          [share(util["nominal_beneficial_delivery_af"],
                 rlex["nominal_beneficial_delivery_af"])], [2.57], "{:.2f}%"),
@@ -207,7 +243,7 @@ def summary() -> list[tuple[str, str, str]]:
         print(f"    Table 6, {label:12s}{row['variables']:4d} var; "
               f"{constraints:4d} con; {row['median_runtime_seconds']:.3f} s" + spread(row))
     for row in scalability:
-        if (row["claimants"], row["scenarios"]) in {(2, 5), (10, 1), (10, 5), (3, 5)}:
+        if (row["claimants"], row["scenarios"]) in {(2, 5), (15, 1), (15, 5), (3, 5)}:
             print(f"    S14 {row['benchmark']:16s} K={row['claimants']:2d} S={row['scenarios']}   "
                   f"{row['runtime_s']:.3f} s" + spread(row))
     print(f"    revision, Cache Valley solve   {cache['cti_rlex']['runtime_s']:.3f} s")
@@ -216,7 +252,121 @@ def summary() -> list[tuple[str, str, str]]:
           f"{environment['operating_system']}")
     print(f"           Python {environment['python']}, NumPy {environment['numpy']}, "
           f"SciPy {environment['scipy']}")
+    review_summary()
     return drifted
+
+
+def review_summary() -> None:
+    """Print the measurements of steps 15 to 24, which the revised article will quote.
+
+    They are not compared with anything yet: the article that prints them is being written
+    from these files. Once it is, the values it commits to belong among the invariants above.
+    """
+
+    certificates = json.loads((RESULTS / "numerical_certificates.json").read_text(encoding="utf-8"))
+    uniqueness = json.loads((RESULTS / "flow_uniqueness.json").read_text(encoding="utf-8"))
+    monotone = json.loads((RESULTS / "monotone_realization.json").read_text(encoding="utf-8"))
+    stations = json.loads((RESULTS / "station_comparison.json").read_text(encoding="utf-8"))
+    measured = json.loads((RESULTS / "observed_demand_sensitivity.json").read_text(encoding="utf-8"))
+    priority = json.loads((RESULTS / "prior_lex.json").read_text(encoding="utf-8"))
+    hull = json.loads((RESULTS / "robust_vertex_check.json").read_text(encoding="utf-8"))
+    history = json.loads((RESULTS / "historical_reliability.json").read_text(encoding="utf-8"))
+    losses = json.loads((RESULTS / "conveyance_loss_levels.json").read_text(encoding="utf-8"))
+    rights = json.loads((RESULTS / "prior_lex_rights.json").read_text(encoding="utf-8"))
+    print("")
+    print("  measured for the reviewers (steps 15 to 24)")
+    for name, item in certificates["instances"].items():
+        grid, tie = item["grid"], item["near_tie"]
+        closest = item["closest_distinct_levels"]["closest_distance"]
+        print(f"    {name:16s} certificates: {item['certificates']['linear_programs']} LPs, "
+              f"relative gap <= {item['certificates']['max_relative_gap']:.1e}, "
+              f"dual residual <= {item['certificates']['max_dual_residual']:.1e}")
+        retried = grid.get("failed_because_a_program_returned_no_optimum", 0)
+        print(f"    {'':16s} tolerance grid: {grid['points']} points, {len(grid['failed'])} failed "
+              f"({retried} with a program returning no optimum, {grid.get('of_those_completed_with_fallbacks', 0)} "
+              f"of them complete with fallbacks, largest shift "
+              f"{grid.get('max_guarantee_shift_of_points_completed_with_fallbacks')}), "
+              f"largest guarantee shift {grid['max_guarantee_shift']:.1e} "
+              f"({grid['max_guarantee_shift_with_every_tolerance_at_most_1e-6']:.1e} with every tolerance <= 1e-6), "
+              f"four decimals everywhere: {grid['every_point_agrees_at_four_decimals']}")
+        print(f"    {'':16s} near tie: separated above 10x tolerance: "
+              f"{tie['separated_whenever_the_measured_distance_exceeds_ten_times_the_tolerance']}, merged at or "
+              f"below it: {tie['merged_whenever_the_measured_distance_is_at_most_the_tolerance']}; "
+              f"closest distinct levels {closest if closest is None else f'{closest:.4f}'}")
+    for name, item in uniqueness["instances"].items():
+        families = item["cti_rlex"]["families"]
+        cells, sources = families["period_service_ratio"], families["source_seasonal_injection_af"]
+        print(f"    {name:16s} undetermined: {cells['undetermined']} of {cells['quantities']} cells "
+              f"(widest {cells['largest_undetermined_width']:.3f}), {sources['undetermined']} of "
+              f"{sources['quantities']} source totals (widest {sources['largest_undetermined_width']:.1f} acre-ft); "
+              f"unresolved: {item['cti_rlex']['unresolved_quantities']}; "
+              f"repeat identical: {item['reproducibility']['repeated_solve_is_identical_value_for_value']}")
+        for rule, comparator in item["comparators"].items():
+            best = comparator["most_favorable_sorted_vector_on_the_face"]
+            print(f"    {'':16s} {rule}: realized guarantees determined: "
+                  f"{comparator['every_realized_guarantee_is_determined']}; most favorable sorted vector "
+                  f"{best if best is None else [round(value, 4) for value in best]}"
+                  + (f" (blocking tolerance {comparator['most_favorable_vector_blocking_tolerance']:g})"
+                     if comparator.get("most_favorable_vector_blocking_tolerance") else ""))
+    for name, item in monotone["instances"].items():
+        fixed = item.get("with_the_published_guarantee_vector", {})
+        print(f"    {name:16s} monotone realization on the face: "
+              f"{item['a_monotone_realization_exists_on_the_published_face']} (least violation "
+              f"{item['least_total_violation_on_the_published_face_af']:.1f} acre-ft); with the vector fixed: "
+              f"nominal cost {round(fixed.get('nominal_delivery_cost_af', float('nan')), 1) + 0.0:.1f}, "
+              f"contingency cost {round(fixed.get('weighted_contingency_delivery_cost_af', float('nan')), 1) + 0.0:.1f} "
+              f"acre-ft")
+    print(f"    observed 2025 canal flows (Reviewer 1, 2.2): every month agrees with the viewer's monthly "
+          f"summary: {stations['every_2025_month_agrees_with_the_viewer_summary']}")
+    for station, verdict in stations["hypothesis_H_2_2"].items():
+        tested = len(verdict["tested_months"])
+        print(f"    {'':16s} station {station} at {verdict['compared_at']}: within a factor of two of the plan in "
+              f"{verdict['months_within_factor_of_plan']}/{tested} months, of the requirement in "
+              f"{verdict['months_within_factor_of_requirement']}/{tested}; peak {verdict['observed_peak_month']}")
+    print("    demand set to the measured 2025 diversions (Reviewer 1, 2.2):")
+    for name, variant in measured["variants"].items():
+        methods, item = variant["methods"], variant["indicators"]
+        print(f"    {'':16s} {name}: CTI-RLex {[round(value, 4) for value in methods['CTI-RLex proposed']['sorted']]}, "
+              f"PROP-BR {[round(value, 4) for value in methods['PROP-BR']['sorted']]}, UTIL-BR minimum "
+              f"{methods['UTIL-BR']['minimum_guarantee']:.4f}; price of fairness {item['price_of_fairness_percent']:.2f}%, "
+              f"value of recourse {item['value_of_recourse_absolute']:.4f}, robustness cost {item['robustness_cost_percent']:.1f}%")
+    print("    CTI-RLex subordinated to decree priority (Reviewer 1, 2.1):")
+    for name, item in priority["instances"].items():
+        for variant, comparison in item["against_cti_rlex"].items():
+            moved = {claimant: round(change, 4) for claimant, change in comparison["claimants_that_moved"].items()}
+            print(f"    {name:16s} {variant}: tiers {[len(tier) for tier in comparison['tiers']]}, minimum "
+                  f"{comparison['minimum_guarantee']['CTI-RLex']:.4f} -> {comparison['minimum_guarantee']['PRIOR-LEX']:.4f}, "
+                  f"moved {moved or 'none'}, nominal {comparison['nominal_delivery_change_af']:+.1f} acre-ft")
+    print("    guarantees on the convex hull of the scenarios, plan fixed (Reviewer 1, 1.2):")
+    for name, item in hull["instances"].items():
+        combinations = item["combinations"]
+        print(f"    {name:16s} {combinations['count']} combinations: smallest share of the guarantee "
+              f"{combinations['smallest_share']:.9f}, {combinations['below_full_guarantee']} below 1; every "
+              f"scenario delivers it: {item['every_scenario_delivers_the_full_guarantee']}")
+    print("    the three-claimant guarantees in the seasons of 1993 to 2025, plan fixed (Reviewer 1, 1.2):")
+    for name, summary in history["summary"].items():
+        rates = {claimant: f"{rate:.0%}" for claimant, rate in summary["reliability"].items()}
+        print(f"    {'':16s} {name}: every promise kept in {summary['system_reliability']:.0%} of the years; "
+              f"by claimant {rates}; years beyond budget {summary['years_beyond_budget'] or 'none'}")
+    expectations = history["expectations"]
+    print(f"    {'':16s} Paradise-Highline common service: severe {expectations['severe_paradise_highline_common_service']:.4f}, "
+          f"lowest year {expectations['driest_year_for_paradise_highline']} "
+          f"{expectations['lowest_year_paradise_highline_common_service']:.4f}")
+    print("    canal conveyance losses times k (Reviewer 2; Reviewer 1, 1.4):")
+    for name, item in losses["instances"].items():
+        for k, level in item["levels"].items():
+            methods = level["methods"]
+            print(f"    {name:16s} k={k}: median route efficiency {level['route_conveyance_efficiency']['median']:.3f}, "
+                  f"CTI-RLex minimum {methods['CTI-RLex']['minimum_guarantee']:.4f}, UTIL-BR minimum "
+                  f"{methods['UTIL-BR']['minimum_guarantee']:.4f}, first difference from PROP-BR at "
+                  f"{level['cti_rlex_against_prop_br']['first_differing_position']}, price of fairness "
+                  f"{level['price_of_fairness_percent']:.2f}%")
+    print("    PRIOR-LEX with tiers assigned to rights (Reviewer 1, 2.1; post hoc):")
+    for name, item in rights["instances"].items():
+        moved = {claimant: round(change, 4) for claimant, change in item["change_against_claimant_level_prior_lex"].items()
+                 if abs(change) > 1e-4}
+        print(f"    {name:16s} split {sorted(item['split_claimants']) or 'none'}; moved against claimant-level "
+              f"PRIOR-LEX {moved or 'none'}; least served {item['least_served']} at {item['minimum_guarantee']:.4f}")
 
 
 def main() -> None:
@@ -246,16 +396,20 @@ def main() -> None:
         run(*arguments)
         done(began)
 
-    started = step(14, "acyclicity-repair order sensitivity and excluded service areas")
-    if DATASETS:
-        run("scripts/excluded_service_areas.py")
-        run("scripts/connector_order_experiment.py", "--build", "--rebuild")
-    else:
-        print("   skipped: these rebuild from the raw Utah layers; set LEXIMIN_DATASETS "
-              "to the open-data root first")
+    # The county benchmark reads every official path as the set of reaches it lists, so no
+    # connector is rejected and no service area is excluded; the repair-order and excluded-
+    # area analyses of version 3 have nothing left to measure. What replaces them is the
+    # record of what the reading changed, and it needs only the released benchmark.
+    started = step(14, "path reading of the county instance")
+    run("scripts/path_reading_table.py")
     done(started)
 
-    started = step(15, "benchmark network map (Figure 1)")
+    for number, title, arguments in REVIEW_STEPS:
+        began = step(number, title)
+        run(*arguments)
+        done(began)
+
+    started = step(25, "benchmark network map (Figure 1)")
     # The only producer that needs the open Utah layers rather than the published
     # benchmark. A reader who has the repository but not the layers keeps every other step.
     if DATASETS and Path(DATASETS).exists():
@@ -269,7 +423,7 @@ def main() -> None:
         run(*arguments)
         done(began)
 
-    started = step(20, "test suite")
+    started = step(30, "test suite")
     run("-m", "pytest", "-q")
     done(started)
 

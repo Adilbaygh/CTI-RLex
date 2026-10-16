@@ -1,6 +1,6 @@
 """The three-claimant headline numbers, pinned where a reviewer will run them.
 
-test_cache_valley_benchmark.py pins the ten-claimant instance to six decimals, but the
+test_cache_valley_benchmark.py pins the fifteen-claimant instance to six decimals, but the
 numbers the abstract leads with come from the three-claimant Little Bear River instance,
 and no test asserted them. test_cti_rlex.py checks that the first leximin level lies
 strictly between zero and one and that one company is served better than another;

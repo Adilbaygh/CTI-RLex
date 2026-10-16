@@ -42,8 +42,9 @@ ROOT = Path(__file__).resolve().parents[1]
 FIGURE_DIR = ROOT / "results" / "figures"
 BENCHMARK_DIR = ROOT / "DATA" / "LittleBearRiver_2025_Benchmark"
 
-# The canvas the figures are drawn on. Both producing scripts author at this width and let
-# the journal reduce, which is why the printed width below is what legibility is judged on.
+# The canvas the figures are drawn on. The producing scripts author at this width, within a
+# fraction of a per cent, and let the journal reduce, which is why the printed width below
+# is what legibility is judged on.
 CANVAS_CM = 7.1 * 2.54
 
 # article figure -> (file stem without extension, printed width in cm, what it shows)
@@ -95,12 +96,14 @@ FIGURES: dict[str, tuple[Path, float, str]] = {
 # in the directory knows the article does not print it.
 UNUSED = FIGURE_DIR / "Figure_6_method_tradeoff"
 
-# Figure 2 is a drawn schematic of the solution workflow, not a plot of any result. No
-# script regenerates it and none should: the SVG shipped beside the PNG is its editable
-# source. Naming it here keeps a reader from hunting for a producer that does not exist,
-# and keeps the rest of the mapping honest -- every other figure in the article comes from
-# a file in results/. It is still checked for resolution and printed type size, because it
-# is printed at the same size as the others.
+# Figure 2 is a drawn schematic of the solution workflow, not a plot of any result, so it
+# is the one figure here that no result file stands behind. It is drawn by a script all the
+# same -- draw_figure2_workflow.py -- because its boxes quote the method sections, and
+# wording redrawn by hand drifts away from the text it names: the hand-drawn version of
+# this figure still said "tie-break LPs" two revisions after the method stopped doing
+# that. Naming it here keeps the rest of the mapping honest -- every other figure comes
+# from a file in results/ -- and it is checked for resolution and printed type size like
+# the others, because it is printed at the same size.
 SCHEMATICS = frozenset({"Figure 2"})
 
 MINIMUM_PRINTED_POINTS = 7.0   # labels, annotations and tick text
@@ -188,7 +191,8 @@ def check_files() -> None:
                 note += f", subscripts {any_size:.1f} pt"
         print(f"  ok    {number}: {png.name}, {width}x{height} px, {note} - {subject}")
         if number in SCHEMATICS:
-            print("        drawn schematic, shipped as an asset; the SVG is its source")
+            print("        drawn schematic, not a plot of a result; "
+                  "draw_figure2_workflow.py writes it")
 
     if UNUSED.with_suffix(".png").exists():
         print(f"  note  {UNUSED.name} is produced but not printed by the article")

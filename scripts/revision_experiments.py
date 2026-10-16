@@ -38,7 +38,7 @@ from leximin.dag.solver import solve_cti_rlex  # noqa: E402
 OUTPUT = REPO / "results" / "revision_experiments.json"
 INSTANCES = {
     "little_bear_v2": REPO / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json",
-    "cache_valley_v3": REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json",
+    "cache_valley_v4": REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json",
 }
 
 

@@ -20,13 +20,28 @@ from the raw Utah layers with its own point-in-polygon test and no geospatial de
 ``selection.json`` is a cache and not an input -- delete it and the pass runs again and must
 write the same bytes back.
 
-Construction takes two passes. The acyclicity repair can leave a service area with no route
-at all, and which areas those are is known only after the repair has run -- but the shared
-source groups are derived from the claimant set, so they must be derived from the survivors.
-Pass one therefore stops as soon as the repair reports them; pass two rebuilds with the
-survivors as claimants while keeping pass one's path set, so the repair sees the same
-candidate connectors and reaches the same graph. ``scripts/rebuild_cache_valley.py`` drives
-both, and passes the survivor list between them through ``unrouted_claimants.json``.
+How the official paths are read is set by ``LEXIMIN_PATH_READING`` (see generate_benchmark.py).
+The default, "set", reads every path as the set of reaches it lists, less any run of reaches
+that lies farther from the rest of its path than the rest spans (one reach of La Sal Creek,
+named in five Logan River listings); no connector is rejected, every service area keeps its
+routes, and the build takes one pass. It writes version 4 of the benchmark, with all fifteen
+claimants that carry irrigated acreage.
+
+"sequential" is the reading of the released version 3, kept so that version can be rebuilt
+byte for byte. Under it construction takes two passes. The acyclicity repair can leave a
+service area with no route at all, and which areas those are is known only after the repair
+has run -- but the shared source groups are derived from the claimant set, so they must be
+derived from the survivors. Pass one therefore stops as soon as the repair reports them; pass
+two rebuilds with the survivors as claimants while keeping pass one's path set, so the repair
+sees the same candidate connectors and reaches the same graph.
+``scripts/rebuild_cache_valley.py`` drives both, and passes the survivor list between them
+through ``unrouted_claimants.json``.
+
+The head gates promoted to recourse controls and the diversion taken out of service in each
+restriction scenario are derived by rule from the built network (``derive_head_gates`` and
+``derive_full_outage_sources``). Version 3 carried both as lists recovered from its release;
+under the sequential reading the rules must return exactly those lists, and the build stops
+if they do not.
 
 Run with ``LEXIMIN_DATASETS`` pointing at the open-data root.
 """
@@ -53,32 +68,33 @@ TARGET = Path(os.environ["LEXIMIN_COUNTY_TARGET"]) if os.environ.get(
 COUNTY = "Cache"
 SELECTION = TARGET / "selection.json"
 UNROUTED = TARGET / "unrouted_claimants.json"
-BENCHMARK_ID = "cache_valley_2025_multiclaimant_v3"
+BENCHMARK_ID = (
+    "cache_valley_2025_multiclaimant_v4"
+    if gb.PATH_READING == "set"
+    else "cache_valley_2025_multiclaimant_v3"
+)
 
 # The keys a cached selection must carry before it can be reused.
 REQUIRED = {"companies", "selected_paths", "terminal_to_company", "source_to_company", "path_terminal"}
 
-# Physical head gates promoted to recourse control assets alongside the sources: for each
-# claimant terminal node the last physical reach before the derived terminal connector.
-# The list is recovered from ``control_assets`` in the released benchmark, in the released
-# order; it cannot be derived here, because the reduced graph that identifies each head gate
-# only exists inside the build. The surviving bytecode promotes no edges at all, which is
-# the single largest reason a build from it is smaller than the published program.
-EXTRA_CONTROL_EDGES = [
-    ("e_8949", "Head gate at n_16800"),
-    ("e_5868", "Head gate at n_16801"),
-    ("e_15158", "Head gate at n_16802"),
-    ("e_13081", "Head gate at n_16803"),
-    ("e_9834", "Head gate at n_16804"),
-    ("e_9121", "Head gate at n_16816"),
-    ("e_9861", "Head gate at n_16817"),
-    ("e_8851", "Head gate at n_16823"),
-    ("e_8842", "Head gate at n_16824"),
-    ("e_8940", "Head gate at n_16827"),
-]
-
-# The same head gates, indexed by the terminal node each one feeds.
-HEAD_GATES = {label.rsplit(" ", 1)[-1]: edge_id for edge_id, label in EXTRA_CONTROL_EDGES}
+# Physical head gates promoted to recourse control assets alongside the sources, one per
+# claimant terminal (``derive_head_gates``). The list below is the one version 3 carried,
+# recovered from ``control_assets`` in its release; it is no longer an input. It stays as the
+# reference the rule must reproduce under the sequential reading. The surviving bytecode
+# promotes no edges at all, which is the single largest reason a build from it is smaller
+# than the published program.
+RELEASED_V3_HEAD_GATES = {
+    "n_16800": "e_8949",
+    "n_16801": "e_5868",
+    "n_16802": "e_15158",
+    "n_16803": "e_13081",
+    "n_16804": "e_9834",
+    "n_16816": "e_9121",
+    "n_16817": "e_9861",
+    "n_16823": "e_8851",
+    "n_16824": "e_8842",
+    "n_16827": "e_8940",
+}
 
 # A restricted subsystem is throttled on its reaches as well as on its shared envelope: the
 # head gates of its own terminals carry this capacity factor, the level the Little Bear
@@ -87,10 +103,104 @@ RESTRICTED_HEAD_GATE_FACTOR = 0.35
 
 # In a subsystem-restriction scenario one diversion of the restricted subsystem is taken
 # fully out of service and the rest of that subsystem runs at 0.2, so the instance carries a
-# genuine disabled-source contingency rather than a uniform derating. In both restricted
-# subsystems the disabled diversion is the smallest one (35 cfs design envelope): s_15957 in
-# subsystem_03 and s_10434 in subsystem_02. Recovered from the released source_limits table.
-FULL_OUTAGE_SOURCES = {"s_15957", "s_10434"}
+# genuine disabled-source contingency rather than a uniform derating. The disabled diversion
+# is the smallest surface diversion of the subsystem (``derive_full_outage_sources``). In
+# version 3 that was s_15957 in subsystem_03 and s_10434 in subsystem_02, both 35 cfs, as its
+# released source_limits table records; the rule must return them under the sequential
+# reading.
+RELEASED_V3_FULL_OUTAGE_SOURCES = {"s_15957", "s_10434"}
+
+
+def derive_head_gates(edges: list[dict], terminal_nodes) -> dict[str, str]:
+    """One head gate per claimant terminal: the reach that feeds its main turnout.
+
+    A reach feeds a terminal when it enters the terminal itself, or when it ends at a node
+    whose every outgoing arc enters that terminal -- a turnout of that service area and of
+    nothing else. A reach that ends at a junction which also continues to other places of
+    use is not a head gate of any one of them. Of the reaches feeding a terminal, the one
+    with the largest base capacity is its head gate, ties going to the lowest flowline
+    number. On the version 3 network the rule returns exactly the released list.
+    """
+
+    outgoing: dict[str, list[dict]] = collections.defaultdict(list)
+    incoming: dict[str, list[dict]] = collections.defaultdict(list)
+    for edge in edges:
+        outgoing[edge["from_node"]].append(edge)
+        incoming[edge["to_node"]].append(edge)
+    gates: dict[str, str] = {}
+    for terminal in sorted(terminal_nodes, key=lambda node: int(node[2:])):
+        feeders: list[dict] = []
+        for arc in incoming.get(terminal, []):
+            if arc["edge_role"] == "physical":
+                feeders.append(arc)
+                continue
+            tail = arc["from_node"]
+            if all(other["to_node"] == terminal for other in outgoing[tail]):
+                feeders.extend(edge for edge in incoming.get(tail, []) if edge["edge_role"] == "physical")
+        if feeders:
+            best = max(
+                feeders,
+                key=lambda edge: (float(edge["capacity_cfs_base"]), -int(edge["source_record_id"])),
+            )
+            gates[terminal] = best["edge_id"]
+    return gates
+
+
+def derive_full_outage_sources(
+    groups: dict, restricted: list[str], sources: list[dict], edges: list[dict], terminals
+) -> set[str]:
+    """In each restricted subsystem, the smallest surface diversion that can be lost.
+
+    The candidates are the subsystem's surface diversions, smallest design envelope first,
+    ties to the lowest node number. A candidate qualifies when every claimant terminal stays
+    reachable from the remaining sources without it, because the validator requires every
+    terminal to be reachable in every scenario: an outage that cut a claimant off would be a
+    different experiment. A subsystem with no qualifying diversion contributes none, and its
+    restriction scenario is then a pure derating. On version 3 the rule returns the
+    released pair, s_15957 and s_10434, the smallest diversions of the two subsystems.
+    """
+
+    by_id = {row["source_id"]: row for row in sources}
+    outgoing: dict[str, list[str]] = collections.defaultdict(list)
+    for edge in edges:
+        outgoing[edge["from_node"]].append(edge["to_node"])
+
+    def all_reached_without(lost: str) -> bool:
+        starts = [row["node_id"] for row in sources if row["source_id"] != lost]
+        seen, stack = set(starts), list(starts)
+        while stack:
+            node = stack.pop()
+            for following in outgoing.get(node, ()):
+                if following not in seen:
+                    seen.add(following)
+                    stack.append(following)
+        return all(terminal in seen for terminal in terminals)
+
+    chosen: set[str] = set()
+    for group in restricted:
+        diversions = sorted(
+            (
+                by_id[source]
+                for source in groups[group]["source_ids"]
+                if source in by_id and by_id[source]["source_class"] == "surface_diversion"
+            ),
+            key=lambda row: (float(row["design_envelope_cfs"]), int(row["source_id"][2:])),
+        )
+        qualifying = next((row for row in diversions if all_reached_without(row["source_id"])), None)
+        if qualifying is not None:
+            chosen.add(qualifying["source_id"])
+    return chosen
+
+
+def restricted_groups(groups: dict) -> list[str]:
+    """The two subsystems that pool the most sources carry the restriction scenarios.
+
+    The surviving bytecode simply took the first two group identifiers; the released
+    benchmark restricts subsystem_03 and subsystem_02, the two largest, and that is what
+    is reproduced here.
+    """
+
+    return sorted(sorted(groups), key=lambda group: (-len(groups[group]["source_ids"]), group))[:2]
 
 
 # ------------------------------------------------------------------ geometry
@@ -334,15 +444,13 @@ def build_groups(discovery: dict) -> dict:
 
 # ------------------------------------------------------------------ scenarios
 
-def build_scenarios(groups: dict) -> tuple[list[dict], dict, dict, dict]:
+def build_scenarios(
+    groups: dict, head_gates: dict[str, str], full_outage: set[str]
+) -> tuple[list[dict], dict, dict, dict]:
     """Equal-budget contingency scenarios with binding group derating."""
 
     ordered = sorted(groups)
-    # The two subsystems that pool the most sources carry the single-subsystem restriction
-    # scenarios. The surviving bytecode simply took the first two group identifiers; the
-    # released benchmark restricts subsystem_03 and subsystem_02, the two largest, and that
-    # is what is reproduced here.
-    largest = sorted(ordered, key=lambda group: (-len(groups[group]["source_ids"]), group))[:2]
+    largest = restricted_groups(groups)
 
     specs = [
         {
@@ -415,14 +523,14 @@ def build_scenarios(groups: dict) -> tuple[list[dict], dict, dict, dict]:
             "reservoir_release": 0.7,
             "surface_diversion": 0.7,
             "overrides": {
-                source: (0.0 if source in FULL_OUTAGE_SOURCES else 0.2)
+                source: (0.0 if source in full_outage else 0.2)
                 for source in sorted(groups[group]["source_ids"])
             },
         }
         edge_factors[scenario_id] = {
-            HEAD_GATES[node]: RESTRICTED_HEAD_GATE_FACTOR
+            head_gates[node]: RESTRICTED_HEAD_GATE_FACTOR
             for node in sorted(groups[group]["terminal_nodes"])
-            if node in HEAD_GATES
+            if node in head_gates
         }
     return specs, factors, source_factors, edge_factors
 
@@ -456,6 +564,12 @@ def main() -> None:
     # On the first pass that is every qualifying company and the build stops below; on the
     # second it is the survivors, which is the set the released groups were derived from.
     unrouted = unrouted_company_ids()
+    if unrouted and gb.PATH_READING == "set":
+        # A report left behind by a build under the sequential reading. The set reading
+        # repairs nothing, so it has no second pass and nothing may be dropped on its behalf.
+        print(f"ignoring {UNROUTED.name}: it was written under the sequential reading")
+        UNROUTED.unlink()
+        unrouted = set()
     if unrouted:
         print(f"without a route (pass 1): {len(unrouted)}")
     companies = {
@@ -480,18 +594,40 @@ def main() -> None:
     for group_id, spec in groups.items():
         print(f"   {group_id}: {len(spec['source_ids'])} sources, {len(spec['terminal_nodes'])} terminals")
 
-    scenarios, factors, source_factors, edge_factors = build_scenarios(groups)
-
     gb.BENCHMARK_ID = BENCHMARK_ID
     gb.COMPANIES = companies
     gb.SELECTED_PATHS = set(discovery["selected_paths"])
+
+    # The head gates and the outage diversions are read off the network the build is about to
+    # publish, so it is extracted once here; the build extracts it again, identically.
+    print(f"path reading        : {gb.PATH_READING}")
+    _, network_edges, network_sources, _, _ = gb.extract_network()
+    claimant_terminals = [gb.node_id(spec["terminal_raw"]) for spec in companies.values()]
+    head_gates = derive_head_gates(network_edges, claimant_terminals)
+    full_outage = derive_full_outage_sources(
+        groups, restricted_groups(groups), network_sources, network_edges, claimant_terminals
+    )
+    print(f"head gates          : {len(head_gates)} of {len(claimant_terminals)} terminals")
+    print(f"restricted groups   : {restricted_groups(groups)}; disabled diversions: {sorted(full_outage)}")
+    if gb.PATH_READING == "sequential" and unrouted:
+        # The second pass of the sequential reading is version 3, and the rules must return
+        # what version 3 carried.
+        if head_gates != RELEASED_V3_HEAD_GATES:
+            raise ValueError(f"head-gate rule does not reproduce version 3: {head_gates}")
+        if full_outage != RELEASED_V3_FULL_OUTAGE_SOURCES:
+            raise ValueError(f"outage rule does not reproduce version 3: {sorted(full_outage)}")
+
+    scenarios, factors, source_factors, edge_factors = build_scenarios(groups, head_gates, full_outage)
     gb.SOURCE_GROUP_SPECS = groups
     gb.GROUP_SCENARIO_FACTORS = factors
     gb.SOURCE_SCENARIO_FACTORS = source_factors
     gb.EDGE_SCENARIO_FACTORS = edge_factors
     gb.SCENARIO_SPECS = scenarios
     gb.SOURCE_ROLE_NAMES = {}
-    gb.EXTRA_CONTROL_EDGES = EXTRA_CONTROL_EDGES
+    gb.EXTRA_CONTROL_EDGES = [
+        (gate, f"Head gate at {terminal}")
+        for terminal, gate in sorted(head_gates.items(), key=lambda item: int(item[0][2:]))
+    ]
     gb.MEASUREMENT_STATION_IDS = set()
     gb.HERE = TARGET
     gb.OUT = TARGET / "data"
@@ -515,6 +651,37 @@ def main() -> None:
         "subsystems": {group_id: spec["source_ids"] for group_id, spec in groups.items()},
         "acyclic_reduction": reduction,
     }
+    if gb.PATH_READING == "set":
+        # Version 3's summary carries none of these keys, so its rebuild stays byte-identical.
+        record = gb.PATH_READING_RECORD.get("paths", {})
+        detached = gb.PATH_READING_RECORD.get("listed_reaches_not_built", {})
+        summary["path_reading"] = {
+            "rule": gb.PATH_READING_RECORD.get("rule", ""),
+            "paths_read_as_sets": sorted(record, key=lambda path: int(path[2:])),
+            "walk_connectors_not_built": sorted(
+                {connector for row in record.values() for connector in row["walk_connectors_not_built"]}
+            ),
+            "terminal_connectors_of_those_paths": sorted(
+                {connector for row in record.values() for connector in row["terminal_connectors"]}
+            ),
+            "listed_reaches_not_reachable_from_their_diversion": sorted(
+                {reach for row in record.values() for reach in row["listed_reaches_not_reachable_from_the_diversion"]}
+            ),
+            "paths_with_listed_reaches_not_built": sorted(detached, key=lambda path: int(path[2:])),
+            "listed_reaches_not_built": sorted(
+                {reach for runs in detached.values() for run in runs for reach in run["reaches"]},
+                key=lambda reach: int(reach[2:]),
+            ),
+            "detail": "validation_report.json, key path_reading",
+        }
+        summary["head_gates"] = dict(sorted(head_gates.items(), key=lambda item: int(item[0][2:])))
+        summary["head_gates_differing_from_v3"] = {
+            terminal: {"v3": gate, "v4": head_gates.get(terminal, "")}
+            for terminal, gate in RELEASED_V3_HEAD_GATES.items()
+            if head_gates.get(terminal) != gate
+        }
+        summary["restricted_subsystems"] = restricted_groups(groups)
+        summary["disabled_diversions"] = sorted(full_outage)
     (TARGET / "discovery_summary.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )

@@ -1,0 +1,1325 @@
+{
+ "design": "canal reach efficiency eta -> eta ** k (canal loss rate 0.5 % per km times k); stream reaches, logical connectors, effort coefficients and all other data as published",
+ "chosen": "requirements/decisions.md, 2026-10-15; expectations in requirements/hypotheses.md, H-R2.1",
+ "multipliers": [
+  1,
+  2,
+  4,
+  6
+ ],
+ "canal_loss_rate_percent_per_km": {
+  "1": 0.5,
+  "2": 1.0,
+  "4": 2.0,
+  "6": 3.0
+ },
+ "water_rights": {
+  "file": "DATA/Utah_Water_Rights_2026/points_of_diversion.csv",
+  "sha256": "182cef4999fbdd991b6ea21789779e8ae4e508f12b5afaaf2f8d70ae9bf35b6b",
+  "retrieved_utc": "2026-10-11T18:34:25+00:00",
+  "layer_data_last_edit_utc": "2026-10-10T01:04:29.141000+00:00"
+ },
+ "instances": {
+  "little_bear_v2": {
+   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+   "canal_reaches": 9,
+   "k1_against_published": {
+    "largest_guarantee_shift": {
+     "CTI-RLex": 0.0,
+     "PROP-BR": 0.0,
+     "UTIL-BR": 0.0
+    },
+    "same_as_published": true
+   },
+   "levels": {
+    "1": {
+     "route_conveyance_efficiency": {
+      "routes": 12,
+      "minimum": 0.8970522024629701,
+      "median": 0.9412838180549656,
+      "maximum": 0.990483563194765
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_088": 12.539380669982133,
+      "company_130": 15.498944189347732
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_130": 0.41951076293707945,
+        "company_132": 0.41951076293707945,
+        "company_088": 0.4476976354639018
+       },
+       "sorted": [
+        0.41951076293707945,
+        0.41951076293707945,
+        0.4476976354639018
+       ],
+       "minimum_guarantee": 0.41951076293707945,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 5919.097890994499,
+       "weighted_contingency_beneficial_delivery_af": 5946.240468188143,
+       "maximum_residual": 3.410605131648481e-13
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.41951076293707945,
+        "company_132": 0.4195107629370794
+       },
+       "sorted": [
+        0.4195107629370794,
+        0.41951076293707945,
+        0.4476976354639018
+       ],
+       "minimum_guarantee": 0.4195107629370794,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 5919.097890994498,
+       "weighted_contingency_beneficial_delivery_af": 5946.2404681882,
+       "maximum_residual": 5.684341886080801e-13
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_088": 0.4476976354639018,
+        "company_130": 0.7666131350861322,
+        "company_132": 0.10765060681622926
+       },
+       "sorted": [
+        0.10765060681622926,
+        0.4476976354639018,
+        0.7666131350861322
+       ],
+       "minimum_guarantee": 0.10765060681622926,
+       "claimants_at_floor": [
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 6075.142729545574,
+       "weighted_contingency_beneficial_delivery_af": 6033.079277053271,
+       "maximum_residual": 3.410605131648481e-13
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_130": 0.3840922138847762,
+        "company_132": 0.3840922138847762,
+        "company_088": 0.4476976354639018
+       },
+       "sorted": [
+        0.3840922138847762,
+        0.3840922138847762,
+        0.4476976354639018
+       ],
+       "minimum_guarantee": 0.3840922138847762,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 4739.08565752826,
+       "weighted_contingency_beneficial_delivery_af": 4739.08565752826,
+       "maximum_residual": 9.094947017729282e-13
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": null,
+      "higher_there": null
+     },
+     "price_of_fairness_percent": 2.568578970040884,
+     "value_of_recourse_percent": 9.221366060528487
+    },
+    "2": {
+     "route_conveyance_efficiency": {
+      "routes": 12,
+      "minimum": 0.8053771851987624,
+      "median": 0.8887959195314521,
+      "maximum": 0.9817123330294429
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_088": 13.460332235715262,
+      "company_130": 16.20148421939108
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_130": 0.38490420724600083,
+        "company_132": 0.38490420724600083,
+        "company_088": 0.44373304770995825
+       },
+       "sorted": [
+        0.38490420724600083,
+        0.38490420724600083,
+        0.44373304770995825
+       ],
+       "minimum_guarantee": 0.38490420724600083,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 5512.699913946172,
+       "weighted_contingency_beneficial_delivery_af": 5535.070248266535,
+       "maximum_residual": 4.547473508864641e-13
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_088": 0.44373304770995825,
+        "company_130": 0.38490420724600083,
+        "company_132": 0.38490420724600083
+       },
+       "sorted": [
+        0.38490420724600083,
+        0.38490420724600083,
+        0.44373304770995825
+       ],
+       "minimum_guarantee": 0.38490420724600083,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 5512.699913946173,
+       "weighted_contingency_beneficial_delivery_af": 5535.070248266538,
+       "maximum_residual": 9.094947017729282e-13
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_088": 0.44373304770995825,
+        "company_130": 0.7767334186890423,
+        "company_132": 0.07480554533005952
+       },
+       "sorted": [
+        0.07480554533005952,
+        0.44373304770995825,
+        0.7767334186890423
+       ],
+       "minimum_guarantee": 0.07480554533005952,
+       "claimants_at_floor": [
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 5709.333291407156,
+       "weighted_contingency_beneficial_delivery_af": 5665.495798401021,
+       "maximum_residual": 4.547473508864641e-13
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_130": 0.3524074282615125,
+        "company_132": 0.3524074282615125,
+        "company_088": 0.44373304770995825
+       },
+       "sorted": [
+        0.3524074282615125,
+        0.3524074282615125,
+        0.44373304770995825
+       ],
+       "minimum_guarantee": 0.3524074282615125,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 4448.486215017013,
+       "weighted_contingency_beneficial_delivery_af": 4448.486215017013,
+       "maximum_residual": 9.094947017729282e-13
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": null,
+      "higher_there": null
+     },
+     "price_of_fairness_percent": 3.4440689906285087,
+     "value_of_recourse_percent": 9.221366060528469
+    },
+    "4": {
+     "route_conveyance_efficiency": {
+      "routes": 12,
+      "minimum": 0.6491761178960458,
+      "median": 0.7928558537931283,
+      "maximum": 0.9644022058246419
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_088": 15.51012024731842,
+      "company_130": 17.703542485709395
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_130": 0.3231551947523069,
+        "company_132": 0.3231551947523069,
+        "company_088": 0.4359088865556101
+       },
+       "sorted": [
+        0.3231551947523069,
+        0.3231551947523069,
+        0.4359088865556101
+       ],
+       "minimum_guarantee": 0.3231551947523069,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 4806.424328382427,
+       "weighted_contingency_beneficial_delivery_af": 4820.910799187899,
+       "maximum_residual": 5.3375970310298726e-11
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_088": 0.4359088865556101,
+        "company_130": 0.32315519475230686,
+        "company_132": 0.32315519475230686
+       },
+       "sorted": [
+        0.32315519475230686,
+        0.32315519475230686,
+        0.4359088865556101
+       ],
+       "minimum_guarantee": 0.32315519475230686,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 4806.424328382442,
+       "weighted_contingency_beneficial_delivery_af": 4820.910799187866,
+       "maximum_residual": 7.565859050373547e-11
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_088": 0.4359088865556101,
+        "company_130": 0.7972529575284837,
+        "company_132": 0.022666125556445336
+       },
+       "sorted": [
+        0.022666125556445336,
+        0.4359088865556101,
+        0.7972529575284837
+       ],
+       "minimum_guarantee": 0.022666125556445336,
+       "claimants_at_floor": [
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 5101.009351687276,
+       "weighted_contingency_beneficial_delivery_af": 5054.902068357411,
+       "maximum_residual": 4.547473508864641e-13
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_130": 0.29587177528362013,
+        "company_132": 0.29587177528362013,
+        "company_088": 0.4359088865556101
+       },
+       "sorted": [
+        0.29587177528362013,
+        0.29587177528362013,
+        0.4359088865556101
+       ],
+       "minimum_guarantee": 0.29587177528362013,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 3940.87050216662,
+       "weighted_contingency_beneficial_delivery_af": 3940.87050216662,
+       "maximum_residual": 1.3642420526593924e-12
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": null,
+      "higher_there": null
+     },
+     "price_of_fairness_percent": 5.7750339784695335,
+     "value_of_recourse_percent": 9.221366060528464
+    },
+    "6": {
+     "route_conveyance_efficiency": {
+      "routes": 12,
+      "minimum": 0.5232698911660556,
+      "median": 0.7077690504995873,
+      "maximum": 0.9473973009276035
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_088": 17.87205738116713,
+      "company_130": 19.344858304290412
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_130": 0.2703820618210347,
+        "company_132": 0.2703820618210347,
+        "company_088": 0.428222685596215
+       },
+       "sorted": [
+        0.2703820618210347,
+        0.2703820618210347,
+        0.428222685596215
+       ],
+       "minimum_guarantee": 0.2703820618210347,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 4280.622648409102,
+       "weighted_contingency_beneficial_delivery_af": 4215.357938311627,
+       "maximum_residual": 3.0191868084007416e-11
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_088": 0.428222685596215,
+        "company_130": 0.2703820618210346,
+        "company_132": 0.2703820618210347
+       },
+       "sorted": [
+        0.2703820618210346,
+        0.2703820618210347,
+        0.428222685596215
+       ],
+       "minimum_guarantee": 0.2703820618210346,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 4280.622648409103,
+       "weighted_contingency_beneficial_delivery_af": 4215.357938311674,
+       "maximum_residual": 2.797020231933517e-11
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_088": 0.428222685596215,
+        "company_130": 0.7983828839653259,
+        "company_132": 8.977419922486511e-07
+       },
+       "sorted": [
+        8.977419922486511e-07,
+        0.428222685596215,
+        0.7983828839653259
+       ],
+       "minimum_guarantee": 8.977419922486511e-07,
+       "claimants_at_floor": [
+        "company_132"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 4678.331846021576,
+       "weighted_contingency_beneficial_delivery_af": 4557.819991156265,
+       "maximum_residual": 2.2737367544323206e-13
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_130": 0.24755571522061087,
+        "company_132": 0.24755571522061087,
+        "company_088": 0.428222685596215
+       },
+       "sorted": [
+        0.24755571522061087,
+        0.24755571522061087,
+        0.428222685596215
+       ],
+       "minimum_guarantee": 0.24755571522061087,
+       "claimants_at_floor": [
+        "company_130",
+        "company_132"
+       ],
+       "levels": 2,
+       "nominal_beneficial_delivery_af": 3517.866509299512,
+       "weighted_contingency_beneficial_delivery_af": 3517.8665092995116,
+       "maximum_residual": 2.2737367544323206e-13
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": null,
+      "higher_there": null
+     },
+     "price_of_fairness_percent": 8.501089933384765,
+     "value_of_recourse_percent": 9.220690615073044
+    }
+   },
+   "seconds": 1.8
+  },
+  "cache_valley_v4": {
+   "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+   "canal_reaches": 73,
+   "k1_against_published": {
+    "largest_guarantee_shift": {
+     "CTI-RLex": 0.0,
+     "PROP-BR": 0.0,
+     "UTIL-BR": 0.0
+    },
+    "same_as_published": true
+   },
+   "levels": {
+    "1": {
+     "route_conveyance_efficiency": {
+      "routes": 51,
+      "minimum": 0.773414193328426,
+      "median": 0.945124596759762,
+      "maximum": 0.991049863
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_103": 0.08535194707982885,
+      "company_10390": 8.288651332126241,
+      "company_104": 2.561559003261864,
+      "company_105": 13.780698118796446,
+      "company_106": 37.105835369588334,
+      "company_109": 41.72982320772388,
+      "company_1249": 11.052598886568882,
+      "company_130": 15.498944189347732,
+      "company_136": 0.5627849499705802,
+      "company_162": 44.51032671806848,
+      "company_164": 34.739066234705184,
+      "company_088": 12.539380669982133
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_168": 0.056393646245954054,
+        "company_072": 0.06891004645765059,
+        "company_106": 0.13744468899532894,
+        "company_109": 0.16175481888078302,
+        "company_130": 0.307273771107821,
+        "company_132": 0.307273771107821,
+        "company_162": 0.41517271423097657,
+        "company_164": 0.41517271423097657,
+        "company_088": 0.41517271423097657,
+        "company_103": 0.6068879257297796,
+        "company_10390": 0.6068879257297796,
+        "company_104": 0.6068879257297796,
+        "company_105": 0.6068879257297796,
+        "company_1249": 0.8821454660844299,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.056393646245954054,
+        0.06891004645765059,
+        0.13744468899532894,
+        0.16175481888078302,
+        0.307273771107821,
+        0.307273771107821,
+        0.41517271423097657,
+        0.41517271423097657,
+        0.41517271423097657,
+        0.6068879257297796,
+        0.6068879257297796,
+        0.6068879257297796,
+        0.6068879257297796,
+        0.8821454660844299,
+        1.0
+       ],
+       "minimum_guarantee": 0.056393646245954054,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 25608.51339983481,
+       "weighted_contingency_beneficial_delivery_af": 24897.485510950348,
+       "maximum_residual": 6.821210263296962e-13
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.9999999999999999,
+        "company_105": 0.2949369973288018,
+        "company_106": 0.13744468899532894,
+        "company_109": 0.16175481888078302,
+        "company_1249": 0.8821454660844299,
+        "company_130": 0.7748722561742207,
+        "company_132": 0.056393646245954054,
+        "company_136": 1.0,
+        "company_162": 0.7896806289074826,
+        "company_164": 0.05639364624595398,
+        "company_168": 0.05639364624595406,
+        "company_072": 0.06891004645765057,
+        "company_088": 0.056393646245954054
+       },
+       "sorted": [
+        0.05639364624595398,
+        0.056393646245954054,
+        0.056393646245954054,
+        0.05639364624595406,
+        0.06891004645765057,
+        0.13744468899532894,
+        0.16175481888078302,
+        0.2949369973288018,
+        0.7748722561742207,
+        0.7896806289074826,
+        0.8821454660844299,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 0.05639364624595398,
+       "claimants_at_floor": [
+        "company_088",
+        "company_132",
+        "company_164",
+        "company_168"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 25839.892947932156,
+       "weighted_contingency_beneficial_delivery_af": 25187.832502425073,
+       "maximum_residual": 1.7053025658242404e-11
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.9999999999999999,
+        "company_105": 0.2949369973288018,
+        "company_106": 0.13744468899532894,
+        "company_109": 0.16175481888078302,
+        "company_1249": 0.8821454660844299,
+        "company_130": 0.8024829119929106,
+        "company_132": 0.0415797300325015,
+        "company_136": 1.0,
+        "company_162": 0.8482714190083211,
+        "company_164": 7.464118455938742e-06,
+        "company_168": 0.05639364624595406,
+        "company_072": 0.06891004645765057,
+        "company_088": 7.464118455953374e-06
+       },
+       "sorted": [
+        7.464118455938742e-06,
+        7.464118455953374e-06,
+        0.0415797300325015,
+        0.05639364624595406,
+        0.06891004645765057,
+        0.13744468899532894,
+        0.16175481888078302,
+        0.2949369973288018,
+        0.8024829119929106,
+        0.8482714190083211,
+        0.8821454660844299,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 7.464118455938742e-06,
+       "claimants_at_floor": [
+        "company_088",
+        "company_164"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 25860.45070533421,
+       "weighted_contingency_beneficial_delivery_af": 25141.985616077924,
+       "maximum_residual": 2.6147972675971687e-12
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_168": 0.056393646245954054,
+        "company_072": 0.06891004645765059,
+        "company_106": 0.13744468899532894,
+        "company_109": 0.16175481888078302,
+        "company_130": 0.30727377110782106,
+        "company_132": 0.30727377110782106,
+        "company_162": 0.415116311211454,
+        "company_164": 0.415116311211454,
+        "company_088": 0.415116311211454,
+        "company_103": 0.6068879257297795,
+        "company_10390": 0.6068879257297795,
+        "company_104": 0.6068879257297795,
+        "company_105": 0.6068879257297795,
+        "company_1249": 0.8821454660844299,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.056393646245954054,
+        0.06891004645765059,
+        0.13744468899532894,
+        0.16175481888078302,
+        0.30727377110782106,
+        0.30727377110782106,
+        0.415116311211454,
+        0.415116311211454,
+        0.415116311211454,
+        0.6068879257297795,
+        0.6068879257297795,
+        0.6068879257297795,
+        0.6068879257297795,
+        0.8821454660844299,
+        1.0
+       ],
+       "minimum_guarantee": 0.056393646245954054,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 20991.706614694303,
+       "weighted_contingency_beneficial_delivery_af": 20991.706614694333,
+       "maximum_residual": 3.784464297496015e-09
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": 2,
+      "higher_there": "CTI-RLex"
+     },
+     "price_of_fairness_percent": 0.9742185407752098,
+     "value_of_recourse_percent": 0.0
+    },
+    "2": {
+     "route_conveyance_efficiency": {
+      "routes": 51,
+      "minimum": 0.5981695144418598,
+      "median": 0.8932605034003028,
+      "maximum": 0.9821798309523188
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_103": 0.08587974088512312,
+      "company_10390": 8.629091261651018,
+      "company_104": 2.7102871008159553,
+      "company_105": 14.435920258287831,
+      "company_106": 37.899592056140925,
+      "company_109": 45.15937574808076,
+      "company_1249": 11.946917729140818,
+      "company_130": 16.20148421939108,
+      "company_136": 0.5678674413686692,
+      "company_162": 46.03458845979221,
+      "company_164": 36.02852193572716,
+      "company_088": 13.460332235715262
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_168": 0.043615646420163176,
+        "company_072": 0.06589887624105488,
+        "company_106": 0.13456609228749167,
+        "company_109": 0.14947062228111826,
+        "company_130": 0.28192594260921006,
+        "company_132": 0.28192594260921006,
+        "company_162": 0.4022739098153366,
+        "company_164": 0.4022739098153366,
+        "company_088": 0.4022739098153366,
+        "company_103": 0.5800199742239907,
+        "company_10390": 0.5800199742239907,
+        "company_104": 0.5800199742239907,
+        "company_105": 0.5800199742239907,
+        "company_1249": 0.8161100810508173,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.043615646420163176,
+        0.06589887624105488,
+        0.13456609228749167,
+        0.14947062228111826,
+        0.28192594260921006,
+        0.28192594260921006,
+        0.4022739098153366,
+        0.4022739098153366,
+        0.4022739098153366,
+        0.5800199742239907,
+        0.5800199742239907,
+        0.5800199742239907,
+        0.5800199742239907,
+        0.8161100810508173,
+        1.0
+       ],
+       "minimum_guarantee": 0.043615646420163176,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 24204.815097913415,
+       "weighted_contingency_beneficial_delivery_af": 23322.72220826593,
+       "maximum_residual": 1.4551915228366852e-11
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.9999999999999999,
+        "company_105": 0.24762826611736288,
+        "company_106": 0.13456609228749167,
+        "company_109": 0.14947062228111826,
+        "company_1249": 0.8161100810508173,
+        "company_130": 0.755202889985369,
+        "company_132": 0.043615646420163176,
+        "company_136": 1.0,
+        "company_162": 0.7749953909261891,
+        "company_164": 0.04361564642016316,
+        "company_168": 0.043615646420163176,
+        "company_072": 0.06589887624105488,
+        "company_088": 0.043615646420163176
+       },
+       "sorted": [
+        0.04361564642016316,
+        0.043615646420163176,
+        0.043615646420163176,
+        0.043615646420163176,
+        0.06589887624105488,
+        0.13456609228749167,
+        0.14947062228111826,
+        0.24762826611736288,
+        0.755202889985369,
+        0.7749953909261891,
+        0.8161100810508173,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 0.04361564642016316,
+       "claimants_at_floor": [
+        "company_088",
+        "company_132",
+        "company_164",
+        "company_168"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 24496.705769056774,
+       "weighted_contingency_beneficial_delivery_af": 23671.463566428414,
+       "maximum_residual": 9.094947017729282e-13
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.9999999999999999,
+        "company_105": 0.24762826611736288,
+        "company_106": 0.13456609228749167,
+        "company_109": 0.14947062228111826,
+        "company_1249": 0.8161100810508173,
+        "company_130": 0.779444011978909,
+        "company_132": 0.03140945511027069,
+        "company_136": 1.0,
+        "company_162": 0.8198576341711542,
+        "company_164": 5.5229454606644984e-06,
+        "company_168": 0.043615646420163176,
+        "company_072": 0.06589887624105488,
+        "company_088": 5.522945460664499e-06
+       },
+       "sorted": [
+        5.5229454606644984e-06,
+        5.522945460664499e-06,
+        0.03140945511027069,
+        0.043615646420163176,
+        0.06589887624105488,
+        0.13456609228749167,
+        0.14947062228111826,
+        0.24762826611736288,
+        0.779444011978909,
+        0.8161100810508173,
+        0.8198576341711542,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 5.5229454606644984e-06,
+       "claimants_at_floor": [
+        "company_088",
+        "company_164"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 24518.807502044623,
+       "weighted_contingency_beneficial_delivery_af": 23700.690735321114,
+       "maximum_residual": 1.0913936421275139e-11
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_168": 0.043615646420163176,
+        "company_072": 0.06589887624105488,
+        "company_106": 0.13456609228749167,
+        "company_109": 0.14947062228111826,
+        "company_130": 0.28192594260920995,
+        "company_132": 0.28192594260920995,
+        "company_162": 0.40221925915451284,
+        "company_164": 0.40221925915451284,
+        "company_088": 0.40221925915451284,
+        "company_103": 0.5800199742239912,
+        "company_10390": 0.5800199742239912,
+        "company_104": 0.5800199742239912,
+        "company_105": 0.5800199742239912,
+        "company_1249": 0.8161100810508173,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.043615646420163176,
+        0.06589887624105488,
+        0.13456609228749167,
+        0.14947062228111826,
+        0.28192594260920995,
+        0.28192594260920995,
+        0.40221925915451284,
+        0.40221925915451284,
+        0.40221925915451284,
+        0.5800199742239912,
+        0.5800199742239912,
+        0.5800199742239912,
+        0.5800199742239912,
+        0.8161100810508173,
+        1.0
+       ],
+       "minimum_guarantee": 0.043615646420163176,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 19778.961019520015,
+       "weighted_contingency_beneficial_delivery_af": 19778.961019519997,
+       "maximum_residual": 2.5693225325085223e-11
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": 2,
+      "higher_there": "CTI-RLex"
+     },
+     "price_of_fairness_percent": 1.2806185786361104,
+     "value_of_recourse_percent": 0.0
+    },
+    "4": {
+     "route_conveyance_efficiency": {
+      "routes": 51,
+      "minimum": 0.3578067680076103,
+      "median": 0.7979143269349628,
+      "maximum": 0.9646772203295254
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_103": 0.08694513988855619,
+      "company_10390": 9.352494127000194,
+      "company_104": 3.0341508333783054,
+      "company_105": 15.841306068085558,
+      "company_106": 39.53840805707989,
+      "company_109": 52.88721526105758,
+      "company_1249": 13.9585015974342,
+      "company_130": 17.703542485709395,
+      "company_136": 0.5781705380959274,
+      "company_162": 49.24149509433912,
+      "company_164": 38.75279719007829,
+      "company_088": 15.51012024731842
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_168": 0.026089550041216842,
+        "company_072": 0.06026552451813511,
+        "company_109": 0.12763008907868698,
+        "company_106": 0.12898850138129728,
+        "company_130": 0.23669742022689608,
+        "company_132": 0.23669742022689608,
+        "company_162": 0.37758012830425586,
+        "company_164": 0.37758012830425586,
+        "company_088": 0.37758012830425586,
+        "company_103": 0.529756489924403,
+        "company_10390": 0.529756489924403,
+        "company_104": 0.529756489924403,
+        "company_105": 0.529756489924403,
+        "company_1249": 0.6984990421915178,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.026089550041216842,
+        0.06026552451813511,
+        0.12763008907868698,
+        0.12898850138129728,
+        0.23669742022689608,
+        0.23669742022689608,
+        0.37758012830425586,
+        0.37758012830425586,
+        0.37758012830425586,
+        0.529756489924403,
+        0.529756489924403,
+        0.529756489924403,
+        0.529756489924403,
+        0.6984990421915178,
+        1.0
+       ],
+       "minimum_guarantee": 0.026089550041216842,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 21775.508254091772,
+       "weighted_contingency_beneficial_delivery_af": 20902.17349679149,
+       "maximum_residual": 2.1827872842550278e-11
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.026089550041216842,
+        "company_105": 0.3460195192411989,
+        "company_106": 0.12898850138129728,
+        "company_109": 0.12763008907868698,
+        "company_1249": 0.6984990421915178,
+        "company_130": 0.711571597091484,
+        "company_132": 0.026089550041216842,
+        "company_136": 1.0,
+        "company_162": 0.7213941773642877,
+        "company_164": 0.02608955004121684,
+        "company_168": 0.026089550041216845,
+        "company_072": 0.060265524518135105,
+        "company_088": 0.10423862745824174
+       },
+       "sorted": [
+        0.02608955004121684,
+        0.026089550041216842,
+        0.026089550041216842,
+        0.026089550041216845,
+        0.060265524518135105,
+        0.10423862745824174,
+        0.12763008907868698,
+        0.12898850138129728,
+        0.3460195192411989,
+        0.6984990421915178,
+        0.711571597091484,
+        0.7213941773642877,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 0.02608955004121684,
+       "claimants_at_floor": [
+        "company_104",
+        "company_132",
+        "company_164",
+        "company_168"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 22184.725449511676,
+       "weighted_contingency_beneficial_delivery_af": 21326.28272019584,
+       "maximum_residual": 3.694822225952521e-12
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 5.899527833200647e-06,
+        "company_105": 0.35101542864428625,
+        "company_106": 0.12898850138129728,
+        "company_109": 0.12763008907868698,
+        "company_1249": 0.6984990421915178,
+        "company_130": 0.7353315297976881,
+        "company_132": 0.015551961208637215,
+        "company_136": 0.9999999999999998,
+        "company_162": 0.7213941773642877,
+        "company_164": 5.899527833200647e-06,
+        "company_168": 0.026089550041216845,
+        "company_072": 0.060265524518135105,
+        "company_088": 0.18774563671568717
+       },
+       "sorted": [
+        5.899527833200647e-06,
+        5.899527833200647e-06,
+        0.015551961208637215,
+        0.026089550041216845,
+        0.060265524518135105,
+        0.12763008907868698,
+        0.12898850138129728,
+        0.18774563671568717,
+        0.35101542864428625,
+        0.6984990421915178,
+        0.7213941773642877,
+        0.7353315297976881,
+        0.9999999999999998,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 5.899527833200647e-06,
+       "claimants_at_floor": [
+        "company_104",
+        "company_164"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 22201.611447763484,
+       "weighted_contingency_beneficial_delivery_af": 21350.5533866572,
+       "maximum_residual": 2.1827872842550278e-11
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_168": 0.026089550041216842,
+        "company_072": 0.06026552451813511,
+        "company_109": 0.12763008907868698,
+        "company_106": 0.12898850138129728,
+        "company_130": 0.2366974202268961,
+        "company_132": 0.2366974202268961,
+        "company_162": 0.37752883240108565,
+        "company_164": 0.37752883240108565,
+        "company_088": 0.37752883240108565,
+        "company_103": 0.5297564899244037,
+        "company_10390": 0.5297564899244037,
+        "company_104": 0.5297564899244037,
+        "company_105": 0.5297564899244037,
+        "company_1249": 0.6984990421915178,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.026089550041216842,
+        0.06026552451813511,
+        0.12763008907868698,
+        0.12898850138129728,
+        0.2366974202268961,
+        0.2366974202268961,
+        0.37752883240108565,
+        0.37752883240108565,
+        0.37752883240108565,
+        0.5297564899244037,
+        0.5297564899244037,
+        0.5297564899244037,
+        0.5297564899244037,
+        0.6984990421915178,
+        1.0
+       ],
+       "minimum_guarantee": 0.026089550041216842,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 17667.1457354288,
+       "weighted_contingency_beneficial_delivery_af": 17667.1457354288,
+       "maximum_residual": 4.134026454494233e-12
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": 2,
+      "higher_there": "CTI-RLex"
+     },
+     "price_of_fairness_percent": 1.9192444416670305,
+     "value_of_recourse_percent": 0.0
+    },
+    "6": {
+     "route_conveyance_efficiency": {
+      "routes": 51,
+      "minimum": 0.21402910068312345,
+      "median": 0.7127453533482389,
+      "maximum": 0.947486509186806
+     },
+     "peak_diversion_requirement_cfs": {
+      "company_103": 0.08802375592111418,
+      "company_10390": 10.13654204635652,
+      "company_104": 3.396714420741147,
+      "company_105": 17.38351095412105,
+      "company_106": 41.248088089509096,
+      "company_109": 61.93747127224875,
+      "company_1249": 16.308789535757967,
+      "company_130": 19.344858304290412,
+      "company_136": 0.588660568946254,
+      "company_162": 52.67180440297931,
+      "company_164": 41.68306689723293,
+      "company_088": 17.87205738116713
+     },
+     "methods": {
+      "CTI-RLex": {
+       "guarantees": {
+        "company_168": 0.015605973480161284,
+        "company_072": 0.05511373869503493,
+        "company_109": 0.10898087791189541,
+        "company_106": 0.12364209442187611,
+        "company_130": 0.19804457217648874,
+        "company_132": 0.19804457217648874,
+        "company_162": 0.3542979706764371,
+        "company_164": 0.3542979706764371,
+        "company_088": 0.3542979706764371,
+        "company_103": 0.48379619527255796,
+        "company_10390": 0.48379619527255796,
+        "company_104": 0.48379619527255796,
+        "company_105": 0.48379619527255796,
+        "company_1249": 0.5978371340717298,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.015605973480161284,
+        0.05511373869503493,
+        0.10898087791189541,
+        0.12364209442187611,
+        0.19804457217648874,
+        0.19804457217648874,
+        0.3542979706764371,
+        0.3542979706764371,
+        0.3542979706764371,
+        0.48379619527255796,
+        0.48379619527255796,
+        0.48379619527255796,
+        0.48379619527255796,
+        0.5978371340717298,
+        1.0
+       ],
+       "minimum_guarantee": 0.015605973480161284,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 19735.729750937895,
+       "weighted_contingency_beneficial_delivery_af": 18856.636815092752,
+       "maximum_residual": 3.637978807091713e-12
+      },
+      "PROP-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 0.015605973480161281,
+        "company_105": 0.27166118408050893,
+        "company_106": 0.12364209442187611,
+        "company_109": 0.10898087791189541,
+        "company_1249": 0.5978371340717298,
+        "company_130": 0.6650824433679491,
+        "company_132": 0.015605973480161283,
+        "company_136": 1.0,
+        "company_162": 0.7015619428869823,
+        "company_164": 0.015605973480161283,
+        "company_168": 0.015605973480161284,
+        "company_072": 0.05511373869503493,
+        "company_088": 0.015605973480161283
+       },
+       "sorted": [
+        0.015605973480161281,
+        0.015605973480161283,
+        0.015605973480161283,
+        0.015605973480161283,
+        0.015605973480161284,
+        0.05511373869503493,
+        0.10898087791189541,
+        0.12364209442187611,
+        0.27166118408050893,
+        0.5978371340717298,
+        0.6650824433679491,
+        0.7015619428869823,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 0.015605973480161281,
+       "claimants_at_floor": [
+        "company_088",
+        "company_104",
+        "company_132",
+        "company_164",
+        "company_168"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 20259.410526788044,
+       "weighted_contingency_beneficial_delivery_af": 19392.896934334716,
+       "maximum_residual": 9.094947017729282e-13
+      },
+      "UTIL-BR": {
+       "guarantees": {
+        "company_103": 1.0,
+        "company_10390": 1.0,
+        "company_104": 3.3407297550268227e-06,
+        "company_105": 0.2747099173199971,
+        "company_106": 0.12364209442187611,
+        "company_109": 0.10898087791189541,
+        "company_1249": 0.5978371340717298,
+        "company_130": 0.6937155849613985,
+        "company_132": 0.00442103420477442,
+        "company_136": 1.0,
+        "company_162": 0.7175594635567974,
+        "company_164": 3.340729755026823e-06,
+        "company_168": 0.015605973480161284,
+        "company_072": 0.05511373869503493,
+        "company_088": 3.340729755026823e-06
+       },
+       "sorted": [
+        3.3407297550268227e-06,
+        3.340729755026823e-06,
+        3.340729755026823e-06,
+        0.00442103420477442,
+        0.015605973480161284,
+        0.05511373869503493,
+        0.10898087791189541,
+        0.12364209442187611,
+        0.2747099173199971,
+        0.5978371340717298,
+        0.6937155849613985,
+        0.7175594635567974,
+        1.0,
+        1.0,
+        1.0
+       ],
+       "minimum_guarantee": 3.3407297550268227e-06,
+       "claimants_at_floor": [
+        "company_088",
+        "company_104",
+        "company_164"
+       ],
+       "levels": 1,
+       "nominal_beneficial_delivery_af": 20283.539777462167,
+       "weighted_contingency_beneficial_delivery_af": 19421.31969611173,
+       "maximum_residual": 9.094947017729282e-13
+      },
+      "CTI-RLex rigid": {
+       "guarantees": {
+        "company_168": 0.015605973480161284,
+        "company_072": 0.05511373869503493,
+        "company_109": 0.10898087791189541,
+        "company_106": 0.12364209442187611,
+        "company_130": 0.19804457217648874,
+        "company_132": 0.19804457217648874,
+        "company_162": 0.3542498377556746,
+        "company_164": 0.3542498377556746,
+        "company_088": 0.3542498377556746,
+        "company_103": 0.4837961952725582,
+        "company_10390": 0.4837961952725582,
+        "company_104": 0.4837961952725582,
+        "company_105": 0.4837961952725582,
+        "company_1249": 0.5978371340717298,
+        "company_136": 1.0
+       },
+       "sorted": [
+        0.015605973480161284,
+        0.05511373869503493,
+        0.10898087791189541,
+        0.12364209442187611,
+        0.19804457217648874,
+        0.19804457217648874,
+        0.3542498377556746,
+        0.3542498377556746,
+        0.3542498377556746,
+        0.4837961952725582,
+        0.4837961952725582,
+        0.4837961952725582,
+        0.4837961952725582,
+        0.5978371340717298,
+        1.0
+       ],
+       "minimum_guarantee": 0.015605973480161284,
+       "claimants_at_floor": [
+        "company_168"
+       ],
+       "levels": 9,
+       "nominal_beneficial_delivery_af": 15948.90111681112,
+       "weighted_contingency_beneficial_delivery_af": 15948.901116811136,
+       "maximum_residual": 1.3642420526593924e-12
+      }
+     },
+     "cti_rlex_against_prop_br": {
+      "first_differing_position": 2,
+      "higher_there": "CTI-RLex"
+     },
+     "price_of_fairness_percent": 2.7007614673498215,
+     "value_of_recourse_percent": 0.0
+    }
+   },
+   "seconds": 49.8
+  }
+ },
+ "expectations": {
+  "1_minimum_guarantee_non_increasing_in_k": {
+   "little_bear_v2": true,
+   "cache_valley_v4": true
+  },
+  "2_little_bear_minimum_at_k6_at_least_15_percent_lower": {
+   "drop_percent": 35.54824197404726,
+   "holds": true
+  },
+  "3_little_bear_rules_coincide_at_every_k": true,
+  "4_cache_valley_cti_rlex_strictly_above_prop_br_with_fewer_at_floor": true,
+  "5_util_br_minimum_strictly_below_cti_rlex_at_every_k": {
+   "little_bear_v2": true,
+   "cache_valley_v4": true
+  }
+ },
+ "seconds": 51.6
+}

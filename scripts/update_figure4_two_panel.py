@@ -2,8 +2,8 @@
 
 Panel (a) keeps the delivery-fairness trade-off of the three-claimant instance, where
 the common-floor comparator and the proposed method coincide. Panel (b) adds what that
-instance cannot show: the two sorted guarantee vectors of the ten-claimant instance and
-the position at which they first differ.
+instance cannot show: the two sorted guarantee vectors of the fifteen-claimant county
+instance and the position at which they first differ.
 
 The plotting style is copied from ``scripts/create_results_artifacts.py`` so the new
 figure carries the same type size, palette and grid as every other figure in the paper.
@@ -131,7 +131,7 @@ def panel_tradeoff(ax, methods: dict) -> None:
 
 
 def panel_sorted_vectors(ax, revision: dict) -> None:
-    case = revision["cache_valley_v3"]
+    case = revision["cache_valley_v4"]
     rlex = case["cti_rlex"]["sorted_rho"]
     prop = case["prop_br"]["sorted_rho"]
     positions = list(range(1, len(rlex) + 1))
@@ -155,19 +155,24 @@ def panel_sorted_vectors(ax, revision: dict) -> None:
         label="CTI-RLex proposed",
         zorder=4,
     )
+    # The note sits in the lower right, which both vectors leave empty once they have
+    # risen; three short lines keep it clear of the markers whatever the claimant count.
     ax.annotate(
-        f"first difference at position {first}:\n{rlex[first - 1]:.4f} against {prop[first - 1]:.4f}",
+        f"first difference\nat position {first}:\n{rlex[first - 1]:.4f} against {prop[first - 1]:.4f}",
         xy=(first, rlex[first - 1]),
-        xytext=(0.33, 0.09),
+        xytext=(0.97, 0.06),
         textcoords="axes fraction",
-        ha="left",
+        ha="right",
         va="bottom",
         arrowprops={"arrowstyle": "-", "color": "#555555", "lw": 0.7},
         fontsize=7.7 * COMPACT_14_CM_FONT_SCALE,
     )
     ax.set_xlabel("Position in the sorted guarantee vector")
     ax.set_ylabel("Claimant guarantee")
-    ax.set_xticks(positions)
+    # Every position keeps a tick, but only the first, the decisive one, every fifth and the
+    # last are labelled: fifteen two-digit labels do not fit the panel at the printed size.
+    labelled = {1, first, len(positions)} | {p for p in positions if p % 5 == 0}
+    ax.set_xticks(positions, [str(p) if p in labelled else "" for p in positions])
     ax.set_ylim(-0.03, 1.08)
     ax.grid(color="#E0E0E0", linewidth=0.55)
     ax.set_axisbelow(True)

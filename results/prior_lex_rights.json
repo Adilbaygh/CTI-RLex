@@ -1,0 +1,489 @@
+{
+ "rule": "PRIOR-LEX (storage after every decreed right) with the demand of every claimant whose senior-year rights do not carry it, and that shares its component with another claimant, split by decree year; the remainder is the storage part",
+ "chosen": "requirements/decisions.md, 2026-10-15; expectations in requirements/hypotheses.md, third H-2.1 entry (2026-10-15)",
+ "post_hoc": true,
+ "water_rights": {
+  "file": "DATA/Utah_Water_Rights_2026/points_of_diversion.csv",
+  "sha256": "182cef4999fbdd991b6ea21789779e8ae4e508f12b5afaaf2f8d70ae9bf35b6b",
+  "retrieved_utc": "2026-10-11T18:34:25+00:00",
+  "layer_data_last_edit_utc": "2026-10-10T01:04:29.141000+00:00"
+ },
+ "instances": {
+  "little_bear_v2": {
+   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+   "split_claimants": {},
+   "tiers": [
+    [
+     "company_088",
+     "company_130"
+    ],
+    [
+     "company_132"
+    ]
+   ],
+   "part_guarantees": {},
+   "nominal_beneficial_delivery_af": 5923.075841130683,
+   "weighted_contingency_beneficial_delivery_af": 5984.185231748353,
+   "maximum_residual": 8.526512829121202e-13,
+   "claimant_guarantees": {
+    "company_088": 0.4476976354639018,
+    "company_130": 1.0,
+    "company_132": 0.10806148128546053
+   },
+   "claimant_level_prior_lex": {
+    "company_088": 0.4476976354639018,
+    "company_130": 1.0,
+    "company_132": 0.10806148128546053
+   },
+   "cti_rlex": {
+    "company_130": 0.41951076293707945,
+    "company_132": 0.41951076293707945,
+    "company_088": 0.4476976354639018
+   },
+   "change_against_claimant_level_prior_lex": {
+    "company_088": 0.0,
+    "company_130": 0.0,
+    "company_132": 0.0
+   },
+   "least_served": [
+    "company_132"
+   ],
+   "minimum_guarantee": 0.10806148128546053,
+   "nominal_delivery_change_against_claimant_level_af": 0.0,
+   "checks_and_expectations": {
+    "same_as_claimant_level_where_nothing_is_split": true,
+    "1_outside_split_components_unchanged": null,
+    "largest_change_outside_split_components": 0.0,
+    "2_split_component": {}
+   },
+   "seconds": 0.3
+  },
+  "cache_valley_v4": {
+   "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+   "split_claimants": {
+    "company_162": {
+     "component": "C1",
+     "seasonal_demand_by_part_af": {
+      "1860": 520.9942515670256,
+      "1867": 217.08093815292733,
+      "1875": 217.08093815292733,
+      "storage": 6036.7357461271195
+     },
+     "monthly_demand_by_part_af": {
+      "1860": {
+       "2025-05": 105.56092678809016,
+       "2025-06": 102.15573560137756,
+       "2025-07": 105.56092678809016,
+       "2025-08": 105.56092678809016,
+       "2025-09": 102.15573560137756
+      },
+      "1867": {
+       "2025-05": 43.98371949503756,
+       "2025-06": 42.564889833907316,
+       "2025-07": 43.98371949503756,
+       "2025-08": 43.98371949503756,
+       "2025-09": 42.564889833907316
+      },
+      "1875": {
+       "2025-05": 43.98371949503756,
+       "2025-06": 42.564889833907316,
+       "2025-07": 43.98371949503756,
+       "2025-08": 43.98371949503756,
+       "2025-09": 42.564889833907316
+      },
+      "storage": {
+       "2025-05": 645.4986592218347,
+       "2025-06": 1350.930696730808,
+       "2025-07": 1764.2013592218345,
+       "2025-08": 1484.5256842218346,
+       "2025-09": 791.5793467308079
+      }
+     },
+     "carried_by_year": [
+      {
+       "period": "2025-05",
+       "year": 1860,
+       "rights": [
+        "25-1994"
+       ],
+       "cfs": 2.4,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 105.56092678809016,
+       "assigned_af": 105.56092678809016
+      },
+      {
+       "period": "2025-05",
+       "year": 1867,
+       "rights": [
+        "25-1996"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-05",
+       "year": 1875,
+       "rights": [
+        "25-1995"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-06",
+       "year": 1860,
+       "rights": [
+        "25-1994"
+       ],
+       "cfs": 2.4,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 102.15573560137756,
+       "assigned_af": 102.15573560137756
+      },
+      {
+       "period": "2025-06",
+       "year": 1867,
+       "rights": [
+        "25-1996"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 42.564889833907316,
+       "assigned_af": 42.564889833907316
+      },
+      {
+       "period": "2025-06",
+       "year": 1875,
+       "rights": [
+        "25-1995"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 42.564889833907316,
+       "assigned_af": 42.564889833907316
+      },
+      {
+       "period": "2025-07",
+       "year": 1860,
+       "rights": [
+        "25-1994"
+       ],
+       "cfs": 2.4,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 105.56092678809016,
+       "assigned_af": 105.56092678809016
+      },
+      {
+       "period": "2025-07",
+       "year": 1867,
+       "rights": [
+        "25-1996"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-07",
+       "year": 1875,
+       "rights": [
+        "25-1995"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-08",
+       "year": 1860,
+       "rights": [
+        "25-1994"
+       ],
+       "cfs": 2.4,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 105.56092678809016,
+       "assigned_af": 105.56092678809016
+      },
+      {
+       "period": "2025-08",
+       "year": 1867,
+       "rights": [
+        "25-1996"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-08",
+       "year": 1875,
+       "rights": [
+        "25-1995"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 43.98371949503756,
+       "assigned_af": 43.98371949503756
+      },
+      {
+       "period": "2025-09",
+       "year": 1860,
+       "rights": [
+        "25-1994"
+       ],
+       "cfs": 2.4,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 102.15573560137756,
+       "assigned_af": 102.15573560137756
+      },
+      {
+       "period": "2025-09",
+       "year": 1867,
+       "rights": [
+        "25-1996"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 42.564889833907316,
+       "assigned_af": 42.564889833907316
+      },
+      {
+       "period": "2025-09",
+       "year": 1875,
+       "rights": [
+        "25-1995"
+       ],
+       "cfs": 1.0,
+       "path_efficiency": 0.9668887722748934,
+       "net_capacity_af": 42.564889833907316,
+       "assigned_af": 42.564889833907316
+      }
+     ]
+    }
+   },
+   "tiers": [
+    [
+     "company_103",
+     "company_10390",
+     "company_104",
+     "company_105",
+     "company_109",
+     "company_1249",
+     "company_130",
+     "company_136",
+     "company_162#1860",
+     "company_164",
+     "company_168",
+     "company_072",
+     "company_088"
+    ],
+    [
+     "company_106",
+     "company_162#1867"
+    ],
+    [
+     "company_162#1875"
+    ],
+    [
+     "company_132",
+     "company_162#storage"
+    ]
+   ],
+   "part_guarantees": {
+    "company_162#1860": 1.0,
+    "company_162#1867": 1.0,
+    "company_162#1875": 1.0,
+    "company_162#storage": 0.24013230786064246
+   },
+   "levels": [
+    {
+     "theta": 0.056393646245954054,
+     "blocked": [
+      "company_168"
+     ]
+    },
+    {
+     "theta": 0.06891004645765059,
+     "blocked": [
+      "company_072"
+     ]
+    },
+    {
+     "theta": 0.16175481888078302,
+     "blocked": [
+      "company_109"
+     ]
+    },
+    {
+     "theta": 0.42498398489012895,
+     "blocked": [
+      "company_164"
+     ]
+    },
+    {
+     "theta": 0.6068879257297795,
+     "blocked": [
+      "company_103",
+      "company_10390",
+      "company_104",
+      "company_105"
+     ]
+    },
+    {
+     "theta": 0.7636301893429107,
+     "blocked": [
+      "company_088"
+     ]
+    },
+    {
+     "theta": 0.8024829119929104,
+     "blocked": [
+      "company_130"
+     ]
+    },
+    {
+     "theta": 0.8821454660844299,
+     "blocked": [
+      "company_1249"
+     ]
+    },
+    {
+     "theta": 1.0,
+     "blocked": [
+      "company_136",
+      "company_162#1860"
+     ]
+    },
+    {
+     "theta": 0.13744468899532894,
+     "blocked": [
+      "company_106"
+     ]
+    },
+    {
+     "theta": 1.0,
+     "blocked": [
+      "company_162#1867"
+     ]
+    },
+    {
+     "theta": 1.0,
+     "blocked": [
+      "company_162#1875"
+     ]
+    },
+    {
+     "theta": 0.04157973003250156,
+     "blocked": [
+      "company_132"
+     ]
+    },
+    {
+     "theta": 0.24013230786064246,
+     "blocked": [
+      "company_162#storage"
+     ]
+    }
+   ],
+   "nominal_beneficial_delivery_af": 25596.121246979255,
+   "weighted_contingency_beneficial_delivery_af": 24853.414844695144,
+   "maximum_residual": 3.3651303965598345e-11,
+   "claimant_guarantees": {
+    "company_168": 0.056393646245954054,
+    "company_072": 0.06891004645765059,
+    "company_109": 0.16175481888078302,
+    "company_164": 0.42498398489012895,
+    "company_103": 0.6068879257297795,
+    "company_10390": 0.6068879257297795,
+    "company_104": 0.6068879257297795,
+    "company_105": 0.6068879257297795,
+    "company_088": 0.7636301893429107,
+    "company_130": 0.8024829119929104,
+    "company_1249": 0.8821454660844299,
+    "company_136": 1.0,
+    "company_106": 0.13744468899532894,
+    "company_132": 0.04157973003250156,
+    "company_162": 0.31524786175425057
+   },
+   "claimant_level_prior_lex": {
+    "company_168": 0.056393646245954054,
+    "company_072": 0.06891004645765059,
+    "company_109": 0.16175481888078302,
+    "company_162": 0.4151727142309766,
+    "company_164": 0.4151727142309766,
+    "company_088": 0.4151727142309766,
+    "company_103": 0.6068879257297793,
+    "company_10390": 0.6068879257297793,
+    "company_104": 0.6068879257297793,
+    "company_105": 0.6068879257297793,
+    "company_130": 0.8024829119929104,
+    "company_1249": 0.8821454660844299,
+    "company_136": 1.0,
+    "company_132": 0.04157973003250156,
+    "company_106": 0.13744468899532894
+   },
+   "cti_rlex": {
+    "company_168": 0.056393646245954054,
+    "company_072": 0.06891004645765059,
+    "company_106": 0.13744468899532894,
+    "company_109": 0.16175481888078302,
+    "company_130": 0.307273771107821,
+    "company_132": 0.307273771107821,
+    "company_162": 0.41517271423097657,
+    "company_164": 0.41517271423097657,
+    "company_088": 0.41517271423097657,
+    "company_103": 0.6068879257297796,
+    "company_10390": 0.6068879257297796,
+    "company_104": 0.6068879257297796,
+    "company_105": 0.6068879257297796,
+    "company_1249": 0.8821454660844299,
+    "company_136": 1.0
+   },
+   "change_against_claimant_level_prior_lex": {
+    "company_168": 0.0,
+    "company_072": 0.0,
+    "company_109": 0.0,
+    "company_162": -0.09992485247672606,
+    "company_164": 0.009811270659152327,
+    "company_088": 0.3484574751119341,
+    "company_103": 1.1102230246251565e-16,
+    "company_10390": 1.1102230246251565e-16,
+    "company_104": 1.1102230246251565e-16,
+    "company_105": 1.1102230246251565e-16,
+    "company_130": 0.0,
+    "company_1249": 0.0,
+    "company_136": 0.0,
+    "company_132": 0.0,
+    "company_106": 0.0
+   },
+   "least_served": [
+    "company_132"
+   ],
+   "minimum_guarantee": 0.04157973003250156,
+   "nominal_delivery_change_against_claimant_level_af": -39.84009878955112,
+   "checks_and_expectations": {
+    "same_as_claimant_level_where_nothing_is_split": null,
+    "1_outside_split_components_unchanged": true,
+    "largest_change_outside_split_components": 1.1102230246251565e-16,
+    "2_split_component": {
+     "company_162": {
+      "others_rise_above_claimant_level": {
+       "company_164": true,
+       "company_088": true
+      },
+      "split_claimant_falls_below_claimant_level": true
+     }
+    }
+   },
+   "seconds": 17.0
+  }
+ },
+ "seconds": 17.4
+}

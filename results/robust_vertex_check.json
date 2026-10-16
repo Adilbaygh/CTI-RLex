@@ -1,0 +1,150 @@
+{
+ "samples_per_instance": 1000,
+ "seed": 20261012,
+ "dirichlet_concentration": 1.0,
+ "outside_factor": 0.9,
+ "holds_within": 1e-06,
+ "instances": {
+  "little_bear_v2": {
+   "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+   "scenarios": [
+    "nominal",
+    "moderate_system_shortage",
+    "severe_system_shortage",
+    "paradise_diversion_outage_under_shortage",
+    "hyrum_canal_restriction_under_shortage"
+   ],
+   "recourse_budgets": {
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.4,
+    "paradise_diversion_outage_under_shortage": 0.35,
+    "hyrum_canal_restriction_under_shortage": 0.25
+   },
+   "published_guarantees": {
+    "company_130": 0.41951076293707945,
+    "company_132": 0.41951076293707945,
+    "company_088": 0.4476976354639018
+   },
+   "share_at_each_scenario": {
+    "nominal": 1.0,
+    "moderate_system_shortage": 1.0,
+    "severe_system_shortage": 1.0,
+    "paradise_diversion_outage_under_shortage": 1.0,
+    "hyrum_canal_restriction_under_shortage": 1.0
+   },
+   "effort_beyond_budget_at_each_scenario": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.0,
+    "severe_system_shortage": 0.0,
+    "paradise_diversion_outage_under_shortage": 0.0,
+    "hyrum_canal_restriction_under_shortage": 0.0
+   },
+   "every_scenario_delivers_the_full_guarantee": true,
+   "combinations": {
+    "count": 1000,
+    "smallest_share": 1.0,
+    "largest_shortfall": 0.0,
+    "below_full_guarantee": 0,
+    "largest_effort_beyond_budget": 0.0,
+    "weights_of_the_smallest_share": {
+     "nominal": 0.3415545838644143,
+     "moderate_system_shortage": 0.10221433493632927,
+     "severe_system_shortage": 0.28988990452425084,
+     "paradise_diversion_outage_under_shortage": 0.11485366190411778,
+     "hyrum_canal_restriction_under_shortage": 0.15148751477088793
+    }
+   },
+   "every_combination_delivers_the_full_guarantee": true,
+   "share_outside_the_hull": {
+    "moderate_system_shortage": 1.0,
+    "severe_system_shortage": 0.8115334275460543,
+    "paradise_diversion_outage_under_shortage": 0.19255290442191458,
+    "hyrum_canal_restriction_under_shortage": 1.0
+   },
+   "effort_beyond_budget_outside_the_hull": {
+    "moderate_system_shortage": 0.0,
+    "severe_system_shortage": 0.22446018415170843,
+    "paradise_diversion_outage_under_shortage": 0.011148475375809874,
+    "hyrum_canal_restriction_under_shortage": 0.0
+   },
+   "seconds": 16.2
+  },
+  "cache_valley_v4": {
+   "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+   "scenarios": [
+    "nominal",
+    "moderate_system_shortage",
+    "severe_system_shortage",
+    "subsystem_01_restriction_under_shortage",
+    "subsystem_02_restriction_under_shortage"
+   ],
+   "recourse_budgets": {
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.25,
+    "subsystem_01_restriction_under_shortage": 0.25,
+    "subsystem_02_restriction_under_shortage": 0.25
+   },
+   "published_guarantees": {
+    "company_168": 0.056393646245954054,
+    "company_072": 0.06891004645765059,
+    "company_106": 0.13744468899532894,
+    "company_109": 0.16175481888078302,
+    "company_130": 0.307273771107821,
+    "company_132": 0.307273771107821,
+    "company_162": 0.41517271423097657,
+    "company_164": 0.41517271423097657,
+    "company_088": 0.41517271423097657,
+    "company_103": 0.6068879257297796,
+    "company_10390": 0.6068879257297796,
+    "company_104": 0.6068879257297796,
+    "company_105": 0.6068879257297796,
+    "company_1249": 0.8821454660844299,
+    "company_136": 1.0
+   },
+   "share_at_each_scenario": {
+    "nominal": 1.0,
+    "moderate_system_shortage": 1.0,
+    "severe_system_shortage": 1.0,
+    "subsystem_01_restriction_under_shortage": 1.0,
+    "subsystem_02_restriction_under_shortage": 1.0
+   },
+   "effort_beyond_budget_at_each_scenario": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.0,
+    "severe_system_shortage": 1.1102230246251565e-16,
+    "subsystem_01_restriction_under_shortage": 0.0,
+    "subsystem_02_restriction_under_shortage": 5.551115123125783e-17
+   },
+   "every_scenario_delivers_the_full_guarantee": true,
+   "combinations": {
+    "count": 1000,
+    "smallest_share": 1.0,
+    "largest_shortfall": 0.0,
+    "below_full_guarantee": 0,
+    "largest_effort_beyond_budget": 0.0,
+    "weights_of_the_smallest_share": {
+     "nominal": 0.3415545838644143,
+     "moderate_system_shortage": 0.10221433493632927,
+     "severe_system_shortage": 0.28988990452425084,
+     "subsystem_01_restriction_under_shortage": 0.11485366190411778,
+     "subsystem_02_restriction_under_shortage": 0.15148751477088793
+    }
+   },
+   "every_combination_delivers_the_full_guarantee": true,
+   "share_outside_the_hull": {
+    "moderate_system_shortage": 1.0,
+    "severe_system_shortage": 0.7620016936563777,
+    "subsystem_01_restriction_under_shortage": 0.04864008633448194,
+    "subsystem_02_restriction_under_shortage": 0.8107501061194934
+   },
+   "effort_beyond_budget_outside_the_hull": {
+    "moderate_system_shortage": 0.0,
+    "severe_system_shortage": 0.45037140680065635,
+    "subsystem_01_restriction_under_shortage": 0.05259289720282434,
+    "subsystem_02_restriction_under_shortage": 0.11434830173575727
+   },
+   "seconds": 63.4
+  }
+ },
+ "seconds": 79.6
+}

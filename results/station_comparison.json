@@ -1,0 +1,1257 @@
+{
+ "benchmark_id": "lbr_hyrum_paradise_highline_2025_v2",
+ "observations": {
+  "dataset": "Mean daily discharge in 2025 at the five measuring stations the Little Bear River benchmark lists for its three claimants",
+  "publisher": "Utah Division of Water Rights, River Commissioner records",
+  "source": "DVRTVIEW River Commissioner Records Viewer, Daily Comma Delimited Data (viewer version 2026.06.03.00), Beginning Year and End Year 2025, Open Spreadsheet",
+  "retrieved": "2026-10-11, viewer run times 13:29 to 13:32 Mountain Time; the station details below are from the viewer's Station Information pages of the same evening",
+  "record_status": "The viewer does not mark the 2025 values as approved or provisional. The HydroServer datastreams of stations 2771, 9738 and 9739 are labelled provisional."
+ },
+ "constants": {
+  "cfs_day_to_af": 1.9834710743801653,
+  "coverage_needed_to_test_a_month": 0.9,
+  "factor": 2.0,
+  "peak_months": [
+   6,
+   7,
+   8
+  ]
+ },
+ "every_2025_month_agrees_with_the_viewer_summary": true,
+ "stations": {
+  "2771": {
+   "station_name": "HYRUM CANAL AT OSMONDS",
+   "units": "Mean daily discharge in CFS",
+   "claimant_id": "company_088",
+   "linked_edge_id": "e_3554",
+   "measuring_device": "4 FT PARSHALL FLUME",
+   "record_rating": "Fair",
+   "months": {
+    "2025-05": {
+     "days": 31,
+     "days_recorded": 19,
+     "coverage": 0.6129,
+     "recorded_volume_af": 483.4670737272278,
+     "volume_af": null,
+     "tested": false,
+     "viewer_monthly_summary_af": 483.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 56,
+      "first_year": 1957,
+      "minimum_af": 0.0,
+      "median_af": 1130.0,
+      "mean_af": 1288.8035714285713,
+      "maximum_af": 3079.0,
+      "share_of_earlier_years_below_2025": 0.25
+     },
+     "claimant_requirement_at_place_of_use_af": 307.82732889679704,
+     "efficiency_station_to_place_of_use": 0.939647989765,
+     "requirement_at_station_af": 327.5985605777571,
+     "plan_flow_af": -0.0,
+     "plan_flow_range_af": [
+      0.0,
+      231.22298906688604
+     ],
+     "ratio_to_requirement": null,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": null
+    },
+    "2025-06": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 1257.872439552833,
+     "volume_af": 1257.872439552833,
+     "tested": true,
+     "viewer_monthly_summary_af": 1258.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 60,
+      "first_year": 1957,
+      "minimum_af": 873.0,
+      "median_af": 1954.0,
+      "mean_af": 1954.5333333333333,
+      "maximum_af": 3849.0,
+      "share_of_earlier_years_below_2025": 0.2
+     },
+     "claimant_requirement_at_place_of_use_af": 564.3501034756187,
+     "efficiency_station_to_place_of_use": 0.939647989765,
+     "requirement_at_station_af": 600.5973615893746,
+     "plan_flow_af": -0.0,
+     "plan_flow_range_af": [
+      0.0,
+      0.001199373257690406
+     ],
+     "ratio_to_requirement": 2.094368906689993,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-07": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 1411.97910879241,
+     "volume_af": 1411.97910879241,
+     "tested": true,
+     "viewer_monthly_summary_af": 1412.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 60,
+      "first_year": 1957,
+      "minimum_af": 336.0,
+      "median_af": 1948.5,
+      "mean_af": 1949.9666666666667,
+      "maximum_af": 3315.0,
+      "share_of_earlier_years_below_2025": 0.16666666666666666
+     },
+     "claimant_requirement_at_place_of_use_af": 718.2637679240172,
+     "efficiency_station_to_place_of_use": 0.939647989765,
+     "requirement_at_station_af": 764.3966418782531,
+     "plan_flow_af": -0.0,
+     "plan_flow_range_af": [
+      0.0,
+      0.00016997519495697767
+     ],
+     "ratio_to_requirement": 1.847181203364442,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-08": {
+     "days": 31,
+     "days_recorded": 30,
+     "coverage": 0.9677,
+     "recorded_volume_af": 1321.7878015821818,
+     "volume_af": 1365.8473949682545,
+     "tested": true,
+     "viewer_monthly_summary_af": 1322.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 59,
+      "first_year": 1957,
+      "minimum_af": 651.0,
+      "median_af": 1550.0,
+      "mean_af": 1581.9661016949153,
+      "maximum_af": 2572.0,
+      "share_of_earlier_years_below_2025": 0.2711864406779661
+     },
+     "claimant_requirement_at_place_of_use_af": 615.6546577935941,
+     "efficiency_station_to_place_of_use": 0.939647989765,
+     "requirement_at_station_af": 655.1971211555142,
+     "plan_flow_af": -0.0,
+     "plan_flow_range_af": [
+      0.0,
+      0.0011993737759761031
+     ],
+     "ratio_to_requirement": 2.084635830754916,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-09": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 881.0948625017653,
+     "volume_af": 881.0948625017653,
+     "tested": true,
+     "viewer_monthly_summary_af": 881.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 60,
+      "first_year": 1957,
+      "minimum_af": 481.0,
+      "median_af": 867.0,
+      "mean_af": 951.5833333333334,
+      "maximum_af": 1861.0,
+      "share_of_earlier_years_below_2025": 0.5333333333333333
+     },
+     "claimant_requirement_at_place_of_use_af": 359.13188470924473,
+     "efficiency_station_to_place_of_use": 0.939647989765,
+     "requirement_at_station_af": 382.19832173435645,
+     "plan_flow_af": -0.0,
+     "plan_flow_range_af": [
+      0.0,
+      0.0011993738056963463
+     ],
+     "ratio_to_requirement": 2.305334200588569,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": false
+    }
+   },
+   "season_largest_daily_cfs": 28.10998545402,
+   "reach_design_capacity_cfs": 35.0,
+   "season_days_above_design_capacity": 0,
+   "plan_carries_water_through_the_reach": false
+  },
+  "2772": {
+   "station_name": "LITTLE FEEDER",
+   "units": "MEAN daily discharge in CFS",
+   "claimant_id": "company_088",
+   "linked_edge_id": null,
+   "measuring_device": "meter vault with ultrasonic meter",
+   "record_rating": "Unrated",
+   "months": {
+    "2025-05": {
+     "days": 31,
+     "days_recorded": 3,
+     "coverage": 0.0968,
+     "recorded_volume_af": 11.561989728162645,
+     "volume_af": null,
+     "tested": false,
+     "viewer_monthly_summary_af": 12.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 47,
+      "first_year": 1957,
+      "minimum_af": 0.0,
+      "median_af": 100.0,
+      "mean_af": 96.17021276595744,
+      "maximum_af": 274.0,
+      "share_of_earlier_years_below_2025": 0.2127659574468085
+     },
+     "claimant_requirement_at_place_of_use_af": 307.82732889679704
+    },
+    "2025-06": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 16.59393990309658,
+     "volume_af": 16.59393990309658,
+     "tested": true,
+     "viewer_monthly_summary_af": 17.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 57,
+      "first_year": 1957,
+      "minimum_af": 10.0,
+      "median_af": 195.0,
+      "mean_af": 202.49122807017545,
+      "maximum_af": 744.0,
+      "share_of_earlier_years_below_2025": 0.017543859649122806
+     },
+     "claimant_requirement_at_place_of_use_af": 564.3501034756187
+    },
+    "2025-07": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 0.0,
+     "volume_af": 0.0,
+     "tested": true,
+     "viewer_monthly_summary_af": 0.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 59,
+      "first_year": 1957,
+      "minimum_af": 64.0,
+      "median_af": 228.0,
+      "mean_af": 232.35593220338984,
+      "maximum_af": 521.0,
+      "share_of_earlier_years_below_2025": 0.0
+     },
+     "claimant_requirement_at_place_of_use_af": 718.2637679240172
+    },
+    "2025-08": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 40.33725804569117,
+     "volume_af": 40.33725804569117,
+     "tested": true,
+     "viewer_monthly_summary_af": 40.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 56,
+      "first_year": 1957,
+      "minimum_af": 0.0,
+      "median_af": 181.5,
+      "mean_af": 184.33928571428572,
+      "maximum_af": 483.0,
+      "share_of_earlier_years_below_2025": 0.08928571428571429
+     },
+     "claimant_requirement_at_place_of_use_af": 615.6546577935941
+    },
+    "2025-09": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 34.021140970479074,
+     "volume_af": 34.021140970479074,
+     "tested": true,
+     "viewer_monthly_summary_af": 34.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 54,
+      "first_year": 1957,
+      "minimum_af": 0.0,
+      "median_af": 60.0,
+      "mean_af": 89.01851851851852,
+      "maximum_af": 448.0,
+      "share_of_earlier_years_below_2025": 0.3148148148148148
+     },
+     "claimant_requirement_at_place_of_use_af": 359.13188470924473
+    }
+   },
+   "season_largest_daily_cfs": 4.314363023421,
+   "reach_design_capacity_cfs": null,
+   "season_days_above_design_capacity": null,
+   "plan_carries_water_through_the_reach": null
+  },
+  "2776": {
+   "station_name": "PARADISE CANAL",
+   "units": "Mean daily discharge in CFS",
+   "claimant_id": "company_130",
+   "linked_edge_id": "e_10136",
+   "measuring_device": "4` PARSHALL FLUME",
+   "record_rating": "Unrated",
+   "months": {
+    "2025-05": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 920.1982280539379,
+     "volume_af": 920.1982280539379,
+     "tested": true,
+     "viewer_monthly_summary_af": 920.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 54,
+      "first_year": 1957,
+      "minimum_af": 0.0,
+      "median_af": 635.0,
+      "mean_af": 791.074074074074,
+      "maximum_af": 2439.0,
+      "share_of_earlier_years_below_2025": 0.7037037037037037
+     },
+     "claimant_requirement_at_place_of_use_af": 390.71511033488196,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 408.42554286501985,
+     "plan_flow_af": 408.4255428649709,
+     "plan_flow_range_af": [
+      408.4234178761994,
+      408.4255428649709
+     ],
+     "ratio_to_requirement": 2.2530379015938613,
+     "ratio_to_plan": 2.2530379015941313,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-06": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 1914.4088634162842,
+     "volume_af": 1914.4088634162842,
+     "tested": true,
+     "viewer_monthly_summary_af": 1914.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 62,
+      "first_year": 1957,
+      "minimum_af": 230.0,
+      "median_af": 1272.0,
+      "mean_af": 1447.1774193548388,
+      "maximum_af": 4066.0,
+      "share_of_earlier_years_below_2025": 0.7903225806451613
+     },
+     "claimant_requirement_at_place_of_use_af": 716.3110349545967,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 748.7801612299622,
+     "plan_flow_af": 520.9549775084503,
+     "plan_flow_range_af": [
+      520.952918248882,
+      521.2307677457735
+     ],
+     "ratio_to_requirement": 2.556703505968475,
+     "ratio_to_plan": 3.6748067415964583,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-07": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 2254.8389122344397,
+     "volume_af": 2254.8389122344397,
+     "tested": true,
+     "viewer_monthly_summary_af": 2255.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 62,
+      "first_year": 1957,
+      "minimum_af": 731.0,
+      "median_af": 1771.5,
+      "mean_af": 1898.5806451612902,
+      "maximum_af": 3968.0,
+      "share_of_earlier_years_below_2025": 0.7580645161290323
+     },
+     "claimant_requirement_at_place_of_use_af": 911.668589462684,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 952.9929319732311,
+     "plan_flow_af": 399.79079196568654,
+     "plan_flow_range_af": [
+      399.79079196568654,
+      399.79084558575664
+     ],
+     "ratio_to_requirement": 2.3660604780831433,
+     "ratio_to_plan": 5.640047138524314,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-08": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 2213.1952179311406,
+     "volume_af": 2213.1952179311406,
+     "tested": true,
+     "viewer_monthly_summary_af": 2213.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 60,
+      "first_year": 1957,
+      "minimum_af": 589.0,
+      "median_af": 1578.5,
+      "mean_af": 1727.5666666666666,
+      "maximum_af": 3584.0,
+      "share_of_earlier_years_below_2025": 0.8
+     },
+     "claimant_requirement_at_place_of_use_af": 781.4302193510567,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 816.8510843515578,
+     "plan_flow_af": 504.89622120208014,
+     "plan_flow_range_af": [
+      504.61842532522354,
+      504.8962748221512
+     ],
+     "ratio_to_requirement": 2.709423125376696,
+     "ratio_to_plan": 4.383465601429664,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-09": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 1021.7827421726678,
+     "volume_af": 1021.7827421726678,
+     "tested": true,
+     "viewer_monthly_summary_af": 1022.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 62,
+      "first_year": 1957,
+      "minimum_af": 40.0,
+      "median_af": 839.0,
+      "mean_af": 962.258064516129,
+      "maximum_af": 2461.0,
+      "share_of_earlier_years_below_2025": 0.6612903225806451
+     },
+     "claimant_requirement_at_place_of_use_af": 455.834294731342,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 476.49646598661553,
+     "plan_flow_af": 476.49646598655846,
+     "plan_flow_range_af": [
+      476.4943409977725,
+      476.49646598655846
+     ],
+     "ratio_to_requirement": 2.1443658350267154,
+     "ratio_to_plan": 2.1443658350269725,
+     "some_optimal_plan_within_factor": false
+    }
+   },
+   "season_largest_daily_cfs": 45.61852028699,
+   "reach_design_capacity_cfs": 35.0,
+   "season_days_above_design_capacity": 58,
+   "plan_carries_water_through_the_reach": true
+  },
+  "9738": {
+   "station_name": "PARADISE CANAL BELOW BLACK TUBE",
+   "units": "Mean daily discharge in CFS",
+   "claimant_id": "company_130",
+   "linked_edge_id": "e_10136",
+   "measuring_device": "4ft Parshall Flume",
+   "record_rating": "Unrated",
+   "months": {
+    "2025-05": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 1169.708499134777,
+     "volume_af": 1169.708499134777,
+     "tested": true,
+     "viewer_monthly_summary_af": 1170.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 10,
+      "first_year": 2013,
+      "minimum_af": 182.0,
+      "median_af": 435.0,
+      "mean_af": 614.3,
+      "maximum_af": 1337.0,
+      "share_of_earlier_years_below_2025": 0.8
+     },
+     "claimant_requirement_at_place_of_use_af": 390.71511033488196,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 408.42554286501985,
+     "plan_flow_af": 408.4255428649709,
+     "plan_flow_range_af": [
+      408.4234178761994,
+      408.4255428649709
+     ],
+     "ratio_to_requirement": 2.86394550871994,
+     "ratio_to_plan": 2.8639455087202834,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-06": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 1654.8983953850777,
+     "volume_af": 1654.8983953850777,
+     "tested": true,
+     "viewer_monthly_summary_af": 1655.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 682.0,
+      "median_af": 1049.0,
+      "mean_af": 1013.1538461538462,
+      "maximum_af": 1331.0,
+      "share_of_earlier_years_below_2025": 1.0
+     },
+     "claimant_requirement_at_place_of_use_af": 716.3110349545967,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 748.7801612299622,
+     "plan_flow_af": 520.9549775084503,
+     "plan_flow_range_af": [
+      520.952918248882,
+      521.2307677457735
+     ],
+     "ratio_to_requirement": 2.210125856789136,
+     "ratio_to_plan": 3.1766629878456896,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-07": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 2309.178568188714,
+     "volume_af": 2309.178568188714,
+     "tested": true,
+     "viewer_monthly_summary_af": 2309.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 957.0,
+      "median_af": 1481.0,
+      "mean_af": 1446.3846153846155,
+      "maximum_af": 1945.0,
+      "share_of_earlier_years_below_2025": 1.0
+     },
+     "claimant_requirement_at_place_of_use_af": 911.668589462684,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 952.9929319732311,
+     "plan_flow_af": 399.79079196568654,
+     "plan_flow_range_af": [
+      399.79079196568654,
+      399.79084558575664
+     ],
+     "ratio_to_requirement": 2.4230804770056547,
+     "ratio_to_plan": 5.775967367419777,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-08": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 1745.98072034519,
+     "volume_af": 1745.98072034519,
+     "tested": true,
+     "viewer_monthly_summary_af": 1746.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 487.0,
+      "median_af": 1443.0,
+      "mean_af": 1373.4615384615386,
+      "maximum_af": 1779.0,
+      "share_of_earlier_years_below_2025": 0.9230769230769231
+     },
+     "claimant_requirement_at_place_of_use_af": 781.4302193510567,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 816.8510843515578,
+     "plan_flow_af": 504.89622120208014,
+     "plan_flow_range_af": [
+      504.61842532522354,
+      504.8962748221512
+     ],
+     "ratio_to_requirement": 2.1374529015055477,
+     "ratio_to_plan": 3.4580982131105653,
+     "some_optimal_plan_within_factor": false
+    },
+    "2025-09": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 832.7801313048991,
+     "volume_af": 832.7801313048991,
+     "tested": true,
+     "viewer_monthly_summary_af": 833.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 111.0,
+      "median_af": 761.0,
+      "mean_af": 745.4615384615385,
+      "maximum_af": 1184.0,
+      "share_of_earlier_years_below_2025": 0.6923076923076923
+     },
+     "claimant_requirement_at_place_of_use_af": 455.834294731342,
+     "efficiency_station_to_place_of_use": 0.956637304303,
+     "requirement_at_station_af": 476.49646598661553,
+     "plan_flow_af": 476.49646598655846,
+     "plan_flow_range_af": [
+      476.4943409977725,
+      476.49646598655846
+     ],
+     "ratio_to_requirement": 1.7477152313828312,
+     "ratio_to_plan": 1.7477152313830404,
+     "some_optimal_plan_within_factor": true
+    }
+   },
+   "season_largest_daily_cfs": 41.9147720107,
+   "reach_design_capacity_cfs": 35.0,
+   "season_days_above_design_capacity": 29,
+   "plan_carries_water_through_the_reach": true
+  },
+  "9739": {
+   "station_name": "HIGHLINE CANAL BELOW WEEKS FARM",
+   "units": "Mean daily discharge in CFS",
+   "claimant_id": "company_132",
+   "linked_edge_id": "e_13081",
+   "measuring_device": "Greyline Instruments AVFM 5.0",
+   "record_rating": "Unrated",
+   "months": {
+    "2025-05": {
+     "days": 31,
+     "days_recorded": 3,
+     "coverage": 0.0968,
+     "recorded_volume_af": 23.02033922725498,
+     "volume_af": null,
+     "tested": false,
+     "viewer_monthly_summary_af": 23.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 9,
+      "first_year": 2013,
+      "minimum_af": 25.0,
+      "median_af": 139.0,
+      "mean_af": 175.11111111111111,
+      "maximum_af": 410.0,
+      "share_of_earlier_years_below_2025": 0.0
+     },
+     "claimant_requirement_at_place_of_use_af": 686.9261337710288,
+     "efficiency_station_to_place_of_use": 0.959708593,
+     "requirement_at_station_af": 715.7653258305554,
+     "plan_flow_af": 715.7653258305551,
+     "plan_flow_range_af": [
+      601.6233083760957,
+      715.7653258305554
+     ],
+     "ratio_to_requirement": null,
+     "ratio_to_plan": null,
+     "some_optimal_plan_within_factor": null
+    },
+    "2025-06": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 850.6082947588284,
+     "volume_af": 850.6082947588283,
+     "tested": true,
+     "viewer_monthly_summary_af": 851.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 12,
+      "first_year": 2013,
+      "minimum_af": 283.0,
+      "median_af": 566.0,
+      "mean_af": 571.3333333333334,
+      "maximum_af": 846.0,
+      "share_of_earlier_years_below_2025": 1.0
+     },
+     "claimant_requirement_at_place_of_use_af": 1259.3645785802196,
+     "efficiency_station_to_place_of_use": 0.959708593,
+     "requirement_at_station_af": 1312.2364306893514,
+     "plan_flow_af": 550.4973061923197,
+     "plan_flow_range_af": [
+      550.4973061923198,
+      1109.4870979481825
+     ],
+     "ratio_to_requirement": 0.6482126809358447,
+     "ratio_to_plan": 1.5451634098671918,
+     "some_optimal_plan_within_factor": true
+    },
+    "2025-07": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 803.6639666739908,
+     "volume_af": 803.6639666739908,
+     "tested": true,
+     "viewer_monthly_summary_af": 804.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 311.0,
+      "median_af": 793.0,
+      "mean_af": 751.3846153846154,
+      "maximum_af": 1022.0,
+      "share_of_earlier_years_below_2025": 0.5384615384615384
+     },
+     "claimant_requirement_at_place_of_use_af": 1602.827645465734,
+     "efficiency_station_to_place_of_use": 0.959708593,
+     "requirement_at_station_af": 1670.1190936046291,
+     "plan_flow_af": 987.3898332413825,
+     "plan_flow_range_af": [
+      700.6329351538615,
+      1187.3633174713102
+     ],
+     "ratio_to_requirement": 0.48120159200110546,
+     "ratio_to_plan": 0.8139277310925308,
+     "some_optimal_plan_within_factor": true
+    },
+    "2025-08": {
+     "days": 31,
+     "days_recorded": 31,
+     "coverage": 1.0,
+     "recorded_volume_af": 839.3065453793789,
+     "volume_af": 839.3065453793789,
+     "tested": true,
+     "viewer_monthly_summary_af": 839.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 50.0,
+      "median_af": 761.0,
+      "mean_af": 707.7692307692307,
+      "maximum_af": 1048.0,
+      "share_of_earlier_years_below_2025": 0.6153846153846154
+     },
+     "claimant_requirement_at_place_of_use_af": 1373.8522675420577,
+     "efficiency_station_to_place_of_use": 0.959708593,
+     "requirement_at_station_af": 1431.5306516611108,
+     "plan_flow_af": 1178.159086789043,
+     "plan_flow_range_af": [
+      600.5425158461671,
+      1178.1652339040131
+     ],
+     "ratio_to_requirement": 0.5863000868374488,
+     "ratio_to_plan": 0.7123881271983622,
+     "some_optimal_plan_within_factor": true
+    },
+    "2025-09": {
+     "days": 30,
+     "days_recorded": 30,
+     "coverage": 1.0,
+     "recorded_volume_af": 1.7948702877978984,
+     "volume_af": 1.7948702877978984,
+     "tested": true,
+     "viewer_monthly_summary_af": 2.0,
+     "agrees_with_viewer_summary": true,
+     "earlier_years": {
+      "years": 13,
+      "first_year": 2012,
+      "minimum_af": 0.0,
+      "median_af": 178.0,
+      "mean_af": 232.30769230769232,
+      "maximum_af": 631.0,
+      "share_of_earlier_years_below_2025": 0.07692307692307693
+     },
+     "claimant_requirement_at_place_of_use_af": 801.413822732867,
+     "efficiency_station_to_place_of_use": 0.959708593,
+     "requirement_at_station_af": 835.0595468023146,
+     "plan_flow_af": 835.0595468023147,
+     "plan_flow_range_af": [
+      505.8232736943713,
+      835.0595468023146
+     ],
+     "ratio_to_requirement": 0.002149391974106491,
+     "ratio_to_plan": 0.0021493919741064904,
+     "some_optimal_plan_within_factor": false
+    }
+   },
+   "season_largest_daily_cfs": 19.74452960063,
+   "reach_design_capacity_cfs": 50.0,
+   "season_days_above_design_capacity": 0,
+   "plan_carries_water_through_the_reach": true
+  }
+ },
+ "claimants": {
+  "company_088": {
+   "claimant_name": "Hyrum Irrigation Co.",
+   "stations": [
+    "2771",
+    "2772"
+   ],
+   "months": {
+    "2025-05": {
+     "requirement_af": 307.82732889679704,
+     "plan_withdrawal_af": 307.82732889679704,
+     "plan_withdrawal_range_af": [
+      307.8272576379762,
+      307.82732889679704
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2771",
+        "2772"
+       ],
+       "observed_af": null,
+       "ratio_to_requirement": null,
+       "ratio_to_plan_withdrawal": null
+      }
+     ]
+    },
+    "2025-06": {
+     "requirement_af": 564.3501034756187,
+     "plan_withdrawal_af": 311.1919265836492,
+     "plan_withdrawal_range_af": [
+      311.19185532482925,
+      311.19211946922115
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2771",
+        "2772"
+       ],
+       "observed_af": 1274.4663794559294,
+       "ratio_to_requirement": 2.258290326531303,
+       "ratio_to_plan_withdrawal": 4.095435230108226
+      }
+     ]
+    },
+    "2025-07": {
+     "requirement_af": 718.2637679240172,
+     "plan_withdrawal_af": 321.56499053897517,
+     "plan_withdrawal_range_af": [
+      321.56499053897517,
+      321.56518342463613
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2771",
+        "2772"
+       ],
+       "observed_af": 1411.97910879241,
+       "ratio_to_requirement": 1.9658225457667506,
+       "ratio_to_plan_withdrawal": 4.390960304558626
+      }
+     ]
+    },
+    "2025-08": {
+     "requirement_af": 615.6546577935941,
+     "plan_withdrawal_af": 321.56499053897517,
+     "plan_withdrawal_range_af": [
+      321.5649192801559,
+      321.56518342463215
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2771",
+        "2772"
+       ],
+       "observed_af": 1406.1846530139458,
+       "ratio_to_requirement": 2.2840477777809434,
+       "ratio_to_plan_withdrawal": 4.372940756570046
+      }
+     ]
+    },
+    "2025-09": {
+     "requirement_af": 359.13188470924473,
+     "plan_withdrawal_af": 311.1919265836492,
+     "plan_withdrawal_range_af": [
+      311.19185532486347,
+      311.19211946930426
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2771",
+        "2772"
+       ],
+       "observed_af": 915.1160034722444,
+       "ratio_to_requirement": 2.5481335476885536,
+       "ratio_to_plan_withdrawal": 2.940680413912534
+      }
+     ]
+    }
+   }
+  },
+  "company_130": {
+   "claimant_name": "Paradise Irrigation Co.",
+   "stations": [
+    "2776",
+    "9738"
+   ],
+   "months": {
+    "2025-05": {
+     "requirement_af": 390.71511033488196,
+     "plan_withdrawal_af": 390.71511033488196,
+     "plan_withdrawal_range_af": [
+      390.71307749135195,
+      390.71511033488196
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2776"
+       ],
+       "observed_af": 920.1982280539379,
+       "ratio_to_requirement": 2.3551641687602918,
+       "ratio_to_plan_withdrawal": 2.3551641687602918
+      },
+      {
+       "stations": [
+        "9738"
+       ],
+       "observed_af": 1169.708499134777,
+       "ratio_to_requirement": 2.9937631491452166,
+       "ratio_to_plan_withdrawal": 2.9937631491452166
+      }
+     ]
+    },
+    "2025-06": {
+     "requirement_af": 716.3110349545967,
+     "plan_withdrawal_af": 498.3649653469736,
+     "plan_withdrawal_range_af": [
+      498.3629953824179,
+      498.6287965761342
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2776"
+       ],
+       "observed_af": 1914.4088634162842,
+       "ratio_to_requirement": 2.6725944038229548,
+       "ratio_to_plan_withdrawal": 3.841379303385476
+      },
+      {
+       "stations": [
+        "9738"
+       ],
+       "observed_af": 1654.8983953850777,
+       "ratio_to_requirement": 2.310306996024392,
+       "ratio_to_plan_withdrawal": 3.3206555646079536
+      }
+     ]
+    },
+    "2025-07": {
+     "requirement_af": 911.668589462684,
+     "plan_withdrawal_af": 382.45478551126166,
+     "plan_withdrawal_range_af": [
+      382.45478551126166,
+      382.454836806221
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2776"
+       ],
+       "observed_af": 2254.8389122344397,
+       "ratio_to_requirement": 2.4733098609478126,
+       "ratio_to_plan_withdrawal": 5.89570060999549
+      },
+      {
+       "stations": [
+        "9738"
+       ],
+       "observed_af": 2309.178568188714,
+       "ratio_to_requirement": 2.5329144766846574,
+       "ratio_to_plan_withdrawal": 6.0377818651212
+      }
+     ]
+    },
+    "2025-08": {
+     "requirement_af": 781.4302193510567,
+     "plan_withdrawal_af": 483.002560003587,
+     "plan_withdrawal_range_af": [
+      482.7368101038114,
+      483.00261129854937
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2776"
+       ],
+       "observed_af": 2213.1952179311406,
+       "ratio_to_requirement": 2.8322365364486433,
+       "ratio_to_plan_withdrawal": 4.582160429780547
+      },
+      {
+       "stations": [
+        "9738"
+       ],
+       "observed_af": 1745.98072034519,
+       "ratio_to_requirement": 2.2343399027940714,
+       "ratio_to_plan_withdrawal": 3.614847756360181
+      }
+     ]
+    },
+    "2025-09": {
+     "requirement_af": 455.834294731342,
+     "plan_withdrawal_af": 455.834294731342,
+     "plan_withdrawal_range_af": [
+      455.8322618878104,
+      455.834294731342
+     ],
+     "observed": [
+      {
+       "stations": [
+        "2776"
+       ],
+       "observed_af": 1021.7827421726678,
+       "ratio_to_requirement": 2.2415661874999606,
+       "ratio_to_plan_withdrawal": 2.2415661874999606
+      },
+      {
+       "stations": [
+        "9738"
+       ],
+       "observed_af": 832.7801313048991,
+       "ratio_to_requirement": 1.82693610579634,
+       "ratio_to_plan_withdrawal": 1.82693610579634
+      }
+     ]
+    }
+   }
+  },
+  "company_132": {
+   "claimant_name": "Porcupine Highline Canal Co.",
+   "stations": [
+    "9739"
+   ],
+   "months": {
+    "2025-05": {
+     "requirement_af": 686.9261337710288,
+     "plan_withdrawal_af": 686.9261337710286,
+     "plan_withdrawal_range_af": [
+      577.3830587976266,
+      686.9261337710288
+     ],
+     "observed": [
+      {
+       "stations": [
+        "9739"
+       ],
+       "observed_af": null,
+       "ratio_to_requirement": null,
+       "ratio_to_plan_withdrawal": null
+      }
+     ]
+    },
+    "2025-06": {
+     "requirement_af": 1259.3645785802196,
+     "plan_withdrawal_af": 528.3169951761213,
+     "plan_withdrawal_range_af": [
+      528.3169951761215,
+      1064.7843017235507
+     ],
+     "observed": [
+      {
+       "stations": [
+        "9739"
+       ],
+       "observed_af": 850.6082947588283,
+       "ratio_to_requirement": 0.6754265676725525,
+       "ratio_to_plan_withdrawal": 1.6100339427378576
+      }
+     ]
+    },
+    "2025-07": {
+     "requirement_af": 1602.827645465734,
+     "plan_withdrawal_af": 947.6065076025918,
+     "plan_withdrawal_range_af": [
+      672.4034484059727,
+      1139.5227787900812
+     ],
+     "observed": [
+      {
+       "stations": [
+        "9739"
+       ],
+       "observed_af": 803.6639666739908,
+       "ratio_to_requirement": 0.5014038589535745,
+       "ratio_to_plan_withdrawal": 0.8480988260699368
+      }
+     ]
+    },
+    "2025-08": {
+     "requirement_af": 1373.8522675420577,
+     "plan_withdrawal_af": 1130.6893995124772,
+     "plan_withdrawal_range_af": [
+      576.3458129194053,
+      1130.695298951523
+     ],
+     "observed": [
+      {
+       "stations": [
+        "9739"
+       ],
+       "observed_af": 839.3065453793789,
+       "ratio_to_requirement": 0.6109146996430497,
+       "ratio_to_plan_withdrawal": 0.7422962890969574
+      }
+     ]
+    },
+    "2025-09": {
+     "requirement_af": 801.413822732867,
+     "plan_withdrawal_af": 801.4138227328671,
+     "plan_withdrawal_range_af": [
+      485.4429423038491,
+      801.413822732867
+     ],
+     "observed": [
+      {
+       "stations": [
+        "9739"
+       ],
+       "observed_af": 1.7948702877978984,
+       "ratio_to_requirement": 0.0022396298103235703,
+       "ratio_to_plan_withdrawal": 0.0022396298103235703
+      }
+     ]
+    }
+   }
+  }
+ },
+ "hypothesis_H_2_2": {
+  "2771": {
+   "claimant_id": "company_088",
+   "compared_at": "claimant total (2771 + 2772)",
+   "tested_months": [
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+   ],
+   "ratio_to_plan": {
+    "2025-06": 4.095435230108226,
+    "2025-07": 4.390960304558626,
+    "2025-08": 4.372940756570046,
+    "2025-09": 2.940680413912534
+   },
+   "ratio_to_requirement": {
+    "2025-06": 2.258290326531303,
+    "2025-07": 1.9658225457667506,
+    "2025-08": 2.2840477777809434,
+    "2025-09": 2.5481335476885536
+   },
+   "months_within_factor_of_plan": 0,
+   "months_within_factor_of_requirement": 1,
+   "observed_peak_month": "2025-07",
+   "peak_in_june_to_august": true,
+   "consistent_with_plan": false,
+   "consistent_with_requirement": false
+  },
+  "2776": {
+   "claimant_id": "company_130",
+   "compared_at": "reach",
+   "tested_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+   ],
+   "ratio_to_plan": {
+    "2025-05": 2.2530379015941313,
+    "2025-06": 3.6748067415964583,
+    "2025-07": 5.640047138524314,
+    "2025-08": 4.383465601429664,
+    "2025-09": 2.1443658350269725
+   },
+   "ratio_to_requirement": {
+    "2025-05": 2.2530379015938613,
+    "2025-06": 2.556703505968475,
+    "2025-07": 2.3660604780831433,
+    "2025-08": 2.709423125376696,
+    "2025-09": 2.1443658350267154
+   },
+   "months_within_factor_of_plan": 0,
+   "months_within_factor_of_requirement": 0,
+   "observed_peak_month": "2025-07",
+   "peak_in_june_to_august": true,
+   "consistent_with_plan": false,
+   "consistent_with_requirement": false
+  },
+  "9738": {
+   "claimant_id": "company_130",
+   "compared_at": "reach",
+   "tested_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+   ],
+   "ratio_to_plan": {
+    "2025-05": 2.8639455087202834,
+    "2025-06": 3.1766629878456896,
+    "2025-07": 5.775967367419777,
+    "2025-08": 3.4580982131105653,
+    "2025-09": 1.7477152313830404
+   },
+   "ratio_to_requirement": {
+    "2025-05": 2.86394550871994,
+    "2025-06": 2.210125856789136,
+    "2025-07": 2.4230804770056547,
+    "2025-08": 2.1374529015055477,
+    "2025-09": 1.7477152313828312
+   },
+   "months_within_factor_of_plan": 1,
+   "months_within_factor_of_requirement": 1,
+   "observed_peak_month": "2025-07",
+   "peak_in_june_to_august": true,
+   "consistent_with_plan": false,
+   "consistent_with_requirement": false
+  },
+  "9739": {
+   "claimant_id": "company_132",
+   "compared_at": "reach",
+   "tested_months": [
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+   ],
+   "ratio_to_plan": {
+    "2025-06": 1.5451634098671918,
+    "2025-07": 0.8139277310925308,
+    "2025-08": 0.7123881271983622,
+    "2025-09": 0.0021493919741064904
+   },
+   "ratio_to_requirement": {
+    "2025-06": 0.6482126809358447,
+    "2025-07": 0.48120159200110546,
+    "2025-08": 0.5863000868374488,
+    "2025-09": 0.002149391974106491
+   },
+   "months_within_factor_of_plan": 3,
+   "months_within_factor_of_requirement": 2,
+   "observed_peak_month": "2025-06",
+   "peak_in_june_to_august": true,
+   "consistent_with_plan": true,
+   "consistent_with_requirement": false
+  }
+ },
+ "seconds": 1.2
+}

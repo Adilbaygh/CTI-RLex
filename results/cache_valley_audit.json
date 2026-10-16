@@ -1,105 +1,110 @@
 {
- "benchmark_id": "cache_valley_2025_multiclaimant_v3",
- "claimants": 10,
- "cells": 250,
- "binding_cells": 70,
+ "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+ "claimants": 15,
+ "cells": 375,
+ "binding_cells": 121,
  "binding_tolerance": 1e-07,
  "guarantees": {
   "company_168": 0.056393646245954054,
+  "company_072": 0.06891004645765059,
   "company_106": 0.13744468899532894,
+  "company_109": 0.16175481888078302,
   "company_130": 0.307273771107821,
   "company_132": 0.307273771107821,
-  "company_164": 0.36529559348158364,
-  "company_088": 0.36529559348158364,
-  "company_10390": 0.6740982692651426,
-  "company_105": 0.6740982692651426,
+  "company_162": 0.41517271423097657,
+  "company_164": 0.41517271423097657,
+  "company_088": 0.41517271423097657,
+  "company_103": 0.6068879257297796,
+  "company_10390": 0.6068879257297796,
+  "company_104": 0.6068879257297796,
+  "company_105": 0.6068879257297796,
   "company_1249": 0.8821454660844299,
   "company_136": 1.0
  },
  "residuals": {
-  "max_equality_residual": 2.2737367544323206e-13,
-  "max_inequality_violation": 1.0913936421275139e-11,
-  "max_bound_violation": 3.0509134518582614e-13
+  "max_equality_residual": 6.821210263296962e-13,
+  "max_inequality_violation": 1.6830981053317373e-13,
+  "max_bound_violation": 1.1368683772161603e-13
  },
  "representation_tests": [
   {
-   "terminal_id": "terminal_company_088_1",
-   "claimant_id": "company_088",
+   "terminal_id": "terminal_company_072_1",
+   "claimant_id": "company_072",
    "records": 2,
-   "max_guarantee_change": 5.551115123125783e-17
+   "max_guarantee_change": 1.1102230246251565e-16
   },
   {
-   "terminal_id": "terminal_company_088_1",
-   "claimant_id": "company_088",
+   "terminal_id": "terminal_company_072_1",
+   "claimant_id": "company_072",
    "records": 4,
-   "max_guarantee_change": 0.0
+   "max_guarantee_change": 1.1102230246251565e-16
   },
   {
-   "terminal_id": "terminal_company_088_1",
-   "claimant_id": "company_088",
+   "terminal_id": "terminal_company_072_1",
+   "claimant_id": "company_072",
    "records": 8,
-   "max_guarantee_change": 5.551115123125783e-17
+   "max_guarantee_change": 1.6653345369377348e-16
   }
  ],
  "scenario_water_balance": [
   {
    "scenario_id": "nominal",
    "scenario_label": "Design-envelope reference",
-   "source_injection_af": 27009.01816083995,
-   "gross_terminal_withdrawal_af": 24353.486466984294,
-   "beneficial_delivery_af": 16846.378549228582,
-   "conveyance_loss_af": 2655.531693855657,
-   "application_loss_af": 7507.107917755711,
-   "end_to_end_efficiency": 0.6237316161923259,
+   "source_injection_af": 37826.01372728877,
+   "gross_terminal_withdrawal_af": 35427.10283908072,
+   "beneficial_delivery_af": 25608.510838983482,
+   "conveyance_loss_af": 2398.9108882080545,
+   "application_loss_af": 9818.592000097236,
+   "end_to_end_efficiency": 0.6770079190371775,
    "recourse_effort": 0.0,
    "recourse_budget": 0.0
   },
   {
    "scenario_id": "moderate_system_shortage",
    "scenario_label": "Moderate system shortage",
-   "source_injection_af": 25739.163881631546,
-   "gross_terminal_withdrawal_af": 23489.071829347664,
-   "beneficial_delivery_af": 16137.411856614457,
-   "conveyance_loss_af": 2250.0920522838824,
-   "application_loss_af": 7351.659972733207,
-   "end_to_end_efficiency": 0.6269594432370328,
-   "recourse_effort": 0.24999763831325733,
+   "source_injection_af": 42161.4261809875,
+   "gross_terminal_withdrawal_af": 39312.19980493739,
+   "beneficial_delivery_af": 28526.442156190962,
+   "conveyance_loss_af": 2849.2263760501155,
+   "application_loss_af": 10785.757648746425,
+   "end_to_end_efficiency": 0.6766005028799246,
+   "recourse_effort": 0.24999902288318862,
    "recourse_budget": 0.25
   },
   {
    "scenario_id": "severe_system_shortage",
    "scenario_label": "Severe system shortage",
-   "source_injection_af": 22692.474309724726,
-   "gross_terminal_withdrawal_af": 20981.540371053245,
-   "beneficial_delivery_af": 14354.305087655724,
-   "conveyance_loss_af": 1710.9339386714819,
-   "application_loss_af": 6627.23528339752,
-   "end_to_end_efficiency": 0.6325579525501224,
-   "recourse_effort": 0.24999999999999994,
+   "source_injection_af": 33509.47132580468,
+   "gross_terminal_withdrawal_af": 31287.77146707401,
+   "beneficial_delivery_af": 22391.3384005873,
+   "conveyance_loss_af": 2221.6998587306734,
+   "application_loss_af": 8896.433066486708,
+   "end_to_end_efficiency": 0.6682092409898563,
+   "recourse_effort": 0.25000000000000006,
    "recourse_budget": 0.25
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "scenario_label": "Subsystem 1 restriction under shortage",
-   "source_injection_af": 24431.48618390806,
-   "gross_terminal_withdrawal_af": 22019.27431318572,
-   "beneficial_delivery_af": 15238.939740914608,
-   "conveyance_loss_af": 2412.211870722338,
-   "application_loss_af": 6780.334572271113,
-   "end_to_end_efficiency": 0.6237418234078541,
-   "recourse_effort": 0.25,
+   "source_injection_af": 35130.98088925012,
+   "gross_terminal_withdrawal_af": 32847.12817402387,
+   "beneficial_delivery_af": 23699.78605917893,
+   "conveyance_loss_af": 2283.852715226247,
+   "application_loss_af": 9147.342114844942,
+   "end_to_end_efficiency": 0.6746121360485818,
+   "recourse_effort": 0.2499999999999998,
    "recourse_budget": 0.25
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "scenario_label": "Subsystem 2 restriction under shortage",
-   "source_injection_af": 25322.631602108282,
-   "gross_terminal_withdrawal_af": 22961.42687388787,
-   "beneficial_delivery_af": 15789.595405612417,
-   "conveyance_loss_af": 2361.204728220411,
-   "application_loss_af": 7171.8314682754535,
-   "end_to_end_efficiency": 0.6235369077634817,
-   "recourse_effort": 0.25,
+   "source_injection_af": 36915.73294856296,
+   "gross_terminal_withdrawal_af": 34610.533461665014,
+   "beneficial_delivery_af": 24972.36546884995,
+   "conveyance_loss_af": 2305.1994868979455,
+   "application_loss_af": 9638.167992815066,
+   "end_to_end_efficiency": 0.6764694474208472,
+   "recourse_effort": 0.25000000000000006,
    "recourse_budget": 0.25
   }
  ],
@@ -113,9 +118,9 @@
    "operational_roles": [
     "company_168:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 7349.268551383372,
+   "seasonal_injection_af": 3186.4462810000005,
    "seasonal_limit_af": 54624.793388,
-   "seasonal_utilization": 0.13454089426355365
+   "seasonal_utilization": 0.05833333333394357
   },
   {
    "scenario_id": "nominal",
@@ -137,11 +142,25 @@
    "source_name": "Surface diversion at node 9548",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_162:routine_surface_diversion",
     "company_164:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 2429.7520659994966,
-   "seasonal_limit_af": 15173.553719,
-   "seasonal_utilization": 0.16013071894667713
+   "seasonal_injection_af": 8803.751464910581,
+   "seasonal_limit_af": 46734.545455,
+   "seasonal_utilization": 0.18837781301173845
+  },
+  {
+   "scenario_id": "nominal",
+   "scenario_label": "Design-envelope reference",
+   "source_id": "s_10406",
+   "source_name": "Surface diversion at node 10406",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_072:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 5709.419035573514,
+   "seasonal_limit_af": 21242.975207,
+   "seasonal_utilization": 0.26876739157009144
   },
   {
    "scenario_id": "nominal",
@@ -150,12 +169,14 @@
    "source_name": "Surface diversion at node 10422",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_103:routine_surface_diversion",
     "company_10390:routine_surface_diversion",
+    "company_104:routine_surface_diversion",
     "company_105:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 4007.6791397262446,
+   "seasonal_injection_af": 4158.2852423285185,
    "seasonal_limit_af": 30347.107438,
-   "seasonal_utilization": 0.1320613224147984
+   "seasonal_utilization": 0.1370241052075231
   },
   {
    "scenario_id": "nominal",
@@ -166,9 +187,9 @@
    "operational_roles": [
     "company_106:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 1547.705051732355,
+   "seasonal_injection_af": 1547.702479,
    "seasonal_limit_af": 10318.016529,
-   "seasonal_utilization": 0.15000024930977265
+   "seasonal_utilization": 0.14999999996607874
   },
   {
    "scenario_id": "nominal",
@@ -199,16 +220,30 @@
   {
    "scenario_id": "nominal",
    "scenario_label": "Design-envelope reference",
+   "source_id": "s_10451",
+   "source_name": "Surface diversion at node 10451",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_109:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 2048.429752,
+   "seasonal_limit_af": 13656.198347,
+   "seasonal_utilization": 0.14999999999633867
+  },
+  {
+   "scenario_id": "nominal",
+   "scenario_label": "Design-envelope reference",
    "source_id": "s_15269",
    "source_name": "Hyrum Reservoir",
    "source_class": "reservoir_release",
    "operational_roles": [
     "company_088:supplemental_storage_release",
+    "company_162:supplemental_storage_release",
     "company_164:supplemental_storage_release"
    ],
-   "seasonal_injection_af": 4330.412184549024,
+   "seasonal_injection_af": 4671.249999999999,
    "seasonal_limit_af": 18685.0,
-   "seasonal_utilization": 0.23175874683163092
+   "seasonal_utilization": 0.24999999999999994
   },
   {
    "scenario_id": "nominal",
@@ -220,9 +255,9 @@
     "company_130:supplemental_storage_release",
     "company_132:routine_storage_supply"
    ],
-   "seasonal_injection_af": 4873.573014348294,
+   "seasonal_injection_af": 5073.843224725819,
    "seasonal_limit_af": 20817.812231,
-   "seasonal_utilization": 0.23410591661937516
+   "seasonal_utilization": 0.24372605384394386
   },
   {
    "scenario_id": "nominal",
@@ -233,9 +268,9 @@
    "operational_roles": [
     "company_088:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 0.0,
+   "seasonal_injection_af": 156.25809464918333,
    "seasonal_limit_af": 10621.487603,
-   "seasonal_utilization": 0.0
+   "seasonal_utilization": 0.014711507510967562
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -246,9 +281,9 @@
    "operational_roles": [
     "company_168:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 5462.47934,
+   "seasonal_injection_af": 4802.205603247832,
    "seasonal_limit_af": 19118.677686,
-   "seasonal_utilization": 0.2857142857740627
+   "seasonal_utilization": 0.2511787521144485
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -270,11 +305,25 @@
    "source_name": "Surface diversion at node 9548",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_162:routine_surface_diversion",
     "company_164:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 3046.6869981744667,
-   "seasonal_limit_af": 5310.743802,
-   "seasonal_utilization": 0.5736836706427261
+   "seasonal_injection_af": 9797.782309934992,
+   "seasonal_limit_af": 16357.090909,
+   "seasonal_utilization": 0.5989929605724729
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "scenario_label": "Moderate system shortage",
+   "source_id": "s_10406",
+   "source_name": "Surface diversion at node 10406",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_072:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 7435.041322,
+   "seasonal_limit_af": 7435.041322,
+   "seasonal_utilization": 1.0
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -283,12 +332,14 @@
    "source_name": "Surface diversion at node 10422",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_103:routine_surface_diversion",
     "company_10390:routine_surface_diversion",
+    "company_104:routine_surface_diversion",
     "company_105:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 4007.679139726245,
+   "seasonal_injection_af": 4158.2852423285185,
    "seasonal_limit_af": 10621.487603,
-   "seasonal_utilization": 0.3773180640529384
+   "seasonal_utilization": 0.3914974434611237
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -299,9 +350,9 @@
    "operational_roles": [
     "company_106:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 1547.705051732355,
+   "seasonal_injection_af": 1547.702479,
    "seasonal_limit_af": 3611.305785,
-   "seasonal_utilization": 0.428572140902866
+   "seasonal_utilization": 0.42857142849231195
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -332,16 +383,30 @@
   {
    "scenario_id": "moderate_system_shortage",
    "scenario_label": "Moderate system shortage",
+   "source_id": "s_10451",
+   "source_name": "Surface diversion at node 10451",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_109:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 2048.429752,
+   "seasonal_limit_af": 4779.669421,
+   "seasonal_utilization": 0.4285714286013171
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "scenario_label": "Moderate system shortage",
    "source_id": "s_15269",
    "source_name": "Hyrum Reservoir",
    "source_class": "reservoir_release",
    "operational_roles": [
     "company_088:supplemental_storage_release",
+    "company_162:supplemental_storage_release",
     "company_164:supplemental_storage_release"
    ],
-   "seasonal_injection_af": 4330.412184549024,
+   "seasonal_injection_af": 4671.249999999999,
    "seasonal_limit_af": 9342.5,
-   "seasonal_utilization": 0.46351749366326184
+   "seasonal_utilization": 0.4999999999999999
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -353,9 +418,9 @@
     "company_130:supplemental_storage_release",
     "company_132:routine_storage_supply"
    ],
-   "seasonal_injection_af": 4873.573014348294,
+   "seasonal_injection_af": 5073.843224725819,
    "seasonal_limit_af": 10408.906116,
-   "seasonal_utilization": 0.46821183321625937
+   "seasonal_utilization": 0.48745210766447256
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -366,9 +431,9 @@
    "operational_roles": [
     "company_088:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 0.0,
+   "seasonal_injection_af": 156.25809464918333,
    "seasonal_limit_af": 3717.520661,
-   "seasonal_utilization": 0.0
+   "seasonal_utilization": 0.04203287860332979
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -403,10 +468,24 @@
    "source_name": "Surface diversion at node 9548",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_162:routine_surface_diversion",
     "company_164:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 2276.033058,
-   "seasonal_limit_af": 2276.033058,
+   "seasonal_injection_af": 7010.181818,
+   "seasonal_limit_af": 7010.181818,
+   "seasonal_utilization": 1.0
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "scenario_label": "Severe system shortage",
+   "source_id": "s_10406",
+   "source_name": "Surface diversion at node 10406",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_072:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 3186.446281,
+   "seasonal_limit_af": 3186.446281,
    "seasonal_utilization": 1.0
   },
   {
@@ -416,12 +495,14 @@
    "source_name": "Surface diversion at node 10422",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_103:routine_surface_diversion",
     "company_10390:routine_surface_diversion",
+    "company_104:routine_surface_diversion",
     "company_105:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 4007.679139726245,
+   "seasonal_injection_af": 4158.2852423285185,
    "seasonal_limit_af": 4552.066116,
-   "seasonal_utilization": 0.8804088160406335
+   "seasonal_utilization": 0.9134940346566176
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -465,16 +546,30 @@
   {
    "scenario_id": "severe_system_shortage",
    "scenario_label": "Severe system shortage",
+   "source_id": "s_10451",
+   "source_name": "Surface diversion at node 10451",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_109:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 2048.429752,
+   "seasonal_limit_af": 2048.429752,
+   "seasonal_utilization": 1.0
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "scenario_label": "Severe system shortage",
    "source_id": "s_15269",
    "source_name": "Hyrum Reservoir",
    "source_class": "reservoir_release",
    "operational_roles": [
     "company_088:supplemental_storage_release",
+    "company_162:supplemental_storage_release",
     "company_164:supplemental_storage_release"
    ],
-   "seasonal_injection_af": 4330.412184549024,
+   "seasonal_injection_af": 4671.249999999999,
    "seasonal_limit_af": 4671.25,
-   "seasonal_utilization": 0.9270349873265237
+   "seasonal_utilization": 0.9999999999999998
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -486,9 +581,9 @@
     "company_130:supplemental_storage_release",
     "company_132:routine_storage_supply"
    ],
-   "seasonal_injection_af": 4873.573014348294,
+   "seasonal_injection_af": 5073.843224725819,
    "seasonal_limit_af": 5204.453058,
-   "seasonal_utilization": 0.9364236664325187
+   "seasonal_utilization": 0.9749042153289451
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -499,9 +594,9 @@
    "operational_roles": [
     "company_088:routine_surface_diversion"
    ],
-   "seasonal_injection_af": -3.0509134518582614e-13,
+   "seasonal_injection_af": 156.25809464918333,
    "seasonal_limit_af": 1593.22314,
-   "seasonal_utilization": -1.91493167231946e-16
+   "seasonal_utilization": 0.09807671676748514
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -512,9 +607,9 @@
    "operational_roles": [
     "company_168:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 6372.892561000001,
+   "seasonal_injection_af": 3186.4462810000005,
    "seasonal_limit_af": 38237.355372,
-   "seasonal_utilization": 0.16666666664051424
+   "seasonal_utilization": 0.08333333333333334
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -536,11 +631,25 @@
    "source_name": "Surface diversion at node 9548",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_162:routine_surface_diversion",
     "company_164:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 2429.7520659994966,
-   "seasonal_limit_af": 3034.710744,
-   "seasonal_utilization": 0.8006535946806193
+   "seasonal_injection_af": 8503.604541579462,
+   "seasonal_limit_af": 9346.909091,
+   "seasonal_utilization": 0.9097771743353593
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "scenario_label": "Subsystem 1 restriction under shortage",
+   "source_id": "s_10406",
+   "source_name": "Surface diversion at node 10406",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_072:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 5709.419035573514,
+   "seasonal_limit_af": 14870.082645,
+   "seasonal_utilization": 0.38395341652612003
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -549,12 +658,14 @@
    "source_name": "Surface diversion at node 10422",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_103:routine_surface_diversion",
     "company_10390:routine_surface_diversion",
+    "company_104:routine_surface_diversion",
     "company_105:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 4007.679139726245,
+   "seasonal_injection_af": 4158.2852423285185,
    "seasonal_limit_af": 21242.975207,
-   "seasonal_utilization": 0.18865903201758819
+   "seasonal_utilization": 0.19574872172134708
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -565,9 +676,9 @@
    "operational_roles": [
     "company_106:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 1547.705051732355,
+   "seasonal_injection_af": 1547.702479,
    "seasonal_limit_af": 7222.61157,
-   "seasonal_utilization": 0.214286070451433
+   "seasonal_utilization": 0.21428571424615597
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -598,16 +709,30 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "scenario_label": "Subsystem 1 restriction under shortage",
+   "source_id": "s_10451",
+   "source_name": "Surface diversion at node 10451",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_109:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 2048.429752,
+   "seasonal_limit_af": 9559.338843,
+   "seasonal_utilization": 0.21428571427824217
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "scenario_label": "Subsystem 1 restriction under shortage",
    "source_id": "s_15269",
    "source_name": "Hyrum Reservoir",
    "source_class": "reservoir_release",
    "operational_roles": [
     "company_088:supplemental_storage_release",
+    "company_162:supplemental_storage_release",
     "company_164:supplemental_storage_release"
    ],
-   "seasonal_injection_af": 2729.2561980005034,
+   "seasonal_injection_af": 2432.6221799416435,
    "seasonal_limit_af": 3737.0,
-   "seasonal_utilization": 0.7303334755152538
+   "seasonal_utilization": 0.6509558950874079
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -619,9 +744,9 @@
     "company_130:supplemental_storage_release",
     "company_132:routine_storage_supply"
    ],
-   "seasonal_injection_af": 4873.573014348294,
+   "seasonal_injection_af": 5073.843224725819,
    "seasonal_limit_af": 14572.468562,
-   "seasonal_utilization": 0.33443702373507955
+   "seasonal_utilization": 0.3481800769127519
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -645,9 +770,9 @@
    "operational_roles": [
     "company_168:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 6372.892561000001,
+   "seasonal_injection_af": 3186.4462810000005,
    "seasonal_limit_af": 38237.355372,
-   "seasonal_utilization": 0.16666666664051424
+   "seasonal_utilization": 0.08333333333333334
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
@@ -669,11 +794,25 @@
    "source_name": "Surface diversion at node 9548",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_162:routine_surface_diversion",
     "company_164:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 2429.752065999496,
-   "seasonal_limit_af": 10621.487603,
-   "seasonal_utilization": 0.22875816993028564
+   "seasonal_injection_af": 8803.751464910581,
+   "seasonal_limit_af": 32714.181818,
+   "seasonal_utilization": 0.26911116144945374
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "scenario_label": "Subsystem 2 restriction under shortage",
+   "source_id": "s_10406",
+   "source_name": "Surface diversion at node 10406",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_072:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 5709.419035573514,
+   "seasonal_limit_af": 14870.082645,
+   "seasonal_utilization": 0.38395341652612003
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
@@ -682,12 +821,14 @@
    "source_name": "Surface diversion at node 10422",
    "source_class": "surface_diversion",
    "operational_roles": [
+    "company_103:routine_surface_diversion",
     "company_10390:routine_surface_diversion",
+    "company_104:routine_surface_diversion",
     "company_105:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 4007.679139726245,
+   "seasonal_injection_af": 4158.2852423285185,
    "seasonal_limit_af": 21242.975207,
-   "seasonal_utilization": 0.18865903201758819
+   "seasonal_utilization": 0.19574872172134708
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
@@ -698,9 +839,9 @@
    "operational_roles": [
     "company_106:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 1547.705051732355,
+   "seasonal_injection_af": 1547.702479,
    "seasonal_limit_af": 7222.61157,
-   "seasonal_utilization": 0.214286070451433
+   "seasonal_utilization": 0.21428571424615597
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
@@ -731,16 +872,30 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "scenario_label": "Subsystem 2 restriction under shortage",
+   "source_id": "s_10451",
+   "source_name": "Surface diversion at node 10451",
+   "source_class": "surface_diversion",
+   "operational_roles": [
+    "company_109:routine_surface_diversion"
+   ],
+   "seasonal_injection_af": 2048.429752,
+   "seasonal_limit_af": 9559.338843,
+   "seasonal_utilization": 0.21428571427824217
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "scenario_label": "Subsystem 2 restriction under shortage",
    "source_id": "s_15269",
    "source_name": "Hyrum Reservoir",
    "source_class": "reservoir_release",
    "operational_roles": [
     "company_088:supplemental_storage_release",
+    "company_162:supplemental_storage_release",
     "company_164:supplemental_storage_release"
    ],
-   "seasonal_injection_af": 4330.412184549024,
+   "seasonal_injection_af": 4671.249999999999,
    "seasonal_limit_af": 13079.5,
-   "seasonal_utilization": 0.331083924045187
+   "seasonal_utilization": 0.3571428571428571
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
@@ -765,14 +920,38 @@
    "operational_roles": [
     "company_088:routine_surface_diversion"
    ],
-   "seasonal_injection_af": 0.0,
+   "seasonal_injection_af": 156.25809464918333,
    "seasonal_limit_af": 7435.041322,
-   "seasonal_utilization": 0.0
+   "seasonal_utilization": 0.021016439301664896
   }
  ],
  "most_utilized_edges": [
   {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "edge_id": "e_4484",
+   "flow_af": 922.3140500000001,
+   "capacity_af": 922.31405,
+   "utilization": 1.0000000000000002
+  },
+  {
    "scenario_id": "nominal",
+   "period_id": "2025-07",
+   "edge_id": "e_4484",
+   "flow_af": 922.31405,
+   "capacity_af": 922.31405,
+   "utilization": 1.0
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
+   "edge_id": "e_4484",
+   "flow_af": 922.31405,
+   "capacity_af": 922.31405,
+   "utilization": 1.0
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
    "period_id": "2025-06",
    "edge_id": "e_8912",
    "flow_af": 535.53719,
@@ -780,7 +959,15 @@
    "utilization": 1.0
   },
   {
-   "scenario_id": "nominal",
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
+   "edge_id": "e_4484",
+   "flow_af": 922.31405,
+   "capacity_af": 922.31405,
+   "utilization": 1.0
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
    "edge_id": "e_8912",
    "flow_af": 553.38843,
@@ -788,7 +975,15 @@
    "utilization": 1.0
   },
   {
-   "scenario_id": "nominal",
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
+   "edge_id": "e_4484",
+   "flow_af": 922.31405,
+   "capacity_af": 922.31405,
+   "utilization": 1.0
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
    "edge_id": "e_8912",
    "flow_af": 553.38843,
@@ -796,171 +991,115 @@
    "utilization": 1.0
   },
   {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "edge_id": "e_4484",
+   "flow_af": 922.3140499999998,
+   "capacity_af": 922.31405,
+   "utilization": 0.9999999999999999
+  },
+  {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-06",
-   "edge_id": "e_8912",
-   "flow_af": 535.53719,
+   "edge_id": "c_13099_16801",
+   "flow_af": 530.7947388073434,
    "capacity_af": 535.53719,
-   "utilization": 1.0
+   "utilization": 0.9911444969999998
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
-   "edge_id": "e_8912",
-   "flow_af": 553.38843,
+   "edge_id": "c_13099_16801",
+   "flow_af": 548.4878970979696,
    "capacity_af": 553.38843,
-   "utilization": 1.0
+   "utilization": 0.9911444969999998
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
-   "edge_id": "e_8912",
-   "flow_af": 553.38843,
+   "edge_id": "c_13099_16801",
+   "flow_af": 548.4878970979696,
    "capacity_af": 553.38843,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "severe_system_shortage",
-   "period_id": "2025-06",
-   "edge_id": "e_8912",
-   "flow_af": 535.53719,
-   "capacity_af": 535.53719,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "severe_system_shortage",
-   "period_id": "2025-08",
-   "edge_id": "e_8912",
-   "flow_af": 553.38843,
-   "capacity_af": 553.38843,
-   "utilization": 1.0
+   "utilization": 0.9911444969999998
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-05",
+   "period_id": "2025-07",
    "edge_id": "e_8949",
-   "flow_af": 882.347107,
+   "flow_af": 861.9770540335684,
    "capacity_af": 882.347107,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-09",
-   "edge_id": "e_8949",
-   "flow_af": 853.884298,
-   "capacity_af": 853.884298,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_02_restriction_under_shortage",
-   "period_id": "2025-06",
-   "edge_id": "e_8912",
-   "flow_af": 535.53719,
-   "capacity_af": 535.53719,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_02_restriction_under_shortage",
-   "period_id": "2025-07",
-   "edge_id": "e_8912",
-   "flow_af": 553.38843,
-   "capacity_af": 553.38843,
-   "utilization": 1.0
+   "utilization": 0.9769137873238002
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-08",
-   "edge_id": "e_8912",
-   "flow_af": 553.38843,
-   "capacity_af": 553.38843,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "nominal",
-   "period_id": "2025-06",
-   "edge_id": "c_13099_16801",
-   "flow_af": 530.7947388073434,
-   "capacity_af": 535.53719,
-   "utilization": 0.9911444969999998
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062765,
+   "capacity_af": 922.31405,
+   "utilization": 0.9611888880000001
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-07",
-   "edge_id": "c_13099_16801",
-   "flow_af": 548.4878970979696,
-   "capacity_af": 553.38843,
-   "utilization": 0.9911444969999998
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062764,
+   "capacity_af": 922.31405,
+   "utilization": 0.961188888
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-08",
-   "edge_id": "c_13099_16801",
-   "flow_af": 548.4878970979696,
-   "capacity_af": 553.38843,
-   "utilization": 0.9911444969999998
-  },
-  {
-   "scenario_id": "moderate_system_shortage",
-   "period_id": "2025-06",
-   "edge_id": "c_13099_16801",
-   "flow_af": 530.7947388073434,
-   "capacity_af": 535.53719,
-   "utilization": 0.9911444969999998
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062764,
+   "capacity_af": 922.31405,
+   "utilization": 0.961188888
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
-   "edge_id": "c_13099_16801",
-   "flow_af": 548.4878970979696,
-   "capacity_af": 553.38843,
-   "utilization": 0.9911444969999998
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062764,
+   "capacity_af": 922.31405,
+   "utilization": 0.961188888
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
-   "edge_id": "c_13099_16801",
-   "flow_af": 548.4878970979696,
-   "capacity_af": 553.38843,
-   "utilization": 0.9911444969999998
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062764,
+   "capacity_af": 922.31405,
+   "utilization": 0.961188888
   },
   {
-   "scenario_id": "severe_system_shortage",
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "edge_id": "c_9549_16826",
+   "flow_af": 886.5180161062763,
+   "capacity_af": 922.31405,
+   "utilization": 0.9611888879999999
+  },
+  {
+   "scenario_id": "nominal",
    "period_id": "2025-06",
-   "edge_id": "c_13099_16801",
-   "flow_af": 530.7947388073434,
-   "capacity_af": 535.53719,
-   "utilization": 0.9911444969999998
+   "edge_id": "e_4484",
+   "flow_af": 839.5213916000822,
+   "capacity_af": 892.561983,
+   "utilization": 0.9405748929372473
   }
  ],
  "most_utilized_source_groups": [
   {
-   "scenario_id": "nominal",
-   "period_id": "2025-08",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1844.628099,
-   "limit_af": 1844.628099,
-   "utilization": 1.0
-  },
-  {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-05",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 1106.77686,
    "limit_af": 1106.77686,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "moderate_system_shortage",
-   "period_id": "2025-06",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1071.07438,
-   "limit_af": 1071.07438,
    "utilization": 1.0
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 1106.77686,
    "limit_af": 1106.77686,
    "utilization": 1.0
@@ -968,23 +1107,15 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 1106.77686,
    "limit_af": 1106.77686,
    "utilization": 1.0
   },
   {
-   "scenario_id": "moderate_system_shortage",
-   "period_id": "2025-09",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1071.07438,
-   "limit_af": 1071.07438,
-   "utilization": 1.0
-  },
-  {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-05",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 645.619835,
    "limit_af": 645.619835,
    "utilization": 1.0
@@ -992,7 +1123,7 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-06",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 624.793388,
    "limit_af": 624.793388,
    "utilization": 1.0
@@ -1000,7 +1131,7 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-07",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 645.619835,
    "limit_af": 645.619835,
    "utilization": 1.0
@@ -1008,7 +1139,7 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-08",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 645.619835,
    "limit_af": 645.619835,
    "utilization": 1.0
@@ -1016,85 +1147,119 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-09",
-   "group_id": "subsystem_06",
+   "group_id": "subsystem_08",
    "weighted_use_af": 624.793388,
    "limit_af": 624.793388,
    "utilization": 1.0
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-05",
-   "group_id": "subsystem_03",
-   "weighted_use_af": 1045.289256,
-   "limit_af": 1045.289256,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-05",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1291.239669,
-   "limit_af": 1291.239669,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-06",
-   "group_id": "subsystem_03",
-   "weighted_use_af": 1011.570248,
-   "limit_af": 1011.570248,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-06",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1249.586777,
-   "limit_af": 1249.586777,
+   "group_id": "subsystem_02",
+   "weighted_use_af": 2249.256198,
+   "limit_af": 2249.256198,
    "utilization": 1.0
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-07",
-   "group_id": "subsystem_03",
-   "weighted_use_af": 1045.289256,
-   "limit_af": 1045.289256,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-07",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1291.239669,
-   "limit_af": 1291.239669,
+   "group_id": "subsystem_02",
+   "weighted_use_af": 2324.231405,
+   "limit_af": 2324.231405,
    "utilization": 1.0
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-08",
-   "group_id": "subsystem_03",
-   "weighted_use_af": 1045.289256,
-   "limit_af": 1045.289256,
-   "utilization": 1.0
-  },
-  {
-   "scenario_id": "subsystem_01_restriction_under_shortage",
-   "period_id": "2025-08",
-   "group_id": "subsystem_06",
-   "weighted_use_af": 1291.239669,
-   "limit_af": 1291.239669,
+   "group_id": "subsystem_02",
+   "weighted_use_af": 2324.231405,
+   "limit_af": 2324.231405,
    "utilization": 1.0
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-09",
+   "group_id": "subsystem_02",
+   "weighted_use_af": 2174.640889976581,
+   "limit_af": 2249.256198,
+   "utilization": 0.9668266744847628
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
    "group_id": "subsystem_03",
-   "weighted_use_af": 1011.570248,
+   "weighted_use_af": 843.59762,
+   "limit_af": 1045.289256,
+   "utilization": 0.807047059134797
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "group_id": "subsystem_03",
+   "weighted_use_af": 843.59762,
+   "limit_af": 1045.289256,
+   "utilization": 0.807047059134797
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "group_id": "subsystem_03",
+   "weighted_use_af": 843.59762,
+   "limit_af": 1045.289256,
+   "utilization": 0.807047059134797
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
+   "group_id": "subsystem_03",
+   "weighted_use_af": 816.384793,
    "limit_af": 1011.570248,
-   "utilization": 1.0
+   "utilization": 0.8070470583867942
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
+   "group_id": "subsystem_03",
+   "weighted_use_af": 816.384793,
+   "limit_af": 1011.570248,
+   "utilization": 0.8070470583867942
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
+   "group_id": "subsystem_02",
+   "weighted_use_af": 1863.8668235445234,
+   "limit_af": 2324.231405,
+   "utilization": 0.8019282501453522
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
+   "group_id": "subsystem_08",
+   "weighted_use_af": 857.081635247832,
+   "limit_af": 1071.07438,
+   "utilization": 0.8002073910570356
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
+   "group_id": "subsystem_02",
+   "weighted_use_af": 2777.994070254846,
+   "limit_af": 4067.404959,
+   "utilization": 0.682989301104121
   }
  ],
  "service_matrix": [
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-05",
+   "claimant_id": "company_103",
+   "demand_af": 1.341214,
+   "beneficial_delivery_af": 1.341214,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
   {
    "scenario_id": "nominal",
    "period_id": "2025-05",
@@ -1102,7 +1267,17 @@
    "demand_af": 126.73695,
    "beneficial_delivery_af": 126.73695,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-05",
+   "claimant_id": "company_104",
+   "demand_af": 40.045417,
+   "beneficial_delivery_af": 40.045417,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1110,9 +1285,9 @@
    "period_id": "2025-05",
    "claimant_id": "company_105",
    "demand_af": 209.157974,
-   "beneficial_delivery_af": 209.15797400000002,
-   "service_ratio": 1.0000000000000002,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 209.157974,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1123,6 +1298,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.32070427447789635,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-05",
+   "claimant_id": "company_109",
+   "demand_af": 763.360874,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.3774279110043581,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1168,21 +1353,41 @@
   {
    "scenario_id": "nominal",
    "period_id": "2025-05",
+   "claimant_id": "company_162",
+   "demand_af": 839.027025,
+   "beneficial_delivery_af": 839.027025,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-05",
    "claimant_id": "company_164",
    "demand_af": 555.480841,
-   "beneficial_delivery_af": 550.8310763143722,
-   "service_ratio": 0.9916292978219426,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 230.62048846127556,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-05",
    "claimant_id": "company_168",
    "demand_af": 2817.101777,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.26317034895731906,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.13158517458056557,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-05",
+   "claimant_id": "company_072",
+   "demand_af": 3097.013645,
+   "beneficial_delivery_af": 1161.928038838223,
+   "service_ratio": 0.37517691945403847,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1192,7 +1397,17 @@
    "demand_af": 205.977272,
    "beneficial_delivery_af": 205.977272,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-06",
+   "claimant_id": "company_103",
+   "demand_af": 2.458893,
+   "beneficial_delivery_af": 2.458893,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1200,9 +1415,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_10390",
    "demand_af": 232.351075,
-   "beneficial_delivery_af": 232.351075,
+   "beneficial_delivery_af": 209.25716390677314,
+   "service_ratio": 0.9006076856187265,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-06",
+   "claimant_id": "company_104",
+   "demand_af": 73.416598,
+   "beneficial_delivery_af": 73.416598,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1210,19 +1435,29 @@
    "period_id": "2025-06",
    "claimant_id": "company_105",
    "demand_af": 383.456285,
-   "beneficial_delivery_af": 279.70835381167484,
-   "service_ratio": 0.7294400033413844,
-   "guarantee": 0.6740982692651426,
-   "binding": false
+   "beneficial_delivery_af": 232.71498941169716,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-06",
    "claimant_id": "company_106",
    "demand_af": 1080.571252,
-   "beneficial_delivery_af": 182.92790673134047,
-   "service_ratio": 0.16928814864615746,
+   "beneficial_delivery_af": 182.92635593920625,
+   "service_ratio": 0.1692867134866237,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-06",
+   "claimant_id": "company_109",
+   "demand_af": 1399.494936,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.1992288096483776,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1250,10 +1485,10 @@
    "period_id": "2025-06",
    "claimant_id": "company_132",
    "demand_af": 981.103343,
-   "beneficial_delivery_af": 301.46732405009993,
-   "service_ratio": 0.30727377110782095,
+   "beneficial_delivery_af": 352.8229186982811,
+   "service_ratio": 0.35961850626196584,
    "guarantee": 0.307273771107821,
-   "binding": true
+   "binding": false
   },
   {
    "scenario_id": "nominal",
@@ -1268,21 +1503,41 @@
   {
    "scenario_id": "nominal",
    "period_id": "2025-06",
+   "claimant_id": "company_162",
+   "demand_af": 1538.216212,
+   "beneficial_delivery_af": 1538.216212,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-06",
    "claimant_id": "company_164",
    "demand_af": 1018.381541,
-   "beneficial_delivery_af": 641.685000631936,
-   "service_ratio": 0.6301027412592664,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 422.80422849969455,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-06",
    "claimant_id": "company_168",
    "demand_af": 5164.686591,
-   "beneficial_delivery_af": 717.4622497032876,
-   "service_ratio": 0.1389168998083136,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.06945844984857168,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-06",
+   "claimant_id": "company_072",
+   "demand_af": 5677.858349,
+   "beneficial_delivery_af": 481.9056378937212,
+   "service_ratio": 0.08487454393408665,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1290,19 +1545,39 @@
    "period_id": "2025-06",
    "claimant_id": "company_088",
    "demand_af": 377.624999,
-   "beneficial_delivery_af": 355.1720137497731,
-   "service_ratio": 0.9405415814374437,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 156.77959579629982,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-07",
+   "claimant_id": "company_103",
+   "demand_af": 3.1295,
+   "beneficial_delivery_af": 1.8992557635711769,
+   "service_ratio": 0.6068879257297257,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-07",
    "claimant_id": "company_10390",
    "demand_af": 295.719551,
-   "beneficial_delivery_af": 199.34403751696516,
-   "service_ratio": 0.6740982692651428,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 179.4686249041318,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-07",
+   "claimant_id": "company_104",
+   "demand_af": 93.439307,
+   "beneficial_delivery_af": 56.70718720685807,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1310,9 +1585,9 @@
    "period_id": "2025-07",
    "claimant_id": "company_105",
    "demand_af": 488.035272,
-   "beneficial_delivery_af": 328.98373219554304,
-   "service_ratio": 0.6740982692651424,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 296.18271390704876,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1323,6 +1598,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.13744468899532894,
    "guarantee": 0.13744468899532894,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-07",
+   "claimant_id": "company_109",
+   "demand_af": 1781.175374,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.16175481888078302,
+   "guarantee": 0.16175481888078302,
    "binding": true
   },
   {
@@ -1368,11 +1653,21 @@
   {
    "scenario_id": "nominal",
    "period_id": "2025-07",
+   "claimant_id": "company_162",
+   "demand_af": 1957.729725,
+   "beneficial_delivery_af": 1468.6624448314865,
+   "service_ratio": 0.750186517616208,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-07",
    "claimant_id": "company_164",
    "demand_af": 1296.121962,
-   "beneficial_delivery_af": 473.4676413333045,
-   "service_ratio": 0.3652955934815836,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 538.1144729379187,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
   },
   {
@@ -1380,9 +1675,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_168",
    "demand_af": 6573.23748,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.11278729240456006,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.05639364624595406,
    "guarantee": 0.056393646245954054,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-07",
+   "claimant_id": "company_072",
+   "demand_af": 7226.365172,
+   "beneficial_delivery_af": 1137.4484007149792,
+   "service_ratio": 0.1574025632031787,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1390,9 +1695,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_088",
    "demand_af": 480.613635,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.7636301893429106,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 199.53766733936587,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
+   "claimant_id": "company_103",
+   "demand_af": 2.682429,
+   "beneficial_delivery_af": 2.682429,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1400,9 +1715,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_10390",
    "demand_af": 253.4739,
-   "beneficial_delivery_af": 247.28316359222197,
-   "service_ratio": 0.9755764344661205,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 198.4619843397409,
+   "service_ratio": 0.7829681254746185,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
+   "claimant_id": "company_104",
+   "demand_af": 80.090834,
+   "beneficial_delivery_af": 80.090834,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1410,9 +1735,9 @@
    "period_id": "2025-08",
    "claimant_id": "company_105",
    "demand_af": 418.315947,
-   "beneficial_delivery_af": 281.98605587870907,
-   "service_ratio": 0.6740982692651425,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 253.8708973745184,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1423,6 +1748,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.16035213723894817,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
+   "claimant_id": "company_109",
+   "demand_af": 1526.721749,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.18871395537857172,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1468,21 +1803,41 @@
   {
    "scenario_id": "nominal",
    "period_id": "2025-08",
+   "claimant_id": "company_162",
+   "demand_af": 1678.05405,
+   "beneficial_delivery_af": 1590.0314914328044,
+   "service_ratio": 0.9475448609255491,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
    "claimant_id": "company_164",
    "demand_af": 1110.961681,
-   "beneficial_delivery_af": 496.35284464843,
-   "service_ratio": 0.4467776460135442,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 461.2409765073784,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-08",
    "claimant_id": "company_168",
    "demand_af": 5634.203554,
-   "beneficial_delivery_af": 1059.1109398194592,
-   "service_ratio": 0.18797882072747335,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.06579258729028278,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-08",
+   "claimant_id": "company_072",
+   "demand_af": 6194.02729,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.08039505420430075,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1490,9 +1845,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_088",
    "demand_af": 411.954544,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.890901888184621,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 171.03228617226426,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-09",
+   "claimant_id": "company_103",
+   "demand_af": 1.56475,
+   "beneficial_delivery_af": 1.56475,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1502,7 +1867,17 @@
    "demand_af": 147.859775,
    "beneficial_delivery_af": 147.859775,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-09",
+   "claimant_id": "company_104",
+   "demand_af": 46.719653,
+   "beneficial_delivery_af": 46.719652999999994,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1512,7 +1887,7 @@
    "demand_af": 244.017636,
    "beneficial_delivery_af": 244.017636,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1523,6 +1898,16 @@
    "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.2660219784416314,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-09",
+   "claimant_id": "company_109",
+   "demand_af": 890.587687,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.31307384357337564,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1550,8 +1935,8 @@
    "period_id": "2025-09",
    "claimant_id": "company_132",
    "demand_af": 624.338491,
-   "beneficial_delivery_af": 289.58030204783915,
-   "service_ratio": 0.4638193964046967,
+   "beneficial_delivery_af": 378.1825864242624,
+   "service_ratio": 0.6057332550785539,
    "guarantee": 0.307273771107821,
    "binding": false
   },
@@ -1568,21 +1953,41 @@
   {
    "scenario_id": "nominal",
    "period_id": "2025-09",
+   "claimant_id": "company_162",
+   "demand_af": 978.864862,
+   "beneficial_delivery_af": 978.864862,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-09",
    "claimant_id": "company_164",
    "demand_af": 648.060981,
-   "beneficial_delivery_af": 533.0623324809997,
-   "service_ratio": 0.8225496490445237,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 269.05723646895933,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "nominal",
    "period_id": "2025-09",
    "claimant_id": "company_168",
    "demand_af": 3286.61874,
-   "beneficial_delivery_af": 960.3246200924384,
-   "service_ratio": 0.2921922790753753,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.10914899261012675,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "nominal",
+   "period_id": "2025-09",
+   "claimant_id": "company_072",
+   "demand_af": 3613.182586,
+   "beneficial_delivery_af": 1124.446489447088,
+   "service_ratio": 0.3112066613527867,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1592,7 +1997,17 @@
    "demand_af": 240.306818,
    "beneficial_delivery_af": 240.306818,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_103",
+   "demand_af": 1.341214,
+   "beneficial_delivery_af": 1.341214,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1602,7 +2017,17 @@
    "demand_af": 126.73695,
    "beneficial_delivery_af": 126.73695,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_104",
+   "demand_af": 40.045417,
+   "beneficial_delivery_af": 40.045417,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1610,9 +2035,9 @@
    "period_id": "2025-05",
    "claimant_id": "company_105",
    "demand_af": 209.157974,
-   "beneficial_delivery_af": 209.15797400000002,
-   "service_ratio": 1.0000000000000002,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 209.157974,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1623,6 +2048,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.32070427447789635,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_109",
+   "demand_af": 763.360874,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.3774279110043581,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1668,12 +2103,22 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_162",
+   "demand_af": 839.027025,
+   "beneficial_delivery_af": 839.027025,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_164",
    "demand_af": 555.480841,
-   "beneficial_delivery_af": 555.480841,
-   "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 230.62048846127556,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -1688,11 +2133,31 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_072",
+   "demand_af": 3097.013645,
+   "beneficial_delivery_af": 1161.928038838223,
+   "service_ratio": 0.37517691945403847,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_088",
    "demand_af": 205.977272,
    "beneficial_delivery_af": 205.977272,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_103",
+   "demand_af": 2.458893,
+   "beneficial_delivery_af": 2.458893,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1700,9 +2165,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_10390",
    "demand_af": 232.351075,
-   "beneficial_delivery_af": 232.351075,
+   "beneficial_delivery_af": 209.25716390677317,
+   "service_ratio": 0.9006076856187266,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_104",
+   "demand_af": 73.416598,
+   "beneficial_delivery_af": 73.416598,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1710,19 +2185,29 @@
    "period_id": "2025-06",
    "claimant_id": "company_105",
    "demand_af": 383.456285,
-   "beneficial_delivery_af": 279.70835381167484,
-   "service_ratio": 0.7294400033413844,
-   "guarantee": 0.6740982692651426,
-   "binding": false
+   "beneficial_delivery_af": 232.71498941169716,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_106",
    "demand_af": 1080.571252,
-   "beneficial_delivery_af": 182.92790673134047,
-   "service_ratio": 0.16928814864615746,
+   "beneficial_delivery_af": 182.92635593920625,
+   "service_ratio": 0.1692867134866237,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_109",
+   "demand_af": 1399.494936,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.1992288096483776,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1750,10 +2235,10 @@
    "period_id": "2025-06",
    "claimant_id": "company_132",
    "demand_af": 981.103343,
-   "beneficial_delivery_af": 301.46732405009993,
-   "service_ratio": 0.30727377110782095,
+   "beneficial_delivery_af": 352.82291869828117,
+   "service_ratio": 0.3596185062619659,
    "guarantee": 0.307273771107821,
-   "binding": true
+   "binding": false
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -1768,21 +2253,41 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-06",
+   "claimant_id": "company_162",
+   "demand_af": 1538.216212,
+   "beneficial_delivery_af": 1538.216212,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-06",
    "claimant_id": "company_164",
    "demand_af": 1018.381541,
-   "beneficial_delivery_af": 641.6850006319361,
-   "service_ratio": 0.6301027412592665,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 422.8042284996945,
+   "service_ratio": 0.4151727142309765,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_168",
    "demand_af": 5164.686591,
-   "beneficial_delivery_af": 614.9676424387724,
-   "service_ratio": 0.119071628375363,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.06945844984857168,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_072",
+   "demand_af": 5677.858349,
+   "beneficial_delivery_af": 1124.446489447088,
+   "service_ratio": 0.1980406026939944,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -1790,19 +2295,39 @@
    "period_id": "2025-06",
    "claimant_id": "company_088",
    "demand_af": 377.624999,
-   "beneficial_delivery_af": 355.1720137497731,
-   "service_ratio": 0.9405415814374437,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 377.624999,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
    "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_103",
+   "demand_af": 3.1295,
+   "beneficial_delivery_af": 1.8992557635711769,
+   "service_ratio": 0.6068879257297257,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
    "claimant_id": "company_10390",
    "demand_af": 295.719551,
-   "beneficial_delivery_af": 199.34403751696516,
-   "service_ratio": 0.6740982692651428,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 179.4686249041318,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_104",
+   "demand_af": 93.439307,
+   "beneficial_delivery_af": 56.70718720685807,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1810,9 +2335,9 @@
    "period_id": "2025-07",
    "claimant_id": "company_105",
    "demand_af": 488.035272,
-   "beneficial_delivery_af": 328.98373219554304,
-   "service_ratio": 0.6740982692651424,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 296.18271390704876,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1823,6 +2348,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.13744468899532894,
    "guarantee": 0.13744468899532894,
+   "binding": true
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_109",
+   "demand_af": 1781.175374,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.16175481888078302,
+   "guarantee": 0.16175481888078302,
    "binding": true
   },
   {
@@ -1868,12 +2403,22 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_162",
+   "demand_af": 1957.729725,
+   "beneficial_delivery_af": 1468.6624448314865,
+   "service_ratio": 0.750186517616208,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_164",
    "demand_af": 1296.121962,
-   "beneficial_delivery_af": 753.2942392530384,
-   "service_ratio": 0.5811908611521841,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 538.1144729379185,
+   "service_ratio": 0.4151727142309765,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -1888,11 +2433,31 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_072",
+   "demand_af": 7226.365172,
+   "beneficial_delivery_af": 1161.928038838223,
+   "service_ratio": 0.16079010833002824,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_088",
    "demand_af": 480.613635,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.7636301893429106,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 397.018222023272,
+   "service_ratio": 0.8260652489047091,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_103",
+   "demand_af": 2.682429,
+   "beneficial_delivery_af": 2.6824289999999675,
+   "service_ratio": 0.9999999999999879,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1900,9 +2465,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_10390",
    "demand_af": 253.4739,
-   "beneficial_delivery_af": 247.28316359222197,
-   "service_ratio": 0.9755764344661205,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 198.4619843397409,
+   "service_ratio": 0.7829681254746185,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_104",
+   "demand_af": 80.090834,
+   "beneficial_delivery_af": 80.090834,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -1910,9 +2485,9 @@
    "period_id": "2025-08",
    "claimant_id": "company_105",
    "demand_af": 418.315947,
-   "beneficial_delivery_af": 281.98605587870907,
-   "service_ratio": 0.6740982692651425,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 253.8708973745184,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -1923,6 +2498,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.16035213723894817,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_109",
+   "demand_af": 1526.721749,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.18871395537857172,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -1968,12 +2553,22 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_162",
+   "demand_af": 1678.05405,
+   "beneficial_delivery_af": 1590.0314914328044,
+   "service_ratio": 0.9475448609255491,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_164",
    "demand_af": 1110.961681,
-   "beneficial_delivery_af": 586.2279368608177,
-   "service_ratio": 0.5276761088043483,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 461.2409765073784,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
@@ -1988,11 +2583,31 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_072",
+   "demand_af": 6194.02729,
+   "beneficial_delivery_af": 1161.9280380669188,
+   "service_ratio": 0.18758845960249537,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_088",
    "demand_af": 411.954544,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.890901888184621,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 411.954544,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_103",
+   "demand_af": 1.56475,
+   "beneficial_delivery_af": 1.56475,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2002,7 +2617,17 @@
    "demand_af": 147.859775,
    "beneficial_delivery_af": 147.859775,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_104",
+   "demand_af": 46.719653,
+   "beneficial_delivery_af": 46.719652999999994,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2012,7 +2637,7 @@
    "demand_af": 244.017636,
    "beneficial_delivery_af": 244.017636,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2023,6 +2648,16 @@
    "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.2660219784416314,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_109",
+   "demand_af": 890.587687,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.31307384357337564,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2050,8 +2685,8 @@
    "period_id": "2025-09",
    "claimant_id": "company_132",
    "demand_af": 624.338491,
-   "beneficial_delivery_af": 289.58030204783915,
-   "service_ratio": 0.4638193964046967,
+   "beneficial_delivery_af": 378.1825864242624,
+   "service_ratio": 0.6057332550785539,
    "guarantee": 0.307273771107821,
    "binding": false
   },
@@ -2068,21 +2703,41 @@
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-09",
+   "claimant_id": "company_162",
+   "demand_af": 978.864862,
+   "beneficial_delivery_af": 978.864862,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
    "claimant_id": "company_164",
    "demand_af": 648.060981,
-   "beneficial_delivery_af": 533.0623324809997,
-   "service_ratio": 0.8225496490445237,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 269.05723646895933,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "moderate_system_shortage",
    "period_id": "2025-09",
    "claimant_id": "company_168",
    "demand_af": 3286.61874,
-   "beneficial_delivery_af": 614.9676424387724,
-   "service_ratio": 0.18711255886004363,
+   "beneficial_delivery_af": 492.10165274042606,
+   "service_ratio": 0.14972885255940155,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "moderate_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_072",
+   "demand_af": 3613.182586,
+   "beneficial_delivery_af": 1124.446489447088,
+   "service_ratio": 0.3112066613527867,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -2092,7 +2747,17 @@
    "demand_af": 240.306818,
    "beneficial_delivery_af": 240.306818,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_103",
+   "demand_af": 1.341214,
+   "beneficial_delivery_af": 1.341214,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2102,7 +2767,17 @@
    "demand_af": 126.73695,
    "beneficial_delivery_af": 126.73695,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_104",
+   "demand_af": 40.045417,
+   "beneficial_delivery_af": 40.045417,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2110,9 +2785,9 @@
    "period_id": "2025-05",
    "claimant_id": "company_105",
    "demand_af": 209.157974,
-   "beneficial_delivery_af": 209.15797400000002,
-   "service_ratio": 1.0000000000000002,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 209.157974,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2123,6 +2798,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.32070427447789635,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_109",
+   "demand_af": 763.360874,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.3774279110043581,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2168,12 +2853,22 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_162",
+   "demand_af": 839.027025,
+   "beneficial_delivery_af": 839.027025,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_164",
    "demand_af": 555.480841,
-   "beneficial_delivery_af": 550.8310763143722,
-   "service_ratio": 0.9916292978219426,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 230.62048846127556,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2188,11 +2883,31 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_072",
+   "demand_af": 3097.013645,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.1607901084086015,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_088",
    "demand_af": 205.977272,
-   "beneficial_delivery_af": 205.977272,
-   "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 205.97727199999989,
+   "service_ratio": 0.9999999999999994,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_103",
+   "demand_af": 2.458893,
+   "beneficial_delivery_af": 2.458892999999967,
+   "service_ratio": 0.9999999999999865,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2200,9 +2915,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_10390",
    "demand_af": 232.351075,
-   "beneficial_delivery_af": 232.351075,
+   "beneficial_delivery_af": 209.25716390677314,
+   "service_ratio": 0.9006076856187265,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_104",
+   "demand_af": 73.416598,
+   "beneficial_delivery_af": 73.416598,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2210,10 +2935,10 @@
    "period_id": "2025-06",
    "claimant_id": "company_105",
    "demand_af": 383.456285,
-   "beneficial_delivery_af": 279.70835381167484,
-   "service_ratio": 0.7294400033413844,
-   "guarantee": 0.6740982692651426,
-   "binding": false
+   "beneficial_delivery_af": 232.71498941169716,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2223,6 +2948,16 @@
    "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.1692867134866237,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_109",
+   "demand_af": 1399.494936,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.1992288096483776,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2250,10 +2985,10 @@
    "period_id": "2025-06",
    "claimant_id": "company_132",
    "demand_af": 981.103343,
-   "beneficial_delivery_af": 301.46732405010016,
-   "service_ratio": 0.30727377110782117,
+   "beneficial_delivery_af": 352.82291869828117,
+   "service_ratio": 0.3596185062619659,
    "guarantee": 0.307273771107821,
-   "binding": true
+   "binding": false
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2268,12 +3003,22 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-06",
+   "claimant_id": "company_162",
+   "demand_af": 1538.216212,
+   "beneficial_delivery_af": 998.961276927864,
+   "service_ratio": 0.6494283892828091,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-06",
    "claimant_id": "company_164",
    "demand_af": 1018.381541,
-   "beneficial_delivery_af": 641.685000631936,
-   "service_ratio": 0.6301027412592664,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 422.80422849969455,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2288,21 +3033,51 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-06",
+   "claimant_id": "company_072",
+   "demand_af": 5677.858349,
+   "beneficial_delivery_af": 481.9056378937212,
+   "service_ratio": 0.08487454393408665,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-06",
    "claimant_id": "company_088",
    "demand_af": 377.624999,
-   "beneficial_delivery_af": 355.1720137497731,
-   "service_ratio": 0.9405415814374437,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 156.77959579629982,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_103",
+   "demand_af": 3.1295,
+   "beneficial_delivery_af": 1.8992557635711769,
+   "service_ratio": 0.6068879257297257,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-07",
    "claimant_id": "company_10390",
    "demand_af": 295.719551,
-   "beneficial_delivery_af": 199.34403751696516,
-   "service_ratio": 0.6740982692651428,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 179.4686249041318,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_104",
+   "demand_af": 93.439307,
+   "beneficial_delivery_af": 56.70718720685807,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2310,9 +3085,9 @@
    "period_id": "2025-07",
    "claimant_id": "company_105",
    "demand_af": 488.035272,
-   "beneficial_delivery_af": 328.9837321955431,
-   "service_ratio": 0.6740982692651426,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 296.18271390704876,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2323,6 +3098,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.13744468899532894,
    "guarantee": 0.13744468899532894,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_109",
+   "demand_af": 1781.175374,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.16175481888078302,
+   "guarantee": 0.16175481888078302,
    "binding": true
   },
   {
@@ -2368,11 +3153,21 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_162",
+   "demand_af": 1957.729725,
+   "beneficial_delivery_af": 1131.9843175925291,
+   "service_ratio": 0.578212765090712,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_164",
    "demand_af": 1296.121962,
-   "beneficial_delivery_af": 473.4676413333045,
-   "service_ratio": 0.3652955934815836,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 538.1144729379187,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
   },
   {
@@ -2388,11 +3183,31 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_072",
+   "demand_af": 7226.365172,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.06891004645765057,
+   "guarantee": 0.06891004645765059,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_088",
    "demand_af": 480.613635,
-   "beneficial_delivery_af": 265.0635587906167,
-   "service_ratio": 0.5515106927638803,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 199.53766733936587,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_103",
+   "demand_af": 2.682429,
+   "beneficial_delivery_af": 2.6824289999999675,
+   "service_ratio": 0.9999999999999879,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2400,9 +3215,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_10390",
    "demand_af": 253.4739,
-   "beneficial_delivery_af": 247.28316359222197,
-   "service_ratio": 0.9755764344661205,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 198.46198433974087,
+   "service_ratio": 0.7829681254746184,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_104",
+   "demand_af": 80.090834,
+   "beneficial_delivery_af": 80.090834,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2410,9 +3235,9 @@
    "period_id": "2025-08",
    "claimant_id": "company_105",
    "demand_af": 418.315947,
-   "beneficial_delivery_af": 281.9860558787091,
-   "service_ratio": 0.6740982692651426,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 253.8708973745184,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2423,6 +3248,16 @@
    "beneficial_delivery_af": 189.02390145866258,
    "service_ratio": 0.16035213723894817,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_109",
+   "demand_af": 1526.721749,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.18871395537857172,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2468,12 +3303,22 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_162",
+   "demand_af": 1678.05405,
+   "beneficial_delivery_af": 1253.353364193847,
+   "service_ratio": 0.7469088163124704,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_164",
    "demand_af": 1110.961681,
-   "beneficial_delivery_af": 496.35284464843,
-   "service_ratio": 0.4467776460135442,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 461.2409765073784,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2488,11 +3333,31 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_072",
+   "demand_af": 6194.02729,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.08039505420430075,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_088",
    "demand_af": 411.954544,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.890901888184621,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 171.03228617226426,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_103",
+   "demand_af": 1.56475,
+   "beneficial_delivery_af": 1.56475,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2502,7 +3367,17 @@
    "demand_af": 147.859775,
    "beneficial_delivery_af": 147.859775,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_104",
+   "demand_af": 46.719653,
+   "beneficial_delivery_af": 46.719652999999994,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2512,7 +3387,7 @@
    "demand_af": 244.017636,
    "beneficial_delivery_af": 244.017636,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2523,6 +3398,16 @@
    "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.2660219784416314,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_109",
+   "demand_af": 890.587687,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.31307384357337564,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2550,8 +3435,8 @@
    "period_id": "2025-09",
    "claimant_id": "company_132",
    "demand_af": 624.338491,
-   "beneficial_delivery_af": 289.5803020478392,
-   "service_ratio": 0.46381939640469677,
+   "beneficial_delivery_af": 378.1825864242624,
+   "service_ratio": 0.6057332550785539,
    "guarantee": 0.307273771107821,
    "binding": false
   },
@@ -2568,12 +3453,22 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-09",
+   "claimant_id": "company_162",
+   "demand_af": 978.864862,
+   "beneficial_delivery_af": 978.864862,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-09",
    "claimant_id": "company_164",
    "demand_af": 648.060981,
-   "beneficial_delivery_af": 533.0623324809997,
-   "service_ratio": 0.8225496490445237,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 269.0572364689593,
+   "service_ratio": 0.4151727142309765,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "severe_system_shortage",
@@ -2588,11 +3483,31 @@
   {
    "scenario_id": "severe_system_shortage",
    "period_id": "2025-09",
+   "claimant_id": "company_072",
+   "demand_af": 3613.182586,
+   "beneficial_delivery_af": 481.9056378937212,
+   "service_ratio": 0.13337428331492607,
+   "guarantee": 0.06891004645765059,
+   "binding": false
+  },
+  {
+   "scenario_id": "severe_system_shortage",
+   "period_id": "2025-09",
    "claimant_id": "company_088",
    "demand_af": 240.306818,
-   "beneficial_delivery_af": 240.306818,
+   "beneficial_delivery_af": 181.72454081550262,
+   "service_ratio": 0.7562188302768115,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_103",
+   "demand_af": 1.341214,
+   "beneficial_delivery_af": 1.341214,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2602,7 +3517,17 @@
    "demand_af": 126.73695,
    "beneficial_delivery_af": 126.73695,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_104",
+   "demand_af": 40.045417,
+   "beneficial_delivery_af": 40.045417,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2610,9 +3535,9 @@
    "period_id": "2025-05",
    "claimant_id": "company_105",
    "demand_af": 209.157974,
-   "beneficial_delivery_af": 209.15797400000002,
-   "service_ratio": 1.0000000000000002,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 209.157974,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2620,9 +3545,19 @@
    "period_id": "2025-05",
    "claimant_id": "company_106",
    "demand_af": 589.402501,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.3207042744778964,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.32070427447789635,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_109",
+   "demand_af": 763.360874,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.3774279110043581,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2668,21 +3603,41 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_162",
+   "demand_af": 839.027025,
+   "beneficial_delivery_af": 839.027025,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_164",
    "demand_af": 555.480841,
-   "beneficial_delivery_af": 550.8310763143722,
-   "service_ratio": 0.9916292978219426,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 230.62048846127556,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-05",
    "claimant_id": "company_168",
    "demand_af": 2817.101777,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.26317034895731906,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.13158517458056557,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_072",
+   "demand_af": 3097.013645,
+   "beneficial_delivery_af": 1161.928038838223,
+   "service_ratio": 0.37517691945403847,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -2690,9 +3645,19 @@
    "period_id": "2025-05",
    "claimant_id": "company_088",
    "demand_af": 205.977272,
-   "beneficial_delivery_af": 90.94201121216098,
-   "service_ratio": 0.4415147862146702,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 205.97727199999994,
+   "service_ratio": 0.9999999999999998,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_103",
+   "demand_af": 2.458893,
+   "beneficial_delivery_af": 2.4588930000000353,
+   "service_ratio": 1.0000000000000142,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2700,9 +3665,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_10390",
    "demand_af": 232.351075,
-   "beneficial_delivery_af": 232.351075,
+   "beneficial_delivery_af": 209.25716390677314,
+   "service_ratio": 0.9006076856187265,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_104",
+   "demand_af": 73.416598,
+   "beneficial_delivery_af": 73.416598,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2710,19 +3685,29 @@
    "period_id": "2025-06",
    "claimant_id": "company_105",
    "demand_af": 383.456285,
-   "beneficial_delivery_af": 279.70835381167484,
-   "service_ratio": 0.7294400033413844,
-   "guarantee": 0.6740982692651426,
-   "binding": false
+   "beneficial_delivery_af": 232.71498941169716,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_106",
    "demand_af": 1080.571252,
-   "beneficial_delivery_af": 182.92790673134044,
-   "service_ratio": 0.16928814864615743,
+   "beneficial_delivery_af": 182.92635593920625,
+   "service_ratio": 0.1692867134866237,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_109",
+   "demand_af": 1399.494936,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.1992288096483776,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2750,10 +3735,10 @@
    "period_id": "2025-06",
    "claimant_id": "company_132",
    "demand_af": 981.103343,
-   "beneficial_delivery_af": 301.46732405010016,
-   "service_ratio": 0.30727377110782117,
+   "beneficial_delivery_af": 352.82291869828117,
+   "service_ratio": 0.3596185062619659,
    "guarantee": 0.307273771107821,
-   "binding": true
+   "binding": false
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -2768,21 +3753,41 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-06",
+   "claimant_id": "company_162",
+   "demand_af": 1538.216212,
+   "beneficial_delivery_af": 941.2243945405919,
+   "service_ratio": 0.6118934303239497,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-06",
    "claimant_id": "company_164",
    "demand_af": 1018.381541,
-   "beneficial_delivery_af": 487.37373125912467,
-   "service_ratio": 0.47857675305126596,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 422.80422849969455,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_168",
    "demand_af": 5164.686591,
-   "beneficial_delivery_af": 717.4622497032876,
-   "service_ratio": 0.1389168998083136,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.06945844984857168,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_072",
+   "demand_af": 5677.858349,
+   "beneficial_delivery_af": 481.9056378937212,
+   "service_ratio": 0.08487454393408665,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -2790,9 +3795,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_088",
    "demand_af": 377.624999,
-   "beneficial_delivery_af": 137.94474812318742,
-   "service_ratio": 0.36529559348158364,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 156.77959579629982,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_103",
+   "demand_af": 3.1295,
+   "beneficial_delivery_af": 1.899255763571245,
+   "service_ratio": 0.6068879257297476,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2800,9 +3815,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_10390",
    "demand_af": 295.719551,
-   "beneficial_delivery_af": 199.34403751696516,
-   "service_ratio": 0.6740982692651428,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 179.4686249041318,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_104",
+   "demand_af": 93.439307,
+   "beneficial_delivery_af": 56.70718720685807,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2810,9 +3835,9 @@
    "period_id": "2025-07",
    "claimant_id": "company_105",
    "demand_af": 488.035272,
-   "beneficial_delivery_af": 328.98373219554304,
-   "service_ratio": 0.6740982692651424,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 296.18271390704876,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2820,9 +3845,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_106",
    "demand_af": 1375.272503,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.13744468899532897,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.13744468899532894,
    "guarantee": 0.13744468899532894,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_109",
+   "demand_af": 1781.175374,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.16175481888078302,
+   "guarantee": 0.16175481888078302,
    "binding": true
   },
   {
@@ -2868,11 +3903,21 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_162",
+   "demand_af": 1957.729725,
+   "beneficial_delivery_af": 812.7959636589137,
+   "service_ratio": 0.4151727142309768,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_164",
    "demand_af": 1296.121962,
-   "beneficial_delivery_af": 473.4676413333046,
-   "service_ratio": 0.36529559348158364,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 538.1144729379187,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
   },
   {
@@ -2880,9 +3925,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_168",
    "demand_af": 6573.23748,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.11278729240456006,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.05639364624595406,
    "guarantee": 0.056393646245954054,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_072",
+   "demand_af": 7226.365172,
+   "beneficial_delivery_af": 1137.4484007149792,
+   "service_ratio": 0.1574025632031787,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -2890,19 +3945,39 @@
    "period_id": "2025-07",
    "claimant_id": "company_088",
    "demand_af": 480.613635,
-   "beneficial_delivery_af": 175.56604303266622,
-   "service_ratio": 0.36529559348158364,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 199.53766733936587,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_103",
+   "demand_af": 2.682429,
+   "beneficial_delivery_af": 2.6824289999999675,
+   "service_ratio": 0.9999999999999879,
+   "guarantee": 0.6068879257297796,
+   "binding": false
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-08",
    "claimant_id": "company_10390",
    "demand_af": 253.4739,
-   "beneficial_delivery_af": 247.28316359222197,
-   "service_ratio": 0.9755764344661205,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 198.4619843397409,
+   "service_ratio": 0.7829681254746185,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_104",
+   "demand_af": 80.090834,
+   "beneficial_delivery_af": 80.090834,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -2910,9 +3985,9 @@
    "period_id": "2025-08",
    "claimant_id": "company_105",
    "demand_af": 418.315947,
-   "beneficial_delivery_af": 281.98605587870907,
-   "service_ratio": 0.6740982692651425,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 253.8708973745184,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -2920,9 +3995,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_106",
    "demand_af": 1178.805002,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.1603521372389482,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.16035213723894817,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_109",
+   "demand_af": 1526.721749,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.18871395537857172,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -2968,21 +4053,41 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_162",
+   "demand_af": 1678.05405,
+   "beneficial_delivery_af": 934.1650102602314,
+   "service_ratio": 0.5566954236427792,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_164",
    "demand_af": 1110.961681,
-   "beneficial_delivery_af": 496.35284464843,
-   "service_ratio": 0.4467776460135442,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 461.2409765073784,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-08",
    "claimant_id": "company_168",
    "demand_af": 5634.203554,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.13158517447865953,
+   "beneficial_delivery_af": 370.68882913776656,
+   "service_ratio": 0.0657925872902828,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_072",
+   "demand_af": 6194.02729,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.08039505420430075,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -2990,10 +4095,20 @@
    "period_id": "2025-08",
    "claimant_id": "company_088",
    "demand_af": 411.954544,
-   "beneficial_delivery_af": 150.48517963791517,
-   "service_ratio": 0.36529559348158364,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 171.03228617226426,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_103",
+   "demand_af": 1.56475,
+   "beneficial_delivery_af": 1.56475,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
+   "binding": false
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
@@ -3002,7 +4117,17 @@
    "demand_af": 147.859775,
    "beneficial_delivery_af": 147.859775,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_104",
+   "demand_af": 46.719653,
+   "beneficial_delivery_af": 46.719652999999994,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3012,7 +4137,7 @@
    "demand_af": 244.017636,
    "beneficial_delivery_af": 244.017636,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3020,9 +4145,19 @@
    "period_id": "2025-09",
    "claimant_id": "company_106",
    "demand_af": 687.636251,
-   "beneficial_delivery_af": 182.92635593920622,
+   "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.2660219784416314,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_109",
+   "demand_af": 890.587687,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.31307384357337564,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -3050,8 +4185,8 @@
    "period_id": "2025-09",
    "claimant_id": "company_132",
    "demand_af": 624.338491,
-   "beneficial_delivery_af": 289.5803020478392,
-   "service_ratio": 0.46381939640469677,
+   "beneficial_delivery_af": 378.1825864242624,
+   "service_ratio": 0.6057332550785539,
    "guarantee": 0.307273771107821,
    "binding": false
   },
@@ -3068,21 +4203,41 @@
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-09",
+   "claimant_id": "company_162",
+   "demand_af": 978.864862,
+   "beneficial_delivery_af": 978.864862,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-09",
    "claimant_id": "company_164",
    "demand_af": 648.060981,
-   "beneficial_delivery_af": 533.0623324809997,
-   "service_ratio": 0.8225496490445237,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 269.05723646895933,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_01_restriction_under_shortage",
    "period_id": "2025-09",
    "claimant_id": "company_168",
    "demand_af": 3286.61874,
-   "beneficial_delivery_af": 717.4622497032876,
-   "service_ratio": 0.2182979853949496,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.10914899261012675,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_01_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_072",
+   "demand_af": 3613.182586,
+   "beneficial_delivery_af": 1124.446489447088,
+   "service_ratio": 0.3112066613527867,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3090,9 +4245,19 @@
    "period_id": "2025-09",
    "claimant_id": "company_088",
    "demand_af": 240.306818,
-   "beneficial_delivery_af": 88.00839750158617,
-   "service_ratio": 0.3662334603489535,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 240.30681800000002,
+   "service_ratio": 1.0000000000000002,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_103",
+   "demand_af": 1.341214,
+   "beneficial_delivery_af": 1.341214,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3102,7 +4267,17 @@
    "demand_af": 126.73695,
    "beneficial_delivery_af": 126.73695,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_104",
+   "demand_af": 40.045417,
+   "beneficial_delivery_af": 40.045417,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3110,9 +4285,9 @@
    "period_id": "2025-05",
    "claimant_id": "company_105",
    "demand_af": 209.157974,
-   "beneficial_delivery_af": 209.15797400000002,
-   "service_ratio": 1.0000000000000002,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 209.157974,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3120,9 +4295,19 @@
    "period_id": "2025-05",
    "claimant_id": "company_106",
    "demand_af": 589.402501,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.3207042744778964,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.32070427447789635,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_109",
+   "demand_af": 763.360874,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.3774279110043581,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -3168,21 +4353,41 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-05",
+   "claimant_id": "company_162",
+   "demand_af": 839.027025,
+   "beneficial_delivery_af": 839.027025,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
    "claimant_id": "company_164",
    "demand_af": 555.480841,
-   "beneficial_delivery_af": 550.8310763143724,
-   "service_ratio": 0.9916292978219429,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 230.62048846127556,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-05",
    "claimant_id": "company_168",
    "demand_af": 2817.101777,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.26317034895731906,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.13158517458056557,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-05",
+   "claimant_id": "company_072",
+   "demand_af": 3097.013645,
+   "beneficial_delivery_af": 1161.928038838223,
+   "service_ratio": 0.37517691945403847,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3192,7 +4397,17 @@
    "demand_af": 205.977272,
    "beneficial_delivery_af": 205.977272,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_103",
+   "demand_af": 2.458893,
+   "beneficial_delivery_af": 2.4588930000000353,
+   "service_ratio": 1.0000000000000142,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3200,9 +4415,19 @@
    "period_id": "2025-06",
    "claimant_id": "company_10390",
    "demand_af": 232.351075,
-   "beneficial_delivery_af": 232.351075,
+   "beneficial_delivery_af": 209.25716390677314,
+   "service_ratio": 0.9006076856187265,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_104",
+   "demand_af": 73.416598,
+   "beneficial_delivery_af": 73.416598,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3210,19 +4435,29 @@
    "period_id": "2025-06",
    "claimant_id": "company_105",
    "demand_af": 383.456285,
-   "beneficial_delivery_af": 279.70835381167484,
-   "service_ratio": 0.7294400033413844,
-   "guarantee": 0.6740982692651426,
-   "binding": false
+   "beneficial_delivery_af": 232.71498941169716,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_106",
    "demand_af": 1080.571252,
-   "beneficial_delivery_af": 182.92790673134044,
-   "service_ratio": 0.16928814864615743,
+   "beneficial_delivery_af": 182.92635593920625,
+   "service_ratio": 0.1692867134866237,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_109",
+   "demand_af": 1399.494936,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.1992288096483776,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -3268,21 +4503,41 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-06",
+   "claimant_id": "company_162",
+   "demand_af": 1538.216212,
+   "beneficial_delivery_af": 1538.2162119999998,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
    "claimant_id": "company_164",
    "demand_af": 1018.381541,
-   "beneficial_delivery_af": 641.685000631936,
-   "service_ratio": 0.6301027412592664,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 422.80422849969455,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-06",
    "claimant_id": "company_168",
    "demand_af": 5164.686591,
-   "beneficial_delivery_af": 717.4622497032876,
-   "service_ratio": 0.1389168998083136,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.06945844984857168,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-06",
+   "claimant_id": "company_072",
+   "demand_af": 5677.858349,
+   "beneficial_delivery_af": 481.9056378937212,
+   "service_ratio": 0.08487454393408665,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3290,19 +4545,39 @@
    "period_id": "2025-06",
    "claimant_id": "company_088",
    "demand_af": 377.624999,
-   "beneficial_delivery_af": 355.1720137497731,
-   "service_ratio": 0.9405415814374437,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 156.77959579629982,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_103",
+   "demand_af": 3.1295,
+   "beneficial_delivery_af": 1.899255763571245,
+   "service_ratio": 0.6068879257297476,
+   "guarantee": 0.6068879257297796,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-07",
    "claimant_id": "company_10390",
    "demand_af": 295.719551,
-   "beneficial_delivery_af": 199.34403751696516,
-   "service_ratio": 0.6740982692651428,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 179.4686249041318,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_104",
+   "demand_af": 93.439307,
+   "beneficial_delivery_af": 56.70718720685807,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -3310,9 +4585,9 @@
    "period_id": "2025-07",
    "claimant_id": "company_105",
    "demand_af": 488.035272,
-   "beneficial_delivery_af": 328.98373219554304,
-   "service_ratio": 0.6740982692651424,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 296.18271390704876,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -3320,9 +4595,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_106",
    "demand_af": 1375.272503,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.13744468899532897,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.13744468899532894,
    "guarantee": 0.13744468899532894,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_109",
+   "demand_af": 1781.175374,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.16175481888078302,
+   "guarantee": 0.16175481888078302,
    "binding": true
   },
   {
@@ -3368,11 +4653,21 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-07",
+   "claimant_id": "company_162",
+   "demand_af": 1957.729725,
+   "beneficial_delivery_af": 1468.6624448314865,
+   "service_ratio": 0.750186517616208,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
    "claimant_id": "company_164",
    "demand_af": 1296.121962,
-   "beneficial_delivery_af": 473.4676413333045,
-   "service_ratio": 0.3652955934815836,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 538.1144729379187,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
    "binding": true
   },
   {
@@ -3380,9 +4675,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_168",
    "demand_af": 6573.23748,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.11278729240456006,
+   "beneficial_delivery_af": 370.6888291377665,
+   "service_ratio": 0.05639364624595406,
    "guarantee": 0.056393646245954054,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-07",
+   "claimant_id": "company_072",
+   "demand_af": 7226.365172,
+   "beneficial_delivery_af": 1137.4484007149792,
+   "service_ratio": 0.1574025632031787,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3390,9 +4695,19 @@
    "period_id": "2025-07",
    "claimant_id": "company_088",
    "demand_af": 480.613635,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.7636301893429106,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 199.53766733936587,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_103",
+   "demand_af": 2.682429,
+   "beneficial_delivery_af": 2.6824289999999675,
+   "service_ratio": 0.9999999999999879,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3400,9 +4715,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_10390",
    "demand_af": 253.4739,
-   "beneficial_delivery_af": 247.28316359222197,
-   "service_ratio": 0.9755764344661205,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 198.4619843397409,
+   "service_ratio": 0.7829681254746185,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_104",
+   "demand_af": 80.090834,
+   "beneficial_delivery_af": 80.090834,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3410,9 +4735,9 @@
    "period_id": "2025-08",
    "claimant_id": "company_105",
    "demand_af": 418.315947,
-   "beneficial_delivery_af": 281.98605587870907,
-   "service_ratio": 0.6740982692651425,
-   "guarantee": 0.6740982692651426,
+   "beneficial_delivery_af": 253.8708973745184,
+   "service_ratio": 0.6068879257297796,
+   "guarantee": 0.6068879257297796,
    "binding": true
   },
   {
@@ -3420,9 +4745,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_106",
    "demand_af": 1178.805002,
-   "beneficial_delivery_af": 189.0239014586626,
-   "service_ratio": 0.1603521372389482,
+   "beneficial_delivery_af": 189.02390145866258,
+   "service_ratio": 0.16035213723894817,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_109",
+   "demand_af": 1526.721749,
+   "beneficial_delivery_af": 288.113700016281,
+   "service_ratio": 0.18871395537857172,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -3468,21 +4803,41 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-08",
+   "claimant_id": "company_162",
+   "demand_af": 1678.05405,
+   "beneficial_delivery_af": 1590.0314914328044,
+   "service_ratio": 0.9475448609255491,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
    "claimant_id": "company_164",
    "demand_af": 1110.961681,
-   "beneficial_delivery_af": 496.35284464843,
-   "service_ratio": 0.4467776460135442,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 461.2409765073784,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-08",
    "claimant_id": "company_168",
    "demand_af": 5634.203554,
-   "beneficial_delivery_af": 741.3776577013736,
-   "service_ratio": 0.13158517447865953,
+   "beneficial_delivery_af": 370.68882913776656,
+   "service_ratio": 0.0657925872902828,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-08",
+   "claimant_id": "company_072",
+   "demand_af": 6194.02729,
+   "beneficial_delivery_af": 497.9691597224681,
+   "service_ratio": 0.08039505420430075,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3490,9 +4845,19 @@
    "period_id": "2025-08",
    "claimant_id": "company_088",
    "demand_af": 411.954544,
-   "beneficial_delivery_af": 367.0110810958345,
-   "service_ratio": 0.890901888184621,
-   "guarantee": 0.36529559348158364,
+   "beneficial_delivery_af": 171.03228617226426,
+   "service_ratio": 0.41517271423097657,
+   "guarantee": 0.41517271423097657,
+   "binding": true
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_103",
+   "demand_af": 1.56475,
+   "beneficial_delivery_af": 1.56475,
+   "service_ratio": 1.0,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3502,7 +4867,17 @@
    "demand_af": 147.859775,
    "beneficial_delivery_af": 147.859775,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_104",
+   "demand_af": 46.719653,
+   "beneficial_delivery_af": 46.719652999999994,
+   "service_ratio": 0.9999999999999999,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3512,7 +4887,7 @@
    "demand_af": 244.017636,
    "beneficial_delivery_af": 244.017636,
    "service_ratio": 1.0,
-   "guarantee": 0.6740982692651426,
+   "guarantee": 0.6068879257297796,
    "binding": false
   },
   {
@@ -3520,9 +4895,19 @@
    "period_id": "2025-09",
    "claimant_id": "company_106",
    "demand_af": 687.636251,
-   "beneficial_delivery_af": 182.92635593920622,
+   "beneficial_delivery_af": 182.92635593920625,
    "service_ratio": 0.2660219784416314,
    "guarantee": 0.13744468899532894,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_109",
+   "demand_af": 890.587687,
+   "beneficial_delivery_af": 278.8197102082124,
+   "service_ratio": 0.31307384357337564,
+   "guarantee": 0.16175481888078302,
    "binding": false
   },
   {
@@ -3568,21 +4953,41 @@
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-09",
+   "claimant_id": "company_162",
+   "demand_af": 978.864862,
+   "beneficial_delivery_af": 978.864862,
+   "service_ratio": 1.0,
+   "guarantee": 0.41517271423097657,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
    "claimant_id": "company_164",
    "demand_af": 648.060981,
-   "beneficial_delivery_af": 533.0623324809997,
-   "service_ratio": 0.8225496490445237,
-   "guarantee": 0.36529559348158364,
-   "binding": false
+   "beneficial_delivery_af": 269.0572364689593,
+   "service_ratio": 0.4151727142309765,
+   "guarantee": 0.41517271423097657,
+   "binding": true
   },
   {
    "scenario_id": "subsystem_02_restriction_under_shortage",
    "period_id": "2025-09",
    "claimant_id": "company_168",
    "demand_af": 3286.61874,
-   "beneficial_delivery_af": 717.4622497032876,
-   "service_ratio": 0.2182979853949496,
+   "beneficial_delivery_af": 358.7311245645641,
+   "service_ratio": 0.10914899261012675,
    "guarantee": 0.056393646245954054,
+   "binding": false
+  },
+  {
+   "scenario_id": "subsystem_02_restriction_under_shortage",
+   "period_id": "2025-09",
+   "claimant_id": "company_072",
+   "demand_af": 3613.182586,
+   "beneficial_delivery_af": 1124.446489447088,
+   "service_ratio": 0.3112066613527867,
+   "guarantee": 0.06891004645765059,
    "binding": false
   },
   {
@@ -3592,19 +4997,19 @@
    "demand_af": 240.306818,
    "beneficial_delivery_af": 240.306818,
    "service_ratio": 1.0,
-   "guarantee": 0.36529559348158364,
+   "guarantee": 0.41517271423097657,
    "binding": false
   }
  ],
  "repeats": 5,
- "median_runtime_seconds": 2.0655789999946137,
- "min_runtime_seconds": 2.041485699999612,
- "max_runtime_seconds": 2.105159200000344,
+ "median_runtime_seconds": 5.841874599980656,
+ "min_runtime_seconds": 5.793528800015338,
+ "max_runtime_seconds": 6.139224599988665,
  "runtime_seconds_repeats": [
-  2.105159200000344,
-  2.0832768000036594,
-  2.0653343000012683,
-  2.041485699999612,
-  2.0655789999946137
+  5.793528800015338,
+  5.841874599980656,
+  6.139224599988665,
+  5.809230100014247,
+  5.859011100023054
  ]
 }

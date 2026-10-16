@@ -1,22 +1,22 @@
 {
-  "benchmark_id": "cache_valley_2025_multiclaimant_v3",
+  "benchmark_id": "cache_valley_2025_multiclaimant_v4",
   "counts": {
-    "claimants": 10,
-    "control_assets": 20,
-    "demand_rows": 50,
-    "derived_connectors": 15,
-    "edge_parameter_rows": 1725,
-    "edges": 69,
-    "nodes": 76,
+    "claimants": 15,
+    "control_assets": 27,
+    "demand_rows": 75,
+    "derived_connectors": 24,
+    "edge_parameter_rows": 2550,
+    "edges": 102,
+    "nodes": 106,
     "periods": 5,
-    "physical_edges": 54,
+    "physical_edges": 78,
     "scenarios": 5,
     "sensitivity_cases": 135,
-    "source_groups": 7,
-    "source_limit_rows": 250,
-    "sources": 10,
-    "terminals": 10,
-    "wrlu_polygons": 2612
+    "source_groups": 9,
+    "source_limit_rows": 300,
+    "sources": 12,
+    "terminals": 15,
+    "wrlu_polygons": 4484
   },
   "every_terminal_reachable_in_every_scenario": true,
   "graph_is_dag": true,
@@ -26,7 +26,610 @@
     "observed_or_directly_joined": "network nodes/path relations; service-area identity; WRLU attributes; exact-name canal MaxCFS",
     "proxy": "Distribution Network RelativeSize where no exact MaxCFS join exists"
   },
+  "path_reading": {
+    "listed_reaches_not_built": {
+      "p_2065": [
+        {
+          "distance_to_the_rest_of_the_path_km": 438.157,
+          "flowline_names": [
+            "La Sal Creek"
+          ],
+          "nodes": [
+            "n_22229",
+            "n_22238"
+          ],
+          "reaches": [
+            "e_17671"
+          ],
+          "span_of_the_rest_of_the_path_km": 2.973,
+          "system_ids": [
+            1034
+          ],
+          "system_ids_of_the_rest_of_the_path": [
+            2009
+          ]
+        }
+      ],
+      "p_2082": [
+        {
+          "distance_to_the_rest_of_the_path_km": 438.157,
+          "flowline_names": [
+            "La Sal Creek"
+          ],
+          "nodes": [
+            "n_22229",
+            "n_22238"
+          ],
+          "reaches": [
+            "e_17671"
+          ],
+          "span_of_the_rest_of_the_path_km": 5.066,
+          "system_ids": [
+            1034
+          ],
+          "system_ids_of_the_rest_of_the_path": [
+            2009,
+            2017
+          ]
+        }
+      ],
+      "p_2083": [
+        {
+          "distance_to_the_rest_of_the_path_km": 438.157,
+          "flowline_names": [
+            "La Sal Creek"
+          ],
+          "nodes": [
+            "n_22229",
+            "n_22238"
+          ],
+          "reaches": [
+            "e_17671"
+          ],
+          "span_of_the_rest_of_the_path_km": 6.457,
+          "system_ids": [
+            1034
+          ],
+          "system_ids_of_the_rest_of_the_path": [
+            2009,
+            2017
+          ]
+        }
+      ],
+      "p_2084": [
+        {
+          "distance_to_the_rest_of_the_path_km": 438.157,
+          "flowline_names": [
+            "La Sal Creek"
+          ],
+          "nodes": [
+            "n_22229",
+            "n_22238"
+          ],
+          "reaches": [
+            "e_17671"
+          ],
+          "span_of_the_rest_of_the_path_km": 6.52,
+          "system_ids": [
+            1034
+          ],
+          "system_ids_of_the_rest_of_the_path": [
+            2009
+          ]
+        }
+      ],
+      "p_2085": [
+        {
+          "distance_to_the_rest_of_the_path_km": 438.157,
+          "flowline_names": [
+            "La Sal Creek"
+          ],
+          "nodes": [
+            "n_22229",
+            "n_22238"
+          ],
+          "reaches": [
+            "e_17671"
+          ],
+          "span_of_the_rest_of_the_path_km": 6.52,
+          "system_ids": [
+            1034
+          ],
+          "system_ids_of_the_rest_of_the_path": [
+            2009
+          ]
+        }
+      ]
+    },
+    "paths": {
+      "p_2040": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_9879",
+          "e_11271",
+          "e_11270",
+          "e_3743",
+          "e_9873",
+          "e_9872",
+          "e_9862",
+          "e_11287",
+          "e_11292"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10416_16818"
+        ],
+        "walk_connectors_not_built": {
+          "c_10416_15360": "jumps_back_upstream_to_another_listed_branch",
+          "c_15360_8420": "jumps_over_reaches_listed_later",
+          "c_15366_13728": "jumps_over_reaches_listed_later",
+          "c_8420_15366": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13728_16818"
+      },
+      "p_2041": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_9879",
+          "e_11271",
+          "e_11270",
+          "e_3743",
+          "e_9873",
+          "e_9872",
+          "e_9862",
+          "e_11287",
+          "e_11292"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10416_16818"
+        ],
+        "walk_connectors_not_built": {
+          "c_10416_15360": "jumps_back_upstream_to_another_listed_branch",
+          "c_15360_8420": "jumps_over_reaches_listed_later",
+          "c_15366_13728": "jumps_over_reaches_listed_later",
+          "c_8420_15366": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13728_16818"
+      },
+      "p_2042": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_9879",
+          "e_11271",
+          "e_11270",
+          "e_3743",
+          "e_9873",
+          "e_9872",
+          "e_9862",
+          "e_11287",
+          "e_11292"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10416_16818"
+        ],
+        "walk_connectors_not_built": {
+          "c_10416_15360": "jumps_back_upstream_to_another_listed_branch",
+          "c_15360_8420": "jumps_over_reaches_listed_later",
+          "c_15366_13728": "jumps_over_reaches_listed_later",
+          "c_8420_15366": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13728_16818"
+      },
+      "p_2043": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_9879",
+          "e_11271",
+          "e_11270",
+          "e_3743",
+          "e_9873",
+          "e_9872",
+          "e_9862",
+          "e_11287",
+          "e_11292"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10416_16818"
+        ],
+        "walk_connectors_not_built": {
+          "c_10416_15360": "jumps_back_upstream_to_another_listed_branch",
+          "c_15360_8420": "jumps_over_reaches_listed_later",
+          "c_15366_13728": "jumps_over_reaches_listed_later",
+          "c_8420_15366": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13728_16818"
+      },
+      "p_2044": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_9879",
+          "e_11271",
+          "e_11270",
+          "e_3743",
+          "e_9873",
+          "e_9872",
+          "e_9862",
+          "e_11287",
+          "e_11292"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10416_16818"
+        ],
+        "walk_connectors_not_built": {
+          "c_10416_15360": "jumps_back_upstream_to_another_listed_branch",
+          "c_15360_8420": "jumps_over_reaches_listed_later",
+          "c_15366_13728": "jumps_over_reaches_listed_later",
+          "c_8420_15366": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13728_16818"
+      },
+      "p_2065": {
+        "gap_connectors_kept": [
+          "c_17671_17668"
+        ],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_8835",
+          "e_13401",
+          "e_11233",
+          "e_11232",
+          "e_11234",
+          "e_11236",
+          "e_9123",
+          "e_11238",
+          "e_11237",
+          "e_15125",
+          "e_15126",
+          "e_11275"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_6979_16820",
+          "c_15305_16820",
+          "c_15308_16820",
+          "c_15310_16820"
+        ],
+        "walk_connectors_not_built": {
+          "c_15305_15304": "jumps_back_upstream_to_another_listed_branch",
+          "c_15308_13012": "jumps_back_upstream_to_another_listed_branch",
+          "c_15310_15309": "jumps_back_upstream_to_another_listed_branch",
+          "c_15350_15309": "jumps_over_reaches_listed_later",
+          "c_6979_15350": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15309_16820"
+      },
+      "p_2068": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2069": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2070": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2071": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2072": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2073": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2074": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2075": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_3742",
+          "e_11230",
+          "e_11228",
+          "e_3740",
+          "e_16720",
+          "e_11274",
+          "e_11290"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_13933_16822"
+        ],
+        "walk_connectors_not_built": {
+          "c_13933_15349": "jumps_back_upstream_to_another_listed_branch",
+          "c_15364_8415": "jumps_over_reaches_listed_later",
+          "c_8415_15364": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_15349_16822"
+      },
+      "p_2082": {
+        "gap_connectors_kept": [
+          "c_17671_17668"
+        ],
+        "listed_reaches": [
+          "e_5837",
+          "e_15124",
+          "e_9889",
+          "e_8789",
+          "e_9888",
+          "e_9887",
+          "e_11237",
+          "e_15125",
+          "e_15126",
+          "e_11275",
+          "e_9123",
+          "e_11234",
+          "e_11232",
+          "e_8835",
+          "e_13401"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_10439_16823"
+        ],
+        "walk_connectors_not_built": {
+          "c_10439_15309": "jumps_back_upstream_to_another_listed_branch",
+          "c_13012_15304": "jumps_back_upstream_to_another_listed_branch",
+          "c_15306_8419": "jumps_back_upstream_to_another_listed_branch",
+          "c_15309_13012": "jumps_back_upstream_to_another_listed_branch",
+          "c_15350_15306": "jumps_back_upstream_to_another_listed_branch",
+          "c_6979_15350": "jumps_back_upstream_to_another_listed_branch",
+          "c_8419_6979": "jumps_over_reaches_listed_later"
+        },
+        "walk_terminal_connector": "c_15304_16823"
+      },
+      "p_4138": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_5833",
+          "e_4491",
+          "e_8847"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [
+          "e_4491"
+        ],
+        "terminal_connectors": [
+          "c_13021_16825"
+        ],
+        "walk_connectors_not_built": {
+          "c_9558_9557": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13021_16825"
+      },
+      "p_4139": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_4484",
+          "e_9960",
+          "e_13447"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_9549_16826",
+          "c_13470_16826"
+        ],
+        "walk_connectors_not_built": {
+          "c_9549_9548": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13470_16826"
+      },
+      "p_4140": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_4484",
+          "e_9960",
+          "e_13447"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_9549_16826",
+          "c_13470_16826"
+        ],
+        "walk_connectors_not_built": {
+          "c_9549_9548": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13470_16826"
+      },
+      "p_4141": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_4484",
+          "e_9960",
+          "e_13447"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_9549_16826",
+          "c_13470_16826"
+        ],
+        "walk_connectors_not_built": {
+          "c_9549_9548": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13470_16826"
+      },
+      "p_4142": {
+        "gap_connectors_kept": [],
+        "listed_reaches": [
+          "e_11195",
+          "e_4484",
+          "e_9960",
+          "e_13447"
+        ],
+        "listed_reaches_not_reachable_from_the_diversion": [],
+        "terminal_connectors": [
+          "c_9549_16826",
+          "c_13470_16826"
+        ],
+        "walk_connectors_not_built": {
+          "c_9549_9548": "jumps_back_upstream_to_another_listed_branch"
+        },
+        "walk_terminal_connector": "c_13470_16826"
+      }
+    },
+    "rule": "every listed reach is an arc in its digitized direction, except a run of listed reaches that lies farther from the rest of its path than the rest spans, which is not built; a logical connector is kept only where it bridges a gap between listed reaches in the downstream direction; the place of use is connected to every downstream end of the listed reaches that the path's own diversion reaches"
+  },
   "per_claimant": {
+    "company_072": {
+      "application_efficiency": 0.80654781,
+      "assigned_wrlu_acres": 12969.199678,
+      "assigned_wrlu_polygons": 911,
+      "excluded_nonirrigated_acres": 64.976157,
+      "irrigated_demand_acres": 12904.223521,
+      "seasonal_net_demand_af": 25808.447042
+    },
     "company_088": {
       "application_efficiency": 0.669132506,
       "assigned_wrlu_acres": 863.285682,
@@ -35,6 +638,14 @@
       "irrigated_demand_acres": 858.238634,
       "seasonal_net_demand_af": 1716.477268
     },
+    "company_103": {
+      "application_efficiency": 0.6,
+      "assigned_wrlu_acres": 5.588393,
+      "assigned_wrlu_polygons": 2,
+      "excluded_nonirrigated_acres": 0.0,
+      "irrigated_demand_acres": 5.588393,
+      "seasonal_net_demand_af": 11.176786
+    },
     "company_10390": {
       "application_efficiency": 0.604073512,
       "assigned_wrlu_acres": 552.060339,
@@ -42,6 +653,14 @@
       "excluded_nonirrigated_acres": 23.989713,
       "irrigated_demand_acres": 528.070626,
       "seasonal_net_demand_af": 1056.141252
+    },
+    "company_104": {
+      "application_efficiency": 0.62769492,
+      "assigned_wrlu_acres": 186.854285,
+      "assigned_wrlu_polygons": 30,
+      "excluded_nonirrigated_acres": 19.99838,
+      "irrigated_demand_acres": 166.855905,
+      "seasonal_net_demand_af": 333.71181
     },
     "company_105": {
       "application_efficiency": 0.60334495,
@@ -58,6 +677,14 @@
       "excluded_nonirrigated_acres": 0.0,
       "irrigated_demand_acres": 2455.843755,
       "seasonal_net_demand_af": 4911.68751
+    },
+    "company_109": {
+      "application_efficiency": 0.751231789,
+      "assigned_wrlu_acres": 3211.120803,
+      "assigned_wrlu_polygons": 367,
+      "excluded_nonirrigated_acres": 30.450493,
+      "irrigated_demand_acres": 3180.67031,
+      "seasonal_net_demand_af": 6361.34062
     },
     "company_1249": {
       "application_efficiency": 0.754967662,
@@ -91,6 +718,14 @@
       "irrigated_demand_acres": 38.49414,
       "seasonal_net_demand_af": 76.98828
     },
+    "company_162": {
+      "application_efficiency": 0.739823071,
+      "assigned_wrlu_acres": 3554.373949,
+      "assigned_wrlu_polygons": 562,
+      "excluded_nonirrigated_acres": 58.428012,
+      "irrigated_demand_acres": 3495.945937,
+      "seasonal_net_demand_af": 6991.891874
+    },
     "company_164": {
       "application_efficiency": 0.629315558,
       "assigned_wrlu_acres": 2339.045538,
@@ -116,551 +751,11 @@
     "supports": "real path-based DAG routing, claimant-terminal aggregation, gross/net delivery, shared source envelopes, operational recourse and stress experiments"
   },
   "seasonal_totals": {
-    "assigned_acres": 23645.691745,
-    "excluded_nonirrigated_acres": 529.19888,
-    "irrigated_demand_acres": 23116.492865,
-    "net_demand_af": 46232.985728
+    "assigned_acres": 43572.828853,
+    "excluded_nonirrigated_acres": 703.051922,
+    "irrigated_demand_acres": 42869.776931,
+    "net_demand_af": 85739.553859
   },
   "status": "pass",
-  "topology_reduction": {
-    "connector_candidates": 41,
-    "connector_decisions": [
-      {
-        "connector": "c_8415_15364",
-        "decision": "rejected",
-        "dependent_candidate_paths": 8,
-        "head_node": "15364",
-        "position": 1,
-        "reason": "would_close_a_cycle",
-        "tail_node": "8415"
-      },
-      {
-        "connector": "c_13933_15349",
-        "decision": "rejected",
-        "dependent_candidate_paths": 8,
-        "head_node": "15349",
-        "position": 2,
-        "reason": "would_close_a_cycle",
-        "tail_node": "13933"
-      },
-      {
-        "connector": "c_15349_16822",
-        "decision": "accepted",
-        "dependent_candidate_paths": 8,
-        "head_node": "16822",
-        "position": 3,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15349"
-      },
-      {
-        "connector": "c_15364_8415",
-        "decision": "accepted",
-        "dependent_candidate_paths": 8,
-        "head_node": "8415",
-        "position": 4,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15364"
-      },
-      {
-        "connector": "c_8420_15366",
-        "decision": "rejected",
-        "dependent_candidate_paths": 5,
-        "head_node": "15366",
-        "position": 5,
-        "reason": "would_close_a_cycle",
-        "tail_node": "8420"
-      },
-      {
-        "connector": "c_9366_16817",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "16817",
-        "position": 6,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "9366"
-      },
-      {
-        "connector": "c_10416_15360",
-        "decision": "rejected",
-        "dependent_candidate_paths": 5,
-        "head_node": "15360",
-        "position": 7,
-        "reason": "would_close_a_cycle",
-        "tail_node": "10416"
-      },
-      {
-        "connector": "c_10438_16801",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "16801",
-        "position": 8,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "10438"
-      },
-      {
-        "connector": "c_13728_16818",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "16818",
-        "position": 9,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13728"
-      },
-      {
-        "connector": "c_14065_16802",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "16802",
-        "position": 10,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "14065"
-      },
-      {
-        "connector": "c_15360_8420",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "8420",
-        "position": 11,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15360"
-      },
-      {
-        "connector": "c_15366_13728",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "13728",
-        "position": 12,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15366"
-      },
-      {
-        "connector": "c_15958_8102",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "8102",
-        "position": 13,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15958"
-      },
-      {
-        "connector": "c_17671_22238",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "22238",
-        "position": 14,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "17671"
-      },
-      {
-        "connector": "c_22229_17668",
-        "decision": "accepted",
-        "dependent_candidate_paths": 5,
-        "head_node": "17668",
-        "position": 15,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "22229"
-      },
-      {
-        "connector": "c_9549_9548",
-        "decision": "rejected",
-        "dependent_candidate_paths": 4,
-        "head_node": "9548",
-        "position": 16,
-        "reason": "would_close_a_cycle",
-        "tail_node": "9549"
-      },
-      {
-        "connector": "c_13134_16827",
-        "decision": "accepted",
-        "dependent_candidate_paths": 4,
-        "head_node": "16827",
-        "position": 17,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13134"
-      },
-      {
-        "connector": "c_13148_16800",
-        "decision": "accepted",
-        "dependent_candidate_paths": 4,
-        "head_node": "16800",
-        "position": 18,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13148"
-      },
-      {
-        "connector": "c_13470_16826",
-        "decision": "accepted",
-        "dependent_candidate_paths": 4,
-        "head_node": "16826",
-        "position": 19,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13470"
-      },
-      {
-        "connector": "c_6979_15350",
-        "decision": "rejected",
-        "dependent_candidate_paths": 2,
-        "head_node": "15350",
-        "position": 20,
-        "reason": "would_close_a_cycle",
-        "tail_node": "6979"
-      },
-      {
-        "connector": "c_13020_16824",
-        "decision": "accepted",
-        "dependent_candidate_paths": 2,
-        "head_node": "16824",
-        "position": 21,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13020"
-      },
-      {
-        "connector": "c_13384_16816",
-        "decision": "accepted",
-        "dependent_candidate_paths": 2,
-        "head_node": "16816",
-        "position": 22,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13384"
-      },
-      {
-        "connector": "c_8419_6979",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "6979",
-        "position": 23,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "8419"
-      },
-      {
-        "connector": "c_9558_9557",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "9557",
-        "position": 24,
-        "reason": "would_close_a_cycle",
-        "tail_node": "9558"
-      },
-      {
-        "connector": "c_10439_6980",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "6980",
-        "position": 25,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "10439"
-      },
-      {
-        "connector": "c_10439_15309",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "15309",
-        "position": 26,
-        "reason": "would_close_a_cycle",
-        "tail_node": "10439"
-      },
-      {
-        "connector": "c_12988_16803",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16803",
-        "position": 27,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "12988"
-      },
-      {
-        "connector": "c_13012_15304",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "15304",
-        "position": 28,
-        "reason": "would_close_a_cycle",
-        "tail_node": "13012"
-      },
-      {
-        "connector": "c_13021_16825",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16825",
-        "position": 29,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13021"
-      },
-      {
-        "connector": "c_13027_16823",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16823",
-        "position": 30,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13027"
-      },
-      {
-        "connector": "c_13099_16801",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16801",
-        "position": 31,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13099"
-      },
-      {
-        "connector": "c_13922_16804",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16804",
-        "position": 32,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "13922"
-      },
-      {
-        "connector": "c_15304_16823",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16823",
-        "position": 33,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15304"
-      },
-      {
-        "connector": "c_15305_15304",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "15304",
-        "position": 34,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15305"
-      },
-      {
-        "connector": "c_15306_8419",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "8419",
-        "position": 35,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15306"
-      },
-      {
-        "connector": "c_15308_13012",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "13012",
-        "position": 36,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15308"
-      },
-      {
-        "connector": "c_15309_13012",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "13012",
-        "position": 37,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15309"
-      },
-      {
-        "connector": "c_15309_16820",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "16820",
-        "position": 38,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15309"
-      },
-      {
-        "connector": "c_15310_15309",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "15309",
-        "position": 39,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15310"
-      },
-      {
-        "connector": "c_15350_15306",
-        "decision": "rejected",
-        "dependent_candidate_paths": 1,
-        "head_node": "15306",
-        "position": 40,
-        "reason": "would_close_a_cycle",
-        "tail_node": "15350"
-      },
-      {
-        "connector": "c_15350_15309",
-        "decision": "accepted",
-        "dependent_candidate_paths": 1,
-        "head_node": "15309",
-        "position": 41,
-        "reason": "graph_stays_acyclic",
-        "tail_node": "15350"
-      }
-    ],
-    "connectors_rejected": [
-      {
-        "connector": "c_8415_15364",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_13933_15349",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_8420_15366",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_10416_15360",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_9549_9548",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_6979_15350",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_9558_9557",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_10439_15309",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_13012_15304",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15305_15304",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15306_8419",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15308_13012",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15309_13012",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15310_15309",
-        "reason": "would_close_a_cycle"
-      },
-      {
-        "connector": "c_15350_15306",
-        "reason": "would_close_a_cycle"
-      }
-    ],
-    "paths_dropped": [
-      {
-        "blocking_connectors": "c_10416_15360|c_8420_15366",
-        "path_id": "p_2040",
-        "terminal_node": "n_16818"
-      },
-      {
-        "blocking_connectors": "c_10416_15360|c_8420_15366",
-        "path_id": "p_2041",
-        "terminal_node": "n_16818"
-      },
-      {
-        "blocking_connectors": "c_10416_15360|c_8420_15366",
-        "path_id": "p_2042",
-        "terminal_node": "n_16818"
-      },
-      {
-        "blocking_connectors": "c_10416_15360|c_8420_15366",
-        "path_id": "p_2043",
-        "terminal_node": "n_16818"
-      },
-      {
-        "blocking_connectors": "c_10416_15360|c_8420_15366",
-        "path_id": "p_2044",
-        "terminal_node": "n_16818"
-      },
-      {
-        "blocking_connectors": "c_15305_15304|c_15308_13012|c_15310_15309|c_6979_15350",
-        "path_id": "p_2065",
-        "terminal_node": "n_16820"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2068",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2069",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2070",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2071",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2072",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2073",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2074",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_13933_15349|c_8415_15364",
-        "path_id": "p_2075",
-        "terminal_node": "n_16822"
-      },
-      {
-        "blocking_connectors": "c_10439_15309|c_13012_15304|c_15306_8419|c_15309_13012|c_15350_15306|c_6979_15350",
-        "path_id": "p_2082",
-        "terminal_node": "n_16823"
-      },
-      {
-        "blocking_connectors": "c_9558_9557",
-        "path_id": "p_4138",
-        "terminal_node": "n_16825"
-      },
-      {
-        "blocking_connectors": "c_9549_9548",
-        "path_id": "p_4139",
-        "terminal_node": "n_16826"
-      },
-      {
-        "blocking_connectors": "c_9549_9548",
-        "path_id": "p_4140",
-        "terminal_node": "n_16826"
-      },
-      {
-        "blocking_connectors": "c_9549_9548",
-        "path_id": "p_4141",
-        "terminal_node": "n_16826"
-      },
-      {
-        "blocking_connectors": "c_9549_9548",
-        "path_id": "p_4142",
-        "terminal_node": "n_16826"
-      }
-    ],
-    "physical_reach_topology_is_acyclic": true,
-    "rule": "derived gap connectors are accepted only while the graph stays acyclic"
-  },
-  "weakly_connected_components": 7
+  "weakly_connected_components": 9
 }

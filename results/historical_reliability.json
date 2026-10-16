@@ -1,0 +1,3129 @@
+{
+ "gauge": {
+  "file": "DATA/USGS_10105900_LittleBearRiver/10105900_monthly_mean_discharge.rdb",
+  "sha256": "35aaf4bbc215b1b372f3aba600b3229e0a2a123a9b428eb078c8629e5f3c89ec",
+  "retrieved": "2026-10-11 06:38:32 -04:00",
+  "site": "10105900",
+  "name": "LITTLE BEAR RIVER AT PARADISE, UT",
+  "years": [
+   1993,
+   2025
+  ],
+  "months": {
+   "2025-05": 5,
+   "2025-06": 6,
+   "2025-07": 7,
+   "2025-08": 8,
+   "2025-09": 9
+  },
+  "median_cfs_by_month": {
+   "5": 168.7,
+   "6": 48.6,
+   "7": 20.5,
+   "8": 21.0,
+   "9": 24.1
+  },
+  "median_season_cfs_days": 10111.0
+ },
+ "dryness": {
+  "1993": {
+   "monthly_ratio": {
+    "2025-05": 2.161232957913456,
+    "2025-06": 2.8539094650205756,
+    "2025-07": 0.9317073170731708,
+    "2025-08": 0.6047619047619047,
+    "2025-09": 0.6763485477178424
+   },
+   "seasonal_ratio": 1.6752447829097024
+  },
+  "1994": {
+   "monthly_ratio": {
+    "2025-05": 0.6692353289863664,
+    "2025-06": 0.4053497942386831,
+    "2025-07": 0.9853658536585366,
+    "2025-08": 0.9380952380952381,
+    "2025-09": 0.846473029045643
+   },
+   "seasonal_ratio": 0.5874592028483829
+  },
+  "1995": {
+   "monthly_ratio": {
+    "2025-05": 2.5234143449911084,
+    "2025-06": 5.989711934156379,
+    "2025-07": 1.9268292682926829,
+    "2025-08": 1.0952380952380953,
+    "2025-09": 1.012448132780083
+   },
+   "seasonal_ratio": 2.4329146474137078
+  },
+  "1996": {
+   "monthly_ratio": {
+    "2025-05": 2.305868405453468,
+    "2025-06": 2.2736625514403292,
+    "2025-07": 1.302439024390244,
+    "2025-08": 1.2619047619047619,
+    "2025-09": 1.5062240663900412
+   },
+   "seasonal_ratio": 1.7913361685293245
+  },
+  "1997": {
+   "monthly_ratio": {
+    "2025-05": 3.5168938944872554,
+    "2025-06": 5.246913580246914,
+    "2025-07": 3.048780487804878,
+    "2025-08": 2.219047619047619,
+    "2025-09": 3.0912863070539416
+   },
+   "seasonal_ratio": 3.1311838591632872
+  },
+  "1998": {
+   "monthly_ratio": {
+    "2025-05": 3.708950800237108,
+    "2025-06": 6.944444444444445,
+    "2025-07": 4.356097560975609,
+    "2025-08": 4.538095238095238,
+    "2025-09": 3.9626556016597507
+   },
+   "seasonal_ratio": 3.76909306695678
+  },
+  "1999": {
+   "monthly_ratio": {
+    "2025-05": 2.6899822169531715,
+    "2025-06": 5.343621399176954,
+    "2025-07": 3.2829268292682925,
+    "2025-08": 2.2,
+    "2025-09": 2.004149377593361
+   },
+   "seasonal_ratio": 2.6531797052714863
+  },
+  "2000": {
+   "monthly_ratio": {
+    "2025-05": 0.5406046235921755,
+    "2025-06": 0.3930041152263375,
+    "2025-07": 0.9073170731707317,
+    "2025-08": 0.8761904761904761,
+    "2025-09": 1.103734439834025
+   },
+   "seasonal_ratio": 0.528651963208387
+  },
+  "2001": {
+   "monthly_ratio": {
+    "2025-05": 0.4427978660343806,
+    "2025-06": 0.37037037037037035,
+    "2025-07": 0.8829268292682928,
+    "2025-08": 0.7809523809523808,
+    "2025-09": 0.6556016597510373
+   },
+   "seasonal_ratio": 0.4350904954999506
+  },
+  "2002": {
+   "monthly_ratio": {
+    "2025-05": 0.7462951985773564,
+    "2025-06": 0.6337448559670782,
+    "2025-07": 0.7560975609756098,
+    "2025-08": 0.7857142857142857,
+    "2025-09": 0.8755186721991701
+   },
+   "seasonal_ratio": 0.6381070121649688
+  },
+  "2003": {
+   "monthly_ratio": {
+    "2025-05": 0.5767634854771785,
+    "2025-06": 0.27983539094650206,
+    "2025-07": 0.5609756097560976,
+    "2025-08": 0.6428571428571429,
+    "2025-09": 0.6265560165975104
+   },
+   "seasonal_ratio": 0.46012263871031545
+  },
+  "2004": {
+   "monthly_ratio": {
+    "2025-05": 0.4647302904564316,
+    "2025-06": 0.49176954732510286,
+    "2025-07": 0.6780487804878049,
+    "2025-08": 0.7761904761904762,
+    "2025-09": 0.966804979253112
+   },
+   "seasonal_ratio": 0.47300959351201666
+  },
+  "2005": {
+   "monthly_ratio": {
+    "2025-05": 2.9282750444576173,
+    "2025-06": 4.172839506172839,
+    "2025-07": 1.975609756097561,
+    "2025-08": 1.5333333333333334,
+    "2025-09": 1.5435684647302905
+   },
+   "seasonal_ratio": 2.4495796657106124
+  },
+  "2006": {
+   "monthly_ratio": {
+    "2025-05": 2.083580320094843,
+    "2025-06": 2.080246913580247,
+    "2025-07": 1.9414634146341463,
+    "2025-08": 1.7476190476190478,
+    "2025-09": 1.9170124481327802
+   },
+   "seasonal_ratio": 1.7492829591533974
+  },
+  "2007": {
+   "monthly_ratio": {
+    "2025-05": 0.5328986366330766,
+    "2025-06": 0.4773662551440329,
+    "2025-07": 0.9609756097560975,
+    "2025-08": 1.0428571428571427,
+    "2025-09": 1.0829875518672198
+   },
+   "seasonal_ratio": 0.5494510928691524
+  },
+  "2008": {
+   "monthly_ratio": {
+    "2025-05": 1.9656194427978664,
+    "2025-06": 3.1069958847736623,
+    "2025-07": 0.9170731707317074,
+    "2025-08": 0.7761904761904762,
+    "2025-09": 1.3070539419087137
+   },
+   "seasonal_ratio": 1.6657798437345466
+  },
+  "2009": {
+   "monthly_ratio": {
+    "2025-05": 2.009484291641968,
+    "2025-06": 2.9670781893004112,
+    "2025-07": 1.7365853658536585,
+    "2025-08": 1.6047619047619048,
+    "2025-09": 1.6721991701244812
+   },
+   "seasonal_ratio": 1.7992582336069627
+  },
+  "2010": {
+   "monthly_ratio": {
+    "2025-05": 1.0,
+    "2025-06": 2.611111111111111,
+    "2025-07": 1.170731707317073,
+    "2025-08": 0.9571428571428572,
+    "2025-09": 0.979253112033195
+   },
+   "seasonal_ratio": 1.0989813074868955
+  },
+  "2011": {
+   "monthly_ratio": {
+    "2025-05": 4.110847658565501,
+    "2025-06": 11.87037037037037,
+    "2025-07": 6.029268292682927,
+    "2025-08": 2.9571428571428573,
+    "2025-09": 2.4771784232365146
+   },
+   "seasonal_ratio": 4.584432795964791
+  },
+  "2012": {
+   "monthly_ratio": {
+    "2025-05": 0.4914048606994666,
+    "2025-06": 0.5411522633744856,
+    "2025-07": 1.0975609756097562,
+    "2025-08": 1.0095238095238095,
+    "2025-09": 0.921161825726141
+   },
+   "seasonal_ratio": 0.5320541983977847
+  },
+  "2013": {
+   "monthly_ratio": {
+    "2025-05": 0.49733254297569657,
+    "2025-06": 0.42386831275720166,
+    "2025-07": 0.9170731707317074,
+    "2025-08": 1.0285714285714287,
+    "2025-09": 1.0
+   },
+   "seasonal_ratio": 0.5137276233804767
+  },
+  "2014": {
+   "monthly_ratio": {
+    "2025-05": 0.7261410788381744,
+    "2025-06": 0.5699588477366255,
+    "2025-07": 0.7999999999999999,
+    "2025-08": 1.0,
+    "2025-09": 0.8008298755186721
+   },
+   "seasonal_ratio": 0.6297003263772128
+  },
+  "2015": {
+   "monthly_ratio": {
+    "2025-05": 0.4048606994665086,
+    "2025-06": 0.6790123456790124,
+    "2025-07": 0.7560975609756098,
+    "2025-08": 0.7380952380952381,
+    "2025-09": 0.6224066390041494
+   },
+   "seasonal_ratio": 0.44686974582138256
+  },
+  "2016": {
+   "monthly_ratio": {
+    "2025-05": 1.3272080616478958,
+    "2025-06": 1.0,
+    "2025-07": 0.9804878048780489,
+    "2025-08": 0.7142857142857143,
+    "2025-09": 0.8630705394190871
+   },
+   "seasonal_ratio": 1.0
+  },
+  "2017": {
+   "monthly_ratio": {
+    "2025-05": 3.0349733254297573,
+    "2025-06": 4.42798353909465,
+    "2025-07": 3.131707317073171,
+    "2025-08": 1.8714285714285712,
+    "2025-09": 1.8381742738589208
+   },
+   "seasonal_ratio": 2.657056670952428
+  },
+  "2018": {
+   "monthly_ratio": {
+    "2025-05": 0.8861885002963842,
+    "2025-06": 0.6399176954732511,
+    "2025-07": 1.0,
+    "2025-08": 0.9952380952380951,
+    "2025-09": 0.7842323651452281
+   },
+   "seasonal_ratio": 0.7336465235881713
+  },
+  "2019": {
+   "monthly_ratio": {
+    "2025-05": 2.072317723770006,
+    "2025-06": 3.8827160493827155,
+    "2025-07": 1.921951219512195,
+    "2025-08": 1.4142857142857141,
+    "2025-09": 1.7219917012448132
+   },
+   "seasonal_ratio": 1.966739194936208
+  },
+  "2020": {
+   "monthly_ratio": {
+    "2025-05": 0.7907528156490813,
+    "2025-06": 0.6872427983539094,
+    "2025-07": 1.0048780487804878,
+    "2025-08": 0.8714285714285714,
+    "2025-09": 0.879668049792531
+   },
+   "seasonal_ratio": 0.6902680249233509
+  },
+  "2021": {
+   "monthly_ratio": {
+    "2025-05": 0.17012448132780084,
+    "2025-06": 0.2716049382716049,
+    "2025-07": 0.6634146341463415,
+    "2025-08": 0.9190476190476191,
+    "2025-09": 0.6431535269709543
+   },
+   "seasonal_ratio": 0.2740183958065473
+  },
+  "2022": {
+   "monthly_ratio": {
+    "2025-05": 0.5382335506816834,
+    "2025-06": 0.8415637860082305,
+    "2025-07": 0.7170731707317073,
+    "2025-08": 0.7952380952380952,
+    "2025-09": 0.9419087136929459
+   },
+   "seasonal_ratio": 0.5633666304025319
+  },
+  "2023": {
+   "monthly_ratio": {
+    "2025-05": 4.613515115589805,
+    "2025-06": 4.753086419753086,
+    "2025-07": 2.3902439024390243,
+    "2025-08": 1.6761904761904762,
+    "2025-09": 1.775933609958506
+   },
+   "seasonal_ratio": 3.4567797448323607
+  },
+  "2024": {
+   "monthly_ratio": {
+    "2025-05": 2.054534676941316,
+    "2025-06": 2.343621399176955,
+    "2025-07": 1.3756097560975609,
+    "2025-08": 1.0904761904761904,
+    "2025-09": 1.1867219917012448
+   },
+   "seasonal_ratio": 1.6421422213430918
+  },
+  "2025": {
+   "monthly_ratio": {
+    "2025-05": 0.9952578541790161,
+    "2025-06": 0.6995884773662551,
+    "2025-07": 0.8780487804878049,
+    "2025-08": 0.8809523809523809,
+    "2025-09": 0.9419087136929459
+   },
+   "seasonal_ratio": 0.7949164276530511
+  }
+ },
+ "published_guarantees": {
+  "company_130": 0.41951076293707945,
+  "company_132": 0.41951076293707945,
+  "company_088": 0.4476976354639018
+ },
+ "variants": {
+  "budget 0.40": {
+   "budget": 0.4,
+   "scale_envelopes": true
+  },
+  "budget 0.25": {
+   "budget": 0.25,
+   "scale_envelopes": true
+  },
+  "envelopes unscaled": {
+   "budget": 0.4,
+   "scale_envelopes": false
+  }
+ },
+ "primary": "budget 0.40",
+ "bootstrap": {
+  "resamples": 10000,
+  "seed": 20261012,
+  "unit": "year"
+ },
+ "years": {
+  "budget 0.40": {
+   "1993": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1994": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1995": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1996": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1997": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1998": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "1999": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2000": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2001": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2002": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2003": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.6569257361713546,
+    "headroom": 1.5313884933171777
+   },
+   "2004": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2005": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2006": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2007": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2008": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2009": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2010": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2011": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2012": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2013": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2014": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2015": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2016": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2017": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2018": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2019": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2020": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2021": {
+    "least_effort": 0.19200850250265938,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.5693467988051402,
+    "headroom": 1.2717115179988203
+   },
+   "2022": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2023": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2024": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   },
+   "2025": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ],
+    "paradise_highline_common_service": 0.7100018847347493,
+    "headroom": 1.5356769253899163
+   }
+  },
+  "budget 0.25": {
+   "1993": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1994": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1995": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1996": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1997": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1998": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1999": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2000": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2001": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2002": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2003": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2004": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2005": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2006": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2007": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2008": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2009": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2010": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2011": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2012": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2013": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2014": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2015": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2016": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2017": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2018": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2019": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2020": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2021": {
+    "least_effort": 0.19200850250265938,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2022": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2023": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2024": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2025": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   }
+  },
+  "envelopes unscaled": {
+   "1993": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1994": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1995": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1996": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1997": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1998": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "1999": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2000": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2001": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2002": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2003": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2004": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2005": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2006": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2007": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2008": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2009": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2010": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2011": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2012": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2013": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2014": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2015": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2016": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2017": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2018": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2019": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2020": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2021": {
+    "least_effort": 0.19200850250265916,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2022": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2023": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2024": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   },
+   "2025": {
+    "least_effort": 0.0,
+    "effort_beyond_budget": 0.0,
+    "share_of_guarantee": {
+     "company_130": 1.0,
+     "company_132": 1.0,
+     "company_088": 1.0
+    },
+    "promise_kept": {
+     "company_088": true,
+     "company_130": true,
+     "company_132": true
+    },
+    "levels": [
+     {
+      "level": 1.0,
+      "blocked": [
+       "company_130",
+       "company_132",
+       "company_088"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "summary": {
+  "budget 0.40": {
+   "reliability": {
+    "company_088": 1.0,
+    "company_130": 1.0,
+    "company_132": 1.0
+   },
+   "reliability_95_percent_interval": {
+    "company_088": [
+     1.0,
+     1.0
+    ],
+    "company_130": [
+     1.0,
+     1.0
+    ],
+    "company_132": [
+     1.0,
+     1.0
+    ]
+   },
+   "system_reliability": 1.0,
+   "system_reliability_95_percent_interval": [
+    1.0,
+    1.0
+   ],
+   "years_a_promise_failed": {
+    "company_088": [],
+    "company_130": [],
+    "company_132": []
+   },
+   "mean_shortfall": {
+    "company_088": 0.0,
+    "company_130": 0.0,
+    "company_132": 0.0
+   },
+   "largest_shortfall": {
+    "company_088": [
+     0.0,
+     1993
+    ],
+    "company_130": [
+     0.0,
+     1993
+    ],
+    "company_132": [
+     0.0,
+     1993
+    ]
+   },
+   "years_beyond_budget": []
+  },
+  "budget 0.25": {
+   "reliability": {
+    "company_088": 1.0,
+    "company_130": 1.0,
+    "company_132": 1.0
+   },
+   "reliability_95_percent_interval": {
+    "company_088": [
+     1.0,
+     1.0
+    ],
+    "company_130": [
+     1.0,
+     1.0
+    ],
+    "company_132": [
+     1.0,
+     1.0
+    ]
+   },
+   "system_reliability": 1.0,
+   "system_reliability_95_percent_interval": [
+    1.0,
+    1.0
+   ],
+   "years_a_promise_failed": {
+    "company_088": [],
+    "company_130": [],
+    "company_132": []
+   },
+   "mean_shortfall": {
+    "company_088": 0.0,
+    "company_130": 0.0,
+    "company_132": 0.0
+   },
+   "largest_shortfall": {
+    "company_088": [
+     0.0,
+     1993
+    ],
+    "company_130": [
+     0.0,
+     1993
+    ],
+    "company_132": [
+     0.0,
+     1993
+    ]
+   },
+   "years_beyond_budget": []
+  },
+  "envelopes unscaled": {
+   "reliability": {
+    "company_088": 1.0,
+    "company_130": 1.0,
+    "company_132": 1.0
+   },
+   "reliability_95_percent_interval": {
+    "company_088": [
+     1.0,
+     1.0
+    ],
+    "company_130": [
+     1.0,
+     1.0
+    ],
+    "company_132": [
+     1.0,
+     1.0
+    ]
+   },
+   "system_reliability": 1.0,
+   "system_reliability_95_percent_interval": [
+    1.0,
+    1.0
+   ],
+   "years_a_promise_failed": {
+    "company_088": [],
+    "company_130": [],
+    "company_132": []
+   },
+   "mean_shortfall": {
+    "company_088": 0.0,
+    "company_130": 0.0,
+    "company_132": 0.0
+   },
+   "largest_shortfall": {
+    "company_088": [
+     0.0,
+     1993
+    ],
+    "company_130": [
+     0.0,
+     1993
+    ],
+    "company_132": [
+     0.0,
+     1993
+    ]
+   },
+   "years_beyond_budget": []
+  }
+ },
+ "checks": {
+  "years_with_every_monthly_ratio_at_least_1": [
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2005,
+   2006,
+   2009,
+   2011,
+   2017,
+   2019,
+   2023,
+   2024
+  ],
+  "those_years_keep_every_promise_within_budget": true,
+  "budget_0_40_not_below_0_25_in_every_year": true,
+  "unscaled_envelopes_not_below_scaled_in_every_year": true,
+  "years_all_kept": {
+   "budget 0.40": 33,
+   "budget 0.25": 33,
+   "envelopes unscaled": 33
+  }
+ },
+ "expectations": {
+  "every_year_runs_within_budget_0_40": true,
+  "hyrum_more_reliable_than_highline": false,
+  "severe_paradise_highline_common_service": 0.4195107629370794,
+  "severe_effort_beyond_budget": 0.0,
+  "driest_year_for_paradise_highline": 2021,
+  "lowest_year_paradise_highline_common_service": 0.5693467988051402,
+  "severe_harsher_than_every_year": true,
+  "years_not_harsher_than_severe": []
+ },
+ "descriptive_added_after_the_first_run": {
+  "note": "added after the first run; descriptive, no decision rule",
+  "clopper_pearson_95_percent": {
+   "budget 0.40": {
+    "company_088": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_130": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_132": [
+     0.8942371899254207,
+     1.0
+    ],
+    "system": [
+     0.8942371899254207,
+     1.0
+    ]
+   },
+   "budget 0.25": {
+    "company_088": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_130": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_132": [
+     0.8942371899254207,
+     1.0
+    ],
+    "system": [
+     0.8942371899254207,
+     1.0
+    ]
+   },
+   "envelopes unscaled": {
+    "company_088": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_130": [
+     0.8942371899254207,
+     1.0
+    ],
+    "company_132": [
+     0.8942371899254207,
+     1.0
+    ],
+    "system": [
+     0.8942371899254207,
+     1.0
+    ]
+   }
+  },
+  "headroom_by_scenario": {
+   "nominal": 0.9999999999999999,
+   "moderate_system_shortage": 1.3889686701604387,
+   "severe_system_shortage": 1.0,
+   "paradise_diversion_outage_under_shortage": 1.0000008553953152,
+   "hyrum_canal_restriction_under_shortage": 1.388968670160439
+  },
+  "headroom_by_year": {
+   "1993": 1.5356769253899163,
+   "1994": 1.5356769253899163,
+   "1995": 1.5356769253899163,
+   "1996": 1.5356769253899163,
+   "1997": 1.5356769253899163,
+   "1998": 1.5356769253899163,
+   "1999": 1.5356769253899163,
+   "2000": 1.5356769253899163,
+   "2001": 1.5356769253899163,
+   "2002": 1.5356769253899163,
+   "2003": 1.5313884933171777,
+   "2004": 1.5356769253899163,
+   "2005": 1.5356769253899163,
+   "2006": 1.5356769253899163,
+   "2007": 1.5356769253899163,
+   "2008": 1.5356769253899163,
+   "2009": 1.5356769253899163,
+   "2010": 1.5356769253899163,
+   "2011": 1.5356769253899163,
+   "2012": 1.5356769253899163,
+   "2013": 1.5356769253899163,
+   "2014": 1.5356769253899163,
+   "2015": 1.5356769253899163,
+   "2016": 1.5356769253899163,
+   "2017": 1.5356769253899163,
+   "2018": 1.5356769253899163,
+   "2019": 1.5356769253899163,
+   "2020": 1.5356769253899163,
+   "2021": 1.2717115179988203,
+   "2022": 1.5356769253899163,
+   "2023": 1.5356769253899163,
+   "2024": 1.5356769253899163,
+   "2025": 1.5356769253899163
+  },
+  "smallest_headroom_year": 2021,
+  "smallest_year_headroom": 1.2717115179988203
+ },
+ "seconds": 8.4
+}

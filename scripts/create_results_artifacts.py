@@ -17,6 +17,7 @@ RESULT_PATH = ROOT / "results" / "cti_rlex_base.json"
 VERIFY_PATH = ROOT / "results" / "cti_rlex_verification.json"
 EXPERIMENT_PATH = ROOT / "results" / "cti_rlex_experiments.json"
 BENCHMARK_PATH = ROOT / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json"
+UNIQUENESS_PATH = ROOT / "results" / "flow_uniqueness.json"
 RESULTS_DIR = ROOT / "results"
 FIGURE_DIR = RESULTS_DIR / "figures"
 TABLE_DIR = RESULTS_DIR / "tables"
@@ -387,8 +388,23 @@ def figure_recourse_frontier(verification: dict) -> None:
     save_figure(fig, "Figure_2_recourse_frontier")
 
 
+def undetermined_cells() -> set[str]:
+    """Claimant-period-scenario ratios that vary over the optimal face of the last stage.
+
+    results/flow_uniqueness.json classifies every reported quantity; a cell is undetermined
+    when its range over the face exceeds the threshold stated there. Figure 6 prints those
+    cells in italics, so that a value the objective hierarchy does not fix is not read as
+    one it does (Reviewer 3, comment 2).
+    """
+    data = json.loads(UNIQUENESS_PATH.read_text(encoding="utf-8"))
+    rows = data["instances"]["little_bear_v2"]["cti_rlex"]["families"]["period_service_ratio"]["rows"]
+    return {row["quantity"] for row in rows if row["status"] == "undetermined"}
+
+
 def figure_service_heatmap(result: dict) -> None:
+    undetermined = undetermined_cells()
     rows = []
+    keys = []
     row_labels = []
     bindings = []
     for scenario in SCENARIO_ORDER:
@@ -398,6 +414,7 @@ def figure_service_heatmap(result: dict) -> None:
                 for period in PERIOD_ORDER
             ]
             rows.append(values)
+            keys.append([f"{scenario}|{period}|{claimant}" for period in PERIOD_ORDER])
             row_labels.append(f"{SCENARIO_LABEL[scenario]} - {SHORT_CLAIMANT_LABEL[claimant]}")
             guarantee = float(result["guarantees"][claimant])
             bindings.append([abs(value - guarantee) <= 1e-7 for value in values])
@@ -423,6 +440,7 @@ def figure_service_heatmap(result: dict) -> None:
                 color=color,
                 fontsize=7.4,
                 fontweight="bold" if bindings[i][j] else "normal",
+                fontstyle="italic" if keys[i][j] in undetermined else "normal",
             )
             if bindings[i][j]:
                 ax.add_patch(

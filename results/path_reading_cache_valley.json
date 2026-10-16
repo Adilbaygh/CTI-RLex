@@ -1,0 +1,765 @@
+{
+ "benchmark_id": "cache_valley_2025_multiclaimant_v4",
+ "rule": "every listed reach is an arc in its digitized direction, except a run of listed reaches that lies farther from the rest of its path than the rest spans, which is not built; a logical connector is kept only where it bridges a gap between listed reaches in the downstream direction; the place of use is connected to every downstream end of the listed reaches that the path's own diversion reaches",
+ "paths": 51,
+ "paths_read_as_sets": 20,
+ "claimants_affected": 6,
+ "walk_connectors_not_built": 20,
+ "walk_connectors_not_built_by_reason_and_path": {
+  "returns upstream to start another listed branch": 41,
+  "skips over reaches the listing names later": 20
+ },
+ "gap_connectors_kept_on_changed_paths": [
+  "c_17671_17668"
+ ],
+ "listed_reaches_not_reachable_from_their_diversion": [
+  "e_4491"
+ ],
+ "attachment_distance_km": {
+  "every_terminal_connector": [
+   0.526,
+   12.54
+  ],
+  "terminal_connectors_of_changed_paths": [
+   0.585,
+   7.015
+  ]
+ },
+ "by_claimant": {
+  "company_072": {
+   "claimant_name": "Cub River Irrigation Co.",
+   "paths_read_as_sets": [
+    "p_4138"
+   ],
+   "terminal_connectors": {
+    "c_13021_16825": 1.302
+   }
+  },
+  "company_103": {
+   "claimant_name": "Logan Island Irrigation Co.",
+   "paths_read_as_sets": [
+    "p_2065"
+   ],
+   "terminal_connectors": {
+    "c_6979_16820": 0.585,
+    "c_15305_16820": 2.175,
+    "c_15308_16820": 1.115,
+    "c_15310_16820": 0.983
+   }
+  },
+  "company_104": {
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "paths_read_as_sets": [
+    "p_2068",
+    "p_2069",
+    "p_2070",
+    "p_2071",
+    "p_2072",
+    "p_2073",
+    "p_2074",
+    "p_2075"
+   ],
+   "terminal_connectors": {
+    "c_13933_16822": 6.437
+   }
+  },
+  "company_105": {
+   "claimant_name": "Logan Northwest Field Irrigation Co.",
+   "paths_read_as_sets": [
+    "p_2082"
+   ],
+   "terminal_connectors": {
+    "c_10439_16823": 3.081
+   }
+  },
+  "company_109": {
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "paths_read_as_sets": [
+    "p_2040",
+    "p_2041",
+    "p_2042",
+    "p_2043",
+    "p_2044"
+   ],
+   "terminal_connectors": {
+    "c_10416_16818": 7.015
+   }
+  },
+  "company_162": {
+   "claimant_name": "Wellsville-Mendon Conservancy District",
+   "paths_read_as_sets": [
+    "p_4139",
+    "p_4140",
+    "p_4141",
+    "p_4142"
+   ],
+   "terminal_connectors": {
+    "c_9549_16826": 1.982,
+    "c_13470_16826": 1.436
+   }
+  }
+ },
+ "rows": [
+  {
+   "path_id": "p_2040",
+   "water_right_number": "25-6110",
+   "claimant_id": "company_109",
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "source_id": "s_10451",
+   "terminal_node": "n_16818",
+   "listed_reaches": 9,
+   "listed_km": 15.796,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_10416_15360": "returns upstream to start another listed branch",
+    "c_15360_8420": "skips over reaches the listing names later",
+    "c_15366_13728": "skips over reaches the listing names later",
+    "c_8420_15366": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13728_16818",
+   "terminal_connectors": [
+    {
+     "connector": "c_10416_16818",
+     "attachment_node": "n_10416",
+     "distance_to_place_of_use_km": 7.015
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2041",
+   "water_right_number": "25-6111",
+   "claimant_id": "company_109",
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "source_id": "s_10451",
+   "terminal_node": "n_16818",
+   "listed_reaches": 9,
+   "listed_km": 15.796,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_10416_15360": "returns upstream to start another listed branch",
+    "c_15360_8420": "skips over reaches the listing names later",
+    "c_15366_13728": "skips over reaches the listing names later",
+    "c_8420_15366": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13728_16818",
+   "terminal_connectors": [
+    {
+     "connector": "c_10416_16818",
+     "attachment_node": "n_10416",
+     "distance_to_place_of_use_km": 7.015
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2042",
+   "water_right_number": "25-6112",
+   "claimant_id": "company_109",
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "source_id": "s_10451",
+   "terminal_node": "n_16818",
+   "listed_reaches": 9,
+   "listed_km": 15.796,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_10416_15360": "returns upstream to start another listed branch",
+    "c_15360_8420": "skips over reaches the listing names later",
+    "c_15366_13728": "skips over reaches the listing names later",
+    "c_8420_15366": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13728_16818",
+   "terminal_connectors": [
+    {
+     "connector": "c_10416_16818",
+     "attachment_node": "n_10416",
+     "distance_to_place_of_use_km": 7.015
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2043",
+   "water_right_number": "25-6113",
+   "claimant_id": "company_109",
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "source_id": "s_10451",
+   "terminal_node": "n_16818",
+   "listed_reaches": 9,
+   "listed_km": 15.796,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_10416_15360": "returns upstream to start another listed branch",
+    "c_15360_8420": "skips over reaches the listing names later",
+    "c_15366_13728": "skips over reaches the listing names later",
+    "c_8420_15366": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13728_16818",
+   "terminal_connectors": [
+    {
+     "connector": "c_10416_16818",
+     "attachment_node": "n_10416",
+     "distance_to_place_of_use_km": 7.015
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2044",
+   "water_right_number": "25-3056",
+   "claimant_id": "company_109",
+   "claimant_name": "Logan & Northern Irrigation Co.",
+   "source_id": "s_10451",
+   "terminal_node": "n_16818",
+   "listed_reaches": 9,
+   "listed_km": 15.796,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_10416_15360": "returns upstream to start another listed branch",
+    "c_15360_8420": "skips over reaches the listing names later",
+    "c_15366_13728": "skips over reaches the listing names later",
+    "c_8420_15366": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13728_16818",
+   "terminal_connectors": [
+    {
+     "connector": "c_10416_16818",
+     "attachment_node": "n_10416",
+     "distance_to_place_of_use_km": 7.015
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2065",
+   "water_right_number": "25-5136",
+   "claimant_id": "company_103",
+   "claimant_name": "Logan Island Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16820",
+   "listed_reaches": 14,
+   "listed_km": 4.019,
+   "gap_connectors_kept": [
+    "c_17671_17668"
+   ],
+   "walk_connectors_not_built": {
+    "c_15305_15304": "returns upstream to start another listed branch",
+    "c_15308_13012": "returns upstream to start another listed branch",
+    "c_15310_15309": "returns upstream to start another listed branch",
+    "c_15350_15309": "skips over reaches the listing names later",
+    "c_6979_15350": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15309_16820",
+   "terminal_connectors": [
+    {
+     "connector": "c_6979_16820",
+     "attachment_node": "n_6979",
+     "distance_to_place_of_use_km": 0.585
+    },
+    {
+     "connector": "c_15305_16820",
+     "attachment_node": "n_15305",
+     "distance_to_place_of_use_km": 2.175
+    },
+    {
+     "connector": "c_15308_16820",
+     "attachment_node": "n_15308",
+     "distance_to_place_of_use_km": 1.115
+    },
+    {
+     "connector": "c_15310_16820",
+     "attachment_node": "n_15310",
+     "distance_to_place_of_use_km": 0.983
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2068",
+   "water_right_number": "25-6137",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2069",
+   "water_right_number": "25-6138",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2070",
+   "water_right_number": "25-6139",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2071",
+   "water_right_number": "25-6140",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2072",
+   "water_right_number": "25-6141",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2073",
+   "water_right_number": "25-6142",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2074",
+   "water_right_number": "25-6143",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2075",
+   "water_right_number": "25-6144",
+   "claimant_id": "company_104",
+   "claimant_name": "Logan North Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16822",
+   "listed_reaches": 9,
+   "listed_km": 11.288,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_13933_15349": "returns upstream to start another listed branch",
+    "c_15364_8415": "skips over reaches the listing names later",
+    "c_8415_15364": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_15349_16822",
+   "terminal_connectors": [
+    {
+     "connector": "c_13933_16822",
+     "attachment_node": "n_13933",
+     "distance_to_place_of_use_km": 6.437
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_2082",
+   "water_right_number": "25-5243",
+   "claimant_id": "company_105",
+   "claimant_name": "Logan Northwest Field Irrigation Co.",
+   "source_id": "s_10422",
+   "terminal_node": "n_16823",
+   "listed_reaches": 15,
+   "listed_km": 9.29,
+   "gap_connectors_kept": [
+    "c_17671_17668"
+   ],
+   "walk_connectors_not_built": {
+    "c_10439_15309": "returns upstream to start another listed branch",
+    "c_13012_15304": "returns upstream to start another listed branch",
+    "c_15306_8419": "returns upstream to start another listed branch",
+    "c_15309_13012": "returns upstream to start another listed branch",
+    "c_15350_15306": "returns upstream to start another listed branch",
+    "c_6979_15350": "returns upstream to start another listed branch",
+    "c_8419_6979": "skips over reaches the listing names later"
+   },
+   "sequential_reading_terminal_connector": "c_15304_16823",
+   "terminal_connectors": [
+    {
+     "connector": "c_10439_16823",
+     "attachment_node": "n_10439",
+     "distance_to_place_of_use_km": 3.081
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_4138",
+   "water_right_number": "ID 13-2066",
+   "claimant_id": "company_072",
+   "claimant_name": "Cub River Irrigation Co.",
+   "source_id": "s_10406",
+   "terminal_node": "n_16825",
+   "listed_reaches": 3,
+   "listed_km": 15.349,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_9558_9557": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13021_16825",
+   "terminal_connectors": [
+    {
+     "connector": "c_13021_16825",
+     "attachment_node": "n_13021",
+     "distance_to_place_of_use_km": 1.302
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": [
+    "e_4491"
+   ]
+  },
+  {
+   "path_id": "p_4139",
+   "water_right_number": "25-1994",
+   "claimant_id": "company_162",
+   "claimant_name": "Wellsville-Mendon Conservancy District",
+   "source_id": "s_9548",
+   "terminal_node": "n_16826",
+   "listed_reaches": 3,
+   "listed_km": 14.651,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_9549_9548": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13470_16826",
+   "terminal_connectors": [
+    {
+     "connector": "c_9549_16826",
+     "attachment_node": "n_9549",
+     "distance_to_place_of_use_km": 1.982
+    },
+    {
+     "connector": "c_13470_16826",
+     "attachment_node": "n_13470",
+     "distance_to_place_of_use_km": 1.436
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_4140",
+   "water_right_number": "25-1995",
+   "claimant_id": "company_162",
+   "claimant_name": "Wellsville-Mendon Conservancy District",
+   "source_id": "s_9548",
+   "terminal_node": "n_16826",
+   "listed_reaches": 3,
+   "listed_km": 14.651,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_9549_9548": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13470_16826",
+   "terminal_connectors": [
+    {
+     "connector": "c_9549_16826",
+     "attachment_node": "n_9549",
+     "distance_to_place_of_use_km": 1.982
+    },
+    {
+     "connector": "c_13470_16826",
+     "attachment_node": "n_13470",
+     "distance_to_place_of_use_km": 1.436
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_4141",
+   "water_right_number": "25-1996",
+   "claimant_id": "company_162",
+   "claimant_name": "Wellsville-Mendon Conservancy District",
+   "source_id": "s_9548",
+   "terminal_node": "n_16826",
+   "listed_reaches": 3,
+   "listed_km": 14.651,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_9549_9548": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13470_16826",
+   "terminal_connectors": [
+    {
+     "connector": "c_9549_16826",
+     "attachment_node": "n_9549",
+     "distance_to_place_of_use_km": 1.982
+    },
+    {
+     "connector": "c_13470_16826",
+     "attachment_node": "n_13470",
+     "distance_to_place_of_use_km": 1.436
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  },
+  {
+   "path_id": "p_4142",
+   "water_right_number": "",
+   "claimant_id": "company_162",
+   "claimant_name": "Wellsville-Mendon Conservancy District",
+   "source_id": "s_15269",
+   "terminal_node": "n_16826",
+   "listed_reaches": 4,
+   "listed_km": 15.318,
+   "gap_connectors_kept": [],
+   "walk_connectors_not_built": {
+    "c_9549_9548": "returns upstream to start another listed branch"
+   },
+   "sequential_reading_terminal_connector": "c_13470_16826",
+   "terminal_connectors": [
+    {
+     "connector": "c_9549_16826",
+     "attachment_node": "n_9549",
+     "distance_to_place_of_use_km": 1.982
+    },
+    {
+     "connector": "c_13470_16826",
+     "attachment_node": "n_13470",
+     "distance_to_place_of_use_km": 1.436
+    }
+   ],
+   "listed_reaches_not_reachable_from_the_diversion": []
+  }
+ ],
+ "listed_reaches_not_built": [
+  {
+   "path_id": "p_2065",
+   "water_right_number": "25-5136",
+   "claimant_id": "company_103",
+   "distance_to_the_rest_of_the_path_km": 438.157,
+   "flowline_names": [
+    "La Sal Creek"
+   ],
+   "nodes": [
+    "n_22229",
+    "n_22238"
+   ],
+   "reaches": [
+    "e_17671"
+   ],
+   "span_of_the_rest_of_the_path_km": 2.973,
+   "system_ids": [
+    1034
+   ],
+   "system_ids_of_the_rest_of_the_path": [
+    2009
+   ]
+  },
+  {
+   "path_id": "p_2082",
+   "water_right_number": "25-5243",
+   "claimant_id": "company_105",
+   "distance_to_the_rest_of_the_path_km": 438.157,
+   "flowline_names": [
+    "La Sal Creek"
+   ],
+   "nodes": [
+    "n_22229",
+    "n_22238"
+   ],
+   "reaches": [
+    "e_17671"
+   ],
+   "span_of_the_rest_of_the_path_km": 5.066,
+   "system_ids": [
+    1034
+   ],
+   "system_ids_of_the_rest_of_the_path": [
+    2009,
+    2017
+   ]
+  },
+  {
+   "path_id": "p_2083",
+   "water_right_number": "25-5938",
+   "claimant_id": "company_105",
+   "distance_to_the_rest_of_the_path_km": 438.157,
+   "flowline_names": [
+    "La Sal Creek"
+   ],
+   "nodes": [
+    "n_22229",
+    "n_22238"
+   ],
+   "reaches": [
+    "e_17671"
+   ],
+   "span_of_the_rest_of_the_path_km": 6.457,
+   "system_ids": [
+    1034
+   ],
+   "system_ids_of_the_rest_of_the_path": [
+    2009,
+    2017
+   ]
+  },
+  {
+   "path_id": "p_2084",
+   "water_right_number": "25-5141",
+   "claimant_id": "company_10390",
+   "distance_to_the_rest_of_the_path_km": 438.157,
+   "flowline_names": [
+    "La Sal Creek"
+   ],
+   "nodes": [
+    "n_22229",
+    "n_22238"
+   ],
+   "reaches": [
+    "e_17671"
+   ],
+   "span_of_the_rest_of_the_path_km": 6.52,
+   "system_ids": [
+    1034
+   ],
+   "system_ids_of_the_rest_of_the_path": [
+    2009
+   ]
+  },
+  {
+   "path_id": "p_2085",
+   "water_right_number": "25-5142",
+   "claimant_id": "company_10390",
+   "distance_to_the_rest_of_the_path_km": 438.157,
+   "flowline_names": [
+    "La Sal Creek"
+   ],
+   "nodes": [
+    "n_22229",
+    "n_22238"
+   ],
+   "reaches": [
+    "e_17671"
+   ],
+   "span_of_the_rest_of_the_path_km": 6.52,
+   "system_ids": [
+    1034
+   ],
+   "system_ids_of_the_rest_of_the_path": [
+    2009
+   ]
+  }
+ ]
+}

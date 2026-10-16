@@ -46,6 +46,18 @@
 !/DATA/CacheValley_2025_Benchmark/**
 !/DATA/benchmarks_dag/
 !/DATA/benchmarks_dag/**
+# The 2025 River Commissioner records at the five stations of the three-claimant instance,
+# with their provenance. Observations for comparison only; no benchmark reads them.
+!/DATA/LittleBearRiver_2025_Observations/
+!/DATA/LittleBearRiver_2025_Observations/**
+# The points of diversion of the water rights the two benchmarks name, from the Utah Division
+# of Water Rights, with their provenance. Read by the priority comparator only.
+!/DATA/Utah_Water_Rights_2026/
+!/DATA/Utah_Water_Rights_2026/**
+# The monthly discharge of USGS gauge 10105900, Little Bear River at Paradise, with its
+# provenance. Read by the historical reliability test only.
+!/DATA/USGS_10105900_LittleBearRiver/
+!/DATA/USGS_10105900_LittleBearRiver/**
 
 # ---------------------------------------------------------------- experiment scripts
 # Only the scripts that produce published numbers and figures, plus the shared timing
@@ -64,6 +76,7 @@
 !/scripts/equal_budget_experiment.py
 !/scripts/restriction_threshold_experiment.py
 !/scripts/create_results_artifacts.py
+!/scripts/draw_figure2_workflow.py
 !/scripts/update_figure4_two_panel.py
 !/scripts/verify_publication_figures.py
 !/scripts/record_environment.py
@@ -74,6 +87,31 @@
 !/scripts/component_analysis.py
 !/scripts/cache_valley_audit.py
 !/scripts/benchmark_parameter_tables.py
+!/scripts/path_reading_table.py
+# The third reviewer's measurements: optimality certificates and the tolerance grid,
+# what the objective hierarchy determines, and monotone realization across scenarios.
+!/scripts/numerical_certificates.py
+!/scripts/flow_uniqueness.py
+!/scripts/monotone_realization.py
+# Downloads the Utah points of diversion behind the priority comparator (Reviewer 1, 2.1).
+!/scripts/fetch_wrpod.py
+# Sets the three-claimant instance against the canal flows measured in 2025 (Reviewer 1, 2.2).
+!/scripts/station_comparison.py
+# Re-solves it with each claimant's demand set to its measured 2025 diversion (Reviewer 1, 2.2).
+!/scripts/observed_demand_sensitivity.py
+# Copies the points of diversion of the rights the benchmarks name into DATA/ (Reviewer 1, 2.1).
+!/scripts/extract_water_rights.py
+# CTI-RLex subordinated to the decree priority of those rights, PRIOR-LEX (Reviewer 1, 2.1).
+!/scripts/prior_lex.py
+# The published plan held fixed against unseen scenarios (Reviewer 1, 1.2): the shared helper,
+# the convex hull of the scenarios, and the river's seasons of 1993 to 2025.
+!/scripts/fixed_plan_recourse.py
+!/scripts/robust_vertex_check.py
+!/scripts/historical_reliability.py
+# Both instances with canal conveyance losses two, four and six times the published rate
+# (Reviewer 2; Reviewer 1, 1.4), and PRIOR-LEX with tiers assigned to rights (Reviewer 1, 2.1).
+!/scripts/conveyance_loss_levels.py
+!/scripts/prior_lex_rights.py
 # The two-pass driver for the county benchmark. Not an experiment script, but the
 # README and the manuscript tell a reader to run it, so it has to be in the release.
 !/scripts/rebuild_cache_valley.py

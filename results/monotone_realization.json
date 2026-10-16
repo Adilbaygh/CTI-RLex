@@ -1,0 +1,244 @@
+{
+ "preservation_tolerance": 1e-07,
+ "violation_tolerance": 1e-06,
+ "instances": {
+  "little_bear_v2": {
+   "scenarios": [
+    "nominal",
+    "moderate_system_shortage",
+    "severe_system_shortage",
+    "paradise_diversion_outage_under_shortage",
+    "hyrum_canal_restriction_under_shortage"
+   ],
+   "recourse_budgets": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.4,
+    "paradise_diversion_outage_under_shortage": 0.35,
+    "hyrum_canal_restriction_under_shortage": 0.25
+   },
+   "nested_pairs": [
+    [
+     "moderate_system_shortage",
+     "nominal"
+    ],
+    [
+     "severe_system_shortage",
+     "nominal"
+    ],
+    [
+     "severe_system_shortage",
+     "moderate_system_shortage"
+    ],
+    [
+     "paradise_diversion_outage_under_shortage",
+     "nominal"
+    ],
+    [
+     "hyrum_canal_restriction_under_shortage",
+     "nominal"
+    ]
+   ],
+   "pairs_with_no_availability_order": [
+    [
+     "moderate_system_shortage",
+     "paradise_diversion_outage_under_shortage"
+    ],
+    [
+     "moderate_system_shortage",
+     "hyrum_canal_restriction_under_shortage"
+    ],
+    [
+     "severe_system_shortage",
+     "paradise_diversion_outage_under_shortage"
+    ],
+    [
+     "severe_system_shortage",
+     "hyrum_canal_restriction_under_shortage"
+    ],
+    [
+     "paradise_diversion_outage_under_shortage",
+     "hyrum_canal_restriction_under_shortage"
+    ]
+   ],
+   "published_violations": [
+    {
+     "smaller": "moderate_system_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 2,
+     "total_excess_af": 611.0915276803848,
+     "largest_excess_af": 421.65638969496877
+    },
+    {
+     "smaller": "severe_system_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.4,
+     "budget_larger": 0.0,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "severe_system_shortage",
+     "larger": "moderate_system_shortage",
+     "budget_smaller": 0.4,
+     "budget_larger": 0.25,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "paradise_diversion_outage_under_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.35,
+     "budget_larger": 0.0,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "hyrum_canal_restriction_under_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 2,
+     "total_excess_af": 611.0939061766517,
+     "largest_excess_af": 421.6587681912356
+    }
+   ],
+   "published_cells_violating": 4,
+   "least_total_violation_on_the_published_face_af": 1222.1854338570338,
+   "a_monotone_realization_exists_on_the_published_face": false,
+   "with_the_published_guarantee_vector": {
+    "feasible": true,
+    "nominal_delivery_af": 5919.097890994495,
+    "nominal_delivery_cost_af": 3.637978807091713e-12,
+    "nominal_delivery_cost_pct": 6.146171045129442e-14,
+    "weighted_contingency_delivery_af": 5640.693515099876,
+    "weighted_contingency_delivery_cost_af": 305.5469530882665,
+    "recourse_effort": 0.7499996467335075
+   }
+  },
+  "cache_valley_v4": {
+   "scenarios": [
+    "nominal",
+    "moderate_system_shortage",
+    "severe_system_shortage",
+    "subsystem_01_restriction_under_shortage",
+    "subsystem_02_restriction_under_shortage"
+   ],
+   "recourse_budgets": {
+    "nominal": 0.0,
+    "moderate_system_shortage": 0.25,
+    "severe_system_shortage": 0.25,
+    "subsystem_01_restriction_under_shortage": 0.25,
+    "subsystem_02_restriction_under_shortage": 0.25
+   },
+   "nested_pairs": [
+    [
+     "moderate_system_shortage",
+     "nominal"
+    ],
+    [
+     "severe_system_shortage",
+     "nominal"
+    ],
+    [
+     "severe_system_shortage",
+     "moderate_system_shortage"
+    ],
+    [
+     "subsystem_01_restriction_under_shortage",
+     "nominal"
+    ],
+    [
+     "subsystem_02_restriction_under_shortage",
+     "nominal"
+    ]
+   ],
+   "pairs_with_no_availability_order": [
+    [
+     "moderate_system_shortage",
+     "subsystem_01_restriction_under_shortage"
+    ],
+    [
+     "moderate_system_shortage",
+     "subsystem_02_restriction_under_shortage"
+    ],
+    [
+     "severe_system_shortage",
+     "subsystem_01_restriction_under_shortage"
+    ],
+    [
+     "severe_system_shortage",
+     "subsystem_02_restriction_under_shortage"
+    ],
+    [
+     "subsystem_01_restriction_under_shortage",
+     "subsystem_02_restriction_under_shortage"
+    ]
+   ],
+   "published_violations": [
+    {
+     "smaller": "moderate_system_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 10,
+     "total_excess_af": 2917.93131720748,
+     "largest_excess_af": 663.9588783444508
+    },
+    {
+     "smaller": "severe_system_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "severe_system_shortage",
+     "larger": "moderate_system_shortage",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.25,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "subsystem_01_restriction_under_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    },
+    {
+     "smaller": "subsystem_02_restriction_under_shortage",
+     "larger": "nominal",
+     "budget_smaller": 0.25,
+     "budget_larger": 0.0,
+     "cells_violating": 0,
+     "total_excess_af": 0,
+     "largest_excess_af": 0.0
+    }
+   ],
+   "published_cells_violating": 10,
+   "least_total_violation_on_the_published_face_af": 2917.931317200465,
+   "a_monotone_realization_exists_on_the_published_face": false,
+   "with_the_published_guarantee_vector": {
+    "feasible": true,
+    "nominal_delivery_af": 25608.51339983481,
+    "nominal_delivery_cost_af": 0.0,
+    "nominal_delivery_cost_pct": 0.0,
+    "weighted_contingency_delivery_af": 24168.000191902625,
+    "weighted_contingency_delivery_cost_af": 729.4853190477224,
+    "recourse_effort": 0.7499999983606157
+   }
+  }
+ }
+}

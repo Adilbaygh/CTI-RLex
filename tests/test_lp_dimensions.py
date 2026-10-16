@@ -6,7 +6,7 @@ says "the agreement is enforced by a regression test rather than asserted in pro
 is that test.
 
 Writing the formula out is the point of it. tests/test_cache_valley_benchmark.py already
-compares the solver with three integers -- 2886, 2150 and 1539 -- but three integers cannot
+compares the solver with three integers -- 4156, 3025 and 2134 -- but three integers cannot
 tell a reader whether the model still has the shape the article describes, and they cannot
 catch a change that moves the implementation and the recorded numbers together. Here the
 counts are recomputed from the sets themselves, so a variable block added to the model
@@ -15,7 +15,7 @@ that the model does not build.
 
 Both released benchmarks are covered, because the article prints sizes for both: 869
 variables, 600 equalities and 507 inequalities for the three-claimant Little Bear River
-instance, and 2886, 2150 and 1539 for the ten-claimant Cache Valley instance.
+instance, and 4156, 3025 and 2134 for the fifteen-claimant Cache Valley instance.
 """
 
 from __future__ import annotations
@@ -36,7 +36,7 @@ AVAILABLE = [path for path in BENCHMARKS if path.exists()]
 # Section 3.1, in the order (variables, equalities, inequalities).
 PUBLISHED = {
     "LittleBearRiver_2025_Benchmark": (869, 600, 507),
-    "CacheValley_2025_Benchmark": (2886, 2150, 1539),
+    "CacheValley_2025_Benchmark": (4156, 3025, 2134),
 }
 
 

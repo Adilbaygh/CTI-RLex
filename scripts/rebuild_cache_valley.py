@@ -1,4 +1,10 @@
-"""Rebuild the ten-claimant Cache Valley benchmark in the two passes its construction needs.
+"""Rebuild the Cache Valley benchmark.
+
+Under the default reading of the official paths (LEXIMIN_PATH_READING=set, see
+DATA/LittleBearRiver_2025_Benchmark/generate_benchmark.py) no connector is rejected, every
+service area keeps its routes, and the first pass is the whole build: it writes version 4,
+with fifteen claimants. Everything below describes the sequential reading
+(LEXIMIN_PATH_READING=sequential), which rebuilds the released ten-claimant version 3.
 
 Why two passes. The acyclicity repair can remove every route to a service area, and which
 areas lose their routes is known only after the repair has run. The shared source groups,

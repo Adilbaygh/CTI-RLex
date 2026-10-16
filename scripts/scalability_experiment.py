@@ -2,7 +2,7 @@
 
 Reviewer item 3.4: Supplementary Tables S13 and S14 cite this file, but no published script
 wrote it. This script is that producer. It sweeps the number of fairness subjects and the
-number of scenarios on the ten-claimant network while holding reaches, sources and
+number of scenarios on the fifteen-claimant county network while holding reaches, sources and
 envelopes fixed, so that the quantity isolated is the one the progressive-filling sequence
 actually grows with, and adds the three-claimant instance as a reference row.
 
@@ -36,7 +36,7 @@ OUTPUT = REPO / "results" / "scalability_cache_valley.json"
 CACHE_VALLEY = REPO / "DATA" / "CacheValley_2025_Benchmark" / "benchmark.json"
 LITTLE_BEAR = REPO / "DATA" / "LittleBearRiver_2025_Benchmark" / "benchmark.json"
 
-CLAIMANT_COUNTS = (2, 4, 6, 8, 10)
+CLAIMANT_COUNTS = (2, 4, 6, 8, 10, 12, 15)
 SCENARIO_COUNTS = (1, 3, 5)
 SECONDARY_STAGES = 3
 
@@ -82,7 +82,7 @@ def main() -> None:
             selected = (reduced.nominal_scenario,) + tuple(
                 reduced.contingency_scenarios[: scenarios - 1]
             )
-            rows.append(measure(subset_scenarios(reduced, selected), "cache_valley_v3"))
+            rows.append(measure(subset_scenarios(reduced, selected), "cache_valley_v4"))
             row = rows[-1]
             print(f"cache_valley  K={row['claimants']:2d} S={row['scenarios']}  "
                   f"{row['variables']:5d} var  {row['levels']} levels  "
