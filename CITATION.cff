@@ -6,7 +6,7 @@ message: >-
   article it accompanies.
 type: software
 license: MIT
-version: 1.2.0
+version: 1.2.1
 date-released: "2026-10-16"
 doi: 10.5281/zenodo.22160054
 identifiers:
@@ -15,10 +15,10 @@ identifiers:
     description: >-
       Concept DOI of the record; always resolves to the most recent archived version.
   - type: doi
-    value: 10.5281/zenodo.23414951
+    value: 10.5281/zenodo.23416982
     description: >-
-      Version DOI of release v1.2.0, archived from commit
-      ddb70bce218ac79ec693496089bb9be1b494812c.
+      Version DOI of release v1.2.1. The DOI was reserved on Zenodo before
+      the release was built, so the archive carries it.
 repository-code: "https://github.com/Adilbaygh/CTI-RLex"
 abstract: >-
   A linear-programming implementation of claimant-terminal-invariant robust lexicographic
