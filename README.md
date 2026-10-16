@@ -217,7 +217,9 @@ The mapping from article object to file is:
 | Article object | Script | Result file |
 |---|---|---|
 | Tables 5, 6, 9, Figures 3, 5–8 and Supplementary Tables S2, S4, S5, S22 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
-| Table 11 and Supplementary Tables S3, S13 | `run_cti_verification.py` | `results/cti_rlex_verification.json` |
+| Table 11, its residual, feasibility and terminal-representation rows, and Supplementary Table S3 | `run_cti_verification.py` | `results/cti_rlex_verification.json` |
+| Table 11, its LP size and solve times | `run_cti_experiments.py`, `scalability_experiment.py` | `results/cti_rlex_experiments.json`, `results/scalability_cache_valley.json` |
+| Table 11, its tolerance-grid, stopped-point and closest-level rows | `numerical_certificates.py` | `results/numerical_certificates.json` |
 | Table 7, Figure 4(b), Supplementary Tables S6 to S9, S15 | `revision_experiments.py` | `results/revision_experiments.json` |
 | Table 8 and Supplementary Table S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
 | Table 10 and Supplementary Tables S34, S35, larger canal conveyance losses | `conveyance_loss_levels.py` | `results/conveyance_loss_levels.json` |
