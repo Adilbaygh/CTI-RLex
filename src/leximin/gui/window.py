@@ -42,6 +42,7 @@ from .data import (
     claimant_table,
     load_benchmark_document,
     method_table,
+    project_archive_dois,
     project_version,
     recourse_table,
     rows_from_dicts,
@@ -1457,6 +1458,9 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout(dialog)
         browser = QTextBrowser()
         version = project_version(self.paths.root)
+        concept_doi, archive_doi = project_archive_dois(self.paths.root)
+        concept_link = f"https://doi.org/{concept_doi}" if concept_doi else "—"
+        archive_link = f"https://doi.org/{archive_doi}" if archive_doi else "—"
         browser.setHtml(
             "<h2>CTI-RLex Studio</h2>"
             "<p><b>Claimant-centred Temporally Invariant Robust Leximin Allocation</b></p>"
@@ -1471,8 +1475,8 @@ class MainWindow(QMainWindow):
                 "<b>Ҳисоблаш ядроси:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
                 "<b>GUI:</b> PyQt6 ва Matplotlib<br>"
                 "<b>Репозиторий:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
-                "<b>Архив (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054<br>"
-                "<b>Ушбу релиз (version DOI):</b> https://doi.org/10.5281/zenodo.22199894</p>",
+                f"<b>Архив (concept DOI):</b> {concept_link}<br>"
+                f"<b>Архивланган релиз (version DOI):</b> {archive_link}</p>",
                 "<p>Open-source scientific software for computing, comparing and validating "
                 "scenario–period robust guarantees and bounded operational recourse in lossy, "
                 "multi-source irrigation DAGs.</p>"
@@ -1483,8 +1487,8 @@ class MainWindow(QMainWindow):
                 "<b>Computational core:</b> Python, SciPy HiGHS, NumPy, NetworkX<br>"
                 "<b>GUI:</b> PyQt6 and Matplotlib<br>"
                 "<b>Repository:</b> https://github.com/Adilbaygh/CTI-RLex<br>"
-                "<b>Archive (concept DOI):</b> https://doi.org/10.5281/zenodo.22160054<br>"
-                "<b>This release (version DOI):</b> https://doi.org/10.5281/zenodo.22199894</p>",
+                f"<b>Archive (concept DOI):</b> {concept_link}<br>"
+                f"<b>Archived release (version DOI):</b> {archive_link}</p>",
             )
         )
         close = QPushButton(self._tr("Ёпиш", "Close"))

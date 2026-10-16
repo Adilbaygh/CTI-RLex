@@ -48,6 +48,32 @@ def project_version(root: Path) -> str:
     return "unreleased"
 
 
+def project_archive_dois(root: Path) -> tuple[str, str]:
+    """The concept and the version DOI of the archive, read from CITATION.cff.
+
+    For the reason project_version is read rather than written down: the release, the
+    citation file and the About dialog name one archive, and a DOI repeated in the code
+    is a DOI that is one release out of date. The top-level `doi:` of the citation file
+    is the concept DOI of the record, which always resolves to the newest version; the
+    identifier that differs from it is the version DOI of an archived release.
+    """
+
+    concept = ""
+    archived = ""
+    try:
+        for line in (root / "CITATION.cff").read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if stripped.startswith("doi:") and not concept:
+                concept = stripped.split(":", 1)[1].strip().strip('"').strip("'")
+            elif stripped.startswith("value:"):
+                found = stripped.split(":", 1)[1].strip().strip('"').strip("'")
+                if found and found != concept:
+                    archived = found
+    except OSError:
+        pass
+    return concept, archived
+
+
 def validate_benchmark_document(raw: dict[str, Any], language: str = DEFAULT_LANGUAGE) -> None:
     required = {
         "benchmark_id",

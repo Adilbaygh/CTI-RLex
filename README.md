@@ -415,10 +415,12 @@ and always resolves to the most recent version:
 
 **https://doi.org/10.5281/zenodo.22160054**
 
-The release archived from this state of the repository has its own immutable version
-DOI, reserved before the deposit so that the archive can name itself:
+The most recent release is archived under its own immutable version DOI, minted when
+the deposit is published; the copy of this file inside an archive therefore names the
+version DOI of the release before it. Version v1.2.0 was archived from commit
+`ddb70bce218ac79ec693496089bb9be1b494812c`:
 
-**https://doi.org/10.5281/zenodo.22199894**
+**https://doi.org/10.5281/zenodo.23414951**
 
 Use the concept DOI to refer to the software in general, and the version DOI together
 with the commit hash to refer to the one archived state a set of numbers came from. The Data

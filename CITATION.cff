@@ -15,9 +15,10 @@ identifiers:
     description: >-
       Concept DOI of the record; always resolves to the most recent archived version.
   - type: doi
-    value: 10.5281/zenodo.22199894
+    value: 10.5281/zenodo.23414951
     description: >-
-      Version DOI of the release archived from this state of the repository.
+      Version DOI of release v1.2.0, archived from commit
+      ddb70bce218ac79ec693496089bb9be1b494812c.
 repository-code: "https://github.com/Adilbaygh/CTI-RLex"
 abstract: >-
   A linear-programming implementation of claimant-terminal-invariant robust lexicographic
