@@ -205,23 +205,43 @@ Run them in this order: step 7 reads the files written by steps 1 to 3. Every sc
 `src/` on the import path itself, so a fresh clone works without installing the package
 first.
 
+Those eight steps are the core of the sequence and no longer all of it. The revision adds
+the measurements the first round of review asked for, each with its own producer in the
+table below, and `scripts/rerun_all_results.py` runs the whole sequence - the eight steps,
+every producer in the table and the test suite - in the order the later steps need the
+earlier output. Run that one command rather than the list by hand unless a single object is
+being reproduced.
+
 The mapping from article object to file is:
 
 | Article object | Script | Result file |
 |---|---|---|
-| Tables 1, 2, 5, 6 and Figures 3, 5–8 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
-| Table 4 and Supplementary Table S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
-| Table 3, Figure 4(b), Supplementary Tables S6, S8, S9, S15 | `revision_experiments.py` | `results/revision_experiments.json` |
+| Tables 5, 6, 9, Figures 3, 5–8 and Supplementary Tables S2, S4, S5, S22 | `run_cti_experiments.py` | `results/cti_rlex_experiments.json` |
+| Table 11 and Supplementary Tables S3, S13 | `run_cti_verification.py` | `results/cti_rlex_verification.json` |
+| Table 7, Figure 4(b), Supplementary Tables S6 to S9, S15 | `revision_experiments.py` | `results/revision_experiments.json` |
+| Table 8 and Supplementary Table S16, source ablation | `ablation_experiment.py` | `results/ablation_lbr.json`, `results/ablation_cv.json` |
+| Table 10 and Supplementary Tables S34, S35, larger canal conveyance losses | `conveyance_loss_levels.py` | `results/conveyance_loss_levels.json` |
+| Table 12 and Supplementary Table S40, the decree-priority comparator PRIOR-LEX | `prior_lex.py` | `results/prior_lex.json` |
+| Table 12, the priority tiers assigned to rights rather than to claimants | `prior_lex_rights.py` | `results/prior_lex_rights.json` |
 | Supplementary Tables S10, S11 | `equal_budget_experiment.py` | `results/equal_budget_experiment.json` |
 | Supplementary Table S12 | `restriction_threshold_experiment.py` | `results/restriction_threshold.json` |
 | Supplementary Tables S13, S14 | `scalability_experiment.py` | `results/scalability_cache_valley.json` |
-| Supplementary Table S20, acyclicity-repair order sensitivity | `connector_order_experiment.py` | `results/connector_order_sensitivity.json`, `results/repair_inputs_cache_valley.json` |
-| Supplementary Table S21, excluded service areas | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
-| Supplementary Table S22, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
-| Supplementary Tables S24, S25, factorial effect decomposition | `factorial_decomposition.py` | `results/factorial_decomposition.json` |
-| Supplementary Table S27, component-level analysis | `component_analysis.py` | `results/component_analysis.json` |
-| Supplementary Tables S32 to S35, ten-claimant audit layer | `cache_valley_audit.py` | `results/cache_valley_audit.json` |
-| Supplementary Tables S28 to S31, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
+| Supplementary Table S17, how the county paths are read | `path_reading_table.py` | `results/path_reading_cache_valley.json` |
+| Supplementary Tables S18, S19, effort-coefficient normalization | `normalization_sensitivity.py` | `results/normalization_sensitivity.json` |
+| Supplementary Tables S20, S21, factorial effect decomposition | `factorial_decomposition.py` | `results/factorial_decomposition.json` |
+| Supplementary Table S23, component-level analysis | `component_analysis.py` | `results/component_analysis.json` |
+| Supplementary Tables S24 to S27, parameter provenance and coefficients | `benchmark_parameter_tables.py` | `results/benchmark_parameters.json` |
+| Supplementary Tables S28 to S31, county-instance audit layer | `cache_valley_audit.py` | `results/cache_valley_audit.json` |
+| Supplementary Tables S32, S33, what the objective hierarchy determines | `flow_uniqueness.py` | `results/flow_uniqueness.json` |
+| Supplementary Tables S36, S37, optimality certificates and the tolerance grid | `numerical_certificates.py` | `results/numerical_certificates.json` |
+| Supplementary Table S38, the published plan in the seasons of 1993–2025 | `historical_reliability.py` | `results/historical_reliability.json` |
+| Supplementary Table S39, the guarantees on the convex hull of the scenarios | `robust_vertex_check.py`, with the shared helper `fixed_plan_recourse.py` | `results/robust_vertex_check.json` |
+| Supplementary Table S41, the recorded 2025 diversions against the water requirement | `station_comparison.py` | `results/station_comparison.json` |
+| Section 3.4, the monotone variant and its price | `monotone_realization.py` | `results/monotone_realization.json` |
+| Section 3.10, demand set to each claimant's measured 2025 diversion | `observed_demand_sensitivity.py` | `results/observed_demand_sensitivity.json` |
+| The points of diversion the priority comparator reads | `fetch_wrpod.py`, then `extract_water_rights.py` | `DATA/Utah_Water_Rights_2026/points_of_diversion.csv` |
+| Version 3 only: acyclicity-repair order sensitivity. Version 4 reads every official path as the set of reaches it lists, so no connector is rejected and the revision does not print this table; the script and its result files stay published because the directory holds them | `connector_order_experiment.py` | `results/connector_order_sensitivity.json`, `results/repair_inputs_cache_valley.json` |
+| Version 3 only: excluded service areas, retired for the same reason | `excluded_service_areas.py` | `results/excluded_service_areas.json` |
 | Published CSV tables | `create_results_artifacts.py` | `results/tables/*.csv` |
 | Published figures | `create_results_artifacts.py`, `update_figure4_two_panel.py` | `results/figures/*.png`, `*.svg` |
 | Figure 1, benchmark network map | `DATA/LittleBearRiver_2025_Benchmark/plot_benchmark_map.py` | `DATA/LittleBearRiver_2025_Benchmark/little_bear_river_2025_benchmark_map.png`, `.svg` |
@@ -233,8 +253,8 @@ The mapping from article object to file is:
 Figure files are named for the order in which they were written, not for the order the
 article prints them, so the mapping is stated here and every entry is resolved by
 `scripts/verify_publication_figures.py`. The printed width is what the type size of a
-figure has to be legible at: the two producing scripts draw on one 7.1 inch canvas and let
-the journal reduce.
+figure has to be legible at: the producing scripts draw on that canvas, within a fraction
+of a per cent, and let the journal reduce.
 
 | Article | File, under `results/figures/` unless stated | Printed width |
 |---|---|---|
@@ -270,10 +290,11 @@ timing protocol below existed, so they differ from the medians the article repor
 are not comparable with them; every runtime in the article and in `results/` comes from
 `scripts/timing_protocol.py`.
 
-`scripts/rerun_all_results.py` runs the whole sequence above, together with the seven
-producers listed in the table, in the order the later ones need the earlier output. It
-prints the values that a correct rerun must reproduce unchanged, and skips the two steps
-that need the raw open-data layers when `LEXIMIN_DATASETS` is not set:
+`scripts/rerun_all_results.py` runs the whole sequence above, together with every producer
+listed in the table, in the order the later ones need the earlier output. It prints the
+values that a correct rerun must reproduce unchanged, compares them with the digits the
+article prints and exits non-zero if one has moved, and skips the step that needs the raw
+open-data layers when `LEXIMIN_DATASETS` is not set:
 
 ```bash
 python scripts/rerun_all_results.py
@@ -354,12 +375,22 @@ hours.
 - `DATA/LittleBearRiver_2025_Benchmark/` — the three-claimant benchmark, its normalized
   CSV layers, provenance, checksums and the deterministic generator that builds it from
   the open Utah layers;
-- `DATA/CacheValley_2025_Benchmark/` — the ten-claimant county-wide benchmark with the
-  same layer structure, its selection and discovery records and its validation report. Its
-  canonical JSON, normalized CSV layers, checksums and the ordered decision record for all
-  41 connector candidates are published, and so is the county-scale driver that assembles
-  it from the open Utah layers, so the byte-for-byte rebuild check above covers both
-  instances;
+- `DATA/CacheValley_2025_Benchmark/` — the county-wide benchmark, version 4, with
+  fifteen claimants and the same layer structure, its selection and discovery records and
+  its validation report. Its canonical JSON, normalized CSV layers, checksums and the
+  record of how each official path is read are published, and so is the county-scale driver
+  that assembles it from the open Utah layers, so the byte-for-byte rebuild check above
+  covers both instances. The driver also rebuilds the ten-claimant version 3 under the
+  sequential path reading, in the two passes that construction needs;
+- `DATA/LittleBearRiver_2025_Observations/` — the 2025 River Commissioner records at the
+  five stations of the three-claimant instance, with their provenance. Observations for
+  comparison only: no benchmark reads them;
+- `DATA/USGS_10105900_LittleBearRiver/` — the monthly discharge of USGS gauge 10105900,
+  Little Bear River at Paradise, with its provenance. Read by the historical reliability
+  test only;
+- `DATA/Utah_Water_Rights_2026/` — the points of diversion of the water rights the two
+  benchmarks name, from the Utah Division of Water Rights, with their provenance. Read by
+  the priority comparator only;
 - `DATA/benchmarks_dag/` — the benchmark schema (`SCHEMA_DAG.md`) and the compact DAG
   export of the Cache Valley instance used by the desktop application;
 - `scripts/` — the experiment scripts that produce the published numbers and figures;
